@@ -32,7 +32,24 @@ Repo bài tập của nhóm Internship khoá 17 - 03/2022
 
 ### 2. Danh sách bài tập:
 
-(updating)
+1. [Giới thiệu](https://docs.google.com/presentation/d/1I5DdGhjUtmHQWWSTdGW7abg7dmDJfbJ9/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+2. [Swift Basic](https://docs.google.com/presentation/d/1IVJWmNIbzi47T-FRkmUPwOxhJ5rFpKAF/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+3. [Swift OOP](https://docs.google.com/presentation/d/1mNjA54BxAZUdJjTv_BvgtX1t9G-yb7B3/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+4. [View](https://docs.google.com/presentation/d/147rHXs-wfR2RVuRG1VgaPB6VbRsRh0Rt/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+5. [Custom View](https://docs.google.com/presentation/d/1ASTSpeWRttjier1aU1Wyft9L4XWyfR21/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+6. [Drawing](https://docs.google.com/presentation/d/1EImvgYc07-rOzpxfbk7FYhSE66TcdtrD/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+7. [Autolayout](https://docs.google.com/presentation/d/1iWIbETVTVG5375eLmGl22t9tG34E6Z5v/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+8. [MVC](https://docs.google.com/presentation/d/12hnLKh4EWNwsgPCxfPYJrDS4g8iDRXrz/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+9. [Navigation](https://docs.google.com/presentation/d/1JjOUWecPHj8ioN1rpioxCJ3r5_mWBt_8/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+10. [Protocol](https://docs.google.com/presentation/d/1u3EAZS1z1zOlVbMoYrxx1HEPGWhvhOGZ/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+11. [TableView](https://docs.google.com/presentation/d/1u3EAZS1z1zOlVbMoYrxx1HEPGWhvhOGZ/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+12. [CollectionView](https://docs.google.com/presentation/d/1mfMeLgLdVOCPPvobrbmVugbQ7cm5bjTC/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+13. [TabbarController](https://docs.google.com/presentation/d/1RVUEmChdFbkIVXFaM9nEduEVZ3pzbuk9/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+14. [MVVM](https://docs.google.com/presentation/d/1etKPof7NOLA_6Yky8V0gTcU_B2KLI3ua/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+15. [API](https://docs.google.com/presentation/d/1HcSDMTP7Ajr7ouLgOxr7NHOYzLsK-_yb/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+16. [Realm](https://docs.google.com/presentation/d/1Q6z06vg4Cmr-yMjkDrJ7sBU39nKMsdzg/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+17. [MapView](https://docs.google.com/presentation/d/1OrA4YTWahz49zNyHC8qP-vuUceFlIfYO/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
+18. [Mapper](https://docs.google.com/presentation/d/1Qhb_lNAqUKECtrnLEpgUgjXyumQ5KTHm/edit?usp=sharing&ouid=103088569102912198819&rtpof=true&sd=true)
 
 *(Hoàn thành)*
 
