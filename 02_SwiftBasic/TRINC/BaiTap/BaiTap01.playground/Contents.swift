@@ -1,28 +1,12 @@
 import UIKit
-import CoreGraphics
 
-let pi: CGFloat = 3.14
-
-// MARK: - Calculate Sphere Arean
-func volume(r: CGFloat) -> CGFloat {
-    let v = (4 / 3) * pi * r * r * r
-    return v
+// MARK: - The Tich Va Dien Tich Hinh Cau
+func dienTichtheTichHinhCau(r: Float) -> (s: Float, v: Float) {
+    let pi = 3.14
+    return (4 * Float(pi) * r * r, (4/3 * Float(pi) * r * r * r))
 }
 
-volume(r: 4.0)
 
-// MARK: - Calculate Spherical Arean
-func sphericalArean(r: CGFloat) -> CGFloat {
-    let s = 4 * pi * r * r
-    return s
-}
-
-sphericalArean(r: 2.0)
-
-
-
-
-
-
+print(dienTichtheTichHinhCau(r: 2.0))
 
 
