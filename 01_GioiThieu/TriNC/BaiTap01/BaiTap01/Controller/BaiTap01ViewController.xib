@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap01ViewController" customModule="BaiTap01" customModuleProvider="target">
             <connections>
-                <outlet property="tapButton" destination="jK5-jR-2fX" id="9XD-JJ-s1W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,33 +17,12 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK5-jR-2fX">
-                    <rect key="frame" x="178" y="428" width="58.5" height="40.5"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Tap">
-                        <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
-                        <color key="baseForegroundColor" systemColor="labelColor"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="tapButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="O1o-J2-aCP"/>
-                    </connections>
-                </button>
-            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="jK5-jR-2fX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LWf-5Y-kw0"/>
-                <constraint firstItem="jK5-jR-2fX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vhQ-Re-z7n"/>
-            </constraints>
             <point key="canvasLocation" x="139" y="110"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
