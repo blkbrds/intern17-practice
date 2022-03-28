@@ -18,18 +18,26 @@ private func calculateShere(radius: Double = 0) -> (area: Double, volume: Double
 //-----------------------------------//
 // Bài tập 2 //
 // tính phương trình bật 2
-private func ptb2(a: Float, b: Float, c: Float) -> (result: String, x1: Double, x2: Double) {
+
+enum Result {
+    case oneNghiem(_ x1: Double)
+    case doubleNghiem(_ x1: Double)
+    case twoNghiem(_ x1: Double, _ x2: Double)
+    case voSoNghiem
+    case voNghiem
+}
+
+private func ptb2(a: Float, b: Float, c: Float) -> Result {
     var x1: Double = 0
     var x2: Double = 0
-    var result: String = ""
+    var result: Result
     
     if (a == 0) {
         if (b == 0) {
-            result = "vô nghiệm"
+            result = .voNghiem
         } else {
-            result = "có một nghiệm"
-            x1 = Double(-c / b)
-            return (result, x1, x2)
+            result = .oneNghiem(Double(-c / b))
+            return result
         }
     }
     // tính delta
@@ -38,69 +46,81 @@ private func ptb2(a: Float, b: Float, c: Float) -> (result: String, x1: Double, 
     if (delta > 0) {
         x1 = Double((-b + sqrt(delta)) / (2*a))
         x2 = Double((-b - sqrt(delta)) / (2*a))
-        result = "Phương trình có 2 nghiệm"
+        result = .twoNghiem(x1, x2)
     } else if (delta == 0) {
         x1 = Double((-b / (2 * a)))
-        result = "Phương trình có nghiệm kép"
+        result = .doubleNghiem(x1)
     } else {
-        result = "vô nghiệm"
+        result = .voNghiem
     }
-    return (result, x1, x2)
+    return result
 }
 
 //-----------------------------------//
 // Bài tập 3 //
 // Giải phương hệ phương trình bậc nhất 2 ẩn
-private func hpt2An(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) -> (result: String, x: Float, y: Float) {
-    var x: Float = 0
-    var y: Float = 0
-    var result: String = ""
+
+enum ResultHpt {
+    case voNghiem
+    case voSoNghiem
+    case coNghiem(_ x: Double, _ y: Double)
+}
+
+private func hpt2An(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) -> ResultHpt {
+    var result: ResultHpt
     
     //tính D, Dx, Dy theo công thức
     let d = a1 * b2 - a2 * b1;
     let dx = c1 * b2 - c2 * b1;
     let dy = a1 * c2 - a2 * c1;
-    if (d == 0) {
+    if d == 0 {
         //nếu D = 0 và Dx + Dy = 0 thì phương trình vô số nghiệm, ngược lại thì vô nghiệm
         if (dx + dy == 0) {
-            result = "Hệ phương trình có vô số nghiệm"
+            result = .voNghiem
         } else {
-            result = "Hệ phương trình vô nghiệm"
+            result = .voSoNghiem
         }
     }
     //tính x và y theo công thức
     else {
-        x = dx / d
-        y = dy / d
-        result = "Hệ phương trình có nghiệm"
+        result = .coNghiem(Double(dx / d), Double(dy / d))
     }
-    return(result, x, y)
+    return result
 }
 
 
 // in kết quả
-private func showAnswer(need: String) {
-    switch need {
-    case "ptb2":
+
+enum ShowResult {
+    case ptb2
+    case hpt2an
+}
+private func showAnswer(calculate math: ShowResult) {
+    switch math {
+    case .ptb2:
         let answer = ptb2(a: 3, b: 4, c: 5)
-        switch answer.result {
-        case "vô nghiệm":
-            print("Phương trình \(answer.result)")
-        case "có một nghiệm":
-            print("Phương trình \(answer.result):\(answer.x1)")
-        default:
-            print(answer.result)
+        switch answer {
+        case .voNghiem:
+            print("Phương trình vô nghiệm")
+        case .oneNghiem(let x):
+            print("Phương trình có một nghiệm:\(x)")
+        case .voSoNghiem:
+            print("Phương trình có vô số nghiệm")
+        case .doubleNghiem(let x):
+            print("Phương trình có nghiệm kép: \(x)")
+        case .twoNghiem(let x1, let x2):
+            print("Phương trình có 2 nghiệm là: \(x1) và \(x2)")
         }
-    case "hpt2An":
+    case .hpt2an:
         let answer = hpt2An(a1: 5, b1: 6, c1: 7, a2: 4, b2: 5, c2: 6)
-        switch answer.result {
-        case "Hệ phương trình có nghiệm":
-            print("\(answer.result): x = \(answer.x) và y =\(answer.y)")
-        default:
-            print(answer.result)
+        switch answer {
+        case .coNghiem(let x, let y):
+            print("Hệ phương trình có nghiệm: x= \(x), y = \(y)")
+        case .voNghiem:
+            print("Phương trình vô nghiệm")
+        case .voSoNghiem:
+            print("Phương trình có vô số nghiệm")
         }
-    default:
-        print("Yêu cầu không hợp lệ")
     }
 }
 
@@ -111,7 +131,7 @@ private func showAnswer(need: String) {
 
 // Số Fibo thứ n
 private func fibonacy(n: UInt) -> Double {
-    if (n == 1 || n == 2) {
+    if n == 1 || n == 2 {
         return 1;
     }
     return fibonacy(n: n - 1) + fibonacy(n: n - 2);
@@ -120,8 +140,8 @@ private func fibonacy(n: UInt) -> Double {
 // Tổng của 100 số Fibonacy đầu tiên
 private func sumFirst100Fibo() -> Double {
     var sum: Double = 0
-    for i in 1...99 {
-        sum += Double(i)
+    for i in 1...100 {
+        sum += Double(fibonacy(n: UInt(i)))
     }
     return sum
 }
