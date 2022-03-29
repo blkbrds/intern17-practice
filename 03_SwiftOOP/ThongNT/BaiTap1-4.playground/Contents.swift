@@ -126,13 +126,17 @@ final class TamGiac: DaGiac {
     var values: [Int] = []
     
     init?(cacCanh: [Int]) {
+        guard cacCanh.count != 3 else {
+            print("Không đúng 3 cạnh")
+            return nil
+        }
         super.init(soCanh: 3, kichThuoc: cacCanh)
         self.values = cacCanh
     }
     
     func isRightTriangle() -> Bool {
-        var temp : Int = 0
-        guard let maxValue = values.max() else { return false}
+        var temp: Int = 0
+        guard let maxValue = values.max() else { return false }
         values = values.filter { $0 != maxValue }
         values.forEach { number in
             temp += number * number
@@ -180,6 +184,4 @@ if let tamGiac1 = TamGiac(cacCanh: [3,4,5]),
         }
     }
 }
-
-
 

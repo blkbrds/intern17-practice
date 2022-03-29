@@ -80,10 +80,10 @@ ps?.inKetQua(with: PhanSo(tuSo: 1, mauSo: 2))
 // Bài tập 2 //
 // Đa Giác
 class DaGiac {
-    var soCanh : Int
+    var soCanh: Int
     var mangKichThuoc: [Int]
     
-    init?(soCanh: Int, kichThuoc : [Int]) {
+    init?(soCanh: Int, kichThuoc: [Int]) {
         guard soCanh > 2,
               soCanh == kichThuoc.count else {
             print("Không phải đa giác")
