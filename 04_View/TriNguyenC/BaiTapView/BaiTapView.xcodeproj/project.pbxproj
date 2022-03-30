@@ -17,6 +17,8 @@
 		225B223A27F4A89000D1FE6C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225B223827F4A89000D1FE6C /* HomeViewController.xib */; };
 		225B224127F4A97900D1FE6C /* Excersise01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B223F27F4A97900D1FE6C /* Excersise01ViewController.swift */; };
 		225B224227F4A97900D1FE6C /* Excersise01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225B224027F4A97900D1FE6C /* Excersise01ViewController.xib */; };
+		225B224627F4AE8400D1FE6C /* Excersise02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B224427F4AE8400D1FE6C /* Excersise02ViewController.swift */; };
+		225B224727F4AE8400D1FE6C /* Excersise02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225B224527F4AE8400D1FE6C /* Excersise02ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		225B223827F4A89000D1FE6C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		225B223F27F4A97900D1FE6C /* Excersise01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excersise01ViewController.swift; sourceTree = "<group>"; };
 		225B224027F4A97900D1FE6C /* Excersise01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Excersise01ViewController.xib; sourceTree = "<group>"; };
+		225B224427F4AE8400D1FE6C /* Excersise02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excersise02ViewController.swift; sourceTree = "<group>"; };
+		225B224527F4AE8400D1FE6C /* Excersise02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Excersise02ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		225B223D27F4A91700D1FE6C /* Excersise */ = {
 			isa = PBXGroup;
 			children = (
+				225B224327F4AE6D00D1FE6C /* Ex2 */,
 				225B223E27F4A95D00D1FE6C /* Ex1 */,
 			);
 			path = Excersise;
@@ -109,6 +114,15 @@
 				225B224027F4A97900D1FE6C /* Excersise01ViewController.xib */,
 			);
 			path = Ex1;
+			sourceTree = "<group>";
+		};
+		225B224327F4AE6D00D1FE6C /* Ex2 */ = {
+			isa = PBXGroup;
+			children = (
+				225B224427F4AE8400D1FE6C /* Excersise02ViewController.swift */,
+				225B224527F4AE8400D1FE6C /* Excersise02ViewController.xib */,
+			);
+			path = Ex2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +185,7 @@
 			files = (
 				225B224227F4A97900D1FE6C /* Excersise01ViewController.xib in Resources */,
 				225B223027F4A7FB00D1FE6C /* LaunchScreen.storyboard in Resources */,
+				225B224727F4AE8400D1FE6C /* Excersise02ViewController.xib in Resources */,
 				225B222D27F4A7FB00D1FE6C /* Assets.xcassets in Resources */,
 				225B222B27F4A7FA00D1FE6C /* Main.storyboard in Resources */,
 				225B223A27F4A89000D1FE6C /* HomeViewController.xib in Resources */,
@@ -186,6 +201,7 @@
 			files = (
 				225B224127F4A97900D1FE6C /* Excersise01ViewController.swift in Sources */,
 				225B222827F4A7FA00D1FE6C /* ViewController.swift in Sources */,
+				225B224627F4AE8400D1FE6C /* Excersise02ViewController.swift in Sources */,
 				225B222427F4A7FA00D1FE6C /* AppDelegate.swift in Sources */,
 				225B222627F4A7FA00D1FE6C /* SceneDelegate.swift in Sources */,
 				225B223927F4A89000D1FE6C /* HomeViewController.swift in Sources */,
