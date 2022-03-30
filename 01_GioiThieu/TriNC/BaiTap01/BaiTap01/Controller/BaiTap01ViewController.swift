@@ -7,25 +7,80 @@
 
 import UIKit
 
-class BaiTap01ViewController: UIViewController {
+final class BaiTap01ViewController: UIViewController {
+
+    // MARK: - Computed Properties
+    private lazy var randomButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Random It", for: .normal)
+        button.addTarget(self, action: #selector(changeBackgroundAction), for: .touchUpInside)
+        return button
+    }()
 
     // MARK: - Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        setupUI()
+    }
+}
+
+// MARK: - Private Functions
+
+extension BaiTap01ViewController {
+
+    private func setupUI() {
+        // 1: Set default background color
+        changeBackground(with: .red)
         
-        let button = UIButton(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 50, height: 100)))
-        button.setTitle("Tap", for: .normal)
-        button.center = view.center
-        button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
-        view.addSubview(button)
+        // 2: Config random button
+        configRandomButton()
+    }
+
+    private func configRandomButton() {
+        // Dau tien xac dinh size cua man hinh
+        let screenSize = UIScreen.main.bounds.size
+        
+        // Xac dinh duoc size cua button
+        let paddingLeft: CGFloat = 22
+        let paddingRight: CGFloat = 22
+
+        // => ScreenWidth - (paddingLeft + paddingRight) => Width
+        let buttonWidth = screenSize.width - (paddingLeft + paddingRight)
+        let buttonHeight: CGFloat = 44
+        let buttonSize = CGSize(width: buttonWidth, height: buttonHeight)
+        
+        let pointX = screenSize.width / 2
+        let pointY = screenSize.height / 2
+        
+        // Xac dinh vi tri button
+        let buttonX = pointX - (buttonWidth / 2)
+
+        // Xac dinh toa do x, y
+        let buttonPoint = CGPoint(x: buttonX, y: pointY)
+
+        let randomButtonFrame = CGRect(origin: buttonPoint, size: buttonSize)
+        randomButton.frame = randomButtonFrame
+        view.addSubview(randomButton)
     }
     
-    // Objc
-    @objc func tapButton() {
-        let random = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
-        view.backgroundColor = random
+    private func changeBackground(with color: UIColor) {
+        view.backgroundColor = color
     }
     
+    private func getRandomNumber() -> CGFloat {
+        return .random(in: 0...1)
+    }
+
+    // Ten cua button + Action
+    @objc private func changeBackgroundAction() {
+        let targetColor = UIColor(
+            red: getRandomNumber(),
+            green: getRandomNumber(),
+            blue: getRandomNumber(),
+            alpha: 1
+        )
         
+        changeBackground(with: targetColor)
+    }
 }
