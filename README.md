@@ -28,8 +28,9 @@ Repo bài tập của nhóm Internship khoá 17 - 03/2022
   * Ví dụ: thư mục `BaiTap01` thì bạn `Lê Phương Tiến` sẽ:
     * Tạo 1 thư mục con là `TienLP`
     * Các *files code* hoặc cả *project* cho phần bài tập đó phải bỏ vào thư mục vừa tạo ở trên.
-    * Cách đặt tên nhánh: feature/tienle/baitap01
-    * Cách đặt tên *pull request*: Feature - TienLe - BaiTap01
+    * Cách đặt tên nhánh - VD: feature/tienle/baitap01
+    * Cách đặt tên *pull request* - VD: Feature - TienLe - BaiTap01
+    * Commit phải được viết bằng *tiếng Anh*, chữ cái đầu tiên in hoa, nội dung rõ ràng, cấm tuyệt đối không được viết ngắn gọn 1, 2 từ như *fixbugs*, *lam bai1*, v..v.. Cứ xong 1 bài tập nhỏ trong 1 phần thì commit 1 lần, không được để dồn trong 1 commit - VD: Implement excercise 1 OOP config fraction class  cho bài tập 1 của OOP
 * Thư mục `_template` sẽ chứa các mẫu hay các project ví dụ để các bạn tham khảo.
 
 ### 2. Danh sách bài tập:
