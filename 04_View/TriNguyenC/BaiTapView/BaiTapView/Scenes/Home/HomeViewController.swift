@@ -10,7 +10,6 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     // MARK: - Life Cycles
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -18,12 +17,11 @@ final class HomeViewController: UIViewController {
 }
 
 // MARK: - Private Functions
-
 extension HomeViewController {
 
     private func setupUI() {
         // Set bai tap mac dinh
-        selectExcersise(with: .ex1)
+        selectExcersise(with: .ex3)
     }
 
     private func selectExcersise(with type: ExcersiseType) {
@@ -32,11 +30,10 @@ extension HomeViewController {
 }
 
 // MARK: - Enums
-
 extension HomeViewController {
 
     enum ExcersiseType {
-        case ex1, ex2
+        case ex1, ex2, ex3
     
         var viewController: UIViewController {
             switch self {
@@ -44,6 +41,8 @@ extension HomeViewController {
                 return Excersise01ViewController()
             case .ex2:
                 return Excersise02ViewController()
+            case .ex3:
+                return Exercise03ViewController()
             }
         }
     }
