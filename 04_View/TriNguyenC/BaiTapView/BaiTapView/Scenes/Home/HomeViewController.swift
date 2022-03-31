@@ -43,7 +43,7 @@ extension HomeViewController {
             case .ex1:
                 return Excersise01ViewController()
             case .ex2:
-                return Excersise01ViewController()
+                return Excersise02ViewController()
             }
         }
     }

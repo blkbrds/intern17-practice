@@ -31,7 +31,7 @@ final class Excersise01ViewController: UIViewController {
         view.addSubview(userName)
         
         // add button
-        let button = UIButton(frame: CGRect(x: 50, y: 100, width: 100, height: 225))
+        let button = UIButton(frame: CGRect(x: 50, y: 100, width: 100, height: 25))
         button.backgroundColor = .clear
         button.addTarget(self, action: #selector(tapTouchUpInside), for: .touchUpInside)
         view.addSubview(button)
