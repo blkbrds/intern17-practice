@@ -17,14 +17,14 @@ enum CheckInput: String {
 
 final class LoginViewController: UIViewController {
     // MARK: - IBOulets
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passWordTextField: UITextField!
-    @IBOutlet weak var loginBtn: UIButton!
-    @IBOutlet weak var clearBtn: UIButton!
-    @IBOutlet weak var informLabel: UILabel!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var passWordTextField: UITextField!
+    @IBOutlet private weak var loginBtn: UIButton!
+    @IBOutlet private weak var clearBtn: UIButton!
+    @IBOutlet private weak var informLabel: UILabel!
     
     //MARK: - Variables
-    var checkInput : CheckInput = .empty {
+    private var checkInput: CheckInput = .empty {
         didSet {
             showResult()
         }
@@ -35,7 +35,7 @@ final class LoginViewController: UIViewController {
         setupUI()
     }
     
-    // MARK: - functions
+    // MARK: - Private functions
     private func setupUI() {
         loginBtn.layer.cornerRadius = 10
         clearBtn.layer.cornerRadius = 10
@@ -55,29 +55,30 @@ final class LoginViewController: UIViewController {
     }
     
     
-    // MARK: - IBAction functions
-    @IBAction func loginButtonTouchUpInSide(_ sender: UIButton) {
+    // MARK: - IBAction private functions
+    @IBAction private func loginButtonTouchUpInSide(_ sender: UIButton) {
         loginProcess()
     }
-
-    @IBAction func clearButtonTouchUpInSide(_ sender: UIButton) {
+    
+    @IBAction private func clearButtonTouchUpInSide(_ sender: UIButton) {
         userNameTextField.text = ""
         passWordTextField.text = ""
         informLabel.text = ""
         userNameTextField.becomeFirstResponder()
     }
     
-    @IBAction func clickOnNextKey(_ sender: AnyObject) {
+    @IBAction private func clickOnNextKey(_ sender: AnyObject) {
         passWordTextField.becomeFirstResponder()
     }
     
-    @IBAction func clickOnDoneKey(_ sender: AnyObject) {
+    @IBAction private func clickOnDoneKey(_ sender: AnyObject) {
         loginProcess()
         view.endEditing(true)
     }
     
     //MARK: - Override function
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
 }
@@ -88,10 +89,10 @@ struct User {
     
     func checkUserPassword() -> CheckInput {
         switch (userName, password) {
-        case ("abc","123"): return .correct
-        case ("",""): return .empty
-        case (_,""): return .noPassword
-        case ("",_): return .noUsername
+        case ("abc", "123"): return .correct
+        case ("", ""): return .empty
+        case (_, ""): return .noPassword
+        case ("", _): return .noUsername
         default: return .incorrect
         }
     }

@@ -8,14 +8,19 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        
+        self.window = window
+        window.rootViewController = configTabbar()
+        window.makeKeyAndVisible()
+    }
+    
+    private func configTabbar() -> UITabBarController {
         // MyViewController
         let myVC = MyViewController()
         let myNavi = UINavigationController(rootViewController: myVC)
@@ -49,11 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabbarController = UITabBarController()
         tabbarController.viewControllers = [myNavi, customNavi, tableNavi, collectionNavi, mapNavi, naviNavi]
         tabbarController.tabBar.tintColor = .systemPink
-        
-        window.rootViewController = tabbarController
-        
-        self.window = window
-        window.makeKeyAndVisible()
+        return tabbarController
     }
 }
 

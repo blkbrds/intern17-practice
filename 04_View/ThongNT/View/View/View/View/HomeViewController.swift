@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
         addLotOfUser()
     }
     
+    //MARK: - private functions
     private func addUser(name: String, imageStr: String, x: CGFloat, y: CGFloat) {
         // add user avatar
         let frame = CGRect(x: 20 + x, y: 100 + y, width: 100, height: 100)
@@ -58,7 +59,7 @@ final class HomeViewController: UIViewController {
         }
     }
     
-    @objc func buttonDidClick() {
+    @objc private func buttonDidClick() {
         print("Button clicked")
     }
 }

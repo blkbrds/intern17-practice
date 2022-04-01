@@ -9,7 +9,7 @@ import UIKit
 
 final class MyViewController: UIViewController {
     
-    @IBOutlet var exerciseButtonsCollection: [UIButton]!    
+    @IBOutlet private var exerciseButtonsCollection: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ final class MyViewController: UIViewController {
         button.frame.size = CGSize(width: 150, height: 90)
     }
     
-    @IBAction func buttonTouchUpInSide(_ sender: UIButton) {
+    @IBAction private func buttonTouchUpInSide(_ sender: UIButton) {
         switch sender.tag {
         case 0:
             navigationController?.pushViewController(HomeViewController(), animated: true)

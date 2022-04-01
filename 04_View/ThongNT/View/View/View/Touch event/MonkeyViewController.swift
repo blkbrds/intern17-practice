@@ -15,10 +15,10 @@ enum MonkeyMessage: String {
 final class MonkeyViewController: UIViewController {
     
     //MARK: - IBOulets
-    @IBOutlet weak var monkeyImageView: UIImageView!
+    @IBOutlet private weak var monkeyImageView: UIImageView!
     
     //MARK: - Variables
-    var messageLabel: UILabel = UILabel()
+    private var messageLabel: UILabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ final class MonkeyViewController: UIViewController {
     
     private func setGestureForImage() {
         let longPressGesture = UILongPressGestureRecognizer(target: self,
-                                                action: #selector(handleLongPress))
+                                                            action: #selector(handleLongPress))
         longPressGesture.minimumPressDuration = 1
         let zoomGesture = UIPinchGestureRecognizer(target: self,
                                                    action: #selector(handleZoom))

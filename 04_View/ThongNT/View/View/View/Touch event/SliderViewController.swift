@@ -10,14 +10,13 @@ import UIKit
 final class SliderViewController: UIViewController {
     
     //MARK: - IBOutlets
-    @IBOutlet weak var whiteView: UIView!
+    @IBOutlet private weak var whiteView: UIView!
     
     //MARK: - Variables
     private var thumbLabel: UILabel = UILabel()
     private var colorView: UIView = UIView()
-    var currentPoint: CGPoint = .zero
+    private var currentPoint: CGPoint = .zero
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -82,9 +81,10 @@ final class SliderViewController: UIViewController {
         let percent = a / b * 100
         thumbLabel.text = "\(Int(percent))"
     }
-        
+    
     //MARK: - Override functions
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
         guard let touch = touches.first else { return }
         currentPoint = touch.location(in: self.whiteView)
         setThumbPosistion()

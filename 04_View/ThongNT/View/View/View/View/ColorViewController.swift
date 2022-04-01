@@ -10,11 +10,11 @@ import UIKit
 final class ColorViewController: UIViewController {
     
     //MARK: - IBOutlets
-    @IBOutlet weak var informColorLabel: UILabel!
-    @IBOutlet weak var colorView: UIView!
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
+    @IBOutlet private weak var informColorLabel: UILabel!
+    @IBOutlet private weak var colorView: UIView!
+    @IBOutlet private weak var redSlider: UISlider!
+    @IBOutlet private weak var greenSlider: UISlider!
+    @IBOutlet private weak var blueSlider: UISlider!
     
     //MARK: - Variables
     private var redX: Float = 0.3921568627 {
@@ -42,12 +42,12 @@ final class ColorViewController: UIViewController {
         setupUI()
     }
     
+    //MARK: - Private functions
     private func setupUI() {
         informRGBColor()
         setColor(red: CGFloat(redX), green: CGFloat(greenX), blue: CGFloat(blueX))
     }
     
-    //MARK: - functions
     private func setColor(red: CGFloat, green: CGFloat, blue: CGFloat) {
         colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
@@ -60,15 +60,15 @@ final class ColorViewController: UIViewController {
     }
     
     //MARK: - IBAactions
-    @IBAction func moveRedSlider(_ sender: UISlider) {
+    @IBAction private func moveRedSlider(_ sender: UISlider) {
         redX = sender.value
     }
     
-    @IBAction func moveGreenSlider(_ sender: UISlider) {
+    @IBAction private func moveGreenSlider(_ sender: UISlider) {
         greenX = sender.value
     }
     
-    @IBAction func moveBlueSlider(_ sender: UISlider) {
+    @IBAction private func moveBlueSlider(_ sender: UISlider) {
         blueX = sender.value
     }
 }
