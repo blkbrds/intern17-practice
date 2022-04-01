@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ColorViewController: UIViewController {
+final class ColorViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var informColorLabel: UILabel!

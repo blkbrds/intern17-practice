@@ -15,7 +15,7 @@ enum CheckInput: String {
     case incorrect = "Nhập sai tên đặng nhập hoặc mật khẩu"
 }
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+final class LoginViewController: UIViewController {
     // MARK: - IBOulets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!

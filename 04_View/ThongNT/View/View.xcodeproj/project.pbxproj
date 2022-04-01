@@ -11,8 +11,6 @@
 		E1E07AFC27F400E6008BF7B3 /* ColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E07AFA27F400E6008BF7B3 /* ColorViewController.xib */; };
 		E1E07B0027F40109008BF7B3 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E07AFE27F40109008BF7B3 /* SliderViewController.swift */; };
 		E1E07B0127F40109008BF7B3 /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E07AFF27F40109008BF7B3 /* SliderViewController.xib */; };
-		E1E07B0627F40144008BF7B3 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E07B0427F40144008BF7B3 /* ZoomViewController.swift */; };
-		E1E07B0727F40144008BF7B3 /* ZoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E07B0527F40144008BF7B3 /* ZoomViewController.xib */; };
 		E1E07B0B27F40159008BF7B3 /* MonkeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E07B0927F40159008BF7B3 /* MonkeyViewController.swift */; };
 		E1E07B0C27F40159008BF7B3 /* MonkeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E07B0A27F40159008BF7B3 /* MonkeyViewController.xib */; };
 		E1EF338B27F2E153002F33DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF338A27F2E153002F33DB /* AppDelegate.swift */; };
@@ -42,8 +40,6 @@
 		E1E07AFA27F400E6008BF7B3 /* ColorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorViewController.xib; sourceTree = "<group>"; };
 		E1E07AFE27F40109008BF7B3 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		E1E07AFF27F40109008BF7B3 /* SliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
-		E1E07B0427F40144008BF7B3 /* ZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
-		E1E07B0527F40144008BF7B3 /* ZoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoomViewController.xib; sourceTree = "<group>"; };
 		E1E07B0927F40159008BF7B3 /* MonkeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyViewController.swift; sourceTree = "<group>"; };
 		E1E07B0A27F40159008BF7B3 /* MonkeyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonkeyViewController.xib; sourceTree = "<group>"; };
 		E1EF338727F2E153002F33DB /* View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = View.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,8 +82,6 @@
 			children = (
 				E1E07AFE27F40109008BF7B3 /* SliderViewController.swift */,
 				E1E07AFF27F40109008BF7B3 /* SliderViewController.xib */,
-				E1E07B0427F40144008BF7B3 /* ZoomViewController.swift */,
-				E1E07B0527F40144008BF7B3 /* ZoomViewController.xib */,
 				E1E07B0927F40159008BF7B3 /* MonkeyViewController.swift */,
 				E1E07B0A27F40159008BF7B3 /* MonkeyViewController.xib */,
 			);
@@ -266,7 +260,6 @@
 				E1EF33B827F2E5A5002F33DB /* NavigationViewController.xib in Resources */,
 				E1EF33AE27F2E549002F33DB /* CustomViewController.xib in Resources */,
 				E1EF33BD27F2E5B4002F33DB /* TableViewController.xib in Resources */,
-				E1E07B0727F40144008BF7B3 /* ZoomViewController.xib in Resources */,
 				E1E07B0127F40109008BF7B3 /* SliderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +280,6 @@
 				E1EF33BC27F2E5B4002F33DB /* TableViewController.swift in Sources */,
 				E1EF33A227F2E1E1002F33DB /* MyViewController.swift in Sources */,
 				E1EF338D27F2E153002F33DB /* SceneDelegate.swift in Sources */,
-				E1E07B0627F40144008BF7B3 /* ZoomViewController.swift in Sources */,
 				E1EF33B727F2E5A5002F33DB /* NavigationViewController.swift in Sources */,
 				E1EF33B227F2E58E002F33DB /* HomeViewController.swift in Sources */,
 				E1E07AFB27F400E6008BF7B3 /* ColorViewController.swift in Sources */,

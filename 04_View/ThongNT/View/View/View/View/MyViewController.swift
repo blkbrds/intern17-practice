@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyViewController: UIViewController {
+final class MyViewController: UIViewController {
     
     @IBOutlet var exerciseButtonsCollection: [UIButton]!    
     
@@ -42,7 +42,7 @@ class MyViewController: UIViewController {
         case 3:
             navigationController?.pushViewController(SliderViewController(), animated: true)
         case 4:
-            navigationController?.pushViewController(ZoomViewController(), animated: true)
+            navigationController?.pushViewController(MonkeyViewController(), animated: true)
         default:
             return
         }
