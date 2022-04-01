@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		224B278D27F596A2002EC3E5 /* Exercise05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B278B27F596A2002EC3E5 /* Exercise05ViewController.swift */; };
+		224B278E27F596A2002EC3E5 /* Exercise05ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224B278C27F596A2002EC3E5 /* Exercise05ViewController.xib */; };
 		225B222427F4A7FA00D1FE6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B222327F4A7FA00D1FE6C /* AppDelegate.swift */; };
 		225B222627F4A7FA00D1FE6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B222527F4A7FA00D1FE6C /* SceneDelegate.swift */; };
 		225B222827F4A7FA00D1FE6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B222727F4A7FA00D1FE6C /* ViewController.swift */; };
@@ -19,11 +21,17 @@
 		225B224227F4A97900D1FE6C /* Excersise01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225B224027F4A97900D1FE6C /* Excersise01ViewController.xib */; };
 		225B224627F4AE8400D1FE6C /* Excersise02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B224427F4AE8400D1FE6C /* Excersise02ViewController.swift */; };
 		225B224727F4AE8400D1FE6C /* Excersise02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225B224527F4AE8400D1FE6C /* Excersise02ViewController.xib */; };
+		22A0DD3527F6D31A00047415 /* Exercise6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0DD3327F6D31A00047415 /* Exercise6ViewController.swift */; };
+		22A0DD3627F6D31A00047415 /* Exercise6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A0DD3427F6D31A00047415 /* Exercise6ViewController.xib */; };
 		22FC0F1027F52F7D001DEBFD /* Exercise03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC0F0E27F52F7D001DEBFD /* Exercise03ViewController.swift */; };
 		22FC0F1127F52F7D001DEBFD /* Exercise03ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FC0F0F27F52F7D001DEBFD /* Exercise03ViewController.xib */; };
+		22FC0F1927F56A54001DEBFD /* Exersice04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FC0F1727F56A54001DEBFD /* Exersice04ViewController.xib */; };
+		22FC0F1A27F56A54001DEBFD /* Exersice04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC0F1827F56A54001DEBFD /* Exersice04ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		224B278B27F596A2002EC3E5 /* Exercise05ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise05ViewController.swift; sourceTree = "<group>"; };
+		224B278C27F596A2002EC3E5 /* Exercise05ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise05ViewController.xib; sourceTree = "<group>"; };
 		225B222027F4A7FA00D1FE6C /* BaiTapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225B222327F4A7FA00D1FE6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		225B222527F4A7FA00D1FE6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,8 +46,12 @@
 		225B224027F4A97900D1FE6C /* Excersise01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Excersise01ViewController.xib; sourceTree = "<group>"; };
 		225B224427F4AE8400D1FE6C /* Excersise02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excersise02ViewController.swift; sourceTree = "<group>"; };
 		225B224527F4AE8400D1FE6C /* Excersise02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Excersise02ViewController.xib; sourceTree = "<group>"; };
+		22A0DD3327F6D31A00047415 /* Exercise6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise6ViewController.swift; sourceTree = "<group>"; };
+		22A0DD3427F6D31A00047415 /* Exercise6ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise6ViewController.xib; sourceTree = "<group>"; };
 		22FC0F0E27F52F7D001DEBFD /* Exercise03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise03ViewController.swift; sourceTree = "<group>"; };
 		22FC0F0F27F52F7D001DEBFD /* Exercise03ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise03ViewController.xib; sourceTree = "<group>"; };
+		22FC0F1727F56A54001DEBFD /* Exersice04ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Exersice04ViewController.xib; path = "../../../../../../../../../Desktop/untitled folder/View/04/Exersice04ViewController.xib"; sourceTree = "<group>"; };
+		22FC0F1827F56A54001DEBFD /* Exersice04ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exersice04ViewController.swift; path = "../../../../../../../../../Desktop/untitled folder/View/04/Exersice04ViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		224B278A27F59693002EC3E5 /* Ex5 */ = {
+			isa = PBXGroup;
+			children = (
+				224B278B27F596A2002EC3E5 /* Exercise05ViewController.swift */,
+				224B278C27F596A2002EC3E5 /* Exercise05ViewController.xib */,
+			);
+			path = Ex5;
+			sourceTree = "<group>";
+		};
 		225B221727F4A7FA00D1FE6C = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +126,9 @@
 		225B223D27F4A91700D1FE6C /* Excersise */ = {
 			isa = PBXGroup;
 			children = (
+				22A0DD3227F6D30C00047415 /* Ex6&7 */,
+				224B278A27F59693002EC3E5 /* Ex5 */,
+				22FC0F1227F55AB5001DEBFD /* Ex4 */,
 				22FC0F0D27F52F6D001DEBFD /* Ex3 */,
 				225B224327F4AE6D00D1FE6C /* Ex2 */,
 				225B223E27F4A95D00D1FE6C /* Ex1 */,
@@ -130,6 +154,15 @@
 			path = Ex2;
 			sourceTree = "<group>";
 		};
+		22A0DD3227F6D30C00047415 /* Ex6&7 */ = {
+			isa = PBXGroup;
+			children = (
+				22A0DD3327F6D31A00047415 /* Exercise6ViewController.swift */,
+				22A0DD3427F6D31A00047415 /* Exercise6ViewController.xib */,
+			);
+			path = "Ex6&7";
+			sourceTree = "<group>";
+		};
 		22FC0F0D27F52F6D001DEBFD /* Ex3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +170,15 @@
 				22FC0F0F27F52F7D001DEBFD /* Exercise03ViewController.xib */,
 			);
 			path = Ex3;
+			sourceTree = "<group>";
+		};
+		22FC0F1227F55AB5001DEBFD /* Ex4 */ = {
+			isa = PBXGroup;
+			children = (
+				22FC0F1827F56A54001DEBFD /* Exersice04ViewController.swift */,
+				22FC0F1727F56A54001DEBFD /* Exersice04ViewController.xib */,
+			);
+			path = Ex4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +244,11 @@
 				225B224727F4AE8400D1FE6C /* Excersise02ViewController.xib in Resources */,
 				225B222D27F4A7FB00D1FE6C /* Assets.xcassets in Resources */,
 				22FC0F1127F52F7D001DEBFD /* Exercise03ViewController.xib in Resources */,
+				22A0DD3627F6D31A00047415 /* Exercise6ViewController.xib in Resources */,
 				225B222B27F4A7FA00D1FE6C /* Main.storyboard in Resources */,
 				225B223A27F4A89000D1FE6C /* HomeViewController.xib in Resources */,
+				224B278E27F596A2002EC3E5 /* Exercise05ViewController.xib in Resources */,
+				22FC0F1927F56A54001DEBFD /* Exersice04ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,8 +262,11 @@
 				22FC0F1027F52F7D001DEBFD /* Exercise03ViewController.swift in Sources */,
 				225B224127F4A97900D1FE6C /* Excersise01ViewController.swift in Sources */,
 				225B222827F4A7FA00D1FE6C /* ViewController.swift in Sources */,
+				22A0DD3527F6D31A00047415 /* Exercise6ViewController.swift in Sources */,
+				22FC0F1A27F56A54001DEBFD /* Exersice04ViewController.swift in Sources */,
 				225B224627F4AE8400D1FE6C /* Excersise02ViewController.swift in Sources */,
 				225B222427F4A7FA00D1FE6C /* AppDelegate.swift in Sources */,
+				224B278D27F596A2002EC3E5 /* Exercise05ViewController.swift in Sources */,
 				225B222627F4A7FA00D1FE6C /* SceneDelegate.swift in Sources */,
 				225B223927F4A89000D1FE6C /* HomeViewController.swift in Sources */,
 			);
@@ -363,8 +411,8 @@
 		225B223527F4A7FB00D1FE6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6675TW7Z9P;
@@ -391,8 +439,8 @@
 		225B223627F4A7FB00D1FE6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6675TW7Z9P;

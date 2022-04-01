@@ -21,7 +21,7 @@ extension HomeViewController {
 
     private func setupUI() {
         // Set bai tap mac dinh
-        selectExcersise(with: .ex3)
+        selectExcersise(with: .ex6)
     }
 
     private func selectExcersise(with type: ExcersiseType) {
@@ -33,7 +33,7 @@ extension HomeViewController {
 extension HomeViewController {
 
     enum ExcersiseType {
-        case ex1, ex2, ex3
+        case ex1, ex2, ex3, ex4, ex5, ex6
     
         var viewController: UIViewController {
             switch self {
@@ -43,6 +43,12 @@ extension HomeViewController {
                 return Excersise02ViewController()
             case .ex3:
                 return Exercise03ViewController()
+            case .ex4:
+                return Exersice04ViewController()
+            case .ex5:
+                return Exercise05ViewController()
+            case .ex6:
+                return Exercise6ViewController()
             }
         }
     }

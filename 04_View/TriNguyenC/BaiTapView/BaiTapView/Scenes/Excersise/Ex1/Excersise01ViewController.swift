@@ -12,7 +12,7 @@ final class Excersise01ViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Bai01"
+        title = "Exercise01"
 
         // frame
         let frame = CGRect(x: 50, y: 100, width: 100, height: 100)
