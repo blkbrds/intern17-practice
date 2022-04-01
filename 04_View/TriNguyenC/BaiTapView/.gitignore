@@ -22,6 +22,12 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
+### Xcode ###
+build
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+
 ## Obj-C/Swift specific
 *.hmap
 
