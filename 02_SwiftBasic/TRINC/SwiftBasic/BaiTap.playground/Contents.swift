@@ -22,12 +22,12 @@ func giaiPT(a: Float, b: Float, c: Float) {
         }
     } else {
         let delta = b * b - 4 * a * c
-        if delta > 0 {
-            let x1 = (-b + sqrt(delta) / 2 * a)
-            let x2 = (-b - sqrt(delta) / 2 * a)
+        if (delta > 0) {
+            let x1 = (-b + sqrt(delta) / (2 * a))
+            let x2 = (-b - sqrt(delta) / (2 * a))
             print("nghiem thu nhat x1 = \(x1), nghiem thu hai x2 = \(x2)")
-        } else if delta == 0 {
-            let sum = -b / 2 * a
+        } else if (delta == 0) {
+            let sum = (-b / 2) * a
             print("phuong trinh co nghiem kep: x1 = x2 + \(sum)")
         } else {
             print("phuong tinh vo nghiem")
@@ -47,7 +47,7 @@ func ptBac2An(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) 
     let dy = a1 * c2  - a2 * c1
     
     if (d == 0) {
-        if (dx + dy) ==  0 {
+        if (dx * dy) ==  0 {
             result = "he phuong trinh vo so nghiem"
         } else {
             result = "he phuong trinh vo nghiem"
@@ -61,25 +61,28 @@ func ptBac2An(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) 
     return (result, x, y)
 }
 
-// MARK: - Bai 4
-///  Liet ke fibonacci
-func fibRecuision(numSteps: Int, first: Int, second: Int) -> [Int] {
-    if numSteps == 0 {
-        return []
+// MARK: - Bai4: tim 100 so fibonaci va tinh tong
+func isFibonnaci(n: Int) -> Int {
+    if n < 0 {
+        return -1
+    } else if (n == 0 || n == 1) {
+        return n
+    } else {
+        return isFibonnaci(n: n - 1) + isFibonnaci(n: n - 2) // Dequy
     }
-    
-    return [first + second] + fibRecuision(numSteps: numSteps - 1, first: second, second: first + second)
 }
 
-[0 , 1] + fibRecuision(numSteps: 40, first: 0, second: 1)
+var n: Int = 0
+var sum: Int = 0
 
-/// Tong100 Fibonacci
-func first100Fib(_ n: Int) -> Int {
-    guard n != 0 , n != 1 else { return n }
-    return first100Fib(n - 1) + first100Fib(n - 2)
+while (n < 100) {
+    print("Day so fibbonaaci: \(isFibonnaci(n: n))")
+    sum += isFibonnaci(n: n)
+    n += 1
 }
 
-print(first100Fib(100))
+print("Tong 100 so fibonnaci la : \(sum)")
+
 
 /// So Hanh Phuc
 func soHanhPhuc(number: Int) -> Bool {
