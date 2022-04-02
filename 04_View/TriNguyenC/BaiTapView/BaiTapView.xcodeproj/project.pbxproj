@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220A767C27F7EF7F00460695 /* Exercise07ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220A767A27F7EF7F00460695 /* Exercise07ViewController.swift */; };
+		220A767D27F7EF7F00460695 /* Exercise07ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220A767B27F7EF7F00460695 /* Exercise07ViewController.xib */; };
 		224B278D27F596A2002EC3E5 /* Exercise05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B278B27F596A2002EC3E5 /* Exercise05ViewController.swift */; };
 		224B278E27F596A2002EC3E5 /* Exercise05ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224B278C27F596A2002EC3E5 /* Exercise05ViewController.xib */; };
 		225B222427F4A7FA00D1FE6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B222327F4A7FA00D1FE6C /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220A767A27F7EF7F00460695 /* Exercise07ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise07ViewController.swift; sourceTree = "<group>"; };
+		220A767B27F7EF7F00460695 /* Exercise07ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise07ViewController.xib; sourceTree = "<group>"; };
 		224B278B27F596A2002EC3E5 /* Exercise05ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise05ViewController.swift; sourceTree = "<group>"; };
 		224B278C27F596A2002EC3E5 /* Exercise05ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise05ViewController.xib; sourceTree = "<group>"; };
 		225B222027F4A7FA00D1FE6C /* BaiTapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		220A767927F7EF7200460695 /* Ex7 */ = {
+			isa = PBXGroup;
+			children = (
+				220A767A27F7EF7F00460695 /* Exercise07ViewController.swift */,
+				220A767B27F7EF7F00460695 /* Exercise07ViewController.xib */,
+			);
+			path = Ex7;
+			sourceTree = "<group>";
+		};
 		224B278A27F59693002EC3E5 /* Ex5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +139,8 @@
 		225B223D27F4A91700D1FE6C /* Excersise */ = {
 			isa = PBXGroup;
 			children = (
-				22A0DD3227F6D30C00047415 /* Ex6&7 */,
+				220A767927F7EF7200460695 /* Ex7 */,
+				22A0DD3227F6D30C00047415 /* Ex6 */,
 				224B278A27F59693002EC3E5 /* Ex5 */,
 				22FC0F1227F55AB5001DEBFD /* Ex4 */,
 				22FC0F0D27F52F6D001DEBFD /* Ex3 */,
@@ -154,13 +168,13 @@
 			path = Ex2;
 			sourceTree = "<group>";
 		};
-		22A0DD3227F6D30C00047415 /* Ex6&7 */ = {
+		22A0DD3227F6D30C00047415 /* Ex6 */ = {
 			isa = PBXGroup;
 			children = (
 				22A0DD3327F6D31A00047415 /* Exercise6ViewController.swift */,
 				22A0DD3427F6D31A00047415 /* Exercise6ViewController.xib */,
 			);
-			path = "Ex6&7";
+			path = Ex6;
 			sourceTree = "<group>";
 		};
 		22FC0F0D27F52F6D001DEBFD /* Ex3 */ = {
@@ -241,6 +255,7 @@
 			files = (
 				225B224227F4A97900D1FE6C /* Excersise01ViewController.xib in Resources */,
 				225B223027F4A7FB00D1FE6C /* LaunchScreen.storyboard in Resources */,
+				220A767D27F7EF7F00460695 /* Exercise07ViewController.xib in Resources */,
 				225B224727F4AE8400D1FE6C /* Excersise02ViewController.xib in Resources */,
 				225B222D27F4A7FB00D1FE6C /* Assets.xcassets in Resources */,
 				22FC0F1127F52F7D001DEBFD /* Exercise03ViewController.xib in Resources */,
@@ -260,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22FC0F1027F52F7D001DEBFD /* Exercise03ViewController.swift in Sources */,
+				220A767C27F7EF7F00460695 /* Exercise07ViewController.swift in Sources */,
 				225B224127F4A97900D1FE6C /* Excersise01ViewController.swift in Sources */,
 				225B222827F4A7FA00D1FE6C /* ViewController.swift in Sources */,
 				22A0DD3527F6D31A00047415 /* Exercise6ViewController.swift in Sources */,
