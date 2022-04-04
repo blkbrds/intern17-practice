@@ -76,7 +76,7 @@ class TamGiac : DaGiac {
     
     func tinhDienTich() -> Float {
         let p: Float = Float(tinhChuVi() / 2)
-        let a: Float = p * ( p - Float(super.a[0]))*( p - Float(super.a[1]) )*( p - Float(super.a[2]))
+        let a: Float = p * ( p - Float(super.a[0])) * ( p - Float(super.a[1]) ) * ( p - Float(super.a[2]))
         return (sqrt(Float(a)))
     }
     
@@ -93,7 +93,7 @@ print("diện tích của tam giác là: \(tamGiac1.tinhDienTich())")
 print(tamGiac1.pyTaGo())
 
 //Bai 05 -------------------------------------------------------------------------------------------------
-struct CStack{
+struct CStack {
     var top: Int
     var capacity: Int
     var array: [Int]
@@ -104,25 +104,28 @@ struct CStack{
         self.capacity = capacity
     }
 
-    func isFull(stack: Int) -> Bool{         //kiểm tra stack đầy
+    func isFull(stack: Int) -> Bool {         //kiểm tra stack đầy
         return top >= capacity - 1
     }
+    
     func isEmpty() -> Bool {                     //kiểm tra stack rỗng
         return top == -1
     }
-    mutating func pUSH( value: Int, capacity: Int){             //thêm một phần tử vào stack
-    if(isFull(stack: capacity) == true){
+    
+    mutating func pUSH( value: Int, capacity: Int) {             //thêm một phần tử vào stack
+    if(isFull(stack: capacity) == true) {
         print("\nStack is full. Overflow condition!");
-    }else{
+    } else {
         top+=1
         array[top] = value
         //stack[top] = value;
     }
     }
-    mutating func pOP(){                                                     //xoá 1 phần tử ở đỉnh stack
-    if(isEmpty() == true){
+    
+    mutating func pOP() {                                                     //xoá 1 phần tử ở đỉnh stack
+    if(isEmpty() == true) {
         print("\nStack is empty. Underflow condition!");
-    }else{
+    } else {
         top-=1
     }
     }
@@ -134,17 +137,18 @@ stack.isEmpty()
 stack.pOP()
 
 //Bài 06----------------------------------------------------------------------------------------------------------------
-class HinhVe{
+class HinhVe {
 }
+
 class HaiChieu: HinhVe {
     var soCanh: Int
     var array: [Int]
-    
-    
+
     init(soCanh: Int, array: [Int]) {
             self.soCanh = soCanh
             self.array = array
         }
+    
     func tinhChuVi() -> Int {
             var cv: Int = 0
             for i in array {
@@ -153,28 +157,36 @@ class HaiChieu: HinhVe {
             return cv
         }
 }
+
 class Tron {
     var r: Float
+    
     init(r: Float) {
         self.r = r
     }
+    
     func tinhChuViHinhTron() -> Float {
         let pi: Float = 3.14
         return r * 2 * pi
     }
+    
     func tinhDienTichHinhTron() -> Float {
         let pi: Float = 3.14
         return pi * pow(r, 2)
     }
+    
     func tinhTheTichHinhTron() -> Float {
         let pi: Float = 3.14
         return pi * 2 * r
     }
 }
+
 class Vuong : HaiChieu {
+    
     override  init(soCanh: Int, array: [Int]) {
         super.init(soCanh: soCanh, array: array)
     }
+    
     override func tinhChuVi() -> Int {
         var cv: Int = 0
         for i in array {
@@ -182,14 +194,18 @@ class Vuong : HaiChieu {
         }
         return cv
     }
+    
     func tinhDienTichHinhVuong() -> Float {
         return Float(soCanh) * Float(soCanh)
     }
 }
+
 class Tamg : HaiChieu {
+    
     override  init(soCanh: Int, array: [Int]) {
         super.init(soCanh: soCanh, array: array)
     }
+    
     override func tinhChuVi() -> Int {
         var cv: Int = 0
         for i in array {
@@ -197,26 +213,32 @@ class Tamg : HaiChieu {
         }
         return cv
     }
+    
     func tinhDienTich() -> Float {
         let p: Float = Float(tinhChuVi() / 2)
-        let a: Float = p * ( p - Float(super.array[0]))*( p - Float(super.array[1]) )*( p - Float(super.array[2]))
+        let a: Float = p * ( p - Float(super.array[0])) * ( p - Float(super.array[1]) ) * ( p - Float(super.array[2]))
         return (sqrt(Float(a)))
     }
 }
+
 class BaChieu: HinhVe {
     var soCanh: Int
     var array: [Int]
+    
     init(soCanh: Int, array: [Int]) {
             self.soCanh = soCanh
             self.array = array
         }
 }
+
 class LapPhuong : BaChieu {
+    
     override  init(soCanh: Int, array: [Int]) {
         super.init(soCanh: soCanh, array: array)
     }
+    
     func tinhDienTichHinhLapPhuong() -> Float {
-        return (4*pow(Float(soCanh), 2) + 6*pow(Float(soCanh), 2))
+        return (4 * pow(Float(soCanh), 2) + 6 * pow(Float(soCanh), 2))
     }
     
     func tinhTheTichHinhLapPhuong() -> Float {
@@ -224,11 +246,14 @@ class LapPhuong : BaChieu {
     }
     
 }
+
 class Cau {
     var r: Float
+    
     init(r: Float) {
         self.r = r
     }
+    
     func tinhTheTichCau() -> Float {
         let pi: Float = 3.14
         return 4/3 * pi * 3 * r
@@ -242,7 +267,7 @@ print("diện tích của tam giác là: \(tamGiac.tinhDienTich())")
 print("diện tích hình lập phương là: \(hinhLapPhuong.tinhDienTichHinhLapPhuong())")
 
 //Bài 07----------------------------------------------------------------------------------------------------------------
-class HocSinh{
+class HocSinh {
     var hoTen: String
     var namSinh: Int
     var tongDiem: Float
@@ -295,7 +320,7 @@ var ds = DSHocSinh(ds: [hs1, hs2, hs3, hs4, hs5])
 print(ds.inKetQua(ds: ds.sapXep()))
 
 //Bài 08----------------------------------------------------------------------------------------------------------------
-class Date{
+class Date {
     var Day: Int
     var Month: Int
     var Year: Int
@@ -310,48 +335,42 @@ class Date{
     func normalize(DD: Int, MM: Int, YY: Int) {
         var Month = (MM>=1 && MM<=12) ? MM : 1
         var Year = (YY>=1900 && YY<=2100) ? YY : 1900
-        if(Month==2 && ktrNhuan(Y: Year)){
+        if(Month==2 && ktrNhuan(Y: Year)) {
             var Day = (DD>=1&&DD<=29) ? DD : 1
         }
-        else{
+        else {
             var Day = (DD>=1&&DD<=Days[Month-1]) ? DD : 1
         }
     }
+    
     func advance() {
-        if( Day == daysIn(D: Day))       // Het Nam
-        {
+        if( Day == daysIn(D: Day)) {      // Het Nam
             Day=1
             Month=1
             Year+=1
-        }
-        else
-        if((daysIn(D: Day)) != 0)             //Het Thang
-        {
-            Day=1
+        } else if((daysIn(D: Day)) != 0) {          //Het Thang
+            Day = 1
             Month+=1
-        }
-        else{
+        } else {
             Day+=1
         }
     }
-    func reset(y: Int, m: Int, d: Int) {
-        
-    }
+    
     func daysIn(D: Int) -> Int {
-        if(Month == 2 && ktrNhuan(Y: Year)){
-        return 29
+        if(Month == 2 && ktrNhuan(Y: Year)) {
+            return 29
         }
-        return Days[Month - 1]
+            return Days[Month - 1]
     }
-     //   return Days[Month-1]
+    
     func ktrNhuan(Y: Int) -> Bool {
-        if (Y % 4 == 0 && Y % 100 != 0){
-        return true
+        if (Y % 4 == 0 && Y % 100 != 0) {
+            return true
         }
-        if (Y % 400 == 0){
-        return true
+        if (Y % 400 == 0) {
+            return true
         }
-        return false
+            return false
     }
 }
 let ngay01 = Date(Day: 1, Month: 1, Year: 1900)
@@ -359,7 +378,7 @@ ngay01.ktrNhuan(Y: 1988)
 ngay01.normalize(DD: 12, MM: 5, YY: 1985)
 
 //Bài 09----------------------------------------------------------------------------------------------------------------
-struct Mang1c{
+struct Mang1c {
     var n: Int
     var a:[Int]
     
@@ -367,17 +386,14 @@ struct Mang1c{
         self.n = n
         self.a = a
     }
-    func nhapMang(){
-        for i in 0..<n {
-       // print("nhap phan tu mang a[\(i)] = ")
-        }
-    }
-    func xuatMang(){
+    
+    func xuatMang() {
         for i in 0..<n {
             print("phần tử a[\(i)] = \(a[i])")
         }
     }
-    func ptuLonNhatMang() ->Int {
+    
+    func ptuLonNhatMang() -> Int {
         var max: Int = 0
         for i in 0..<n {
             if (a[i] > max) {
@@ -386,7 +402,8 @@ struct Mang1c{
         }
         return max
     }
-    func ptuNhoNhatMang() ->Int {
+    
+    func ptuNhoNhatMang() -> Int {
         var min: Int = a[0]
         for i in 1..<n {
             if (a[i] < min) {
@@ -397,13 +414,12 @@ struct Mang1c{
     }
 }
 let a = Mang1c(n: 3, a: [10,20,30])
-a.nhapMang()
 a.xuatMang()
 print("phần tử lớn nhất trong mảng là: \(a.ptuLonNhatMang())")
 print("phần tử nhỏ nhất trong mảng là: \(a.ptuNhoNhatMang())")
 
 //Bài 10----------------------------------------------------------------------------------------------------------------
-struct A{
+struct A {
     var S: Int
     var n: Int
     
@@ -411,6 +427,7 @@ struct A{
         self.S = S
         self.n = n
     }
+    
     mutating func tinhTong() -> Int {
         for i in 1...n {
             S+=i
