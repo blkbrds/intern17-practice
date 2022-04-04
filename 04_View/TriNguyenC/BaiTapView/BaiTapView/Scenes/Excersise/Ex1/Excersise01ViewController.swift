@@ -18,6 +18,7 @@ final class Excersise01ViewController: UIViewController {
         let frame = CGRect(x: 50, y: 100, width: 100, height: 100)
         
         // user avatar
+        // Tach thanh lazy computed properties
         let userAvatar = UIImageView(image: UIImage(named: "ic-user"))
         userAvatar.frame = frame
         userAvatar.contentMode = .scaleToFill

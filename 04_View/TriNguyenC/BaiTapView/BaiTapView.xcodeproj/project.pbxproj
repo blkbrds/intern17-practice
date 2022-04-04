@@ -25,6 +25,8 @@
 		225B224727F4AE8400D1FE6C /* Excersise02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225B224527F4AE8400D1FE6C /* Excersise02ViewController.xib */; };
 		22A0DD3527F6D31A00047415 /* Exercise6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A0DD3327F6D31A00047415 /* Exercise6ViewController.swift */; };
 		22A0DD3627F6D31A00047415 /* Exercise6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A0DD3427F6D31A00047415 /* Exercise6ViewController.xib */; };
+		22D5028527FA7B6800D24D1C /* Exercise04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5028327FA7B6800D24D1C /* Exercise04ViewController.swift */; };
+		22D5028627FA7B6800D24D1C /* Exercise04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D5028427FA7B6800D24D1C /* Exercise04ViewController.xib */; };
 		22FC0F1027F52F7D001DEBFD /* Exercise03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC0F0E27F52F7D001DEBFD /* Exercise03ViewController.swift */; };
 		22FC0F1127F52F7D001DEBFD /* Exercise03ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FC0F0F27F52F7D001DEBFD /* Exercise03ViewController.xib */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		225B224527F4AE8400D1FE6C /* Excersise02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Excersise02ViewController.xib; sourceTree = "<group>"; };
 		22A0DD3327F6D31A00047415 /* Exercise6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise6ViewController.swift; sourceTree = "<group>"; };
 		22A0DD3427F6D31A00047415 /* Exercise6ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise6ViewController.xib; sourceTree = "<group>"; };
+		22D5028327FA7B6800D24D1C /* Exercise04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise04ViewController.swift; sourceTree = "<group>"; };
+		22D5028427FA7B6800D24D1C /* Exercise04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise04ViewController.xib; sourceTree = "<group>"; };
 		22FC0F0E27F52F7D001DEBFD /* Exercise03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise03ViewController.swift; sourceTree = "<group>"; };
 		22FC0F0F27F52F7D001DEBFD /* Exercise03ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise03ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +142,7 @@
 				220A767927F7EF7200460695 /* Ex7 */,
 				22A0DD3227F6D30C00047415 /* Ex6 */,
 				224B278A27F59693002EC3E5 /* Ex5 */,
+				22D5028227FA7B5400D24D1C /* Ex4 */,
 				22FC0F0D27F52F6D001DEBFD /* Ex3 */,
 				225B224327F4AE6D00D1FE6C /* Ex2 */,
 				225B223E27F4A95D00D1FE6C /* Ex1 */,
@@ -170,6 +175,15 @@
 				22A0DD3427F6D31A00047415 /* Exercise6ViewController.xib */,
 			);
 			path = Ex6;
+			sourceTree = "<group>";
+		};
+		22D5028227FA7B5400D24D1C /* Ex4 */ = {
+			isa = PBXGroup;
+			children = (
+				22D5028327FA7B6800D24D1C /* Exercise04ViewController.swift */,
+				22D5028427FA7B6800D24D1C /* Exercise04ViewController.xib */,
+			);
+			path = Ex4;
 			sourceTree = "<group>";
 		};
 		22FC0F0D27F52F6D001DEBFD /* Ex3 */ = {
@@ -245,6 +259,7 @@
 				225B224727F4AE8400D1FE6C /* Excersise02ViewController.xib in Resources */,
 				225B222D27F4A7FB00D1FE6C /* Assets.xcassets in Resources */,
 				22FC0F1127F52F7D001DEBFD /* Exercise03ViewController.xib in Resources */,
+				22D5028627FA7B6800D24D1C /* Exercise04ViewController.xib in Resources */,
 				22A0DD3627F6D31A00047415 /* Exercise6ViewController.xib in Resources */,
 				225B222B27F4A7FA00D1FE6C /* Main.storyboard in Resources */,
 				225B223A27F4A89000D1FE6C /* HomeViewController.xib in Resources */,
@@ -263,6 +278,7 @@
 				220A767C27F7EF7F00460695 /* Exercise07ViewController.swift in Sources */,
 				225B224127F4A97900D1FE6C /* Excersise01ViewController.swift in Sources */,
 				225B222827F4A7FA00D1FE6C /* ViewController.swift in Sources */,
+				22D5028527FA7B6800D24D1C /* Exercise04ViewController.swift in Sources */,
 				22A0DD3527F6D31A00047415 /* Exercise6ViewController.swift in Sources */,
 				225B224627F4AE8400D1FE6C /* Excersise02ViewController.swift in Sources */,
 				225B222427F4A7FA00D1FE6C /* AppDelegate.swift in Sources */,
