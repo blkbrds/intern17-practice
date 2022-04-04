@@ -1,20 +1,18 @@
 import UIKit
 
-class Bai5ViewController: UIViewController {
+final class Bai5ViewController: UIViewController {
     
     @IBOutlet weak var phantramLabel: UILabel!
-    @IBOutlet weak var whiteView: UIView!
-    @IBOutlet weak var blueView: UIView!
-    @IBOutlet weak var greenView: UIView!
-    @IBOutlet weak var parentView: UIView!
-    
+    @IBOutlet weak private var whiteView: UIView!
+    @IBOutlet weak private var blueView: UIView!
+    @IBOutlet weak private var greenView: UIView!
+    @IBOutlet weak private var parentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         greenView.layer.cornerRadius = 40
     }
 
-    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
             if let touch = touches.first {
                 if touch.view == greenView {

@@ -1,8 +1,7 @@
 import UIKit
 
-class Bai2ViewController: UIViewController {
+final class Bai2ViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,6 +55,7 @@ class Bai2ViewController: UIViewController {
         userView.addSubview(button)
         return userView
     }
+    
     @objc func buttonDidClick(sender: UIGestureRecognizer){
         if let name = sender.name {
             print(name)

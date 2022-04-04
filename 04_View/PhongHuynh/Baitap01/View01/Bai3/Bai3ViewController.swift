@@ -22,14 +22,10 @@ final class Bai3ViewController: UIViewController {
     }
 
     func login() -> Bool {
-        if usernameTextField.text == username && passwordTextField.text == password{
+        if usernameTextField.text == username && passwordTextField.text == password {
             return true
         }
-//        else if usernameTextField.text == "" && passwordTextField.text == ""{
-//            return false
-//        }
         return false
-        
     }
     
     @IBAction private func loginButtonTouchUpInside(_ sender: Any) {

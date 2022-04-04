@@ -1,22 +1,12 @@
-//
-//  HomeViewController.swift
-//  Baitap04
-//
-//  Created by Phong Huynh N. VN.Danang on 3/30/22.
-//
-
 import UIKit
 
-class Bai4ViewController: UIViewController {
+final class Bai4ViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
-    @IBOutlet weak var colorView: UIView!
-    
-
-    
+    @IBOutlet weak private var redSlider: UISlider!
+    @IBOutlet weak private var greenSlider: UISlider!
+    @IBOutlet weak private var blueSlider: UISlider!
+    @IBOutlet weak private var colorView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +15,8 @@ class Bai4ViewController: UIViewController {
         blueSlider.value = 100
     }
     
-    @IBAction func moveRedSlider(_ sender: Any) {
+    @IBAction private func moveRedSlider(_ sender: Any) {
         changeSlider(r: redSlider.value, g: greenSlider.value, b: blueSlider.value)
-        
     }
     
     func changeSlider(r: Float, g: Float, b: Float) {
