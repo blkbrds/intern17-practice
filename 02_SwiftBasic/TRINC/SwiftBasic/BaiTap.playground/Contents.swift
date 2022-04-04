@@ -23,8 +23,8 @@ func giaiPT(a: Float, b: Float, c: Float) {
     } else {
         let delta = b * b - 4 * a * c
         if (delta > 0) {
-            let x1 = (-b + sqrt(delta) / (2 * a))
-            let x2 = (-b - sqrt(delta) / (2 * a))
+            let x1 = (-b + sqrt(delta)) / (2 * a)
+            let x2 = (-b - sqrt(delta)) / (2 * a)
             print("nghiem thu nhat x1 = \(x1), nghiem thu hai x2 = \(x2)")
         } else if (delta == 0) {
             let sum = (-b / 2) * a
@@ -62,26 +62,30 @@ func ptBac2An(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) 
 }
 
 // MARK: - Bai4: tim 100 so fibonaci va tinh tong
-func isFibonnaci(n: Int) -> Int {
+// Tim so fibonannci thu n
+func fibonannciAt(n: Int) -> Int {
     if n < 0 {
         return -1
     } else if (n == 0 || n == 1) {
         return n
     } else {
-        return isFibonnaci(n: n - 1) + isFibonnaci(n: n - 2) // Dequy
+        return fibonannciAt(n: n - 1) + fibonannciAt(n: n - 2)
     }
 }
 
-var n: Int = 0
-var sum: Int = 0
+func sumOfFirstOnehundredFibo() {
+  var n: Int = 0
+  var sum: Int = 0
 
-while (n < 100) {
-    print("Day so fibbonaaci: \(isFibonnaci(n: n))")
-    sum += isFibonnaci(n: n)
+  while (n < 100) {
+    print("So fibbonaaci thu \(n+1) la: \(fibonannciAt(n: n))")
+    sum += fibonannciAt(n: n)
     n += 1
-}
+  }
 
-print("Tong 100 so fibonnaci la : \(sum)")
+  // In ra tong 100 so fibo dau tien
+  print("Tong 100 so fibonnaci la : \(sum)")
+}
 
 
 /// So Hanh Phuc
