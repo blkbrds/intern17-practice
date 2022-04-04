@@ -7,53 +7,65 @@
 
 import UIKit
 
-class Exercise04ViewController: UIViewController {
+final class Exercise04ViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    // RGBLabel
     @IBOutlet weak var rgbNamelLabel: UILabel!
-    @IBOutlet weak var backgroundRgb: UIView!
     
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
+    // BackgroundColorView
+    @IBOutlet weak var backgroundRgb: UIView!
+        
+    // Label
+    
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
     
     // MARK: - Properties
-    var red : CGFloat = 100
-    var green: CGFloat = 125
-    var blue: CGFloat = 150
+    
+    var red : Float = 100
+    var green: Float = 125
+    var blue: Float = 150
     
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Ex04"
         setupUI()
     }
     
     // MARK: - Private Functions
     
     private func setupUI() {
-        rgbNamelLabel.text = "r: \(red),g: \(green), b: \(blue)"
-    }
-    
-    private func ChangeColor() -> UIColor {
-        return UIColor(red: CGFloat(red) / 255.0, green: CGFloat(green / 225.0), blue: CGFloat(blue / 255.0), alpha: 1.0)
+        rgbNamelLabel.text = "r: \(red), g: \(green), b: \(blue)"
+        backgroundRgb.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
+        
+        redLabel.text = "Red"
+        greenLabel.text = "Green"
+        blueLabel.text = "Blue"
     }
     
     // MARK: - IBActions
     
     @IBAction func redSlider(_ sender: UISlider) {
-        let redCurrentColor = ChangeColor()
-        backgroundRgb.backgroundColor = redCurrentColor
+        let currentRedColor = sender.value
+        red = currentRedColor 
+//        rgbNamelLabel.text = "r: \(red)"
+        setupUI()
     }
     
     @IBAction func greenSlider(_ sender: UISlider) {
-        let greenCurrentColor = ChangeColor()
-        backgroundRgb.backgroundColor = greenCurrentColor
+        let currentGreenColor = sender.value
+        green = currentGreenColor
+        setupUI()
     }
     
     @IBAction func blueSlider(_ sender: UISlider) {
-        let blueCurrentColor = ChangeColor()
-        backgroundRgb.backgroundColor = blueCurrentColor
+        let currentBlueColor = sender.value
+        blue = currentBlueColor
+        setupUI()
     }
 }

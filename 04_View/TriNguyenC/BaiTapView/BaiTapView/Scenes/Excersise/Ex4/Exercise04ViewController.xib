@@ -11,9 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Exercise04ViewController" customModule="BaiTapView" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundRgb" destination="afz-z6-Tey" id="QII-Fx-RuV"/>
-                <outlet property="blueSlider" destination="mde-jU-Hzi" id="Hej-GL-iKK"/>
-                <outlet property="greenSlider" destination="Qde-Zt-gmr" id="ipp-8W-FlY"/>
-                <outlet property="redSlider" destination="pbW-VS-Iq9" id="kUe-8F-UJ0"/>
+                <outlet property="blueLabel" destination="LVS-Kn-FZR" id="KhN-pT-zDC"/>
+                <outlet property="greenLabel" destination="h9o-m1-oiC" id="6bc-A2-KHt"/>
+                <outlet property="redLabel" destination="0cQ-Ff-giB" id="SZg-EE-ZRa"/>
                 <outlet property="rgbNamelLabel" destination="k8q-Ie-Zep" id="wdN-gP-UaD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
