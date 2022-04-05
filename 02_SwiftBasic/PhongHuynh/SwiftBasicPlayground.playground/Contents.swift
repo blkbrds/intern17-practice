@@ -62,7 +62,7 @@ func fibonacci(n: Int) -> Int {
 }
 
 func nguyenTo(n: Int) -> Int {
-    var temp: Int = Int(sqrt(Double(n)))
+    let temp: Int = Int(sqrt(Double(n)))
     
     for i in 2...temp {
         if n % i == 0{
@@ -91,14 +91,14 @@ print("so luong chuoi con la \(countSubString("ababababababaab", "ab"))")
 
 // Bai 6: hoan vi
  func hoanViRanDom2(array: [Int]) -> [Int] {
-  var listArray: [Int] = array
-  var shuffleArray: [Int] = []
-  while listArray.count > 0 {
-    if let randomElement = listArray.randomElement(), let index = listArray.firstIndex(of: randomElement) {
-      shuffleArray.append(randomElement)
-      listArray.remove(at: index)
+    var listArray: [Int] = array
+    var shuffleArray: [Int] = []
+    while listArray.count > 0 {
+        if let randomElement = listArray.randomElement(), let index = listArray.firstIndex(of: randomElement) {
+            shuffleArray.append(randomElement)
+            listArray.remove(at: index)
+        }
     }
-  }
   return shuffleArray
 }
 print(hoanViRanDom2(array: [0, 1, 2, 3, 4 , 5, 6, 7, 8, 9]))
