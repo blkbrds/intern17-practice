@@ -61,18 +61,6 @@ func fibonacci(n: Int) -> Int {
   return fibonacci(n: n - 1) + fibonacci(n:n - 2)
 }
 
-func tinhTong(n: Int) -> Int {
-    var s: Int = 0
-    
-    for i in 1...n {
-        print("so fibonacci thu \(i) la \(fibonacci(n: i))")
-        s+=fibonacci(n: i)
-    }
-    return s
-}
-print("tong cua n so fibonacci dau tien \(tinhTong(n: 3))")
-
-// Bai tap 4
 func nguyenTo(n: Int) -> Int {
     var temp: Int = Int(sqrt(Double(n)))
     
@@ -84,40 +72,16 @@ func nguyenTo(n: Int) -> Int {
     return 1
 }
 
-func kiemTra(n: Int) -> Int {
-    var temp = [Int]()
-    var tong1: Int = 0
-    var tong2: Int = 0
+func tinhTong(n: Int) -> Int {
+    var s: Int = 0
     
-    for i in 0...n/2 {
-        tong1+=temp[i] - 0
-        for i in 0...n {
-            tong2+=temp[i]-0
-        return tong1
-        }
+    for i in 1...n {
+        print("so fibonacci thu \(i) la \(fibonacci(n: i))")
+        s+=fibonacci(n: i)
     }
-    return tong2
-
+    return s
 }
-
-func lietKe(n: Int) -> Int {
-    for i in 100001 ..< 999999 {
-    }
-    return n
-    }
-
-
-//Bai tap 5
-func timKiemChuoi(arraycon: String, arrayme: String) {
-    var string = "abaaaabbbabababbaaabababa"
-    var dem = 0
-    for value in string {
-        if string.contains("ab") {
-            dem+=1
-            print("so lan xuat hien chuoi con la \(dem)")
-        }
-    }
-}
+print("tong cua n so fibonacci dau tien \(tinhTong(n: 3))")
 
 //Bai5 tim so luong chuoi con trong chuoi me
 func countSubString(_ me: String, _ con: String) -> Int {
