@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BadgeNumberViewController" customModule="View" customModuleProvider="target">
+            <connections>
+                <outlet property="emailButton" destination="ulS-AC-h5w" id="w6W-Cl-ce3"/>
+                <outlet property="friendsButton" destination="Eb3-uj-ZZY" id="p5m-Tx-PPU"/>
+                <outlet property="photosButton" destination="2pI-1s-9lG" id="jPX-iQ-Kju"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulS-AC-h5w" userLabel="Email Button">
+                    <rect key="frame" x="132" y="194" width="150" height="70"/>
+                    <color key="backgroundColor" red="0.32894542209101407" green="0.86504209844559588" blue="0.27997720884374783" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="b0E-h8-aKg"/>
+                        <constraint firstAttribute="width" constant="150" id="dHk-p8-eNy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="Email">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb3-uj-ZZY" userLabel="Friends Button">
+                    <rect key="frame" x="132" y="364" width="150" height="70"/>
+                    <color key="backgroundColor" red="0.26957060585945147" green="0.3852661532593572" blue="1" alpha="0.716246698943662" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="3Le-Yk-BAi"/>
+                        <constraint firstAttribute="height" constant="70" id="Jxc-az-KjE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="Friends">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pI-1s-9lG" userLabel="Photos Button">
+                    <rect key="frame" x="132" y="534" width="150" height="70"/>
+                    <color key="backgroundColor" red="0.99247085492227982" green="0.65351328401701902" blue="0.23702291416843088" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="GP8-oV-Hz0"/>
+                        <constraint firstAttribute="width" constant="150" id="lHM-Mw-zvm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="Photos">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="2pI-1s-9lG" firstAttribute="top" secondItem="Eb3-uj-ZZY" secondAttribute="bottom" constant="100" id="9DQ-Ho-LhJ"/>
+                <constraint firstItem="Eb3-uj-ZZY" firstAttribute="top" secondItem="ulS-AC-h5w" secondAttribute="bottom" constant="100" id="9aN-ZV-I8G"/>
+                <constraint firstItem="ulS-AC-h5w" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="G9S-rV-2e5"/>
+                <constraint firstItem="2pI-1s-9lG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fUU-c7-gI0"/>
+                <constraint firstItem="ulS-AC-h5w" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kWL-C2-1Jq"/>
+                <constraint firstItem="Eb3-uj-ZZY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nbQ-PU-tk7"/>
+            </constraints>
+            <point key="canvasLocation" x="-200.00000000000003" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

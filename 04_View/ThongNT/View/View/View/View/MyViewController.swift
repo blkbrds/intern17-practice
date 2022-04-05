@@ -20,6 +20,8 @@ final class MyViewController: UIViewController {
         view.subviews
             .compactMap { $0 as? UIButton }
             .forEach { configButton($0) }
+        
+        self.title = "View"
     }
     
     private func configButton(_ button: UIButton) {
