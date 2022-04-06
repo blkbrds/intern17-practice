@@ -7,14 +7,14 @@
 
 import UIKit
 
+// MARK: - Protocol
 protocol MyAvatarDelegate {
     func didTap(view: MyAvatarView, name: String)
 }
 
-class MyAvatarView: UIView {
+final class MyAvatarView: UIView {
     
     // MARK: - Properties
-    
     var name: String? {
         didSet {
             setupUI()
@@ -36,7 +36,6 @@ class MyAvatarView: UIView {
     @IBOutlet weak var myButton: UIButton!
     
     // MARK: - IBActions
-    
     @IBAction func myButtonTouchUpInside(_ sender: Any) {
         if let delegate = delegate {
             delegate.didTap(view: self, name: name ?? "")
@@ -44,7 +43,6 @@ class MyAvatarView: UIView {
     }
     
     // MARK: - Private Functions
-    
     private func setupUI() {
         nameLabel.text = name
         guard avatarImageView.image == UIImage(named: avatar ?? "") else { return }

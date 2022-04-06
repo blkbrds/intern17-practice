@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Exercise01ViewController: UIViewController {
+final class Exercise01ViewController: UIViewController {
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -23,6 +23,7 @@ class Exercise01ViewController: UIViewController {
     }
 }
 
+// MARK: - Implement Protocol
 extension Exercise01ViewController: MyAvatarDelegate {
     func didTap(view: MyAvatarView, name: String) {
         print("name: \(name)")
