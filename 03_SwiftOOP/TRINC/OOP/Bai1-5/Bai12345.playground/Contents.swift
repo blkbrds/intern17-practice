@@ -64,14 +64,15 @@ class DaGiac {
         self.soCanh = socanh
     }
     
+    // reduce nó cộng dồn hết các phần tử trong mảng, higher function in swift
     func chuviDaGiac() -> Int {
-        return self.kichThuocCacCanh.reduce(0) { $0 + $1 }
+        kichThuocCacCanh.reduce(0) { $0 + $1 }
     }
     
+    // forEach bằng for _ in trong swift
     func giaTriCacCanh() {
-        self.kichThuocCacCanh.forEach { print($0) }
+        kichThuocCacCanh.forEach { print($0) }
     }
-    
 }
 
 class TamGiac: DaGiac {
@@ -80,60 +81,65 @@ class TamGiac: DaGiac {
         guard kichThuocCacCanh.count == 3 else { return nil }
         super.init(socanh: 3, kichThuocCacCanh: kichThuocCacCanh)
     }
-            
-    override func chuviDaGiac() -> Int {
-        super.chuviDaGiac()
-    }
     
     func tinhDienTich() -> Double {
         let p = chuviDaGiac() / 2
-        let dientich = sqrt(Double(p * (p - kichThuocCacCanh[0]) + (p - kichThuocCacCanh[1]) + (p - kichThuocCacCanh[2])))
+        let dientich = sqrt(Double(p * (p - kichThuocCacCanh[0]) * (p - kichThuocCacCanh[1]) * (p - kichThuocCacCanh[2])))
         return dientich
     }
     
-    func pitago() -> String {
-        return pow(Decimal(kichThuocCacCanh[0]), 2) + pow(Decimal(kichThuocCacCanh[1]), 2) == pow(Decimal(kichThuocCacCanh[2]), 2) ? "thoả mãn điều kiện, các cạnh của tam giác là : \(kichThuocCacCanh[0]), \(kichThuocCacCanh[1]), \(kichThuocCacCanh[2])" : "không thoả"
+    func pitago() {
+        let isPitago = (kichThuocCacCanh[0] * kichThuocCacCanh[0]) + (kichThuocCacCanh[1] * kichThuocCacCanh[1]) == kichThuocCacCanh[2] * kichThuocCacCanh[2] ||
+        (kichThuocCacCanh[1] * kichThuocCacCanh[1]) + (kichThuocCacCanh[2] * kichThuocCacCanh[2]) == kichThuocCacCanh[0] * kichThuocCacCanh[0] ||
+        (kichThuocCacCanh[0] * kichThuocCacCanh[0]) + (kichThuocCacCanh[2] * kichThuocCacCanh[2]) == kichThuocCacCanh[1] * kichThuocCacCanh[1]
+        print("Tam giac nay co phai pitago hay khong: \(isPitago)")
     }
-
 }
 
 
 // MARK: - Bai5
-final class Stack<Element> {
-    
-    public var stacks: [Element] = []
-    
-    var isEmpty: Bool {
-        return stacks.isEmpty
-    }
-    
-    func checkStack(fullElement: Int) -> Bool {
-        return stacks.count >= fullElement - 1 ? true : false
-    }
-    
-    func push(_ element: Element) {
-        stacks.append(element)
-    }
-    
-    func pop() -> Element? {
-        return stacks.popLast()
-    }
-    
-    func countStack() -> Int {
-        return stacks.count
-    }
- }
 
-var stack = Stack<Int>()
-print("them cac phan tu vao stack")
+final class Stack {
+    
+    // Khởi tạo stack
+    public var sizeStack: [Int] = []
+    
+    // Kiểm tra stack có rỗng hay không
+    public var isEmpty: Bool {
+        sizeStack.isEmpty
+    }
+    
+    // Kiểm tra stack đầy
+    public func fullStack(fullElement: Int) -> Bool {
+        sizeStack.count >= fullElement - 1 ? true : false
+    }
+    
+    // Thêm 1 phần tử vào stack
+    public func push(_ element: Int) {
+        sizeStack.append(element)
+    }
+    
+    // Xóa Phần tử ở đỉnh Stack
+    public func pop() -> Int? {
+        sizeStack.popLast()
+    }
+    
+    // Đếm các phần tử stack
+    public func countStack() -> Int {
+        sizeStack.count
+    }
+}
+
+var stack = Stack()
+
+// Thêm các phần tử vào stack
 stack.push(1)
 stack.push(2)
 stack.push(3)
 
-print("dem cac phan tu \(stack.countStack())")
+// xóa các phần tử khỏi stack
+stack.pop()
+stack.pop()
+stack.pop()
 
-print("xoa phan tu vao stack ")
-stack.pop()
-stack.pop()
-stack.pop()
 
