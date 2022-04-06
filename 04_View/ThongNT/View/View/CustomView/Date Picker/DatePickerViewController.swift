@@ -51,10 +51,6 @@ final class DatePickerViewController: UIViewController {
         }
     }
     
-    private func formatDate(from myDate: Date) {
-
-    }
-    
     @IBAction private func textFieldDidTouch(_ sender: UITextField) {
         showView()
     }
@@ -64,11 +60,6 @@ final class DatePickerViewController: UIViewController {
 extension DatePickerViewController: DataPickerViewDelegate {
     func sendDate(in view: DatePickerCustomView, mydate: Date, isHide: Bool) {
         showDateTextField.text = "\(mydate)"
-        if isHide {
-            hideView()
-        } else {
-            showView()
-        }
+        isHide ? hideView() : showView()
     }
 }
-

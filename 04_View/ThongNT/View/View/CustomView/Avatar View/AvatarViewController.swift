@@ -44,12 +44,10 @@ final class AvatarViewController: UIViewController {
         addUsers()
     }
     
-    private func addUser(username: String, userImage: String, x: CGFloat, y: CGFloat) {
+    private func addUser(user: UserInfo, x: CGFloat, y: CGFloat) {
         guard let avatarView = Bundle.main.loadNibNamed("UserView", owner: self, options: nil)?.first as? UserView else { return }
         avatarView.frame = CGRect(x: 150 + x, y: 150 + y, width: 100, height: 150)
-        avatarView.userNameLabel.text = username
-        avatarView.userImage.image = UIImage(named: "MonkeyImage")
-        avatarView.userImage.contentMode = .scaleToFill
+        avatarView.setDataForUser(user: user)
         avatarView.delegate = self
         contentView.addSubview(avatarView)
     }
@@ -61,7 +59,7 @@ final class AvatarViewController: UIViewController {
         var countHorizon: Int = 0
         
         usersInfo.forEach { (user) in
-            addUser(username: user.username, userImage: user.userImage, x: horizonMove, y: verticalMove)
+            addUser(user: user, x: horizonMove, y: verticalMove)
             horizonMove += 120
             countHorizon += 1
             if countHorizon == 3 {

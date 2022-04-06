@@ -36,7 +36,7 @@ final class MySliderViewController: UIViewController {
         self.sliderView = sliderView
     }
     
-    @IBAction func changeValue(_ sender: Any) {
+    @IBAction private func getValueChange(_ sender: Any) {
         guard let changeValue = valueTextField.text,
         let newValue = Float(changeValue) else { return }
         self.changeValue = newValue
@@ -59,5 +59,4 @@ extension MySliderViewController: CustomSliderViewDelegate,
     func didChangeValue(view: CustomSliderView, value: Int) {
         valueTextField.text = String(value)
     }
-    
 }

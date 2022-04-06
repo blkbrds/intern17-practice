@@ -38,7 +38,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     <connections>
-                        <action selector="changeValue:" destination="-1" eventType="editingChanged" id="Lv6-8i-pxp"/>
+                        <action selector="getValueChange:" destination="-1" eventType="editingChanged" id="peS-cM-PFq"/>
                     </connections>
                 </textField>
             </subviews>

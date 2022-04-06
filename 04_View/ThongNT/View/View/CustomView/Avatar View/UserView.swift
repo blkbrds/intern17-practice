@@ -13,18 +13,22 @@ protocol UserViewDelegate {
 
 final class UserView: UIView {
     
-    var count: Int = 0
+    private var count: Int = 0
     var delegate: UserViewDelegate?
     
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var userImage: UIImageView!
 
-    
-    
     @IBAction private func tapButton(_ sender: UIButton) {
         count += 1
         userNameLabel.text = "\(count)"
         guard let delegate = delegate else { return }
         delegate.didTap(view: self, count: count)
+    }
+    
+    func setDataForUser(user: UserInfo) {
+        userNameLabel.text = user.username
+        userImage.image = UIImage(named: user.userImage)
+        userImage.contentMode = .scaleToFill
     }
 }

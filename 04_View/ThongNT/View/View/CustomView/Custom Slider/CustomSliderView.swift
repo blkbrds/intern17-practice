@@ -38,7 +38,6 @@ final class CustomSliderView: UIView {
         guard let dataSource = dataSource else { return }
         let newPercent = dataSource.getChangeValue(view: self)
         updateUI(with: newPercent)
-        
     }
     
     //MARK: - Private Functions
