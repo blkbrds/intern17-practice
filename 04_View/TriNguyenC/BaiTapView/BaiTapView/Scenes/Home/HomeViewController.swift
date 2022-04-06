@@ -38,9 +38,9 @@ extension HomeViewController {
         var viewController: UIViewController {
             switch self {
             case .ex1:
-                return Excersise02ViewController()
+                return Exercise01ViewController()
             case .ex2:
-                return Excersise02ViewController()
+                return Exercise02ViewController()
             case .ex3:
                 return Exercise03ViewController()
             case .ex4:
