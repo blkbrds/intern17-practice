@@ -75,16 +75,16 @@ class Exercise02ViewController: UIViewController {
     }
     
     private func createMoreUserView() {
-//        let screenWidth = (UIScreen.main.bounds.width / 3)
+        let screenWidth = UIScreen.main.bounds.width / 3
     }
 }
 
 // MARK: - Configuration Frame
 extension Exercise02ViewController {
     struct Configuration  {
-        static var frameAvatar = CGRect(x: 50, y: 100, width: 100, height: 100)
-        static var frameNameLabel = CGRect(x: 50, y: 200, width: 100, height: 25)
-        static var frameButton = CGRect(x: 50, y: 100, width: 100, height: 125)
+        static var frameAvatar = CGRect(x: 40, y: 100, width: 100, height: 100)
+        static var frameNameLabel = CGRect(x: 40, y: 200, width: 100, height: 25)
+        static var frameButton = CGRect(x: 40, y: 100, width: 100, height: 125)
     }
 }
 
