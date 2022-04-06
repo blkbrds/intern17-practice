@@ -11,8 +11,8 @@
 		134B43E027FC32D8004660D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134B43DF27FC32D8004660D1 /* SceneDelegate.swift */; };
 		134B43E727FC32DB004660D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 134B43E627FC32DB004660D1 /* Assets.xcassets */; };
 		134B43EA27FC32DB004660D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134B43E827FC32DB004660D1 /* LaunchScreen.storyboard */; };
-		134B43F727FC3375004660D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134B43F527FC3375004660D1 /* ViewController.swift */; };
-		134B43F827FC3375004660D1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134B43F627FC3375004660D1 /* ViewController.xib */; };
+		139D30EE27FD512E00FB4F69 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139D30EC27FD512E00FB4F69 /* HomeViewController.swift */; };
+		139D30EF27FD512E00FB4F69 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 139D30ED27FD512E00FB4F69 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		134B43E627FC32DB004660D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		134B43E927FC32DB004660D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		134B43EB27FC32DB004660D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		134B43F527FC3375004660D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		134B43F627FC3375004660D1 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		139D30EC27FD512E00FB4F69 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		139D30ED27FD512E00FB4F69 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,23 +56,15 @@
 		134B43DC27FC32D8004660D1 /* NoStoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				134B43FA27FC382B004660D1 /* New Group */,
 				134B43DD27FC32D8004660D1 /* AppDelegate.swift */,
 				134B43DF27FC32D8004660D1 /* SceneDelegate.swift */,
 				134B43E627FC32DB004660D1 /* Assets.xcassets */,
 				134B43E827FC32DB004660D1 /* LaunchScreen.storyboard */,
 				134B43EB27FC32DB004660D1 /* Info.plist */,
-				134B43F527FC3375004660D1 /* ViewController.swift */,
-				134B43F627FC3375004660D1 /* ViewController.xib */,
+				139D30EC27FD512E00FB4F69 /* HomeViewController.swift */,
+				139D30ED27FD512E00FB4F69 /* HomeViewController.xib */,
 			);
 			path = NoStoryboard;
-			sourceTree = "<group>";
-		};
-		134B43FA27FC382B004660D1 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +125,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				134B43EA27FC32DB004660D1 /* LaunchScreen.storyboard in Resources */,
-				134B43F827FC3375004660D1 /* ViewController.xib in Resources */,
 				134B43E727FC32DB004660D1 /* Assets.xcassets in Resources */,
+				139D30EF27FD512E00FB4F69 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,9 +137,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				134B43F727FC3375004660D1 /* ViewController.swift in Sources */,
 				134B43DE27FC32D8004660D1 /* AppDelegate.swift in Sources */,
 				134B43E027FC32D8004660D1 /* SceneDelegate.swift in Sources */,
+				139D30EE27FD512E00FB4F69 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
