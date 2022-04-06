@@ -7,7 +7,7 @@
 
 import UIKit
 protocol ColumnChartViewDataSource {
-    func getPoints(in view: ColumnChartView) -> [Values]
+    func getPoints(in view: ColumnChartView) -> [IncomeValue]
 }
 
 @IBDesignable
@@ -25,12 +25,6 @@ final class ColumnChartView: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        //        drawColumnChart(with: [CGPoint(x: self.bounds.minX , y: self.bounds.maxY),
-        //                               CGPoint(x: 50, y: 50),
-        //                               CGPoint(x: 100, y: 100),
-        //                               CGPoint(x: 150, y: 80),
-        //                               CGPoint(x: 200, y: 180),
-        //                               CGPoint(x: self.bounds.maxX, y: self.bounds.maxY)])
         getValueToDraw()
     }
     
@@ -42,7 +36,7 @@ final class ColumnChartView: UIView {
     }
     
     //MARK: - Private functions
-    private func convertValuesIntoCGPoint(with values: [Values]) -> [CGPoint] {
+    private func convertValuesIntoCGPoint(with values: [IncomeValue]) -> [CGPoint] {
         var pointsFromValues: [CGPoint] = []
         var maxHorizontalValue: Int = 0
         var stepBetweenPoints: CGFloat = self.bounds.width / CGFloat(values.count + 1)
@@ -80,6 +74,4 @@ final class ColumnChartView: UIView {
         context?.setFillColor(UIColor.systemYellow.cgColor)
         context?.fillPath()
     }
-    
-    
 }

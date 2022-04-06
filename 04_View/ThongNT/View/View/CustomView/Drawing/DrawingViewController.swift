@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Values {
+struct IncomeValue {
     var year: Int = 0
     var mount: Int = 0
 }
@@ -15,18 +15,18 @@ struct Values {
 final class DrawingViewController: UIViewController {
     
     //MARK: - Private variable
-    private let values: [Values] = [Values(year: 2010, mount: 5),
-                                    Values(year: 2011, mount: 8),
-                                    Values(year: 2012, mount: 5),
-                                    Values(year: 2013, mount: 10),
-                                    Values(year: 2014, mount: 7),
-                                    Values(year: 2015, mount: 8),
-                                    Values(year: 2016, mount: 11),
-                                    Values(year: 2017, mount: 10),
-                                    Values(year: 2018, mount: 11),
-                                    Values(year: 2019, mount: 10),
-                                    Values(year: 2020, mount: 8),
-                                    Values(year: 2021, mount: 9)]
+    private let values: [IncomeValue] = [IncomeValue(year: 2010, mount: 5),
+                                    IncomeValue(year: 2011, mount: 8),
+                                    IncomeValue(year: 2012, mount: 5),
+                                    IncomeValue(year: 2013, mount: 10),
+                                    IncomeValue(year: 2014, mount: 7),
+                                    IncomeValue(year: 2015, mount: 8),
+                                    IncomeValue(year: 2016, mount: 11),
+                                    IncomeValue(year: 2017, mount: 10),
+                                    IncomeValue(year: 2018, mount: 11),
+                                    IncomeValue(year: 2019, mount: 10),
+                                    IncomeValue(year: 2020, mount: 8),
+                                    IncomeValue(year: 2021, mount: 9)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +46,10 @@ final class DrawingViewController: UIViewController {
         columnChartView.draw(frame)
         view.addSubview(columnChartView)
     }
-    
 }
 
 extension DrawingViewController: ColumnChartViewDataSource {
-    func getPoints(in view: ColumnChartView) -> [Values] {
+    func getPoints(in view: ColumnChartView) -> [IncomeValue] {
         return values
     }
 }
