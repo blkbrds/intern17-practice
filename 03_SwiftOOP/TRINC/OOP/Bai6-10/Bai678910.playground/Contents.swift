@@ -97,14 +97,9 @@ class DSHocSinh {
     }
     
     func sapXep() -> [HocSinh] {
+        // sap xep theo tong diem
         ds.sort { (hs1: HocSinh, hs2: HocSinh) -> Bool in
-            if hs1.tongDiem > hs2.tongDiem {
-                return true
-            } else if hs1.tongDiem == hs2.tongDiem {
-                return true // check lai
-            } else {
-                return false
-            }
+            return hs1.tongDiem >= hs2.tongDiem
         }
         
         for hocSinh in ds {
@@ -112,14 +107,14 @@ class DSHocSinh {
         }
         
         return ds
-        
-        func inKetQua(ds: [HocSinh]) -> String {
-            var kq = ""
-            for hs in ds {
-                kq += hs.hoTen + "  \(hs.tongDiem)" + "\n"
-            }
-            return kq
+    }
+    
+    func inKetQua(ds: [HocSinh]) -> String {
+        var kq = ""
+        for hs in ds {
+            kq += hs.hoTen + "  \(hs.tongDiem)" + "\n"
         }
+        return kq
     }
 }
 
@@ -142,25 +137,21 @@ final class Date {
         self.month = month
         self.year = year
     }
-    
-    func printDate() {
-        print("\(day)-\(month)-\(year)")
-    }
-    
+        
     func dayIns() -> Int {
         var dayIn = 31
         switch self.month {
-        case 4 , 6, 9, 11:
-            dayIn = 30
-        default:
+        case 2:
             if (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0) {
                 dayIn = 29
             } else {
                 dayIn = 28
             }
-            
+        case 4, 6, 9, 11:
+            dayIn = 30
+        default:
+            dayIn = 31
         }
-        
         return dayIn
     }
     
@@ -178,17 +169,25 @@ final class Date {
         }
     }
     
+    func printDate() {
+        print("\(day)-\(month)-\(year)")
+    }
+    
     func advance(d: Int, m: Int, y: Int) {
-        self.day = d
-        self.month = m
-        self.year = y
+        day += d
+        month += m
+        year += y
+        
+        while (month > 12) {
+            year += 1
+            month -= 12
+        }
     }
 }
 
 var date = Date(day: 28, month: 2, year: 0)
 date.printDate()
 date.normalize()
-date.advance(d: 18, m: 09, y: 1997)
 
 // MARK: - Bai 9
 class Mang1C {
@@ -220,14 +219,12 @@ class Mang1C {
         for i in 0..<mangMotChieu.count where mangMotChieu[i] < min {
             min = mangMotChieu[i]
         }
-        
         return min
     }
 }
 
 
 // MARK: - Bai10
-//S=1+2+3+...+n (n nguyên dương)
 class A {
     var i: Int
     
@@ -237,10 +234,9 @@ class A {
     
     func tinhTongNSoNguyenDuongDauTien() -> Int {
         var tong = 0
-        for index in 0..<i {
-            tong = tong + index
+        for index in 1..<i {
+            tong += index
         }
-        
         return tong
     }
 }
