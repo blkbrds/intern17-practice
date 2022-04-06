@@ -16,7 +16,7 @@ struct User {
 
 class Exercise02ViewController: UIViewController {
     
-    // Dummy Data from model
+    // MARK: - Dummy Data
     var users: [User] = [
         User(names: "Alex", avatar: "ic-1"),
         User(names: "Daniel", avatar: "ic-2"),
@@ -75,11 +75,11 @@ class Exercise02ViewController: UIViewController {
     }
     
     private func createMoreUserView() {
-        let screenWidth = UIScreen.main.bounds.width / 3
+        let screenWidth = UIScreen.main.bounds.width
     }
 }
 
-// MARK: - Configuration Frame
+// MARK: - Extention Configuration
 extension Exercise02ViewController {
     struct Configuration  {
         static var frameAvatar = CGRect(x: 40, y: 100, width: 100, height: 100)
