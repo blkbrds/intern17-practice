@@ -11,14 +11,8 @@ final class Exercise04ViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    // RGBLabel
     @IBOutlet weak var rgbNamelLabel: UILabel!
-    
-    // BackgroundColorView
     @IBOutlet weak var backgroundRgb: UIView!
-        
-    // Label
-    
     @IBOutlet weak var redLabel: UILabel!
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
@@ -52,8 +46,7 @@ final class Exercise04ViewController: UIViewController {
     
     @IBAction func redSlider(_ sender: UISlider) {
         let currentRedColor = sender.value
-        red = currentRedColor 
-//        rgbNamelLabel.text = "r: \(red)"
+        red = currentRedColor
         setupUI()
     }
     

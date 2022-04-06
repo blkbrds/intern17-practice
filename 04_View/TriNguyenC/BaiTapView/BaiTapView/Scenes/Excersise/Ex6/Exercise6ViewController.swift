@@ -10,16 +10,19 @@ import UIKit
 final class Exercise6ViewController: UIViewController {
     
     // MARK: - IBOutlet
+    
     @IBOutlet weak var monkeyImageView: UIImageView!
     
-    // MARK: - Life cycle
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUIAndData()
     }
     
-    // MARK: Functions
-    func setupUIAndData() {
+    // MARK: Private Functions
+    
+    private func setupUIAndData() {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(regconizer:)))
         let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotate(regconizer:)))
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(regconizer:)))
@@ -45,7 +48,7 @@ final class Exercise6ViewController: UIViewController {
     
     @objc func handleLongPress(regconizer: UILongPressGestureRecognizer) {
         guard let view = regconizer.view else { return }
-        UIView.animate(withDuration: 3.0) {
+        UIView.animate(withDuration: 5.0) {
             view.transform = view.transform.scaledBy(x: 1.0, y: 1.0)
             view.transform = CGAffineTransform(rotationAngle: 0)
         }

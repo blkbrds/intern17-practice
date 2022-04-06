@@ -10,11 +10,13 @@ import UIKit
 final class Exercise05ViewController: UIViewController {
     
     // MARK: - IBOutlets
+    
     @IBOutlet weak var bigView: UIView!
     @IBOutlet weak var smallView: UIView!
     @IBOutlet weak var percentLabel: UILabel!
     
-    // MARK: - Properties
+    // MARK: - Computed Properties
+    
     private var value: CGFloat = 0.5 {
         didSet {
             updateUI()
@@ -22,6 +24,7 @@ final class Exercise05ViewController: UIViewController {
     }
     
     // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Exercise05"
@@ -29,6 +32,7 @@ final class Exercise05ViewController: UIViewController {
     }
     
     // MARK: - Private Functions
+    
     private func setupUI() {
         bigView.layer.cornerRadius = 44
         bigView.layer.masksToBounds = true
