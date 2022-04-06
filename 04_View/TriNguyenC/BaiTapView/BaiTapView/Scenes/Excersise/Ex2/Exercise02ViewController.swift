@@ -16,8 +16,6 @@ struct User {
 
 class Exercise02ViewController: UIViewController {
     
-    // MARK: - Computed Properties
-    
     // Dummy Data from model
     var users: [User] = [
         User(names: "Alex", avatar: "ic-1"),
@@ -31,6 +29,7 @@ class Exercise02ViewController: UIViewController {
         User(names: "Joe", avatar: "ic-9")
     ]
     
+    // MARK: - Properties
     private lazy var avatarImageView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "ic-5")
@@ -54,16 +53,15 @@ class Exercise02ViewController: UIViewController {
     }()
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
     // MARK: - Private Functions
-    
     private func setupUI() {
         self.title = "Exercise02"
+        view.backgroundColor = UIColor(red: 123/255, green: 124/255, blue: 125/255, alpha: 1.0)
         
         // Frame
         avatarImageView.frame = Configuration.frameAvatar
@@ -77,12 +75,11 @@ class Exercise02ViewController: UIViewController {
     }
     
     private func createMoreUserView() {
-        
+//        let screenWidth = (UIScreen.main.bounds.width / 3)
     }
 }
 
-// MARK: - Configuration Frame Of Objects
-
+// MARK: - Configuration Frame
 extension Exercise02ViewController {
     struct Configuration  {
         static var frameAvatar = CGRect(x: 50, y: 100, width: 100, height: 100)
