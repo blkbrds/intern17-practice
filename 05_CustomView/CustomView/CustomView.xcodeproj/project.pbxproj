@@ -13,16 +13,16 @@
 		22D502A027FA7D4900D24D1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D5029E27FA7D4900D24D1C /* LaunchScreen.storyboard */; };
 		22D502A927FA7D5D00D24D1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D502A727FA7D5D00D24D1C /* HomeViewController.swift */; };
 		22D502AA27FA7D5D00D24D1C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D502A827FA7D5D00D24D1C /* HomeViewController.xib */; };
-		22D502B127FA7E9000D24D1C /* Exercise01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D502AF27FA7E9000D24D1C /* Exercise01ViewController.swift */; };
-		22D502B227FA7E9000D24D1C /* Exercise01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D502B027FA7E9000D24D1C /* Exercise01ViewController.xib */; };
 		22D502B827FA802800D24D1C /* Exersice02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D502B627FA802800D24D1C /* Exersice02ViewController.swift */; };
 		22D502B927FA802800D24D1C /* Exersice02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D502B727FA802800D24D1C /* Exersice02ViewController.xib */; };
 		22D502BC27FA803500D24D1C /* Exercise03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D502BA27FA803500D24D1C /* Exercise03ViewController.swift */; };
 		22D502BD27FA803500D24D1C /* Exercise03ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D502BB27FA803500D24D1C /* Exercise03ViewController.xib */; };
 		22D502C027FA804300D24D1C /* Exersice04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D502BE27FA804300D24D1C /* Exersice04ViewController.swift */; };
 		22D502C127FA804300D24D1C /* Exersice04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D502BF27FA804300D24D1C /* Exersice04ViewController.xib */; };
-		22D502C527FA81FD00D24D1C /* MyAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D502C427FA81FD00D24D1C /* MyAvatarView.xib */; };
-		22D502C727FA821000D24D1C /* MyAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D502C627FA821000D24D1C /* MyAvatarView.swift */; };
+		22E4D73327FD4A44007EC697 /* MyAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4D73227FD4A44007EC697 /* MyAvatarView.xib */; };
+		22E4D73527FD4A53007EC697 /* MyAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4D73427FD4A53007EC697 /* MyAvatarView.swift */; };
+		22E4D73827FD4A94007EC697 /* Exercise01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4D73627FD4A94007EC697 /* Exercise01ViewController.swift */; };
+		22E4D73927FD4A94007EC697 /* Exercise01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4D73727FD4A94007EC697 /* Exercise01ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,16 +34,16 @@
 		22D502A127FA7D4900D24D1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22D502A727FA7D5D00D24D1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		22D502A827FA7D5D00D24D1C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		22D502AF27FA7E9000D24D1C /* Exercise01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise01ViewController.swift; sourceTree = "<group>"; };
-		22D502B027FA7E9000D24D1C /* Exercise01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise01ViewController.xib; sourceTree = "<group>"; };
 		22D502B627FA802800D24D1C /* Exersice02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exersice02ViewController.swift; sourceTree = "<group>"; };
 		22D502B727FA802800D24D1C /* Exersice02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exersice02ViewController.xib; sourceTree = "<group>"; };
 		22D502BA27FA803500D24D1C /* Exercise03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise03ViewController.swift; sourceTree = "<group>"; };
 		22D502BB27FA803500D24D1C /* Exercise03ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise03ViewController.xib; sourceTree = "<group>"; };
 		22D502BE27FA804300D24D1C /* Exersice04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exersice04ViewController.swift; sourceTree = "<group>"; };
 		22D502BF27FA804300D24D1C /* Exersice04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exersice04ViewController.xib; sourceTree = "<group>"; };
-		22D502C427FA81FD00D24D1C /* MyAvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAvatarView.xib; sourceTree = "<group>"; };
-		22D502C627FA821000D24D1C /* MyAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvatarView.swift; sourceTree = "<group>"; };
+		22E4D73227FD4A44007EC697 /* MyAvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAvatarView.xib; sourceTree = "<group>"; };
+		22E4D73427FD4A53007EC697 /* MyAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvatarView.swift; sourceTree = "<group>"; };
+		22E4D73627FD4A94007EC697 /* Exercise01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise01ViewController.swift; sourceTree = "<group>"; };
+		22E4D73727FD4A94007EC697 /* Exercise01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise01ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +92,10 @@
 		22D502AB27FA7DAE00D24D1C /* Ex1 */ = {
 			isa = PBXGroup;
 			children = (
-				22D502AF27FA7E9000D24D1C /* Exercise01ViewController.swift */,
-				22D502B027FA7E9000D24D1C /* Exercise01ViewController.xib */,
-				22D502C627FA821000D24D1C /* MyAvatarView.swift */,
-				22D502C427FA81FD00D24D1C /* MyAvatarView.xib */,
+				22E4D73427FD4A53007EC697 /* MyAvatarView.swift */,
+				22E4D73227FD4A44007EC697 /* MyAvatarView.xib */,
+				22E4D73627FD4A94007EC697 /* Exercise01ViewController.swift */,
+				22E4D73727FD4A94007EC697 /* Exercise01ViewController.xib */,
 			);
 			path = Ex1;
 			sourceTree = "<group>";
@@ -203,13 +203,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E4D73327FD4A44007EC697 /* MyAvatarView.xib in Resources */,
 				22D502A027FA7D4900D24D1C /* LaunchScreen.storyboard in Resources */,
 				22D502B927FA802800D24D1C /* Exersice02ViewController.xib in Resources */,
-				22D502C527FA81FD00D24D1C /* MyAvatarView.xib in Resources */,
 				22D5029D27FA7D4900D24D1C /* Assets.xcassets in Resources */,
 				22D502C127FA804300D24D1C /* Exersice04ViewController.xib in Resources */,
+				22E4D73927FD4A94007EC697 /* Exercise01ViewController.xib in Resources */,
 				22D502AA27FA7D5D00D24D1C /* HomeViewController.xib in Resources */,
-				22D502B227FA7E9000D24D1C /* Exercise01ViewController.xib in Resources */,
 				22D502BD27FA803500D24D1C /* Exercise03ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,13 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22D502B127FA7E9000D24D1C /* Exercise01ViewController.swift in Sources */,
 				22D502B827FA802800D24D1C /* Exersice02ViewController.swift in Sources */,
+				22E4D73827FD4A94007EC697 /* Exercise01ViewController.swift in Sources */,
 				22D5029427FA7D4900D24D1C /* AppDelegate.swift in Sources */,
 				22D502BC27FA803500D24D1C /* Exercise03ViewController.swift in Sources */,
 				22D502C027FA804300D24D1C /* Exersice04ViewController.swift in Sources */,
+				22E4D73527FD4A53007EC697 /* MyAvatarView.swift in Sources */,
 				22D5029627FA7D4900D24D1C /* SceneDelegate.swift in Sources */,
-				22D502C727FA821000D24D1C /* MyAvatarView.swift in Sources */,
 				22D502A927FA7D5D00D24D1C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
