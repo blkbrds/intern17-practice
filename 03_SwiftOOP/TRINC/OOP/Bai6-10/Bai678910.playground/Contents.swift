@@ -89,6 +89,7 @@ final class HocSinh {
 }
 
 class DSHocSinh {
+    
     var ds: [HocSinh]
     
     init(ds: [HocSinh]) {
@@ -100,7 +101,7 @@ class DSHocSinh {
             if hs1.tongDiem > hs2.tongDiem {
                 return true
             } else if hs1.tongDiem == hs2.tongDiem {
-                return hs1.namSinh > hs2.namSinh
+                return true // check lai
             } else {
                 return false
             }
