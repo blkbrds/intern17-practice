@@ -45,31 +45,34 @@ final class Exercise07ViewController: UIViewController {
         messageLabel.isHidden = true
     }
     
+    // Xoay hình
     @objc func handleRotate(recognizer: UIRotationGestureRecognizer) {
         guard let view = recognizer.view else { return }
         view.transform = view.transform.rotated(by: recognizer.rotation)
         recognizer.rotation = 0
     }
     
+    // Chạm 1 lần
     @objc func handleOneTapGesture(recognizer: UITapGestureRecognizer) {
         guard recognizer.view != nil else { return }
         messageLabel.isHidden = false
         messageLabel.alpha = 1
         messageLabel.text = "I am monkey"
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
-            UIView.animate(withDuration: 3.0) {
+            UIView.animate(withDuration: 5.0) {
                 self.messageLabel.alpha = 0
             }
         }
     }
     
+    // Chạm 2 lần
     @objc func handleDoubleTapGesture(recognizer: UITapGestureRecognizer) {
         guard recognizer.view != nil else { return }
         messageLabel.isHidden = false
         messageLabel.alpha = 1
         messageLabel.text = "Monkey is me"
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
-            UIView.animate(withDuration: 3.0) {
+            UIView.animate(withDuration: 5.0) {
                 self.messageLabel.alpha = 0
             }
         }

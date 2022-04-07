@@ -10,6 +10,7 @@ import UIKit
 final class Exercise01ViewController: UIViewController {
     
     // MARK: - Properties
+    // Lazy chờ khi cần thì gọi
     private lazy var avatarImageView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "ic-5")

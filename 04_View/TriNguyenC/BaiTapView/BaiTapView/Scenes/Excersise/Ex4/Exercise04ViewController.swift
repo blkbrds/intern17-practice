@@ -10,7 +10,6 @@ import UIKit
 final class Exercise04ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    
     @IBOutlet weak var rgbNamelLabel: UILabel!
     @IBOutlet weak var backgroundRgb: UIView!
     @IBOutlet weak var redLabel: UILabel!
@@ -18,13 +17,11 @@ final class Exercise04ViewController: UIViewController {
     @IBOutlet weak var blueLabel: UILabel!
     
     // MARK: - Properties
-    
     var red : Float = 100
     var green: Float = 125
     var blue: Float = 150
     
     // MARK: - Life cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Ex04"
@@ -32,7 +29,6 @@ final class Exercise04ViewController: UIViewController {
     }
     
     // MARK: - Private Functions
-    
     private func setupUI() {
         rgbNamelLabel.text = "r: \(red), g: \(green), b: \(blue)"
         backgroundRgb.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
@@ -43,7 +39,6 @@ final class Exercise04ViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    
     @IBAction func redSlider(_ sender: UISlider) {
         let currentRedColor = sender.value
         red = currentRedColor

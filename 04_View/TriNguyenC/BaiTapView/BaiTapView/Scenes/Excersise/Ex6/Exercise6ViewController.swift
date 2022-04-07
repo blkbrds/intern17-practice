@@ -10,11 +10,9 @@ import UIKit
 final class Exercise6ViewController: UIViewController {
     
     // MARK: - IBOutlet
-    
     @IBOutlet weak var monkeyImageView: UIImageView!
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUIAndData()
@@ -28,24 +26,30 @@ final class Exercise6ViewController: UIViewController {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(regconizer:)))
         longPressGesture.minimumPressDuration = TimeInterval(5.0)
         
-        // Image
+        // add tapgesture
         monkeyImageView.isUserInteractionEnabled = true
+        
+        // add gesture on image
         monkeyImageView.addGestureRecognizer(pinchGesture)
         monkeyImageView.addGestureRecognizer(rotateGesture)
         monkeyImageView.addGestureRecognizer(longPressGesture)
     }
 
+    // Objc tap
+    // zoom hình theo tỉ lệ 0.5 -> 2.0
     @objc func handlePinch(regconizer: UIPinchGestureRecognizer) {
         guard let view = regconizer.view, regconizer.scale >= 0.5 && regconizer.scale <= 2.0 else { return }
         view.transform = view.transform.scaledBy(x: regconizer.scale, y: regconizer.scale)
     }
     
+    // xoay hình
     @objc func handleRotate(regconizer: UIRotationGestureRecognizer) {
         guard let view = regconizer.view else { return }
         view.transform = view.transform.rotated(by: regconizer.rotation)
         regconizer.rotation = 0
     }
     
+    // Nhấn giữ trong vòng 5s
     @objc func handleLongPress(regconizer: UILongPressGestureRecognizer) {
         guard let view = regconizer.view else { return }
         UIView.animate(withDuration: 5.0) {

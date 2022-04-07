@@ -23,47 +23,52 @@ final class Exercise03ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // title of view
-        title = "Exercise03"
-        
         // UI
         setupUI()
         
-        // hide keyboard
+    }
+    
+    // MARK: - Functions
+    private func setupUI() {
+        // title of view
+        title = "Exercise03"
+        
+        loginButon.layer.cornerRadius = 16
+        clearButton.layer.cornerRadius = 16
+        
+        loginButon.layer.masksToBounds = true
+        clearButton.layer.masksToBounds = true
+        
+        // Ẩn bàn phím
         self.addTapToHideKeyBoard()
         
         // Bat Loi
         throwError(with: .isEmpty)
     }
     
-    // MARK: - Functions
-    private func setupUI() {
-        loginButon.layer.cornerRadius = 16
-        clearButton.layer.cornerRadius = 16
-    }
-    
-    // Bat cac truong hop loi
+    // Bắt các trường hợp lỗi
     func throwError(with error: ErrorMessage) {
         switch error {
         case .isEmpty:
-            self.usernameTextField.text = "Please enter the word"
-            self.passwordTextField.text = "Please enter the password"
+            self.notificationLabel.text = "Please enter the word"
+            self.notificationLabel.text = "Please enter the password"
         case .noInput:
-            self.usernameTextField.text = "Please re-enter"
-            self.passwordTextField.text = "Please re-enter"
+            self.notificationLabel.text = "Please re-enter"
+            self.notificationLabel.text = "Please re-enter"
         case .missUsername:
-            self.usernameTextField.text = "Please enter the username"
+            self.notificationLabel.text = "Please enter the username"
         case .missPassWord:
-            self.passwordTextField.text = "Please enter the password"
+            self.notificationLabel.text = "Please enter the password"
         }
     }
     
     // MARK: - IBActions
     @IBAction func loginButtonTouchUpInside(_ sender: Any) {
-        // kiem tra xem nhap dung hay sai
+        // TextField đúng thì ẩn Label
         if username == usernameTextField.text, password == passwordTextField.text {
             self.notificationLabel.isHidden = true
         } else {
+            // Nhập sai thì label báo
             self.notificationLabel.text = "Nhập sai username hoặc password"
         }
     }

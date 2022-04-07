@@ -8,13 +8,12 @@
 import UIKit
 
 // MARK: Model
-
 struct User {
     let names: String
     let avatar: String
 }
 
-class Exercise02ViewController: UIViewController {
+final class Exercise02ViewController: UIViewController {
     
     // MARK: - Dummy Data
     var users: [User] = [
@@ -29,29 +28,6 @@ class Exercise02ViewController: UIViewController {
         User(names: "Joe", avatar: "ic-9")
     ]
     
-    // MARK: - Properties
-    private lazy var avatarImageView: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "ic-5")
-        image.contentMode = .scaleAspectFit
-        return image
-    }()
-    
-     private lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Tyrone Ming"
-        label.textColor = .white
-        label.backgroundColor = UIColor(red: 66/255, green: 77/255, blue: 88/255, alpha: 1.0)
-        label.textAlignment = .center
-        return label
-    }()
-    
-    private lazy var markButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .clear
-        return button
-    }()
-    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,31 +36,65 @@ class Exercise02ViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupUI() {
-        self.title = "Exercise02"
         view.backgroundColor = UIColor(red: 123/255, green: 124/255, blue: 125/255, alpha: 1.0)
-        
-        // Frame
-        avatarImageView.frame = Configuration.frameAvatar
-        nameLabel.frame = Configuration.frameNameLabel
-        markButton.frame = Configuration.frameButton
-        
-        // Add subview
-        view.addSubview(avatarImageView)
-        view.addSubview(nameLabel)
-        view.addSubview(markButton)
+        configView()
     }
     
-    private func createMoreUserView() {
-        let screenWidth = UIScreen.main.bounds.width
+    private func configView() {
+        let screenWidht = UIScreen.main.bounds.width
+        let space: CGFloat = 10
+        let widthUserView: CGFloat = 110
+        let heightUserView: CGFloat = 175
+        var yUserView: CGFloat = 50
+        var xUserView: CGFloat = space
+        
+        for index in 0..<users.count {
+            let frame = CGRect(x: xUserView, y: yUserView, width: widthUserView, height: heightUserView)
+            let userView = createUserView(frame: frame, index: index)
+            view.addSubview(userView)
+            
+            // frame
+            if xUserView + widthUserView > screenWidht - xUserView {
+                // change x and y
+                yUserView += heightUserView + space
+                xUserView = space
+            } else {
+                xUserView += widthUserView + space
+            }
+        }
     }
-}
-
-// MARK: - Extention Configuration
-extension Exercise02ViewController {
-    struct Configuration  {
-        static var frameAvatar = CGRect(x: 40, y: 100, width: 100, height: 100)
-        static var frameNameLabel = CGRect(x: 40, y: 200, width: 100, height: 25)
-        static var frameButton = CGRect(x: 40, y: 100, width: 100, height: 125)
+    
+    private func createUserView(frame: CGRect, index: Int) -> UIView {
+        // Tao userView
+        let userView = UIView(frame: frame)
+        
+        // them avatar
+        let avatarImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height - 25))
+        avatarImageView.image = UIImage(named: users[index].avatar)
+        avatarImageView.contentMode = .scaleToFill
+        userView.addSubview(avatarImageView)
+        
+        // Add name
+        let nameLabel = UILabel(frame: CGRect(x: 0, y: 150, width: userView.bounds.width, height: userView.bounds.height - avatarImageView.bounds.height))
+        nameLabel.text = users[index].names
+        nameLabel.textAlignment = .center
+        nameLabel.backgroundColor = .yellow
+        userView.addSubview(nameLabel)
+        
+        // Add button
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height))
+        button.backgroundColor = .clear
+        let tap = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
+        button.addGestureRecognizer(tap)
+        userView.addSubview(button)
+        
+        return userView
+    }
+    
+    // Objc Tap
+    @objc func buttonDidClick(sender: UITapGestureRecognizer) {
+        let userName = sender.name
+        print("Name User is \(userName ?? "Tri")")
     }
 }
 
