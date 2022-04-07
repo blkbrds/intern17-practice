@@ -98,8 +98,20 @@ class DSHocSinh {
     
     func sapXep() -> [HocSinh] {
         // sap xep theo tong diem
+        // if return true mean hs1 is sorted before hs2
+        // if return false mean hs1 is sorted after hs2
         ds.sort { (hs1: HocSinh, hs2: HocSinh) -> Bool in
-            return hs1.tongDiem >= hs2.tongDiem
+            if hs1.tongDiem > hs2.tongDiem {
+                return true
+            } else if hs1.tongDiem == hs2.tongDiem {
+                if hs1.namSinh < hs2.namSinh {
+                    return true
+                } else{
+                    return false
+                }
+            } else {
+                return false
+            }
         }
         
         for hocSinh in ds {
@@ -109,12 +121,12 @@ class DSHocSinh {
         return ds
     }
     
-    func inKetQua(ds: [HocSinh]) -> String {
+    func inKetQua() {
         var kq = ""
         for hs in ds {
-            kq += hs.hoTen + "  \(hs.tongDiem)" + "\n"
+            kq += hs.hoTen + "     \(hs.tongDiem)" + "     \(hs.namSinh)" + "\n"
         }
-        return kq
+        print(kq)
     }
 }
 
@@ -124,7 +136,9 @@ var hs3 = HocSinh(hoTen: "nguyen van opop", namSinh: 1999, tongDiem: 7.0)
 var hs4 = HocSinh(hoTen: "nguyen van b", namSinh: 1999, tongDiem: 10.0)
 var hs5 = HocSinh(hoTen: "nguyen van alll", namSinh: 1997, tongDiem: 10.0)
 var ds = DSHocSinh(ds: [hs1, hs2, hs3, hs4, hs5])
-print(ds.sapXep())
+ds.sapXep()
+ds.inKetQua()
+
 
 // MARK: - Bai8
 final class Date {

@@ -102,44 +102,59 @@ class TamGiac: DaGiac {
 final class Stack {
     
     // Khởi tạo stack
-    public var sizeStack: [Int] = []
+    public var stacks: [Int] = []
+    public var size: Int = 0
+    
+    init(size: Int) {
+        self.size = size
+    }
     
     // Kiểm tra stack có rỗng hay không
     public var isEmpty: Bool {
-        sizeStack.isEmpty
+        stacks.isEmpty
     }
     
     // Kiểm tra stack đầy
-    public func fullStack(fullElement: Int) -> Bool {
-        sizeStack.count >= fullElement - 1 ? true : false
+    public func isFullStack() -> Bool {
+        stacks.count == size ? true : false
     }
     
     // Thêm 1 phần tử vào stack
     public func push(_ element: Int) {
-        sizeStack.append(element)
+        if isFullStack() {
+            print("Element \(element) can not add because stack is Full ")
+        } else {
+            stacks.append(element)
+        }
     }
     
     // Xóa Phần tử ở đỉnh Stack
     public func pop() -> Int? {
-        sizeStack.popLast()
+        stacks.popLast()
     }
     
     // Đếm các phần tử stack
     public func countStack() -> Int {
-        sizeStack.count
+        stacks.count
     }
 }
 
-var stack = Stack()
+var stack = Stack(size: 5)
 
 // Thêm các phần tử vào stack
 stack.push(1)
 stack.push(2)
 stack.push(3)
+stack.push(4)
+stack.push(5)
+stack.push(6)
+stack.push(11)
+print(stack.stacks)
 
 // xóa các phần tử khỏi stack
 stack.pop()
 stack.pop()
 stack.pop()
+print(stack.stacks)
 
 
