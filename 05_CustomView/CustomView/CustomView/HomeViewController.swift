@@ -28,8 +28,7 @@ extension HomeViewController {
     }
 }
 
-// MARK: - Enum
-
+// MARK: - Enum ViewController
 extension HomeViewController {
     
     enum ExerciseType {
