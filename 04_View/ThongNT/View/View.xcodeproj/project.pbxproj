@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1D5822F27FC423200190B61 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5822D27FC423200190B61 /* DrawingViewController.swift */; };
+		E1D5823027FC423200190B61 /* DrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5822E27FC423200190B61 /* DrawingViewController.xib */; };
+		E1D5823327FC427A00190B61 /* ColumnChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5823227FC427A00190B61 /* ColumnChartView.swift */; };
+		E1D5823627FC428900190B61 /* ColumnChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5823527FC428900190B61 /* ColumnChartView.xib */; };
 		E167C7C227FBE42800C4AC31 /* DatePickerCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167C7C127FBE42800C4AC31 /* DatePickerCustomView.swift */; };
 		E167C7C527FBE43400C4AC31 /* DatePickerCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E167C7C427FBE43400C4AC31 /* DatePickerCustomView.xib */; };
 		E17C4A0327FB2A010026D22F /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C4A0227FB2A010026D22F /* BadgeNumberView.swift */; };
@@ -52,6 +56,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1D5822D27FC423200190B61 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		E1D5822E27FC423200190B61 /* DrawingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingViewController.xib; sourceTree = "<group>"; };
+		E1D5823227FC427A00190B61 /* ColumnChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnChartView.swift; sourceTree = "<group>"; };
+		E1D5823527FC428900190B61 /* ColumnChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColumnChartView.xib; sourceTree = "<group>"; };
 		E167C7C127FBE42800C4AC31 /* DatePickerCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCustomView.swift; sourceTree = "<group>"; };
 		E167C7C427FBE43400C4AC31 /* DatePickerCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerCustomView.xib; sourceTree = "<group>"; };
 		E17C4A0227FB2A010026D22F /* BadgeNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
@@ -109,6 +117,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1D5822C27FC420B00190B61 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				E1D5822D27FC423200190B61 /* DrawingViewController.swift */,
+				E1D5822E27FC423200190B61 /* DrawingViewController.xib */,
+				E1D5823227FC427A00190B61 /* ColumnChartView.swift */,
+				E1D5823527FC428900190B61 /* ColumnChartView.xib */,
+			);
+			path = Drawing;
+            sourceTree = "<group>";
+        };
 		E167C7C027FBE3DA00C4AC31 /* Date Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +244,7 @@
 		E1EF33A627F2E3F8002F33DB /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				E1D5822C27FC420B00190B61 /* Drawing */,
 				E1EF33AB27F2E549002F33DB /* CustomViewController.swift */,
 				E1EF33AC27F2E549002F33DB /* CustomViewController.xib */,
 				E1B0123527F6E9D500021256 /* Avatar View */,
@@ -334,7 +354,9 @@
 				E1B0123327F6E8F700021256 /* DatePickerViewController.xib in Resources */,
 				E1EF339727F2E157002F33DB /* LaunchScreen.storyboard in Resources */,
 				E1E07B0C27F40159008BF7B3 /* MonkeyViewController.xib in Resources */,
+				E1D5823627FC428900190B61 /* ColumnChartView.xib in Resources */,
 				E1EF339427F2E157002F33DB /* Assets.xcassets in Resources */,
+				E1D5823027FC423200190B61 /* DrawingViewController.xib in Resources */,
 				E1EF33B327F2E58E002F33DB /* HomeViewController.xib in Resources */,
 				E1EF33C727F2E5D4002F33DB /* MapViewController.xib in Resources */,
 				E1EF33A327F2E1E1002F33DB /* MyViewController.xib in Resources */,
@@ -363,6 +385,9 @@
 				E1EF33C127F2E5C4002F33DB /* CollectionViewController.swift in Sources */,
 				E1E07B0027F40109008BF7B3 /* SliderViewController.swift in Sources */,
 				E1EF338B27F2E153002F33DB /* AppDelegate.swift in Sources */,
+				E1D5822F27FC423200190B61 /* DrawingViewController.swift in Sources */,
+				E1E07B0B27F40159008BF7B3 /* MonkeyViewController.swift in Sources */,
+				E1D5823327FC427A00190B61 /* ColumnChartView.swift in Sources */,
 				E1C8A95627F94FDE00BDD4DF /* CustomSliderView.swift in Sources */,
 				E1E07B0B27F40159008BF7B3 /* MonkeyViewController.swift in Sources */,
 				E1B0122D27F6E8E400021256 /* BadgeNumberViewController.swift in Sources */,

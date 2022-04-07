@@ -8,9 +8,10 @@
 import UIKit
 
 final class CustomViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavibar()
         setupUI()
     }
     
@@ -19,7 +20,7 @@ final class CustomViewController: UIViewController {
         view.subviews
             .compactMap { $0 as? UIButton }
             .forEach { configButton($0)}
-
+        
         self.title = "Custom View"
     }
     
@@ -30,6 +31,18 @@ final class CustomViewController: UIViewController {
         button.frame.size = CGSize(width: 200, height: 80)
         button.clipsToBounds = true
         button.layer.cornerRadius = 25
+    }
+    
+    private func setupNavibar() {
+        let drawing = UIBarButtonItem(title: "DRAWING",
+                                      style: .plain,
+                                      target: self,
+                                      action: #selector(pushToDrawing))
+        navigationItem.rightBarButtonItem = drawing
+    }
+    
+    @objc private func pushToDrawing() {
+        navigationController?.pushViewController(DrawingViewController(), animated: true)
     }
     
     //MARK: - IBAction private functions
