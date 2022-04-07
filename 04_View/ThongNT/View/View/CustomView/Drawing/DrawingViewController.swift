@@ -16,17 +16,17 @@ final class DrawingViewController: UIViewController {
     
     //MARK: - Private variable
     private let values: [IncomeValue] = [IncomeValue(year: 2010, mount: 5),
-                                    IncomeValue(year: 2011, mount: 8),
-                                    IncomeValue(year: 2012, mount: 5),
-                                    IncomeValue(year: 2013, mount: 10),
-                                    IncomeValue(year: 2014, mount: 7),
-                                    IncomeValue(year: 2015, mount: 8),
-                                    IncomeValue(year: 2016, mount: 11),
-                                    IncomeValue(year: 2017, mount: 10),
-                                    IncomeValue(year: 2018, mount: 11),
-                                    IncomeValue(year: 2019, mount: 10),
-                                    IncomeValue(year: 2020, mount: 8),
-                                    IncomeValue(year: 2021, mount: 9)]
+                                         IncomeValue(year: 2011, mount: 8),
+                                         IncomeValue(year: 2012, mount: 5),
+                                         IncomeValue(year: 2013, mount: 10),
+                                         IncomeValue(year: 2014, mount: 7),
+                                         IncomeValue(year: 2015, mount: 8),
+                                         IncomeValue(year: 2016, mount: 11),
+                                         IncomeValue(year: 2017, mount: 10),
+                                         IncomeValue(year: 2018, mount: 11),
+                                         IncomeValue(year: 2019, mount: 10),
+                                         IncomeValue(year: 2020, mount: 8),
+                                         IncomeValue(year: 2021, mount: 9)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
