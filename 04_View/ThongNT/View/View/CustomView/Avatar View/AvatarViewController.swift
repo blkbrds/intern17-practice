@@ -19,20 +19,37 @@ final class AvatarViewController: UIViewController {
     @IBOutlet private weak var contentView: UIView!
     
     //MARK: - Private Properties
-    private let usersInfo: [UserInfo] = [UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage"),
-                                         UserInfo(username: "Thong", userImage: "MonkeyImage")]
+    private var tag: Int = 0
+    private let usersInfo: [UserInfo] = [UserInfo(username: "Thong1", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong2", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong3", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong4", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong5", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong6", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong7", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong8", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong9", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong10", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong11", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong12", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong13", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong14", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong15", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong16", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong17", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong18", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong19", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong20", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong21", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong22", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong23", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong24", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong25", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong26", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong27", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong28", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong29", userImage: "MonkeyImage"),
+                                         UserInfo(username: "Thong30", userImage: "MonkeyImage")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +63,13 @@ final class AvatarViewController: UIViewController {
     
     private func addUser(user: UserInfo, x: CGFloat, y: CGFloat) {
         guard let avatarView = Bundle.main.loadNibNamed("UserView", owner: self, options: nil)?.first as? UserView else { return }
-        avatarView.frame = CGRect(x: 150 + x, y: 150 + y, width: 100, height: 150)
+        avatarView.frame.origin = CGPoint(x: 20 + x, y: 20 + y)
         avatarView.setDataForUser(user: user)
         avatarView.delegate = self
+        avatarView.tag = tag
+        tag += 1
         contentView.addSubview(avatarView)
     }
-    
     
     private func addUsers() {
         var horizonMove: CGFloat = 0
@@ -60,10 +78,10 @@ final class AvatarViewController: UIViewController {
         
         usersInfo.forEach { (user) in
             addUser(user: user, x: horizonMove, y: verticalMove)
-            horizonMove += 120
+            horizonMove += 130
             countHorizon += 1
             if countHorizon == 3 {
-                verticalMove += 250
+                verticalMove += 230
                 countHorizon = 0
                 horizonMove = 0
             }
@@ -71,8 +89,19 @@ final class AvatarViewController: UIViewController {
     }
 }
 
+// MARK: - Extension of Delegates
 extension AvatarViewController: UserViewDelegate {
-    func didTap(view: UserView, count: Int) {
-        print("Count: \(count)")
+    func didTap(view: UserView, userInfo: UserInfo) {
+        let profileVC = ProfileViewController(user: userInfo, tag: view.tag)
+        profileVC.delegate = self
+        navigationController?.pushViewController(profileVC, animated: true)
+    }
+}
+
+extension AvatarViewController: ProfileViewControllerDelegate {
+    func changeName(on view: ProfileViewController, with userInfo: UserInfo, tag: Int) {
+        guard let viewChange = contentView.subviews.first(where: { $0.tag == tag}) as? UserView else { return }
+        viewChange.setDataForUser(user: userInfo)
+        viewChange.layoutIfNeeded()
     }
 }
