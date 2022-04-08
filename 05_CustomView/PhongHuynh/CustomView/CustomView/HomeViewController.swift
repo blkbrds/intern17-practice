@@ -5,13 +5,13 @@ class HomeViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        userAvatar(name: ["name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8", "name9"])
+        userAvatar()
     }
     
-    func userAvatar(name: [String]) {
+    func userAvatar() {
         let khoangCach: CGFloat = 10
         let widthView: CGFloat = CGFloat((UIScreen.main.bounds.width - 40) / 3)
-        for index in 0..<name.count {
+        for index in 0..<30 {
             let x1 = khoangCach * (CGFloat(index) + 1)
             let x2 = widthView * CGFloat(index)
             var x = x1 + x2
@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
                 x = x1 + x2
                 y = khoangCach * (CGFloat(indexHeight) + 1) + 120 * CGFloat(indexHeight)
             }
-            let userView = UserView(frame: CGRect(x: x, y: y, width: widthView, height: 120))
+            let userView = UserView(frame: CGRect(x: x, y: y, width: widthView, height: 120), name: "name \(index)", count: index )
             userView.delegate = self
             view.addSubview(userView)
         }

@@ -11,13 +11,19 @@ final class UserView: UIView {
     enum Action {
         case tap(name: String)
     }
-
+    var name: String?
     var count = 0
     weak var delegate: UserViewDelegate?
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .blue
+     //   backgroundColor = .blue
+    }
+        
+    convenience init(frame: CGRect, name: String, count: Int) {
+        self.init(frame: frame)
+        self.name = name
+        self.count = count
         
         // add user avatar
         let userAvatar = UIImageView(image: UIImage(named: "husky.jpeg"))
@@ -27,18 +33,18 @@ final class UserView: UIView {
                                   height: frame.size.height*4/5)
         userAvatar.contentMode = .scaleAspectFit
         self.addSubview(userAvatar)
-               
-       // add user name
+        
+        // add user name
         let userName = UILabel(frame: CGRect(x: 0,
                                              y: frame.size.height*4/5,
                                              width: frame.size.width,
                                              height: frame.size.height/5))
-        userName.text = "name"
+        userName.text = name
         userName.backgroundColor = .lightGray
         userName.textAlignment = .center
         userName.textColor = .blue
         self.addSubview(userName)
-               
+        
         // add button
         let button = UIButton(frame: CGRect(x: 0,
                                             y: 0,
@@ -47,13 +53,12 @@ final class UserView: UIView {
         button.backgroundColor = .clear
         button.addTarget(self, action: #selector(nextButton), for: .touchUpInside)
         self.addSubview(button)
-            
     }
-
+    
     // MARK: - Objc functions
     @objc func nextButton() {
         if let delegate = delegate {
-            delegate.didTap(view: self, needsPerfom: .tap(name: "name"))
+            delegate.didTap(view: self, needsPerfom: .tap(name: "name\(count)"))
         }
     }
     
