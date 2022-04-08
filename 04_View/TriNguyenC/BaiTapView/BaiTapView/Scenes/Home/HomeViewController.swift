@@ -21,7 +21,7 @@ extension HomeViewController {
 
     private func setupUI() {
         // Set bai tap mac dinh
-        selectExcersise(with: .ex3)
+        selectExcersise(with: .ex2)
     }
 
     private func selectExcersise(with type: ExcersiseType) {

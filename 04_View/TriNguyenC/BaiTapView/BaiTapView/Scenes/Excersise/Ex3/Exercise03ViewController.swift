@@ -7,17 +7,24 @@
 
 import UIKit
 
+// MARK: - Enum
+enum ErrorTextField {
+    case NotLetter
+    case WrongInput
+    case MissedUserNameOrPassWord
+}
+
 final class Exercise03ViewController: UIViewController {
 
     // MARK: - Properties
-    var username: String = "Admin"
-    var password: String = "Admin123"
+    var username: String = "admin"
+    var password: String = "admin123"
     
     // MARK: - IBOutlets
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var notificationLabel: UILabel!
-    @IBOutlet weak var loginButon: UIButton!
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passWordTextField: UITextField!
+    @IBOutlet weak var notiLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
     // MARK: - Life cycle
@@ -25,76 +32,54 @@ final class Exercise03ViewController: UIViewController {
         super.viewDidLoad()
         // UI
         setupUI()
-        
     }
     
-    // MARK: - Functions
+    // MARK: - Private Functions
+    
     private func setupUI() {
-        // title of view
         title = "Exercise03"
+        loginButton.layer.cornerRadius = 12
+        clearButton.layer.cornerRadius = 12
         
-        loginButon.layer.cornerRadius = 16
-        clearButton.layer.cornerRadius = 16
-        
-        loginButon.layer.masksToBounds = true
-        clearButton.layer.masksToBounds = true
-        
-        // Ẩn bàn phím
-        self.addTapToHideKeyBoard()
-        
-        // Bat Loi
-        throwError(with: .isEmpty)
+        hideKeyBoard()
     }
     
-    // Bắt các trường hợp lỗi
-    func throwError(with error: ErrorMessage) {
-        switch error {
-        case .isEmpty:
-            self.notificationLabel.text = "Please enter the word"
-            self.notificationLabel.text = "Please enter the password"
-        case .noInput:
-            self.notificationLabel.text = "Please re-enter"
-            self.notificationLabel.text = "Please re-enter"
-        case .missUsername:
-            self.notificationLabel.text = "Please enter the username"
-        case .missPassWord:
-            self.notificationLabel.text = "Please enter the password"
+    private func throwErrorTextField(with errorTextFiled: ErrorTextField) {
+        switch errorTextFiled {
+        case .NotLetter:
+            notiLabel.text = "Please enter the word"
+        case .WrongInput:
+            notiLabel.text = "Please enter the correct username and password"
+        case .MissedUserNameOrPassWord:
+            notiLabel.text = "Please enter in full username and password"
         }
     }
     
     // MARK: - IBActions
     @IBAction func loginButtonTouchUpInside(_ sender: Any) {
-        // TextField đúng thì ẩn Label
-        if username == usernameTextField.text, password == passwordTextField.text {
-            self.notificationLabel.isHidden = true
+        if username == userNameTextField.text && password == passWordTextField.text {
+            notiLabel.isHidden = true
         } else {
-            // Nhập sai thì label báo
-            self.notificationLabel.text = "Nhập sai username hoặc password"
+            throwErrorTextField(with: .NotLetter)
         }
     }
     
     @IBAction func clearButtonTouchUpInside(_ sender: Any) {
-        // xoa textfield
-        usernameTextField.text = ""
-        passwordTextField.text = ""
+        userNameTextField.text = ""
+        passWordTextField.text = ""
     }
 }
 
-// MARK: Private Functions
+// MARK: - Hide KeyBoard
 extension Exercise03ViewController {
-    // Hide keyboard
-    private func addTapToHideKeyBoard() {
-        let tap = UIGestureRecognizer(target: self, action: #selector(UIView.endEditing(_:)))
-        view.addGestureRecognizer(tap)
+    
+    private func hideKeyBoardWhenTap() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(hideKeyBoard))
+        self.view.addGestureRecognizer(tapGesture)
     }
-}
-
-// MARK: - Enums
-extension Exercise03ViewController {
-    enum ErrorMessage {
-        case isEmpty
-        case noInput
-        case missUsername
-        case missPassWord
+    
+    @objc func hideKeyBoard() {
+        view.endEditing(true)
     }
 }

@@ -15,18 +15,17 @@ final class Exercise6ViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUIAndData()
+        setupUI()
     }
     
     // MARK: Private Functions
     
-    private func setupUIAndData() {
+    private func setupUI() {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(regconizer:)))
         let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotate(regconizer:)))
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(regconizer:)))
-        longPressGesture.minimumPressDuration = TimeInterval(5.0)
         
-        // add tapgesture
+        // Kich Hoat
         monkeyImageView.isUserInteractionEnabled = true
         
         // add gesture on image

@@ -16,19 +16,24 @@ final class Exercise07ViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        setupUI()
     }
     
     // MARK: - Functions
-    func setupView() {
+    func setupUI() {
         let rotateGesture = UIGestureRecognizer(target: self, action: #selector(handleRotate(recognizer:)))
         let oneTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleOneTapGesture(recognizer:)))
+        // Cham 1 lan
         oneTapGesture.numberOfTapsRequired = 1
         
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTapGesture(recognizer:)))
+        // Cham 2 lan
         doubleTapGesture.numberOfTapsRequired = 2
         
+        // KichHoat
         monkeyImageView.isUserInteractionEnabled = true
+        
+        // Add Gesture
         monkeyImageView.addGestureRecognizer(rotateGesture)
         monkeyImageView.addGestureRecognizer(oneTapGesture)
         monkeyImageView.addGestureRecognizer(doubleTapGesture)

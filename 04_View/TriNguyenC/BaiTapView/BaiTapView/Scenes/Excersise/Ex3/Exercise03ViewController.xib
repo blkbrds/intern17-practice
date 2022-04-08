@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Exercise03ViewController" customModule="BaiTapView" customModuleProvider="target">
             <connections>
-                <outlet property="clearButton" destination="x8E-1x-fkl" id="2hf-sv-3oa"/>
-                <outlet property="loginButon" destination="Zpf-Wt-Rra" id="a3m-Th-scu"/>
-                <outlet property="notificationLabel" destination="STj-PL-iU7" id="WH4-Bz-6Fb"/>
-                <outlet property="passwordTextField" destination="G0j-ob-y5l" id="Ruo-22-NJU"/>
-                <outlet property="usernameTextField" destination="WoJ-Wp-WbZ" id="DMM-ze-Gqq"/>
+                <outlet property="clearButton" destination="x8E-1x-fkl" id="PXf-vD-3Yz"/>
+                <outlet property="loginButton" destination="Zpf-Wt-Rra" id="G6X-Ik-M8d"/>
+                <outlet property="notiLabel" destination="STj-PL-iU7" id="pud-iz-Al5"/>
+                <outlet property="passWordTextField" destination="G0j-ob-y5l" id="Spf-MT-dqK"/>
+                <outlet property="userNameTextField" destination="WoJ-Wp-WbZ" id="lGz-3u-K2O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,24 +23,24 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WoJ-Wp-WbZ">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WoJ-Wp-WbZ">
                     <rect key="frame" x="20" y="74" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="f6P-Pc-Cdc"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0j-ob-y5l">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0j-ob-y5l">
                     <rect key="frame" x="20" y="134" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="jqm-nF-wAc"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </textField>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="m6B-AB-Von">
-                    <rect key="frame" x="20" y="257" width="374" height="40"/>
+                    <rect key="frame" x="20" y="234" width="374" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpf-Wt-Rra">
                             <rect key="frame" x="0.0" y="0.0" width="129.5" height="40"/>
@@ -51,7 +51,7 @@
                                 <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="loginButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="WCq-dR-rk5"/>
+                                <action selector="loginButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="d8c-2L-QXR"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8E-1x-fkl">
@@ -63,7 +63,7 @@
                                 <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="clearButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="LUQ-UA-ftP"/>
+                                <action selector="clearButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Xl2-Mj-MxM"/>
                             </connections>
                         </button>
                     </subviews>
@@ -78,8 +78,8 @@
                         <constraint firstItem="x8E-1x-fkl" firstAttribute="top" secondItem="m6B-AB-Von" secondAttribute="top" id="xwZ-nS-IdW"/>
                     </constraints>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STj-PL-iU7" userLabel="notificationLabel">
-                    <rect key="frame" x="20" y="194" width="374" height="23"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STj-PL-iU7" userLabel="notificationLabel">
+                    <rect key="frame" x="20" y="194" width="374" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" systemColor="systemRedColor"/>
                     <nil key="highlightedColor"/>

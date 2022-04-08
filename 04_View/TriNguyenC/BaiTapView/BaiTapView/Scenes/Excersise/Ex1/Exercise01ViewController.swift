@@ -9,8 +9,7 @@ import UIKit
 
 final class Exercise01ViewController: UIViewController {
     
-    // MARK: - Properties
-    // Lazy chờ khi cần thì gọi
+    // MARK: - Computed Properties
     private lazy var avatarImageView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "ic-5")
@@ -45,9 +44,9 @@ final class Exercise01ViewController: UIViewController {
         view.backgroundColor = UIColor(red: 22/255, green: 33/255, blue: 44/255, alpha: 1.0)
         
         // set frame for object
-        avatarImageView.frame = Config.frameAvatar
-        nameLabel.frame = Config.frameNameLabel
-        markButton.frame = Config.frameButton
+        avatarImageView.frame = Define.frameAvatar
+        nameLabel.frame = Define.frameNameLabel
+        markButton.frame = Define.frameButton
         
         // Add subview
         view.addSubview(avatarImageView)
@@ -56,9 +55,9 @@ final class Exercise01ViewController: UIViewController {
     }
 }
 
-// MARK: - Extention ViewController
+// MARK: - Extention Define Frame
 extension Exercise01ViewController {
-    struct Config {
+    struct Define {
         static var frameAvatar = CGRect(x: 50, y: 100, width: 100, height: 100)
         static var frameNameLabel = CGRect(x: 50, y: 200, width: 100, height: 25)
         static var frameButton = CGRect(x: 50, y: 100, width: 100, height: 125)

@@ -36,7 +36,8 @@ final class Exercise02ViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupUI() {
-        view.backgroundColor = UIColor(red: 123/255, green: 124/255, blue: 125/255, alpha: 1.0)
+        title = "Exercise01"
+        view.backgroundColor = UIColor(red: 111/255, green: 112/255, blue: 113/255, alpha: 1.0)
         configView()
     }
     
@@ -45,7 +46,7 @@ final class Exercise02ViewController: UIViewController {
         let space: CGFloat = 10
         let widthUserView: CGFloat = 110
         let heightUserView: CGFloat = 175
-        var yUserView: CGFloat = 50
+        var yUserView: CGFloat = 100
         var xUserView: CGFloat = space
         
         for index in 0..<users.count {
@@ -84,17 +85,15 @@ final class Exercise02ViewController: UIViewController {
         // Add button
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height))
         button.backgroundColor = .clear
-        let tap = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
-        button.addGestureRecognizer(tap)
+        button.addTarget(self, action: #selector(tapTouchUpInside), for: .touchUpInside)
         userView.addSubview(button)
         
         return userView
     }
     
-    // Objc Tap
-    @objc func buttonDidClick(sender: UITapGestureRecognizer) {
-        let userName = sender.name
-        print("Name User is \(userName ?? "Tri")")
+    @objc func tapTouchUpInside() {
+        let userName = users.count
+        print("username: \(userName)")
     }
 }
 
