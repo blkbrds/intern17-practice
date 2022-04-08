@@ -21,28 +21,28 @@
                     <rect key="frame" x="191" y="170" width="32" height="30"/>
                     <state key="normal" title="Next"/>
                     <connections>
-                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="w4i-wF-6kN"/>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="w4i-wF-6kN"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwB-a6-JBd">
                     <rect key="frame" x="192" y="290" width="30" height="30"/>
                     <state key="normal" title="B"/>
                     <connections>
-                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="m8I-IM-fXi"/>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="m8I-IM-fXi"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wm0-dl-IJf">
                     <rect key="frame" x="192" y="410" width="30" height="30"/>
                     <state key="normal" title="C"/>
                     <connections>
-                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="9hg-Xq-AxN"/>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="9hg-Xq-AxN"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nea-r3-m9z">
                     <rect key="frame" x="191" y="530" width="32" height="30"/>
                     <state key="normal" title="Root"/>
                     <connections>
-                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="Phi-bh-7Fj"/>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Phi-bh-7Fj"/>
                     </connections>
                 </button>
             </subviews>

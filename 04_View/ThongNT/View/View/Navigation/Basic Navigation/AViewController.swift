@@ -31,7 +31,7 @@ final class AViewController: UIViewController {
         button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
     }
     
-    @IBAction private func goToViewController(_ sender: UIButton) {
+    @IBAction private func buttonTouchUpInside(_ sender: UIButton) {
         navigationController?.pushViewController(BViewController(), animated: true)
     }
 }

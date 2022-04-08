@@ -21,14 +21,14 @@
                     <rect key="frame" x="191" y="333" width="32" height="30"/>
                     <state key="normal" title="Next"/>
                     <connections>
-                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="R21-yx-6I5"/>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="R21-yx-6I5"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NK7-Ec-g38">
                     <rect key="frame" x="177.5" y="533" width="59" height="30"/>
                     <state key="normal" title="Previous"/>
                     <connections>
-                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="5ac-Tw-MoS"/>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="5ac-Tw-MoS"/>
                     </connections>
                 </button>
             </subviews>
