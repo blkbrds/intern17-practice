@@ -37,15 +37,12 @@ class MySliderView: UIView {
                     } else {
                         greenView.center.y = location.y
                     }
-                    
                     let oldBlackViewHeight = blackView.frame.size.height
                     let oldBlackViewY = blackView.frame.origin.y
                     let newBlackHeight = oldBlackViewHeight + (oldBlackViewY - greenView.center.y)
                     blackView.frame = CGRect(x: blackView.frame.origin.x, y: greenView.center.y, width: blackView.frame.size.width, height: newBlackHeight)
-                    
                     let percent = blackView.frame.size.height / parentView.frame.size.height * 100
                     phantramLabel.text = "\(Int(percent))"
-            
                     if let delegate = delegate {
                         delegate.didFull(view: self, needsPerfom: .tap(value: "\(Int(percent))"))
                     }
@@ -59,6 +56,6 @@ class MySliderView: UIView {
         greenView.center.y = yblackView
         let percent = blackView.frame.size.height / parentView.frame.size.height * 100
         phantramLabel.text = "\(Int(percent))"
-        
     }
+    
 }

@@ -13,6 +13,7 @@ class CustomButtonView: UIView {
         case bottomCenter
     }
     
+    // MARK: - Properties
     var nameLabel: UILabel?
     var customView: UIView?
     var nameLabel1: UILabel?
@@ -23,6 +24,7 @@ class CustomButtonView: UIView {
     
     }
     
+    // MARK: - Initialize
     convenience init(frame: CGRect, number: Int, position: BadgeNumberPosition, name: String) {
         self.init(frame: frame)
         self.number = number
@@ -35,24 +37,22 @@ class CustomButtonView: UIView {
                            
        // add user name
         nameLabel = UILabel(frame: CGRect(x: 0, y: frame.size.height * 3 / 5, width: 40, height: 40))
+        nameLabel?.clipsToBounds = true
+        nameLabel!.layer.cornerRadius = 20
+        nameLabel!.backgroundColor = .lightGray
+        nameLabel!.textAlignment = .center
+        nameLabel!.textColor = .blue
+        self.addSubview(nameLabel!)
         nameLabel1 = UILabel(frame: CGRect(x: 0, y: frame.size.height * 2 / 5, width: (customView?.frame.size.width)!, height: 40))
         nameLabel1!.backgroundColor = .clear
         nameLabel1!.textAlignment = .center
         nameLabel1!.text = name
         nameLabel1!.textColor = .blue
         nameLabel1?.center = customView!.center
-        
-//        nameLabel1?.center.y = (customView?.center.y)!
+        self.addSubview(nameLabel1!)
         setPositionLabel(potision: position)
         setBadgeNumber()
-        nameLabel?.clipsToBounds = true
-        nameLabel!.layer.cornerRadius = 20
         
-        nameLabel!.backgroundColor = .lightGray
-        nameLabel!.textAlignment = .center
-        nameLabel!.textColor = .blue
-        self.addSubview(nameLabel!)
-        self.addSubview(nameLabel1!)
       }
     
     required init?(coder: NSCoder) {

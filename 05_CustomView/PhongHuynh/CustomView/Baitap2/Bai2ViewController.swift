@@ -17,12 +17,9 @@ class Bai2ViewController: UIViewController {
         sliderView.delegate = self
         valueTextField.delegate = self
         view.addSubview(sliderView)
-        
         valueTextField.returnKeyType = .done
-       // sliderView.updateSlider()
     }
     
-   
 }
 extension Bai2ViewController: MySliderDelegate {
     func didFull(view: MySliderView, needsPerfom action: MySliderView.Action) {
