@@ -19,7 +19,6 @@ final class AvatarViewController: UIViewController {
     @IBOutlet private weak var contentView: UIView!
     
     //MARK: - Private Properties
-    private var tag: Int = 0
     private let usersInfo: [UserInfo] = [UserInfo(username: "Thong1", userImage: "MonkeyImage"),
                                          UserInfo(username: "Thong2", userImage: "MonkeyImage"),
                                          UserInfo(username: "Thong3", userImage: "MonkeyImage"),
@@ -61,13 +60,12 @@ final class AvatarViewController: UIViewController {
         addUsers()
     }
     
-    private func addUser(user: UserInfo, x: CGFloat, y: CGFloat) {
+    private func addUser(user: UserInfo, index: Int, x: CGFloat, y: CGFloat) {
         guard let avatarView = Bundle.main.loadNibNamed("UserView", owner: self, options: nil)?.first as? UserView else { return }
         avatarView.frame.origin = CGPoint(x: 20 + x, y: 20 + y)
         avatarView.setDataForUser(user: user)
         avatarView.delegate = self
-        avatarView.tag = tag
-        tag += 1
+        avatarView.tag = index
         contentView.addSubview(avatarView)
     }
     
@@ -76,8 +74,8 @@ final class AvatarViewController: UIViewController {
         var verticalMove: CGFloat = 0
         var countHorizon: Int = 0
         
-        usersInfo.forEach { (user) in
-            addUser(user: user, x: horizonMove, y: verticalMove)
+        usersInfo.enumerated().forEach { (index, user) in
+            addUser(user: user, index: index, x: horizonMove, y: verticalMove)
             horizonMove += 130
             countHorizon += 1
             if countHorizon == 3 {
@@ -100,7 +98,7 @@ extension AvatarViewController: UserViewDelegate {
 
 extension AvatarViewController: ProfileViewControllerDelegate {
     func changeName(on view: ProfileViewController, with userInfo: UserInfo, tag: Int) {
-        guard let viewChange = contentView.subviews.first(where: { $0.tag == tag}) as? UserView else { return }
+        guard let viewChange = contentView.subviews.first(where: { $0.tag == tag} ) as? UserView else { return }
         viewChange.setDataForUser(user: userInfo)
         viewChange.layoutIfNeeded()
     }

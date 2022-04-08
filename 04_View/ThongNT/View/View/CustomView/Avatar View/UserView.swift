@@ -18,7 +18,7 @@ final class UserView: UIView {
     weak var delegate: UserViewDelegate?
     
     @IBOutlet private weak var userNameLabel: UILabel!
-    @IBOutlet private weak var userImage: UIImageView!
+    @IBOutlet private weak var userImageView: UIImageView!
     
     @IBAction private func tapButton(_ sender: UIButton) {
         guard let delegate = delegate else { return }
@@ -28,7 +28,7 @@ final class UserView: UIView {
     func setDataForUser(user: UserInfo) {
         userInfo = user
         userNameLabel.text = user.username
-        userImage.image = UIImage(named: user.userImage)
-        userImage.contentMode = .scaleToFill
+        userImageView.image = UIImage(named: user.userImage)
+        userImageView.contentMode = .scaleToFill
     }
 }

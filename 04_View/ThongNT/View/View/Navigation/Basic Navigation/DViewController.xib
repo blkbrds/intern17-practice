@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,31 +18,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUn-pO-DYT">
-                    <rect key="frame" x="191" y="214" width="32" height="30"/>
+                    <rect key="frame" x="191" y="170" width="32" height="30"/>
                     <state key="normal" title="Next"/>
                     <connections>
-                        <action selector="buttonTouchUPInside:" destination="-1" eventType="touchUpInside" id="w4i-wF-6kN"/>
+                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="w4i-wF-6kN"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwB-a6-JBd">
-                    <rect key="frame" x="192" y="334" width="30" height="30"/>
+                    <rect key="frame" x="192" y="290" width="30" height="30"/>
                     <state key="normal" title="B"/>
                     <connections>
-                        <action selector="buttonTouchUPInside:" destination="-1" eventType="touchUpInside" id="m8I-IM-fXi"/>
+                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="m8I-IM-fXi"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wm0-dl-IJf">
-                    <rect key="frame" x="192" y="454" width="30" height="30"/>
+                    <rect key="frame" x="192" y="410" width="30" height="30"/>
                     <state key="normal" title="C"/>
                     <connections>
-                        <action selector="buttonTouchUPInside:" destination="-1" eventType="touchUpInside" id="9hg-Xq-AxN"/>
+                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="9hg-Xq-AxN"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nea-r3-m9z">
-                    <rect key="frame" x="191" y="574" width="32" height="30"/>
+                    <rect key="frame" x="191" y="530" width="32" height="30"/>
                     <state key="normal" title="Root"/>
                     <connections>
-                        <action selector="buttonTouchUPInside:" destination="-1" eventType="touchUpInside" id="Phi-bh-7Fj"/>
+                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="Phi-bh-7Fj"/>
                     </connections>
                 </button>
             </subviews>

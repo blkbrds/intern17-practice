@@ -22,15 +22,14 @@ final class CatAutoLayoutViewController: UIViewController {
     @IBOutlet private weak var contentViewWidthConstraint: NSLayoutConstraint!
     
     //MARK: - Private variables
-    private let arrayOfNews = DumbData.news
-    private var verticalMove: CGFloat = 0
-    private var indexOfNews: Int = 1
+    private let newsArray = DumbData.news
+    private var verticalSpace: CGFloat = 0
+    private var newsIndex: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-    
     
     //MARK: - Private functions
     private func setupUI() {
@@ -73,28 +72,28 @@ final class CatAutoLayoutViewController: UIViewController {
     }
     
     private func addLotsOfNews() {
-        arrayOfNews.forEach { (news) in
-            addNews(news, verticalMove: verticalMove)
-            verticalMove += scrollView.bounds.width
+        newsArray.forEach { news in
+            addNews(news, verticalMove: verticalSpace)
+            verticalSpace += scrollView.bounds.width
         }
-        contentViewWidthConstraint.constant = CGFloat( scrollView.bounds.width * CGFloat(arrayOfNews.count))
-//        scrollView.contentSize = CGSize(width: scrollView.bounds.width * 10, height: contentView.bounds.height)
+        contentViewWidthConstraint.constant = CGFloat( scrollView.bounds.width * CGFloat(newsArray.count))
     }
     
     private func showIndexOfPageNumber() {
-        indexOfNews = Int(scrollView.contentOffset.x / scrollView.bounds.width + 1)
-        if indexOfNews < 1 {
-            indexOfNews = 1
+        newsIndex = Int(scrollView.contentOffset.x / scrollView.bounds.width + 1)
+        if newsIndex < 1 {
+            newsIndex = 1
         }
-        if indexOfNews > arrayOfNews.count {
-            indexOfNews = arrayOfNews.count
+        if newsIndex > newsArray.count {
+            newsIndex = newsArray.count
         }
-        indexOfNewsLabel.text = "\(indexOfNews)/\(arrayOfNews.count)"
+        indexOfNewsLabel.text = "\(newsIndex)/\(newsArray.count)"
     }
     
     private func setTextOfNews(with index: Int) {
-        let indexOfNews = index <= arrayOfNews.count ? index : arrayOfNews.count
-        contentLabel.text = arrayOfNews[indexOfNews].content
+        var indexOfNews = index <= newsArray.count ? index : newsArray.count
+        indexOfNews -= 1
+        contentLabel.text = newsArray[indexOfNews].content
     }
     
     //MARK: - IBAction private functions
@@ -115,6 +114,6 @@ final class CatAutoLayoutViewController: UIViewController {
 extension CatAutoLayoutViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         showIndexOfPageNumber()
-        setTextOfNews(with: indexOfNews)
+        setTextOfNews(with: newsIndex)
     }
 }

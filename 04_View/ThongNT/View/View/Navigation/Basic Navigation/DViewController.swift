@@ -20,7 +20,6 @@ final class DViewController: UIViewController {
         view.subviews
             .compactMap { $0 as? UIButton }
             .forEach { configButton($0) }
-        
     }
     
     private func configButton(_ button: UIButton) {
@@ -32,7 +31,7 @@ final class DViewController: UIViewController {
         button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
     }
     
-    @IBAction private func buttonTouchUPInside(_ sender: UIButton) {
+    @IBAction private func goToViewController(_ sender: UIButton) {
         switch sender.tag {
         case 0:
             navigationController?.pushViewController(EViewController(), animated: true)

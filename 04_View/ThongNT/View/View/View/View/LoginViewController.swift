@@ -16,7 +16,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var informLabel: UILabel!
     
     //MARK: - Private variables
-    private var checkInput: validateInput = .empty {
+    private var checkInput: InputValidate = .empty {
         didSet {
             if checkInput != .correct {
                 showResult()

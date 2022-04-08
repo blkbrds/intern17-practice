@@ -32,7 +32,7 @@ final class NavigationViewController: UIViewController {
     }
     
     //MARK: - IBAction private functions
-    @IBAction private func buttonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func goToViewController(_ sender: UIButton) {
         switch sender.tag {
         case 0:
             navigationController?.pushViewController(AViewController(), animated: true)

@@ -11,7 +11,7 @@ protocol EditViewControllerDelegate: AnyObject {
     func sendInform(with view: EditViewController, message: String)
 }
 
-enum validateInput: String {
+enum InputValidate: String {
     case noUsername = "Chưa nhập tên đăng nhập"
     case noPassword = "Chưa nhập mật khẩu"
     case empty = "Chưa nhập dữ liệu"
@@ -33,7 +33,7 @@ struct User {
     var password: String
     var accounts: Accounts?
     
-    mutating func validateUserNamePasswordInput() -> validateInput {
+    mutating func validateUserNamePasswordInput() -> InputValidate {
         switch (userName, password) {
         case ("", ""): return .empty
         case (_, ""): return .noPassword

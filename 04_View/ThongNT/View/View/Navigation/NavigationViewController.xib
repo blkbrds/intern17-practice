@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,24 +18,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfo-cI-uhD">
-                    <rect key="frame" x="176.5" y="214" width="61" height="30"/>
+                    <rect key="frame" x="176.5" y="170" width="61" height="30"/>
                     <state key="normal" title="Bai Tap 1"/>
                     <connections>
-                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="J5b-iB-Y60"/>
+                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="J5b-iB-Y60"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeL-cM-OmU">
-                    <rect key="frame" x="175.5" y="344" width="63" height="30"/>
+                    <rect key="frame" x="175.5" y="300" width="63" height="30"/>
                     <state key="normal" title="Bai Tap 2"/>
                     <connections>
-                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="g15-Lc-YkP"/>
+                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="g15-Lc-YkP"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc2-op-Pya">
-                    <rect key="frame" x="175.5" y="474" width="63" height="30"/>
+                    <rect key="frame" x="175.5" y="430" width="63" height="30"/>
                     <state key="normal" title="Bai Tap 3"/>
                     <connections>
-                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="BDL-6X-qH5"/>
+                        <action selector="goToViewController:" destination="-1" eventType="touchUpInside" id="BDL-6X-qH5"/>
                     </connections>
                 </button>
             </subviews>

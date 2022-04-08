@@ -48,7 +48,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="userImage" destination="W7s-xi-Uxy" id="wgH-La-Mf3"/>
+                <outlet property="userImageView" destination="W7s-xi-Uxy" id="4e2-No-foD"/>
                 <outlet property="userNameLabel" destination="lEx-tp-cmN" id="LT2-zh-dvu"/>
             </connections>
             <point key="canvasLocation" x="-86.956521739130437" y="-151.00446428571428"/>
