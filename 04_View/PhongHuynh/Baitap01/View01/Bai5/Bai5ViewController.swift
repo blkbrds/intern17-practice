@@ -2,12 +2,14 @@ import UIKit
 
 final class Bai5ViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var phantramLabel: UILabel!
     @IBOutlet weak private var whiteView: UIView!
     @IBOutlet weak private var blueView: UIView!
     @IBOutlet weak private var greenView: UIView!
     @IBOutlet weak private var parentView: UIView!
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         greenView.layer.cornerRadius = 40
@@ -17,7 +19,6 @@ final class Bai5ViewController: UIViewController {
             if let touch = touches.first {
                 if touch.view == greenView {
                     let location = touch.location(in: parentView)
-                    
                     if location.y < parentView.bounds.minY {
                         greenView.center.y = parentView.bounds.minY
                     } else if location.y > parentView.bounds.maxY {
@@ -25,7 +26,6 @@ final class Bai5ViewController: UIViewController {
                     } else {
                         greenView.center.y = location.y
                     }
-                    
                     let oldBlueViewHeight = blueView.frame.size.height
                     let oldBlueViewY = blueView.frame.origin.y
                     let newBlueHeight = oldBlueViewHeight + (oldBlueViewY - greenView.center.y)

@@ -2,12 +2,14 @@ import UIKit
 
 final class Bai4ViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak private var redSlider: UISlider!
     @IBOutlet weak private var greenSlider: UISlider!
     @IBOutlet weak private var blueSlider: UISlider!
     @IBOutlet weak private var colorView: UIView!
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         redSlider.value = 50

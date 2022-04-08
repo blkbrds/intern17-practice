@@ -2,6 +2,7 @@ import UIKit
 
 final class Bai2ViewController: UIViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,6 +57,7 @@ final class Bai2ViewController: UIViewController {
         return userView
     }
     
+    // MARK: - Objc functions
     @objc func buttonDidClick(sender: UIGestureRecognizer){
         if let name = sender.name {
             print(name)
