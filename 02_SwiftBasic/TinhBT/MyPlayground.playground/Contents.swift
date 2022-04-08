@@ -2,18 +2,18 @@ import Foundation
 
 var str = "Hello, playground"
 
-func tinhDienTich(bankinh: Double) -> (dientich: Double,thetich: Double) {
-    var dientich: Double = 0
-    var thetich: Double = 0
-    dientich = Double(4/3 * 3.14 * bankinh * bankinh * bankinh)
-    thetich = Double(4 * 3.14 * bankinh * bankinh)
-    return (dientich, thetich)
+func tinhDienTich(banKinh: Double) -> (dienTich: Double, theTich: Double) {
+    var dienTich: Double = 0
+    var theTich: Double = 0
+    dienTich = Double(4 / 3 * 3.14 * banKinh * banKinh * banKinh)
+    theTich = Double(4 * 3.14 * banKinh * banKinh)
+    return (dienTich, theTich)
 }
 
-let dientich = tinhDienTich(bankinh: 5)
+tinhDienTich(banKinh: 5)
 
 //bai2
-func tinhPhuongTrinhBac2(a: Double ,b: Double ,c: Double) -> (x1: Double, x2: Double){
+func tinhPhuongTrinhBac2(a: Double, b: Double, c: Double) -> (x1: Double, x2: Double) {
     var x1: Double = 0
     var x2: Double = 0
     
@@ -21,21 +21,21 @@ func tinhPhuongTrinhBac2(a: Double ,b: Double ,c: Double) -> (x1: Double, x2: Do
     detar = b * b - (4 * a * c)
     if     detar < 0 {
         print("phuong trinh vo nghiem")
-    }else if detar == 0 {
-        let nghiemkep = -(b / 2 * a)
-        print(nghiemkep)
-    }else {
+    } else if detar == 0 {
+        let nghiemKep = -(b / 2 * a)
+        print(nghiemKep)
+    } else {
         x1 = (-b + detar.squareRoot()) / 2 * a
         x2 = (-b - detar.squareRoot()) / 2 * a
-        print(x1 , x2)
+        print(x1, x2)
     }
-    
     return (x1, x2)
 }
 
 tinhPhuongTrinhBac2(a: 2, b: 4, c: 2)
+
 //bai 3
-func tinhPhuongTrinhBac1(a: Double,b: Double, c:Double,a1: Double,b1: Double,c1: Double)-> (x: Double, y:Double){
+func tinhPhuongTrinhBac1(a: Double, b: Double, c:Double, a1: Double, b1: Double, c1: Double) -> (x: Double, y: Double) {
     var x: Double = 0
     var y: Double = 0
     var dx: Double = 0
@@ -47,19 +47,16 @@ func tinhPhuongTrinhBac1(a: Double,b: Double, c:Double,a1: Double,b1: Double,c1:
     
     x = dx / d
     y = dy / d
-    return(x , y)
+    return (x, y)
 }
 tinhPhuongTrinhBac1(a: 2, b: 3, c: 4, a1: 3, b1: 4, c1: 5)
 
 //bai4
-func fibonaci(n: Int)
-{
+func fibonaci(n: Int) {
     var f1 = 1
     var f2 = 0
     var sum = 0
-
-    for _ in 0..<n
-    {
+    for _ in 0..<n {
         let f = f1 + f2
         f1 = f2
         f2 = f
@@ -76,17 +73,16 @@ func chuoiTaylor(x: Float , n: Int) -> Double {
     let a: Int
     if n % 2 == 0 {
         a = 1
-    }else{
+    } else {
         a = -1
     }
-    
-    var temp:Float = 1
+    var temp: Float = 1
         for i in 1..<(2 * n + 1) {
-            temp = temp * x / Float(i);
+            temp = temp * x / Float(i)
         }
     return Double(a) * Double(temp)
 }
-private func tinhChuoi(x: Float)-> (Int, Int){
+private func tinhChuoi(x: Float) -> (Int, Int) {
     var sin = 0
     var cos = 0
     var n: Int = 0
@@ -100,7 +96,7 @@ private func tinhChuoi(x: Float)-> (Int, Int){
 print(tinhChuoi(x: 0))
 
 // liêt ke so hanh phuc
-func isHappyNumber(num: Int) -> Bool{
+func isHappyNumber(num: Int) -> Bool {
     var number = num
     var arr: [Int] = []
     while number > 0 {
@@ -109,7 +105,6 @@ func isHappyNumber(num: Int) -> Bool{
         arr.append(surplus)
         number = number / 10
     }
-
     if arr.count % 2 == 0 {
         var presum: Int = 0
         var tailsum: Int = 0
@@ -144,11 +139,11 @@ demChuoi(string: "ababababababs", subString: "ab")
     
 //bài tạp 6 : hoán vị
 
-var numbers = [0,1,2,3,4,5,6,7,8,9]
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 numbers.shuffle()
 
 // bai tap 7
-func bearrayReplace(inputArray: [Int],elemToReplayce: Int, substitutionElem: Int) -> [Int]{
+func bearrayReplace(inputArray: [Int], elemToReplayce: Int, substitutionElem: Int) -> [Int] {
     var array = inputArray
     
     for i in 0..<array.count {
@@ -158,5 +153,5 @@ func bearrayReplace(inputArray: [Int],elemToReplayce: Int, substitutionElem: Int
     }
     return array
 }
-bearrayReplace(inputArray: [1,2,3,1,1], elemToReplayce: 1, substitutionElem: 6)
+bearrayReplace(inputArray: [1, 2, 3, 1, 1], elemToReplayce: 1, substitutionElem: 6)
 
