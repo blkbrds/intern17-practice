@@ -8,7 +8,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let vc = Bai3ViewController()
+        let vc = DatePickerViewController()
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
