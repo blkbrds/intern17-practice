@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     
     private func setupUI() {
-        selectExercise(with: .ex1)
+        selectExercise(with: .ex2)
     }
     
     private func selectExercise(with type: ExerciseType) {
