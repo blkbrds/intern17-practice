@@ -31,25 +31,28 @@ class CustomButtonView: UIView {
         
         // add UIView
         customView = UIView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        customView?.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
-        customView?.layer.cornerRadius = 8
-        self.addSubview(customView!)
+        guard let customView = customView else { return }
+        customView.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
+        customView.layer.cornerRadius = 8
+        self.addSubview(customView)
                            
        // add user name
         nameLabel = UILabel(frame: CGRect(x: 0, y: frame.size.height * 3 / 5, width: 40, height: 40))
-        nameLabel?.clipsToBounds = true
-        nameLabel!.layer.cornerRadius = 20
-        nameLabel!.backgroundColor = .lightGray
-        nameLabel!.textAlignment = .center
-        nameLabel!.textColor = .blue
-        self.addSubview(nameLabel!)
-        nameLabel1 = UILabel(frame: CGRect(x: 0, y: frame.size.height * 2 / 5, width: (customView?.frame.size.width)!, height: 40))
-        nameLabel1!.backgroundColor = .clear
-        nameLabel1!.textAlignment = .center
-        nameLabel1!.text = name
-        nameLabel1!.textColor = .blue
-        nameLabel1?.center = customView!.center
-        self.addSubview(nameLabel1!)
+        guard let nameLabel = nameLabel else { return }
+        nameLabel.clipsToBounds = true
+        nameLabel.layer.cornerRadius = 20
+        nameLabel.backgroundColor = .lightGray
+        nameLabel.textAlignment = .center
+        nameLabel.textColor = .blue
+        self.addSubview(nameLabel)
+        nameLabel1 = UILabel(frame: CGRect(x: 0, y: frame.size.height * 2 / 5, width: customView.frame.size.width, height: 40))
+        guard let nameLabel1 = nameLabel1 else { return }
+        nameLabel1.backgroundColor = .clear
+        nameLabel1.textAlignment = .center
+        nameLabel1.text = name
+        nameLabel1.textColor = .blue
+        nameLabel1.center = customView.center
+        self.addSubview(nameLabel1)
         setPositionLabel(potision: position)
         setBadgeNumber()
         
