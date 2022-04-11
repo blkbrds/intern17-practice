@@ -19,8 +19,8 @@ final class Exercise07ViewController: UIViewController {
         setupUI()
     }
     
-    // MARK: - Functions
-    func setupUI() {
+    // MARK: - Private Functions
+    private func setupUI() {
         let rotateGesture = UIGestureRecognizer(target: self, action: #selector(handleRotate(recognizer:)))
         let oneTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleOneTapGesture(recognizer:)))
         // Cham 1 lan
@@ -63,6 +63,7 @@ final class Exercise07ViewController: UIViewController {
         messageLabel.isHidden = false
         messageLabel.alpha = 1
         messageLabel.text = "I am monkey"
+        //
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
             UIView.animate(withDuration: 5.0) {
                 self.messageLabel.alpha = 0

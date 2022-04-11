@@ -10,11 +10,11 @@ import UIKit
 final class Exercise04ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var rgbNamelLabel: UILabel!
-    @IBOutlet weak var backgroundRgb: UIView!
-    @IBOutlet weak var redLabel: UILabel!
-    @IBOutlet weak var greenLabel: UILabel!
-    @IBOutlet weak var blueLabel: UILabel!
+    @IBOutlet private weak var rgbNamelLabel: UILabel!
+    @IBOutlet private weak var backgroundRgb: UIView!
+    @IBOutlet private weak var redLabel: UILabel!
+    @IBOutlet private weak var greenLabel: UILabel!
+    @IBOutlet private weak var blueLabel: UILabel!
     
     // MARK: - Properties
     var red : Float = 100
@@ -30,7 +30,7 @@ final class Exercise04ViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupUI() {
-        rgbNamelLabel.text = "r: \(red), g: \(green), b: \(blue)"
+        rgbNamelLabel.text = "r: \(red) , g: \(green), b: \(blue)"
         backgroundRgb.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
         
         redLabel.text = "Red"

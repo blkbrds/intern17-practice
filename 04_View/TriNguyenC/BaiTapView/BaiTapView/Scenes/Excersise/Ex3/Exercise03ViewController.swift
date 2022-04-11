@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - Enum
+// MARK: - Enum Error
 enum ErrorTextField {
     case NotLetter
     case WrongInput
@@ -17,15 +17,15 @@ enum ErrorTextField {
 final class Exercise03ViewController: UIViewController {
 
     // MARK: - Properties
-    var username: String = "admin"
-    var password: String = "admin123"
+    private var username: String = "admin"
+    private var password: String = "admin123"
     
     // MARK: - IBOutlets
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passWordTextField: UITextField!
-    @IBOutlet weak var notiLabel: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var passWordTextField: UITextField!
+    @IBOutlet private weak var notiLabel: UILabel!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var clearButton: UIButton!
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -35,14 +35,16 @@ final class Exercise03ViewController: UIViewController {
     }
     
     // MARK: - Private Functions
-    
     private func setupUI() {
         title = "Exercise03"
         loginButton.layer.cornerRadius = 12
         clearButton.layer.cornerRadius = 12
         
-        hideKeyBoard()
+        loginButton.layer.masksToBounds = true
+        loginButton.layer.masksToBounds = true
+//        hideKeyboard()
     }
+    
     
     private func throwErrorTextField(with errorTextFiled: ErrorTextField) {
         switch errorTextFiled {
@@ -54,7 +56,7 @@ final class Exercise03ViewController: UIViewController {
             notiLabel.text = "Please enter in full username and password"
         }
     }
-    
+
     // MARK: - IBActions
     @IBAction func loginButtonTouchUpInside(_ sender: Any) {
         if username == userNameTextField.text && password == passWordTextField.text {
@@ -68,18 +70,22 @@ final class Exercise03ViewController: UIViewController {
         userNameTextField.text = ""
         passWordTextField.text = ""
     }
-}
-
-// MARK: - Hide KeyBoard
-extension Exercise03ViewController {
     
-    private func hideKeyBoardWhenTap() {
-        let tapGesture = UITapGestureRecognizer(target: self,
-                                                action: #selector(hideKeyBoard))
-        self.view.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func hideKeyBoard() {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
 }
+//
+//// MARK: - Hide KeyBoard
+//extension Exercise03ViewController {
+//
+//    func hideKeyboardWhenTapAround() {
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+//        view.addGestureRecognizer(tapGesture)
+//    }
+//
+//    @objc func hideKeyboard() {
+//        view.endEditing(true)
+//    }
+//}

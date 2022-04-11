@@ -42,11 +42,11 @@ final class Exercise02ViewController: UIViewController {
     }
     
     private func configView() {
-        let screenWidht = UIScreen.main.bounds.width
+        let screenWidth = UIScreen.main.bounds.width
         let space: CGFloat = 10
         let widthUserView: CGFloat = 110
         let heightUserView: CGFloat = 175
-        var yUserView: CGFloat = 100
+        var yUserView: CGFloat = 110
         var xUserView: CGFloat = space
         
         for index in 0..<users.count {
@@ -55,7 +55,7 @@ final class Exercise02ViewController: UIViewController {
             view.addSubview(userView)
             
             // frame
-            if xUserView + widthUserView > screenWidht - xUserView {
+            if xUserView + widthUserView > screenWidth - xUserView {
                 // change x and y
                 yUserView += heightUserView + space
                 xUserView = space
@@ -85,15 +85,18 @@ final class Exercise02ViewController: UIViewController {
         // Add button
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height))
         button.backgroundColor = .clear
-        button.addTarget(self, action: #selector(tapTouchUpInside), for: .touchUpInside)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(clickButton))
+        button.tag = index
+        button.addGestureRecognizer(tap)
         userView.addSubview(button)
         
         return userView
     }
     
-    @objc func tapTouchUpInside() {
-        let userName = users.count
-        print("username: \(userName)")
+    @objc private func clickButton(_ sender: UITapGestureRecognizer) {
+        guard let view = sender.view else { return }
+        let index = view.tag
+        print("Username is: Name \(index + 1)")
     }
 }
 

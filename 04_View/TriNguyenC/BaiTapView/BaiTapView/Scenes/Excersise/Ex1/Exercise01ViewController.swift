@@ -12,14 +12,14 @@ final class Exercise01ViewController: UIViewController {
     // MARK: - Computed Properties
     private lazy var avatarImageView: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "ic-5")
+        image.image = UIImage(named: "ic-user")
         image.contentMode = .scaleAspectFit
         return image
     }()
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Tyrone Ming"
+        label.text = "Hello Tri"
         label.textColor = .white
         label.backgroundColor = UIColor(red: 66/255, green: 77/255, blue: 88/255, alpha: 1.0)
         label.textAlignment = .center
@@ -41,7 +41,7 @@ final class Exercise01ViewController: UIViewController {
     // MARK: - Private Functions
     private func setupUI() {
         self.title = "Exercise01"
-        view.backgroundColor = UIColor(red: 22/255, green: 33/255, blue: 44/255, alpha: 1.0)
+        view.backgroundColor = UIColor(red: 11/255, green: 111/255, blue: 1111/255, alpha: 1.0)
         
         // set frame for object
         avatarImageView.frame = Define.frameAvatar
