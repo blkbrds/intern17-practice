@@ -17,9 +17,9 @@ final class Exercise04ViewController: UIViewController {
     @IBOutlet private weak var blueLabel: UILabel!
     
     // MARK: - Properties
-    var red : Float = 100
-    var green: Float = 125
-    var blue: Float = 150
+    var red : Float = 0.5
+    var green: Float = 0.5
+    var blue: Float = 0.5
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -30,7 +30,11 @@ final class Exercise04ViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupUI() {
-        rgbNamelLabel.text = "r: \(red) , g: \(green), b: \(blue)"
+        let redSlider: Int = Int(red * 225)
+        let greenSlider: Int = Int(green * 225)
+        let blueSlider: Int = Int(blue * 225)
+        
+        rgbNamelLabel.text = "r: \(redSlider) , g: \(greenSlider), b: \(blueSlider)"
         backgroundRgb.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
         
         redLabel.text = "Red"

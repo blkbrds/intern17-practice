@@ -37,7 +37,7 @@
                         <constraint firstAttribute="height" constant="40" id="jqm-nF-wAc"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                 </textField>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="m6B-AB-Von">
                     <rect key="frame" x="20" y="234" width="374" height="40"/>

@@ -39,7 +39,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
                             <subviews>
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pbW-VS-Iq9">
-                                    <rect key="frame" x="95" y="22" width="271" height="31"/>
+                                    <rect key="frame" x="88" y="22" width="278" height="31"/>
                                     <connections>
                                         <action selector="redSlider:" destination="-1" eventType="valueChanged" id="vkk-ZZ-uC1"/>
                                     </connections>
@@ -56,8 +56,8 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="pbW-VS-Iq9" firstAttribute="leading" secondItem="0cQ-Ff-giB" secondAttribute="trailing" constant="37" id="27b-3F-Rdb"/>
                                 <constraint firstAttribute="width" constant="374" id="Nal-dY-tiz"/>
+                                <constraint firstItem="pbW-VS-Iq9" firstAttribute="leading" secondItem="ChC-Me-yPs" secondAttribute="leading" constant="90" id="cOM-8W-nvC"/>
                                 <constraint firstAttribute="height" constant="75" id="dWa-Sv-V3D"/>
                                 <constraint firstItem="0cQ-Ff-giB" firstAttribute="top" secondItem="ChC-Me-yPs" secondAttribute="top" constant="26" id="hPn-aa-ilX"/>
                                 <constraint firstItem="0cQ-Ff-giB" firstAttribute="leading" secondItem="ChC-Me-yPs" secondAttribute="leading" constant="10" id="o9Q-Oa-KNI"/>
@@ -69,7 +69,7 @@
                             <rect key="frame" x="0.0" y="97" width="374" height="81"/>
                             <subviews>
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qde-Zt-gmr">
-                                    <rect key="frame" x="87" y="25" width="279" height="31"/>
+                                    <rect key="frame" x="88" y="25" width="278" height="31"/>
                                     <connections>
                                         <action selector="greenSlider:" destination="-1" eventType="valueChanged" id="Yct-Ey-hdT"/>
                                     </connections>
@@ -87,9 +87,9 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="h9o-m1-oiC" firstAttribute="leading" secondItem="iJs-qE-zYo" secondAttribute="leading" constant="10" id="3WL-vi-sJW"/>
+                                <constraint firstItem="Qde-Zt-gmr" firstAttribute="leading" secondItem="iJs-qE-zYo" secondAttribute="leading" constant="90" id="OUC-go-hye"/>
                                 <constraint firstItem="h9o-m1-oiC" firstAttribute="top" secondItem="iJs-qE-zYo" secondAttribute="top" constant="30" id="ezF-8C-BXY"/>
                                 <constraint firstAttribute="width" constant="374" id="mK0-IG-QmQ"/>
-                                <constraint firstItem="Qde-Zt-gmr" firstAttribute="leading" secondItem="h9o-m1-oiC" secondAttribute="trailing" constant="29" id="nPf-VU-RBq"/>
                                 <constraint firstAttribute="height" constant="81" id="rTJ-5B-qaV"/>
                                 <constraint firstItem="Qde-Zt-gmr" firstAttribute="top" secondItem="iJs-qE-zYo" secondAttribute="top" constant="25" id="vII-Ad-mxL"/>
                                 <constraint firstAttribute="trailing" secondItem="Qde-Zt-gmr" secondAttribute="trailing" constant="10" id="wy5-K2-so0"/>
@@ -99,7 +99,7 @@
                             <rect key="frame" x="0.0" y="200" width="374" height="81"/>
                             <subviews>
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mde-jU-Hzi">
-                                    <rect key="frame" x="90" y="25" width="276" height="31"/>
+                                    <rect key="frame" x="88" y="25" width="278" height="31"/>
                                     <connections>
                                         <action selector="blueSlider:" destination="-1" eventType="valueChanged" id="1Ls-ya-99K"/>
                                     </connections>
@@ -117,9 +117,9 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="LVS-Kn-FZR" firstAttribute="leading" secondItem="ea1-cx-PCG" secondAttribute="leading" constant="10" id="8Vp-ng-A0X"/>
-                                <constraint firstItem="mde-jU-Hzi" firstAttribute="leading" secondItem="LVS-Kn-FZR" secondAttribute="trailing" constant="32" id="8eY-Zy-8pv"/>
                                 <constraint firstAttribute="trailing" secondItem="mde-jU-Hzi" secondAttribute="trailing" constant="10" id="AYc-hW-jka"/>
                                 <constraint firstAttribute="width" constant="374" id="YU1-KR-Wyu"/>
+                                <constraint firstItem="mde-jU-Hzi" firstAttribute="leading" secondItem="ea1-cx-PCG" secondAttribute="leading" constant="90" id="aS0-6K-u9m"/>
                                 <constraint firstAttribute="height" constant="81" id="bhL-JD-SS3"/>
                                 <constraint firstItem="mde-jU-Hzi" firstAttribute="top" secondItem="ea1-cx-PCG" secondAttribute="top" constant="25" id="hJZ-xN-Q9Q"/>
                                 <constraint firstItem="LVS-Kn-FZR" firstAttribute="top" secondItem="ea1-cx-PCG" secondAttribute="top" constant="29" id="hus-ye-VzR"/>

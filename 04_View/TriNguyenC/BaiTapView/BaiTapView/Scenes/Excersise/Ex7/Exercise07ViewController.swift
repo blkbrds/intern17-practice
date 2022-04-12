@@ -21,20 +21,18 @@ final class Exercise07ViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupUI() {
-        let rotateGesture = UIGestureRecognizer(target: self, action: #selector(handleRotate(recognizer:)))
         let oneTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleOneTapGesture(recognizer:)))
-        // Cham 1 lan
+        // Touch One
         oneTapGesture.numberOfTapsRequired = 1
         
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTapGesture(recognizer:)))
-        // Cham 2 lan
+        // Touch Two
         doubleTapGesture.numberOfTapsRequired = 2
         
-        // KichHoat
+        // Activated
         monkeyImageView.isUserInteractionEnabled = true
         
         // Add Gesture
-        monkeyImageView.addGestureRecognizer(rotateGesture)
         monkeyImageView.addGestureRecognizer(oneTapGesture)
         monkeyImageView.addGestureRecognizer(doubleTapGesture)
         
@@ -49,35 +47,28 @@ final class Exercise07ViewController: UIViewController {
         
         messageLabel.isHidden = true
     }
-    
-    // Xoay hình
-    @objc func handleRotate(recognizer: UIRotationGestureRecognizer) {
-        guard let view = recognizer.view else { return }
-        view.transform = view.transform.rotated(by: recognizer.rotation)
-        recognizer.rotation = 0
-    }
-    
-    // Chạm 1 lần
+        
+    // Touch One
     @objc func handleOneTapGesture(recognizer: UITapGestureRecognizer) {
         guard recognizer.view != nil else { return }
         messageLabel.isHidden = false
         messageLabel.alpha = 1
         messageLabel.text = "I am monkey"
-        // Bộ hẹn giờ
-        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
             UIView.animate(withDuration: 5.0) {
                 self.messageLabel.alpha = 0
             }
         }
     }
     
-    // Chạm 2 lần
+    // Touch Two
     @objc func handleDoubleTapGesture(recognizer: UITapGestureRecognizer) {
         guard recognizer.view != nil else { return }
         messageLabel.isHidden = false
         messageLabel.alpha = 1
         messageLabel.text = "Monkey is me"
-        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
             UIView.animate(withDuration: 5.0) {
                 self.messageLabel.alpha = 0
             }

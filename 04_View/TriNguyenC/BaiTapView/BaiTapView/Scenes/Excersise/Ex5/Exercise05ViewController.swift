@@ -16,22 +16,10 @@ final class Exercise05ViewController: UIViewController {
     var percentLabel: UILabel = UILabel()
     
     // MARK: - Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Exercise05"
-        //        setupUI()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //        setupUI()
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupUI()
     }
-    
     
     // MARK: - Private Functions
     private func setupUI() {
@@ -66,6 +54,7 @@ final class Exercise05ViewController: UIViewController {
         labelView.addSubview(percentLabel)
     }
     
+    // MARK: - Touch Moved
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let location = touch.location(in: containerView)

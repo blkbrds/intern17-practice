@@ -25,30 +25,30 @@ final class Exercise6ViewController: UIViewController {
         let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotate(regconizer:)))
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(regconizer:)))
         
-        // Kich Hoat
+        // Activated
         monkeyImageView.isUserInteractionEnabled = true
         
-        // add gesture on image
+        // Add Gesture On ImageView
         monkeyImageView.addGestureRecognizer(pinchGesture)
         monkeyImageView.addGestureRecognizer(rotateGesture)
         monkeyImageView.addGestureRecognizer(longPressGesture)
     }
 
-    // Objc tap
-    // zoom hình theo tỉ lệ 0.5 -> 2.0
+    
+    // Zoom MonkeyImage Proportionally
     @objc func handlePinch(regconizer: UIPinchGestureRecognizer) {
         guard let view = regconizer.view, regconizer.scale >= 0.5 && regconizer.scale <= 2.0 else { return }
         view.transform = view.transform.scaledBy(x: regconizer.scale, y: regconizer.scale)
     }
     
-    // xoay hình
+    // Rotate MonkeyImage
     @objc func handleRotate(regconizer: UIRotationGestureRecognizer) {
         guard let view = regconizer.view else { return }
         view.transform = view.transform.rotated(by: regconizer.rotation)
         regconizer.rotation = 0
     }
     
-    // Nhấn giữ trong vòng 5s
+    // Long Press For Five Seconds
     @objc func handleLongPress(regconizer: UILongPressGestureRecognizer) {
         guard let view = regconizer.view else { return }
         UIView.animate(withDuration: 5.0) {

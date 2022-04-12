@@ -7,18 +7,19 @@
 
 import UIKit
 
-// MARK: - Enum Error
-enum ErrorTextField {
-    case NotLetter
-    case WrongInput
-    case MissedUserNameOrPassWord
-}
-
 final class Exercise03ViewController: UIViewController {
 
     // MARK: - Properties
-    private var username: String = "admin"
-    private var password: String = "admin123"
+    private let usernameSuccess: String = "Admin"
+    private let passwordSuccess: String = "Admin123"
+    
+    // MARK: - Define Error
+    enum LoginError: String {
+        case notEnterData = "You not enter data"
+        case notEnterUserName = "You not enter username"
+        case notEnterPassWord = "You not enter password"
+        case errorEnterData = " You enter bad name or password"
+    }
     
     // MARK: - IBOutlets
     @IBOutlet private weak var userNameTextField: UITextField!
@@ -30,7 +31,6 @@ final class Exercise03ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // UI
         setupUI()
     }
     
@@ -42,27 +42,27 @@ final class Exercise03ViewController: UIViewController {
         
         loginButton.layer.masksToBounds = true
         loginButton.layer.masksToBounds = true
-//        hideKeyboard()
+        
+        userNameTextField.delegate = self
+        passWordTextField.delegate = self
     }
     
-    
-    private func throwErrorTextField(with errorTextFiled: ErrorTextField) {
-        switch errorTextFiled {
-        case .NotLetter:
-            notiLabel.text = "Please enter the word"
-        case .WrongInput:
-            notiLabel.text = "Please enter the correct username and password"
-        case .MissedUserNameOrPassWord:
-            notiLabel.text = "Please enter in full username and password"
-        }
-    }
-
     // MARK: - IBActions
-    @IBAction func loginButtonTouchUpInside(_ sender: Any) {
-        if username == userNameTextField.text && password == passWordTextField.text {
-            notiLabel.isHidden = true
-        } else {
-            throwErrorTextField(with: .NotLetter)
+    @IBAction func loginButtonTouchUpInside(_ sender: Any?) {
+        let username = userNameTextField.text
+        let password = passWordTextField.text
+        let resultLogin: (String?, String?) = (username, password)
+        switch resultLogin {
+        case ("", ""):
+            notiLabel.text = LoginError.notEnterData.rawValue
+        case ("", _):
+            notiLabel.text = LoginError.notEnterUserName.rawValue
+        case(_, ""):
+            notiLabel.text = LoginError.notEnterPassWord.rawValue
+        case(usernameSuccess, passwordSuccess):
+            notiLabel.text = "Login success"
+        default:
+            notiLabel.text = LoginError.errorEnterData.rawValue
         }
     }
     
@@ -76,16 +76,15 @@ final class Exercise03ViewController: UIViewController {
         view.endEditing(true)
     }
 }
-//
-//// MARK: - Hide KeyBoard
-//extension Exercise03ViewController {
-//
-//    func hideKeyboardWhenTapAround() {
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-//        view.addGestureRecognizer(tapGesture)
-//    }
-//
-//    @objc func hideKeyboard() {
-//        view.endEditing(true)
-//    }
-//}
+
+extension Exercise03ViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passWordTextField.becomeFirstResponder()
+        } else {
+            loginButtonTouchUpInside(_: nil)
+        }
+        return true
+    }
+}

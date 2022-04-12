@@ -66,10 +66,10 @@ final class Exercise02ViewController: UIViewController {
     }
     
     private func createUserView(frame: CGRect, index: Int) -> UIView {
-        // Tao userView
+        // create userView
         let userView = UIView(frame: frame)
         
-        // them avatar
+        // Add avatar
         let avatarImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height - 25))
         avatarImageView.image = UIImage(named: users[index].avatar)
         avatarImageView.contentMode = .scaleToFill
@@ -93,6 +93,7 @@ final class Exercise02ViewController: UIViewController {
         return userView
     }
     
+    // Objc
     @objc private func clickButton(_ sender: UITapGestureRecognizer) {
         guard let view = sender.view else { return }
         let index = view.tag

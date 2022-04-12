@@ -43,12 +43,12 @@ final class Exercise01ViewController: UIViewController {
         self.title = "Exercise01"
         view.backgroundColor = UIColor(red: 11/255, green: 111/255, blue: 1111/255, alpha: 1.0)
         
-        // set frame for object
+        // Set Frame For Object
         avatarImageView.frame = Define.frameAvatar
         nameLabel.frame = Define.frameNameLabel
         markButton.frame = Define.frameButton
         
-        // Add subview
+        // Add SubView
         view.addSubview(avatarImageView)
         view.addSubview(nameLabel)
         view.addSubview(markButton)
