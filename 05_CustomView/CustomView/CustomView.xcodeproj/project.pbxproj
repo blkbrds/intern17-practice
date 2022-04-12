@@ -11,8 +11,12 @@
 		221FB2F527FE7616003C6C8D /* Exercise01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221FB2F327FE7616003C6C8D /* Exercise01ViewController.xib */; };
 		221FB2F827FE7678003C6C8D /* MyAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221FB2F727FE7678003C6C8D /* MyAvatarView.xib */; };
 		221FB2FA27FE7685003C6C8D /* MyAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221FB2F927FE7685003C6C8D /* MyAvatarView.swift */; };
-		221FB2FC27FEC4AD003C6C8D /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221FB2FB27FEC4AD003C6C8D /* MySliderView.xib */; };
-		221FB2FE27FEC4BE003C6C8D /* MySilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221FB2FD27FEC4BE003C6C8D /* MySilderView.swift */; };
+		2237557C2805176600B43A8E /* BadButonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2237557B2805176600B43A8E /* BadButonView.xib */; };
+		2237557E2805177300B43A8E /* BadButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237557D2805177300B43A8E /* BadButtonView.swift */; };
+		22375580280525A600B43A8E /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2237557F280525A600B43A8E /* DatePickerView.xib */; };
+		22375582280525B000B43A8E /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22375581280525B000B43A8E /* DatePickerView.swift */; };
+		2258CBB6280406FA005E1723 /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2258CBB5280406FA005E1723 /* MySliderView.xib */; };
+		2258CBB828040707005E1723 /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258CBB728040707005E1723 /* MySliderView.swift */; };
 		22D5029427FA7D4900D24D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5029327FA7D4900D24D1C /* AppDelegate.swift */; };
 		22D5029627FA7D4900D24D1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5029527FA7D4900D24D1C /* SceneDelegate.swift */; };
 		22D5029D27FA7D4900D24D1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D5029C27FA7D4900D24D1C /* Assets.xcassets */; };
@@ -32,8 +36,12 @@
 		221FB2F327FE7616003C6C8D /* Exercise01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise01ViewController.xib; sourceTree = "<group>"; };
 		221FB2F727FE7678003C6C8D /* MyAvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAvatarView.xib; sourceTree = "<group>"; };
 		221FB2F927FE7685003C6C8D /* MyAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvatarView.swift; sourceTree = "<group>"; };
-		221FB2FB27FEC4AD003C6C8D /* MySliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
-		221FB2FD27FEC4BE003C6C8D /* MySilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySilderView.swift; sourceTree = "<group>"; };
+		2237557B2805176600B43A8E /* BadButonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadButonView.xib; sourceTree = "<group>"; };
+		2237557D2805177300B43A8E /* BadButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadButtonView.swift; sourceTree = "<group>"; };
+		2237557F280525A600B43A8E /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		22375581280525B000B43A8E /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		2258CBB5280406FA005E1723 /* MySliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
+		2258CBB728040707005E1723 /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
 		22D5029027FA7D4800D24D1C /* CustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D5029327FA7D4900D24D1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D5029527FA7D4900D24D1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,8 +143,8 @@
 			children = (
 				22D502B627FA802800D24D1C /* Exersice02ViewController.swift */,
 				22D502B727FA802800D24D1C /* Exersice02ViewController.xib */,
-				221FB2FD27FEC4BE003C6C8D /* MySilderView.swift */,
-				221FB2FB27FEC4AD003C6C8D /* MySliderView.xib */,
+				2258CBB728040707005E1723 /* MySliderView.swift */,
+				2258CBB5280406FA005E1723 /* MySliderView.xib */,
 			);
 			path = Ex2;
 			sourceTree = "<group>";
@@ -146,6 +154,8 @@
 			children = (
 				22D502BA27FA803500D24D1C /* Exercise03ViewController.swift */,
 				22D502BB27FA803500D24D1C /* Exercise03ViewController.xib */,
+				2237557D2805177300B43A8E /* BadButtonView.swift */,
+				2237557B2805176600B43A8E /* BadButonView.xib */,
 			);
 			path = Ex3;
 			sourceTree = "<group>";
@@ -155,6 +165,8 @@
 			children = (
 				22D502BE27FA804300D24D1C /* Exersice04ViewController.swift */,
 				22D502BF27FA804300D24D1C /* Exersice04ViewController.xib */,
+				22375581280525B000B43A8E /* DatePickerView.swift */,
+				2237557F280525A600B43A8E /* DatePickerView.xib */,
 			);
 			path = Ex4;
 			sourceTree = "<group>";
@@ -222,10 +234,12 @@
 				22D502B927FA802800D24D1C /* Exersice02ViewController.xib in Resources */,
 				22D5029D27FA7D4900D24D1C /* Assets.xcassets in Resources */,
 				22D502C127FA804300D24D1C /* Exersice04ViewController.xib in Resources */,
-				221FB2FC27FEC4AD003C6C8D /* MySliderView.xib in Resources */,
+				2258CBB6280406FA005E1723 /* MySliderView.xib in Resources */,
 				22D502AA27FA7D5D00D24D1C /* HomeViewController.xib in Resources */,
+				22375580280525A600B43A8E /* DatePickerView.xib in Resources */,
 				221FB2F527FE7616003C6C8D /* Exercise01ViewController.xib in Resources */,
 				22D502BD27FA803500D24D1C /* Exercise03ViewController.xib in Resources */,
+				2237557C2805176600B43A8E /* BadButonView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,10 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				221FB2FE27FEC4BE003C6C8D /* MySilderView.swift in Sources */,
 				22D502B827FA802800D24D1C /* Exersice02ViewController.swift in Sources */,
 				22D5029427FA7D4900D24D1C /* AppDelegate.swift in Sources */,
+				2237557E2805177300B43A8E /* BadButtonView.swift in Sources */,
+				22375582280525B000B43A8E /* DatePickerView.swift in Sources */,
 				221FB2F427FE7616003C6C8D /* Exercise01ViewController.swift in Sources */,
+				2258CBB828040707005E1723 /* MySliderView.swift in Sources */,
 				22D502BC27FA803500D24D1C /* Exercise03ViewController.swift in Sources */,
 				22D502C027FA804300D24D1C /* Exersice04ViewController.swift in Sources */,
 				221FB2FA27FE7685003C6C8D /* MyAvatarView.swift in Sources */,

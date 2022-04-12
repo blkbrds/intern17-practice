@@ -7,9 +7,16 @@
 
 import UIKit
 
+
 final class Exercise03ViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 }
+
+

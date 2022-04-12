@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Exersice02ViewController" customModule="CustomView" customModuleProvider="target">
             <connections>
-                <outlet property="numberTextField" destination="uJP-cO-Z5t" id="8Z1-AV-1VQ"/>
+                <outlet property="valueTextField" destination="uJP-cO-Z5t" id="bUs-7Z-0ag"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="60" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uJP-cO-Z5t">
-                    <rect key="frame" x="282" y="102" width="96" height="34"/>
+                    <rect key="frame" x="260" y="86" width="97" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.59215688710000003" green="0.59607845540000004" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
