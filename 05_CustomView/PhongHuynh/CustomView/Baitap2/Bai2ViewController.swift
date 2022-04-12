@@ -1,9 +1,9 @@
 import UIKit
 
-class Bai2ViewController: UIViewController {
+final class Bai2ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var valueTextField: UITextField!
+    @IBOutlet weak private var valueTextField: UITextField!
     
     var sliderView: MySliderView = MySliderView()
     

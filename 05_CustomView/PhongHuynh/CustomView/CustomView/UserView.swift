@@ -17,9 +17,8 @@ final class UserView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-     //   backgroundColor = .blue
     }
-        
+    // MARK: - Initialize
     convenience init(frame: CGRect, name: String, count: Int) {
         self.init(frame: frame)
         self.name = name

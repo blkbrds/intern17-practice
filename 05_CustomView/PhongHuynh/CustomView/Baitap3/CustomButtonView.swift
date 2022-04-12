@@ -2,6 +2,7 @@ import UIKit
 
 class CustomButtonView: UIView {
     
+    // MARK: - Define
     enum BadgeNumberPosition {
         case topLeft
         case topRight
@@ -14,9 +15,9 @@ class CustomButtonView: UIView {
     }
     
     // MARK: - Properties
-    var nameLabel: UILabel?
-    var customView: UIView?
-    var nameLabel1: UILabel?
+    var userName1: UILabel?
+    var userView: UIView?
+    var userName2: UILabel?
     var number: Int = 0
     
     override init(frame: CGRect) {
@@ -30,29 +31,29 @@ class CustomButtonView: UIView {
         self.number = number
         
         // add UIView
-        customView = UIView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        guard let customView = customView else { return }
-        customView.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
-        customView.layer.cornerRadius = 8
-        self.addSubview(customView)
+        userView = UIView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        guard let userView = userView else { return }
+        userView.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
+        userView.layer.cornerRadius = 8
+        self.addSubview(userView)
                            
        // add user name
-        nameLabel = UILabel(frame: CGRect(x: 0, y: frame.size.height * 3 / 5, width: 40, height: 40))
-        guard let nameLabel = nameLabel else { return }
-        nameLabel.clipsToBounds = true
-        nameLabel.layer.cornerRadius = 20
-        nameLabel.backgroundColor = .lightGray
-        nameLabel.textAlignment = .center
-        nameLabel.textColor = .blue
-        self.addSubview(nameLabel)
-        nameLabel1 = UILabel(frame: CGRect(x: 0, y: frame.size.height * 2 / 5, width: customView.frame.size.width, height: 40))
-        guard let nameLabel1 = nameLabel1 else { return }
-        nameLabel1.backgroundColor = .clear
-        nameLabel1.textAlignment = .center
-        nameLabel1.text = name
-        nameLabel1.textColor = .blue
-        nameLabel1.center = customView.center
-        self.addSubview(nameLabel1)
+        userName1 = UILabel(frame: CGRect(x: 0, y: frame.size.height * 3 / 5, width: 40, height: 40))
+        guard let userName1 = userName1 else { return }
+        userName1.clipsToBounds = true
+        userName1.layer.cornerRadius = 20
+        userName1.backgroundColor = .lightGray
+        userName1.textAlignment = .center
+        userName1.textColor = .blue
+        self.addSubview(userName1)
+        userName2 = UILabel(frame: CGRect(x: 0, y: frame.size.height * 2 / 5, width: userView.frame.size.width, height: 40))
+        guard let userName2 = userName2 else { return }
+        userName2.backgroundColor = .clear
+        userName2.textAlignment = .center
+        userName2.text = name
+        userName2.textColor = .blue
+        userName2.center = userView.center
+        self.addSubview(userName2)
         setPositionLabel(potision: position)
         setBadgeNumber()
         
@@ -63,42 +64,43 @@ class CustomButtonView: UIView {
     }
     
     func setPositionLabel(potision: BadgeNumberPosition) {
-        guard let nameLabel = nameLabel, let customView = customView else { return }
+        guard let userName1 = userName1, let userView = userView else { return }
         switch potision {
         case .topLeft:
-            nameLabel.center.x = 0
-            nameLabel.center.y = 0
+            userName1.center.x = 0
+            userName1.center.y = 0
         case .topRight:
-            nameLabel.center.x = customView.frame.size.width
-            nameLabel.center.y = 0
+            userName1.center.x = userView.frame.size.width
+            userName1.center.y = 0
         case .topCenter:
-            nameLabel.center.x = customView.frame.size.width / 2
-            nameLabel.center.y = 0
+            userName1.center.x = userView.frame.size.width / 2
+            userName1.center.y = 0
         case .centerLeft:
-            nameLabel.center.x = 0
-            nameLabel.center.y = customView.frame.size.height / 2
+            userName1.center.x = 0
+            userName1.center.y = userView.frame.size.height / 2
         case .centerRight:
-            nameLabel.center.x = customView.frame.size.width
-            nameLabel.center.y = customView.frame.size.height / 2
+            userName1.center.x = userView.frame.size.width
+            userName1.center.y = userView.frame.size.height / 2
         case .bottomLeft:
-            nameLabel.center.x = 0
-            nameLabel.center.y = customView.frame.size.height
+            userName1.center.x = 0
+            userName1.center.y = userView.frame.size.height
         case .bottomRight:
-            nameLabel.center.x = customView.frame.size.width
-            nameLabel.center.y = customView.frame.size.height
+            userName1.center.x = userView.frame.size.width
+            userName1.center.y = userView.frame.size.height
         case .bottomCenter:
-            nameLabel.center.x = customView.frame.size.width / 2
-            nameLabel.center.y = customView.frame.size.height
+            userName1.center.x = userView.frame.size.width / 2
+            userName1.center.y = userView.frame.size.height
         }
     }
     
     func setBadgeNumber() {
+        guard let userName1 = userName1 else { return }
         if number == 0 {
-            nameLabel?.isHidden = true
+            userName1.isHidden = true
         } else if number > 99 {
-            nameLabel?.text = "99+"
+            userName1.text = "99+"
         } else {
-            nameLabel?.text = "\(number)"
+            userName1.text = "\(number)"
         }
     }
 }

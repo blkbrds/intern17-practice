@@ -5,7 +5,6 @@ protocol MySliderDelegate {
     func didFull(view: MySliderView, needsPerfom action: MySliderView.Action)
 }
 
-
 class MySliderView: UIView {
     
     var value: Int = 50 {
@@ -13,17 +12,17 @@ class MySliderView: UIView {
             updateSlider()
         }
     }
-    
+    // MARK: - Define
     enum Action {
         case tap(value: String)
     }
     
     // MARK: - IBOutlets
-    @IBOutlet weak var parentView: UIView!
-    @IBOutlet weak var blueView: UIView!
-    @IBOutlet weak var blackView: UIView!
-    @IBOutlet weak var greenView: UIView!
-    @IBOutlet weak var phantramLabel: UILabel!
+    @IBOutlet weak private var parentView: UIView!
+    @IBOutlet weak private var blueView: UIView!
+    @IBOutlet weak private var blackView: UIView!
+    @IBOutlet weak private var greenView: UIView!
+    @IBOutlet weak private var phantramLabel: UILabel!
 
     var delegate: MySliderDelegate?
 

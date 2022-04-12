@@ -6,9 +6,9 @@ class DatePickerView : UIPickerView {
     func selectedDate() -> Int {
         dateCollection = buildDateCollection()
         var row = 0
-        for index in dateCollection.indices{
+        for index in dateCollection.indices {
             let today = Date()
-            if Calendar.current.compare(today, to: dateCollection[index], toGranularity: .day) == .orderedSame{
+            if Calendar.current.compare(today, to: dateCollection[index], toGranularity: .day) == .orderedSame {
                 row = index
             }
         }
@@ -22,21 +22,20 @@ class DatePickerView : UIPickerView {
     }
 }
 // MARK - UIPickerViewDelegate
-extension DatePickerView : UIPickerViewDelegate{
+extension DatePickerView : UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let date = formatDate(date: self.dateCollection[row])
         NotificationCenter.default.post(name: .dateChanged, object: nil, userInfo:["date":date])
-        
     }
-    func formatDate(date: Date) -> String{
+    
+    func formatDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         return dateFormatter.string(from: date)
     }
 }
-
 // MARK - UIPickerViewDataSource
-extension DatePickerView : UIPickerViewDataSource{
+extension DatePickerView : UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -50,17 +49,16 @@ extension DatePickerView : UIPickerViewDataSource{
         return label
     }
     
-    func formatDatePicker(date: Date) -> String{
+    func formatDatePicker(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
         return dateFormatter.string(from: date)
     }
     
 }
-
 // MARK - Observer Notification Init
-extension Notification.Name{
-    static var dateChanged : Notification.Name{
+extension Notification.Name {
+    static var dateChanged : Notification.Name {
         return .init("dateChanged")
     }
     
@@ -71,7 +69,7 @@ extension Date {
         return Date.next(numberOfDays: 365, startDate: Date())
     }
 
-    static func previousYear()-> [Date] {
+    static func previousYear() -> [Date] {
         return Date.next(numberOfDays: 365, startDate: Calendar.current.date(byAdding: .year, value: -1, to: Date())!)
     }
 
