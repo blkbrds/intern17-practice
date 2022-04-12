@@ -63,7 +63,7 @@ final class Exercise07ViewController: UIViewController {
         messageLabel.isHidden = false
         messageLabel.alpha = 1
         messageLabel.text = "I am monkey"
-        //
+        // Bộ hẹn giờ
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
             UIView.animate(withDuration: 5.0) {
                 self.messageLabel.alpha = 0

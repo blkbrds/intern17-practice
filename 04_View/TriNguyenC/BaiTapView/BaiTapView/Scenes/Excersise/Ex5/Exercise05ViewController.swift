@@ -10,14 +10,12 @@ import UIKit
 final class Exercise05ViewController: UIViewController {
     
     // MARK: - Properties
-    
     var containerView: UIView = UIView()
     var blueChildView: UIView = UIView()
     var labelView: UIView = UIView()
     var percentLabel: UILabel = UILabel()
     
     // MARK: - Life cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Exercise05"
@@ -36,7 +34,6 @@ final class Exercise05ViewController: UIViewController {
     
     
     // MARK: - Private Functions
-    
     private func setupUI() {
         
         containerView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 400))
@@ -83,7 +80,7 @@ final class Exercise05ViewController: UIViewController {
                 labelView.center.y = location.y
             }
                         
-            blueChildView.frame = CGRect(x: 0, y: 0, width: containerView.frame.width, height: containerView.frame.height - labelView.center.y)
+            blueChildView.frame = CGRect(x: blueChildView.frame.origin.x, y: labelView.center.y, width: containerView.frame.width, height: containerView.frame.height - labelView.center.y)
             let percent = Int((blueChildView.frame.height / containerView.frame.height) * 100)
             percentLabel.text = "\(percent) %"
         }
