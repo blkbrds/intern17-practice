@@ -48,7 +48,8 @@ class MySliderView: UIView {
             }
     }
     
-    func updateSlider() {
+    // MARK: - Private functions
+    private func updateSlider() {
         let yblackView = (CGFloat(100 - value) * (parentView.frame.maxY - 26) / 100)
         let heightView = CGFloat(value) * parentView.frame.size.height / 100
         blackView.frame = CGRect(x: blueView.frame.origin.x, y: yblackView, width: blueView.frame.size.width, height: heightView)

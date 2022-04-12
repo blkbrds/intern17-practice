@@ -8,7 +8,8 @@ final class HomeViewController: UIViewController {
         userAvatar()
     }
     
-    func userAvatar() {
+    // MARK: - Private functions
+    private func userAvatar() {
         let khoangCach: CGFloat = 10
         let widthView: CGFloat = CGFloat((UIScreen.main.bounds.width - 40) / 3)
         for index in 0..<30 {
@@ -31,7 +32,7 @@ final class HomeViewController: UIViewController {
         }
     }
 }
-
+// MARK: - UserViewDelegate
 extension HomeViewController: UserViewDelegate {
     func didTap(view: UserView, needsPerfom action: UserView.Action) {
         switch action {

@@ -30,14 +30,12 @@ class CustomButtonView: UIView {
         self.init(frame: frame)
         self.number = number
         
-        // add UIView
         userView = UIView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         guard let userView = userView else { return }
         userView.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
         userView.layer.cornerRadius = 8
         self.addSubview(userView)
                            
-       // add user name
         userName1 = UILabel(frame: CGRect(x: 0, y: frame.size.height * 3 / 5, width: 40, height: 40))
         guard let userName1 = userName1 else { return }
         userName1.clipsToBounds = true
@@ -63,7 +61,8 @@ class CustomButtonView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setPositionLabel(potision: BadgeNumberPosition) {
+    //MARK: - Private functions
+    private func setPositionLabel(potision: BadgeNumberPosition) {
         guard let userName1 = userName1, let userView = userView else { return }
         switch potision {
         case .topLeft:
@@ -93,7 +92,8 @@ class CustomButtonView: UIView {
         }
     }
     
-    func setBadgeNumber() {
+    //MARK: - Private functions
+    private func setBadgeNumber() {
         guard let userName1 = userName1 else { return }
         if number == 0 {
             userName1.isHidden = true

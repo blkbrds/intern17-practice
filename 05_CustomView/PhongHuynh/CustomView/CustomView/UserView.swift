@@ -11,6 +11,8 @@ final class UserView: UIView {
     enum Action {
         case tap(name: String)
     }
+    
+    // MARK: - Properties
     var name: String?
     var count = 0
     weak var delegate: UserViewDelegate?
@@ -24,7 +26,6 @@ final class UserView: UIView {
         self.name = name
         self.count = count
         
-        // add user avatar
         let userAvatar = UIImageView(image: UIImage(named: "husky.jpeg"))
         userAvatar.frame = CGRect(x: 0,
                                   y: 0,
@@ -33,7 +34,6 @@ final class UserView: UIView {
         userAvatar.contentMode = .scaleAspectFit
         self.addSubview(userAvatar)
         
-        // add user name
         let userName = UILabel(frame: CGRect(x: 0,
                                              y: frame.size.height*4/5,
                                              width: frame.size.width,
@@ -44,7 +44,6 @@ final class UserView: UIView {
         userName.textColor = .blue
         self.addSubview(userName)
         
-        // add button
         let button = UIButton(frame: CGRect(x: 0,
                                             y: 0,
                                             width: frame.size.width,

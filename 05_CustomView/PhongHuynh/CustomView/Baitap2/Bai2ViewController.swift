@@ -21,6 +21,7 @@ final class Bai2ViewController: UIViewController {
     }
     
 }
+// MARK: - MySliderDelegate
 extension Bai2ViewController: MySliderDelegate {
     func didFull(view: MySliderView, needsPerfom action: MySliderView.Action) {
         switch action {
@@ -29,7 +30,7 @@ extension Bai2ViewController: MySliderDelegate {
         }
     }
 }
-
+// MARK: - UITextFieldDelegate
 extension Bai2ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let value = Int(valueTextField.text ?? "") {

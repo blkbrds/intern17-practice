@@ -3,6 +3,7 @@ import UIKit
 class DatePickerView : UIPickerView {
     var dateCollection = [Date]()
     
+    //MARK: - Private functions
     func selectedDate() -> Int {
         dateCollection = buildDateCollection()
         var row = 0
@@ -15,6 +16,7 @@ class DatePickerView : UIPickerView {
         return row
     }
     
+    //MARK: - Private functions
     func buildDateCollection() -> [Date] {
         dateCollection.append(contentsOf: Date.previousYear())
         dateCollection.append(contentsOf: Date.nextYear())
