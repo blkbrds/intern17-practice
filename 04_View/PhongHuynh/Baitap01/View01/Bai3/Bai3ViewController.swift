@@ -24,6 +24,7 @@ final class Bai3ViewController: UIViewController {
         passwordTextField.resignFirstResponder()
     }
     
+    // MARK: - Private functions
     func login() -> Bool {
         if usernameTextField.text == username && passwordTextField.text == password {
             return true
@@ -31,16 +32,19 @@ final class Bai3ViewController: UIViewController {
         return false
     }
     
+    // MARK: - IBActions
     @IBAction private func loginButtonTouchUpInside(_ sender: Any) {
         errorLabel.isHidden = login()
     }
     
+    // MARK: - IBActions
     @IBAction private func clearButtonTouchUpInside(_ sender: Any) {
         usernameTextField.text = ""
         passwordTextField.text = ""
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension Bai3ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passwordTextField.becomeFirstResponder()

@@ -21,7 +21,8 @@ final class Bai4ViewController: UIViewController {
         changeSlider(r: redSlider.value, g: greenSlider.value, b: blueSlider.value)
     }
     
-    func changeSlider(r: Float, g: Float, b: Float) {
+    // MARK: - Private functions
+    private func changeSlider(r: Float, g: Float, b: Float) {
         titleLabel.text = "Color(R: \(Int(r)), G: \(Int(g)), B: \(Int(b))"
         colorView.backgroundColor = UIColor(
             red: CGFloat(r / 255),

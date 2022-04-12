@@ -19,6 +19,10 @@
 		CBD2ACFE27F5AEAE002B12A3 /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD2ACFC27F5AEAE002B12A3 /* Bai4ViewController.xib */; };
 		CBD2AD0327F5AF1A002B12A3 /* Bai5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2AD0127F5AF1A002B12A3 /* Bai5ViewController.swift */; };
 		CBD2AD0427F5AF1A002B12A3 /* Bai5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD2AD0227F5AF1A002B12A3 /* Bai5ViewController.xib */; };
+		CBD837C228055120005DEEDA /* Bai6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD837C028055120005DEEDA /* Bai6ViewController.swift */; };
+		CBD837C328055120005DEEDA /* Bai6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD837C128055120005DEEDA /* Bai6ViewController.xib */; };
+		CBD837C8280556F9005DEEDA /* Bai7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD837C6280556F9005DEEDA /* Bai7ViewController.swift */; };
+		CBD837C9280556F9005DEEDA /* Bai7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD837C7280556F9005DEEDA /* Bai7ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		CBD2ACFC27F5AEAE002B12A3 /* Bai4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai4ViewController.xib; sourceTree = "<group>"; };
 		CBD2AD0127F5AF1A002B12A3 /* Bai5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai5ViewController.swift; sourceTree = "<group>"; };
 		CBD2AD0227F5AF1A002B12A3 /* Bai5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai5ViewController.xib; sourceTree = "<group>"; };
+		CBD837C028055120005DEEDA /* Bai6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai6ViewController.swift; sourceTree = "<group>"; };
+		CBD837C128055120005DEEDA /* Bai6ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai6ViewController.xib; sourceTree = "<group>"; };
+		CBD837C6280556F9005DEEDA /* Bai7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai7ViewController.swift; sourceTree = "<group>"; };
+		CBD837C7280556F9005DEEDA /* Bai7ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai7ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,8 @@
 		CB877A9B27F2E807001B06AD /* View01 */ = {
 			isa = PBXGroup;
 			children = (
+				CBD837C5280556E9005DEEDA /* Bai7 */,
+				CBD837BF2805510A005DEEDA /* Bai6 */,
 				CBD2AD0027F5AF09002B12A3 /* Bai5 */,
 				CBD2ACFA27F5AE96002B12A3 /* Bai4 */,
 				CBD2ACF327F5ADD3002B12A3 /* Bai3 */,
@@ -123,6 +133,24 @@
 				CBD2AD0227F5AF1A002B12A3 /* Bai5ViewController.xib */,
 			);
 			path = Bai5;
+			sourceTree = "<group>";
+		};
+		CBD837BF2805510A005DEEDA /* Bai6 */ = {
+			isa = PBXGroup;
+			children = (
+				CBD837C028055120005DEEDA /* Bai6ViewController.swift */,
+				CBD837C128055120005DEEDA /* Bai6ViewController.xib */,
+			);
+			path = Bai6;
+			sourceTree = "<group>";
+		};
+		CBD837C5280556E9005DEEDA /* Bai7 */ = {
+			isa = PBXGroup;
+			children = (
+				CBD837C6280556F9005DEEDA /* Bai7ViewController.swift */,
+				CBD837C7280556F9005DEEDA /* Bai7ViewController.xib */,
+			);
+			path = Bai7;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD2AD0427F5AF1A002B12A3 /* Bai5ViewController.xib in Resources */,
+				CBD837C9280556F9005DEEDA /* Bai7ViewController.xib in Resources */,
 				CBD2ACF727F5ADE4002B12A3 /* Bai3ViewController.xib in Resources */,
+				CBD837C328055120005DEEDA /* Bai6ViewController.xib in Resources */,
 				CBD2ACF027F5AD38002B12A3 /* Bai2ViewController.xib in Resources */,
 				CBD2ACFE27F5AEAE002B12A3 /* Bai4ViewController.xib in Resources */,
 				CB877AA627F2E808001B06AD /* Assets.xcassets in Resources */,
@@ -202,6 +232,8 @@
 				CBD2ACEF27F5AD38002B12A3 /* Bai2ViewController.swift in Sources */,
 				CBD2ACF627F5ADE4002B12A3 /* Bai3ViewController.swift in Sources */,
 				CB877A9D27F2E807001B06AD /* AppDelegate.swift in Sources */,
+				CBD837C228055120005DEEDA /* Bai6ViewController.swift in Sources */,
+				CBD837C8280556F9005DEEDA /* Bai7ViewController.swift in Sources */,
 				CB877AB427F2E893001B06AD /* HomeViewController.swift in Sources */,
 				CBD2AD0327F5AF1A002B12A3 /* Bai5ViewController.swift in Sources */,
 			);

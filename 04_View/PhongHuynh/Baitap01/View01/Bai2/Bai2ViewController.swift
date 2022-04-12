@@ -9,7 +9,8 @@ final class Bai2ViewController: UIViewController {
         configUI(names: ["name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8", "name9"])
     }
     
-    func configUI(names: [String]) {
+    // MARK: - Private functions
+    private func configUI(names: [String]) {
         let khoangCach: CGFloat = 10
         let widthView: CGFloat = CGFloat((UIScreen.main.bounds.width - 40) / 3)
         for index in 0..<names.count {
@@ -17,7 +18,6 @@ final class Bai2ViewController: UIViewController {
             let x2 = widthView * CGFloat(index)
             var x = x1 + x2
             var y = khoangCach
-            
             if x >= UIScreen.main.bounds.width {
                 let indexWidth = index % 3
                 let x1 = khoangCach * (CGFloat(indexWidth) + 1)
@@ -31,9 +31,9 @@ final class Bai2ViewController: UIViewController {
         }
     }
     
-    func createUserView(frame: CGRect, name: String) -> UIView {
+    // MARK: - Private functions
+    private func createUserView(frame: CGRect, name: String) -> UIView {
         let userView = UIView(frame: frame)
-        
         let frame = CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height - 20)
         let userAvatar = UIImageView(image: UIImage(named: "avatar.png"))
         userAvatar.frame = frame
