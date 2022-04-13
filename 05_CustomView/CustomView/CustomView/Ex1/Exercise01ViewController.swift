@@ -10,8 +10,8 @@ import UIKit
 final class Exercise01ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var containerView: UIView!
     
     // MARK: - Life cycle
     override func viewDidAppear(_ animated: Bool) {

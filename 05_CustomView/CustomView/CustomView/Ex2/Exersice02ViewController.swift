@@ -10,7 +10,7 @@ import UIKit
 final class Exersice02ViewController: UIViewController {
 
     // MARK: - IBOutlet
-    @IBOutlet weak var valueTextField: UITextField!
+    @IBOutlet private weak var valueTextField: UITextField!
     
     // MARK: - Properties
     private var mySliderView = MySliderView()
