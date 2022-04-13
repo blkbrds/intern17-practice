@@ -10,8 +10,8 @@ import UIKit
 final class Exercise07ViewController: UIViewController {
 
     // MARK: - IBOutlet
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var monkeyImageView: UIImageView!
+    @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private weak var monkeyImageView: UIImageView!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {

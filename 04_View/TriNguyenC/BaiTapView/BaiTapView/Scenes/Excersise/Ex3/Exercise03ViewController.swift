@@ -44,6 +44,8 @@ final class Exercise03ViewController: UIViewController {
         loginButton.layer.masksToBounds = true
         
         userNameTextField.delegate = self
+        
+        userNameTextField.keyboardType = .numberPad
         passWordTextField.delegate = self
     }
     
