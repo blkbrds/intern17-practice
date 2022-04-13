@@ -26,6 +26,10 @@
 		CB7A27FB27FE7E4D006079E0 /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7A27F927FE7E4D006079E0 /* Bai4ViewController.xib */; };
 		CB7A280927FE8014006079E0 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7A280827FE8014006079E0 /* DatePickerView.xib */; };
 		CB7A280D27FE83A9006079E0 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A280C27FE83A9006079E0 /* DatePickerView.swift */; };
+		CBF485872806DD6D00038915 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF485852806DD6D00038915 /* DatePickerViewController.swift */; };
+		CBF485882806DD6D00038915 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF485862806DD6D00038915 /* DatePickerViewController.xib */; };
+		CBF4858B2806DD7D00038915 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF4858A2806DD7D00038915 /* DatePickerView.swift */; };
+		CBF4858E2806DD8900038915 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4858D2806DD8900038915 /* DatePickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		CB7A27F927FE7E4D006079E0 /* Bai4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai4ViewController.xib; sourceTree = "<group>"; };
 		CB7A280827FE8014006079E0 /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
 		CB7A280C27FE83A9006079E0 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		CBF485852806DD6D00038915 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		CBF485862806DD6D00038915 /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		CBF4858A2806DD7D00038915 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		CBF4858D2806DD8900038915 /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		CB5D391E27FA8A6D005D19F6 = {
 			isa = PBXGroup;
 			children = (
+				CBF485832806DD4D00038915 /* Baitap4' */,
 				CB7A27F727FE7E38006079E0 /* Baitap4 */,
 				CB60238F27FACDCA0036472F /* Baitap3 */,
 				CB41F64C27FA8CE600E24235 /* Baitap2 */,
@@ -128,6 +137,17 @@
 				CB7A280827FE8014006079E0 /* DatePickerView.xib */,
 			);
 			path = Baitap4;
+			sourceTree = "<group>";
+		};
+		CBF485832806DD4D00038915 /* Baitap4' */ = {
+			isa = PBXGroup;
+			children = (
+				CBF485852806DD6D00038915 /* DatePickerViewController.swift */,
+				CBF485862806DD6D00038915 /* DatePickerViewController.xib */,
+				CBF4858A2806DD7D00038915 /* DatePickerView.swift */,
+				CBF4858D2806DD8900038915 /* DatePickerView.xib */,
+			);
+			path = "Baitap4'";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +213,8 @@
 				CB7A280927FE8014006079E0 /* DatePickerView.xib in Resources */,
 				CB5D393427FA8A70005D19F6 /* Assets.xcassets in Resources */,
 				CB41F65627FA8D5B00E24235 /* MySliderView.xib in Resources */,
+				CBF485882806DD6D00038915 /* DatePickerViewController.xib in Resources */,
+				CBF4858E2806DD8900038915 /* DatePickerView.xib in Resources */,
 				CB5D394627FA8AB2005D19F6 /* HomeViewController.xib in Resources */,
 				CB7A27FB27FE7E4D006079E0 /* Bai4ViewController.xib in Resources */,
 				CB60239327FACDE50036472F /* Bai3ViewController.xib in Resources */,
@@ -210,7 +232,9 @@
 				CB41F64F27FA8D1500E24235 /* Bai2ViewController.swift in Sources */,
 				CB5D392D27FA8A6D005D19F6 /* SceneDelegate.swift in Sources */,
 				CB7A27FA27FE7E4D006079E0 /* Bai4ViewController.swift in Sources */,
+				CBF485872806DD6D00038915 /* DatePickerViewController.swift in Sources */,
 				CB60239A27FACE840036472F /* CustomButtonView.swift in Sources */,
+				CBF4858B2806DD7D00038915 /* DatePickerView.swift in Sources */,
 				CB41F65327FA8D4500E24235 /* MySliderView.swift in Sources */,
 				CB7A280D27FE83A9006079E0 /* DatePickerView.swift in Sources */,
 				CB60239227FACDE50036472F /* Bai3ViewController.swift in Sources */,
