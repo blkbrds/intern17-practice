@@ -26,20 +26,20 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOW-0T-JTo">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1091"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1099"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovc-Ys-HwU">
-                                    <rect key="frame" x="190.5" y="70" width="25" height="32"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovc-Ys-HwU">
+                                    <rect key="frame" x="183" y="70" width="40" height="40"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="32" id="gfa-xl-7Zg"/>
-                                        <constraint firstAttribute="width" constant="25" id="mTj-Xb-3Gb"/>
+                                        <constraint firstAttribute="height" constant="40" id="gfa-xl-7Zg"/>
+                                        <constraint firstAttribute="width" constant="40" id="mTj-Xb-3Gb"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wwt-Iz-Z7J">
-                                    <rect key="frame" x="83" y="1031" width="240" height="30"/>
+                                    <rect key="frame" x="83" y="1039" width="240" height="30"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBe-nC-9r3">
                                             <rect key="frame" x="0.0" y="0.0" width="73.5" height="30"/>
@@ -69,14 +69,20 @@
                                     </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLo-Kd-61f">
-                                    <rect key="frame" x="24" y="219.5" width="30" height="30"/>
+                                    <rect key="frame" x="9" y="220" width="45" height="45"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="GNp-ef-d4g"/>
+                                        <constraint firstAttribute="height" constant="45" id="WB0-tz-qmu"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                     <state key="normal" title="L"/>
                                     <connections>
-                                        <action selector="leftTouchUpInside:" destination="-1" eventType="touchUpInside" id="GbE-21-T0Y"/>
+                                        <action selector="leftTouchUpInside:" destination="-1" eventType="touchUpInside" id="gX4-rv-v7L"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge4-Z6-QnW">
-                                    <rect key="frame" x="78" y="402" width="250" height="609"/>
+                                    <rect key="frame" x="78" y="410" width="250" height="609"/>
                                     <string key="text">Kích thước ảnh thì cố định
 Kích thước nội dung ảnh thì dài ngắn khác nhau
 Vị trí 3 button “like, comment, share” sẽ ở phía dưới đoạn text và tùy thuộc Kích thước ảnh thì cố định
@@ -97,14 +103,20 @@ Vị trí 3 button “like, comment, share” sẽ ở phía dưới đoạn tex
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOr-GZ-LBb">
-                                    <rect key="frame" x="360" y="219.5" width="30" height="30"/>
+                                    <rect key="frame" x="360" y="220" width="45" height="45"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="RY1-Da-QiB"/>
+                                        <constraint firstAttribute="height" constant="45" id="eUZ-UC-5S8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                     <state key="normal" title="R"/>
                                     <connections>
                                         <action selector="rightTouchUpInsinde:" destination="-1" eventType="touchUpInside" id="NJ0-9T-M3w"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0n-g9-ppE">
-                                    <rect key="frame" x="78" y="117" width="250" height="235"/>
+                                    <rect key="frame" x="78" y="125" width="250" height="235"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="235" id="4LN-o1-J7J"/>
                                         <constraint firstAttribute="width" constant="250" id="j6X-Uv-4kS"/>
@@ -160,6 +172,9 @@ Vị trí 3 button “like, comment, share” sẽ ở phía dưới đoạn tex
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -34,6 +34,8 @@
 		CBD746192805349F0079EEC5 /* Bai9ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD746172805349F0079EEC5 /* Bai9ViewController.xib */; };
 		CBD837D228057BA2005DEEDA /* Bai10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD837D028057BA2005DEEDA /* Bai10ViewController.swift */; };
 		CBD837D328057BA2005DEEDA /* Bai10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD837D128057BA2005DEEDA /* Bai10ViewController.xib */; };
+		CBF4856D2806A60800038915 /* Bai14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF4856B2806A60800038915 /* Bai14ViewController.swift */; };
+		CBF4856E2806A60800038915 /* Bai14ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4856C2806A60800038915 /* Bai14ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		CBD746172805349F0079EEC5 /* Bai9ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai9ViewController.xib; sourceTree = "<group>"; };
 		CBD837D028057BA2005DEEDA /* Bai10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai10ViewController.swift; sourceTree = "<group>"; };
 		CBD837D128057BA2005DEEDA /* Bai10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai10ViewController.xib; sourceTree = "<group>"; };
+		CBF4856B2806A60800038915 /* Bai14ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai14ViewController.swift; sourceTree = "<group>"; };
+		CBF4856C2806A60800038915 /* Bai14ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai14ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 		CB81EF28280507AE00B38A1C /* Auto Layout */ = {
 			isa = PBXGroup;
 			children = (
+				CBF4856A2806A5E700038915 /* Bai14 */,
 				CB4AE8EE28067F9C004705C4 /* Bai12 */,
 				CB0DFAD02806621B0025E5F4 /* Bai11 */,
 				CBD837CE28057B81005DEEDA /* Bai10 */,
@@ -218,6 +223,15 @@
 			path = Bai10;
 			sourceTree = "<group>";
 		};
+		CBF4856A2806A5E700038915 /* Bai14 */ = {
+			isa = PBXGroup;
+			children = (
+				CBF4856B2806A60800038915 /* Bai14ViewController.swift */,
+				CBF4856C2806A60800038915 /* Bai14ViewController.xib */,
+			);
+			path = Bai14;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,6 +293,7 @@
 				CBD837D328057BA2005DEEDA /* Bai10ViewController.xib in Resources */,
 				CB81EF33280507B000B38A1C /* Assets.xcassets in Resources */,
 				CB81EF722805238100B38A1C /* Bai7ViewController.xib in Resources */,
+				CBF4856E2806A60800038915 /* Bai14ViewController.xib in Resources */,
 				CB81EF5028050AD200B38A1C /* Bai3ViewController.xib in Resources */,
 				CBD746192805349F0079EEC5 /* Bai9ViewController.xib in Resources */,
 				CB81EF6B2805210900B38A1C /* Bai6ViewController.xib in Resources */,
@@ -312,6 +327,7 @@
 				CB81EF2C280507AE00B38A1C /* SceneDelegate.swift in Sources */,
 				CB4AE8F128067FB1004705C4 /* Bai12ViewController.swift in Sources */,
 				CB81EF422805081B00B38A1C /* HomeViewController.swift in Sources */,
+				CBF4856D2806A60800038915 /* Bai14ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
