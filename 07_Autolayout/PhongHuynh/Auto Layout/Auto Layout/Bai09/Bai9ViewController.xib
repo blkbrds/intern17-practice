@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai9ViewController" customModule="Auto_Layout" customModuleProvider="target">
             <connections>
-                <outlet property="catScrollView" destination="7Xr-4u-03H" id="Np6-Lj-6Yh"/>
                 <outlet property="imageView" destination="Y0n-g9-ppE" id="zcA-hm-IDb"/>
                 <outlet property="nameLabel" destination="Ge4-Z6-QnW" id="VWd-w2-ayU"/>
+                <outlet property="scrollView" destination="7Xr-4u-03H" id="Np6-Lj-6Yh"/>
                 <outlet property="textLabel" destination="Ovc-Ys-HwU" id="Ofw-4o-0qJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

@@ -13,6 +13,7 @@
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view1" destination="IGJ-XD-PVJ" id="iB5-K0-cT8"/>
                 <outlet property="view2" destination="bQz-h5-7P6" id="UoZ-jZ-JDF"/>
+                <outlet property="view4" destination="bQz-h5-7P6" id="Ozj-Zt-lfl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -36,9 +37,21 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQz-h5-7P6" userLabel="View4">
                     <rect key="frame" x="135" y="371" width="144" height="144"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abo-UJ-5Yj">
+                            <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                            <connections>
+                                <action selector="zoomView:" destination="-1" eventType="touchUpInside" id="c21-IM-Euu"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="abo-UJ-5Yj" secondAttribute="bottom" id="46Y-5X-7we"/>
+                        <constraint firstItem="abo-UJ-5Yj" firstAttribute="top" secondItem="bQz-h5-7P6" secondAttribute="top" id="Gef-pk-U55"/>
                         <constraint firstAttribute="width" secondItem="bQz-h5-7P6" secondAttribute="height" multiplier="1:1" id="YBB-0Z-xYm"/>
+                        <constraint firstAttribute="trailing" secondItem="abo-UJ-5Yj" secondAttribute="trailing" id="hHV-Jq-bWF"/>
+                        <constraint firstItem="abo-UJ-5Yj" firstAttribute="leading" secondItem="bQz-h5-7P6" secondAttribute="leading" id="vEI-a3-MwB"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGJ-XD-PVJ" userLabel="View1">

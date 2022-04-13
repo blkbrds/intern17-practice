@@ -4,6 +4,7 @@ class Bai10ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var view4: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,5 +18,8 @@ class Bai10ViewController: UIViewController, UIScrollViewDelegate {
    
     }
 
-
+    @IBAction func zoomView(_ sender: Any) {
+        
+    }
+    
 }
