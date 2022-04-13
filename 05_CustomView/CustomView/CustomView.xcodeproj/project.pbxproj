@@ -78,6 +78,33 @@
 			path = MyAvatar;
 			sourceTree = "<group>";
 		};
+		223751342806B44300485107 /* BadgeButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				2237557D2805177300B43A8E /* BadButtonView.swift */,
+				2237557B2805176600B43A8E /* BadButonView.xib */,
+			);
+			path = BadgeButtonView;
+			sourceTree = "<group>";
+		};
+		223751352806B47A00485107 /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				22375581280525B000B43A8E /* DatePickerView.swift */,
+				2237557F280525A600B43A8E /* DatePickerView.xib */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		22D2B9E928068AF2008CB2B5 /* MySlider */ = {
+			isa = PBXGroup;
+			children = (
+				2258CBB728040707005E1723 /* MySliderView.swift */,
+				2258CBB5280406FA005E1723 /* MySliderView.xib */,
+			);
+			path = MySlider;
+			sourceTree = "<group>";
+		};
 		22D5028727FA7D4800D24D1C = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				22D502AC27FA7DB700D24D1C /* AppDelegate */,
-				22D502A727FA7D5D00D24D1C /* HomeViewController.swift */,
 				22D502A827FA7D5D00D24D1C /* HomeViewController.xib */,
+				22D502A727FA7D5D00D24D1C /* HomeViewController.swift */,
 				22D502AB27FA7DAE00D24D1C /* Ex1 */,
 				22D502B327FA800100D24D1C /* Ex2 */,
 				22D502B427FA800900D24D1C /* Ex3 */,
@@ -141,10 +168,9 @@
 		22D502B327FA800100D24D1C /* Ex2 */ = {
 			isa = PBXGroup;
 			children = (
+				22D2B9E928068AF2008CB2B5 /* MySlider */,
 				22D502B627FA802800D24D1C /* Exersice02ViewController.swift */,
 				22D502B727FA802800D24D1C /* Exersice02ViewController.xib */,
-				2258CBB728040707005E1723 /* MySliderView.swift */,
-				2258CBB5280406FA005E1723 /* MySliderView.xib */,
 			);
 			path = Ex2;
 			sourceTree = "<group>";
@@ -152,10 +178,9 @@
 		22D502B427FA800900D24D1C /* Ex3 */ = {
 			isa = PBXGroup;
 			children = (
+				223751342806B44300485107 /* BadgeButtonView */,
 				22D502BA27FA803500D24D1C /* Exercise03ViewController.swift */,
 				22D502BB27FA803500D24D1C /* Exercise03ViewController.xib */,
-				2237557D2805177300B43A8E /* BadButtonView.swift */,
-				2237557B2805176600B43A8E /* BadButonView.xib */,
 			);
 			path = Ex3;
 			sourceTree = "<group>";
@@ -163,10 +188,9 @@
 		22D502B527FA801200D24D1C /* Ex4 */ = {
 			isa = PBXGroup;
 			children = (
+				223751352806B47A00485107 /* DatePickerView */,
 				22D502BE27FA804300D24D1C /* Exersice04ViewController.swift */,
 				22D502BF27FA804300D24D1C /* Exersice04ViewController.xib */,
-				22375581280525B000B43A8E /* DatePickerView.swift */,
-				2237557F280525A600B43A8E /* DatePickerView.xib */,
 			);
 			path = Ex4;
 			sourceTree = "<group>";

@@ -14,15 +14,6 @@ final class Exercise01ViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     // MARK: - Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    // Xuất hiện sau ViewDidLoad -> Life Cycle Of ViewController
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupUI()
@@ -52,9 +43,7 @@ final class Exercise01ViewController: UIViewController {
                 self.containerView.addSubview(myAvatarView)
             }
         }
-        
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: contentSizeHeight + CGFloat(400))
-//        scrollView.isScrollEnabled = true // Kich hoat
     }
 }
 

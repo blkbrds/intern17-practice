@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Exersice04ViewController" customModule="CustomView" customModuleProvider="target">
             <connections>
-                <outlet property="dateTextField" destination="84U-2e-TBo" id="e95-d6-ydu"/>
+                <outlet property="datePickerTextField" destination="7uy-f4-WJV" id="Zh5-YC-2ge"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,21 +18,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84U-2e-TBo">
-                    <rect key="frame" x="20" y="353" width="374" height="40"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7uy-f4-WJV">
+                    <rect key="frame" x="20" y="200" width="374" height="34"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="bR2-Y9-Sfh"/>
+                        <constraint firstAttribute="height" constant="34" id="K7W-po-dpv"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="84U-2e-TBo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="309" id="STT-rF-Dlu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="84U-2e-TBo" secondAttribute="trailing" constant="20" id="fnr-qT-PY1"/>
-                <constraint firstItem="84U-2e-TBo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="lT9-nC-l8Y"/>
+                <constraint firstItem="7uy-f4-WJV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="7Ls-1V-NTt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7uy-f4-WJV" secondAttribute="trailing" constant="20" id="h3J-re-5K2"/>
+                <constraint firstItem="7uy-f4-WJV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="xN8-t9-OHu"/>
             </constraints>
             <point key="canvasLocation" x="139" y="110"/>
         </view>

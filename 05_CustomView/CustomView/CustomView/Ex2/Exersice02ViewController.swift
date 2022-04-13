@@ -25,7 +25,7 @@ final class Exersice02ViewController: UIViewController {
     private func setupUI() {
         title = "Exercise02"
         mySliderView = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as! MySliderView
-        mySliderView.frame = CGRect(x: 15, y: 125, width: view.frame.width, height: view.frame.height)
+        mySliderView.frame = CGRect(x: 10, y: 125, width: view.frame.width, height: view.frame.height)
         mySliderView.delegate = self
         valueTextField.delegate = self
         valueTextField.textAlignment = .center
