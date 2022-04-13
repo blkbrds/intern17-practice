@@ -12,27 +12,27 @@ init(tuso: Float, mauso: Float) {
 }
 
 func congPS(f1: PhanSo, f2:PhanSo) -> Float {
-    let Tu = f1.tuSo * f2.mauSo + f2.tuSo * f1.mauSo
-    let Mau = f1.mauSo * f2.mauSo
-    return Tu / Mau
+    let tu = f1.tuSo * f2.mauSo + f2.tuSo * f1.mauSo
+    let mau = f1.mauSo * f2.mauSo
+    return tu / mau
 }
 
 func truPS(f1: PhanSo, f2:PhanSo) -> Float {
-    let Tu = f1.tuSo * f2.mauSo - f2.tuSo * f1.mauSo
-    let Mau = f1.mauSo * f2.mauSo
-return Tu / Mau
+    let tu = f1.tuSo * f2.mauSo - f2.tuSo * f1.mauSo
+    let mau = f1.mauSo * f2.mauSo
+return tu / mau
 }
 
 func nhanPS(f1: PhanSo, f2:PhanSo) -> Float {
-    let Tu = f1.tuSo * f2.tuSo
-    let Mau = f1.mauSo * f2.mauSo
-return Tu / Mau
+    let tu = f1.tuSo * f2.tuSo
+    let mau = f1.mauSo * f2.mauSo
+return tu * mau
 }
 
 func chiaPS(f1: PhanSo, f2:PhanSo) -> Float {
-    let Tu = f1.tuSo * f2.mauSo
-    let Mau = f1.mauSo * f2.tuSo
-return Tu / Mau
+    let tu = f1.tuSo * f2.mauSo
+    let mau = f1.mauSo * f2.tuSo
+return tu / mau
 }
 let ps1 = PhanSo(tuso: 3, mauso: 4)
 let ps2 = PhanSo(tuso: 5, mauso: 4)
@@ -125,7 +125,7 @@ struct CStack {
     }
     }
 }
-var stack = CStack(top: -1, capacity: 3, array: [1,2,3])
+var stack = CStack(top: -1, capacity: 3, array: [1, 2, 3])
 stack.isEmpty()
 stack.push(value: 10, capacity: 3)
 stack.isEmpty()
@@ -300,69 +300,69 @@ class DSHocSinh {
         return kq
     }
 }
-var hs1 = HocSinh(hoTen: "nguyen van a", namSinh: 1999, tongDiem: 8.0)
-var hs2 = HocSinh(hoTen: "nguyen van mmka", namSinh: 1999, tongDiem: 9.0)
-var hs3 = HocSinh(hoTen: "nguyen van opop", namSinh: 1999, tongDiem: 7.0)
-var hs4 = HocSinh(hoTen: "nguyen van b", namSinh: 1999, tongDiem: 10.0)
-var hs5 = HocSinh(hoTen: "nguyen van alll", namSinh: 1997, tongDiem: 10.0)
+var hs1 = HocSinh(hoTen: "nguyen van a ", namSinh: 1999, tongDiem: 8.0)
+var hs2 = HocSinh(hoTen: "nguyen van mmka ", namSinh: 1999, tongDiem: 9.0)
+var hs3 = HocSinh(hoTen: "nguyen van opop ", namSinh: 1999, tongDiem: 7.0)
+var hs4 = HocSinh(hoTen: "nguyen van b ", namSinh: 1999, tongDiem: 10.0)
+var hs5 = HocSinh(hoTen: "nguyen van alll ", namSinh: 1997, tongDiem: 10.0)
 var ds = DSHocSinh(ds: [hs1, hs2, hs3, hs4, hs5])
 print(ds.inKetQua(ds: ds.sapXep()))
 
 //Bài 08----------------------------------------------------------------------------------------------------------------
 class Date {
-    var Day: Int
-    var Month: Int
-    var Year: Int
-    var Days: [Int] = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    var day: Int
+    var month: Int
+    var year: Int
+    var days: [Int] = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
-    init(Day: Int, Month: Int, Year: Int) {
-        self.Day = Day
-        self.Month = Month
-        self.Year = Year
+    init(day: Int, month: Int, year: Int) {
+        self.day = day
+        self.month = month
+        self.year = year
     }
     
-    func normalize(DD: Int, MM: Int, YY: Int) {
-        var Month = MM >= 1 && MM <= 12 ? MM : 1
-        var Year = YY >= 1900 && YY <= 2100 ? YY : 1900
-        if Month == 2 && ktrNhuan(Y: Year) {
-            var Day = DD >= 1 && DD <= 29 ? DD : 1
+    func normalize(dd: Int, mm: Int, yy: Int) {
+        var month = mm >= 1 && mm <= 12 ? mm : 1
+        var year = yy >= 1900 && yy <= 2100 ? yy : 1900
+        if month == 2 && ktrNhuan(y: year) {
+            var day = dd >= 1 && dd <= 29 ? dd : 1
         } else {
-            var Day = DD >= 1 && DD <= Days[Month-1] ? DD : 1
+            var day = dd >= 1 && dd <= days[month-1] ? dd : 1
         }
     }
     
     func advance() {
-        if Day == daysIn(D: Day) {      // Het Nam
-            Day = 1
-            Month = 1
-            Year += 1
-        } else if daysIn(D: Day) != 0 {          //Het Thang
-            Day = 1
-            Month += 1
+        if day == daysIn(d: day) {      // Het Nam
+            day = 1
+            month = 1
+            year += 1
+        } else if daysIn(d: day) != 0 {          //Het Thang
+            day = 1
+            month += 1
         } else {
-            Day+=1
+            day += 1
         }
     }
     
-    func daysIn(D: Int) -> Int {
-        if Month == 2 && ktrNhuan(Y: Year) {
+    func daysIn(d: Int) -> Int {
+        if month == 2 && ktrNhuan(y: year) {
             return 29
         }
-        return Days[Month - 1]
+        return days[month - 1]
     }
     
-    func ktrNhuan(Y: Int) -> Bool {
-        if Y % 4 == 0 && Y % 100 != 0 {
+    func ktrNhuan(y: Int) -> Bool {
+        if y % 4 == 0 && y % 100 != 0 {
             return true
-        } else if Y % 400 == 0 {
+        } else if y % 400 == 0 {
             return true
         }
         return false
     }
 }
-let ngay01 = Date(Day: 1, Month: 1, Year: 1900)
-ngay01.ktrNhuan(Y: 1988)
-ngay01.normalize(DD: 12, MM: 5, YY: 1985)
+let ngay01 = Date(day: 1, month: 1, year: 1900)
+ngay01.ktrNhuan(y: 1988)
+ngay01.normalize(dd: 12, mm: 5, yy: 1985)
 
 //Bài 09----------------------------------------------------------------------------------------------------------------
 struct Mang {
