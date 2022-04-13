@@ -21,17 +21,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Dc-ap-vPE">
                     <rect key="frame" x="107" y="348" width="200" height="200"/>
                     <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="Sad-9v-pBj"/>
-                        <constraint firstAttribute="height" constant="200" id="opq-Ix-rhp"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="0Dc-ap-vPE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IEH-4g-ecF"/>
-                <constraint firstItem="0Dc-ap-vPE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fP9-xS-Js3"/>
+                <constraint firstItem="0Dc-ap-vPE" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.223214" id="4Wh-nF-YqY"/>
+                <constraint firstItem="0Dc-ap-vPE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GyG-Hy-a3e"/>
+                <constraint firstItem="0Dc-ap-vPE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="luI-qt-Ih5"/>
+                <constraint firstItem="0Dc-ap-vPE" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.483092" id="yvj-Yr-ozB"/>
             </constraints>
             <point key="canvasLocation" x="142" y="131"/>
         </view>

@@ -21,27 +21,23 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iju-gY-R1j" userLabel="View2">
                     <rect key="frame" x="260.5" y="398" width="100" height="100"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="ZWo-GR-4N7"/>
-                        <constraint firstAttribute="width" constant="100" id="jBi-2q-Kng"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-Zg-jqm" userLabel="View1">
                     <rect key="frame" x="53.5" y="398" width="100" height="100"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="Dx6-AT-RKt"/>
-                        <constraint firstAttribute="height" constant="100" id="YjY-hk-3Ae"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fRO-Zg-jqm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FVK-Ev-WIp"/>
-                <constraint firstItem="fRO-Zg-jqm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1/2" id="MPj-fE-yLb"/>
-                <constraint firstItem="iju-gY-R1j" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="chQ-Pg-f5Z"/>
-                <constraint firstItem="iju-gY-R1j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="3/2" id="zBR-d2-UWA"/>
+                <constraint firstItem="iju-gY-R1j" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.241546" id="1ip-LS-Dxe"/>
+                <constraint firstItem="iju-gY-R1j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="3/2" id="5OL-QS-RgP"/>
+                <constraint firstItem="fRO-Zg-jqm" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.111607" id="EzU-Q1-7Wb"/>
+                <constraint firstItem="fRO-Zg-jqm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.241546" id="JNF-Zo-NqU"/>
+                <constraint firstItem="fRO-Zg-jqm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="N0a-9c-eWW"/>
+                <constraint firstItem="iju-gY-R1j" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.111607" id="Tv0-Lm-Ex1"/>
+                <constraint firstItem="fRO-Zg-jqm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1/2" id="bDe-d9-79s"/>
+                <constraint firstItem="iju-gY-R1j" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="od1-Ys-KGY"/>
             </constraints>
             <point key="canvasLocation" x="-346" y="-48"/>
         </view>

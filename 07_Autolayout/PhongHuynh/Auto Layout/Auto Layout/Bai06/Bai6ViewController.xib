@@ -21,34 +21,18 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPB-9i-qNM" userLabel="View1">
                     <rect key="frame" x="78.5" y="423" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="9K1-Pf-Oth"/>
-                        <constraint firstAttribute="width" constant="50" id="Wh2-PD-gYD"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrm-Pf-KgA" userLabel="View2">
                     <rect key="frame" x="147.5" y="423" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Nlf-hS-qnx"/>
-                        <constraint firstAttribute="width" constant="50" id="rrr-QI-mbH"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLo-da-WkE" userLabel="View4">
                     <rect key="frame" x="216.5" y="423" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="91v-9h-PSi"/>
-                        <constraint firstAttribute="height" constant="50" id="f46-Yy-cht"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFz-cS-ieK" userLabel="View3">
                     <rect key="frame" x="285.5" y="423" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="0AA-ls-VB4"/>
-                        <constraint firstAttribute="width" constant="50" id="2Gd-9n-82B"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -56,11 +40,19 @@
             <constraints>
                 <constraint firstItem="uLo-da-WkE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="2cN-ey-MJm"/>
                 <constraint firstItem="aFz-cS-ieK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3FF-tD-UG1"/>
+                <constraint firstItem="aFz-cS-ieK" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.120773" id="87N-WH-Xtw"/>
                 <constraint firstItem="zrm-Pf-KgA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="5/6" id="BGn-IS-v7S"/>
                 <constraint firstItem="uLo-da-WkE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="7/6" id="CRX-gG-RQT"/>
                 <constraint firstItem="cPB-9i-qNM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="DkB-wG-mrn"/>
                 <constraint firstItem="aFz-cS-ieK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="3/2" id="FgY-fr-8wS"/>
+                <constraint firstItem="zrm-Pf-KgA" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="Hpu-6Z-yfU"/>
+                <constraint firstItem="zrm-Pf-KgA" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.120773" id="OJM-oo-5yO"/>
+                <constraint firstItem="cPB-9i-qNM" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.120773" id="ZjZ-nx-mcz"/>
                 <constraint firstItem="cPB-9i-qNM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1/2" id="dFs-8n-qJI"/>
+                <constraint firstItem="uLo-da-WkE" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.120773" id="iRm-cH-8GW"/>
+                <constraint firstItem="cPB-9i-qNM" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="jsK-xb-Bzt"/>
+                <constraint firstItem="uLo-da-WkE" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="lBV-Iy-0AV"/>
+                <constraint firstItem="aFz-cS-ieK" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="m6d-LP-3gq"/>
                 <constraint firstItem="zrm-Pf-KgA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="sAx-mE-c24"/>
             </constraints>
             <point key="canvasLocation" x="142" y="131"/>

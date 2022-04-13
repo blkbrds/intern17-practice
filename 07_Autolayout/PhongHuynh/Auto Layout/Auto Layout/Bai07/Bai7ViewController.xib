@@ -21,55 +21,45 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-D3-rIP" userLabel="View1">
                     <rect key="frame" x="182" y="124.5" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="JiB-ay-cXK"/>
-                        <constraint firstAttribute="width" constant="50" id="cbI-ad-KFl"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aup-GK-ML1" userLabel="View3">
                     <rect key="frame" x="182" y="423" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="A2v-h4-X2K"/>
-                        <constraint firstAttribute="height" constant="50" id="Pv9-o9-1aa"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdA-UO-xIE" userLabel="View4">
                     <rect key="frame" x="182" y="572.5" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="0o5-le-ItO"/>
-                        <constraint firstAttribute="height" constant="50" id="lY9-XZ-q3P"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsH-RN-f1r" userLabel="View5">
                     <rect key="frame" x="182" y="721.5" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="WTC-DY-8iQ"/>
-                        <constraint firstAttribute="width" constant="50" id="ehN-tg-0Rl"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2a-8U-BnG" userLabel="View2">
                     <rect key="frame" x="182" y="273.5" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="Al5-o0-TT2"/>
-                        <constraint firstAttribute="height" constant="50" id="Oy8-w3-VAU"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="B9R-D3-rIP" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="3Tk-7i-7wh"/>
                 <constraint firstItem="GdA-UO-xIE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="49E-JG-j6q"/>
+                <constraint firstItem="aup-GK-ML1" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.120773" id="5TS-r4-973"/>
                 <constraint firstItem="JsH-RN-f1r" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="5/3" id="Ipt-wl-TPT"/>
                 <constraint firstItem="GdA-UO-xIE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="4/3" id="It9-lx-lxp"/>
                 <constraint firstItem="aup-GK-ML1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Lal-Ut-dr5"/>
                 <constraint firstItem="j2a-8U-BnG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="2/3" id="NqP-E2-uOR"/>
+                <constraint firstItem="GdA-UO-xIE" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="RS0-ar-BLp"/>
+                <constraint firstItem="JsH-RN-f1r" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="WoF-4e-0c3"/>
+                <constraint firstItem="GdA-UO-xIE" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.120773" id="ZWx-1O-zjz"/>
+                <constraint firstItem="aup-GK-ML1" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="b0i-X2-4JZ"/>
+                <constraint firstItem="j2a-8U-BnG" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="bwY-77-GW5"/>
                 <constraint firstItem="j2a-8U-BnG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dzR-wA-kU1"/>
                 <constraint firstItem="JsH-RN-f1r" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h1Z-Zx-b0W"/>
+                <constraint firstItem="j2a-8U-BnG" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.120773" id="hxx-vK-AQh"/>
+                <constraint firstItem="JsH-RN-f1r" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.120773" id="lKi-xb-eMb"/>
                 <constraint firstItem="aup-GK-ML1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nyf-1u-EWB"/>
+                <constraint firstItem="B9R-D3-rIP" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.120773" id="q65-3o-kqs"/>
                 <constraint firstItem="B9R-D3-rIP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="upn-I5-O2Z"/>
                 <constraint firstItem="B9R-D3-rIP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1/3" id="xzN-LP-Jxd"/>
             </constraints>

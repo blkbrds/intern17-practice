@@ -6,7 +6,8 @@ final class Bai9ViewController: UIViewController {
     @IBOutlet private weak var textLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var imageView: UIImageView!
-
+    @IBOutlet weak var catScrollView: UIScrollView!
+    
     // MARK: - Properties
     var index = 0
 
@@ -30,9 +31,14 @@ final class Bai9ViewController: UIViewController {
     }
     
     @IBAction func leftTouchUpInside(_ sender: Any) {
-        nameLabel.text = array[index].message
-        imageView.image = UIImage(named: array[index].image)
+        for index in 0..<array.count {
+            if index > 0 {
+                imageView.image = UIImage(named: array[index].image)
+                nameLabel.text = array[index].message
+            }
+        }
     }
+    
     
 
     

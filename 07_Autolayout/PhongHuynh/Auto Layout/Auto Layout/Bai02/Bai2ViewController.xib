@@ -19,17 +19,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeO-ni-zVN">
-                    <rect key="frame" x="103.66666666666669" y="224" width="207" height="448"/>
+                    <rect key="frame" x="103" y="224" width="208" height="458"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="OeO-ni-zVN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="NEA-wJ-BV1"/>
-                <constraint firstItem="OeO-ni-zVN" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aSL-iU-Rxl"/>
-                <constraint firstItem="OeO-ni-zVN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="cWG-9S-895"/>
-                <constraint firstItem="OeO-ni-zVN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fyU-uT-6VB"/>
+                <constraint firstItem="OeO-ni-zVN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="103" id="6VH-JF-L6c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OeO-ni-zVN" secondAttribute="trailing" constant="103" id="JTs-Qn-3Fn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OeO-ni-zVN" secondAttribute="bottom" constant="180" id="gdb-h3-rsA"/>
+                <constraint firstItem="OeO-ni-zVN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="180" id="zdd-FO-Ege"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="130.58035714285714"/>
         </view>

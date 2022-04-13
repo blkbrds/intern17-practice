@@ -9,7 +9,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let vc = Bai10ViewController()
+        let vc = Bai9ViewController()
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0DFAD32806623B0025E5F4 /* Bai11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0DFAD12806623B0025E5F4 /* Bai11ViewController.swift */; };
+		CB0DFAD42806623B0025E5F4 /* Bai11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0DFAD22806623B0025E5F4 /* Bai11ViewController.xib */; };
+		CB4AE8F128067FB1004705C4 /* Bai12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4AE8EF28067FB1004705C4 /* Bai12ViewController.swift */; };
+		CB4AE8F228067FB1004705C4 /* Bai12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4AE8F028067FB1004705C4 /* Bai12ViewController.xib */; };
 		CB81EF2A280507AE00B38A1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB81EF29280507AE00B38A1C /* AppDelegate.swift */; };
 		CB81EF2C280507AE00B38A1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB81EF2B280507AE00B38A1C /* SceneDelegate.swift */; };
 		CB81EF33280507B000B38A1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB81EF32280507B000B38A1C /* Assets.xcassets */; };
@@ -33,6 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB0DFAD12806623B0025E5F4 /* Bai11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai11ViewController.swift; sourceTree = "<group>"; };
+		CB0DFAD22806623B0025E5F4 /* Bai11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai11ViewController.xib; sourceTree = "<group>"; };
+		CB4AE8EF28067FB1004705C4 /* Bai12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai12ViewController.swift; sourceTree = "<group>"; };
+		CB4AE8F028067FB1004705C4 /* Bai12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai12ViewController.xib; sourceTree = "<group>"; };
 		CB81EF26280507AE00B38A1C /* Auto Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB81EF29280507AE00B38A1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB81EF2B280507AE00B38A1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +79,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB0DFAD02806621B0025E5F4 /* Bai11 */ = {
+			isa = PBXGroup;
+			children = (
+				CB0DFAD12806623B0025E5F4 /* Bai11ViewController.swift */,
+				CB0DFAD22806623B0025E5F4 /* Bai11ViewController.xib */,
+			);
+			path = Bai11;
+			sourceTree = "<group>";
+		};
+		CB4AE8EE28067F9C004705C4 /* Bai12 */ = {
+			isa = PBXGroup;
+			children = (
+				CB4AE8EF28067FB1004705C4 /* Bai12ViewController.swift */,
+				CB4AE8F028067FB1004705C4 /* Bai12ViewController.xib */,
+			);
+			path = Bai12;
+			sourceTree = "<group>";
+		};
 		CB81EF1D280507AE00B38A1C = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +116,8 @@
 		CB81EF28280507AE00B38A1C /* Auto Layout */ = {
 			isa = PBXGroup;
 			children = (
+				CB4AE8EE28067F9C004705C4 /* Bai12 */,
+				CB0DFAD02806621B0025E5F4 /* Bai11 */,
 				CBD837CE28057B81005DEEDA /* Bai10 */,
 				CBD74615280534900079EEC5 /* Bai09 */,
 				CB81EF75280524FC00B38A1C /* Bai08 */,
@@ -247,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4AE8F228067FB1004705C4 /* Bai12ViewController.xib in Resources */,
 				CBD837D328057BA2005DEEDA /* Bai10ViewController.xib in Resources */,
 				CB81EF33280507B000B38A1C /* Assets.xcassets in Resources */,
 				CB81EF722805238100B38A1C /* Bai7ViewController.xib in Resources */,
@@ -256,6 +285,7 @@
 				CB81EF492805091A00B38A1C /* Bai2ViewController.xib in Resources */,
 				CB81EF5E2805169C00B38A1C /* Bai4ViewController.xib in Resources */,
 				CB81EF432805081B00B38A1C /* HomeViewController.xib in Resources */,
+				CB0DFAD42806623B0025E5F4 /* Bai11ViewController.xib in Resources */,
 				CB81EF6428051C7000B38A1C /* Bai5ViewController.xib in Resources */,
 				CB81EF792805250B00B38A1C /* Bai8ViewController.xib in Resources */,
 			);
@@ -274,11 +304,13 @@
 				CB81EF712805238100B38A1C /* Bai7ViewController.swift in Sources */,
 				CB81EF482805091A00B38A1C /* Bai2ViewController.swift in Sources */,
 				CB81EF782805250B00B38A1C /* Bai8ViewController.swift in Sources */,
+				CB0DFAD32806623B0025E5F4 /* Bai11ViewController.swift in Sources */,
 				CB81EF6328051C7000B38A1C /* Bai5ViewController.swift in Sources */,
 				CB81EF6A2805210900B38A1C /* Bai6ViewController.swift in Sources */,
 				CB81EF2A280507AE00B38A1C /* AppDelegate.swift in Sources */,
 				CBD746182805349F0079EEC5 /* Bai9ViewController.swift in Sources */,
 				CB81EF2C280507AE00B38A1C /* SceneDelegate.swift in Sources */,
+				CB4AE8F128067FB1004705C4 /* Bai12ViewController.swift in Sources */,
 				CB81EF422805081B00B38A1C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

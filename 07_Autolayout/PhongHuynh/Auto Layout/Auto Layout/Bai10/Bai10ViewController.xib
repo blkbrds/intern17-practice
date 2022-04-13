@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai10ViewController" customModule="Auto_Layout" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view1" destination="IGJ-XD-PVJ" id="iB5-K0-cT8"/>
+                <outlet property="view2" destination="bQz-h5-7P6" id="UoZ-jZ-JDF"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,49 +21,49 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBh-pk-9G9" userLabel="View2">
-                    <rect key="frame" x="134.5" y="698.5" width="145" height="143.5"/>
+                    <rect key="frame" x="135" y="698.5" width="144" height="143.5"/>
                     <color key="backgroundColor" systemColor="systemPinkColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="IBh-pk-9G9" secondAttribute="height" multiplier="144:143" id="8Ud-bv-WGc"/>
+                        <constraint firstAttribute="width" secondItem="IBh-pk-9G9" secondAttribute="height" multiplier="1:1" id="WAs-Zc-XtN"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-KK-DaQ" userLabel="View3">
                     <rect key="frame" x="135" y="535" width="144" height="143.5"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="cZr-KK-DaQ" secondAttribute="height" id="VRR-cy-8Mf"/>
+                        <constraint firstAttribute="width" secondItem="cZr-KK-DaQ" secondAttribute="height" multiplier="1:1" id="zzF-mm-tvg"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQz-h5-7P6" userLabel="View4">
                     <rect key="frame" x="135" y="371" width="144" height="144"/>
                     <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="bQz-h5-7P6" secondAttribute="height" multiplier="1:1" id="mIV-yc-tNl"/>
+                        <constraint firstAttribute="width" secondItem="bQz-h5-7P6" secondAttribute="height" multiplier="1:1" id="YBB-0Z-xYm"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGJ-XD-PVJ" userLabel="View1">
                     <rect key="frame" x="63.5" y="64" width="287" height="287"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="IGJ-XD-PVJ" secondAttribute="height" multiplier="1:1" id="8H7-tQ-iZL"/>
+                        <constraint firstAttribute="width" secondItem="IGJ-XD-PVJ" secondAttribute="height" multiplier="1:1" id="nBM-fA-H4v"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="cZr-KK-DaQ" firstAttribute="height" secondItem="IBh-pk-9G9" secondAttribute="height" id="1FF-CG-de3"/>
-                <constraint firstItem="bQz-h5-7P6" firstAttribute="top" secondItem="IGJ-XD-PVJ" secondAttribute="bottom" constant="20" id="3tX-21-3Tc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IBh-pk-9G9" secondAttribute="bottom" constant="20" id="6Qy-xd-ePl"/>
-                <constraint firstItem="IBh-pk-9G9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7ZU-uL-PbT"/>
-                <constraint firstItem="bQz-h5-7P6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BKU-6g-DC5"/>
-                <constraint firstItem="IGJ-XD-PVJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="jDz-zV-290"/>
-                <constraint firstItem="IGJ-XD-PVJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sav-cu-ZAR"/>
-                <constraint firstItem="cZr-KK-DaQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tkH-k2-lzd"/>
-                <constraint firstItem="IGJ-XD-PVJ" firstAttribute="height" secondItem="bQz-h5-7P6" secondAttribute="height" multiplier="2" id="u4x-7G-zp3"/>
-                <constraint firstItem="bQz-h5-7P6" firstAttribute="height" secondItem="cZr-KK-DaQ" secondAttribute="height" id="u78-jY-pDd"/>
-                <constraint firstItem="IBh-pk-9G9" firstAttribute="top" secondItem="cZr-KK-DaQ" secondAttribute="bottom" constant="20" id="uiN-cZ-1YW"/>
-                <constraint firstItem="cZr-KK-DaQ" firstAttribute="top" secondItem="bQz-h5-7P6" secondAttribute="bottom" constant="20" id="zum-YK-UBi"/>
+                <constraint firstItem="cZr-KK-DaQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0XQ-C4-YdL"/>
+                <constraint firstItem="IGJ-XD-PVJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4XA-lQ-bdb"/>
+                <constraint firstItem="bQz-h5-7P6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AZ6-wj-SFK"/>
+                <constraint firstItem="cZr-KK-DaQ" firstAttribute="top" secondItem="bQz-h5-7P6" secondAttribute="bottom" constant="20" id="GBE-AZ-FWh"/>
+                <constraint firstItem="bQz-h5-7P6" firstAttribute="height" secondItem="cZr-KK-DaQ" secondAttribute="height" id="IIM-qz-uRt"/>
+                <constraint firstItem="IGJ-XD-PVJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="N9f-px-OYf"/>
+                <constraint firstItem="IBh-pk-9G9" firstAttribute="top" secondItem="cZr-KK-DaQ" secondAttribute="bottom" constant="20" id="NtN-ek-NC7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IBh-pk-9G9" secondAttribute="bottom" constant="20" id="P4l-V6-953"/>
+                <constraint firstItem="bQz-h5-7P6" firstAttribute="top" secondItem="IGJ-XD-PVJ" secondAttribute="bottom" constant="20" id="Qcd-ud-BvJ"/>
+                <constraint firstItem="IBh-pk-9G9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nTb-k4-2zw"/>
+                <constraint firstItem="IGJ-XD-PVJ" firstAttribute="height" secondItem="bQz-h5-7P6" secondAttribute="height" multiplier="2" id="tvI-tc-O5D"/>
+                <constraint firstItem="cZr-KK-DaQ" firstAttribute="height" secondItem="IBh-pk-9G9" secondAttribute="height" id="zcb-fs-t6c"/>
             </constraints>
             <point key="canvasLocation" x="-874" y="-139"/>
         </view>
