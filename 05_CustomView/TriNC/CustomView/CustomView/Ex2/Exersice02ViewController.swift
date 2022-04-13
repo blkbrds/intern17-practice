@@ -47,12 +47,10 @@ extension Exersice02ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let value = Int(valueTextField.text ?? "0") else { return false }
         if value > 100 || value < 0 {
-            valueTextField.text = "Error"
+            valueTextField.keyboardType = .numberPad
         } else {
-            // Todo:
             mySliderView.value = value
         }
-        
         return true
     }
 }

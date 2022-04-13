@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 // MARK: - Protocol
-// Only for class conform
 protocol MySliderDelegate: class {
     func mySliderView(view: MySliderView, needsPerform action: MySliderView.Action)
 }
@@ -17,14 +16,12 @@ protocol MySliderDelegate: class {
 final class MySliderView: UIView {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var blueView: UIView!
-    @IBOutlet weak var thumbView: UIView!
-    @IBOutlet weak var percentLabel: UILabel!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var blueView: UIView!
+    @IBOutlet private weak var thumbView: UIView!
+    @IBOutlet private weak var percentLabel: UILabel!
     
     // MARK: - Properties
-
-    // Memory Leak
     weak var delegate: MySliderDelegate?
     var value: Int = 50 {
         didSet {
