@@ -41,6 +41,3 @@ extension HomeViewController: UserViewDelegate {
         }
     }
 }
-
-
-    
