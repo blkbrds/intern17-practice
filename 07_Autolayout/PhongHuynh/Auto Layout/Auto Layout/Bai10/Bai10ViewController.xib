@@ -11,8 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai10ViewController" customModule="Auto_Layout" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="view1" destination="IGJ-XD-PVJ" id="iB5-K0-cT8"/>
-                <outlet property="view2" destination="bQz-h5-7P6" id="UoZ-jZ-JDF"/>
+                <outlet property="view1" destination="IGJ-XD-PVJ" id="H5m-7e-BPW"/>
+                <outlet property="view2" destination="bQz-h5-7P6" id="PiA-sC-BDq"/>
                 <outlet property="view4" destination="bQz-h5-7P6" id="Ozj-Zt-lfl"/>
             </connections>
         </placeholder>
@@ -21,21 +21,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBh-pk-9G9" userLabel="View2">
-                    <rect key="frame" x="135" y="698.5" width="144" height="143.5"/>
-                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGJ-XD-PVJ" userLabel="View1">
+                    <rect key="frame" x="63.5" y="64" width="287" height="287"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="IBh-pk-9G9" secondAttribute="height" multiplier="1:1" id="WAs-Zc-XtN"/>
+                        <constraint firstAttribute="width" secondItem="IGJ-XD-PVJ" secondAttribute="height" multiplier="1:1" id="nBM-fA-H4v"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-KK-DaQ" userLabel="View3">
-                    <rect key="frame" x="135" y="535" width="144" height="143.5"/>
-                    <color key="backgroundColor" systemColor="systemYellowColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="cZr-KK-DaQ" secondAttribute="height" multiplier="1:1" id="zzF-mm-tvg"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQz-h5-7P6" userLabel="View4">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQz-h5-7P6" userLabel="View2">
                     <rect key="frame" x="135" y="371" width="144" height="144"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abo-UJ-5Yj">
@@ -54,11 +47,18 @@
                         <constraint firstItem="abo-UJ-5Yj" firstAttribute="leading" secondItem="bQz-h5-7P6" secondAttribute="leading" id="vEI-a3-MwB"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGJ-XD-PVJ" userLabel="View1">
-                    <rect key="frame" x="63.5" y="64" width="287" height="287"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-KK-DaQ" userLabel="View3">
+                    <rect key="frame" x="135" y="535" width="144" height="143.5"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="IGJ-XD-PVJ" secondAttribute="height" multiplier="1:1" id="nBM-fA-H4v"/>
+                        <constraint firstAttribute="width" secondItem="cZr-KK-DaQ" secondAttribute="height" multiplier="1:1" id="zzF-mm-tvg"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBh-pk-9G9" userLabel="View4">
+                    <rect key="frame" x="135" y="698.5" width="144" height="143.5"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IBh-pk-9G9" secondAttribute="height" multiplier="1:1" id="WAs-Zc-XtN"/>
                     </constraints>
                 </view>
             </subviews>
