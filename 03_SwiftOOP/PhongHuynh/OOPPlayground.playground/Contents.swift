@@ -4,11 +4,11 @@ import UIKit
 struct PhanSo {
     var tuSo: Float
     var mauSo: Float
-
-init(tuso: Float, mauso: Float) {
-    self.tuSo = tuso
-    self.mauSo = mauso
-}
+    
+    init(tuso: Float, mauso: Float) {
+        self.tuSo = tuso
+        self.mauSo = mauso
+    }
 }
 
 func congPS(f1: PhanSo, f2:PhanSo) -> Float {
@@ -20,19 +20,19 @@ func congPS(f1: PhanSo, f2:PhanSo) -> Float {
 func truPS(f1: PhanSo, f2:PhanSo) -> Float {
     let tu = f1.tuSo * f2.mauSo - f2.tuSo * f1.mauSo
     let mau = f1.mauSo * f2.mauSo
-return tu / mau
+    return tu / mau
 }
 
 func nhanPS(f1: PhanSo, f2:PhanSo) -> Float {
     let tu = f1.tuSo * f2.tuSo
     let mau = f1.mauSo * f2.mauSo
-return tu * mau
+    return tu * mau
 }
 
 func chiaPS(f1: PhanSo, f2:PhanSo) -> Float {
     let tu = f1.tuSo * f2.mauSo
     let mau = f1.mauSo * f2.tuSo
-return tu / mau
+    return tu / mau
 }
 let ps1 = PhanSo(tuso: 3, mauso: 4)
 let ps2 = PhanSo(tuso: 5, mauso: 4)
@@ -46,8 +46,8 @@ class DaGiac {
     init(soCanh: Int, a: [Int]) {
         self.soCanh = soCanh
         self.a = a
-   }
-
+    }
+    
     func tinhChuVi() -> Int {
         var cv: Int = 0
         for i in a {
@@ -56,7 +56,7 @@ class DaGiac {
         return cv
     }
 }
- 
+
 class TamGiac : DaGiac {
     
     override init(soCanh: Int, a: [Int]) {
@@ -77,7 +77,7 @@ class TamGiac : DaGiac {
         return (sqrt(Float(a)))
     }
     
-    func pyTaGo() -> String {
+    func checkTamGiacPytago() -> String {
         return pow(Decimal(a[0]), 2) + pow(Decimal(a[1]), 2) == pow(Decimal(a[2]), 2) ? "thoả mãn điều kiện, các cạnh của tam giác là : \(a[0]), \(a[1]), \(a[2])" : "không thoả"
     }
 }
@@ -86,20 +86,20 @@ let tamGiac1 = TamGiac(soCanh: 3, a: [3,4,5])
 let tamGiac2 = TamGiac(soCanh: 3, a: [1,2,5])
 print("chu vi của tam giác là: \(tamGiac1.tinhChuVi())")
 print("diện tích của tam giác là: \(tamGiac1.tinhDienTich())")
-print(tamGiac1.pyTaGo())
+print(tamGiac1.checkTamGiacPytago())
 
 //Bai 05 -------------------------------------------------------------------------------------------------
 struct CStack {
     var top: Int
     var capacity: Int
     var array: [Int]
-
+    
     init(top: Int, capacity: Int ,array: [Int]) {
         self.top = top
         self.array = array
         self.capacity = capacity
     }
-
+    
     func isFull(stack: Int) -> Bool {         //kiểm tra stack đầy
         return top >= capacity - 1
     }
@@ -109,20 +109,20 @@ struct CStack {
     }
     
     mutating func push( value: Int, capacity: Int) {             //thêm một phần tử vào stack
-    if(isFull(stack: capacity) == true) {
-        print("Stack is full. Overflow condition!");
-    } else {
-        top += 1
-        array[top] = value
-    }
+        if(isFull(stack: capacity) == true) {
+            print("Stack is full. Overflow condition!");
+        } else {
+            top += 1
+            array[top] = value
+        }
     }
     
     mutating func pop() {                                                     //xoá 1 phần tử ở đỉnh stack
-    if(isEmpty() == true) {
-        print("\nStack is empty. Underflow condition!");
-    } else {
-        top -= 1
-    }
+        if(isEmpty() == true) {
+            print("\nStack is empty. Underflow condition!");
+        } else {
+            top -= 1
+        }
     }
 }
 var stack = CStack(top: -1, capacity: 3, array: [1, 2, 3])
@@ -138,19 +138,19 @@ class HinhVe {
 class HaiChieu: HinhVe {
     var soCanh: Int
     var array: [Int]
-
+    
     init(soCanh: Int, array: [Int]) {
-            self.soCanh = soCanh
-            self.array = array
-        }
+        self.soCanh = soCanh
+        self.array = array
+    }
     
     func tinhChuVi() -> Int {
-            var cv: Int = 0
-            for i in array {
-                cv = cv + i
-            }
-            return cv
+        var cv: Int = 0
+        for i in array {
+            cv = cv + i
         }
+        return cv
+    }
 }
 
 class Tron {
@@ -218,9 +218,9 @@ class BaChieu: HinhVe {
     var array: [Int]
     
     init(soCanh: Int, array: [Int]) {
-            self.soCanh = soCanh
-            self.array = array
-        }
+        self.soCanh = soCanh
+        self.array = array
+    }
 }
 
 class LapPhuong : BaChieu {
@@ -322,12 +322,12 @@ class Date {
     }
     
     func normalize(dd: Int, mm: Int, yy: Int) {
-        var month = mm >= 1 && mm <= 12 ? mm : 1
-        var year = yy >= 1900 && yy <= 2100 ? yy : 1900
+        let month = mm >= 1 && mm <= 12 ? mm : 1
+        let year = yy >= 1900 && yy <= 2100 ? yy : 1900
         if month == 2 && ktrNhuan(y: year) {
-            var day = dd >= 1 && dd <= 29 ? dd : 1
+            _ = dd >= 1 && dd <= 29 ? dd : 1
         } else {
-            var day = dd >= 1 && dd <= days[month-1] ? dd : 1
+            _ = dd >= 1 && dd <= days[month-1] ? dd : 1
         }
     }
     
@@ -362,6 +362,8 @@ class Date {
 }
 let ngay01 = Date(day: 1, month: 1, year: 1900)
 ngay01.ktrNhuan(y: 1988)
+ngay01.advance()
+print(ngay01)
 ngay01.normalize(dd: 12, mm: 5, yy: 1985)
 
 //Bài 09----------------------------------------------------------------------------------------------------------------
