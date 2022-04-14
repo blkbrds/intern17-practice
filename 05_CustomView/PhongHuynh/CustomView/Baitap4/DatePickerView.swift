@@ -1,88 +1,50 @@
 import UIKit
 
-class DatePickerView : UIPickerView {
-    var dateCollection = [Date]()
+// MARK: - DatePickerViewDelegate
+protocol DatePickerViewDelegate: AnyObject {
+    func getDate(view: DatePickerView, date: String)
+}
+
+class DatePickerView: UIView {
+
+    // MARK: - Properties
+    let datePicker: UIDatePicker = UIDatePicker()
+    let dateFormatte: String = "mm dd, yyyy"
     
-    //MARK: - Private functions
-    func selectedDate() -> Int {
-        dateCollection = buildDateCollection()
-        var row = 0
-        for index in dateCollection.indices {
-            let today = Date()
-            if Calendar.current.compare(today, to: dateCollection[index], toGranularity: .day) == .orderedSame {
-                row = index
-            }
+    weak var delegate: DatePickerViewDelegate?
+
+    // MARK: - Life cycle
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func showDatePicker(datePickerTextField: UITextField) {
+        let toolBar = UIToolbar()
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        toolBar.sizeToFit()
+        datePickerTextField.inputAccessoryView = toolBar
+        datePickerTextField.inputView = datePicker
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneDatePicker))
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+    }
+    
+    // MARK: - Objc functions
+    @objc func doneDatePicker() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = dateFormatte
+        formatter.dateStyle = .full
+        formatter.timeStyle = .none
+        let date = formatter.string(from: datePicker.date)
+        if let delegate = delegate {
+            delegate.getDate(view: self, date: date)
         }
-        return row
-    }
-    
-    //MARK: - Private functions
-    func buildDateCollection() -> [Date] {
-        dateCollection.append(contentsOf: Date.previousYear())
-        dateCollection.append(contentsOf: Date.nextYear())
-        return dateCollection
-    }
-}
-// MARK - UIPickerViewDelegate
-extension DatePickerView : UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let date = formatDate(date: self.dateCollection[row])
-        NotificationCenter.default.post(name: .dateChanged, object: nil, userInfo:["date":date])
-    }
-    
-    func formatDate(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        return dateFormatter.string(from: date)
-    }
-}
-// MARK - UIPickerViewDataSource
-extension DatePickerView : UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dateCollection.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let label = formatDatePicker(date: dateCollection[row])
-        return label
-    }
-    
-    func formatDatePicker(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
-        return dateFormatter.string(from: date)
     }
     
 }
-// MARK - Observer Notification Init
-extension Notification.Name {
-    static var dateChanged : Notification.Name {
-        return .init("dateChanged")
-    }
-    
-}
-// MARK - Date extension
-extension Date {
-    static func nextYear() -> [Date] {
-        return Date.next(numberOfDays: 365, startDate: Date())
-    }
-
-    static func previousYear() -> [Date] {
-        return Date.next(numberOfDays: 365, startDate: Calendar.current.date(byAdding: .year, value: -1, to: Date())!)
-    }
-
-    static func next(numberOfDays: Int, startDate: Date) -> [Date] {
-        var dates = [Date]()
-        for i in 0..<numberOfDays {
-            if let date = Calendar.current.date(byAdding: .day, value: i, to: startDate) {
-                dates.append(date)
-            }
-        }
-        return dates
-    }
-}
-

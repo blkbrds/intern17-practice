@@ -1,44 +1,34 @@
 import UIKit
 
-final class Bai4ViewController: UIViewController {
+final class Bai4ViewController: UIViewController, UIPickerViewDelegate {
 
-    // MARK: - IBOutlets
-    @IBOutlet weak private var dateTextField: UITextField!
+    // MARK: - IBOutlet
+    @IBOutlet weak var datePickerTextField: UITextField!
     
-    let datePicker = DatePickerView()
-    
+    // MARK: Properties
+    var datePickerView = DatePickerView()
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateTextField.delegate = self
-        datePicker.delegate = datePicker
-        datePicker.dataSource = datePicker
+        
+        datePickerView = DatePickerView(frame: CGRect(x: 0, y: view.bounds.height , width: view.bounds.width, height: view.bounds.height))
+        datePickerView.showDatePicker(datePickerTextField: datePickerTextField)
+        view.addSubview(datePickerView)
+        datePickerView.delegate = self
     }
-    // MARK: - Objc functions
-    @objc func doneDatePicker(){
-          dateTextField.endEditing(true)
-      }
-    // MARK: - Objc functions
-    @objc func dateChanged(notification:Notification){
-          let userInfo = notification.userInfo
-          if let date = userInfo?["date"] as? String{
-              self.dateTextField.text = date
-          }
-      }
+    
+}
 
+// MARK: - DatePickerViewDelegate
+extension Bai4ViewController: DatePickerViewDelegate {
+    func getDate(view: DatePickerView, date: String) {
+        UIView.animate(withDuration: 0.8, delay: 0.3, options: [.repeat, .curveEaseOut, .autoreverse], animations: {
+            self.view.endEditing(true)
+        }, completion: { _ in
+            self.datePickerTextField.text = date
+        })
+    }
 }
-// MARK: - UITextFieldDelegate
-extension Bai4ViewController: UITextFieldDelegate{
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-         datePicker.selectRow(datePicker.selectedDate(), inComponent: 0, animated: true)
-         textField.inputView = datePicker
-         let toolBar = UIToolbar(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.view.frame.width, height: CGFloat(44))))
-         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneDatePicker))
-         toolBar.setItems([space,doneButton], animated: false)
-         toolBar.isUserInteractionEnabled = true
-         toolBar.sizeToFit()
-         textField.inputAccessoryView = toolBar
-         NotificationCenter.default.addObserver(self, selector: #selector(dateChanged(notification:)), name:.dateChanged, object: nil)
-     }
-}
+
+
