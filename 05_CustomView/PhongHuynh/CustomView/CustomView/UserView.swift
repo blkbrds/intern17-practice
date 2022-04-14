@@ -1,11 +1,11 @@
 import UIKit
 
 // MARK: - UserViewDelegate
-protocol UserViewDelegate: AnyObject {
+protocol UserViewDelegate: class {
     func didTap(view: UserView, needsPerfom action: UserView.Action)
 }
 
-final class UserView: UIView {
+class UserView: UIView {
 
     // MARK: - Define
     enum Action {

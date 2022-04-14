@@ -1,7 +1,7 @@
 import UIKit
 
 // MARK: - DatePickerViewDelegate
-protocol DatePickerViewDelegate: AnyObject {
+protocol DatePickerViewDelegate: class {
     func getDate(view: DatePickerView, date: String)
 }
 

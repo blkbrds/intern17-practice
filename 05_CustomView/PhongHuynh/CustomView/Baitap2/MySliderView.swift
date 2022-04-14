@@ -1,7 +1,7 @@
 import UIKit
 
 // MARK: - MySliderDelegate
-protocol MySliderDelegate {
+protocol MySliderDelegate: class {
     func didFull(view: MySliderView, needsPerfom action: MySliderView.Action)
 }
 
@@ -18,13 +18,13 @@ class MySliderView: UIView {
     }
     
     // MARK: - IBOutlets
-    @IBOutlet weak private var parentView: UIView!
-    @IBOutlet weak private var blueView: UIView!
-    @IBOutlet weak private var blackView: UIView!
-    @IBOutlet weak private var greenView: UIView!
-    @IBOutlet weak private var phantramLabel: UILabel!
+    @IBOutlet private weak var parentView: UIView!
+    @IBOutlet private weak var blueView: UIView!
+    @IBOutlet private weak var blackView: UIView!
+    @IBOutlet private weak var greenView: UIView!
+    @IBOutlet private weak var phantramLabel: UILabel!
 
-    var delegate: MySliderDelegate?
+    weak var delegate: MySliderDelegate?
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
             if let touch = touches.first {
