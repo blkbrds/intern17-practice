@@ -25,6 +25,20 @@
 		223751732806D12000485107 /* Exercise11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223751712806D12000485107 /* Exercise11ViewController.xib */; };
 		223751762806D5B300485107 /* Exercise22ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223751742806D5B300485107 /* Exercise22ViewController.swift */; };
 		223751772806D5B300485107 /* Exercise22ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223751752806D5B300485107 /* Exercise22ViewController.xib */; };
+		22483BB02807FBF500408422 /* Exercise44444ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22483BAE2807FBF500408422 /* Exercise44444ViewController.swift */; };
+		22483BB12807FBF500408422 /* Exercise44444ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22483BAF2807FBF500408422 /* Exercise44444ViewController.xib */; };
+		22483BB428080C8600408422 /* Exercise444ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22483BB228080C8600408422 /* Exercise444ViewController.swift */; };
+		22483BB528080C8600408422 /* Exercise444ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22483BB328080C8600408422 /* Exercise444ViewController.xib */; };
+		22483BB92808103900408422 /* Exercise05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22483BB72808103900408422 /* Exercise05ViewController.swift */; };
+		22483BBA2808103900408422 /* Exercise05ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22483BB82808103900408422 /* Exercise05ViewController.xib */; };
+		229C9F532807AC52006D22E6 /* Exercise33ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229C9F512807AC51006D22E6 /* Exercise33ViewController.swift */; };
+		229C9F542807AC52006D22E6 /* Exercise33ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229C9F522807AC51006D22E6 /* Exercise33ViewController.xib */; };
+		229C9F572807B045006D22E6 /* Exercise333ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229C9F552807B045006D22E6 /* Exercise333ViewController.swift */; };
+		229C9F582807B045006D22E6 /* Exercise333ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229C9F562807B045006D22E6 /* Exercise333ViewController.xib */; };
+		229C9F5B2807BA91006D22E6 /* Exercise44ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229C9F592807BA91006D22E6 /* Exercise44ViewController.swift */; };
+		229C9F5C2807BA91006D22E6 /* Exercise44ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229C9F5A2807BA91006D22E6 /* Exercise44ViewController.xib */; };
+		229C9F5F2807DEAA006D22E6 /* Exercise4444ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229C9F5D2807DEAA006D22E6 /* Exercise4444ViewController.swift */; };
+		229C9F602807DEAA006D22E6 /* Exercise4444ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229C9F5E2807DEAA006D22E6 /* Exercise4444ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +62,20 @@
 		223751712806D12000485107 /* Exercise11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise11ViewController.xib; sourceTree = "<group>"; };
 		223751742806D5B300485107 /* Exercise22ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise22ViewController.swift; sourceTree = "<group>"; };
 		223751752806D5B300485107 /* Exercise22ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise22ViewController.xib; sourceTree = "<group>"; };
+		22483BAE2807FBF500408422 /* Exercise44444ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise44444ViewController.swift; sourceTree = "<group>"; };
+		22483BAF2807FBF500408422 /* Exercise44444ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise44444ViewController.xib; sourceTree = "<group>"; };
+		22483BB228080C8600408422 /* Exercise444ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise444ViewController.swift; sourceTree = "<group>"; };
+		22483BB328080C8600408422 /* Exercise444ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise444ViewController.xib; sourceTree = "<group>"; };
+		22483BB72808103900408422 /* Exercise05ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise05ViewController.swift; sourceTree = "<group>"; };
+		22483BB82808103900408422 /* Exercise05ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise05ViewController.xib; sourceTree = "<group>"; };
+		229C9F512807AC51006D22E6 /* Exercise33ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise33ViewController.swift; sourceTree = "<group>"; };
+		229C9F522807AC51006D22E6 /* Exercise33ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise33ViewController.xib; sourceTree = "<group>"; };
+		229C9F552807B045006D22E6 /* Exercise333ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise333ViewController.swift; sourceTree = "<group>"; };
+		229C9F562807B045006D22E6 /* Exercise333ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise333ViewController.xib; sourceTree = "<group>"; };
+		229C9F592807BA91006D22E6 /* Exercise44ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise44ViewController.swift; sourceTree = "<group>"; };
+		229C9F5A2807BA91006D22E6 /* Exercise44ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise44ViewController.xib; sourceTree = "<group>"; };
+		229C9F5D2807DEAA006D22E6 /* Exercise4444ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise4444ViewController.swift; sourceTree = "<group>"; };
+		229C9F5E2807DEAA006D22E6 /* Exercise4444ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise4444ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				223751572806CD3400485107 /* AppDelegate */,
+				22483BB62808102300408422 /* Ex5 */,
 				223751632806CE3F00485107 /* Ex4 */,
 				223751622806CE3A00485107 /* Ex3 */,
 				223751612806CE3600485107 /* Ex2 */,
@@ -138,6 +167,10 @@
 			children = (
 				223751682806CE7900485107 /* Exercise03ViewController.swift */,
 				223751692806CE7900485107 /* Exercise03ViewController.xib */,
+				229C9F512807AC51006D22E6 /* Exercise33ViewController.swift */,
+				229C9F522807AC51006D22E6 /* Exercise33ViewController.xib */,
+				229C9F552807B045006D22E6 /* Exercise333ViewController.swift */,
+				229C9F562807B045006D22E6 /* Exercise333ViewController.xib */,
 			);
 			path = Ex3;
 			sourceTree = "<group>";
@@ -147,8 +180,25 @@
 			children = (
 				2237516C2806CE8700485107 /* Exercise04ViewController.swift */,
 				2237516D2806CE8700485107 /* Exercise04ViewController.xib */,
+				229C9F592807BA91006D22E6 /* Exercise44ViewController.swift */,
+				229C9F5A2807BA91006D22E6 /* Exercise44ViewController.xib */,
+				22483BB228080C8600408422 /* Exercise444ViewController.swift */,
+				22483BB328080C8600408422 /* Exercise444ViewController.xib */,
+				229C9F5D2807DEAA006D22E6 /* Exercise4444ViewController.swift */,
+				229C9F5E2807DEAA006D22E6 /* Exercise4444ViewController.xib */,
+				22483BAE2807FBF500408422 /* Exercise44444ViewController.swift */,
+				22483BAF2807FBF500408422 /* Exercise44444ViewController.xib */,
 			);
 			path = Ex4;
+			sourceTree = "<group>";
+		};
+		22483BB62808102300408422 /* Ex5 */ = {
+			isa = PBXGroup;
+			children = (
+				22483BB72808103900408422 /* Exercise05ViewController.swift */,
+				22483BB82808103900408422 /* Exercise05ViewController.xib */,
+			);
+			path = Ex5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,12 +262,19 @@
 				223751732806D12000485107 /* Exercise11ViewController.xib in Resources */,
 				2237516F2806CE8700485107 /* Exercise04ViewController.xib in Resources */,
 				2237514F2806CC1300485107 /* LaunchScreen.storyboard in Resources */,
+				22483BB528080C8600408422 /* Exercise444ViewController.xib in Resources */,
 				2237514C2806CC1300485107 /* Assets.xcassets in Resources */,
 				223751672806CE5300485107 /* Exercise02ViewController.xib in Resources */,
 				2237514A2806CC1100485107 /* Main.storyboard in Resources */,
+				229C9F602807DEAA006D22E6 /* Exercise4444ViewController.xib in Resources */,
 				223751772806D5B300485107 /* Exercise22ViewController.xib in Resources */,
+				22483BBA2808103900408422 /* Exercise05ViewController.xib in Resources */,
 				2237516B2806CE7900485107 /* Exercise03ViewController.xib in Resources */,
+				229C9F5C2807BA91006D22E6 /* Exercise44ViewController.xib in Resources */,
+				229C9F542807AC52006D22E6 /* Exercise33ViewController.xib in Resources */,
 				223751602806CDAA00485107 /* Exercise01ViewController.xib in Resources */,
+				229C9F582807B045006D22E6 /* Exercise333ViewController.xib in Resources */,
+				22483BB12807FBF500408422 /* Exercise44444ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,10 +285,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229C9F5B2807BA91006D22E6 /* Exercise44ViewController.swift in Sources */,
+				22483BB02807FBF500408422 /* Exercise44444ViewController.swift in Sources */,
 				223751762806D5B300485107 /* Exercise22ViewController.swift in Sources */,
+				229C9F5F2807DEAA006D22E6 /* Exercise4444ViewController.swift in Sources */,
 				223751722806D12000485107 /* Exercise11ViewController.swift in Sources */,
+				22483BB92808103900408422 /* Exercise05ViewController.swift in Sources */,
 				2237516A2806CE7900485107 /* Exercise03ViewController.swift in Sources */,
 				223751662806CE5300485107 /* Exercise02ViewController.swift in Sources */,
+				229C9F572807B045006D22E6 /* Exercise333ViewController.swift in Sources */,
+				229C9F532807AC52006D22E6 /* Exercise33ViewController.swift in Sources */,
+				22483BB428080C8600408422 /* Exercise444ViewController.swift in Sources */,
 				223751472806CC1100485107 /* ViewController.swift in Sources */,
 				2237515F2806CDAA00485107 /* Exercise01ViewController.swift in Sources */,
 				2237516E2806CE8700485107 /* Exercise04ViewController.swift in Sources */,
