@@ -19,33 +19,40 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pv-tb-bXi" userLabel="View1">
-                    <rect key="frame" x="68.5" y="413" width="70" height="70"/>
+                    <rect key="frame" x="60" y="419" width="58" height="58"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7pv-tb-bXi" secondAttribute="height" id="nFl-1y-LWn"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhJ-My-aCW" userLabel="View2">
-                    <rect key="frame" x="172" y="413" width="70" height="70"/>
+                    <rect key="frame" x="178" y="419" width="58" height="58"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="GhJ-My-aCW" secondAttribute="height" id="klP-vq-w9u"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Wj-SH-dXw" userLabel="View3">
-                    <rect key="frame" x="275.5" y="413" width="70" height="70"/>
+                    <rect key="frame" x="296" y="419" width="58" height="58"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="9Wj-SH-dXw" secondAttribute="height" id="KeM-RL-4hd"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="7pv-tb-bXi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.169082" id="Bwi-fE-sbx"/>
-                <constraint firstItem="7pv-tb-bXi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1/2" id="G9g-iz-1t9"/>
-                <constraint firstItem="7pv-tb-bXi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IMq-tI-l17"/>
-                <constraint firstItem="9Wj-SH-dXw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="3/2" id="KmD-fT-oBe"/>
-                <constraint firstItem="GhJ-My-aCW" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.169082" id="Sx6-uq-SzV"/>
-                <constraint firstItem="GhJ-My-aCW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="WDU-bA-bIv"/>
-                <constraint firstItem="GhJ-My-aCW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g17-5T-jyb"/>
-                <constraint firstItem="GhJ-My-aCW" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.078125" id="g9c-7K-c5L"/>
-                <constraint firstItem="9Wj-SH-dXw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hsf-sb-iQU"/>
-                <constraint firstItem="9Wj-SH-dXw" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.078125" id="igY-vb-Uvy"/>
-                <constraint firstItem="7pv-tb-bXi" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.078125" id="tPL-Zy-7I0"/>
-                <constraint firstItem="9Wj-SH-dXw" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.169082" id="w9C-3L-kG8"/>
+                <constraint firstItem="GhJ-My-aCW" firstAttribute="leading" secondItem="7pv-tb-bXi" secondAttribute="trailing" constant="60" id="0On-Nd-lUe"/>
+                <constraint firstItem="7pv-tb-bXi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6dH-Se-Hn6"/>
+                <constraint firstItem="GhJ-My-aCW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CaL-41-5sq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Wj-SH-dXw" secondAttribute="trailing" constant="60" id="JhT-DK-m3x"/>
+                <constraint firstItem="9Wj-SH-dXw" firstAttribute="leading" secondItem="GhJ-My-aCW" secondAttribute="trailing" constant="60" id="Lbc-1f-QP0"/>
+                <constraint firstItem="GhJ-My-aCW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ofr-mV-TWc"/>
+                <constraint firstItem="9Wj-SH-dXw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="SKz-Zh-vjc"/>
+                <constraint firstItem="9Wj-SH-dXw" firstAttribute="width" secondItem="GhJ-My-aCW" secondAttribute="width" id="bFw-C7-uzR"/>
+                <constraint firstItem="7pv-tb-bXi" firstAttribute="width" secondItem="GhJ-My-aCW" secondAttribute="width" id="ccD-FA-xMG"/>
+                <constraint firstItem="7pv-tb-bXi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="kOa-lN-YMi"/>
             </constraints>
             <point key="canvasLocation" x="142" y="131"/>
         </view>
