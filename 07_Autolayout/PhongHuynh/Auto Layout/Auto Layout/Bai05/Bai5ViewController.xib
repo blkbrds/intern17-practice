@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="landscape" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,39 +15,39 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIi-9D-Gck" userLabel="View1">
-                    <rect key="frame" x="39.999999999999993" y="157.33333333333334" width="99.333333333333314" height="99.333333333333343"/>
+                    <rect key="frame" x="40" y="350.66666666666669" width="35" height="34.666666666666686"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="CIi-9D-Gck" secondAttribute="height" multiplier="1:1" id="GCW-YX-W2T"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5L-W0-cDj" userLabel="View3">
-                    <rect key="frame" x="317.66666666666669" y="157.33333333333334" width="99.333333333333314" height="99.333333333333343"/>
+                    <rect key="frame" x="189.33333333333334" y="350.66666666666669" width="35" height="34.666666666666686"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="b5L-W0-cDj" secondAttribute="height" multiplier="1:1" id="3rX-35-Ibi"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5V-5s-Irg" userLabel="View2">
-                    <rect key="frame" x="179.33333333333334" y="158" width="98.333333333333343" height="98"/>
+                    <rect key="frame" x="114.99999999999999" y="350.66666666666669" width="34.333333333333329" height="34.666666666666686"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="p5V-5s-Irg" secondAttribute="height" id="lDa-FD-7y9"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ded-nB-qba" userLabel="View3">
-                    <rect key="frame" x="596.66666666666663" y="157.33333333333334" width="99.333333333333371" height="99.333333333333343"/>
+                    <rect key="frame" x="339" y="350.66666666666669" width="35" height="34.666666666666686"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Ded-nB-qba" secondAttribute="height" multiplier="1:1" id="rYg-ud-LHG"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-B3-j5z" userLabel="View3">
-                    <rect key="frame" x="457" y="157.33333333333334" width="99.666666666666629" height="99.333333333333343"/>
+                    <rect key="frame" x="264.33333333333331" y="350.66666666666669" width="34.666666666666686" height="34.666666666666686"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="uh1-B3-j5z" secondAttribute="height" multiplier="1:1" id="fTj-HS-yJe"/>
