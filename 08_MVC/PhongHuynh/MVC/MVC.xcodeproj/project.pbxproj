@@ -12,6 +12,9 @@
 		CBE5A8E42809078F000E06F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE5A8E32809078F000E06F2 /* Assets.xcassets */; };
 		CBE5A8F7280907F7000E06F2 /* MVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE5A8F5280907F7000E06F2 /* MVCViewController.swift */; };
 		CBE5A8F8280907F7000E06F2 /* MVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE5A8F6280907F7000E06F2 /* MVCViewController.xib */; };
+		CBE5A90228092541000E06F2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE5A90128092541000E06F2 /* Calculator.swift */; };
+		CBE5A9052809255F000E06F2 /* Calculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE5A9042809255F000E06F2 /* Calculator.xib */; };
+		CBE5A90828092909000E06F2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE5A90728092909000E06F2 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		CBE5A8E82809078F000E06F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBE5A8F5280907F7000E06F2 /* MVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCViewController.swift; sourceTree = "<group>"; };
 		CBE5A8F6280907F7000E06F2 /* MVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVCViewController.xib; sourceTree = "<group>"; };
+		CBE5A90128092541000E06F2 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		CBE5A9042809255F000E06F2 /* Calculator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Calculator.xib; sourceTree = "<group>"; };
+		CBE5A90728092909000E06F2 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		CBE5A8F3280907DB000E06F2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CBE5A90728092909000E06F2 /* Calculator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,6 +91,8 @@
 		CBE5A8F4280907E2000E06F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CBE5A90128092541000E06F2 /* Calculator.swift */,
+				CBE5A9042809255F000E06F2 /* Calculator.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBE5A8E42809078F000E06F2 /* Assets.xcassets in Resources */,
+				CBE5A9052809255F000E06F2 /* Calculator.xib in Resources */,
 				CBE5A8F8280907F7000E06F2 /* MVCViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBE5A8DB2809078C000E06F2 /* AppDelegate.swift in Sources */,
+				CBE5A90228092541000E06F2 /* Calculator.swift in Sources */,
 				CBE5A8F7280907F7000E06F2 /* MVCViewController.swift in Sources */,
+				CBE5A90828092909000E06F2 /* Calculator.swift in Sources */,
 				CBE5A8DD2809078C000E06F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
