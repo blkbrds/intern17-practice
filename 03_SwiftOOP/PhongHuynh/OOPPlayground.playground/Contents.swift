@@ -192,7 +192,7 @@ class Vuong : HaiChieu {
     }
 }
 
-class Tamg : HaiChieu {
+class Tamgiac : HaiChieu {
     
     override  init(soCanh: Int, array: [Int]) {
         super.init(soCanh: soCanh, array: array)
@@ -250,7 +250,7 @@ class Cau {
     }
 }
 let hinhVuong = Vuong(soCanh: 4, array: [3, 3, 3, 3])
-let tamGiac = Tamg(soCanh: 3, array: [3,4,5])
+let tamGiac = Tamgiac(soCanh: 3, array: [3,4,5])
 let hinhLapPhuong = LapPhuong(soCanh: 12, array: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4])
 print("chu vi của hình vuông là: \(hinhVuong.tinhChuVi())")
 print("diện tích của tam giác là: \(tamGiac.tinhDienTich())")
@@ -313,7 +313,6 @@ class Date {
     var day: Int
     var month: Int
     var year: Int
-    var days: [Int] = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
     init(day: Int, month: Int, year: Int) {
         self.day = day
@@ -321,34 +320,17 @@ class Date {
         self.year = year
     }
     
-    func normalize(dd: Int, mm: Int, yy: Int) {
-        let month = mm >= 1 && mm <= 12 ? mm : 1
-        let year = yy >= 1900 && yy <= 2100 ? yy : 1900
-        if month == 2 && ktrNhuan(y: year) {
-            _ = dd >= 1 && dd <= 29 ? dd : 1
-        } else {
-            _ = dd >= 1 && dd <= days[month-1] ? dd : 1
-        }
-    }
-    
     func advance() {
-        if day == daysIn(d: day) {      // Het Nam
+        if day == daysIn() {      // Het Nam
             day = 1
             month = 1
             year += 1
-        } else if daysIn(d: day) != 0 {          //Het Thang
+        } else if daysIn() != 0 {          //Het Thang
             day = 1
             month += 1
         } else {
             day += 1
         }
-    }
-    
-    func daysIn(d: Int) -> Int {
-        if month == 2 && ktrNhuan(y: year) {
-            return 29
-        }
-        return days[month - 1]
     }
     
     func ktrNhuan(y: Int) -> Bool {
@@ -359,12 +341,47 @@ class Date {
         }
         return false
     }
+    
+    func normalize() {
+        guard day < daysIn() else {
+            return self.day = 18
+        }
+        
+        guard month < 12 else {
+            return self.month = 9
+        }
+        
+        guard year > 1 else {
+            return self.year = 1997
+        }
+    }
+    
+    func daysIn() -> Int {
+        var daysIn = 31
+        switch self.month {
+        case 2:
+            if (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0) {
+                daysIn = 29
+            } else {
+                daysIn = 28
+            }
+        case 4, 6, 9, 11:
+            daysIn = 30
+        default:
+            daysIn = 31
+        }
+        return daysIn
+    }
+    
+    func printDate() {
+        print("\(day)-\(month) -\(year)")
+    }
 }
-let ngay01 = Date(day: 1, month: 1, year: 1900)
-ngay01.ktrNhuan(y: 1988)
+let ngay01 = Date(day: 25, month: 6, year: 1900)
+ngay01.ktrNhuan(y: 1900)
 ngay01.advance()
-print(ngay01)
-ngay01.normalize(dd: 12, mm: 5, yy: 1985)
+ngay01.printDate()
+ngay01.normalize()
 
 //Bài 09----------------------------------------------------------------------------------------------------------------
 struct Mang {
@@ -382,7 +399,7 @@ struct Mang {
         }
     }
     
-    func maxMang() -> Int {
+    func timMaxMang() -> Int {
         var max: Int = 0
         for i in 0..<n {
             if (a[i] > max) {
@@ -392,7 +409,7 @@ struct Mang {
         return max
     }
     
-    func minMang() -> Int {
+    func timMinMang() -> Int {
         var min: Int = a[0]
         for i in 1..<n {
             if (a[i] < min) {
@@ -404,8 +421,8 @@ struct Mang {
 }
 let a = Mang(n: 3, a: [10, 20, 30])
 a.xuatMang()
-print("phần tử lớn nhất trong mảng là: \(a.maxMang())")
-print("phần tử nhỏ nhất trong mảng là: \(a.minMang())")
+print("phần tử lớn nhất trong mảng là: \(a.timMaxMang())")
+print("phần tử nhỏ nhất trong mảng là: \(a.timMinMang())")
 
 //Bài 10----------------------------------------------------------------------------------------------------------------
 struct A {
