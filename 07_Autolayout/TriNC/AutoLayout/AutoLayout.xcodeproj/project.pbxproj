@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2203EC6728092FEE00013EAA /* Exercise09ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203EC6528092FEE00013EAA /* Exercise09ViewController.swift */; };
+		2203EC6828092FEE00013EAA /* Exercise09ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203EC6628092FEE00013EAA /* Exercise09ViewController.xib */; };
+		221D0B4B2809089E008D5EB4 /* Exercise06ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D0B492809089E008D5EB4 /* Exercise06ViewController.swift */; };
+		221D0B4C2809089E008D5EB4 /* Exercise06ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221D0B4A2809089E008D5EB4 /* Exercise06ViewController.xib */; };
+		221D0B5028091786008D5EB4 /* Exercise07ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D0B4E28091786008D5EB4 /* Exercise07ViewController.swift */; };
+		221D0B5128091786008D5EB4 /* Exercise07ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221D0B4F28091786008D5EB4 /* Exercise07ViewController.xib */; };
+		221D0B5528091D06008D5EB4 /* Exercise08ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D0B5328091D06008D5EB4 /* Exercise08ViewController.swift */; };
+		221D0B5628091D06008D5EB4 /* Exercise08ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221D0B5428091D06008D5EB4 /* Exercise08ViewController.xib */; };
 		223751432806CC1100485107 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223751422806CC1100485107 /* AppDelegate.swift */; };
 		223751452806CC1100485107 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223751442806CC1100485107 /* SceneDelegate.swift */; };
 		223751472806CC1100485107 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223751462806CC1100485107 /* ViewController.swift */; };
@@ -31,6 +39,14 @@
 		22483BB528080C8600408422 /* Exercise444ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22483BB328080C8600408422 /* Exercise444ViewController.xib */; };
 		22483BB92808103900408422 /* Exercise05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22483BB72808103900408422 /* Exercise05ViewController.swift */; };
 		22483BBA2808103900408422 /* Exercise05ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22483BB82808103900408422 /* Exercise05ViewController.xib */; };
+		2266C412280974A1005C301C /* Exercise10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2266C410280974A1005C301C /* Exercise10ViewController.swift */; };
+		2266C413280974A1005C301C /* Exercise10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2266C411280974A1005C301C /* Exercise10ViewController.xib */; };
+		2266C41C28097511005C301C /* Exercise12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2266C41A28097511005C301C /* Exercise12ViewController.swift */; };
+		2266C41D28097511005C301C /* Exercise12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2266C41B28097511005C301C /* Exercise12ViewController.xib */; };
+		2266C42028097540005C301C /* Exercise0011ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2266C41E28097540005C301C /* Exercise0011ViewController.swift */; };
+		2266C42128097540005C301C /* Exercise0011ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2266C41F28097540005C301C /* Exercise0011ViewController.xib */; };
+		2266C4252809756F005C301C /* Exercise14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2266C4232809756F005C301C /* Exercise14ViewController.swift */; };
+		2266C4262809756F005C301C /* Exercise14ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2266C4242809756F005C301C /* Exercise14ViewController.xib */; };
 		229C9F532807AC52006D22E6 /* Exercise33ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229C9F512807AC51006D22E6 /* Exercise33ViewController.swift */; };
 		229C9F542807AC52006D22E6 /* Exercise33ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229C9F522807AC51006D22E6 /* Exercise33ViewController.xib */; };
 		229C9F572807B045006D22E6 /* Exercise333ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229C9F552807B045006D22E6 /* Exercise333ViewController.swift */; };
@@ -42,6 +58,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2203EC6528092FEE00013EAA /* Exercise09ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise09ViewController.swift; sourceTree = "<group>"; };
+		2203EC6628092FEE00013EAA /* Exercise09ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise09ViewController.xib; sourceTree = "<group>"; };
+		221D0B492809089E008D5EB4 /* Exercise06ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise06ViewController.swift; sourceTree = "<group>"; };
+		221D0B4A2809089E008D5EB4 /* Exercise06ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise06ViewController.xib; sourceTree = "<group>"; };
+		221D0B4E28091786008D5EB4 /* Exercise07ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise07ViewController.swift; sourceTree = "<group>"; };
+		221D0B4F28091786008D5EB4 /* Exercise07ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise07ViewController.xib; sourceTree = "<group>"; };
+		221D0B5328091D06008D5EB4 /* Exercise08ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise08ViewController.swift; sourceTree = "<group>"; };
+		221D0B5428091D06008D5EB4 /* Exercise08ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise08ViewController.xib; sourceTree = "<group>"; };
 		2237513F2806CC1100485107 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223751422806CC1100485107 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223751442806CC1100485107 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +92,14 @@
 		22483BB328080C8600408422 /* Exercise444ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise444ViewController.xib; sourceTree = "<group>"; };
 		22483BB72808103900408422 /* Exercise05ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise05ViewController.swift; sourceTree = "<group>"; };
 		22483BB82808103900408422 /* Exercise05ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise05ViewController.xib; sourceTree = "<group>"; };
+		2266C410280974A1005C301C /* Exercise10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise10ViewController.swift; sourceTree = "<group>"; };
+		2266C411280974A1005C301C /* Exercise10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise10ViewController.xib; sourceTree = "<group>"; };
+		2266C41A28097511005C301C /* Exercise12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise12ViewController.swift; sourceTree = "<group>"; };
+		2266C41B28097511005C301C /* Exercise12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise12ViewController.xib; sourceTree = "<group>"; };
+		2266C41E28097540005C301C /* Exercise0011ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise0011ViewController.swift; sourceTree = "<group>"; };
+		2266C41F28097540005C301C /* Exercise0011ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise0011ViewController.xib; sourceTree = "<group>"; };
+		2266C4232809756F005C301C /* Exercise14ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise14ViewController.swift; sourceTree = "<group>"; };
+		2266C4242809756F005C301C /* Exercise14ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise14ViewController.xib; sourceTree = "<group>"; };
 		229C9F512807AC51006D22E6 /* Exercise33ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise33ViewController.swift; sourceTree = "<group>"; };
 		229C9F522807AC51006D22E6 /* Exercise33ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise33ViewController.xib; sourceTree = "<group>"; };
 		229C9F552807B045006D22E6 /* Exercise333ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise333ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +121,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2203EC6428092FDC00013EAA /* Ex9 */ = {
+			isa = PBXGroup;
+			children = (
+				2203EC6528092FEE00013EAA /* Exercise09ViewController.swift */,
+				2203EC6628092FEE00013EAA /* Exercise09ViewController.xib */,
+			);
+			path = Ex9;
+			sourceTree = "<group>";
+		};
+		221D0B4828090890008D5EB4 /* Ex6 */ = {
+			isa = PBXGroup;
+			children = (
+				221D0B492809089E008D5EB4 /* Exercise06ViewController.swift */,
+				221D0B4A2809089E008D5EB4 /* Exercise06ViewController.xib */,
+			);
+			path = Ex6;
+			sourceTree = "<group>";
+		};
+		221D0B4D28091771008D5EB4 /* Ex7 */ = {
+			isa = PBXGroup;
+			children = (
+				221D0B4E28091786008D5EB4 /* Exercise07ViewController.swift */,
+				221D0B4F28091786008D5EB4 /* Exercise07ViewController.xib */,
+			);
+			path = Ex7;
+			sourceTree = "<group>";
+		};
+		221D0B5228091C8A008D5EB4 /* Ex8 */ = {
+			isa = PBXGroup;
+			children = (
+				221D0B5328091D06008D5EB4 /* Exercise08ViewController.swift */,
+				221D0B5428091D06008D5EB4 /* Exercise08ViewController.xib */,
+			);
+			path = Ex8;
+			sourceTree = "<group>";
+		};
 		223751362806CC1100485107 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +177,14 @@
 			isa = PBXGroup;
 			children = (
 				223751572806CD3400485107 /* AppDelegate */,
+				2266C4222809755E005C301C /* Ex14 */,
+				2266C415280974E3005C301C /* Ex12 */,
+				2266C414280974D9005C301C /* Ex11 */,
+				2266C40F28097483005C301C /* Ex10 */,
+				2203EC6428092FDC00013EAA /* Ex9 */,
+				221D0B5228091C8A008D5EB4 /* Ex8 */,
+				221D0B4D28091771008D5EB4 /* Ex7 */,
+				221D0B4828090890008D5EB4 /* Ex6 */,
 				22483BB62808102300408422 /* Ex5 */,
 				223751632806CE3F00485107 /* Ex4 */,
 				223751622806CE3A00485107 /* Ex3 */,
@@ -201,6 +277,42 @@
 			path = Ex5;
 			sourceTree = "<group>";
 		};
+		2266C40F28097483005C301C /* Ex10 */ = {
+			isa = PBXGroup;
+			children = (
+				2266C410280974A1005C301C /* Exercise10ViewController.swift */,
+				2266C411280974A1005C301C /* Exercise10ViewController.xib */,
+			);
+			path = Ex10;
+			sourceTree = "<group>";
+		};
+		2266C414280974D9005C301C /* Ex11 */ = {
+			isa = PBXGroup;
+			children = (
+				2266C41E28097540005C301C /* Exercise0011ViewController.swift */,
+				2266C41F28097540005C301C /* Exercise0011ViewController.xib */,
+			);
+			path = Ex11;
+			sourceTree = "<group>";
+		};
+		2266C415280974E3005C301C /* Ex12 */ = {
+			isa = PBXGroup;
+			children = (
+				2266C41A28097511005C301C /* Exercise12ViewController.swift */,
+				2266C41B28097511005C301C /* Exercise12ViewController.xib */,
+			);
+			path = Ex12;
+			sourceTree = "<group>";
+		};
+		2266C4222809755E005C301C /* Ex14 */ = {
+			isa = PBXGroup;
+			children = (
+				2266C4232809756F005C301C /* Exercise14ViewController.swift */,
+				2266C4242809756F005C301C /* Exercise14ViewController.xib */,
+			);
+			path = Ex14;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,18 +373,26 @@
 			files = (
 				223751732806D12000485107 /* Exercise11ViewController.xib in Resources */,
 				2237516F2806CE8700485107 /* Exercise04ViewController.xib in Resources */,
+				2266C413280974A1005C301C /* Exercise10ViewController.xib in Resources */,
 				2237514F2806CC1300485107 /* LaunchScreen.storyboard in Resources */,
 				22483BB528080C8600408422 /* Exercise444ViewController.xib in Resources */,
+				2266C42128097540005C301C /* Exercise0011ViewController.xib in Resources */,
 				2237514C2806CC1300485107 /* Assets.xcassets in Resources */,
+				221D0B4C2809089E008D5EB4 /* Exercise06ViewController.xib in Resources */,
 				223751672806CE5300485107 /* Exercise02ViewController.xib in Resources */,
+				2266C4262809756F005C301C /* Exercise14ViewController.xib in Resources */,
 				2237514A2806CC1100485107 /* Main.storyboard in Resources */,
 				229C9F602807DEAA006D22E6 /* Exercise4444ViewController.xib in Resources */,
 				223751772806D5B300485107 /* Exercise22ViewController.xib in Resources */,
 				22483BBA2808103900408422 /* Exercise05ViewController.xib in Resources */,
 				2237516B2806CE7900485107 /* Exercise03ViewController.xib in Resources */,
+				221D0B5628091D06008D5EB4 /* Exercise08ViewController.xib in Resources */,
 				229C9F5C2807BA91006D22E6 /* Exercise44ViewController.xib in Resources */,
 				229C9F542807AC52006D22E6 /* Exercise33ViewController.xib in Resources */,
 				223751602806CDAA00485107 /* Exercise01ViewController.xib in Resources */,
+				221D0B5128091786008D5EB4 /* Exercise07ViewController.xib in Resources */,
+				2266C41D28097511005C301C /* Exercise12ViewController.xib in Resources */,
+				2203EC6828092FEE00013EAA /* Exercise09ViewController.xib in Resources */,
 				229C9F582807B045006D22E6 /* Exercise333ViewController.xib in Resources */,
 				22483BB12807FBF500408422 /* Exercise44444ViewController.xib in Resources */,
 			);
@@ -286,19 +406,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				229C9F5B2807BA91006D22E6 /* Exercise44ViewController.swift in Sources */,
+				2266C41C28097511005C301C /* Exercise12ViewController.swift in Sources */,
 				22483BB02807FBF500408422 /* Exercise44444ViewController.swift in Sources */,
+				2266C42028097540005C301C /* Exercise0011ViewController.swift in Sources */,
 				223751762806D5B300485107 /* Exercise22ViewController.swift in Sources */,
 				229C9F5F2807DEAA006D22E6 /* Exercise4444ViewController.swift in Sources */,
 				223751722806D12000485107 /* Exercise11ViewController.swift in Sources */,
 				22483BB92808103900408422 /* Exercise05ViewController.swift in Sources */,
+				2266C412280974A1005C301C /* Exercise10ViewController.swift in Sources */,
+				221D0B5528091D06008D5EB4 /* Exercise08ViewController.swift in Sources */,
 				2237516A2806CE7900485107 /* Exercise03ViewController.swift in Sources */,
 				223751662806CE5300485107 /* Exercise02ViewController.swift in Sources */,
 				229C9F572807B045006D22E6 /* Exercise333ViewController.swift in Sources */,
+				221D0B5028091786008D5EB4 /* Exercise07ViewController.swift in Sources */,
 				229C9F532807AC52006D22E6 /* Exercise33ViewController.swift in Sources */,
 				22483BB428080C8600408422 /* Exercise444ViewController.swift in Sources */,
+				2203EC6728092FEE00013EAA /* Exercise09ViewController.swift in Sources */,
 				223751472806CC1100485107 /* ViewController.swift in Sources */,
 				2237515F2806CDAA00485107 /* Exercise01ViewController.swift in Sources */,
 				2237516E2806CE8700485107 /* Exercise04ViewController.swift in Sources */,
+				221D0B4B2809089E008D5EB4 /* Exercise06ViewController.swift in Sources */,
+				2266C4252809756F005C301C /* Exercise14ViewController.swift in Sources */,
 				223751432806CC1100485107 /* AppDelegate.swift in Sources */,
 				223751452806CC1100485107 /* SceneDelegate.swift in Sources */,
 			);
