@@ -22,6 +22,13 @@
 		E1C00C5E27FE6EF8002D83D3 /* DViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C00C5C27FE6EF8002D83D3 /* DViewController.xib */; };
 		E1C00C6227FE6F0C002D83D3 /* EViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C00C6027FE6F0C002D83D3 /* EViewController.swift */; };
 		E1C00C6327FE6F0C002D83D3 /* EViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C00C6127FE6F0C002D83D3 /* EViewController.xib */; };
+		E1C438942803E35C00334ED1 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1C438932803E35C00334ED1 /* Contacts.plist */; };
+		E1C438A128050B4D00334ED1 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4389F28050B4D00334ED1 /* CommentTableViewCell.swift */; };
+		E1C438A228050B4D00334ED1 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C438A028050B4D00334ED1 /* CommentTableViewCell.xib */; };
+		E1C438A72805735100334ED1 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C438A52805735100334ED1 /* CommentsViewController.swift */; };
+		E1C438A82805735100334ED1 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C438A62805735100334ED1 /* CommentsViewController.xib */; };
+		E1C438B228057BD200334ED1 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C438B028057BD200334ED1 /* ContactDetailViewController.swift */; };
+		E1C438B328057BD200334ED1 /* ContactDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C438B128057BD200334ED1 /* ContactDetailViewController.xib */; };
 		E1D5824327FD3CA000190B61 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5824127FD3CA000190B61 /* AutoLayoutViewController.swift */; };
 		E1D5824427FD3CA000190B61 /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5824227FD3CA000190B61 /* AutoLayoutViewController.xib */; };
 		E1D5824A27FD3D1C00190B61 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5824827FD3D1C00190B61 /* SquareViewController.swift */; };
@@ -98,6 +105,13 @@
 		E1C00C5C27FE6EF8002D83D3 /* DViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DViewController.xib; sourceTree = "<group>"; };
 		E1C00C6027FE6F0C002D83D3 /* EViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EViewController.swift; sourceTree = "<group>"; };
 		E1C00C6127FE6F0C002D83D3 /* EViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EViewController.xib; sourceTree = "<group>"; };
+		E1C438932803E35C00334ED1 /* Contacts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Contacts.plist; sourceTree = "<group>"; };
+		E1C4389F28050B4D00334ED1 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		E1C438A028050B4D00334ED1 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		E1C438A52805735100334ED1 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		E1C438A62805735100334ED1 /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
+		E1C438B028057BD200334ED1 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		E1C438B128057BD200334ED1 /* ContactDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailViewController.xib; sourceTree = "<group>"; };
 		E1D5824127FD3CA000190B61 /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
 		E1D5824227FD3CA000190B61 /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
 		E1D5824827FD3D1C00190B61 /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +214,15 @@
 			path = "Basic Navigation";
 			sourceTree = "<group>";
 		};
+		E1C438972803E36700334ED1 /* Properties List */ = {
+			isa = PBXGroup;
+			children = (
+				E17CA30127FECCBE0080D607 /* MyInfo.plist */,
+				E1C438932803E35C00334ED1 /* Contacts.plist */,
+			);
+			path = "Properties List";
+			sourceTree = "<group>";
+		};
 		E1D5824027FD3C7200190B61 /* Auto Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +242,6 @@
 				E1D5824F27FD444D00190B61 /* SquaresViewController.xib */,
 				E1D5825327FD491200190B61 /* CatAutoLayoutViewController.swift */,
 				E1D5825427FD491200190B61 /* CatAutoLayoutViewController.xib */,
-				E1D5825D27FD894B00190B61 /* DumbData.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -345,7 +367,8 @@
 				E1EF339327F2E157002F33DB /* Assets.xcassets */,
 				E1EF339527F2E157002F33DB /* LaunchScreen.storyboard */,
 				E1EF339827F2E157002F33DB /* Info.plist */,
-				E17CA30127FECCBE0080D607 /* MyInfo.plist */,
+				E1D5825D27FD894B00190B61 /* DumbData.swift */,
+				E1C438972803E36700334ED1 /* Properties List */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +413,12 @@
 			children = (
 				E1EF33BA27F2E5B4002F33DB /* TableViewController.swift */,
 				E1EF33BB27F2E5B4002F33DB /* TableViewController.xib */,
+				E1C4389F28050B4D00334ED1 /* CommentTableViewCell.swift */,
+				E1C438A028050B4D00334ED1 /* CommentTableViewCell.xib */,
+				E1C438A52805735100334ED1 /* CommentsViewController.swift */,
+				E1C438A62805735100334ED1 /* CommentsViewController.xib */,
+				E1C438B028057BD200334ED1 /* ContactDetailViewController.swift */,
+				E1C438B128057BD200334ED1 /* ContactDetailViewController.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -473,6 +502,7 @@
 				E1D5825627FD491200190B61 /* CatAutoLayoutViewController.xib in Resources */,
 				E17CA2FE27FEC0870080D607 /* EditViewController.xib in Resources */,
 				E1EF33CC27F304C5002F33DB /* LoginViewController.xib in Resources */,
+				E1C438A228050B4D00334ED1 /* CommentTableViewCell.xib in Resources */,
 				E1D8CB0227FEF3280003AF20 /* ColumnChartView.xib in Resources */,
 				E1EF33C227F2E5C4002F33DB /* CollectionViewController.xib in Resources */,
 				E1EF339727F2E157002F33DB /* LaunchScreen.storyboard in Resources */,
@@ -494,6 +524,8 @@
 				E1C00C5927FE6EE9002D83D3 /* CViewController.xib in Resources */,
 				E1EF33C727F2E5D4002F33DB /* MapViewController.xib in Resources */,
 				E17CA30227FECCBE0080D607 /* MyInfo.plist in Resources */,
+				E1C438A82805735100334ED1 /* CommentsViewController.xib in Resources */,
+				E1C438942803E35C00334ED1 /* Contacts.plist in Resources */,
 				E1EF33A327F2E1E1002F33DB /* MyViewController.xib in Resources */,
 				E1E07AFC27F400E6008BF7B3 /* ColorViewController.xib in Resources */,
 				E1EF33B827F2E5A5002F33DB /* NavigationViewController.xib in Resources */,
@@ -504,6 +536,7 @@
 				E1D5825127FD444D00190B61 /* SquaresViewController.xib in Resources */,
 				E1EF33BD27F2E5B4002F33DB /* TableViewController.xib in Resources */,
 				E1C00C6327FE6F0C002D83D3 /* EViewController.xib in Resources */,
+				E1C438B328057BD200334ED1 /* ContactDetailViewController.xib in Resources */,
 				E1E07B0127F40109008BF7B3 /* SliderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +554,7 @@
 				E1EF338B27F2E153002F33DB /* AppDelegate.swift in Sources */,
 				E17CA2F827FEC01D0080D607 /* HomeNaviViewController.swift in Sources */,
 				E1D8CB0127FEF3280003AF20 /* ColumnChartView.swift in Sources */,
+				E1C438B228057BD200334ED1 /* ContactDetailViewController.swift in Sources */,
 				E1E07B0B27F40159008BF7B3 /* MonkeyViewController.swift in Sources */,
 				E1D8CB2D27FFC59E0003AF20 /* LoginControl.swift in Sources */,
 				E1D8CB1E27FEF3860003AF20 /* BadgeNumberView.swift in Sources */,
@@ -529,6 +563,7 @@
 				E1EF33AD27F2E549002F33DB /* CustomViewController.swift in Sources */,
 				E1D8CB1527FEF36C0003AF20 /* AvatarViewController.swift in Sources */,
 				E1EF33BC27F2E5B4002F33DB /* TableViewController.swift in Sources */,
+				E1C438A72805735100334ED1 /* CommentsViewController.swift in Sources */,
 				E1D8CAFF27FEF3280003AF20 /* DrawingViewController.swift in Sources */,
 				E1D8CB2A27FEF3930003AF20 /* CustomSliderView.swift in Sources */,
 				E1C00C5D27FE6EF8002D83D3 /* DViewController.swift in Sources */,
@@ -548,6 +583,7 @@
 				E1C00C4827FE6D82002D83D3 /* AViewController.swift in Sources */,
 				E1E07AFB27F400E6008BF7B3 /* ColorViewController.swift in Sources */,
 				E1D5825527FD491200190B61 /* CatAutoLayoutViewController.swift in Sources */,
+				E1C438A128050B4D00334ED1 /* CommentTableViewCell.swift in Sources */,
 				E1EF33CB27F304C5002F33DB /* LoginViewController.swift in Sources */,
 				E1D8CB3427FFF3A40003AF20 /* ProfileViewController.swift in Sources */,
 				E1C00C6227FE6F0C002D83D3 /* EViewController.swift in Sources */,

@@ -61,7 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewControllers = [myNavi, customNavi, tableNavi, collectionNavi, mapNavi, naviNavi, autoLayoutNavi]
         tabbarController.setViewControllers(viewControllers, animated: true)
         tabbarController.tabBar.tintColor = .systemPink
-        tabbarController.selectedIndex = 1
+        tabbarController.selectedIndex = 2
         window?.rootViewController = tabbarController
         tabbarController.tabBar.isTranslucent = false
     }
