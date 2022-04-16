@@ -8,9 +8,8 @@
 import UIKit
 
 final class Exercise12ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }

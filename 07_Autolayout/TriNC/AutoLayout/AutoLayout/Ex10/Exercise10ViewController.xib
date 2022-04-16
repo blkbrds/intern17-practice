@@ -18,42 +18,54 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-x5-oPU">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-FX-Fqa">
+                    <rect key="frame" x="40" y="84" width="200" height="738"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-EN-xhd">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1500" id="88c-ga-7so"/>
-                            </constraints>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qRP-LU-q2b" userLabel="BigView">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q1g-Ei-iCj" userLabel="GreenView">
+                            <rect key="frame" x="50" y="243" width="100" height="100"/>
+                            <color key="backgroundColor" systemColor="systemMintColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fb4-AP-kS9" userLabel="RedView">
+                            <rect key="frame" x="50" y="386" width="100" height="100"/>
+                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wvN-rE-WVr" userLabel="PurpleView">
+                            <rect key="frame" x="50" y="529" width="100" height="209"/>
+                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="DFo-EN-xhd" firstAttribute="top" secondItem="dKa-14-gyK" secondAttribute="top" id="1IL-VL-6vH"/>
-                        <constraint firstItem="DFo-EN-xhd" firstAttribute="leading" secondItem="dKa-14-gyK" secondAttribute="leading" id="5ig-5l-BHp"/>
-                        <constraint firstItem="DFo-EN-xhd" firstAttribute="width" secondItem="r78-zK-dvI" secondAttribute="width" id="XYL-BT-mqB"/>
-                        <constraint firstItem="DFo-EN-xhd" firstAttribute="trailing" secondItem="dKa-14-gyK" secondAttribute="trailing" constant="414" id="Ynw-UH-yNh"/>
-                        <constraint firstItem="DFo-EN-xhd" firstAttribute="bottom" secondItem="dKa-14-gyK" secondAttribute="bottom" constant="1500" id="acL-JA-Xwf"/>
+                        <constraint firstItem="wvN-rE-WVr" firstAttribute="centerX" secondItem="kbA-FX-Fqa" secondAttribute="centerX" id="5tD-aN-ww9"/>
+                        <constraint firstItem="fb4-AP-kS9" firstAttribute="centerX" secondItem="kbA-FX-Fqa" secondAttribute="centerX" id="Uhv-kV-ln6"/>
+                        <constraint firstItem="qRP-LU-q2b" firstAttribute="centerX" secondItem="kbA-FX-Fqa" secondAttribute="centerX" id="lsD-xp-IdP"/>
+                        <constraint firstItem="Q1g-Ei-iCj" firstAttribute="centerX" secondItem="kbA-FX-Fqa" secondAttribute="centerX" id="mBZ-jf-R06"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="dKa-14-gyK"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="r78-zK-dvI"/>
-                </scrollView>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="xDA-x5-oPU" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="AQJ-8R-32f"/>
-                <constraint firstItem="xDA-x5-oPU" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="I9z-WV-VBU"/>
-                <constraint firstItem="xDA-x5-oPU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="O8H-db-KyE"/>
-                <constraint firstItem="xDA-x5-oPU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uLd-6l-QdL"/>
-            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
