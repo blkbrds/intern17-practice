@@ -28,6 +28,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case ex8
         case ex9
         case ex10
+        case ex0011
         case ex12
         
         var controller: UIViewController {
@@ -50,6 +51,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             case .ex8: return Exercise08ViewController()
             case .ex9: return Exercise09ViewController()
             case .ex10: return Exercise10ViewController()
+            case .ex0011: return Exercise0011ViewController()
             case .ex12: return Exercise12ViewController()
             }
         }
