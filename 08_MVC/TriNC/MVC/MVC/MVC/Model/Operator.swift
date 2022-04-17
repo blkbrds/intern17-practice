@@ -15,7 +15,7 @@ enum Operator {
     case div
 }
 
-final class OperatorAction {
+final class CalculatorAction {
 
     // MARK: - Properties
     var number1: String?
