@@ -14,6 +14,7 @@ final class SecondViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    // MARK: - IBActions
     @IBAction func pop(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

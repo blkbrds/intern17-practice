@@ -14,12 +14,14 @@ final class ThirdViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    // MARK: - IBActions
     @IBAction func pop(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - IBActions
     @IBAction func root(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[1])!
+        _ = (self.navigationController?.viewControllers[1])!
         self.navigationController?.popToRootViewController(animated: true)
     }
 }
