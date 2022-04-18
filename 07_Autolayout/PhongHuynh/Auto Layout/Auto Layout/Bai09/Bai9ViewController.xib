@@ -76,7 +76,7 @@
                                         <constraint firstAttribute="height" constant="45" id="WB0-tz-qmu"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                    <state key="normal" title="L"/>
+                                    <state key="normal" title="&lt;"/>
                                     <connections>
                                         <action selector="leftTouchUpInside:" destination="-1" eventType="touchUpInside" id="gX4-rv-v7L"/>
                                     </connections>
@@ -110,7 +110,7 @@ Vị trí 3 button “like, comment, share” sẽ ở phía dưới đoạn tex
                                         <constraint firstAttribute="height" constant="45" id="eUZ-UC-5S8"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                    <state key="normal" title="R"/>
+                                    <state key="normal" title="&gt;"/>
                                     <connections>
                                         <action selector="rightTouchUpInsinde:" destination="-1" eventType="touchUpInside" id="NJ0-9T-M3w"/>
                                     </connections>

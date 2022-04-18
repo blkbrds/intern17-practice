@@ -19,25 +19,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iju-gY-R1j" userLabel="View2">
-                    <rect key="frame" x="260.5" y="398" width="100" height="100"/>
+                    <rect key="frame" x="234.5" y="386" width="124.5" height="124.5"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iju-gY-R1j" secondAttribute="height" multiplier="1:1" id="8Bg-tK-3IO"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-Zg-jqm" userLabel="View1">
-                    <rect key="frame" x="53.5" y="398" width="100" height="100"/>
+                    <rect key="frame" x="55" y="386" width="124.5" height="124.5"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fRO-Zg-jqm" secondAttribute="height" multiplier="1:1" id="8st-TM-9mR"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="iju-gY-R1j" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.241546" id="1ip-LS-Dxe"/>
-                <constraint firstItem="iju-gY-R1j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="3/2" id="5OL-QS-RgP"/>
-                <constraint firstItem="fRO-Zg-jqm" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.111607" id="EzU-Q1-7Wb"/>
-                <constraint firstItem="fRO-Zg-jqm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.241546" id="JNF-Zo-NqU"/>
-                <constraint firstItem="fRO-Zg-jqm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="N0a-9c-eWW"/>
-                <constraint firstItem="iju-gY-R1j" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.111607" id="Tv0-Lm-Ex1"/>
-                <constraint firstItem="fRO-Zg-jqm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1/2" id="bDe-d9-79s"/>
-                <constraint firstItem="iju-gY-R1j" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="od1-Ys-KGY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iju-gY-R1j" secondAttribute="trailing" constant="55" id="ONj-kE-hnk"/>
+                <constraint firstItem="fRO-Zg-jqm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="55" id="V3G-Pn-YFd"/>
+                <constraint firstItem="fRO-Zg-jqm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="VJs-lF-pHV"/>
+                <constraint firstItem="iju-gY-R1j" firstAttribute="leading" secondItem="fRO-Zg-jqm" secondAttribute="trailing" constant="55" id="XpE-38-NSR"/>
+                <constraint firstItem="iju-gY-R1j" firstAttribute="width" secondItem="fRO-Zg-jqm" secondAttribute="width" id="Z82-Gy-hZF"/>
+                <constraint firstItem="iju-gY-R1j" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="g0k-VM-kBR"/>
             </constraints>
             <point key="canvasLocation" x="-346" y="-48"/>
         </view>

@@ -1,11 +1,3 @@
 import UIKit
 
-class Bai4ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-       
-    }
-
-}
+final class Bai4ViewController: UIViewController {}
