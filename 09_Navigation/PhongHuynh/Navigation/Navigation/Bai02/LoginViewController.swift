@@ -1,12 +1,11 @@
 import UIKit
 
-
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet weak var showLabel: UILabel!
+    @IBOutlet private weak var showLabel: UILabel!
     
    
     // MARK: - Life cycle
@@ -14,9 +13,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Login"
-        let rightButton = UIBarButtonItem(title: "Don", style: .plain, target: self, action: #selector(rightAction))
+        let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
-        
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         passwordTextField.returnKeyType = .done
@@ -27,39 +25,51 @@ class LoginViewController: UIViewController {
            passwordTextField.resignFirstResponder()
     }
     
+    // MARK: - Objc functions
     @objc func rightAction() {
-        errolLabel()
+        login()
+        
     }
     
-   
     func clearTextField() {
         usernameTextField.text = ""
         passwordTextField.text = ""
     }
     
-    func errolLabel() {
-        let vc = HomeViewController()
-        if usernameTextField.text == "" && passwordTextField.text == "password" {
-            showLabel.text = "chua nhap username"
-        } else if usernameTextField.text == "username" && passwordTextField.text == "" {
-            showLabel.text = "chua nhap password"
-        } else if usernameTextField.text == "username" && passwordTextField.text == "password" {
+    func login() {
+        guard let userName = usernameTextField.text, let password = passwordTextField.text, !userName.isEmpty, !password.isEmpty else {
+            showLabel.text = "Chua nhap gia tri"
+            return
+        }
+        if DataManager.checkData(userName: userName, password: password) {
+            let vc = HomeViewController()
+            vc.userName = userName
+            vc.delegate = self
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if usernameTextField.text == "" && passwordTextField.text == "" {
-            showLabel.text = "chua nhap dung du lieu"
+        } else {
+            showLabel.text = "Sai username hoac password"
         }
     }
-
 }
 
+// MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            passwordTextField.becomeFirstResponder()
-            if textField.returnKeyType == .done {
-            }
-            return true
+        passwordTextField.becomeFirstResponder()
+        if textField.returnKeyType == .done {
+            login()
         }
+        return true
+    }
 }
 
-    
-
+// MARK: - HomeViewControllerDelegate
+extension LoginViewController: HomeViewControllerDelegate {
+    func controller(view: HomeViewController, needsPerfom actions: HomeViewController.Action) {
+        switch actions {
+        case .logout:
+            usernameTextField.text = ""
+            passwordTextField.text = ""
+        }
+    }
+}

@@ -1,38 +1,52 @@
 import UIKit
 
-protocol HomeDelegate: AnyObject {
-    func didTap(view: HomeViewController, needsPerfom actions: HomeViewController.Action)
+protocol HomeViewControllerDelegate: class {
+    func controller(view: HomeViewController, needsPerfom actions: HomeViewController.Action)
 }
-
-final class HomeViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     enum Action {
-        case tap(username: String, password: String)
+        case logout
     }
     
-    weak var delegate: HomeDelegate?
-    
     // MARK: - IBOutlets
-    @IBOutlet private weak var usernameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var userName: String = ""
+    weak var delegate: HomeViewControllerDelegate?
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "Home"
         let leftButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(leftAction))
         navigationItem.leftBarButtonItem = leftButton
         let rightButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
+        nameLabel.text = userName
     }
     
+    // MARK: - Objc functions
     @objc func leftAction() {
+        if let delegate = delegate {
+            delegate.controller(view: self, needsPerfom: .logout)
+        }
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func rightAction() {
         let vc = EditViewController()
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
+}
 
-
+// MARK: - EditDelegate
+extension HomeViewController: EditDelegate {
+    func didTap(view: EditViewController, needsPerfom actions: EditViewController.Action) {
+        switch actions {
+        case .tap(let userName):
+            nameLabel.text = userName
+        }
+    }
 }

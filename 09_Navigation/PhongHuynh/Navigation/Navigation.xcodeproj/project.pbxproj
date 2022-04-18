@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0B6E52280D43CD0085E82C /* AvartarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0B6E51280D43CD0085E82C /* AvartarView.swift */; };
+		CB0B6E55280D43DF0085E82C /* AvartarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0B6E54280D43DF0085E82C /* AvartarView.xib */; };
+		CB0B6E5B280D446C0085E82C /* HoomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0B6E59280D446C0085E82C /* HoomeViewController.swift */; };
+		CB0B6E5C280D446C0085E82C /* HoomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0B6E5A280D446C0085E82C /* HoomeViewController.xib */; };
 		CB3BCDFF2809865300EA1B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCDFE2809865300EA1B3F /* AppDelegate.swift */; };
 		CB3BCE012809865300EA1B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCE002809865300EA1B3F /* SceneDelegate.swift */; };
 		CB3BCE082809865500EA1B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3BCE072809865500EA1B3F /* Assets.xcassets */; };
@@ -26,9 +30,15 @@
 		CB3BCE3B280BABB700EA1B3F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB3BCE39280BABB700EA1B3F /* HomeViewController.xib */; };
 		CB3BCE3F280BABC900EA1B3F /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCE3D280BABC900EA1B3F /* EditViewController.swift */; };
 		CB3BCE40280BABC900EA1B3F /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB3BCE3E280BABC900EA1B3F /* EditViewController.xib */; };
+		CBED5533280D68F7007FD82D /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBED5532280D68F7007FD82D /* data.plist */; };
+		CBED5536280D6B80007FD82D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBED5535280D6B80007FD82D /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB0B6E51280D43CD0085E82C /* AvartarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvartarView.swift; sourceTree = "<group>"; };
+		CB0B6E54280D43DF0085E82C /* AvartarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvartarView.xib; sourceTree = "<group>"; };
+		CB0B6E59280D446C0085E82C /* HoomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoomeViewController.swift; sourceTree = "<group>"; };
+		CB0B6E5A280D446C0085E82C /* HoomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoomeViewController.xib; sourceTree = "<group>"; };
 		CB3BCDFB2809865300EA1B3F /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3BCDFE2809865300EA1B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB3BCE002809865300EA1B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +60,8 @@
 		CB3BCE39280BABB700EA1B3F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		CB3BCE3D280BABC900EA1B3F /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		CB3BCE3E280BABC900EA1B3F /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		CBED5532280D68F7007FD82D /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		CBED5535280D6B80007FD82D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB0B6E4B280D40620085E82C /* Bai03 */ = {
+			isa = PBXGroup;
+			children = (
+				CB0B6E59280D446C0085E82C /* HoomeViewController.swift */,
+				CB0B6E5A280D446C0085E82C /* HoomeViewController.xib */,
+				CB0B6E51280D43CD0085E82C /* AvartarView.swift */,
+				CB0B6E54280D43DF0085E82C /* AvartarView.xib */,
+			);
+			path = Bai03;
+			sourceTree = "<group>";
+		};
 		CB3BCDF22809865300EA1B3F = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +105,7 @@
 		CB3BCDFD2809865300EA1B3F /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				CB0B6E4B280D40620085E82C /* Bai03 */,
 				CB3BCE31280AC77800EA1B3F /* Bai02 */,
 				CB3BCE30280AC72B00EA1B3F /* Bai01 */,
 				CB3BCDFE2809865300EA1B3F /* AppDelegate.swift */,
@@ -118,6 +142,8 @@
 				CB3BCE39280BABB700EA1B3F /* HomeViewController.xib */,
 				CB3BCE3D280BABC900EA1B3F /* EditViewController.swift */,
 				CB3BCE3E280BABC900EA1B3F /* EditViewController.xib */,
+				CBED5532280D68F7007FD82D /* data.plist */,
+				CBED5535280D6B80007FD82D /* DataManager.swift */,
 			);
 			path = Bai02;
 			sourceTree = "<group>";
@@ -180,9 +206,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB3BCE1A2809868C00EA1B3F /* NavigationViewController.xib in Resources */,
+				CB0B6E55280D43DF0085E82C /* AvartarView.xib in Resources */,
 				CB3BCE29280ABBDE00EA1B3F /* FourViewController.xib in Resources */,
+				CB0B6E5C280D446C0085E82C /* HoomeViewController.xib in Resources */,
 				CB3BCE082809865500EA1B3F /* Assets.xcassets in Resources */,
 				CB3BCE2428098C4E00EA1B3F /* ThirdViewController.xib in Resources */,
+				CBED5533280D68F7007FD82D /* data.plist in Resources */,
 				CB3BCE2E280ABCAB00EA1B3F /* FiveViewController.xib in Resources */,
 				CB3BCE36280BABA700EA1B3F /* LoginViewController.xib in Resources */,
 				CB3BCE40280BABC900EA1B3F /* EditViewController.xib in Resources */,
@@ -205,9 +234,12 @@
 				CB3BCE28280ABBDE00EA1B3F /* FourViewController.swift in Sources */,
 				CB3BCE35280BABA700EA1B3F /* LoginViewController.swift in Sources */,
 				CB3BCE3A280BABB700EA1B3F /* HomeViewController.swift in Sources */,
+				CB0B6E52280D43CD0085E82C /* AvartarView.swift in Sources */,
 				CB3BCE2328098C4E00EA1B3F /* ThirdViewController.swift in Sources */,
 				CB3BCDFF2809865300EA1B3F /* AppDelegate.swift in Sources */,
 				CB3BCE012809865300EA1B3F /* SceneDelegate.swift in Sources */,
+				CBED5536280D6B80007FD82D /* DataManager.swift in Sources */,
+				CB0B6E5B280D446C0085E82C /* HoomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
