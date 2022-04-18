@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CViewController" customModule="View" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3e-xA-Smj">
+                    <rect key="frame" x="191" y="273" width="32" height="30"/>
+                    <state key="normal" title="Next"/>
+                    <connections>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="UhI-1i-wU0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aov-eQ-DAP">
+                    <rect key="frame" x="177.5" y="433" width="59" height="30"/>
+                    <state key="normal" title="Previous"/>
+                    <connections>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Hze-O9-uBA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htv-i9-jLe">
+                    <rect key="frame" x="191" y="593" width="32" height="30"/>
+                    <state key="normal" title="Root"/>
+                    <connections>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="510-Oi-AZG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="aov-eQ-DAP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="EQW-8d-Apn"/>
+                <constraint firstItem="aov-eQ-DAP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FGn-Wg-rt8"/>
+                <constraint firstItem="aov-eQ-DAP" firstAttribute="top" secondItem="G3e-xA-Smj" secondAttribute="bottom" constant="130" id="IdV-p3-LL2"/>
+                <constraint firstItem="G3e-xA-Smj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fjO-S4-7ky"/>
+                <constraint firstItem="Htv-i9-jLe" firstAttribute="top" secondItem="aov-eQ-DAP" secondAttribute="bottom" constant="130" id="iMR-cm-dc1"/>
+                <constraint firstItem="Htv-i9-jLe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wZj-oE-0cL"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="93"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
