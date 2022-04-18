@@ -57,7 +57,7 @@ final class CalculatorViewController: UIViewController {
         guard let number1 = calculatorAction.number1, let number2 = calculatorAction.numnber2 else { return nil }
         guard let numberOne = Float(number1), let numberTwo = Float(number2), let operatorAction = calculatorAction.operatorAction else { return nil }
         
-        // Singleton
+        // singleton
         return String(Calculator.shared().resultNumber(number1: numberOne, number2: numberTwo, operatorAction: operatorAction))
     }
 }

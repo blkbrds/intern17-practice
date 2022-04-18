@@ -33,7 +33,7 @@ final class CalculationView: UIView {
     }
     
     // MARK: - IBActions
-    @IBAction func numberButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func numberButtonTouchUpInside(_ sender: UIButton) {
         guard let number = sender.titleLabel?.text else { return }
         delegate?.view(self, needsPerforms: .sendNumber(number: number))
         guard let result = datasource?.getData(self) else { return }
@@ -45,7 +45,7 @@ final class CalculationView: UIView {
         delegate?.view(self, needsPerforms: .sendOperator(operattor: operation))
     }
     
-    @IBAction func handleDeleteButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func handleDeleteButtonTouchUpInside(_ sender: Any) {
         resultLabel.text?.removeAll()
         delegate?.view(self, needsPerforms: .deleteNumber)
     }
