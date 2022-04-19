@@ -28,13 +28,13 @@ final class Exercise10ViewController: UIViewController {
     @IBOutlet private weak var yellowViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var orangeViewHeightConstraint: NSLayoutConstraint!
     
+    // MARK: - Properties
     var maxConstraint: NSLayoutConstraint?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
         maxConstraint = greenViewHeightConstraint
     }
     
@@ -57,8 +57,8 @@ final class Exercise10ViewController: UIViewController {
         guard let maxConstraint = maxConstraint else {
             return
         }
-
         guard view.bounds.size.height != maxConstraint.constant else { return }
+        
         UIView.animate(withDuration: 1) {
             let tag = view.tag
             let viewType = TapGesture(rawValue: tag)

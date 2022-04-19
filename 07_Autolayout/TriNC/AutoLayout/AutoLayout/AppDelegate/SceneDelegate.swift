@@ -30,6 +30,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case ex10
         case ex0011
         case ex12
+        case ex14
         
         var controller: UIViewController {
             switch self {
@@ -53,6 +54,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             case .ex10: return Exercise10ViewController()
             case .ex0011: return Exercise0011ViewController()
             case .ex12: return Exercise12ViewController()
+            case .ex14: return Exercise14ViewController()
             }
         }
     }
@@ -62,7 +64,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let vc = ControllerType.ex10.controller
+        let vc = ControllerType.ex14.controller
         window.rootViewController = vc
         self.window = window
         window.makeKeyAndVisible()
