@@ -113,7 +113,7 @@ struct CStack {
     }
     
     mutating func push( value: Int, capacity: Int) {             //thêm một phần tử vào stack
-        if isFull(stack: capacity) == true {
+        if isFull(stack: capacity) {
             print("Stack is full. Overflow condition!");
         } else {
             top += 1
