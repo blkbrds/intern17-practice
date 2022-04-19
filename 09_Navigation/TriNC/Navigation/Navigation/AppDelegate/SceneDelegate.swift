@@ -13,20 +13,21 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     enum ControllerType {
         case ex1
+        case ex2
         
         var controller: UIViewController {
             switch self {
             case .ex1: return ExerciseAViewController()
+            case .ex2: return LoginViewController()
             }
         }
     }
     
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let vc = ControllerType.ex1.controller
+        let vc = ControllerType.ex2.controller
         let nav = UINavigationController(rootViewController: vc)
         window.rootViewController = nav
         window.makeKeyAndVisible()
