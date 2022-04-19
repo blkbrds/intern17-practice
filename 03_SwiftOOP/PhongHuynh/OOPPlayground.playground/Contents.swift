@@ -9,34 +9,38 @@ struct PhanSo {
         self.tuSo = tuso
         self.mauSo = mauso
     }
+    
+    func inPhanSo() -> String {
+        return "\(tuSo)/\(mauSo)"
+    }
 }
 
-func congPS(f1: PhanSo, f2:PhanSo) -> Float {
+func congPS(f1: PhanSo, f2:PhanSo) -> PhanSo {
     let tu = f1.tuSo * f2.mauSo + f2.tuSo * f1.mauSo
     let mau = f1.mauSo * f2.mauSo
-    return tu / mau
+    return PhanSo(tuso: tu, mauso: mau)
 }
 
-func truPS(f1: PhanSo, f2:PhanSo) -> Float {
+func truPS(f1: PhanSo, f2:PhanSo) -> PhanSo {
     let tu = f1.tuSo * f2.mauSo - f2.tuSo * f1.mauSo
     let mau = f1.mauSo * f2.mauSo
-    return tu / mau
+    return PhanSo(tuso: tu, mauso: mau)
 }
 
-func nhanPS(f1: PhanSo, f2:PhanSo) -> Float {
+func nhanPS(f1: PhanSo, f2:PhanSo) -> PhanSo {
     let tu = f1.tuSo * f2.tuSo
     let mau = f1.mauSo * f2.mauSo
-    return tu * mau
+    return PhanSo(tuso: tu, mauso: mau)
 }
 
-func chiaPS(f1: PhanSo, f2:PhanSo) -> Float {
+func chiaPS(f1: PhanSo, f2:PhanSo) -> PhanSo {
     let tu = f1.tuSo * f2.mauSo
     let mau = f1.mauSo * f2.tuSo
-    return tu / mau
+    return PhanSo(tuso: tu, mauso: mau)
 }
 let ps1 = PhanSo(tuso: 3, mauso: 4)
 let ps2 = PhanSo(tuso: 5, mauso: 4)
-print("kết quả cộng, trừ, nhân, chia hai phân số lần lượt là: \(congPS(f1: ps1, f2: ps2)), \(truPS(f1: ps1, f2: ps2)), \(nhanPS(f1: ps1, f2: ps2)), \(chiaPS(f1: ps1, f2: ps2))")
+print("kết quả cộng, trừ, nhân, chia hai phân số lần lượt là: \(congPS(f1: ps1, f2: ps2).inPhanSo()), \(truPS(f1: ps1, f2: ps2).inPhanSo()), \(nhanPS(f1: ps1, f2: ps2).inPhanSo()), \(chiaPS(f1: ps1, f2: ps2).inPhanSo())")
 
 //Bai 02, Bài 03, Bài 04 ----------------------------------------------------------------------------------------------------------------
 class DaGiac {
