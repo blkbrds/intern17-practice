@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         configTabbar()
-        window.rootViewController = LoginViewController()
+        changeFlow(with: .logout)
         window.makeKeyAndVisible()
     }
     

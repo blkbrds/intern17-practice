@@ -85,7 +85,7 @@ final class LoginViewController: UIViewController {
         navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
     
-    @IBAction private func ForgotPasswordTouchUpInside(_ sender: UIButton) {
+    @IBAction private func forgotPasswordTouchUpInside(_ sender: UIButton) {
         navigationController?.pushViewController(ForgotPassWordViewController(), animated: true)
     }
     

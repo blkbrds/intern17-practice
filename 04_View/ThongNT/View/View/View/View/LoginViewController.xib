@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -25,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6s-ST-jHW">
-                    <rect key="frame" x="79" y="122" width="256" height="34"/>
+                    <rect key="frame" x="79" y="78" width="256" height="34"/>
                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
                     <connections>
@@ -33,7 +32,7 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwork" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LDd-ck-q0l">
-                    <rect key="frame" x="79" y="199" width="256" height="34"/>
+                    <rect key="frame" x="79" y="155" width="256" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                     <connections>
@@ -41,7 +40,7 @@
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbJ-TB-H4P">
-                    <rect key="frame" x="79" y="375" width="41" height="30"/>
+                    <rect key="frame" x="79" y="331" width="41" height="30"/>
                     <color key="backgroundColor" name="AccentColor"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Login">
@@ -52,13 +51,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVL-Gs-MST" userLabel="inform label">
-                    <rect key="frame" x="81" y="259" width="252" height="0.0"/>
+                    <rect key="frame" x="81" y="215" width="252" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" systemColor="systemPinkColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKj-31-JkO">
-                    <rect key="frame" x="296" y="375" width="39" height="30"/>
+                    <rect key="frame" x="296" y="331" width="39" height="30"/>
                     <color key="backgroundColor" name="AccentColor"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Clear">
@@ -69,14 +68,14 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="il9-B2-MfT" userLabel="Forgot Password Button">
-                    <rect key="frame" x="143.5" y="453" width="127" height="30"/>
+                    <rect key="frame" x="143.5" y="409" width="127" height="30"/>
                     <state key="normal" title="Forgot Password ?"/>
                     <connections>
-                        <action selector="ForgotPasswordTouchUpInside:" destination="-1" eventType="touchUpInside" id="xbh-Xf-vhd"/>
+                        <action selector="forgotPasswordTouchUpInside:" destination="-1" eventType="touchUpInside" id="xbh-Xf-vhd"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zH-BR-OEc" userLabel="Register Button">
-                    <rect key="frame" x="178.5" y="512" width="57" height="30"/>
+                    <rect key="frame" x="178.5" y="468" width="57" height="30"/>
                     <state key="normal" title="Register"/>
                     <connections>
                         <action selector="registerTouchUpInside:" destination="-1" eventType="touchUpInside" id="SID-Sm-91i"/>
