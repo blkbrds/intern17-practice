@@ -5,7 +5,6 @@ final class Bai2ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configUI(names: ["name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8", "name9"])
     }
     
@@ -39,21 +38,17 @@ final class Bai2ViewController: UIViewController {
         userAvatar.frame = frame
         userAvatar.contentMode = .scaleToFill
         userView.addSubview(userAvatar)
-        
-        //Add user name
-        let Name = UILabel(frame: CGRect(x: 0, y: userView.bounds.height - 20, width: userView.bounds.width, height: 20))
-        Name.text = name
-        Name.backgroundColor = .lightGray
-        Name.textColor = .blue
-        userView.addSubview(Name)
-        
-        //Add button
-        let button = UIButton(frame: frame)
+        let nameLabel = UILabel(frame: CGRect(x: 0, y: userView.bounds.height - 20, width: userView.bounds.width, height: 20))
+        nameLabel.text = name
+        nameLabel.backgroundColor = .lightGray
+        nameLabel.textColor = .blue
+        userView.addSubview(nameLabel)
+        let clickButton = UIButton(frame: frame)
         let gesture = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
         gesture.name = name
-        button.addGestureRecognizer(gesture)
-        button.backgroundColor = .clear
-        userView.addSubview(button)
+        clickButton.addGestureRecognizer(gesture)
+        clickButton.backgroundColor = .clear
+        userView.addSubview(clickButton)
         return userView
     }
     

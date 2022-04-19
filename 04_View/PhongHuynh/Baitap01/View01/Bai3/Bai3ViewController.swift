@@ -25,13 +25,22 @@ final class Bai3ViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    func login() -> Bool {
-        return usernameTextField.text == username && passwordTextField.text == password
+    func login() {
+        guard let username = usernameTextField.text, let password = passwordTextField.text, !username.isEmpty, !password.isEmpty else {
+            errorLabel.text = "chưa nhập user hoặc password"
+            return
+        }
+        if username == "Admin" && password == "Admin123" {
+            errorLabel.isHidden = true
+        } else {
+            errorLabel.text = "nhập sai username hoặc password"
+            errorLabel.isHidden = false
+        }
     }
     
     // MARK: - IBActions
     @IBAction private func loginButtonTouchUpInside(_ sender: Any) {
-        errorLabel.isHidden = login()
+        login()
     }
     
     // MARK: - IBActions
@@ -46,7 +55,7 @@ extension Bai3ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passwordTextField.becomeFirstResponder()
         if textField.returnKeyType == .done {
-            errorLabel.isHidden = login()
+            login()
         }
         return true
     }

@@ -43,5 +43,4 @@ private func setupUI() {
     view.transform = CGAffineTransform(rotationAngle: 0)
     }
 }
-
 }
