@@ -113,7 +113,7 @@ struct CStack {
     }
     
     mutating func push( value: Int, capacity: Int) {             //thêm một phần tử vào stack
-        if(isFull(stack: capacity) == true) {
+        if isFull(stack: capacity) == true {
             print("Stack is full. Overflow condition!");
         } else {
             top += 1
@@ -447,10 +447,3 @@ struct A {
 }
 var nhapn = A(s: 0, n: 10)
 print("tổng số vừa nhập là: \(nhapn.tinhTong())")
-
-
-
-
-
-
-
