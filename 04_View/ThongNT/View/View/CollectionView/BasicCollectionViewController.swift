@@ -51,6 +51,7 @@ extension BasicCollectionViewController: UICollectionViewDataSource {
 
 final class BasicCollectionViewCell: UICollectionViewCell {
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         label.font = UIFont.boldSystemFont(ofSize: 20)
