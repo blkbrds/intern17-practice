@@ -19,7 +19,7 @@ final class CustomViewController: UIViewController {
     private func setupUI() {
         view.subviews
             .compactMap { $0 as? UIButton }
-            .forEach { configButton($0)}
+            .forEach { configButton($0) }
         
         self.title = "Custom View"
     }

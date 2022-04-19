@@ -51,11 +51,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let naviNavi = UINavigationController(rootViewController: naviVC)
         naviNavi.tabBarItem = UITabBarItem(title: "Navi", image: UIImage(systemName: "arrow.up"), tag: 5)
         
+        // AutoLayoutViewController
+        let autoLayoutVC = AutoLayoutViewController()
+        let autoLayoutNavi = UINavigationController(rootViewController: autoLayoutVC)
+        autoLayoutNavi.tabBarItem = UITabBarItem(title: "Auto Layout", image: UIImage(systemName: "map"), tag: 6)
+            
         // Cofig Tapbar controller
         let tabbarController = UITabBarController()
-        tabbarController.viewControllers = [myNavi, customNavi, tableNavi, collectionNavi, mapNavi, naviNavi]
+        let viewControllers = [myNavi, customNavi, tableNavi, collectionNavi, mapNavi, naviNavi, autoLayoutNavi]
+        tabbarController.setViewControllers(viewControllers, animated: true)
         tabbarController.tabBar.tintColor = .systemPink
-        tabbarController.selectedIndex = 1
+        tabbarController.selectedIndex = 2
         window?.rootViewController = tabbarController
+        tabbarController.tabBar.isTranslucent = false
     }
 }

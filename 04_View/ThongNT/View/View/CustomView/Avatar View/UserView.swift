@@ -7,28 +7,28 @@
 
 import UIKit
 
-protocol UserViewDelegate {
-    func didTap(view: UserView, count: Int)
+protocol UserViewDelegate: AnyObject {
+    func didTap(view: UserView, userInfo: UserInfo)
 }
 
 final class UserView: UIView {
     
     private var count: Int = 0
-    var delegate: UserViewDelegate?
+    private var userInfo: UserInfo = UserInfo(username: "", userImage: "")
+    weak var delegate: UserViewDelegate?
     
     @IBOutlet private weak var userNameLabel: UILabel!
-    @IBOutlet private weak var userImage: UIImageView!
-
+    @IBOutlet private weak var userImageView: UIImageView!
+    
     @IBAction private func tapButton(_ sender: UIButton) {
-        count += 1
-        userNameLabel.text = "\(count)"
         guard let delegate = delegate else { return }
-        delegate.didTap(view: self, count: count)
+        delegate.didTap(view: self, userInfo: userInfo)
     }
     
     func setDataForUser(user: UserInfo) {
+        userInfo = user
         userNameLabel.text = user.username
-        userImage.image = UIImage(named: user.userImage)
-        userImage.contentMode = .scaleToFill
+        userImageView.image = UIImage(named: user.userImage)
+        userImageView.contentMode = .scaleToFill
     }
 }

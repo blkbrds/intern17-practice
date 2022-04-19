@@ -7,31 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E13CB2EE28092EF500AEBA30 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CB2EC28092EF500AEBA30 /* CustomCollectionViewCell.swift */; };
-		E13CB2EF28092EF500AEBA30 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13CB2ED28092EF500AEBA30 /* CustomCollectionViewCell.xib */; };
-		E13CB2F7280D141600AEBA30 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CB2F6280D141600AEBA30 /* CustomLayout.swift */; };
-		E13CB302280D1CEB00AEBA30 /* BasicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13CB300280D1CEB00AEBA30 /* BasicCollectionViewController.swift */; };
-		E13CB303280D1CEB00AEBA30 /* BasicCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13CB301280D1CEB00AEBA30 /* BasicCollectionViewController.xib */; };
-		E167C7C227FBE42800C4AC31 /* DatePickerCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167C7C127FBE42800C4AC31 /* DatePickerCustomView.swift */; };
-		E167C7C527FBE43400C4AC31 /* DatePickerCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E167C7C427FBE43400C4AC31 /* DatePickerCustomView.xib */; };
-		E17C4A0327FB2A010026D22F /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C4A0227FB2A010026D22F /* BadgeNumberView.swift */; };
-		E17C4A0727FB2A230026D22F /* BadgeNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17C4A0627FB2A230026D22F /* BadgeNumberView.xib */; };
-		E1B0122327F6E8AC00021256 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B0122127F6E8AC00021256 /* AvatarViewController.swift */; };
-		E1B0122427F6E8AC00021256 /* AvatarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B0122227F6E8AC00021256 /* AvatarViewController.xib */; };
-		E1B0122827F6E8CA00021256 /* MySliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B0122627F6E8CA00021256 /* MySliderViewController.swift */; };
-		E1B0122927F6E8CA00021256 /* MySliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B0122727F6E8CA00021256 /* MySliderViewController.xib */; };
-		E1B0122D27F6E8E400021256 /* BadgeNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B0122B27F6E8E400021256 /* BadgeNumberViewController.swift */; };
-		E1B0122E27F6E8E400021256 /* BadgeNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B0122C27F6E8E400021256 /* BadgeNumberViewController.xib */; };
-		E1B0123227F6E8F700021256 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B0123027F6E8F700021256 /* DatePickerViewController.swift */; };
-		E1B0123327F6E8F700021256 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B0123127F6E8F700021256 /* DatePickerViewController.xib */; };
-		E1C8A94F27F9494200BDD4DF /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8A94E27F9494200BDD4DF /* UserView.swift */; };
-		E1C8A95227F9495900BDD4DF /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C8A95127F9495900BDD4DF /* UserView.xib */; };
-		E1C8A95627F94FDE00BDD4DF /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8A95527F94FDE00BDD4DF /* CustomSliderView.swift */; };
-		E1C8A95927F94FF300BDD4DF /* CustomSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C8A95827F94FF300BDD4DF /* CustomSliderView.xib */; };
-		E1D5822F27FC423200190B61 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5822D27FC423200190B61 /* DrawingViewController.swift */; };
-		E1D5823027FC423200190B61 /* DrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5822E27FC423200190B61 /* DrawingViewController.xib */; };
-		E1D5823327FC427A00190B61 /* ColumnChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5823227FC427A00190B61 /* ColumnChartView.swift */; };
-		E1D5823627FC428900190B61 /* ColumnChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5823527FC428900190B61 /* ColumnChartView.xib */; };
+		E17CA2F827FEC01D0080D607 /* HomeNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA2F627FEC01D0080D607 /* HomeNaviViewController.swift */; };
+		E17CA2F927FEC01D0080D607 /* HomeNaviViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17CA2F727FEC01D0080D607 /* HomeNaviViewController.xib */; };
+		E17CA2FD27FEC0870080D607 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA2FB27FEC0870080D607 /* EditViewController.swift */; };
+		E17CA2FE27FEC0870080D607 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17CA2FC27FEC0870080D607 /* EditViewController.xib */; };
+		E17CA30227FECCBE0080D607 /* MyInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E17CA30127FECCBE0080D607 /* MyInfo.plist */; };
+		E1C00C4827FE6D82002D83D3 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C00C4627FE6D82002D83D3 /* AViewController.swift */; };
+		E1C00C4927FE6D82002D83D3 /* AViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C00C4727FE6D82002D83D3 /* AViewController.xib */; };
+		E1C00C4E27FE6D8F002D83D3 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C00C4C27FE6D8F002D83D3 /* BViewController.swift */; };
+		E1C00C4F27FE6D8F002D83D3 /* BViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C00C4D27FE6D8F002D83D3 /* BViewController.xib */; };
+		E1C00C5827FE6EE9002D83D3 /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C00C5627FE6EE9002D83D3 /* CViewController.swift */; };
+		E1C00C5927FE6EE9002D83D3 /* CViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C00C5727FE6EE9002D83D3 /* CViewController.xib */; };
+		E1C00C5D27FE6EF8002D83D3 /* DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C00C5B27FE6EF8002D83D3 /* DViewController.swift */; };
+		E1C00C5E27FE6EF8002D83D3 /* DViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C00C5C27FE6EF8002D83D3 /* DViewController.xib */; };
+		E1C00C6227FE6F0C002D83D3 /* EViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C00C6027FE6F0C002D83D3 /* EViewController.swift */; };
+		E1C00C6327FE6F0C002D83D3 /* EViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C00C6127FE6F0C002D83D3 /* EViewController.xib */; };
+		E1C438942803E35C00334ED1 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1C438932803E35C00334ED1 /* Contacts.plist */; };
+		E1C438A128050B4D00334ED1 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4389F28050B4D00334ED1 /* CommentTableViewCell.swift */; };
+		E1C438A228050B4D00334ED1 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C438A028050B4D00334ED1 /* CommentTableViewCell.xib */; };
+		E1C438A72805735100334ED1 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C438A52805735100334ED1 /* CommentsViewController.swift */; };
+		E1C438A82805735100334ED1 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C438A62805735100334ED1 /* CommentsViewController.xib */; };
+		E1C438B228057BD200334ED1 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C438B028057BD200334ED1 /* ContactDetailViewController.swift */; };
+		E1C438B328057BD200334ED1 /* ContactDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C438B128057BD200334ED1 /* ContactDetailViewController.xib */; };
+		E1D5824327FD3CA000190B61 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5824127FD3CA000190B61 /* AutoLayoutViewController.swift */; };
+		E1D5824427FD3CA000190B61 /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5824227FD3CA000190B61 /* AutoLayoutViewController.xib */; };
+		E1D5824A27FD3D1C00190B61 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5824827FD3D1C00190B61 /* SquareViewController.swift */; };
+		E1D5824B27FD3D1C00190B61 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5824927FD3D1C00190B61 /* SquareViewController.xib */; };
+		E1D5825027FD444D00190B61 /* SquaresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5824E27FD444D00190B61 /* SquaresViewController.swift */; };
+		E1D5825127FD444D00190B61 /* SquaresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5824F27FD444D00190B61 /* SquaresViewController.xib */; };
+		E1D5825527FD491200190B61 /* CatAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5825327FD491200190B61 /* CatAutoLayoutViewController.swift */; };
+		E1D5825627FD491200190B61 /* CatAutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5825427FD491200190B61 /* CatAutoLayoutViewController.xib */; };
+		E1D5825E27FD894B00190B61 /* DumbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5825D27FD894B00190B61 /* DumbData.swift */; };
+		E1D8CAFF27FEF3280003AF20 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CAFB27FEF3280003AF20 /* DrawingViewController.swift */; };
+		E1D8CB0027FEF3280003AF20 /* DrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CAFC27FEF3280003AF20 /* DrawingViewController.xib */; };
+		E1D8CB0127FEF3280003AF20 /* ColumnChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CAFD27FEF3280003AF20 /* ColumnChartView.swift */; };
+		E1D8CB0227FEF3280003AF20 /* ColumnChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CAFE27FEF3280003AF20 /* ColumnChartView.xib */; };
+		E1D8CB0927FEF3380003AF20 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB0527FEF3380003AF20 /* DatePickerViewController.swift */; };
+		E1D8CB0A27FEF3380003AF20 /* DatePickerCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB0627FEF3380003AF20 /* DatePickerCustomView.swift */; };
+		E1D8CB0B27FEF3380003AF20 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CB0727FEF3380003AF20 /* DatePickerViewController.xib */; };
+		E1D8CB0C27FEF3380003AF20 /* DatePickerCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CB0827FEF3380003AF20 /* DatePickerCustomView.xib */; };
+		E1D8CB1327FEF36C0003AF20 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB0F27FEF36C0003AF20 /* UserView.swift */; };
+		E1D8CB1427FEF36C0003AF20 /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CB1027FEF36C0003AF20 /* UserView.xib */; };
+		E1D8CB1527FEF36C0003AF20 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB1127FEF36C0003AF20 /* AvatarViewController.swift */; };
+		E1D8CB1627FEF36C0003AF20 /* AvatarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CB1227FEF36C0003AF20 /* AvatarViewController.xib */; };
+		E1D8CB1D27FEF3860003AF20 /* BadgeNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CB1927FEF3860003AF20 /* BadgeNumberView.xib */; };
+		E1D8CB1E27FEF3860003AF20 /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB1A27FEF3860003AF20 /* BadgeNumberView.swift */; };
+		E1D8CB1F27FEF3860003AF20 /* BadgeNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CB1B27FEF3860003AF20 /* BadgeNumberViewController.xib */; };
+		E1D8CB2027FEF3860003AF20 /* BadgeNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB1C27FEF3860003AF20 /* BadgeNumberViewController.swift */; };
+		E1D8CB2727FEF3930003AF20 /* CustomSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CB2327FEF3930003AF20 /* CustomSliderView.xib */; };
+		E1D8CB2827FEF3930003AF20 /* MySliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CB2427FEF3930003AF20 /* MySliderViewController.xib */; };
+		E1D8CB2927FEF3930003AF20 /* MySliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB2527FEF3930003AF20 /* MySliderViewController.swift */; };
+		E1D8CB2A27FEF3930003AF20 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB2627FEF3930003AF20 /* CustomSliderView.swift */; };
+		E1D8CB2D27FFC59E0003AF20 /* LoginControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB2C27FFC59E0003AF20 /* LoginControl.swift */; };
+		E1D8CB3427FFF3A40003AF20 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8CB3227FFF3A40003AF20 /* ProfileViewController.swift */; };
+		E1D8CB3527FFF3A40003AF20 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D8CB3327FFF3A40003AF20 /* ProfileViewController.xib */; };
 		E1E07AFB27F400E6008BF7B3 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E07AF927F400E6008BF7B3 /* ColorViewController.swift */; };
 		E1E07AFC27F400E6008BF7B3 /* ColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E07AFA27F400E6008BF7B3 /* ColorViewController.xib */; };
 		E1E07B0027F40109008BF7B3 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E07AFE27F40109008BF7B3 /* SliderViewController.swift */; };
@@ -58,34 +87,68 @@
 		E1EF33C727F2E5D4002F33DB /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EF33C527F2E5D4002F33DB /* MapViewController.xib */; };
 		E1EF33CB27F304C5002F33DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF33C927F304C5002F33DB /* LoginViewController.swift */; };
 		E1EF33CC27F304C5002F33DB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EF33CA27F304C5002F33DB /* LoginViewController.xib */; };
+		E1FAC8CD280E4A50006F31AB /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAC8C8280E4A50006F31AB /* CustomCollectionViewCell.swift */; };
+		E1FAC8CE280E4A50006F31AB /* BasicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAC8C9280E4A50006F31AB /* BasicCollectionViewController.swift */; };
+		E1FAC8CF280E4A50006F31AB /* BasicCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FAC8CA280E4A50006F31AB /* BasicCollectionViewController.xib */; };
+		E1FAC8D0280E4A50006F31AB /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FAC8CB280E4A50006F31AB /* CustomCollectionViewCell.xib */; };
+		E1FAC8D1280E4A50006F31AB /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAC8CC280E4A50006F31AB /* CustomLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E13CB2EC28092EF500AEBA30 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
-		E13CB2ED28092EF500AEBA30 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
-		E13CB2F6280D141600AEBA30 /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
-		E13CB300280D1CEB00AEBA30 /* BasicCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewController.swift; sourceTree = "<group>"; };
-		E13CB301280D1CEB00AEBA30 /* BasicCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicCollectionViewController.xib; sourceTree = "<group>"; };
-		E167C7C127FBE42800C4AC31 /* DatePickerCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCustomView.swift; sourceTree = "<group>"; };
-		E167C7C427FBE43400C4AC31 /* DatePickerCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerCustomView.xib; sourceTree = "<group>"; };
-		E17C4A0227FB2A010026D22F /* BadgeNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
-		E17C4A0627FB2A230026D22F /* BadgeNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgeNumberView.xib; sourceTree = "<group>"; };
-		E1B0122127F6E8AC00021256 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
-		E1B0122227F6E8AC00021256 /* AvatarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarViewController.xib; sourceTree = "<group>"; };
-		E1B0122627F6E8CA00021256 /* MySliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderViewController.swift; sourceTree = "<group>"; };
-		E1B0122727F6E8CA00021256 /* MySliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySliderViewController.xib; sourceTree = "<group>"; };
-		E1B0122B27F6E8E400021256 /* BadgeNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumberViewController.swift; sourceTree = "<group>"; };
-		E1B0122C27F6E8E400021256 /* BadgeNumberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgeNumberViewController.xib; sourceTree = "<group>"; };
-		E1B0123027F6E8F700021256 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
-		E1B0123127F6E8F700021256 /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
-		E1C8A94E27F9494200BDD4DF /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		E1C8A95127F9495900BDD4DF /* UserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
-		E1C8A95527F94FDE00BDD4DF /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
-		E1C8A95827F94FF300BDD4DF /* CustomSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSliderView.xib; sourceTree = "<group>"; };
-		E1D5822D27FC423200190B61 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
-		E1D5822E27FC423200190B61 /* DrawingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingViewController.xib; sourceTree = "<group>"; };
-		E1D5823227FC427A00190B61 /* ColumnChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnChartView.swift; sourceTree = "<group>"; };
-		E1D5823527FC428900190B61 /* ColumnChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColumnChartView.xib; sourceTree = "<group>"; };
+		E17CA2F627FEC01D0080D607 /* HomeNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNaviViewController.swift; sourceTree = "<group>"; };
+		E17CA2F727FEC01D0080D607 /* HomeNaviViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeNaviViewController.xib; sourceTree = "<group>"; };
+		E17CA2FB27FEC0870080D607 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		E17CA2FC27FEC0870080D607 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		E17CA30127FECCBE0080D607 /* MyInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyInfo.plist; sourceTree = "<group>"; };
+		E1C00C4627FE6D82002D83D3 /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
+		E1C00C4727FE6D82002D83D3 /* AViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AViewController.xib; sourceTree = "<group>"; };
+		E1C00C4C27FE6D8F002D83D3 /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
+		E1C00C4D27FE6D8F002D83D3 /* BViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BViewController.xib; sourceTree = "<group>"; };
+		E1C00C5627FE6EE9002D83D3 /* CViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
+		E1C00C5727FE6EE9002D83D3 /* CViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CViewController.xib; sourceTree = "<group>"; };
+		E1C00C5B27FE6EF8002D83D3 /* DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DViewController.swift; sourceTree = "<group>"; };
+		E1C00C5C27FE6EF8002D83D3 /* DViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DViewController.xib; sourceTree = "<group>"; };
+		E1C00C6027FE6F0C002D83D3 /* EViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EViewController.swift; sourceTree = "<group>"; };
+		E1C00C6127FE6F0C002D83D3 /* EViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EViewController.xib; sourceTree = "<group>"; };
+		E1C438932803E35C00334ED1 /* Contacts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Contacts.plist; sourceTree = "<group>"; };
+		E1C4389F28050B4D00334ED1 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		E1C438A028050B4D00334ED1 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		E1C438A52805735100334ED1 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		E1C438A62805735100334ED1 /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
+		E1C438B028057BD200334ED1 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		E1C438B128057BD200334ED1 /* ContactDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailViewController.xib; sourceTree = "<group>"; };
+		E1D5824127FD3CA000190B61 /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
+		E1D5824227FD3CA000190B61 /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
+		E1D5824827FD3D1C00190B61 /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
+		E1D5824927FD3D1C00190B61 /* SquareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
+		E1D5824E27FD444D00190B61 /* SquaresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresViewController.swift; sourceTree = "<group>"; };
+		E1D5824F27FD444D00190B61 /* SquaresViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquaresViewController.xib; sourceTree = "<group>"; };
+		E1D5825327FD491200190B61 /* CatAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		E1D5825427FD491200190B61 /* CatAutoLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatAutoLayoutViewController.xib; sourceTree = "<group>"; };
+		E1D5825D27FD894B00190B61 /* DumbData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumbData.swift; sourceTree = "<group>"; };
+		E1D8CAFB27FEF3280003AF20 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		E1D8CAFC27FEF3280003AF20 /* DrawingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawingViewController.xib; sourceTree = "<group>"; };
+		E1D8CAFD27FEF3280003AF20 /* ColumnChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnChartView.swift; sourceTree = "<group>"; };
+		E1D8CAFE27FEF3280003AF20 /* ColumnChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColumnChartView.xib; sourceTree = "<group>"; };
+		E1D8CB0527FEF3380003AF20 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		E1D8CB0627FEF3380003AF20 /* DatePickerCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCustomView.swift; sourceTree = "<group>"; };
+		E1D8CB0727FEF3380003AF20 /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		E1D8CB0827FEF3380003AF20 /* DatePickerCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerCustomView.xib; sourceTree = "<group>"; };
+		E1D8CB0F27FEF36C0003AF20 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		E1D8CB1027FEF36C0003AF20 /* UserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
+		E1D8CB1127FEF36C0003AF20 /* AvatarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
+		E1D8CB1227FEF36C0003AF20 /* AvatarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AvatarViewController.xib; sourceTree = "<group>"; };
+		E1D8CB1927FEF3860003AF20 /* BadgeNumberView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BadgeNumberView.xib; sourceTree = "<group>"; };
+		E1D8CB1A27FEF3860003AF20 /* BadgeNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
+		E1D8CB1B27FEF3860003AF20 /* BadgeNumberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BadgeNumberViewController.xib; sourceTree = "<group>"; };
+		E1D8CB1C27FEF3860003AF20 /* BadgeNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeNumberViewController.swift; sourceTree = "<group>"; };
+		E1D8CB2327FEF3930003AF20 /* CustomSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSliderView.xib; sourceTree = "<group>"; };
+		E1D8CB2427FEF3930003AF20 /* MySliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySliderViewController.xib; sourceTree = "<group>"; };
+		E1D8CB2527FEF3930003AF20 /* MySliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySliderViewController.swift; sourceTree = "<group>"; };
+		E1D8CB2627FEF3930003AF20 /* CustomSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
+		E1D8CB2C27FFC59E0003AF20 /* LoginControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControl.swift; sourceTree = "<group>"; };
+		E1D8CB3227FFF3A40003AF20 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E1D8CB3327FFF3A40003AF20 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		E1E07AF927F400E6008BF7B3 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		E1E07AFA27F400E6008BF7B3 /* ColorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorViewController.xib; sourceTree = "<group>"; };
 		E1E07AFE27F40109008BF7B3 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +177,11 @@
 		E1EF33C527F2E5D4002F33DB /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		E1EF33C927F304C5002F33DB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1EF33CA27F304C5002F33DB /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E1FAC8C8280E4A50006F31AB /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1FAC8C9280E4A50006F31AB /* BasicCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewController.swift; sourceTree = "<group>"; };
+		E1FAC8CA280E4A50006F31AB /* BasicCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicCollectionViewController.xib; sourceTree = "<group>"; };
+		E1FAC8CB280E4A50006F31AB /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		E1FAC8CC280E4A50006F31AB /* CustomLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,59 +195,129 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E167C7C027FBE3DA00C4AC31 /* Date Picker */ = {
+		E17CA2F027FEBFCF0080D607 /* Login Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				E1B0123027F6E8F700021256 /* DatePickerViewController.swift */,
-				E1B0123127F6E8F700021256 /* DatePickerViewController.xib */,
-				E167C7C127FBE42800C4AC31 /* DatePickerCustomView.swift */,
-				E167C7C427FBE43400C4AC31 /* DatePickerCustomView.xib */,
+				E17CA2F627FEC01D0080D607 /* HomeNaviViewController.swift */,
+				E17CA2F727FEC01D0080D607 /* HomeNaviViewController.xib */,
+				E17CA2FB27FEC0870080D607 /* EditViewController.swift */,
+				E17CA2FC27FEC0870080D607 /* EditViewController.xib */,
+				E1D8CB2C27FFC59E0003AF20 /* LoginControl.swift */,
+			);
+			path = "Login Navigation";
+			sourceTree = "<group>";
+		};
+		E1C00C4527FE6D43002D83D3 /* Basic Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E1C00C4627FE6D82002D83D3 /* AViewController.swift */,
+				E1C00C4727FE6D82002D83D3 /* AViewController.xib */,
+				E1C00C4C27FE6D8F002D83D3 /* BViewController.swift */,
+				E1C00C4D27FE6D8F002D83D3 /* BViewController.xib */,
+				E1C00C5627FE6EE9002D83D3 /* CViewController.swift */,
+				E1C00C5727FE6EE9002D83D3 /* CViewController.xib */,
+				E1C00C5B27FE6EF8002D83D3 /* DViewController.swift */,
+				E1C00C5C27FE6EF8002D83D3 /* DViewController.xib */,
+				E1C00C6027FE6F0C002D83D3 /* EViewController.swift */,
+				E1C00C6127FE6F0C002D83D3 /* EViewController.xib */,
+			);
+			path = "Basic Navigation";
+			sourceTree = "<group>";
+		};
+		E1C438972803E36700334ED1 /* Properties List */ = {
+			isa = PBXGroup;
+			children = (
+				E17CA30127FECCBE0080D607 /* MyInfo.plist */,
+				E1C438932803E35C00334ED1 /* Contacts.plist */,
+			);
+			path = "Properties List";
+			sourceTree = "<group>";
+		};
+		E1D5824027FD3C7200190B61 /* Auto Layout */ = {
+			isa = PBXGroup;
+			children = (
+				E1D5824127FD3CA000190B61 /* AutoLayoutViewController.swift */,
+				E1D5824227FD3CA000190B61 /* AutoLayoutViewController.xib */,
+				E1D5824727FD3CB900190B61 /* Exercises */,
+			);
+			path = "Auto Layout";
+			sourceTree = "<group>";
+		};
+		E1D5824727FD3CB900190B61 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				E1D5824827FD3D1C00190B61 /* SquareViewController.swift */,
+				E1D5824927FD3D1C00190B61 /* SquareViewController.xib */,
+				E1D5824E27FD444D00190B61 /* SquaresViewController.swift */,
+				E1D5824F27FD444D00190B61 /* SquaresViewController.xib */,
+				E1D5825327FD491200190B61 /* CatAutoLayoutViewController.swift */,
+				E1D5825427FD491200190B61 /* CatAutoLayoutViewController.xib */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		E1D8CAFA27FEF3270003AF20 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8CAFB27FEF3280003AF20 /* DrawingViewController.swift */,
+				E1D8CAFC27FEF3280003AF20 /* DrawingViewController.xib */,
+				E1D8CAFD27FEF3280003AF20 /* ColumnChartView.swift */,
+				E1D8CAFE27FEF3280003AF20 /* ColumnChartView.xib */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		E1D8CB0427FEF3380003AF20 /* Date Picker */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8CB0527FEF3380003AF20 /* DatePickerViewController.swift */,
+				E1D8CB0627FEF3380003AF20 /* DatePickerCustomView.swift */,
+				E1D8CB0727FEF3380003AF20 /* DatePickerViewController.xib */,
+				E1D8CB0827FEF3380003AF20 /* DatePickerCustomView.xib */,
 			);
 			path = "Date Picker";
 			sourceTree = "<group>";
 		};
-		E17C4A0127FB29C50026D22F /* Badge Number */ = {
+		E1D8CB0E27FEF36C0003AF20 /* Avatar View */ = {
 			isa = PBXGroup;
 			children = (
-				E1B0122B27F6E8E400021256 /* BadgeNumberViewController.swift */,
-				E1B0122C27F6E8E400021256 /* BadgeNumberViewController.xib */,
-				E17C4A0227FB2A010026D22F /* BadgeNumberView.swift */,
-				E17C4A0627FB2A230026D22F /* BadgeNumberView.xib */,
-			);
-			path = "Badge Number";
-			sourceTree = "<group>";
-		};
-		E1B0123527F6E9D500021256 /* Avatar View */ = {
-			isa = PBXGroup;
-			children = (
-				E1B0122127F6E8AC00021256 /* AvatarViewController.swift */,
-				E1B0122227F6E8AC00021256 /* AvatarViewController.xib */,
-				E1C8A94E27F9494200BDD4DF /* UserView.swift */,
-				E1C8A95127F9495900BDD4DF /* UserView.xib */,
+				E1D8CB0F27FEF36C0003AF20 /* UserView.swift */,
+				E1D8CB1027FEF36C0003AF20 /* UserView.xib */,
+				E1D8CB1127FEF36C0003AF20 /* AvatarViewController.swift */,
+				E1D8CB1227FEF36C0003AF20 /* AvatarViewController.xib */,
 			);
 			path = "Avatar View";
 			sourceTree = "<group>";
 		};
-		E1C8A95427F94F9E00BDD4DF /* Custom Slider */ = {
+		E1D8CB1827FEF3860003AF20 /* Badge Number */ = {
 			isa = PBXGroup;
 			children = (
-				E1B0122627F6E8CA00021256 /* MySliderViewController.swift */,
-				E1B0122727F6E8CA00021256 /* MySliderViewController.xib */,
-				E1C8A95527F94FDE00BDD4DF /* CustomSliderView.swift */,
-				E1C8A95827F94FF300BDD4DF /* CustomSliderView.xib */,
+				E1D8CB1927FEF3860003AF20 /* BadgeNumberView.xib */,
+				E1D8CB1A27FEF3860003AF20 /* BadgeNumberView.swift */,
+				E1D8CB1B27FEF3860003AF20 /* BadgeNumberViewController.xib */,
+				E1D8CB1C27FEF3860003AF20 /* BadgeNumberViewController.swift */,
+			);
+			path = "Badge Number";
+			sourceTree = "<group>";
+		};
+		E1D8CB2227FEF3930003AF20 /* Custom Slider */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8CB2427FEF3930003AF20 /* MySliderViewController.xib */,
+				E1D8CB2527FEF3930003AF20 /* MySliderViewController.swift */,
+				E1D8CB2627FEF3930003AF20 /* CustomSliderView.swift */,
+				E1D8CB2327FEF3930003AF20 /* CustomSliderView.xib */,
 			);
 			path = "Custom Slider";
 			sourceTree = "<group>";
 		};
-		E1D5822C27FC420B00190B61 /* Drawing */ = {
+		E1D8CB3127FFF37E0003AF20 /* Avatar Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				E1D5822D27FC423200190B61 /* DrawingViewController.swift */,
-				E1D5822E27FC423200190B61 /* DrawingViewController.xib */,
-				E1D5823227FC427A00190B61 /* ColumnChartView.swift */,
-				E1D5823527FC428900190B61 /* ColumnChartView.xib */,
+				E1D8CB3227FFF3A40003AF20 /* ProfileViewController.swift */,
+				E1D8CB3327FFF3A40003AF20 /* ProfileViewController.xib */,
 			);
-			path = Drawing;
+			path = "Avatar Navigation";
 			sourceTree = "<group>";
 		};
 		E1E07B0327F40114008BF7B3 /* Touch event */ = {
@@ -227,6 +365,7 @@
 		E1EF338927F2E153002F33DB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1D5824027FD3C7200190B61 /* Auto Layout */,
 				E1EF33AA27F2E443002F33DB /* MapView */,
 				E1EF33A927F2E42A002F33DB /* CollectionView */,
 				E1EF33A827F2E420002F33DB /* TableView */,
@@ -238,6 +377,8 @@
 				E1EF339327F2E157002F33DB /* Assets.xcassets */,
 				E1EF339527F2E157002F33DB /* LaunchScreen.storyboard */,
 				E1EF339827F2E157002F33DB /* Info.plist */,
+				E1D5825D27FD894B00190B61 /* DumbData.swift */,
+				E1C438972803E36700334ED1 /* Properties List */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,13 +395,13 @@
 		E1EF33A627F2E3F8002F33DB /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				E1D5822C27FC420B00190B61 /* Drawing */,
+				E1D8CB2227FEF3930003AF20 /* Custom Slider */,
+				E1D8CB1827FEF3860003AF20 /* Badge Number */,
+				E1D8CB0E27FEF36C0003AF20 /* Avatar View */,
+				E1D8CB0427FEF3380003AF20 /* Date Picker */,
+				E1D8CAFA27FEF3270003AF20 /* Drawing */,
 				E1EF33AB27F2E549002F33DB /* CustomViewController.swift */,
 				E1EF33AC27F2E549002F33DB /* CustomViewController.xib */,
-				E1B0123527F6E9D500021256 /* Avatar View */,
-				E1C8A95427F94F9E00BDD4DF /* Custom Slider */,
-				E17C4A0127FB29C50026D22F /* Badge Number */,
-				E167C7C027FBE3DA00C4AC31 /* Date Picker */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -268,6 +409,9 @@
 		E1EF33A727F2E40D002F33DB /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				E1D8CB3127FFF37E0003AF20 /* Avatar Navigation */,
+				E17CA2F027FEBFCF0080D607 /* Login Navigation */,
+				E1C00C4527FE6D43002D83D3 /* Basic Navigation */,
 				E1EF33B527F2E5A5002F33DB /* NavigationViewController.swift */,
 				E1EF33B627F2E5A5002F33DB /* NavigationViewController.xib */,
 			);
@@ -279,6 +423,12 @@
 			children = (
 				E1EF33BA27F2E5B4002F33DB /* TableViewController.swift */,
 				E1EF33BB27F2E5B4002F33DB /* TableViewController.xib */,
+				E1C4389F28050B4D00334ED1 /* CommentTableViewCell.swift */,
+				E1C438A028050B4D00334ED1 /* CommentTableViewCell.xib */,
+				E1C438A52805735100334ED1 /* CommentsViewController.swift */,
+				E1C438A62805735100334ED1 /* CommentsViewController.xib */,
+				E1C438B028057BD200334ED1 /* ContactDetailViewController.swift */,
+				E1C438B128057BD200334ED1 /* ContactDetailViewController.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -286,13 +436,13 @@
 		E1EF33A927F2E42A002F33DB /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				E1FAC8C9280E4A50006F31AB /* BasicCollectionViewController.swift */,
+				E1FAC8CA280E4A50006F31AB /* BasicCollectionViewController.xib */,
+				E1FAC8C8280E4A50006F31AB /* CustomCollectionViewCell.swift */,
+				E1FAC8CB280E4A50006F31AB /* CustomCollectionViewCell.xib */,
+				E1FAC8CC280E4A50006F31AB /* CustomLayout.swift */,
 				E1EF33BF27F2E5C4002F33DB /* CollectionViewController.swift */,
 				E1EF33C027F2E5C4002F33DB /* CollectionViewController.xib */,
-				E13CB2EC28092EF500AEBA30 /* CustomCollectionViewCell.swift */,
-				E13CB2ED28092EF500AEBA30 /* CustomCollectionViewCell.xib */,
-				E13CB2F6280D141600AEBA30 /* CustomLayout.swift */,
-				E13CB300280D1CEB00AEBA30 /* BasicCollectionViewController.swift */,
-				E13CB301280D1CEB00AEBA30 /* BasicCollectionViewController.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -363,30 +513,47 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1B0122927F6E8CA00021256 /* MySliderViewController.xib in Resources */,
-				E13CB303280D1CEB00AEBA30 /* BasicCollectionViewController.xib in Resources */,
+				E1C00C4927FE6D82002D83D3 /* AViewController.xib in Resources */,
+				E1D5825627FD491200190B61 /* CatAutoLayoutViewController.xib in Resources */,
+				E17CA2FE27FEC0870080D607 /* EditViewController.xib in Resources */,
 				E1EF33CC27F304C5002F33DB /* LoginViewController.xib in Resources */,
+				E1C438A228050B4D00334ED1 /* CommentTableViewCell.xib in Resources */,
+				E1D8CB0227FEF3280003AF20 /* ColumnChartView.xib in Resources */,
 				E1EF33C227F2E5C4002F33DB /* CollectionViewController.xib in Resources */,
-				E1B0123327F6E8F700021256 /* DatePickerViewController.xib in Resources */,
 				E1EF339727F2E157002F33DB /* LaunchScreen.storyboard in Resources */,
+				E1D8CB1627FEF36C0003AF20 /* AvatarViewController.xib in Resources */,
 				E1E07B0C27F40159008BF7B3 /* MonkeyViewController.xib in Resources */,
-				E1D5823627FC428900190B61 /* ColumnChartView.xib in Resources */,
-				E13CB2EF28092EF500AEBA30 /* CustomCollectionViewCell.xib in Resources */,
 				E1EF339427F2E157002F33DB /* Assets.xcassets in Resources */,
-				E1D5823027FC423200190B61 /* DrawingViewController.xib in Resources */,
+				E1D8CB1427FEF36C0003AF20 /* UserView.xib in Resources */,
+				E1D8CB1F27FEF3860003AF20 /* BadgeNumberViewController.xib in Resources */,
+				E1FAC8D0280E4A50006F31AB /* CustomCollectionViewCell.xib in Resources */,
+				E1D8CB0C27FEF3380003AF20 /* DatePickerCustomView.xib in Resources */,
+				E1D5824B27FD3D1C00190B61 /* SquareViewController.xib in Resources */,
 				E1EF33B327F2E58E002F33DB /* HomeViewController.xib in Resources */,
+				E1D8CB2827FEF3930003AF20 /* MySliderViewController.xib in Resources */,
+				E17CA2F927FEC01D0080D607 /* HomeNaviViewController.xib in Resources */,
+				E1D8CB2727FEF3930003AF20 /* CustomSliderView.xib in Resources */,
+				E1D8CB3527FFF3A40003AF20 /* ProfileViewController.xib in Resources */,
+				E1D8CB0B27FEF3380003AF20 /* DatePickerViewController.xib in Resources */,
+				E1D8CB0027FEF3280003AF20 /* DrawingViewController.xib in Resources */,
+				E1FAC8CF280E4A50006F31AB /* BasicCollectionViewController.xib in Resources */,
+				E1C00C4F27FE6D8F002D83D3 /* BViewController.xib in Resources */,
+				E1C00C5927FE6EE9002D83D3 /* CViewController.xib in Resources */,
 				E1EF33C727F2E5D4002F33DB /* MapViewController.xib in Resources */,
+				E17CA30227FECCBE0080D607 /* MyInfo.plist in Resources */,
+				E1C438A82805735100334ED1 /* CommentsViewController.xib in Resources */,
+				E1C438942803E35C00334ED1 /* Contacts.plist in Resources */,
 				E1EF33A327F2E1E1002F33DB /* MyViewController.xib in Resources */,
-				E1B0122E27F6E8E400021256 /* BadgeNumberViewController.xib in Resources */,
-				E17C4A0727FB2A230026D22F /* BadgeNumberView.xib in Resources */,
 				E1E07AFC27F400E6008BF7B3 /* ColorViewController.xib in Resources */,
-				E1B0122427F6E8AC00021256 /* AvatarViewController.xib in Resources */,
-				E167C7C527FBE43400C4AC31 /* DatePickerCustomView.xib in Resources */,
 				E1EF33B827F2E5A5002F33DB /* NavigationViewController.xib in Resources */,
-				E1C8A95927F94FF300BDD4DF /* CustomSliderView.xib in Resources */,
+				E1C00C5E27FE6EF8002D83D3 /* DViewController.xib in Resources */,
 				E1EF33AE27F2E549002F33DB /* CustomViewController.xib in Resources */,
-				E1C8A95227F9495900BDD4DF /* UserView.xib in Resources */,
+				E1D5824427FD3CA000190B61 /* AutoLayoutViewController.xib in Resources */,
+				E1D8CB1D27FEF3860003AF20 /* BadgeNumberView.xib in Resources */,
+				E1D5825127FD444D00190B61 /* SquaresViewController.xib in Resources */,
 				E1EF33BD27F2E5B4002F33DB /* TableViewController.xib in Resources */,
+				E1C00C6327FE6F0C002D83D3 /* EViewController.xib in Resources */,
+				E1C438B328057BD200334ED1 /* ContactDetailViewController.xib in Resources */,
 				E1E07B0127F40109008BF7B3 /* SliderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,33 +565,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1B0122827F6E8CA00021256 /* MySliderViewController.swift in Sources */,
-				E13CB2EE28092EF500AEBA30 /* CustomCollectionViewCell.swift in Sources */,
+				E17CA2FD27FEC0870080D607 /* EditViewController.swift in Sources */,
 				E1EF33C127F2E5C4002F33DB /* CollectionViewController.swift in Sources */,
 				E1E07B0027F40109008BF7B3 /* SliderViewController.swift in Sources */,
-				E13CB302280D1CEB00AEBA30 /* BasicCollectionViewController.swift in Sources */,
 				E1EF338B27F2E153002F33DB /* AppDelegate.swift in Sources */,
-				E1D5822F27FC423200190B61 /* DrawingViewController.swift in Sources */,
+				E17CA2F827FEC01D0080D607 /* HomeNaviViewController.swift in Sources */,
+				E1FAC8CD280E4A50006F31AB /* CustomCollectionViewCell.swift in Sources */,
+				E1D8CB0127FEF3280003AF20 /* ColumnChartView.swift in Sources */,
+				E1C438B228057BD200334ED1 /* ContactDetailViewController.swift in Sources */,
 				E1E07B0B27F40159008BF7B3 /* MonkeyViewController.swift in Sources */,
-				E1D5823327FC427A00190B61 /* ColumnChartView.swift in Sources */,
-				E1C8A95627F94FDE00BDD4DF /* CustomSliderView.swift in Sources */,
-				E1E07B0B27F40159008BF7B3 /* MonkeyViewController.swift in Sources */,
-				E1B0122D27F6E8E400021256 /* BadgeNumberViewController.swift in Sources */,
+				E1D8CB2D27FFC59E0003AF20 /* LoginControl.swift in Sources */,
+				E1D8CB1E27FEF3860003AF20 /* BadgeNumberView.swift in Sources */,
+				E1D8CB1327FEF36C0003AF20 /* UserView.swift in Sources */,
 				E1EF33C627F2E5D4002F33DB /* MapViewController.swift in Sources */,
-				E1C8A94F27F9494200BDD4DF /* UserView.swift in Sources */,
 				E1EF33AD27F2E549002F33DB /* CustomViewController.swift in Sources */,
+				E1D8CB1527FEF36C0003AF20 /* AvatarViewController.swift in Sources */,
 				E1EF33BC27F2E5B4002F33DB /* TableViewController.swift in Sources */,
-				E17C4A0327FB2A010026D22F /* BadgeNumberView.swift in Sources */,
+				E1C438A72805735100334ED1 /* CommentsViewController.swift in Sources */,
+				E1D8CAFF27FEF3280003AF20 /* DrawingViewController.swift in Sources */,
+				E1D8CB2A27FEF3930003AF20 /* CustomSliderView.swift in Sources */,
+				E1FAC8CE280E4A50006F31AB /* BasicCollectionViewController.swift in Sources */,
+				E1C00C5D27FE6EF8002D83D3 /* DViewController.swift in Sources */,
+				E1D8CB0A27FEF3380003AF20 /* DatePickerCustomView.swift in Sources */,
+				E1D5824327FD3CA000190B61 /* AutoLayoutViewController.swift in Sources */,
+				E1D5824A27FD3D1C00190B61 /* SquareViewController.swift in Sources */,
+				E1D5825E27FD894B00190B61 /* DumbData.swift in Sources */,
+				E1D8CB2927FEF3930003AF20 /* MySliderViewController.swift in Sources */,
+				E1D5825027FD444D00190B61 /* SquaresViewController.swift in Sources */,
+				E1D8CB0927FEF3380003AF20 /* DatePickerViewController.swift in Sources */,
 				E1EF33A227F2E1E1002F33DB /* MyViewController.swift in Sources */,
-				E167C7C227FBE42800C4AC31 /* DatePickerCustomView.swift in Sources */,
 				E1EF338D27F2E153002F33DB /* SceneDelegate.swift in Sources */,
+				E1C00C4E27FE6D8F002D83D3 /* BViewController.swift in Sources */,
 				E1EF33B727F2E5A5002F33DB /* NavigationViewController.swift in Sources */,
-				E1B0123227F6E8F700021256 /* DatePickerViewController.swift in Sources */,
 				E1EF33B227F2E58E002F33DB /* HomeViewController.swift in Sources */,
-				E1B0122327F6E8AC00021256 /* AvatarViewController.swift in Sources */,
+				E1C00C5827FE6EE9002D83D3 /* CViewController.swift in Sources */,
+				E1C00C4827FE6D82002D83D3 /* AViewController.swift in Sources */,
 				E1E07AFB27F400E6008BF7B3 /* ColorViewController.swift in Sources */,
-				E13CB2F7280D141600AEBA30 /* CustomLayout.swift in Sources */,
+				E1D5825527FD491200190B61 /* CatAutoLayoutViewController.swift in Sources */,
+				E1C438A128050B4D00334ED1 /* CommentTableViewCell.swift in Sources */,
 				E1EF33CB27F304C5002F33DB /* LoginViewController.swift in Sources */,
+				E1D8CB3427FFF3A40003AF20 /* ProfileViewController.swift in Sources */,
+				E1FAC8D1280E4A50006F31AB /* CustomLayout.swift in Sources */,
+				E1C00C6227FE6F0C002D83D3 /* EViewController.swift in Sources */,
+				E1D8CB2027FEF3860003AF20 /* BadgeNumberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

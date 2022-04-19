@@ -8,10 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableViewController" customModule="View" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsViewController" customModule="View" customModuleProvider="target">
             <connections>
-                <outlet property="searchBar" destination="3tT-aL-qvY" id="2kA-pJ-Hwm"/>
-                <outlet property="tableView" destination="cGy-Go-g5j" id="epG-5P-xKn"/>
+                <outlet property="tableView" destination="D9R-U7-YZE" id="nbo-ct-UsS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,29 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-Go-g5j">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D9R-U7-YZE">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Enter contact name" showsCancelButton="YES" id="3tT-aL-qvY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <textInputTraits key="textInputTraits"/>
-                        <scopeButtonTitles>
-                            <string>Title</string>
-                            <string>Title</string>
-                        </scopeButtonTitles>
-                    </searchBar>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="cGy-Go-g5j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="J6l-j1-tut"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cGy-Go-g5j" secondAttribute="bottom" id="RlZ-tp-B1y"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cGy-Go-g5j" secondAttribute="trailing" id="eu4-Ha-f3t"/>
-                <constraint firstItem="cGy-Go-g5j" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gvx-ym-SmF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="D9R-U7-YZE" secondAttribute="bottom" id="MIZ-bc-389"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D9R-U7-YZE" secondAttribute="trailing" id="PLv-gJ-2Cs"/>
+                <constraint firstItem="D9R-U7-YZE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aIN-t9-TxD"/>
+                <constraint firstItem="D9R-U7-YZE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iUO-Aa-2vl"/>
             </constraints>
-            <point key="canvasLocation" x="141" y="154"/>
+            <point key="canvasLocation" x="141" y="57"/>
         </view>
     </objects>
     <resources>
