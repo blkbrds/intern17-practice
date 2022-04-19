@@ -10,31 +10,39 @@ struct PhanSo {
         self.tuSo = tuSo
         self.mauSo = mauSo
     }
+    
+    func inPhanSo() -> String {
+        return "\(tuSo)/\(mauSo)"
+    }
 }
-func nhanHaiPhanSo(x: PhanSo, y: PhanSo) -> Float {
+
+func nhanHaiPhanSo(x: PhanSo, y: PhanSo) -> PhanSo {
     let tu = x.tuSo * y.tuSo
     let mau = x.mauSo * y.mauSo
-    return tu / mau
+    return PhanSo(tuSo: tu, mauSo: mau)
 }
-func chiaHaiPhanSo(x: PhanSo, y: PhanSo) -> Float {
+
+func chiaHaiPhanSo(x: PhanSo, y: PhanSo) -> PhanSo {
     let tu = x.tuSo * y.mauSo
     let mau = x.mauSo * y.tuSo
-    return tu / mau
+    return PhanSo(tuSo: tu, mauSo: mau)
 }
-func congHaiPhanSo(x: PhanSo, y: PhanSo) -> Float {
+
+func congHaiPhanSo(x: PhanSo, y: PhanSo) -> PhanSo {
     let tu = x.tuSo * y.mauSo + x.mauSo * y.tuSo
     let mau = x.mauSo * y.mauSo
-    return tu / mau
+    return PhanSo(tuSo: tu, mauSo: mau)
 }
-func truHaiPhanSo(x: PhanSo, y: PhanSo) -> Float {
+
+func truHaiPhanSo(x: PhanSo, y: PhanSo) -> PhanSo {
     let mau = x.mauSo * y.mauSo
     let tu = x.tuSo * y.mauSo - x.mauSo * y.tuSo
-    return tu / mau
+    return PhanSo(tuSo: tu, mauSo: mau)
 }
 let x1 = PhanSo(tuSo: 2, mauSo: 4)
 let x2 = PhanSo(tuSo: 1, mauSo: 2)
-print("kết quả các phép tính là : nhân 2 phân số:  \(nhanHaiPhanSo(x: x1, y: x2)); chia hai phân số: \(chiaHaiPhanSo(x: x1, y: x2))")
-print(";cộng 2 phân số:  \(congHaiPhanSo(x: x1, y: x2)); trừ hai phân số: \(truHaiPhanSo(x: x1, y: x2))")
+print("kết quả các phép tính là : nhân 2 phân số:  \(nhanHaiPhanSo(x: x1, y: x2).inPhanSo()); chia hai phân số: \(chiaHaiPhanSo(x: x1, y: x2).inPhanSo())")
+print(";cộng 2 phân số:  \(congHaiPhanSo(x: x1, y: x2).inPhanSo()); trừ hai phân số: \(truHaiPhanSo(x: x1, y: x2).inPhanSo())")
 
 //bai` 2
 
@@ -46,10 +54,11 @@ class DaGiac {
         self.soCanh = soCanh
         self.kichThuocCacCanh = kichThuocCacCanh
     }
-    func tinhChuvi() {
-        print("chu vi là: \(kichThuocCacCanh.reduce(0, +))")
     
+    func tinhChuvi() -> Int {
+        return kichThuocCacCanh.reduce(0, +)
     }
+    
     func giaTri() {
         for i in kichThuocCacCanh {
             print("kích thước các cạnh là: \(i)")
@@ -57,22 +66,24 @@ class DaGiac {
     }
 }
 
-let daGiac1 = TamGiac(soCanh: 5, kichThuocCacCanh: [3, 4, 5, 6, 7])
-daGiac1.tinhChuvi()
+let daGiac1 = DaGiac(soCanh: 5, kichThuocCacCanh: [3, 4, 5, 6, 7])
+print("Chu vi la: \(daGiac1.tinhChuvi())")
 daGiac1.giaTri()
     
 //bai` 3
 
 class TamGiac : DaGiac {
-    override func tinhChuvi() {
+    
+    override func tinhChuvi() -> Int {
         guard soCanh == 3 else {
-            return
+            return 0
         }
-      super.tinhChuvi()
+        return super.tinhChuvi()
     }
-    func dienTich() {
+    
+    func dienTich() -> Double {
         guard soCanh == 3 else {
-            return
+            return 0
         }
         let a = kichThuocCacCanh[0]
         let b = kichThuocCacCanh[1]
@@ -81,13 +92,12 @@ class TamGiac : DaGiac {
         let a1 = p - a
         let a2 = p - b
         let a3 = p - c
-        let s = sqrt(Double(p * a1 * a2 * a3))
-        print("diet tich là tam giac : \(s)")
+       return sqrt(Double(p * a1 * a2 * a3))
     }
 }
 let tamGiac1 = TamGiac(soCanh: 3, kichThuocCacCanh: [3, 4, 5])
-tamGiac1.tinhChuvi()
-tamGiac1.dienTich()
+print("chu vi tam giac la: \(tamGiac1.tinhChuvi())")
+print("dien tich tam giac la: \(tamGiac1.dienTich())")
 
 //bai` 4
 func check(a: Int, b: Int, c: Int) {
@@ -115,11 +125,13 @@ class CStack {
     }
     
     func isEmty() -> Bool {
-        return top == 0 ? true : false
+        return top == 0
     }
+    
     func isFull() -> Bool {
-        return top >= size - 1 ? true : false
+        return top >= size - 1
     }
+    
     func push(item: Int) {
         if isFull() {
             print("ngăn xếp đã đầy ")
@@ -129,17 +141,18 @@ class CStack {
             arr.append(item)
         }
     }
+    
     func pop() {
-        if isEmty() == true {
+        if isEmty() {
             print("ngan xep rỗng")
             return
         } else {
             top -= 1
             arr.remove(at: top)
         }
-      
     }
 }
+
 let testStack = CStack(size: 5)
 testStack.pop()
 testStack.push(item: 2)
