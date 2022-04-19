@@ -13,5 +13,4 @@ final class Bai3ViewController: UIViewController {
         let photo = CustomButtonView(frame: CGRect(x: 100, y: 400, width: 200, height: 80), number: 8, position: .topCenter, name: "Photos")
         view.addSubview(photo)
     }
-    
 }

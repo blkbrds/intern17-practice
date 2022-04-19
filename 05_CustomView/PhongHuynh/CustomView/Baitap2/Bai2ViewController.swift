@@ -19,7 +19,6 @@ final class Bai2ViewController: UIViewController {
         view.addSubview(sliderView)
         valueTextField.returnKeyType = .done
     }
-    
 }
 // MARK: - MySliderDelegate
 extension Bai2ViewController: MySliderDelegate {

@@ -46,5 +46,4 @@ class DatePickerView: UIView {
             delegate.getDate(view: self, date: date)
         }
     }
-    
 }

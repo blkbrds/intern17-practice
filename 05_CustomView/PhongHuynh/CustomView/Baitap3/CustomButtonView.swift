@@ -1,6 +1,6 @@
 import UIKit
 
-class CustomButtonView: UIView {
+final class CustomButtonView: UIView {
     
     // MARK: - Define
     enum BadgeNumberPosition {
@@ -35,7 +35,6 @@ class CustomButtonView: UIView {
         userView.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
         userView.layer.cornerRadius = 8
         self.addSubview(userView)
-                           
         userName1 = UILabel(frame: CGRect(x: 0, y: frame.size.height * 3 / 5, width: 40, height: 40))
         guard let userName1 = userName1 else { return }
         userName1.clipsToBounds = true
@@ -54,7 +53,6 @@ class CustomButtonView: UIView {
         self.addSubview(userName2)
         setPositionLabel(potision: position)
         setBadgeNumber()
-        
       }
     
     required init?(coder: NSCoder) {

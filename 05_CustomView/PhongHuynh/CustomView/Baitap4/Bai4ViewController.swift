@@ -17,7 +17,6 @@ final class Bai4ViewController: UIViewController, UIPickerViewDelegate {
         view.addSubview(datePickerView)
         datePickerView.delegate = self
     }
-    
 }
 
 // MARK: - DatePickerViewDelegate
