@@ -7,6 +7,7 @@ protocol EditDelegate: class {
 
 final class EditViewController: UIViewController {
     
+    // MARK: - Define
     enum Action {
         case tap(username: String)
     }
@@ -23,14 +24,12 @@ final class EditViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "Edit"
         let leftButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(leftAction))
         navigationItem.leftBarButtonItem = leftButton
         let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
     }
-    
     // MARK: - Objc functions
     @objc func leftAction() {
         self.navigationController?.popViewController(animated: true)
@@ -38,9 +37,8 @@ final class EditViewController: UIViewController {
     
     @objc func rightAction() {
         username = usernameTextField.text
-        if let username = username {
-            print(username)
-            delegate?.didTap(view: self, needsPerfom: .tap(username: username))
+        if let username = username, let delegate = delegate {
+            delegate.didTap(view: self, needsPerfom: .tap(username: username))
         }
         self.navigationController?.popViewController(animated: true)
     }

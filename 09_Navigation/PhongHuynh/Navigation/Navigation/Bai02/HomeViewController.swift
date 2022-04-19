@@ -1,10 +1,12 @@
 import UIKit
 
+// MARK: - HomeViewControllerDelegate
 protocol HomeViewControllerDelegate: class {
     func controller(view: HomeViewController, needsPerfom actions: HomeViewController.Action)
 }
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
+    // MARK: - Define
     enum Action {
         case logout
     }
@@ -12,6 +14,7 @@ class HomeViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
     
+    // MARK: - Properties
     var userName: String = ""
     weak var delegate: HomeViewControllerDelegate?
     
@@ -25,7 +28,6 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightButton
         nameLabel.text = userName
     }
-    
     // MARK: - Objc functions
     @objc func leftAction() {
         if let delegate = delegate {
@@ -33,14 +35,13 @@ class HomeViewController: UIViewController {
         }
         self.navigationController?.popViewController(animated: true)
     }
-    
+
     @objc func rightAction() {
         let vc = EditViewController()
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
-
 // MARK: - EditDelegate
 extension HomeViewController: EditDelegate {
     func didTap(view: EditViewController, needsPerfom actions: EditViewController.Action) {

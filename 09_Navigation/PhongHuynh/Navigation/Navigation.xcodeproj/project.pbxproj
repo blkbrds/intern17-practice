@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CB0B6E52280D43CD0085E82C /* AvartarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0B6E51280D43CD0085E82C /* AvartarView.swift */; };
 		CB0B6E55280D43DF0085E82C /* AvartarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0B6E54280D43DF0085E82C /* AvartarView.xib */; };
-		CB0B6E5B280D446C0085E82C /* HoomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0B6E59280D446C0085E82C /* HoomeViewController.swift */; };
-		CB0B6E5C280D446C0085E82C /* HoomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0B6E5A280D446C0085E82C /* HoomeViewController.xib */; };
+		CB0B6E5B280D446C0085E82C /* Home3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0B6E59280D446C0085E82C /* Home3ViewController.swift */; };
+		CB0B6E5C280D446C0085E82C /* Home3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0B6E5A280D446C0085E82C /* Home3ViewController.xib */; };
 		CB3BCDFF2809865300EA1B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCDFE2809865300EA1B3F /* AppDelegate.swift */; };
 		CB3BCE012809865300EA1B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCE002809865300EA1B3F /* SceneDelegate.swift */; };
 		CB3BCE082809865500EA1B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3BCE072809865500EA1B3F /* Assets.xcassets */; };
@@ -30,6 +30,18 @@
 		CB3BCE3B280BABB700EA1B3F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB3BCE39280BABB700EA1B3F /* HomeViewController.xib */; };
 		CB3BCE3F280BABC900EA1B3F /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCE3D280BABC900EA1B3F /* EditViewController.swift */; };
 		CB3BCE40280BABC900EA1B3F /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB3BCE3E280BABC900EA1B3F /* EditViewController.xib */; };
+		CB661522280E9091005DC1C6 /* CustomNavigation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB661520280E9091005DC1C6 /* CustomNavigation1ViewController.swift */; };
+		CB661523280E9091005DC1C6 /* CustomNavigation1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB661521280E9091005DC1C6 /* CustomNavigation1ViewController.xib */; };
+		CB661528280E9517005DC1C6 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB661526280E9517005DC1C6 /* CustomNavigationViewController.swift */; };
+		CB661529280E9517005DC1C6 /* CustomNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB661527280E9517005DC1C6 /* CustomNavigationViewController.xib */; };
+		CB66152D280E998C005DC1C6 /* CustomNavigation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB66152B280E998C005DC1C6 /* CustomNavigation2ViewController.swift */; };
+		CB66152E280E998C005DC1C6 /* CustomNavigation2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB66152C280E998C005DC1C6 /* CustomNavigation2ViewController.xib */; };
+		CB661533280EA028005DC1C6 /* CustomNavigation3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB661531280EA028005DC1C6 /* CustomNavigation3ViewController.swift */; };
+		CB661534280EA028005DC1C6 /* CustomNavigation3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB661532280EA028005DC1C6 /* CustomNavigation3ViewController.xib */; };
+		CB661538280EA45D005DC1C6 /* CustomNavigation4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB661536280EA45D005DC1C6 /* CustomNavigation4ViewController.swift */; };
+		CB661539280EA45D005DC1C6 /* CustomNavigation4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB661537280EA45D005DC1C6 /* CustomNavigation4ViewController.xib */; };
+		CB85D51A280E449900B80790 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85D518280E449900B80790 /* ProfileViewController.swift */; };
+		CB85D51B280E449900B80790 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB85D519280E449900B80790 /* ProfileViewController.xib */; };
 		CBED5533280D68F7007FD82D /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBED5532280D68F7007FD82D /* data.plist */; };
 		CBED5536280D6B80007FD82D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBED5535280D6B80007FD82D /* DataManager.swift */; };
 /* End PBXBuildFile section */
@@ -37,8 +49,8 @@
 /* Begin PBXFileReference section */
 		CB0B6E51280D43CD0085E82C /* AvartarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvartarView.swift; sourceTree = "<group>"; };
 		CB0B6E54280D43DF0085E82C /* AvartarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvartarView.xib; sourceTree = "<group>"; };
-		CB0B6E59280D446C0085E82C /* HoomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoomeViewController.swift; sourceTree = "<group>"; };
-		CB0B6E5A280D446C0085E82C /* HoomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoomeViewController.xib; sourceTree = "<group>"; };
+		CB0B6E59280D446C0085E82C /* Home3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home3ViewController.swift; sourceTree = "<group>"; };
+		CB0B6E5A280D446C0085E82C /* Home3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home3ViewController.xib; sourceTree = "<group>"; };
 		CB3BCDFB2809865300EA1B3F /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3BCDFE2809865300EA1B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB3BCE002809865300EA1B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +72,18 @@
 		CB3BCE39280BABB700EA1B3F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		CB3BCE3D280BABC900EA1B3F /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		CB3BCE3E280BABC900EA1B3F /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		CB661520280E9091005DC1C6 /* CustomNavigation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation1ViewController.swift; sourceTree = "<group>"; };
+		CB661521280E9091005DC1C6 /* CustomNavigation1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigation1ViewController.xib; sourceTree = "<group>"; };
+		CB661526280E9517005DC1C6 /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
+		CB661527280E9517005DC1C6 /* CustomNavigationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationViewController.xib; sourceTree = "<group>"; };
+		CB66152B280E998C005DC1C6 /* CustomNavigation2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation2ViewController.swift; sourceTree = "<group>"; };
+		CB66152C280E998C005DC1C6 /* CustomNavigation2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigation2ViewController.xib; sourceTree = "<group>"; };
+		CB661531280EA028005DC1C6 /* CustomNavigation3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation3ViewController.swift; sourceTree = "<group>"; };
+		CB661532280EA028005DC1C6 /* CustomNavigation3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigation3ViewController.xib; sourceTree = "<group>"; };
+		CB661536280EA45D005DC1C6 /* CustomNavigation4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation4ViewController.swift; sourceTree = "<group>"; };
+		CB661537280EA45D005DC1C6 /* CustomNavigation4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigation4ViewController.xib; sourceTree = "<group>"; };
+		CB85D518280E449900B80790 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CB85D519280E449900B80790 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		CBED5532280D68F7007FD82D /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		CBED5535280D6B80007FD82D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,10 +102,12 @@
 		CB0B6E4B280D40620085E82C /* Bai03 */ = {
 			isa = PBXGroup;
 			children = (
-				CB0B6E59280D446C0085E82C /* HoomeViewController.swift */,
-				CB0B6E5A280D446C0085E82C /* HoomeViewController.xib */,
 				CB0B6E51280D43CD0085E82C /* AvartarView.swift */,
 				CB0B6E54280D43DF0085E82C /* AvartarView.xib */,
+				CB0B6E59280D446C0085E82C /* Home3ViewController.swift */,
+				CB0B6E5A280D446C0085E82C /* Home3ViewController.xib */,
+				CB85D518280E449900B80790 /* ProfileViewController.swift */,
+				CB85D519280E449900B80790 /* ProfileViewController.xib */,
 			);
 			path = Bai03;
 			sourceTree = "<group>";
@@ -105,6 +131,7 @@
 		CB3BCDFD2809865300EA1B3F /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				CB66150C280E8B43005DC1C6 /* Bai04 */,
 				CB0B6E4B280D40620085E82C /* Bai03 */,
 				CB3BCE31280AC77800EA1B3F /* Bai02 */,
 				CB3BCE30280AC72B00EA1B3F /* Bai01 */,
@@ -146,6 +173,23 @@
 				CBED5535280D6B80007FD82D /* DataManager.swift */,
 			);
 			path = Bai02;
+			sourceTree = "<group>";
+		};
+		CB66150C280E8B43005DC1C6 /* Bai04 */ = {
+			isa = PBXGroup;
+			children = (
+				CB661526280E9517005DC1C6 /* CustomNavigationViewController.swift */,
+				CB661527280E9517005DC1C6 /* CustomNavigationViewController.xib */,
+				CB661520280E9091005DC1C6 /* CustomNavigation1ViewController.swift */,
+				CB661521280E9091005DC1C6 /* CustomNavigation1ViewController.xib */,
+				CB66152B280E998C005DC1C6 /* CustomNavigation2ViewController.swift */,
+				CB66152C280E998C005DC1C6 /* CustomNavigation2ViewController.xib */,
+				CB661531280EA028005DC1C6 /* CustomNavigation3ViewController.swift */,
+				CB661532280EA028005DC1C6 /* CustomNavigation3ViewController.xib */,
+				CB661536280EA45D005DC1C6 /* CustomNavigation4ViewController.swift */,
+				CB661537280EA45D005DC1C6 /* CustomNavigation4ViewController.xib */,
+			);
+			path = Bai04;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +249,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB661539280EA45D005DC1C6 /* CustomNavigation4ViewController.xib in Resources */,
+				CB66152E280E998C005DC1C6 /* CustomNavigation2ViewController.xib in Resources */,
 				CB3BCE1A2809868C00EA1B3F /* NavigationViewController.xib in Resources */,
+				CB661529280E9517005DC1C6 /* CustomNavigationViewController.xib in Resources */,
 				CB0B6E55280D43DF0085E82C /* AvartarView.xib in Resources */,
+				CB661534280EA028005DC1C6 /* CustomNavigation3ViewController.xib in Resources */,
 				CB3BCE29280ABBDE00EA1B3F /* FourViewController.xib in Resources */,
-				CB0B6E5C280D446C0085E82C /* HoomeViewController.xib in Resources */,
+				CB85D51B280E449900B80790 /* ProfileViewController.xib in Resources */,
+				CB0B6E5C280D446C0085E82C /* Home3ViewController.xib in Resources */,
 				CB3BCE082809865500EA1B3F /* Assets.xcassets in Resources */,
 				CB3BCE2428098C4E00EA1B3F /* ThirdViewController.xib in Resources */,
 				CBED5533280D68F7007FD82D /* data.plist in Resources */,
@@ -217,6 +266,7 @@
 				CB3BCE40280BABC900EA1B3F /* EditViewController.xib in Resources */,
 				CB3BCE1F280988F400EA1B3F /* SecondViewController.xib in Resources */,
 				CB3BCE3B280BABB700EA1B3F /* HomeViewController.xib in Resources */,
+				CB661523280E9091005DC1C6 /* CustomNavigation1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,18 +278,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB3BCE3F280BABC900EA1B3F /* EditViewController.swift in Sources */,
+				CB661522280E9091005DC1C6 /* CustomNavigation1ViewController.swift in Sources */,
 				CB3BCE2D280ABCAB00EA1B3F /* FiveViewController.swift in Sources */,
+				CB661533280EA028005DC1C6 /* CustomNavigation3ViewController.swift in Sources */,
 				CB3BCE1E280988F400EA1B3F /* SecondViewController.swift in Sources */,
 				CB3BCE192809868C00EA1B3F /* NavigationViewController.swift in Sources */,
+				CB85D51A280E449900B80790 /* ProfileViewController.swift in Sources */,
+				CB661538280EA45D005DC1C6 /* CustomNavigation4ViewController.swift in Sources */,
 				CB3BCE28280ABBDE00EA1B3F /* FourViewController.swift in Sources */,
 				CB3BCE35280BABA700EA1B3F /* LoginViewController.swift in Sources */,
 				CB3BCE3A280BABB700EA1B3F /* HomeViewController.swift in Sources */,
+				CB661528280E9517005DC1C6 /* CustomNavigationViewController.swift in Sources */,
 				CB0B6E52280D43CD0085E82C /* AvartarView.swift in Sources */,
 				CB3BCE2328098C4E00EA1B3F /* ThirdViewController.swift in Sources */,
 				CB3BCDFF2809865300EA1B3F /* AppDelegate.swift in Sources */,
 				CB3BCE012809865300EA1B3F /* SceneDelegate.swift in Sources */,
 				CBED5536280D6B80007FD82D /* DataManager.swift in Sources */,
-				CB0B6E5B280D446C0085E82C /* HoomeViewController.swift in Sources */,
+				CB66152D280E998C005DC1C6 /* CustomNavigation2ViewController.swift in Sources */,
+				CB0B6E5B280D446C0085E82C /* Home3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

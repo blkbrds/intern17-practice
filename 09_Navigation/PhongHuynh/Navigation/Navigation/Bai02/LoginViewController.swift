@@ -11,7 +11,6 @@ final class LoginViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Login"
         let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
@@ -28,12 +27,6 @@ final class LoginViewController: UIViewController {
     // MARK: - Objc functions
     @objc func rightAction() {
         login()
-        
-    }
-    
-    func clearTextField() {
-        usernameTextField.text = ""
-        passwordTextField.text = ""
     }
     
     func login() {

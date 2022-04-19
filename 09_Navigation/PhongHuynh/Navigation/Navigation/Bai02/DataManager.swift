@@ -1,7 +1,6 @@
 import Foundation
 
 class DataManager {
-    
     static func checkData(userName: String, password: String) -> Bool {
         if let path = Bundle.main.path(forResource: "data", ofType: "plist"),
            let myDict = NSDictionary(contentsOfFile: path) {
