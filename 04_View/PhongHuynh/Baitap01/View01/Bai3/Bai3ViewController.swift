@@ -26,10 +26,7 @@ final class Bai3ViewController: UIViewController {
     
     // MARK: - Private functions
     func login() -> Bool {
-        if usernameTextField.text == username && passwordTextField.text == password {
-            return true
-        }
-        return false
+        return usernameTextField.text == username && passwordTextField.text == password
     }
     
     // MARK: - IBActions
