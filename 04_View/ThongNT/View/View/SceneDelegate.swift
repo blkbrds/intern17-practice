@@ -7,8 +7,21 @@
 
 import UIKit
 
+enum ApplicationStatus {
+    case logined
+    case logout
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
+    static var shared: SceneDelegate {
+        guard let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else {
+            fatalError("Can't find scence delegate")
+        }
+        return delegate
+    }
+
+    private let tabbarController = UITabBarController()
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,6 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         configTabbar()
+        window.rootViewController = LoginViewController()
         window.makeKeyAndVisible()
     }
     
@@ -57,12 +71,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         autoLayoutNavi.tabBarItem = UITabBarItem(title: "Auto Layout", image: UIImage(systemName: "map"), tag: 6)
             
         // Cofig Tapbar controller
-        let tabbarController = UITabBarController()
         let viewControllers = [myNavi, customNavi, tableNavi, collectionNavi, mapNavi, naviNavi, autoLayoutNavi]
         tabbarController.setViewControllers(viewControllers, animated: true)
         tabbarController.tabBar.tintColor = .systemPink
-        tabbarController.selectedIndex = 2
-        window?.rootViewController = tabbarController
+        tabbarController.selectedIndex = 0
         tabbarController.tabBar.isTranslucent = false
+    }
+    
+    func changeFlow(with status: ApplicationStatus) {
+        switch status {
+        case .logined:
+            window?.rootViewController = tabbarController
+        case .logout:
+            let loginVC = LoginViewController()
+            let loginNavi = UINavigationController(rootViewController: loginVC)
+            window?.rootViewController = loginNavi
+        }
     }
 }
