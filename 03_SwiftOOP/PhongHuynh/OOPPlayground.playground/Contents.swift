@@ -122,7 +122,7 @@ struct CStack {
     }
     
     mutating func pop() {                                                     //xoá 1 phần tử ở đỉnh stack
-        if(isEmpty() == true) {
+        if isEmpty() {
             print("\nStack is empty. Underflow condition!");
         } else {
             top -= 1
