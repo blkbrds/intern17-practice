@@ -1,8 +1,8 @@
 import UIKit
 
-// MARK: - EditDelegate
-protocol EditDelegate: class {
-    func didTap(view: EditViewController, needsPerfom actions: EditViewController.Action)
+// MARK: - EditViewControllerDelegate
+protocol EditViewControllerDelegate: class {
+    func controller(view: EditViewController, needsPerfom actions: EditViewController.Action)
 }
 
 final class EditViewController: UIViewController {
@@ -14,7 +14,7 @@ final class EditViewController: UIViewController {
     
     // MARK: - Properties
     var username: String?
-    weak var delegate: EditDelegate?
+    weak var delegate: EditViewControllerDelegate?
     
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
@@ -24,21 +24,23 @@ final class EditViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Edit"
         let leftButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(leftAction))
         navigationItem.leftBarButtonItem = leftButton
         let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
     }
+    
     // MARK: - Objc functions
-    @objc func leftAction() {
+    @objc private func leftAction() {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc func rightAction() {
+    @objc private func rightAction() {
         username = usernameTextField.text
         if let username = username, let delegate = delegate {
-            delegate.didTap(view: self, needsPerfom: .tap(username: username))
+            delegate.controller(view: self, needsPerfom: .tap(username: username))
         }
         self.navigationController?.popViewController(animated: true)
     }

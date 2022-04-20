@@ -7,10 +7,11 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var showLabel: UILabel!
     
-   
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Login"
         let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
@@ -20,16 +21,12 @@ final class LoginViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           usernameTextField.resignFirstResponder()
-           passwordTextField.resignFirstResponder()
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     // MARK: - Objc functions
-    @objc func rightAction() {
-        login()
-    }
-    
-    func login() {
+    @objc private func rightAction() {
         guard let userName = usernameTextField.text, let password = passwordTextField.text, !userName.isEmpty, !password.isEmpty else {
             showLabel.text = "Chua nhap gia tri"
             return
@@ -50,7 +47,7 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passwordTextField.becomeFirstResponder()
         if textField.returnKeyType == .done {
-            login()
+            rightAction()
         }
         return true
     }

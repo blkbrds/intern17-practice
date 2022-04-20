@@ -1,7 +1,6 @@
 import UIKit
 
 class User {
-    var images: String = "husky.jpeg"
     var name: String
     var id: Int
     
@@ -12,9 +11,9 @@ class User {
 }
 
 final class Home3ViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet private weak var scrollView: UIScrollView!
     
     // MARK: - Properties
     var users: [User] = []
@@ -23,13 +22,14 @@ final class Home3ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Home"
         for index in 0..<30 {
             users.append(User(name: "name \(index + 1)", id: index))
         }
-        title = "Home"
         userAvatar()
     }
-
+    
     // MARK: - Private functions
     private func userAvatar() {
         let khoangCach: CGFloat = 10
@@ -39,7 +39,7 @@ final class Home3ViewController: UIViewController {
             let x2 = widthView * CGFloat(index)
             var x = x1 + x2
             var y = khoangCach
-
+            
             if x >= UIScreen.main.bounds.width {
                 let indexWidth = index % 3
                 let x1 = khoangCach * (CGFloat(indexWidth) + 1)
@@ -54,10 +54,11 @@ final class Home3ViewController: UIViewController {
         }
     }
 }
-// MARK: - UserViewDelegate
+
+// MARK: - AvartarViewDelegate
 extension Home3ViewController: AvartarViewDelegate {
-    func didTap(view: AvartarView, needsPerfom action: AvartarView.Action) {
-        switch action {
+    func controller(view: AvartarView, needsPerfom actions: AvartarView.Action) {
+        switch actions {
         case .tap(let name, let id):
             let vc = ProfileViewController()
             vc.name = name
@@ -67,6 +68,7 @@ extension Home3ViewController: AvartarViewDelegate {
         }
     }
 }
+
 // MARK: - ProfileViewControllerDelegate
 extension Home3ViewController: ProfileViewControllerDelegate {
     func controller(view: ProfileViewController, needsPerfom actions: ProfileViewController.Action) {
@@ -78,5 +80,3 @@ extension Home3ViewController: ProfileViewControllerDelegate {
         }
     }
 }
-
-

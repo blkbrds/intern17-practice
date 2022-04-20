@@ -7,9 +7,11 @@ final class CustomNavigationViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
     // MARK: - IBActions
-    @IBAction func push(_ sender: Any) {
+    @IBAction private func push(_ sender: Any) {
+        guard let navi = navigationController else { return }
         let vc = CustomNavigation1ViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navi.pushViewController(vc, animated: true)
     }
 }

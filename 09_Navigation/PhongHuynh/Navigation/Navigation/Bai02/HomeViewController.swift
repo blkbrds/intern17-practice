@@ -12,7 +12,7 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - IBOutlets
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
     
     // MARK: - Properties
     var userName: String = ""
@@ -21,6 +21,7 @@ final class HomeViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Home"
         let leftButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(leftAction))
         navigationItem.leftBarButtonItem = leftButton
@@ -28,23 +29,25 @@ final class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightButton
         nameLabel.text = userName
     }
+    
     // MARK: - Objc functions
-    @objc func leftAction() {
+    @objc private func leftAction() {
         if let delegate = delegate {
             delegate.controller(view: self, needsPerfom: .logout)
         }
         self.navigationController?.popViewController(animated: true)
     }
-
-    @objc func rightAction() {
+    
+    @objc private func rightAction() {
         let vc = EditViewController()
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
-// MARK: - EditDelegate
-extension HomeViewController: EditDelegate {
-    func didTap(view: EditViewController, needsPerfom actions: EditViewController.Action) {
+
+// MARK: - EditViewControllerDelegate
+extension HomeViewController: EditViewControllerDelegate {
+    func controller(view: EditViewController, needsPerfom actions: EditViewController.Action) {
         switch actions {
         case .tap(let userName):
             nameLabel.text = userName

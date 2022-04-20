@@ -5,6 +5,7 @@ final class CustomNavigation1ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let rightButton = UIBarButtonItem(title: "Right", style: .plain, target: self, action: nil)
         navigationItem.rightBarButtonItem = rightButton
         let leftButton1 = UIBarButtonItem(title: "Mid 1", style: .plain, target: self, action: nil)

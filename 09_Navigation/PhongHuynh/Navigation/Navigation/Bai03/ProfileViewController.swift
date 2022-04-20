@@ -11,7 +11,7 @@ final class ProfileViewController: UIViewController {
     enum Action {
         case tap(username: String)
     }
-
+    
     // MARK: - IBOutlets
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -22,6 +22,7 @@ final class ProfileViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Profile"
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneAction))
         navigationItem.rightBarButtonItem = doneButton
@@ -34,6 +35,5 @@ final class ProfileViewController: UIViewController {
             delegate.controller(view: self, needsPerfom: .tap(username: name))
         }
         self.navigationController?.popViewController(animated: true)
-        
     }
 }

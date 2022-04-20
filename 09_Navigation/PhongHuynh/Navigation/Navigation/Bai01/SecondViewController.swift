@@ -5,18 +5,19 @@ final class SecondViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Second"
     }
     
     // MARK: - IBActions
-    @IBAction func push(_ sender: Any) {
+    @IBAction private func push(_ sender: Any) {
+        guard let navi = navigationController else { return }
         let vc = ThirdViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navi.pushViewController(vc, animated: true)
     }
     
-    // MARK: - IBActions
-    @IBAction func pop(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    @IBAction private func pop(_ sender: Any) {
+        guard let navi = navigationController else { return }
+        navi.popViewController(animated: true)
     }
-    
 }

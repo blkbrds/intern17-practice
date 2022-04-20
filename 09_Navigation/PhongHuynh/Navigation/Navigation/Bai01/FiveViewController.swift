@@ -5,29 +5,30 @@ final class FiveViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Five"
     }
     
     // MARK: - IBActions
-    @IBAction func popThird(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[2])!
-        self.navigationController?.popToViewController(vc, animated: true)
+    @IBAction private func popThird(_ sender: Any) {
+        guard let navi = navigationController else { return }
+        let vc = navi.viewControllers[2]
+        navi.popToViewController(vc, animated: true)
     }
     
-    // MARK: - IBActions
-    @IBAction func popSecond(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[1])!
-        self.navigationController?.popToViewController(vc, animated: true)
+    @IBAction private func popSecond(_ sender: Any) {
+        guard let navi = navigationController else { return }
+        let vc = navi.viewControllers[1]
+        navi.popToViewController(vc, animated: true)
     }
     
-    // MARK: - IBActions
-    @IBAction func popFour(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-        
+    @IBAction private func popFour(_ sender: Any) {
+        guard let navi = navigationController else { return }
+        navi.popViewController(animated: true)
     }
     
-    // MARK: - IBActions
-    @IBAction func root(_ sender: Any) {
-        _ = (self.navigationController?.viewControllers[1])!
-        self.navigationController?.popToRootViewController(animated: true)    }
+    @IBAction private func root(_ sender: Any) {
+        guard let navi = navigationController else { return }
+        navi.popToRootViewController(animated: true)
+    }
 }

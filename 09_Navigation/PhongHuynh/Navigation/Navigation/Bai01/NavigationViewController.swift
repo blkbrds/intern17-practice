@@ -5,14 +5,14 @@ final class NavigationViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Navigation"
     }
     
     // MARK: - IBActions
-    @IBAction func push(_ sender: Any) {
+    @IBAction private func push(_ sender: Any) {
+        guard let navi = navigationController else { return }
         let vc = SecondViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
-       
+        navi.pushViewController(vc, animated: true)
     }
-    
 }
