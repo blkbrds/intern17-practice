@@ -9,10 +9,8 @@ import UIKit
 
 final class Exercise14ViewController: UIViewController {
 
-    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }

@@ -11,6 +11,5 @@ final class Exercise03ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }

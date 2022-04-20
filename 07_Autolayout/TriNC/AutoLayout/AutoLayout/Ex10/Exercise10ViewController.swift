@@ -22,7 +22,7 @@ final class Exercise10ViewController: UIViewController {
     @IBOutlet private weak var purpleView: UIView!
     @IBOutlet private weak var yellowView: UIView!
     @IBOutlet private weak var orangeView: UIView!
-
+    
     @IBOutlet private weak var greenViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var purpleViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var yellowViewHeightConstraint: NSLayoutConstraint!
@@ -45,19 +45,18 @@ final class Exercise10ViewController: UIViewController {
         addTapGesture(yellowView, tag: 2)
         addTapGesture(orangeView, tag: 3)
     }
-
+    
     private func addTapGesture(_ view: UIView, tag: Int) {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         view.tag = tag
         view.addGestureRecognizer(tapGesture)
     }
     
-    @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        guard let view = sender.view else { return }
-        guard let maxConstraint = maxConstraint else {
-            return
-        }
-        guard view.bounds.size.height != maxConstraint.constant else { return }
+    // MARK: - Objc
+    @objc private func handleTap(_ sender: UITapGestureRecognizer) {
+        guard let view = sender.view,
+              let maxConstraint = maxConstraint,
+              view.bounds.size.height != maxConstraint.constant else { return }
         
         UIView.animate(withDuration: 1) {
             let tag = view.tag

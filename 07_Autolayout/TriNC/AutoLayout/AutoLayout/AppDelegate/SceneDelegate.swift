@@ -9,6 +9,7 @@ import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
+    // MARK: - Enum
     enum ControllerType {
         case ex1
         case ex11
