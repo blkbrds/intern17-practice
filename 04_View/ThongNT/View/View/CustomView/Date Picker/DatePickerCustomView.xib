@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePickerCustomView" customModule="View" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="533" height="534"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="gLL-Yx-dQa">
+                    <rect key="frame" x="0.0" y="50" width="533" height="484"/>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpL-B8-srK" userLabel="Done Button">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="bk2-aa-Wvn"/>
+                        <constraint firstAttribute="height" constant="50" id="fBU-HQ-avk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Done"/>
+                    <connections>
+                        <action selector="didTouchDoneButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="lyi-HS-Zrx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gLL-Yx-dQa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CBa-LS-X5l"/>
+                <constraint firstAttribute="bottom" secondItem="gLL-Yx-dQa" secondAttribute="bottom" id="KNq-Ge-iL5"/>
+                <constraint firstAttribute="trailing" secondItem="gLL-Yx-dQa" secondAttribute="trailing" id="Otu-kP-pgn"/>
+                <constraint firstItem="mpL-B8-srK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QOy-8q-TCZ"/>
+                <constraint firstItem="gLL-Yx-dQa" firstAttribute="top" secondItem="mpL-B8-srK" secondAttribute="bottom" id="Soh-LH-Ezc"/>
+                <constraint firstItem="mpL-B8-srK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Yne-JH-pTt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="datePickerView" destination="gLL-Yx-dQa" id="o3J-eG-wOq"/>
+            </connections>
+            <point key="canvasLocation" x="181.8840579710145" y="186.83035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

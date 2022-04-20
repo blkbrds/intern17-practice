@@ -16,11 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        window.rootViewController = configTabbar()
+        configTabbar()
         window.makeKeyAndVisible()
     }
     
-    private func configTabbar() -> UITabBarController {
+    private func configTabbar() {
         // MyViewController
         let myVC = MyViewController()
         let myNavi = UINavigationController(rootViewController: myVC)
@@ -51,10 +51,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let naviNavi = UINavigationController(rootViewController: naviVC)
         naviNavi.tabBarItem = UITabBarItem(title: "Navi", image: UIImage(systemName: "arrow.up"), tag: 5)
         
+        // AutoLayoutViewController
+        let autoLayoutVC = AutoLayoutViewController()
+        let autoLayoutNavi = UINavigationController(rootViewController: autoLayoutVC)
+        autoLayoutNavi.tabBarItem = UITabBarItem(title: "Auto Layout", image: UIImage(systemName: "map"), tag: 6)
+            
+        // Cofig Tapbar controller
         let tabbarController = UITabBarController()
-        tabbarController.viewControllers = [myNavi, customNavi, tableNavi, collectionNavi, mapNavi, naviNavi]
+        let viewControllers = [myNavi, customNavi, tableNavi, collectionNavi, mapNavi, naviNavi, autoLayoutNavi]
+        tabbarController.setViewControllers(viewControllers, animated: true)
         tabbarController.tabBar.tintColor = .systemPink
-        return tabbarController
+        tabbarController.selectedIndex = 2
+        window?.rootViewController = tabbarController
+        tabbarController.tabBar.isTranslucent = false
     }
 }
-
