@@ -12,6 +12,14 @@
 		CB661552280EADC0005DC1C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB661551280EADC0005DC1C6 /* Assets.xcassets */; };
 		CB661562280EAE1A005DC1C6 /* Bai01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB661560280EAE1A005DC1C6 /* Bai01ViewController.swift */; };
 		CB661563280EAE1A005DC1C6 /* Bai01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB661561280EAE1A005DC1C6 /* Bai01ViewController.xib */; };
+		CBEC967D280FA735002B6485 /* DiaDiemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC967B280FA735002B6485 /* DiaDiemViewController.swift */; };
+		CBEC967E280FA735002B6485 /* DiaDiemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC967C280FA735002B6485 /* DiaDiemViewController.xib */; };
+		CBEC9682280FA753002B6485 /* MienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC9680280FA753002B6485 /* MienViewController.swift */; };
+		CBEC9683280FA753002B6485 /* MienViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC9681280FA753002B6485 /* MienViewController.xib */; };
+		CBEC9687280FA75F002B6485 /* TinhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC9685280FA75E002B6485 /* TinhViewController.swift */; };
+		CBEC9688280FA75F002B6485 /* TinhViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC9686280FA75E002B6485 /* TinhViewController.xib */; };
+		CBEC968C280FA769002B6485 /* HuyenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC968A280FA769002B6485 /* HuyenViewController.swift */; };
+		CBEC968D280FA769002B6485 /* HuyenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC968B280FA769002B6485 /* HuyenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		CB661556280EADC0005DC1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB661560280EAE1A005DC1C6 /* Bai01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01ViewController.swift; sourceTree = "<group>"; };
 		CB661561280EAE1A005DC1C6 /* Bai01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01ViewController.xib; sourceTree = "<group>"; };
+		CBEC967B280FA735002B6485 /* DiaDiemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaDiemViewController.swift; sourceTree = "<group>"; };
+		CBEC967C280FA735002B6485 /* DiaDiemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaDiemViewController.xib; sourceTree = "<group>"; };
+		CBEC9680280FA753002B6485 /* MienViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MienViewController.swift; sourceTree = "<group>"; };
+		CBEC9681280FA753002B6485 /* MienViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MienViewController.xib; sourceTree = "<group>"; };
+		CBEC9685280FA75E002B6485 /* TinhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinhViewController.swift; sourceTree = "<group>"; };
+		CBEC9686280FA75E002B6485 /* TinhViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinhViewController.xib; sourceTree = "<group>"; };
+		CBEC968A280FA769002B6485 /* HuyenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuyenViewController.swift; sourceTree = "<group>"; };
+		CBEC968B280FA769002B6485 /* HuyenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuyenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 		CB661547280EADBE005DC1C6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				CBEC967A280FA6CA002B6485 /* Bai03 */,
 				CB66155F280EADFE005DC1C6 /* Bai01 */,
 				CB661548280EADBE005DC1C6 /* AppDelegate.swift */,
 				CB66154A280EADBE005DC1C6 /* SceneDelegate.swift */,
@@ -70,6 +87,21 @@
 				CB661561280EAE1A005DC1C6 /* Bai01ViewController.xib */,
 			);
 			path = Bai01;
+			sourceTree = "<group>";
+		};
+		CBEC967A280FA6CA002B6485 /* Bai03 */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC967B280FA735002B6485 /* DiaDiemViewController.swift */,
+				CBEC967C280FA735002B6485 /* DiaDiemViewController.xib */,
+				CBEC9680280FA753002B6485 /* MienViewController.swift */,
+				CBEC9681280FA753002B6485 /* MienViewController.xib */,
+				CBEC9685280FA75E002B6485 /* TinhViewController.swift */,
+				CBEC9686280FA75E002B6485 /* TinhViewController.xib */,
+				CBEC968A280FA769002B6485 /* HuyenViewController.swift */,
+				CBEC968B280FA769002B6485 /* HuyenViewController.xib */,
+			);
+			path = Bai03;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +161,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC968D280FA769002B6485 /* HuyenViewController.xib in Resources */,
 				CB661563280EAE1A005DC1C6 /* Bai01ViewController.xib in Resources */,
+				CBEC9688280FA75F002B6485 /* TinhViewController.xib in Resources */,
+				CBEC967E280FA735002B6485 /* DiaDiemViewController.xib in Resources */,
 				CB661552280EADC0005DC1C6 /* Assets.xcassets in Resources */,
+				CBEC9683280FA753002B6485 /* MienViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC968C280FA769002B6485 /* HuyenViewController.swift in Sources */,
 				CB661549280EADBE005DC1C6 /* AppDelegate.swift in Sources */,
 				CB661562280EAE1A005DC1C6 /* Bai01ViewController.swift in Sources */,
+				CBEC967D280FA735002B6485 /* DiaDiemViewController.swift in Sources */,
+				CBEC9682280FA753002B6485 /* MienViewController.swift in Sources */,
 				CB66154B280EADBE005DC1C6 /* SceneDelegate.swift in Sources */,
+				CBEC9687280FA75F002B6485 /* TinhViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
