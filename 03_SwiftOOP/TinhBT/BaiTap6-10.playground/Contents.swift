@@ -34,6 +34,7 @@ class BaChieu: HinhHoc {
 }
 
 class HinhTron: HaiChieu {
+    
     var r: Float
     
     init(r: Float) {
@@ -168,6 +169,7 @@ class HocSinh {
 }
 
 class DanhSachHs  {
+    
     var ds = [HocSinh]()
     
     init(ds: [HocSinh]) {
@@ -269,11 +271,11 @@ class Date {
 }
 
 var date = Date(day: 31, month: 12, year: 2016)
-if date.check() == false {
-    print("nhập ngày sai")
-} else {
+if date.check() {
     date.printDate()
     date.advance()
+} else {
+    print("nhập ngày sai")
 }
 
 // bai` tâp 9
@@ -321,12 +323,14 @@ print("phần tử nhỏ nhất trong mảng là: \(a.ptNhoNhat())")
 // bai` 10
  
 struct A {
+    
     var n: Int
     var s: Int = 0
     
     init(n: Int) {
         self.n = n
     }
+    
     mutating func tinhTong() -> Int {
         for i in 1...n {
             s = s + i
