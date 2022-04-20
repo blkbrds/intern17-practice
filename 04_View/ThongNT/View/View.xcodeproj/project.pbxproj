@@ -29,6 +29,10 @@
 		E1C438A82805735100334ED1 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C438A62805735100334ED1 /* CommentsViewController.xib */; };
 		E1C438B228057BD200334ED1 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C438B028057BD200334ED1 /* ContactDetailViewController.swift */; };
 		E1C438B328057BD200334ED1 /* ContactDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C438B128057BD200334ED1 /* ContactDetailViewController.xib */; };
+		E1D19CCD280F99B1002B552C /* ForgotPassWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D19CC9280F99B1002B552C /* ForgotPassWordViewController.swift */; };
+		E1D19CCE280F99B1002B552C /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D19CCA280F99B1002B552C /* RegisterViewController.xib */; };
+		E1D19CCF280F99B1002B552C /* ForgotPassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D19CCB280F99B1002B552C /* ForgotPassWordViewController.xib */; };
+		E1D19CD0280F99B1002B552C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D19CCC280F99B1002B552C /* RegisterViewController.swift */; };
 		E1D5824327FD3CA000190B61 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5824127FD3CA000190B61 /* AutoLayoutViewController.swift */; };
 		E1D5824427FD3CA000190B61 /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D5824227FD3CA000190B61 /* AutoLayoutViewController.xib */; };
 		E1D5824A27FD3D1C00190B61 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5824827FD3D1C00190B61 /* SquareViewController.swift */; };
@@ -87,10 +91,11 @@
 		E1EF33C727F2E5D4002F33DB /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EF33C527F2E5D4002F33DB /* MapViewController.xib */; };
 		E1EF33CB27F304C5002F33DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF33C927F304C5002F33DB /* LoginViewController.swift */; };
 		E1EF33CC27F304C5002F33DB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1EF33CA27F304C5002F33DB /* LoginViewController.xib */; };
-		E1FAC8D7280E4CD0006F31AB /* ForgotPassWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAC8D5280E4CD0006F31AB /* ForgotPassWordViewController.swift */; };
-		E1FAC8D8280E4CD0006F31AB /* ForgotPassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FAC8D6280E4CD0006F31AB /* ForgotPassWordViewController.xib */; };
-		E1FAC8DC280E4CF2006F31AB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAC8DA280E4CF2006F31AB /* RegisterViewController.swift */; };
-		E1FAC8DD280E4CF2006F31AB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FAC8DB280E4CF2006F31AB /* RegisterViewController.xib */; };
+		E1FAC8CD280E4A50006F31AB /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAC8C8280E4A50006F31AB /* CustomCollectionViewCell.swift */; };
+		E1FAC8CE280E4A50006F31AB /* BasicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAC8C9280E4A50006F31AB /* BasicCollectionViewController.swift */; };
+		E1FAC8CF280E4A50006F31AB /* BasicCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FAC8CA280E4A50006F31AB /* BasicCollectionViewController.xib */; };
+		E1FAC8D0280E4A50006F31AB /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FAC8CB280E4A50006F31AB /* CustomCollectionViewCell.xib */; };
+		E1FAC8D1280E4A50006F31AB /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAC8CC280E4A50006F31AB /* CustomLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +121,10 @@
 		E1C438A62805735100334ED1 /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
 		E1C438B028057BD200334ED1 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		E1C438B128057BD200334ED1 /* ContactDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailViewController.xib; sourceTree = "<group>"; };
+		E1D19CC9280F99B1002B552C /* ForgotPassWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassWordViewController.swift; sourceTree = "<group>"; };
+		E1D19CCA280F99B1002B552C /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		E1D19CCB280F99B1002B552C /* ForgotPassWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPassWordViewController.xib; sourceTree = "<group>"; };
+		E1D19CCC280F99B1002B552C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E1D5824127FD3CA000190B61 /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
 		E1D5824227FD3CA000190B61 /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
 		E1D5824827FD3D1C00190B61 /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
@@ -176,10 +185,11 @@
 		E1EF33C527F2E5D4002F33DB /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		E1EF33C927F304C5002F33DB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1EF33CA27F304C5002F33DB /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		E1FAC8D5280E4CD0006F31AB /* ForgotPassWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassWordViewController.swift; sourceTree = "<group>"; };
-		E1FAC8D6280E4CD0006F31AB /* ForgotPassWordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassWordViewController.xib; sourceTree = "<group>"; };
-		E1FAC8DA280E4CF2006F31AB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		E1FAC8DB280E4CF2006F31AB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		E1FAC8C8280E4A50006F31AB /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1FAC8C9280E4A50006F31AB /* BasicCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewController.swift; sourceTree = "<group>"; };
+		E1FAC8CA280E4A50006F31AB /* BasicCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicCollectionViewController.xib; sourceTree = "<group>"; };
+		E1FAC8CB280E4A50006F31AB /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		E1FAC8CC280E4A50006F31AB /* CustomLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +239,17 @@
 				E1C438932803E35C00334ED1 /* Contacts.plist */,
 			);
 			path = "Properties List";
+			sourceTree = "<group>";
+		};
+		E1D19CC8280F99B1002B552C /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				E1D19CC9280F99B1002B552C /* ForgotPassWordViewController.swift */,
+				E1D19CCA280F99B1002B552C /* RegisterViewController.xib */,
+				E1D19CCB280F99B1002B552C /* ForgotPassWordViewController.xib */,
+				E1D19CCC280F99B1002B552C /* RegisterViewController.swift */,
+			);
+			path = TabbarController;
 			sourceTree = "<group>";
 		};
 		E1D5824027FD3C7200190B61 /* Auto Layout */ = {
@@ -363,7 +384,7 @@
 		E1EF338927F2E153002F33DB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E1FAC8D4280E4C1D006F31AB /* TabbarController */,
+				E1D19CC8280F99B1002B552C /* TabbarController */,
 				E1D5824027FD3C7200190B61 /* Auto Layout */,
 				E1EF33AA27F2E443002F33DB /* MapView */,
 				E1EF33A927F2E42A002F33DB /* CollectionView */,
@@ -435,6 +456,11 @@
 		E1EF33A927F2E42A002F33DB /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				E1FAC8C9280E4A50006F31AB /* BasicCollectionViewController.swift */,
+				E1FAC8CA280E4A50006F31AB /* BasicCollectionViewController.xib */,
+				E1FAC8C8280E4A50006F31AB /* CustomCollectionViewCell.swift */,
+				E1FAC8CB280E4A50006F31AB /* CustomCollectionViewCell.xib */,
+				E1FAC8CC280E4A50006F31AB /* CustomLayout.swift */,
 				E1EF33BF27F2E5C4002F33DB /* CollectionViewController.swift */,
 				E1EF33C027F2E5C4002F33DB /* CollectionViewController.xib */,
 			);
@@ -448,17 +474,6 @@
 				E1EF33C527F2E5D4002F33DB /* MapViewController.xib */,
 			);
 			path = MapView;
-			sourceTree = "<group>";
-		};
-		E1FAC8D4280E4C1D006F31AB /* TabbarController */ = {
-			isa = PBXGroup;
-			children = (
-				E1FAC8D5280E4CD0006F31AB /* ForgotPassWordViewController.swift */,
-				E1FAC8D6280E4CD0006F31AB /* ForgotPassWordViewController.xib */,
-				E1FAC8DA280E4CF2006F31AB /* RegisterViewController.swift */,
-				E1FAC8DB280E4CF2006F31AB /* RegisterViewController.xib */,
-			);
-			path = TabbarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,9 +535,9 @@
 			files = (
 				E1C00C4927FE6D82002D83D3 /* AViewController.xib in Resources */,
 				E1D5825627FD491200190B61 /* CatAutoLayoutViewController.xib in Resources */,
-				E1FAC8D8280E4CD0006F31AB /* ForgotPassWordViewController.xib in Resources */,
 				E17CA2FE27FEC0870080D607 /* EditViewController.xib in Resources */,
 				E1EF33CC27F304C5002F33DB /* LoginViewController.xib in Resources */,
+				E1D19CCE280F99B1002B552C /* RegisterViewController.xib in Resources */,
 				E1C438A228050B4D00334ED1 /* CommentTableViewCell.xib in Resources */,
 				E1D8CB0227FEF3280003AF20 /* ColumnChartView.xib in Resources */,
 				E1EF33C227F2E5C4002F33DB /* CollectionViewController.xib in Resources */,
@@ -532,16 +547,18 @@
 				E1EF339427F2E157002F33DB /* Assets.xcassets in Resources */,
 				E1D8CB1427FEF36C0003AF20 /* UserView.xib in Resources */,
 				E1D8CB1F27FEF3860003AF20 /* BadgeNumberViewController.xib in Resources */,
+				E1FAC8D0280E4A50006F31AB /* CustomCollectionViewCell.xib in Resources */,
 				E1D8CB0C27FEF3380003AF20 /* DatePickerCustomView.xib in Resources */,
 				E1D5824B27FD3D1C00190B61 /* SquareViewController.xib in Resources */,
 				E1EF33B327F2E58E002F33DB /* HomeViewController.xib in Resources */,
 				E1D8CB2827FEF3930003AF20 /* MySliderViewController.xib in Resources */,
 				E17CA2F927FEC01D0080D607 /* HomeNaviViewController.xib in Resources */,
+				E1D19CCF280F99B1002B552C /* ForgotPassWordViewController.xib in Resources */,
 				E1D8CB2727FEF3930003AF20 /* CustomSliderView.xib in Resources */,
 				E1D8CB3527FFF3A40003AF20 /* ProfileViewController.xib in Resources */,
 				E1D8CB0B27FEF3380003AF20 /* DatePickerViewController.xib in Resources */,
 				E1D8CB0027FEF3280003AF20 /* DrawingViewController.xib in Resources */,
-				E1FAC8DD280E4CF2006F31AB /* RegisterViewController.xib in Resources */,
+				E1FAC8CF280E4A50006F31AB /* BasicCollectionViewController.xib in Resources */,
 				E1C00C4F27FE6D8F002D83D3 /* BViewController.xib in Resources */,
 				E1C00C5927FE6EE9002D83D3 /* CViewController.xib in Resources */,
 				E1EF33C727F2E5D4002F33DB /* MapViewController.xib in Resources */,
@@ -575,11 +592,11 @@
 				E1E07B0027F40109008BF7B3 /* SliderViewController.swift in Sources */,
 				E1EF338B27F2E153002F33DB /* AppDelegate.swift in Sources */,
 				E17CA2F827FEC01D0080D607 /* HomeNaviViewController.swift in Sources */,
+				E1FAC8CD280E4A50006F31AB /* CustomCollectionViewCell.swift in Sources */,
 				E1D8CB0127FEF3280003AF20 /* ColumnChartView.swift in Sources */,
 				E1C438B228057BD200334ED1 /* ContactDetailViewController.swift in Sources */,
 				E1E07B0B27F40159008BF7B3 /* MonkeyViewController.swift in Sources */,
 				E1D8CB2D27FFC59E0003AF20 /* LoginControl.swift in Sources */,
-				E1FAC8DC280E4CF2006F31AB /* RegisterViewController.swift in Sources */,
 				E1D8CB1E27FEF3860003AF20 /* BadgeNumberView.swift in Sources */,
 				E1D8CB1327FEF36C0003AF20 /* UserView.swift in Sources */,
 				E1EF33C627F2E5D4002F33DB /* MapViewController.swift in Sources */,
@@ -589,10 +606,12 @@
 				E1C438A72805735100334ED1 /* CommentsViewController.swift in Sources */,
 				E1D8CAFF27FEF3280003AF20 /* DrawingViewController.swift in Sources */,
 				E1D8CB2A27FEF3930003AF20 /* CustomSliderView.swift in Sources */,
+				E1FAC8CE280E4A50006F31AB /* BasicCollectionViewController.swift in Sources */,
 				E1C00C5D27FE6EF8002D83D3 /* DViewController.swift in Sources */,
 				E1D8CB0A27FEF3380003AF20 /* DatePickerCustomView.swift in Sources */,
 				E1D5824327FD3CA000190B61 /* AutoLayoutViewController.swift in Sources */,
 				E1D5824A27FD3D1C00190B61 /* SquareViewController.swift in Sources */,
+				E1D19CCD280F99B1002B552C /* ForgotPassWordViewController.swift in Sources */,
 				E1D5825E27FD894B00190B61 /* DumbData.swift in Sources */,
 				E1D8CB2927FEF3930003AF20 /* MySliderViewController.swift in Sources */,
 				E1D5825027FD444D00190B61 /* SquaresViewController.swift in Sources */,
@@ -604,12 +623,13 @@
 				E1EF33B227F2E58E002F33DB /* HomeViewController.swift in Sources */,
 				E1C00C5827FE6EE9002D83D3 /* CViewController.swift in Sources */,
 				E1C00C4827FE6D82002D83D3 /* AViewController.swift in Sources */,
+				E1D19CD0280F99B1002B552C /* RegisterViewController.swift in Sources */,
 				E1E07AFB27F400E6008BF7B3 /* ColorViewController.swift in Sources */,
 				E1D5825527FD491200190B61 /* CatAutoLayoutViewController.swift in Sources */,
-				E1FAC8D7280E4CD0006F31AB /* ForgotPassWordViewController.swift in Sources */,
 				E1C438A128050B4D00334ED1 /* CommentTableViewCell.swift in Sources */,
 				E1EF33CB27F304C5002F33DB /* LoginViewController.swift in Sources */,
 				E1D8CB3427FFF3A40003AF20 /* ProfileViewController.swift in Sources */,
+				E1FAC8D1280E4A50006F31AB /* CustomLayout.swift in Sources */,
 				E1C00C6227FE6F0C002D83D3 /* EViewController.swift in Sources */,
 				E1D8CB2027FEF3860003AF20 /* BadgeNumberViewController.swift in Sources */,
 			);
