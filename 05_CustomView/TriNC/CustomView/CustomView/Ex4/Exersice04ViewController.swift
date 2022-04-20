@@ -41,11 +41,14 @@ final class Exersice04ViewController: UIViewController {
 
 // MARK: - Extention
 extension Exersice04ViewController: DatePickerViewDelegate {
-    func getDate(_ view: DatePickerView, date: String) {
-        UIView.animate(withDuration: 0.3) {
-            self.view.endEditing(true)
-        } completion: { _ in
-            self.datePickerTextField.text = date
+    func view(_ view: DatePickerView, needsPerform action: DatePickerView.Action) {
+        switch action {
+        case .select(let action):
+            UIView.animate(withDuration: 0.3) {
+                self.view.endEditing(true)
+            } completion: { _ in
+                self.datePickerTextField.text = action
+            }
         }
     }
 }

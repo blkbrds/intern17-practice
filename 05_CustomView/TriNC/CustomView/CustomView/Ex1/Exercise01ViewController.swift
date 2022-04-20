@@ -26,7 +26,7 @@ final class Exercise01ViewController: UIViewController {
         
         scrollView.contentOffset = CGPoint(x: 0, y: 0)
         var contentSizeHeight: CGFloat = 0
-                
+        
         for i in 0..<10 {
             let y: CGFloat = DefineFrame.height * CGFloat(i)
             contentSizeHeight += DefineFrame.height
@@ -49,9 +49,9 @@ final class Exercise01ViewController: UIViewController {
 
 // MARK: - Implement Protocol
 // 4: Implement protocol
-extension Exercise01ViewController: MyAvatarDelegate {
-    func didTap(didTap with: MyAvatarView, countUser: Int) {
-        print("CountUser: \(countUser)")
+extension Exercise01ViewController: MyAvatarViewDelegate {
+    func view(_ view: MyAvatarView, needsPerform action: MyAvatarView.Action) {
+        print("CountUser: \(action)")
     }
 }
 

@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Protocol
 protocol DatePickerViewDelegate: class {
-    func getDate(_ view: DatePickerView, date: String)
+    func view(_ view: DatePickerView, needsPerform action: DatePickerView.Action)
 }
 
 final class DatePickerView: UIView {
@@ -58,8 +58,13 @@ final class DatePickerView: UIView {
         formatter.timeStyle = .none
             
         let date = formatter.string(from: datePicker.date)
-        self.delegate?.getDate(self, date: date)
+        self.delegate?.view(self, needsPerform: .select(date: date))
     }
 }
 
-
+// MARK: - Enum
+extension DatePickerView {
+    enum Action {
+        case select(date: String)
+    }
+}

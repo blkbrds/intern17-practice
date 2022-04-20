@@ -9,15 +9,15 @@ import Foundation
 import UIKit
 
 // 2: Tạo Protocol MyDelegateAvatar
-protocol MyAvatarDelegate {
-    func didTap(didTap with: MyAvatarView, countUser: Int)
+protocol MyAvatarViewDelegate {
+    func view(_ view: MyAvatarView, needsPerform action: MyAvatarView.Action)
 }
 
 // 1: Tạo Class MyAvatar
 final class MyAvatarView: UIView {
     
     // MARK: - Properties
-    var delegate: MyAvatarDelegate?
+    var delegate: MyAvatarViewDelegate?
     var count: Int = 0
     var name: String = "" {
         didSet {
@@ -40,9 +40,15 @@ final class MyAvatarView: UIView {
     @IBAction private func myActionTouchUpInSide(_ sender: Any) {
         if let delegate = delegate {
             // callback
-            delegate.didTap(didTap: self, countUser: count)
+            delegate.view(self, needsPerform: .tap(countUser: count))
         }
     }
 }
 
+// MARK: - Enum
+extension MyAvatarView {
+    enum Action {
+        case tap(countUser: Int)
+    }
+}
 

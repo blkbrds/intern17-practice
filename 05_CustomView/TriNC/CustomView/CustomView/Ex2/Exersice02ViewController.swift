@@ -34,7 +34,7 @@ final class Exersice02ViewController: UIViewController {
 }
 
 // MARK: - Exention MySliderDelegate And UITextFieldDelegate
-extension Exersice02ViewController: MySliderDelegate {
+extension Exersice02ViewController: MySliderViewDelegate {
     func mySliderView(view: MySliderView, needsPerform action: MySliderView.Action) {
         switch action {
         case .changeValueSlider(value: let value):

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 // MARK: - Protocol
-protocol MySliderDelegate: class {
+protocol MySliderViewDelegate: class {
     func mySliderView(view: MySliderView, needsPerform action: MySliderView.Action)
 }
 
@@ -22,7 +22,7 @@ final class MySliderView: UIView {
     @IBOutlet private weak var percentLabel: UILabel!
     
     // MARK: - Properties
-    weak var delegate: MySliderDelegate?
+    weak var delegate: MySliderViewDelegate?
     var value: Int = 50 {
         didSet {
             updateSliderView()
@@ -46,6 +46,7 @@ final class MySliderView: UIView {
     
     // MARK: - Touch Moved
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
         let touch = touches.first
         let location = touch?.location(in: containerView)
         guard let location = location else { return }
