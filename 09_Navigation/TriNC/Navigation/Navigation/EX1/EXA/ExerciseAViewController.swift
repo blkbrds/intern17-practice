@@ -20,5 +20,4 @@ final class ExerciseAViewController: UIViewController {
         let vc = ExBViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

@@ -16,9 +16,5 @@ final class BackgroundViewController: UIViewController {
     }
     
     // MARK: - Private Functions
-    private func setBackgroundColorBar() {
-        title = "Gradient NavigationBar"
-        let image = UIImage(named: "ic-g")
-        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
-    }
+    private func setBackgroundColorBar() {}
 }

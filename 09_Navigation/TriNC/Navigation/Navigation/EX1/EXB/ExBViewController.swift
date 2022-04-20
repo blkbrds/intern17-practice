@@ -24,5 +24,4 @@ final class ExBViewController: UIViewController {
     @IBAction private func previousButtonTouchUpInside(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
 }

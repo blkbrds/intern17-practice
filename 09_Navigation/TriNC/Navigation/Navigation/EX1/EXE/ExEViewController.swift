@@ -33,6 +33,4 @@ final class ExEViewController: UIViewController {
     @IBAction private func rootButtonTouchUpInside(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
-    
 }

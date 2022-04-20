@@ -7,8 +7,9 @@
 
 import Foundation
 
-class DataManager {
+final class DataManager {
     
+    // MARK: - Function
     static func checkData(userName: String, password: String) -> Bool {
         if let path = Bundle.main.path(forResource: "User", ofType: "plist"),
            let myDict = NSDictionary(contentsOfFile: path) {

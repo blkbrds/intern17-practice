@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		220E803C280F9AFB00C82D76 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220E803A280F9AFB00C82D76 /* BackgroundViewController.swift */; };
 		220E803D280F9AFB00C82D76 /* BackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220E803B280F9AFB00C82D76 /* BackgroundViewController.xib */; };
-		220E8041280FA1CA00C82D76 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220E803F280FA1CA00C82D76 /* NewsFeedViewController.swift */; };
-		220E8042280FA1CA00C82D76 /* NewsFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220E8040280FA1CA00C82D76 /* NewsFeedViewController.xib */; };
+		220E8047280FBB4C00C82D76 /* TintColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220E8045280FBB4C00C82D76 /* TintColorViewController.swift */; };
+		220E8048280FBB4C00C82D76 /* TintColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220E8046280FBB4C00C82D76 /* TintColorViewController.xib */; };
+		220E804B280FBDA400C82D76 /* SeachBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220E8049280FBDA400C82D76 /* SeachBarViewController.swift */; };
+		220E804C280FBDA400C82D76 /* SeachBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220E804A280FBDA400C82D76 /* SeachBarViewController.xib */; };
+		220E8050280FC67200C82D76 /* MoreBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220E804E280FC67200C82D76 /* MoreBarViewController.swift */; };
+		220E8051280FC67200C82D76 /* MoreBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220E804F280FC67200C82D76 /* MoreBarViewController.xib */; };
 		22AA10D7280E964300109357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D6280E964300109357 /* AppDelegate.swift */; };
 		22AA10D9280E964300109357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D8280E964300109357 /* SceneDelegate.swift */; };
 		22AA10E0280E964400109357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22AA10DF280E964400109357 /* Assets.xcassets */; };
@@ -38,8 +42,12 @@
 /* Begin PBXFileReference section */
 		220E803A280F9AFB00C82D76 /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		220E803B280F9AFB00C82D76 /* BackgroundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundViewController.xib; sourceTree = "<group>"; };
-		220E803F280FA1CA00C82D76 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
-		220E8040280FA1CA00C82D76 /* NewsFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedViewController.xib; sourceTree = "<group>"; };
+		220E8045280FBB4C00C82D76 /* TintColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintColorViewController.swift; sourceTree = "<group>"; };
+		220E8046280FBB4C00C82D76 /* TintColorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TintColorViewController.xib; sourceTree = "<group>"; };
+		220E8049280FBDA400C82D76 /* SeachBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachBarViewController.swift; sourceTree = "<group>"; };
+		220E804A280FBDA400C82D76 /* SeachBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeachBarViewController.xib; sourceTree = "<group>"; };
+		220E804E280FC67200C82D76 /* MoreBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreBarViewController.swift; sourceTree = "<group>"; };
+		220E804F280FC67200C82D76 /* MoreBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreBarViewController.xib; sourceTree = "<group>"; };
 		22AA10D3280E964300109357 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AA10D6280E964300109357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22AA10D8280E964300109357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +88,9 @@
 		220E8038280F9A8F00C82D76 /* EX4 */ = {
 			isa = PBXGroup;
 			children = (
-				220E803E280FA1AA00C82D76 /* NewsFeed */,
+				220E804D280FC66300C82D76 /* MoreBar */,
+				220E8044280FBB2700C82D76 /* SeachBar */,
+				220E803E280FA1AA00C82D76 /* TintColor */,
 				220E8039280F9AEE00C82D76 /* Background */,
 			);
 			path = EX4;
@@ -95,13 +105,13 @@
 			path = Background;
 			sourceTree = "<group>";
 		};
-		220E803E280FA1AA00C82D76 /* NewsFeed */ = {
+		220E803E280FA1AA00C82D76 /* TintColor */ = {
 			isa = PBXGroup;
 			children = (
-				220E803F280FA1CA00C82D76 /* NewsFeedViewController.swift */,
-				220E8040280FA1CA00C82D76 /* NewsFeedViewController.xib */,
+				220E8045280FBB4C00C82D76 /* TintColorViewController.swift */,
+				220E8046280FBB4C00C82D76 /* TintColorViewController.xib */,
 			);
-			path = NewsFeed;
+			path = TintColor;
 			sourceTree = "<group>";
 		};
 		220E8043280FA3AC00C82D76 /* EX3 */ = {
@@ -109,6 +119,24 @@
 			children = (
 			);
 			path = EX3;
+			sourceTree = "<group>";
+		};
+		220E8044280FBB2700C82D76 /* SeachBar */ = {
+			isa = PBXGroup;
+			children = (
+				220E8049280FBDA400C82D76 /* SeachBarViewController.swift */,
+				220E804A280FBDA400C82D76 /* SeachBarViewController.xib */,
+			);
+			path = SeachBar;
+			sourceTree = "<group>";
+		};
+		220E804D280FC66300C82D76 /* MoreBar */ = {
+			isa = PBXGroup;
+			children = (
+				220E804E280FC67200C82D76 /* MoreBarViewController.swift */,
+				220E804F280FC67200C82D76 /* MoreBarViewController.xib */,
+			);
+			path = MoreBar;
 			sourceTree = "<group>";
 		};
 		2278FC6C280EFE92007A8E27 /* DataManager */ = {
@@ -335,14 +363,16 @@
 				22AA1119280EA77500109357 /* EditViewController.xib in Resources */,
 				22AA10E3280E964400109357 /* LaunchScreen.storyboard in Resources */,
 				220E803D280F9AFB00C82D76 /* BackgroundViewController.xib in Resources */,
+				220E8051280FC67200C82D76 /* MoreBarViewController.xib in Resources */,
 				22AA10E0280E964400109357 /* Assets.xcassets in Resources */,
 				22AA10F4280E981600109357 /* ExerciseAViewController.xib in Resources */,
 				22AA1109280E988E00109357 /* ExEViewController.xib in Resources */,
 				22AA1103280E985200109357 /* ExDViewController.xib in Resources */,
-				220E8042280FA1CA00C82D76 /* NewsFeedViewController.xib in Resources */,
 				22AA111C280EBFD900109357 /* User.plist in Resources */,
+				220E8048280FBB4C00C82D76 /* TintColorViewController.xib in Resources */,
 				22AA10FF280E984800109357 /* ExCViewController.xib in Resources */,
 				22AA1115280EA74100109357 /* HomeViewController.xib in Resources */,
+				220E804C280FBDA400C82D76 /* SeachBarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,16 +386,18 @@
 				220E803C280F9AFB00C82D76 /* BackgroundViewController.swift in Sources */,
 				22AA1118280EA77500109357 /* EditViewController.swift in Sources */,
 				22AA1108280E988E00109357 /* ExEViewController.swift in Sources */,
+				220E8050280FC67200C82D76 /* MoreBarViewController.swift in Sources */,
 				22AA10F9280E983800109357 /* ExBViewController.swift in Sources */,
 				22AA10FE280E984800109357 /* ExCViewController.swift in Sources */,
 				22AA1102280E985200109357 /* ExDViewController.swift in Sources */,
 				22AA1110280EA72300109357 /* LoginViewController.swift in Sources */,
 				22AA1114280EA74100109357 /* HomeViewController.swift in Sources */,
 				22AA10F3280E981600109357 /* ExerciseAViewController.swift in Sources */,
+				220E804B280FBDA400C82D76 /* SeachBarViewController.swift in Sources */,
 				22AA111E280EC79700109357 /* DataManager.swift in Sources */,
 				22AA10D7280E964300109357 /* AppDelegate.swift in Sources */,
 				22AA10D9280E964300109357 /* SceneDelegate.swift in Sources */,
-				220E8041280FA1CA00C82D76 /* NewsFeedViewController.swift in Sources */,
+				220E8047280FBB4C00C82D76 /* TintColorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
