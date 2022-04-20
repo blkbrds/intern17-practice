@@ -12,11 +12,11 @@ final class TintColorViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        setupBar()
     }
 
     // MARK: Private Functions
-    private func setupUI() {
+    private func setupBar() {
         changeColorAndTintColorBar()
         navigationBarItem()
         view.backgroundColor = .lightGray
@@ -24,9 +24,9 @@ final class TintColorViewController: UIViewController {
     
     private func changeColorAndTintColorBar() {
         // title navi
-        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 111/255, green: 222/255, blue: 33.3/255, alpha: 1)
+        self.navigationController?.navigationBar.backgroundColor = .cyan
         // tintcolor
-        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.tintColor = .blue
         // titlecolor
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
@@ -42,9 +42,6 @@ final class TintColorViewController: UIViewController {
     }
     
     // MARK: - Objc
-    @objc private func leftAction() {
-        print("back")
-    }
-    
+    @objc private func leftAction() {}
     @objc private func rightAction() {}
 }

@@ -18,15 +18,17 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case ex5
         case ex6
         case ex7
+        case ex8
         
         var controller: UIViewController {
             switch self {
             case .ex1: return ExerciseAViewController()
             case .ex2: return LoginViewController()
-            case .ex4: return BackgroundViewController()
+            case .ex4: return ImageBackGroundViewController()
             case .ex5: return TintColorViewController()
             case .ex6: return SeachBarViewController()
-            case .ex7: return MoreBarViewController()
+            case .ex7: return BarButtonTestViewController()
+            case .ex8: return MoreBarViewController()
             }
         }
     }
@@ -35,7 +37,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let vc = ControllerType.ex7.controller
+        let vc = ControllerType.ex5.controller
         let nav = UINavigationController(rootViewController: vc)
         window.rootViewController = nav
         window.makeKeyAndVisible()
