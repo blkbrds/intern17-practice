@@ -21,7 +21,8 @@ final class LoginViewController: UIViewController {
             if checkInput != .correct {
                 showResult()
             } else {
-                goToHomeController()
+                SceneDelegate.shared.changeFlow(with: .logined)
+//                goToHomeController()
             }
         }
     }
@@ -35,10 +36,18 @@ final class LoginViewController: UIViewController {
     
     // MARK: - Private functions
     private func setupUI() {
-        loginBtn.layer.cornerRadius = 10
-        clearBtn.layer.cornerRadius = 10
         configBarItem()
         title = "Login"
+        view.subviews
+            .compactMap { $0 as? UIButton}
+            .forEach { configButton($0) }
+    }
+    
+    private func configButton(_ button: UIButton) {
+        button.layer.cornerRadius = 10
+        button.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.titleLabel?.textColor = UIColor.white
     }
     
     private func showResult() {
@@ -70,6 +79,14 @@ final class LoginViewController: UIViewController {
     @IBAction private func clickOnDoneKey(_ sender: AnyObject) {
         loginProcess()
         view.endEditing(true)
+    }
+    
+    @IBAction private func registerTouchUpInside(_ sender: UIButton) {
+        navigationController?.pushViewController(RegisterViewController(), animated: true)
+    }
+    
+    @IBAction private func forgotPasswordTouchUpInside(_ sender: UIButton) {
+        navigationController?.pushViewController(ForgotPassWordViewController(), animated: true)
     }
     
     //MARK: - Override function
