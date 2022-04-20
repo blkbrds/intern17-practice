@@ -9,8 +9,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let vc = Bai01ViewController()
-        window?.rootViewController = vc
+        let vc = DiaDiemViewController()
+        let navi = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navi
         window?.makeKeyAndVisible()
     }
 
