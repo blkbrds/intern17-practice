@@ -1,7 +1,7 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,6 @@ final class HomeViewController: UIViewController {
             let x2 = widthView * CGFloat(index)
             var x = x1 + x2
             var y = khoangCach
-            
             if x >= UIScreen.main.bounds.width {
                 let indexWidth = index % 3
                 let x1 = khoangCach * (CGFloat(indexWidth) + 1)
@@ -32,10 +31,12 @@ final class HomeViewController: UIViewController {
         }
     }
 }
+
 // MARK: - UserViewDelegate
 extension HomeViewController: UserViewDelegate {
-    func didTap(view: UserView, needsPerfom action: UserView.Action) {
-        switch action {
+    
+    func controller(view: UserView, needsPerfom actions: UserView.Action) {
+        switch actions {
         case .tap(let name):
             print(name)
         }

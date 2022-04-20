@@ -1,13 +1,13 @@
 import UIKit
 
 final class Bai4ViewController: UIViewController, UIPickerViewDelegate {
-
+    
     // MARK: - IBOutlet
     @IBOutlet weak var datePickerTextField: UITextField!
     
     // MARK: Properties
     var datePickerView = DatePickerView()
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,8 @@ final class Bai4ViewController: UIViewController, UIPickerViewDelegate {
 
 // MARK: - DatePickerViewDelegate
 extension Bai4ViewController: DatePickerViewDelegate {
-    func getDate(view: DatePickerView, date: String) {
+    
+    func controller(view: DatePickerView, date: String) {
         UIView.animate(withDuration: 0.8, delay: 0.3, options: [.repeat, .curveEaseOut, .autoreverse], animations: {
             self.view.endEditing(true)
         }, completion: { _ in

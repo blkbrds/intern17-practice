@@ -20,17 +20,21 @@ final class Bai2ViewController: UIViewController {
         valueTextField.returnKeyType = .done
     }
 }
+
 // MARK: - MySliderDelegate
 extension Bai2ViewController: MySliderDelegate {
-    func didFull(view: MySliderView, needsPerfom action: MySliderView.Action) {
+    
+    func controller(view: MySliderView, needsPerfom action: MySliderView.Action) {
         switch action {
         case .tap(let value):
             valueTextField.text = value
         }
     }
 }
+
 // MARK: - UITextFieldDelegate
 extension Bai2ViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let value = Int(valueTextField.text ?? "") {
             if value > 100 || value < 0 {

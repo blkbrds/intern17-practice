@@ -2,11 +2,13 @@ import UIKit
 
 // MARK: - MySliderDelegate
 protocol MySliderDelegate: class {
-    func didFull(view: MySliderView, needsPerfom action: MySliderView.Action)
+    
+    func controller(view: MySliderView, needsPerfom actions: MySliderView.Action)
 }
 
 final class MySliderView: UIView {
     
+    // MARK: Properties
     var value: Int = 50 {
         didSet {
             updateSlider()
@@ -43,7 +45,7 @@ final class MySliderView: UIView {
             let percent = blackView.frame.size.height / parentView.frame.size.height * 100
             phantramLabel.text = "\(Int(percent))"
             if let delegate = delegate {
-                delegate.didFull(view: self, needsPerfom: .tap(value: "\(Int(percent))"))
+                delegate.controller(view: self, needsPerfom: .tap(value: "\(Int(percent))"))
             }
         }
     }
@@ -57,5 +59,4 @@ final class MySliderView: UIView {
         let percent = blackView.frame.size.height / parentView.frame.size.height * 100
         phantramLabel.text = "\(Int(percent))"
     }
-    
 }

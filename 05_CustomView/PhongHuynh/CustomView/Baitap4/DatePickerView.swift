@@ -2,26 +2,27 @@ import UIKit
 
 // MARK: - DatePickerViewDelegate
 protocol DatePickerViewDelegate: class {
-    func getDate(view: DatePickerView, date: String)
+    
+    func controller(view: DatePickerView, date: String)
 }
 
 class DatePickerView: UIView {
-
+    
     // MARK: - Properties
     let datePicker: UIDatePicker = UIDatePicker()
     let dateFormatte: String = "mm dd, yyyy"
     
     weak var delegate: DatePickerViewDelegate?
-
+    
     // MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func showDatePicker(datePickerTextField: UITextField) {
         let toolBar = UIToolbar()
         datePicker.datePickerMode = .date
@@ -43,7 +44,7 @@ class DatePickerView: UIView {
         formatter.timeStyle = .none
         let date = formatter.string(from: datePicker.date)
         if let delegate = delegate {
-            delegate.getDate(view: self, date: date)
+            delegate.controller(view: self, date: date)
         }
     }
 }
