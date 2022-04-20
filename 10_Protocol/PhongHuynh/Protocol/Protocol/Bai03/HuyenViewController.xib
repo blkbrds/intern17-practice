@@ -12,6 +12,15 @@
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="huyenButton" destination="DTz-cG-tm5" collectionClass="NSMutableArray" id="lgN-tR-BAn"/>
+                <outletCollection property="huyenButton" destination="fAe-he-ZbJ" collectionClass="NSMutableArray" id="P5p-J4-hy7"/>
+                <outletCollection property="huyenButton" destination="E3x-Re-gQj" collectionClass="NSMutableArray" id="Sbb-aD-BVn"/>
+                <outletCollection property="huyenButton" destination="t1P-E3-p6V" collectionClass="NSMutableArray" id="3wx-Dd-f3C"/>
+                <outletCollection property="huyenButton" destination="RJI-fb-Dj3" collectionClass="NSMutableArray" id="g89-em-911"/>
+                <outletCollection property="huyenButton" destination="JiV-pL-deQ" collectionClass="NSMutableArray" id="oEU-9w-tNH"/>
+                <outletCollection property="huyenButton" destination="HS6-Xj-13C" collectionClass="NSMutableArray" id="PNI-SA-9LZ"/>
+                <outletCollection property="huyenButton" destination="LQP-JQ-P6E" collectionClass="NSMutableArray" id="8QQ-5T-dIR"/>
+                <outletCollection property="huyenButton" destination="7nk-3x-xC7" collectionClass="NSMutableArray" id="mBc-Vy-UYq"/>
+                <outletCollection property="huyenButton" destination="Bjf-J7-WH4" collectionClass="NSMutableArray" id="c9Y-9Z-6Of"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,65 +28,95 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-he-ZbJ">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-he-ZbJ">
                     <rect key="frame" x="107" y="97" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 1"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="omx-zW-ZVu"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTz-cG-tm5">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTz-cG-tm5">
                     <rect key="frame" x="107" y="140" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 2"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="vHW-qw-9R1"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-Re-gQj">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-Re-gQj">
                     <rect key="frame" x="107" y="183" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 3"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Onj-Fj-ras"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1P-E3-p6V">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1P-E3-p6V">
                     <rect key="frame" x="107" y="226" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 4"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="nvC-wa-ZGS"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJI-fb-Dj3">
+                <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJI-fb-Dj3">
                     <rect key="frame" x="107" y="269" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 5"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="QIX-gV-XiE"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiV-pL-deQ">
+                <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiV-pL-deQ">
                     <rect key="frame" x="107" y="312" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 6"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="9p8-2q-2EI"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HS6-Xj-13C">
+                <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HS6-Xj-13C">
                     <rect key="frame" x="107" y="355" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 7"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="p7A-kN-IpT"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQP-JQ-P6E">
+                <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQP-JQ-P6E">
                     <rect key="frame" x="107" y="398" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 8"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="3pt-DI-yT8"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nk-3x-xC7">
+                <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nk-3x-xC7">
                     <rect key="frame" x="107" y="441" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 9"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Hu9-nw-HKs"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjf-J7-WH4">
+                <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjf-J7-WH4">
                     <rect key="frame" x="107" y="484" width="201" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Huyện 10"/>
+                    <connections>
+                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="czZ-kK-xg7"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
