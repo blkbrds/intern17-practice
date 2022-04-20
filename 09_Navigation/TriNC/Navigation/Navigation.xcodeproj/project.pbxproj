@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220E803C280F9AFB00C82D76 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220E803A280F9AFB00C82D76 /* BackgroundViewController.swift */; };
+		220E803D280F9AFB00C82D76 /* BackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220E803B280F9AFB00C82D76 /* BackgroundViewController.xib */; };
+		220E8041280FA1CA00C82D76 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220E803F280FA1CA00C82D76 /* NewsFeedViewController.swift */; };
+		220E8042280FA1CA00C82D76 /* NewsFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220E8040280FA1CA00C82D76 /* NewsFeedViewController.xib */; };
 		22AA10D7280E964300109357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D6280E964300109357 /* AppDelegate.swift */; };
 		22AA10D9280E964300109357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D8280E964300109357 /* SceneDelegate.swift */; };
 		22AA10E0280E964400109357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22AA10DF280E964400109357 /* Assets.xcassets */; };
@@ -32,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220E803A280F9AFB00C82D76 /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
+		220E803B280F9AFB00C82D76 /* BackgroundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundViewController.xib; sourceTree = "<group>"; };
+		220E803F280FA1CA00C82D76 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		220E8040280FA1CA00C82D76 /* NewsFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedViewController.xib; sourceTree = "<group>"; };
 		22AA10D3280E964300109357 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AA10D6280E964300109357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22AA10D8280E964300109357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +77,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		220E8038280F9A8F00C82D76 /* EX4 */ = {
+			isa = PBXGroup;
+			children = (
+				220E803E280FA1AA00C82D76 /* NewsFeed */,
+				220E8039280F9AEE00C82D76 /* Background */,
+			);
+			path = EX4;
+			sourceTree = "<group>";
+		};
+		220E8039280F9AEE00C82D76 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				220E803A280F9AFB00C82D76 /* BackgroundViewController.swift */,
+				220E803B280F9AFB00C82D76 /* BackgroundViewController.xib */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		220E803E280FA1AA00C82D76 /* NewsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				220E803F280FA1CA00C82D76 /* NewsFeedViewController.swift */,
+				220E8040280FA1CA00C82D76 /* NewsFeedViewController.xib */,
+			);
+			path = NewsFeed;
+			sourceTree = "<group>";
+		};
+		220E8043280FA3AC00C82D76 /* EX3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EX3;
+			sourceTree = "<group>";
+		};
 		2278FC6C280EFE92007A8E27 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +141,8 @@
 				22AA10EB280E970100109357 /* AppDelegate */,
 				22AA10EC280E972700109357 /* EX1 */,
 				22AA110A280EA69F00109357 /* EX2 */,
-				22AA111A280EBC2300109357 /* PlistData */,
+				220E8043280FA3AC00C82D76 /* EX3 */,
+				220E8038280F9A8F00C82D76 /* EX4 */,
 				22AA10EA280E96F500109357 /* Resource */,
 				22AA10E4280E964400109357 /* Info.plist */,
 			);
@@ -184,6 +227,7 @@
 		22AA110A280EA69F00109357 /* EX2 */ = {
 			isa = PBXGroup;
 			children = (
+				22AA111A280EBC2300109357 /* PlistData */,
 				2278FC6C280EFE92007A8E27 /* DataManager */,
 				22AA110D280EA71300109357 /* Edit */,
 				22AA110C280EA70900109357 /* Home */,
@@ -224,7 +268,8 @@
 			children = (
 				22AA111B280EBFD900109357 /* User.plist */,
 			);
-			path = PlistData;
+			name = PlistData;
+			path = ../PlistData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,10 +334,12 @@
 				22AA10FA280E983800109357 /* ExBViewController.xib in Resources */,
 				22AA1119280EA77500109357 /* EditViewController.xib in Resources */,
 				22AA10E3280E964400109357 /* LaunchScreen.storyboard in Resources */,
+				220E803D280F9AFB00C82D76 /* BackgroundViewController.xib in Resources */,
 				22AA10E0280E964400109357 /* Assets.xcassets in Resources */,
 				22AA10F4280E981600109357 /* ExerciseAViewController.xib in Resources */,
 				22AA1109280E988E00109357 /* ExEViewController.xib in Resources */,
 				22AA1103280E985200109357 /* ExDViewController.xib in Resources */,
+				220E8042280FA1CA00C82D76 /* NewsFeedViewController.xib in Resources */,
 				22AA111C280EBFD900109357 /* User.plist in Resources */,
 				22AA10FF280E984800109357 /* ExCViewController.xib in Resources */,
 				22AA1115280EA74100109357 /* HomeViewController.xib in Resources */,
@@ -306,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				220E803C280F9AFB00C82D76 /* BackgroundViewController.swift in Sources */,
 				22AA1118280EA77500109357 /* EditViewController.swift in Sources */,
 				22AA1108280E988E00109357 /* ExEViewController.swift in Sources */,
 				22AA10F9280E983800109357 /* ExBViewController.swift in Sources */,
@@ -317,6 +365,7 @@
 				22AA111E280EC79700109357 /* DataManager.swift in Sources */,
 				22AA10D7280E964300109357 /* AppDelegate.swift in Sources */,
 				22AA10D9280E964300109357 /* SceneDelegate.swift in Sources */,
+				220E8041280FA1CA00C82D76 /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
