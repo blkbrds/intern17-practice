@@ -22,12 +22,12 @@ final class ExDViewController: UIViewController {
     }
     
     @IBAction private func cButtonTouchUpInside(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[2])!
+        guard let vc = (self.navigationController?.viewControllers[2]) else { return }
         self.navigationController?.popToViewController(vc, animated: true)
     }
     
     @IBAction private func bButtonTouchUpInside(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[1])!
+        guard let vc = (self.navigationController?.viewControllers[1]) else { return }
         self.navigationController?.popToViewController(vc, animated: true)
     }
     

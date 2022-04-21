@@ -17,6 +17,7 @@
 		220E8055280FE4E300C82D76 /* ImageBackGroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220E8053280FE4E300C82D76 /* ImageBackGroundViewController.xib */; };
 		220E805928101D6500C82D76 /* BarButtonTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220E805728101D6500C82D76 /* BarButtonTestViewController.swift */; };
 		220E805A28101D6500C82D76 /* BarButtonTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220E805828101D6500C82D76 /* BarButtonTestViewController.xib */; };
+		22A849CB2810EF400068BC50 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A849CA2810EF400068BC50 /* User.swift */; };
 		22AA10D7280E964300109357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D6280E964300109357 /* AppDelegate.swift */; };
 		22AA10D9280E964300109357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D8280E964300109357 /* SceneDelegate.swift */; };
 		22AA10E0280E964400109357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22AA10DF280E964400109357 /* Assets.xcassets */; };
@@ -39,6 +40,12 @@
 		22AA1119280EA77500109357 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AA1117280EA77500109357 /* EditViewController.xib */; };
 		22AA111C280EBFD900109357 /* User.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22AA111B280EBFD900109357 /* User.plist */; };
 		22AA111E280EC79700109357 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA111D280EC79700109357 /* DataManager.swift */; };
+		22DC60ED28103C28000756F6 /* HomieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC60EB28103C28000756F6 /* HomieViewController.swift */; };
+		22DC60EE28103C28000756F6 /* HomieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DC60EC28103C28000756F6 /* HomieViewController.xib */; };
+		22DC60F328103C96000756F6 /* AvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DC60F228103C96000756F6 /* AvatarView.xib */; };
+		22DC60F528103CA2000756F6 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC60F428103CA2000756F6 /* AvatarView.swift */; };
+		22DC60F828103CC5000756F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC60F628103CC5000756F6 /* ProfileViewController.swift */; };
+		22DC60F928103CC5000756F6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DC60F728103CC5000756F6 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +59,7 @@
 		220E8053280FE4E300C82D76 /* ImageBackGroundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageBackGroundViewController.xib; sourceTree = "<group>"; };
 		220E805728101D6500C82D76 /* BarButtonTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonTestViewController.swift; sourceTree = "<group>"; };
 		220E805828101D6500C82D76 /* BarButtonTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarButtonTestViewController.xib; sourceTree = "<group>"; };
+		22A849CA2810EF400068BC50 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22AA10D3280E964300109357 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AA10D6280E964300109357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22AA10D8280E964300109357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,12 @@
 		22AA1117280EA77500109357 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		22AA111B280EBFD900109357 /* User.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = User.plist; sourceTree = "<group>"; };
 		22AA111D280EC79700109357 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		22DC60EB28103C28000756F6 /* HomieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomieViewController.swift; sourceTree = "<group>"; };
+		22DC60EC28103C28000756F6 /* HomieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomieViewController.xib; sourceTree = "<group>"; };
+		22DC60F228103C96000756F6 /* AvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarView.xib; sourceTree = "<group>"; };
+		22DC60F428103CA2000756F6 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		22DC60F628103CC5000756F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		22DC60F728103CC5000756F6 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +136,10 @@
 		220E8043280FA3AC00C82D76 /* EX3 */ = {
 			isa = PBXGroup;
 			children = (
+				22DC60F028103C44000756F6 /* Profile */,
+				22DC60EF28103C3B000756F6 /* Homie */,
+				22DC60F128103C4F000756F6 /* Avatar */,
+				22A849CC2810EF450068BC50 /* Model */,
 			);
 			path = EX3;
 			sourceTree = "<group>";
@@ -159,6 +177,14 @@
 				22AA111D280EC79700109357 /* DataManager.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		22A849CC2810EF450068BC50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22A849CA2810EF400068BC50 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		22AA10CA280E964300109357 = {
@@ -314,6 +340,33 @@
 			path = ../PlistData;
 			sourceTree = "<group>";
 		};
+		22DC60EF28103C3B000756F6 /* Homie */ = {
+			isa = PBXGroup;
+			children = (
+				22DC60EB28103C28000756F6 /* HomieViewController.swift */,
+				22DC60EC28103C28000756F6 /* HomieViewController.xib */,
+			);
+			path = Homie;
+			sourceTree = "<group>";
+		};
+		22DC60F028103C44000756F6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				22DC60F628103CC5000756F6 /* ProfileViewController.swift */,
+				22DC60F728103CC5000756F6 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		22DC60F128103C4F000756F6 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				22DC60F428103CA2000756F6 /* AvatarView.swift */,
+				22DC60F228103C96000756F6 /* AvatarView.xib */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,10 +429,12 @@
 				22AA1111280EA72300109357 /* LoginViewController.xib in Resources */,
 				22AA10FA280E983800109357 /* ExBViewController.xib in Resources */,
 				22AA1119280EA77500109357 /* EditViewController.xib in Resources */,
+				22DC60EE28103C28000756F6 /* HomieViewController.xib in Resources */,
 				22AA10E3280E964400109357 /* LaunchScreen.storyboard in Resources */,
 				220E8051280FC67200C82D76 /* MoreBarViewController.xib in Resources */,
 				22AA10E0280E964400109357 /* Assets.xcassets in Resources */,
 				22AA10F4280E981600109357 /* ExerciseAViewController.xib in Resources */,
+				22DC60F328103C96000756F6 /* AvatarView.xib in Resources */,
 				22AA1109280E988E00109357 /* ExEViewController.xib in Resources */,
 				22AA1103280E985200109357 /* ExDViewController.xib in Resources */,
 				22AA111C280EBFD900109357 /* User.plist in Resources */,
@@ -388,6 +443,7 @@
 				22AA10FF280E984800109357 /* ExCViewController.xib in Resources */,
 				22AA1115280EA74100109357 /* HomeViewController.xib in Resources */,
 				220E804C280FBDA400C82D76 /* SeachBarViewController.xib in Resources */,
+				22DC60F928103CC5000756F6 /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +460,11 @@
 				220E8050280FC67200C82D76 /* MoreBarViewController.swift in Sources */,
 				220E805928101D6500C82D76 /* BarButtonTestViewController.swift in Sources */,
 				22AA10F9280E983800109357 /* ExBViewController.swift in Sources */,
+				22DC60ED28103C28000756F6 /* HomieViewController.swift in Sources */,
+				22DC60F528103CA2000756F6 /* AvatarView.swift in Sources */,
+				22A849CB2810EF400068BC50 /* User.swift in Sources */,
 				22AA10FE280E984800109357 /* ExCViewController.swift in Sources */,
+				22DC60F828103CC5000756F6 /* ProfileViewController.swift in Sources */,
 				22AA1102280E985200109357 /* ExDViewController.swift in Sources */,
 				22AA1110280EA72300109357 /* LoginViewController.swift in Sources */,
 				22AA1114280EA74100109357 /* HomeViewController.swift in Sources */,
@@ -559,6 +619,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,6 +647,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
