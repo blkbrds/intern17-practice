@@ -51,3 +51,42 @@ class TamGiac: DaGiac {
     
 }
 TamGiac(n: 3, mangDoLon: [1,2,3]).inCacCanhTamGiacPitago(dsTamGiac: [TamGiac(n: 3, mangDoLon: [1,2,3]), TamGiac(n: 3, mangDoLon: [3,4,5]), TamGiac(n: 3, mangDoLon: [1,2,1])])
+class CStack {
+    var size: Int
+    var top: Int
+    var stack: [Int]
+    init(size: Int, top: Int, stack: [Int]) {
+        self.size = size
+        self.top = top
+        self.stack = stack
+    }
+    
+    func isEmpty() -> Bool {
+        return top == 0 ? true : false
+    }
+    
+    func isFull() -> Bool {
+        return top == size ? true : false
+    }
+    
+    func push(item: Int) {
+        if isFull() {
+            print("stack is full")
+        } else {
+            top += 1
+            stack[top] = item
+        }
+    }
+    
+    func pop(item: Int) {
+        if isEmpty() {
+            print("stack is empty")
+        } else {
+            stack[top] = 0
+        }
+    }
+    
+    
+
+    
+}
