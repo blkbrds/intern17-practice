@@ -38,9 +38,13 @@ final class Bai04ViewController: UIViewController {
 extension Bai04ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        resultArray = array.filter({ (city) -> Bool in
-            return city.contains(searchText.lowercased())
-        })
+        if searchText.isEmpty {
+            resultArray = array
+        } else {
+            resultArray = array.filter({ (city) -> Bool in
+                return city.contains(searchText.lowercased())
+            })
+        }
         var text: String = ""
         for i in resultArray {
             text += "- \(i)\n"

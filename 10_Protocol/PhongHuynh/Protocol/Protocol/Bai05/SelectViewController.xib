@@ -54,6 +54,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <state key="normal" title="+"/>
                             <connections>
+                                <action selector="calculatorTouchUpInside:" destination="-1" eventType="touchUpInside" id="bVd-KG-0St"/>
                                 <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Lh4-z0-c8P"/>
                             </connections>
                         </button>
@@ -63,6 +64,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <state key="normal" title="-"/>
                             <connections>
+                                <action selector="calculatorTouchUpInside:" destination="-1" eventType="touchUpInside" id="2VD-o7-3bV"/>
                                 <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="azP-vN-n6b"/>
                             </connections>
                         </button>
@@ -72,6 +74,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <state key="normal" title="X"/>
                             <connections>
+                                <action selector="calculatorTouchUpInside:" destination="-1" eventType="touchUpInside" id="kuT-NF-yE4"/>
                                 <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Ru3-3e-1cB"/>
                             </connections>
                         </button>
@@ -81,6 +84,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <state key="normal" title="/"/>
                             <connections>
+                                <action selector="calculatorTouchUpInside:" destination="-1" eventType="touchUpInside" id="Ycv-21-apw"/>
                                 <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="YQZ-PL-m38"/>
                             </connections>
                         </button>
@@ -101,6 +105,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <state key="normal" title="%"/>
                             <connections>
+                                <action selector="calculatorTouchUpInside:" destination="-1" eventType="touchUpInside" id="Qig-x8-xa6"/>
                                 <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="nZr-4w-wRY"/>
                             </connections>
                         </button>

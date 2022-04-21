@@ -12,6 +12,8 @@
 		CB661552280EADC0005DC1C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB661551280EADC0005DC1C6 /* Assets.xcassets */; };
 		CB661562280EAE1A005DC1C6 /* Bai01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB661560280EAE1A005DC1C6 /* Bai01ViewController.swift */; };
 		CB661563280EAE1A005DC1C6 /* Bai01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB661561280EAE1A005DC1C6 /* Bai01ViewController.xib */; };
+		CB764C192811573E00DDBB59 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB764C182811573E00DDBB59 /* SelectView.swift */; };
+		CB764C1C2811574C00DDBB59 /* SelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB764C1B2811574C00DDBB59 /* SelectView.xib */; };
 		CB9CE14728100C3B00302515 /* Bai04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9CE14528100C3B00302515 /* Bai04ViewController.swift */; };
 		CB9CE14828100C3B00302515 /* Bai04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9CE14628100C3B00302515 /* Bai04ViewController.xib */; };
 		CBB48B3D281110FC00FE2452 /* Bai05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48B3B281110FC00FE2452 /* Bai05ViewController.swift */; };
@@ -36,6 +38,8 @@
 		CB661556280EADC0005DC1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB661560280EAE1A005DC1C6 /* Bai01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01ViewController.swift; sourceTree = "<group>"; };
 		CB661561280EAE1A005DC1C6 /* Bai01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01ViewController.xib; sourceTree = "<group>"; };
+		CB764C182811573E00DDBB59 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
+		CB764C1B2811574C00DDBB59 /* SelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectView.xib; sourceTree = "<group>"; };
 		CB9CE14528100C3B00302515 /* Bai04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai04ViewController.swift; sourceTree = "<group>"; };
 		CB9CE14628100C3B00302515 /* Bai04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai04ViewController.xib; sourceTree = "<group>"; };
 		CBB48B3B281110FC00FE2452 /* Bai05ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai05ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				CBB48B3C281110FC00FE2452 /* Bai05ViewController.xib */,
 				CBB48B412811128C00FE2452 /* SelectViewController.swift */,
 				CBB48B422811128C00FE2452 /* SelectViewController.xib */,
+				CB764C182811573E00DDBB59 /* SelectView.swift */,
+				CB764C1B2811574C00DDBB59 /* SelectView.xib */,
 			);
 			path = Bai05;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 				CBEC967E280FA735002B6485 /* DiaDiemViewController.xib in Resources */,
 				CB9CE14828100C3B00302515 /* Bai04ViewController.xib in Resources */,
 				CB661552280EADC0005DC1C6 /* Assets.xcassets in Resources */,
+				CB764C1C2811574C00DDBB59 /* SelectView.xib in Resources */,
 				CBEC9683280FA753002B6485 /* MienViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +227,7 @@
 				CB661562280EAE1A005DC1C6 /* Bai01ViewController.swift in Sources */,
 				CBB48B3D281110FC00FE2452 /* Bai05ViewController.swift in Sources */,
 				CB9CE14728100C3B00302515 /* Bai04ViewController.swift in Sources */,
+				CB764C192811573E00DDBB59 /* SelectView.swift in Sources */,
 				CBEC967D280FA735002B6485 /* DiaDiemViewController.swift in Sources */,
 				CBEC9682280FA753002B6485 /* MienViewController.swift in Sources */,
 				CB66154B280EADBE005DC1C6 /* SceneDelegate.swift in Sources */,
