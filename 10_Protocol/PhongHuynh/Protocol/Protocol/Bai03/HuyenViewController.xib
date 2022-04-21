@@ -11,8 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuyenViewController" customModule="Protocol" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="huyenButton" destination="DTz-cG-tm5" collectionClass="NSMutableArray" id="lgN-tR-BAn"/>
                 <outletCollection property="huyenButton" destination="fAe-he-ZbJ" collectionClass="NSMutableArray" id="P5p-J4-hy7"/>
+                <outletCollection property="huyenButton" destination="DTz-cG-tm5" collectionClass="NSMutableArray" id="lgN-tR-BAn"/>
                 <outletCollection property="huyenButton" destination="E3x-Re-gQj" collectionClass="NSMutableArray" id="Sbb-aD-BVn"/>
                 <outletCollection property="huyenButton" destination="t1P-E3-p6V" collectionClass="NSMutableArray" id="3wx-Dd-f3C"/>
                 <outletCollection property="huyenButton" destination="RJI-fb-Dj3" collectionClass="NSMutableArray" id="g89-em-911"/>
@@ -28,99 +28,101 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-he-ZbJ">
-                    <rect key="frame" x="107" y="97" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 1"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="omx-zW-ZVu"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTz-cG-tm5">
-                    <rect key="frame" x="107" y="140" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 2"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="vHW-qw-9R1"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-Re-gQj">
-                    <rect key="frame" x="107" y="183" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 3"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Onj-Fj-ras"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1P-E3-p6V">
-                    <rect key="frame" x="107" y="226" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 4"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="nvC-wa-ZGS"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJI-fb-Dj3">
-                    <rect key="frame" x="107" y="269" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 5"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="QIX-gV-XiE"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiV-pL-deQ">
-                    <rect key="frame" x="107" y="312" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 6"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="9p8-2q-2EI"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HS6-Xj-13C">
-                    <rect key="frame" x="107" y="355" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 7"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="p7A-kN-IpT"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQP-JQ-P6E">
-                    <rect key="frame" x="107" y="398" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 8"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="3pt-DI-yT8"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nk-3x-xC7">
-                    <rect key="frame" x="107" y="441" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 9"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Hu9-nw-HKs"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjf-J7-WH4">
-                    <rect key="frame" x="107" y="484" width="201" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <state key="normal" title="Huyện 10"/>
-                    <connections>
-                        <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="czZ-kK-xg7"/>
-                    </connections>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eda-ij-Hbv">
+                    <rect key="frame" x="50" y="94" width="314" height="718"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-he-ZbJ">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 1"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="omx-zW-ZVu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTz-cG-tm5">
+                            <rect key="frame" x="0.0" y="73" width="314" height="62.5"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 2"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="vHW-qw-9R1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-Re-gQj">
+                            <rect key="frame" x="0.0" y="145.5" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 3"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Onj-Fj-ras"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1P-E3-p6V">
+                            <rect key="frame" x="0.0" y="218.5" width="314" height="62.5"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 4"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="nvC-wa-ZGS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJI-fb-Dj3">
+                            <rect key="frame" x="0.0" y="291" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 5"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="QIX-gV-XiE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiV-pL-deQ">
+                            <rect key="frame" x="0.0" y="364" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 6"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="9p8-2q-2EI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HS6-Xj-13C">
+                            <rect key="frame" x="0.0" y="437" width="314" height="62.5"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 7"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="p7A-kN-IpT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQP-JQ-P6E">
+                            <rect key="frame" x="0.0" y="509.5" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 8"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="3pt-DI-yT8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nk-3x-xC7">
+                            <rect key="frame" x="0.0" y="582.5" width="314" height="62.5"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 9"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Hu9-nw-HKs"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjf-J7-WH4">
+                            <rect key="frame" x="0.0" y="655" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Huyện 10"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="czZ-kK-xg7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eda-ij-Hbv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="1ZO-Cs-lRq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eda-ij-Hbv" secondAttribute="trailing" constant="50" id="RwT-v3-6BB"/>
+                <constraint firstItem="eda-ij-Hbv" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="XBG-ae-n8h"/>
+                <constraint firstItem="eda-ij-Hbv" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="dl5-QK-GfJ"/>
+                <constraint firstItem="eda-ij-Hbv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="jKM-9k-P0M"/>
+            </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="130.58035714285714"/>
         </view>
     </objects>

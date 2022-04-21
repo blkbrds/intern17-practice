@@ -14,6 +14,10 @@
 		CB661563280EAE1A005DC1C6 /* Bai01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB661561280EAE1A005DC1C6 /* Bai01ViewController.xib */; };
 		CB9CE14728100C3B00302515 /* Bai04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9CE14528100C3B00302515 /* Bai04ViewController.swift */; };
 		CB9CE14828100C3B00302515 /* Bai04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9CE14628100C3B00302515 /* Bai04ViewController.xib */; };
+		CBB48B3D281110FC00FE2452 /* Bai05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48B3B281110FC00FE2452 /* Bai05ViewController.swift */; };
+		CBB48B3E281110FC00FE2452 /* Bai05ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB48B3C281110FC00FE2452 /* Bai05ViewController.xib */; };
+		CBB48B432811128C00FE2452 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB48B412811128C00FE2452 /* SelectViewController.swift */; };
+		CBB48B442811128C00FE2452 /* SelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB48B422811128C00FE2452 /* SelectViewController.xib */; };
 		CBEC967D280FA735002B6485 /* DiaDiemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC967B280FA735002B6485 /* DiaDiemViewController.swift */; };
 		CBEC967E280FA735002B6485 /* DiaDiemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC967C280FA735002B6485 /* DiaDiemViewController.xib */; };
 		CBEC9682280FA753002B6485 /* MienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC9680280FA753002B6485 /* MienViewController.swift */; };
@@ -34,6 +38,10 @@
 		CB661561280EAE1A005DC1C6 /* Bai01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01ViewController.xib; sourceTree = "<group>"; };
 		CB9CE14528100C3B00302515 /* Bai04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai04ViewController.swift; sourceTree = "<group>"; };
 		CB9CE14628100C3B00302515 /* Bai04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai04ViewController.xib; sourceTree = "<group>"; };
+		CBB48B3B281110FC00FE2452 /* Bai05ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai05ViewController.swift; sourceTree = "<group>"; };
+		CBB48B3C281110FC00FE2452 /* Bai05ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai05ViewController.xib; sourceTree = "<group>"; };
+		CBB48B412811128C00FE2452 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		CBB48B422811128C00FE2452 /* SelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectViewController.xib; sourceTree = "<group>"; };
 		CBEC967B280FA735002B6485 /* DiaDiemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaDiemViewController.swift; sourceTree = "<group>"; };
 		CBEC967C280FA735002B6485 /* DiaDiemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaDiemViewController.xib; sourceTree = "<group>"; };
 		CBEC9680280FA753002B6485 /* MienViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MienViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 		CB661547280EADBE005DC1C6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				CBB48B3A281110E000FE2452 /* Bai05 */,
 				CB9CE14428100BB200302515 /* Bai04 */,
 				CBEC967A280FA6CA002B6485 /* Bai03 */,
 				CB66155F280EADFE005DC1C6 /* Bai01 */,
@@ -101,6 +110,17 @@
 				CB9CE14628100C3B00302515 /* Bai04ViewController.xib */,
 			);
 			path = Bai04;
+			sourceTree = "<group>";
+		};
+		CBB48B3A281110E000FE2452 /* Bai05 */ = {
+			isa = PBXGroup;
+			children = (
+				CBB48B3B281110FC00FE2452 /* Bai05ViewController.swift */,
+				CBB48B3C281110FC00FE2452 /* Bai05ViewController.xib */,
+				CBB48B412811128C00FE2452 /* SelectViewController.swift */,
+				CBB48B422811128C00FE2452 /* SelectViewController.xib */,
+			);
+			path = Bai05;
 			sourceTree = "<group>";
 		};
 		CBEC967A280FA6CA002B6485 /* Bai03 */ = {
@@ -175,6 +195,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB48B3E281110FC00FE2452 /* Bai05ViewController.xib in Resources */,
+				CBB48B442811128C00FE2452 /* SelectViewController.xib in Resources */,
 				CBEC968D280FA769002B6485 /* HuyenViewController.xib in Resources */,
 				CB661563280EAE1A005DC1C6 /* Bai01ViewController.xib in Resources */,
 				CBEC9688280FA75F002B6485 /* TinhViewController.xib in Resources */,
@@ -192,9 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB48B432811128C00FE2452 /* SelectViewController.swift in Sources */,
 				CBEC968C280FA769002B6485 /* HuyenViewController.swift in Sources */,
 				CB661549280EADBE005DC1C6 /* AppDelegate.swift in Sources */,
 				CB661562280EAE1A005DC1C6 /* Bai01ViewController.swift in Sources */,
+				CBB48B3D281110FC00FE2452 /* Bai05ViewController.swift in Sources */,
 				CB9CE14728100C3B00302515 /* Bai04ViewController.swift in Sources */,
 				CBEC967D280FA735002B6485 /* DiaDiemViewController.swift in Sources */,
 				CBEC9682280FA753002B6485 /* MienViewController.swift in Sources */,

@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai04ViewController" customModule="Protocol" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="82a-EA-LKY" id="DZp-rB-iFr"/>
+                <outlet property="txtTextView" destination="VTt-9N-6nS" id="Ad5-e8-aIo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,24 +20,48 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82a-EA-LKY">
-                    <rect key="frame" x="34" y="93" width="226" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <searchBar contentMode="redraw" placeholder="Search Bar" translatesAutoresizingMaskIntoConstraints="NO" id="82a-EA-LKY">
+                    <rect key="frame" x="20" y="64" width="282" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBD-eH-apo">
-                    <rect key="frame" x="318" y="93" width="76" height="42"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBD-eH-apo">
+                    <rect key="frame" x="332" y="64" width="62" height="45"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="resetButton:" destination="-1" eventType="touchUpInside" id="GMB-PC-scj"/>
+                    </connections>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VTt-9N-6nS">
+                    <rect key="frame" x="20" y="140" width="374" height="537.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VTt-9N-6nS" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="4Nf-dY-uur"/>
+                <constraint firstItem="82a-EA-LKY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5ka-dz-Mcm"/>
+                <constraint firstItem="SBD-eH-apo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="62y-Al-ugC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SBD-eH-apo" secondAttribute="trailing" constant="20" id="9Q4-t0-mjT"/>
+                <constraint firstItem="SBD-eH-apo" firstAttribute="leading" secondItem="82a-EA-LKY" secondAttribute="trailing" constant="30" id="CI2-te-8yj"/>
+                <constraint firstItem="SBD-eH-apo" firstAttribute="height" secondItem="82a-EA-LKY" secondAttribute="height" multiplier="0.8" id="SJ6-YC-8Pf"/>
+                <constraint firstItem="VTt-9N-6nS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WfY-8Z-dTp"/>
+                <constraint firstItem="VTt-9N-6nS" firstAttribute="top" secondItem="82a-EA-LKY" secondAttribute="bottom" constant="20" id="X0m-Gn-F55"/>
+                <constraint firstItem="SBD-eH-apo" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.15" id="XbX-q2-olZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VTt-9N-6nS" secondAttribute="trailing" constant="20" id="dk6-3A-HHA"/>
+                <constraint firstItem="82a-EA-LKY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="idm-FM-J6U"/>
+            </constraints>
             <point key="canvasLocation" x="-113.04347826086958" y="15.401785714285714"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

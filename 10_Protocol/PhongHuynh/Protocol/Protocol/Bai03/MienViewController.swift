@@ -4,7 +4,7 @@ final class MienViewController: UIViewController {
     
     // MARK: - IBOutlect
     @IBOutlet private var mienButton: [UIButton]!
-    
+  
     // MARK: - Properties
     var diadiem: DiaDiem?
     
