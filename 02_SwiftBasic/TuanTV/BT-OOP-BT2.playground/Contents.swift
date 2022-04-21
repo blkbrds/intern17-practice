@@ -89,6 +89,9 @@ class CStack {
 
 //MARK: -BAI TAP 6
 class HinhVe {
+    init() {
+        
+    }
     func tinhChuVi() -> Float {
         return 1.0
     }
@@ -97,7 +100,9 @@ class HinhVe {
     }
 }
 class HaiChieu: HinhVe {
-    
+    override init() {
+        super.init()
+    }
 }
 class HinhTron: HaiChieu {
     var banKinh: Float
@@ -105,6 +110,7 @@ class HinhTron: HaiChieu {
     init(banKinh: Float) {
         self.banKinh = banKinh
     }
+    
     override func tinhChuVi() -> Float {
         return 2 * banKinh * pi
     }
