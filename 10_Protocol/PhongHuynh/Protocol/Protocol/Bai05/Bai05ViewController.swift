@@ -25,7 +25,7 @@ enum Operation {
     }
 }
 
-class Bai05ViewController: UIViewController {
+final class Bai05ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var xTextField: UITextField!
@@ -34,12 +34,13 @@ class Bai05ViewController: UIViewController {
     @IBOutlet private weak var operationButton: UIButton!
     
     var selectView = SelectView()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
+    
     // MARK: - IBActions
     @IBAction func push(_ sender: Any) {
         guard let selectView = Bundle.main.loadNibNamed("SelectView", owner: self, options: nil)?.first as? SelectView else { return }
@@ -49,11 +50,11 @@ class Bai05ViewController: UIViewController {
         selectView.delegate = self
         view.addSubview(selectView)
     }
-
 }
 
 // MARK: - SelectViewDatasource
 extension Bai05ViewController: SelectViewDatasource {
+    
     func setXY() -> (x: String, y: String) {
         guard let x = xTextField.text, let y = yTextField.text else {
             return ("0", "0")
@@ -62,6 +63,7 @@ extension Bai05ViewController: SelectViewDatasource {
     }
 }
 
+// MARK: - SelectViewDelegate
 extension Bai05ViewController: SelectViewDelegate {
     
     func view(view: SelectView, needsPerfom actions: SelectView.Action) {

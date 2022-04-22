@@ -17,6 +17,10 @@ final class MienViewController: UIViewController {
         navigationItem.rightBarButtonItem = backButton
         let rightButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
+        for button in mienButton {
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.blue.cgColor
+        }
     }
     
     // MARK: - Objc functions

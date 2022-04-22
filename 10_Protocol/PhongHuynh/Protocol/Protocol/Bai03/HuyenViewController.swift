@@ -24,6 +24,10 @@ final class HuyenViewController: UIViewController, DiaDiemDatasouce {
         navigationItem.rightBarButtonItem = backButton
         let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
+        for button in huyenButton {
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.blue.cgColor
+        }
     }
     
     // MARK: - Objc functions

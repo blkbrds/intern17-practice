@@ -24,6 +24,8 @@ final class DiaDiemViewController: UIViewController {
     @IBOutlet private weak var mienLabel: UILabel!
     @IBOutlet private weak var tinhLabel: UILabel!
     @IBOutlet private weak var huyenLabel: UILabel!
+
+    
     
     // MARK: - Properties
     var datasouce: DiaDiemDatasouce?

@@ -1,12 +1,14 @@
 import UIKit
 
-
+// MARK: - SelectViewDatasource
 protocol SelectViewDatasource {
     
     func setXY() -> (x: String, y: String)
 }
 
+// MARK: - SelectViewDelegate
 protocol SelectViewDelegate {
+    
     func view(view: SelectView, needsPerfom actions: SelectView.Action)
 }
 
@@ -32,6 +34,7 @@ class SelectView: UIView {
     var dataSource: SelectViewDatasource? {
         didSet {
             receiveValue()
+            changeBoderButton()
         }
     }
     var delegate: SelectViewDelegate?
@@ -45,7 +48,6 @@ class SelectView: UIView {
               let numberY = Double(y) else { return }
         numberOnScreen = numberX
         previousNumber = numberY
-        
         switch sender.tag {
         case 0:
             resultLabel.text = String(numberOnScreen + previousNumber)
@@ -70,6 +72,7 @@ class SelectView: UIView {
         }
     }
     
+    // MARK: - IBActions
     @IBAction private func cancleButton(_ sender: Any) {
         delegate?.view(view: self, needsPerfom: .cancel)
     }
@@ -87,11 +90,10 @@ class SelectView: UIView {
         }
     }
     
-
-    
+    // MARK: - Private functions
     private func changeColer(tag: Int) {
         for button in operationButton {
-            button.backgroundColor = button.tag == tag ? .red : .white
+            button.backgroundColor = button.tag == tag ? .blue : .white
         }
     }
     
@@ -99,5 +101,12 @@ class SelectView: UIView {
         let value = dataSource?.setXY()
         xLabel.text = value?.x
         yLabel.text = value?.y
+    }
+    
+    private func changeBoderButton() {
+        for boder in operationButton {
+            boder.layer.borderWidth = 1
+            boder.layer.borderColor = UIColor.black.cgColor
+        }
     }
 }

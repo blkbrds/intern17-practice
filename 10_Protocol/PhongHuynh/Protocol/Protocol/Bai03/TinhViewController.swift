@@ -17,6 +17,10 @@ final class TinhViewController: UIViewController {
         navigationItem.rightBarButtonItem = backButton
         let rightButton = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
+        for button in tinhButton {
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.blue.cgColor
+        }
     }
     
     // MARK: - Objc functions
