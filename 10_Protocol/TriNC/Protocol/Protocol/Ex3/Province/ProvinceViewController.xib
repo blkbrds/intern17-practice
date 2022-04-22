@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProvinceViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="provinceButtons" destination="Lw0-uN-1ja" collectionClass="NSMutableArray" id="fcw-Dm-BWK"/>
+                <outletCollection property="provinceButtons" destination="bWG-vx-RaJ" collectionClass="NSMutableArray" id="fdN-3s-cIO"/>
+                <outletCollection property="provinceButtons" destination="Bz3-l1-r7U" collectionClass="NSMutableArray" id="5bW-K4-HlU"/>
+                <outletCollection property="provinceButtons" destination="DvM-9q-9XL" collectionClass="NSMutableArray" id="NPw-LW-2UM"/>
+                <outletCollection property="provinceButtons" destination="lMa-tV-MLT" collectionClass="NSMutableArray" id="FqC-70-pJp"/>
+                <outletCollection property="provinceButtons" destination="hFu-ee-Pn4" collectionClass="NSMutableArray" id="egm-bk-se7"/>
+                <outletCollection property="provinceButtons" destination="Yn5-A9-oVu" collectionClass="NSMutableArray" id="hH6-iC-309"/>
+                <outletCollection property="provinceButtons" destination="ZSp-Lq-dQi" collectionClass="NSMutableArray" id="an5-YL-4EI"/>
+                <outletCollection property="provinceButtons" destination="SFg-me-sdU" collectionClass="NSMutableArray" id="j1g-nh-wpk"/>
+                <outletCollection property="provinceButtons" destination="tco-Vs-dij" collectionClass="NSMutableArray" id="Iyg-Cw-WKr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-Hb-MrW">
+                    <rect key="frame" x="20" y="144" width="374" height="490"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw0-uN-1ja">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province1"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="xfS-VI-l1t"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWG-vx-RaJ">
+                            <rect key="frame" x="0.0" y="51" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province2"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="m2U-r2-NEX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz3-l1-r7U">
+                            <rect key="frame" x="0.0" y="102" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province3"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="CHM-xg-ah2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvM-9q-9XL">
+                            <rect key="frame" x="0.0" y="153" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province4"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="editingDidBegin" id="RWp-nZ-c8d"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMa-tV-MLT">
+                            <rect key="frame" x="0.0" y="204" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province5"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="RY2-Me-TE1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFu-ee-Pn4">
+                            <rect key="frame" x="0.0" y="255" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province6"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="ax6-en-Wdd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSp-Lq-dQi">
+                            <rect key="frame" x="0.0" y="306" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province7"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="50M-Rc-zMn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yn5-A9-oVu">
+                            <rect key="frame" x="0.0" y="357" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province8"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="9IR-fs-P8U"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFg-me-sdU">
+                            <rect key="frame" x="0.0" y="408" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province9"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="mcl-s8-st1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tco-Vs-dij">
+                            <rect key="frame" x="0.0" y="459" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Province10"/>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="f4H-Zw-uWC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zPa-Hb-MrW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="AOY-PT-5ug"/>
+                <constraint firstItem="zPa-Hb-MrW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="CEb-vj-GvS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zPa-Hb-MrW" secondAttribute="trailing" constant="20" id="Nxk-Ci-qqy"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

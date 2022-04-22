@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegionViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="regionButtons" destination="SfY-Qb-I7v" collectionClass="NSMutableArray" id="fEG-ue-zz2"/>
+                <outletCollection property="regionButtons" destination="hTi-Bb-cX6" collectionClass="NSMutableArray" id="bP0-mv-2q2"/>
+                <outletCollection property="regionButtons" destination="IaV-yA-2Vs" collectionClass="NSMutableArray" id="AXu-5f-Zhc"/>
+                <outletCollection property="regionButtons" destination="uPM-T7-xpa" collectionClass="NSMutableArray" id="jj4-pm-fL8"/>
+                <outletCollection property="regionButtons" destination="50E-Qw-gJ4" collectionClass="NSMutableArray" id="sNq-Cc-qqT"/>
+                <outletCollection property="regionButtons" destination="1Fu-NO-dNU" collectionClass="NSMutableArray" id="5ao-u3-6tC"/>
+                <outletCollection property="regionButtons" destination="Kay-fV-fgZ" collectionClass="NSMutableArray" id="K4k-pz-Fdg"/>
+                <outletCollection property="regionButtons" destination="5Hb-TC-qrr" collectionClass="NSMutableArray" id="mVT-Ec-nEg"/>
+                <outletCollection property="regionButtons" destination="UoC-b3-WIz" collectionClass="NSMutableArray" id="r4l-3K-lAV"/>
+                <outletCollection property="regionButtons" destination="31l-zS-wKn" collectionClass="NSMutableArray" id="63E-Js-E5g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-op-WI2">
+                    <rect key="frame" x="20" y="144" width="374" height="490"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfY-Qb-I7v">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region1"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="G2H-If-JUr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTi-Bb-cX6">
+                            <rect key="frame" x="0.0" y="51" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region2"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Rxa-4D-1np"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-yA-2Vs">
+                            <rect key="frame" x="0.0" y="102" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region3"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="hrF-6W-Rez"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPM-T7-xpa">
+                            <rect key="frame" x="0.0" y="153" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region4"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="qwf-4n-024"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50E-Qw-gJ4">
+                            <rect key="frame" x="0.0" y="204" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region5"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="FvC-89-yf4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fu-NO-dNU">
+                            <rect key="frame" x="0.0" y="255" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region6"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="cDr-9X-N1s"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kay-fV-fgZ">
+                            <rect key="frame" x="0.0" y="306" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region7"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="sX5-TD-SjE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hb-TC-qrr">
+                            <rect key="frame" x="0.0" y="357" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region8"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="eJo-qp-SE7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoC-b3-WIz">
+                            <rect key="frame" x="0.0" y="408" width="374" height="31"/>
+                            <size key="titleShadowOffset" width="0.0" height="9"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region9"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="bi7-UQ-kjw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31l-zS-wKn">
+                            <rect key="frame" x="0.0" y="459" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Region10"/>
+                            <connections>
+                                <action selector="changeColorButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="8UI-8g-cJI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SEM-op-WI2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="DeH-xh-0nA"/>
+                <constraint firstItem="SEM-op-WI2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="jKW-CL-UwA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SEM-op-WI2" secondAttribute="trailing" constant="20" id="rIo-W0-8ud"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
