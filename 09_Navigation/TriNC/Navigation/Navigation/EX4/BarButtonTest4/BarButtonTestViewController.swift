@@ -18,14 +18,14 @@ final class BarButtonTestViewController: UIViewController {
     // MARK: - Private Function
     private func setupBar() {
         title = "Bar Button Test"
-        
         // NavigationItem
         let buttonTestBarItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(changeEditAction))
         navigationItem.rightBarButtonItem = buttonTestBarItem
-        let backgroundImage = UIImage(named: "ic-gradient")
-        navigationController?.navigationBar.setBackgroundImage(backgroundImage, for: .default)
     }
     
     // MARK: - Objc
-    @objc private func changeEditAction() {}
+    @objc private func changeEditAction() {
+        let backgroundImage = UIImage(named: "ic-gradient")
+        navigationController?.navigationBar.setBackgroundImage(backgroundImage, for: .default)
+    }
 }
