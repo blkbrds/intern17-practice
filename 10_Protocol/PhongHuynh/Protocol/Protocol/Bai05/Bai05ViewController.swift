@@ -1,48 +1,58 @@
 import UIKit
 
-
+enum Operation {
+    case cong
+    case tru
+    case nhan
+    case chia
+    case phantram
+    case luythua
+    var title: String {
+        switch self {
+        case .cong:
+            return "+"
+        case .tru:
+            return "-"
+        case .nhan:
+            return "*"
+        case .chia:
+            return "/"
+        case .phantram:
+            return "%"
+        case .luythua:
+            return "x^y"
+        }
+    }
+}
 
 class Bai05ViewController: UIViewController {
     
-    @IBOutlet weak var xTextField: UITextField!
-    @IBOutlet weak var yTextField: UITextField!
-    @IBOutlet weak var resultLabel: UILabel!
+    // MARK: - IBOutlets
+    @IBOutlet private weak var xTextField: UITextField!
+    @IBOutlet private weak var yTextField: UITextField!
+    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private weak var operationButton: UIButton!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
+    var selectView = SelectView()
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Select"
-        let leftButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAction))
-        navigationItem.leftBarButtonItem = leftButton
-        let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneAction))
-        navigationItem.rightBarButtonItem = rightButton
-        
-        
     }
 
+    // MARK: - IBActions
     @IBAction func push(_ sender: Any) {
-        let selectView = Bundle.main.loadNibNamed("SelectView", owner: self, options: nil)?.first as? SelectView
-        selectView?.frame = CGRect(x: 0, y: view.bounds.maxY - (view.bounds.height/3), width: view.bounds.width, height: view.bounds.height / 3)
-        selectView?.dataSource = self
-        view.addSubview(selectView!)
-        
+        guard let selectView = Bundle.main.loadNibNamed("SelectView", owner: self, options: nil)?.first as? SelectView else { return }
+        self.selectView = selectView
+        selectView.frame = CGRect(x: 0, y: view.bounds.maxY - (view.bounds.height/3), width: view.bounds.width, height: view.bounds.height / 3)
+        selectView.dataSource = self
+        selectView.delegate = self
+        view.addSubview(selectView)
     }
-    
-    @objc func cancelAction() {
-        
-    }
-    
-    @objc func doneAction() {
-    }
-    
 
 }
 
+// MARK: - SelectViewDatasource
 extension Bai05ViewController: SelectViewDatasource {
     func setXY() -> (x: String, y: String) {
         guard let x = xTextField.text, let y = yTextField.text else {
@@ -53,11 +63,18 @@ extension Bai05ViewController: SelectViewDatasource {
 }
 
 extension Bai05ViewController: SelectViewDelegate {
-    func backResult(view: SelectView, needsPerfom actions: SelectView.Action) {
-        switch actions {
-        case .tap(let result):
-            resultLabel.text = result
-        }
-    }
     
-}
+    func view(view: SelectView, needsPerfom actions: SelectView.Action) {
+        switch actions {
+        case .done(let result, let operation):
+            resultLabel.text = result
+            operationButton.setTitle(operation.title, for: .normal)
+        case .cancel:
+            break
+        case .clear(let x, let y):
+            xTextField.text = x
+            yTextField.text = y
+        }
+        selectView.removeFromSuperview()
+    }
+}   

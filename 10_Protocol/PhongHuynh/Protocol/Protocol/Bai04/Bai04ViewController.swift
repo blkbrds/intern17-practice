@@ -4,8 +4,8 @@ import UIKit
 final class Bai04ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var txtTextView: UITextView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var txtTextView: UITextView!
     
     // MARK: - Properties
     var resultArray:[String] = []
@@ -20,7 +20,7 @@ final class Bai04ViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func resetButton(_ sender: Any) {
+    @IBAction private func resetButton(_ sender: Any) {
         showTextView()
     }
     

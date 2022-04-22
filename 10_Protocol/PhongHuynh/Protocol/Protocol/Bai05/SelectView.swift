@@ -7,26 +7,28 @@ protocol SelectViewDatasource {
 }
 
 protocol SelectViewDelegate {
-    func backResult(view: SelectView, needsPerfom actions: SelectView.Action)
+    func view(view: SelectView, needsPerfom actions: SelectView.Action)
 }
 
 class SelectView: UIView {
     
     enum Action {
-        case tap(result: String)
-       }
-
+        case done(result: String, operation: Operation)
+        case cancel
+        case clear(x: String, y: String)
+    }
     
-    @IBOutlet weak var xLabel: UILabel!
-    @IBOutlet weak var yLabel: UILabel!
-    @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet var operationButton: [UIButton]!
+    // MARK: - IBOutlets
+    @IBOutlet private weak var xLabel: UILabel!
+    @IBOutlet private weak var yLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private var operationButton: [UIButton]!
     
-    var x: String = ""
-    var y: String = ""
+    // MARK: - Properties
+    var result: String?
     var numberOnScreen: Double = 0
     var previousNumber: Double = 0
-    var operation = 0
+    var operation: Operation = .cong
     var dataSource: SelectViewDatasource? {
         didSet {
             receiveValue()
@@ -34,8 +36,8 @@ class SelectView: UIView {
     }
     var delegate: SelectViewDelegate?
     
-    
-    @IBAction func calculatorButton(_ sender: UIButton) {
+    // MARK: - IBActions
+    @IBAction private func calculatorButton(_ sender: UIButton) {
         changeColer(tag: sender.tag)
         guard let x = xLabel.text,
               let y = yLabel.text,
@@ -43,28 +45,49 @@ class SelectView: UIView {
               let numberY = Double(y) else { return }
         numberOnScreen = numberX
         previousNumber = numberY
-        if sender.tag == 1 {
-            resultLabel.text = String(previousNumber + numberOnScreen)
-        }
-        if sender.tag == 2 {
-            resultLabel.text = String(numberOnScreen - previousNumber)
-        }
-        if sender.tag == 3 {
+        
+        switch sender.tag {
+        case 0:
+            resultLabel.text = String(numberOnScreen + previousNumber)
+            operation = .cong
+        case 1:
+            resultLabel.text = String(numberOnScreen - previousNumber )
+            operation = .tru
+        case 2:
             resultLabel.text = String(numberOnScreen * previousNumber)
-        }
-        if sender.tag == 4 {
+            operation = .nhan
+        case 3:
             resultLabel.text = String(numberOnScreen / previousNumber)
-        }
-        if sender.tag == 5 {
+            operation = .chia
+        case 4:
             resultLabel.text = String(numberOnScreen / previousNumber)
-        }
-        if sender.tag == 6 {
+            operation = .phantram
+        case 5:
             resultLabel.text = String(numberOnScreen / previousNumber)
-        }
-        if let result = resultLabel.text {
-            self.delegate?.backResult(view: self, needsPerfom: .tap(result: result))
+            operation = .luythua
+        default:
+            break
         }
     }
+    
+    @IBAction private func cancleButton(_ sender: Any) {
+        delegate?.view(view: self, needsPerfom: .cancel)
+    }
+    
+    @IBAction private func doneButton(_ sender: UIButton) {
+        if let result = resultLabel.text {
+            self.delegate?.view(view: self, needsPerfom: .done(result: result, operation: operation))
+        }
+    }
+    @IBAction func clearButton(_ sender: Any) {
+        xLabel.text = ""
+        yLabel.text = ""
+        if let x = xLabel.text, let y = yLabel.text {
+            delegate?.view(view: self, needsPerfom: .clear(x: x, y: y))
+        }
+    }
+    
+
     
     private func changeColer(tag: Int) {
         for button in operationButton {
