@@ -78,11 +78,16 @@ extension Bai05ViewController: SelectViewDelegate {
             resultLabel.text = result
             operationButton.setTitle(operation.title, for: .normal)
         case .cancel:
-            UIView.transition(with: selectView, duration: 2,
-                              options: .transitionCrossDissolve,
-                              animations: {
-                                self.selectView.isHidden = true
-                              })
+            UIView.transition(with: selectView, duration: 0.7,
+                              options: [.curveEaseOut,
+                                        .transitionFlipFromTop],
+              animations: {
+                self.selectView.alpha = 0.1
+              },
+              completion: { _ in
+                self.selectView.removeFromSuperview()
+              }
+            )
         case .clear(let x, let y):
             xTextField.text = x
             yTextField.text = y
