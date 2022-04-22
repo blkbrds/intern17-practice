@@ -30,16 +30,15 @@ final class HomeViewController: UIViewController {
     // MARK: - Private Functions
     private func setupUI () {
         title = "Home"
-        
+        welcomeLabel.text = "Welcome \(username)"
         // navigation Bar
         let editBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editingAction))
         let logoutBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutAction))
         navigationItem.rightBarButtonItem = editBarButtonItem
         navigationItem.leftBarButtonItem = logoutBarButtonItem
-        
-        welcomeLabel.text = "Welcome \(username)"
     }
     
+    // MARK: - Objc
     @objc private func editingAction() {
         let vc = EditViewController()
         vc.delegate = self

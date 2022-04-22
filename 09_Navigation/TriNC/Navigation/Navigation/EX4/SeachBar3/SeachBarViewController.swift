@@ -10,7 +10,7 @@ import UIKit
 final class SeachBarViewController: UIViewController {
 
     // MARK: - Properties
-    private var searchBar: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 280, height: 15))
+    private var searchBar: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 300, height: 15))
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -20,6 +20,8 @@ final class SeachBarViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupBar() {
+        title = "Search Bar"
+        navigationController?.navigationBar.prefersLargeTitles = true
         let leftBarButtonItem = UIBarButtonItem(customView: searchBar)
         self.navigationItem.leftBarButtonItem = leftBarButtonItem
         

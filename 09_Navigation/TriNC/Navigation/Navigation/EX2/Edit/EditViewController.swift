@@ -36,11 +36,11 @@ final class EditViewController: UIViewController {
         // navigation bar
         let cancelBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(cancelAction))
         let doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneAction))
-        
         navigationItem.rightBarButtonItem = doneBarButtonItem
         navigationItem.leftBarButtonItem = cancelBarButtonItem
     }
     
+    // MARK: - Objc
     @objc private func cancelAction() {
         self.navigationController?.popViewController(animated: true)
     }

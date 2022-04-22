@@ -24,9 +24,9 @@ final class TintColorViewController: UIViewController {
     
     private func changeColorAndTintColorBar() {
         // title navi
-        self.navigationController?.navigationBar.backgroundColor = .cyan
+        self.navigationController?.navigationBar.backgroundColor = .blue
         // tintcolor
-        self.navigationController?.navigationBar.tintColor = .blue
+        self.navigationController?.navigationBar.tintColor = .white
         // titlecolor
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
@@ -35,8 +35,8 @@ final class TintColorViewController: UIViewController {
     private func navigationBarItem() {
         title = "News Feed"
         // navigation bar
-        let leftBarButtonItem = UIBarButtonItem(title: "Left", style: .plain, target: self, action: #selector(leftAction))
-        let rightBarButtonItem = UIBarButtonItem(title: "Right", style: .plain, target: self, action: #selector(rightAction))
+        let leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(leftAction))
+        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightBarButtonItem
         navigationItem.leftBarButtonItem = leftBarButtonItem
     }

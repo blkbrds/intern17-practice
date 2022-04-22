@@ -22,7 +22,6 @@ final class BarButtonTestViewController: UIViewController {
         // NavigationItem
         let buttonTestBarItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(changeEditAction))
         navigationItem.rightBarButtonItem = buttonTestBarItem
-        
         let backgroundImage = UIImage(named: "ic-gradient")
         navigationController?.navigationBar.setBackgroundImage(backgroundImage, for: .default)
     }
