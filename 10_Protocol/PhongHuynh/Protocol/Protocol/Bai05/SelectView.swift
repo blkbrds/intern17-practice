@@ -39,6 +39,15 @@ class SelectView: UIView {
     }
     var delegate: SelectViewDelegate?
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.transform = CGAffineTransform(scaleX: 0.3, y: 2)
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: [.allowUserInteraction, .curveEaseOut], animations: {
+            self.transform = .identity
+        })
+        self.alpha = 1
+    }
+    
     // MARK: - IBActions
     @IBAction private func calculatorButton(_ sender: UIButton) {
         changeColer(tag: sender.tag)

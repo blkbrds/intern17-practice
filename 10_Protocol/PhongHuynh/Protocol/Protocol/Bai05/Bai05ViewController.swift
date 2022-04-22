@@ -41,6 +41,12 @@ final class Bai05ViewController: UIViewController {
         
     }
     
+    func setView(view: UIView, isHidden: Bool) {
+        UIView.transition(with: view, duration: 3, options: .transitionCrossDissolve, animations: {
+            view.isHidden = isHidden
+        })
+    }
+    
     // MARK: - IBActions
     @IBAction func push(_ sender: Any) {
         guard let selectView = Bundle.main.loadNibNamed("SelectView", owner: self, options: nil)?.first as? SelectView else { return }
@@ -72,11 +78,14 @@ extension Bai05ViewController: SelectViewDelegate {
             resultLabel.text = result
             operationButton.setTitle(operation.title, for: .normal)
         case .cancel:
-            break
+            UIView.transition(with: selectView, duration: 2,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                self.selectView.isHidden = true
+                              })
         case .clear(let x, let y):
             xTextField.text = x
             yTextField.text = y
         }
-        selectView.removeFromSuperview()
     }
 }   

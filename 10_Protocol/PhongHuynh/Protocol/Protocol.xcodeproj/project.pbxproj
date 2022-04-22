@@ -84,7 +84,6 @@
 			children = (
 				CBB48B3A281110E000FE2452 /* Bai05 */,
 				CB9CE14428100BB200302515 /* Bai04 */,
-				CBEC967A280FA6CA002B6485 /* Bai03 */,
 				CB66155F280EADFE005DC1C6 /* Bai01 */,
 				CB661548280EADBE005DC1C6 /* AppDelegate.swift */,
 				CB66154A280EADBE005DC1C6 /* SceneDelegate.swift */,
@@ -119,6 +118,7 @@
 				CBB48B3C281110FC00FE2452 /* Bai05ViewController.xib */,
 				CB764C182811573E00DDBB59 /* SelectView.swift */,
 				CB764C1B2811574C00DDBB59 /* SelectView.xib */,
+				CBEC967A280FA6CA002B6485 /* Bai03 */,
 			);
 			path = Bai05;
 			sourceTree = "<group>";
