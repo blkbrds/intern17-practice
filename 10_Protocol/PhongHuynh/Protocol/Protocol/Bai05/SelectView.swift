@@ -1,10 +1,21 @@
 import UIKit
 
-class SelectView: UIView, SelectViewDatasource {
-    func setXY() -> (x: String, y: String) {
-        return (xLabel.text ?? "", yLabel.text ?? "")
-    }
+
+protocol SelectViewDatasource {
     
+    func setXY() -> (x: String, y: String)
+}
+
+protocol SelectViewDelegate {
+    func backResult(view: SelectView, needsPerfom actions: SelectView.Action)
+}
+
+class SelectView: UIView {
+    
+    enum Action {
+        case tap(result: String)
+       }
+
     
     @IBOutlet weak var xLabel: UILabel!
     @IBOutlet weak var yLabel: UILabel!
@@ -16,8 +27,12 @@ class SelectView: UIView, SelectViewDatasource {
     var numberOnScreen: Double = 0
     var previousNumber: Double = 0
     var operation = 0
-    var result: String = ""
-    
+    var dataSource: SelectViewDatasource? {
+        didSet {
+            receiveValue()
+        }
+    }
+    var delegate: SelectViewDelegate?
     
     
     @IBAction func calculatorButton(_ sender: UIButton) {
@@ -46,12 +61,20 @@ class SelectView: UIView, SelectViewDatasource {
         if sender.tag == 6 {
             resultLabel.text = String(numberOnScreen / previousNumber)
         }
-        
+        if let result = resultLabel.text {
+            self.delegate?.backResult(view: self, needsPerfom: .tap(result: result))
+        }
     }
     
     private func changeColer(tag: Int) {
         for button in operationButton {
             button.backgroundColor = button.tag == tag ? .red : .white
         }
+    }
+    
+    private func receiveValue() {
+        let value = dataSource?.setXY()
+        xLabel.text = value?.x
+        yLabel.text = value?.y
     }
 }
