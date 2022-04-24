@@ -13,7 +13,8 @@
 		894E8BA4281160BD0074CE9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894E8BA3281160BD0074CE9F /* Assets.xcassets */; };
 		894E8BA7281160BD0074CE9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894E8BA5281160BD0074CE9F /* LaunchScreen.storyboard */; };
 		894E8BB12811625B0074CE9F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BB02811625B0074CE9F /* HomeViewController.swift */; };
-		894E8BB52812562E0074CE9F /* BT2ControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BB42812562E0074CE9F /* BT2ControllerViewController.swift */; };
+		894E8BB52812562E0074CE9F /* BT2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BB42812562E0074CE9F /* BT2ViewController.swift */; };
+		894E8BBA2812A5B00074CE9F /* BT3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BB92812A5B00074CE9F /* BT3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		894E8BA6281160BD0074CE9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		894E8BA8281160BD0074CE9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894E8BB02811625B0074CE9F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		894E8BB42812562E0074CE9F /* BT2ControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT2ControllerViewController.swift; sourceTree = "<group>"; };
+		894E8BB42812562E0074CE9F /* BT2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT2ViewController.swift; sourceTree = "<group>"; };
+		894E8BB92812A5B00074CE9F /* BT3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,8 @@
 				894E8BA5281160BD0074CE9F /* LaunchScreen.storyboard */,
 				894E8BA8281160BD0074CE9F /* Info.plist */,
 				894E8BB02811625B0074CE9F /* HomeViewController.swift */,
-				894E8BB42812562E0074CE9F /* BT2ControllerViewController.swift */,
+				894E8BB42812562E0074CE9F /* BT2ViewController.swift */,
+				894E8BB92812A5B00074CE9F /* BT3ViewController.swift */,
 			);
 			path = BTView;
 			sourceTree = "<group>";
@@ -143,7 +146,8 @@
 				894E8B9B281160B80074CE9F /* AppDelegate.swift in Sources */,
 				894E8B9D281160B80074CE9F /* SceneDelegate.swift in Sources */,
 				894E8BB12811625B0074CE9F /* HomeViewController.swift in Sources */,
-				894E8BB52812562E0074CE9F /* BT2ControllerViewController.swift in Sources */,
+				894E8BBA2812A5B00074CE9F /* BT3ViewController.swift in Sources */,
+				894E8BB52812562E0074CE9F /* BT2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

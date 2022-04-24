@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .white
-        let bt2 = BT2ControllerViewController()
-        window?.rootViewController = bt2
+        let bt3 = BT3ViewController()
+        window?.rootViewController = bt3
         window?.makeKeyAndVisible()
     }
 
