@@ -32,7 +32,7 @@ final class Ex4ViewController: UIViewController {
         cancelButton.layer.masksToBounds = true
     }
     
-    private func showCity() {
+    private func showCities() {
         var text: String = ""
         for city in cities {
             text += "- \(city)\n"
@@ -42,7 +42,7 @@ final class Ex4ViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction private func cancelTouchUpInside(_ sender: Any) {
-        showCity()
+        showCities()
     }
 }
 

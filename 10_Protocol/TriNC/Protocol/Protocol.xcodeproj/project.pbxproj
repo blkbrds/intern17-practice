@@ -22,6 +22,10 @@
 		220548C92812591A00EE63CA /* DistrictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220548C72812591A00EE63CA /* DistrictViewController.swift */; };
 		220548CA2812591A00EE63CA /* DistrictViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220548C82812591A00EE63CA /* DistrictViewController.xib */; };
 		220548CD2812599C00EE63CA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220548CC2812599C00EE63CA /* Location.swift */; };
+		222D6C1C28137AB40059E554 /* SelectCalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222D6C1B28137AB40059E554 /* SelectCalculatorView.xib */; };
+		222D6C1E28137AC70059E554 /* SelectCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D6C1D28137AC70059E554 /* SelectCalculatorView.swift */; };
+		222D6C23281389130059E554 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D6C21281389130059E554 /* CalculatorViewController.swift */; };
+		222D6C24281389130059E554 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222D6C22281389130059E554 /* CalculatorViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		220548C72812591A00EE63CA /* DistrictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictViewController.swift; sourceTree = "<group>"; };
 		220548C82812591A00EE63CA /* DistrictViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistrictViewController.xib; sourceTree = "<group>"; };
 		220548CC2812599C00EE63CA /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		222D6C1B28137AB40059E554 /* SelectCalculatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCalculatorView.xib; sourceTree = "<group>"; };
+		222D6C1D28137AC70059E554 /* SelectCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCalculatorView.swift; sourceTree = "<group>"; };
+		222D6C21281389130059E554 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		222D6C22281389130059E554 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				220548AC2812409D00EE63CA /* AppDelegate */,
+				222D6C1928137A0B0059E554 /* Ex5 */,
 				220548B2281254F900EE63CA /* Ex4 */,
 				220548B0281254E400EE63CA /* Ex3 */,
 				220548AE2812426A00EE63CA /* Ex1 */,
@@ -176,6 +185,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		222D6C1928137A0B0059E554 /* Ex5 */ = {
+			isa = PBXGroup;
+			children = (
+				222D6C20281388F40059E554 /* CustomView */,
+				222D6C1A28137A220059E554 /* SelectCalculator */,
+			);
+			path = Ex5;
+			sourceTree = "<group>";
+		};
+		222D6C1A28137A220059E554 /* SelectCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				222D6C1B28137AB40059E554 /* SelectCalculatorView.xib */,
+				222D6C1D28137AC70059E554 /* SelectCalculatorView.swift */,
+			);
+			path = SelectCalculator;
+			sourceTree = "<group>";
+		};
+		222D6C20281388F40059E554 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				222D6C21281389130059E554 /* CalculatorViewController.swift */,
+				222D6C22281389130059E554 /* CalculatorViewController.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,11 +271,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				220548A52812404D00EE63CA /* LaunchScreen.storyboard in Resources */,
+				222D6C24281389130059E554 /* CalculatorViewController.xib in Resources */,
 				220548A22812404D00EE63CA /* Assets.xcassets in Resources */,
 				220548C62812590C00EE63CA /* ProvinceViewController.xib in Resources */,
 				220548B62812551200EE63CA /* Ex4ViewController.xib in Resources */,
 				220548C2281258FD00EE63CA /* RegionViewController.xib in Resources */,
 				220548BE281258EB00EE63CA /* LocationViewController.xib in Resources */,
+				222D6C1C28137AB40059E554 /* SelectCalculatorView.xib in Resources */,
 				220548CA2812591A00EE63CA /* DistrictViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,12 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222D6C23281389130059E554 /* CalculatorViewController.swift in Sources */,
 				220548C1281258FD00EE63CA /* RegionViewController.swift in Sources */,
 				220548C92812591A00EE63CA /* DistrictViewController.swift in Sources */,
 				220548CD2812599C00EE63CA /* Location.swift in Sources */,
 				220548992812404B00EE63CA /* AppDelegate.swift in Sources */,
 				2205489B2812404B00EE63CA /* SceneDelegate.swift in Sources */,
 				220548B52812551200EE63CA /* Ex4ViewController.swift in Sources */,
+				222D6C1E28137AC70059E554 /* SelectCalculatorView.swift in Sources */,
 				220548C52812590C00EE63CA /* ProvinceViewController.swift in Sources */,
 				220548BD281258EB00EE63CA /* LocationViewController.swift in Sources */,
 			);
