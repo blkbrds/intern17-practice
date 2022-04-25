@@ -16,6 +16,7 @@
 		894E8BB52812562E0074CE9F /* BT2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BB42812562E0074CE9F /* BT2ViewController.swift */; };
 		894E8BBA2812A5B00074CE9F /* BT3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BB92812A5B00074CE9F /* BT3ViewController.swift */; };
 		894E8BBE2816065C0074CE9F /* BT4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BBD2816065C0074CE9F /* BT4ViewController.swift */; };
+		894E8BC1281615DC0074CE9F /* BT5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BC0281615DC0074CE9F /* BT5ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		894E8BB42812562E0074CE9F /* BT2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT2ViewController.swift; sourceTree = "<group>"; };
 		894E8BB92812A5B00074CE9F /* BT3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT3ViewController.swift; sourceTree = "<group>"; };
 		894E8BBD2816065C0074CE9F /* BT4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT4ViewController.swift; sourceTree = "<group>"; };
+		894E8BC0281615DC0074CE9F /* BT5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT5ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				894E8BB42812562E0074CE9F /* BT2ViewController.swift */,
 				894E8BB92812A5B00074CE9F /* BT3ViewController.swift */,
 				894E8BBD2816065C0074CE9F /* BT4ViewController.swift */,
+				894E8BC0281615DC0074CE9F /* BT5ViewController.swift */,
 			);
 			path = BTView;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				894E8B9B281160B80074CE9F /* AppDelegate.swift in Sources */,
 				894E8B9D281160B80074CE9F /* SceneDelegate.swift in Sources */,
 				894E8BB12811625B0074CE9F /* HomeViewController.swift in Sources */,
+				894E8BC1281615DC0074CE9F /* BT5ViewController.swift in Sources */,
 				894E8BBE2816065C0074CE9F /* BT4ViewController.swift in Sources */,
 				894E8BBA2812A5B00074CE9F /* BT3ViewController.swift in Sources */,
 				894E8BB52812562E0074CE9F /* BT2ViewController.swift in Sources */,
