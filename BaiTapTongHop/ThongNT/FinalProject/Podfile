@@ -24,6 +24,11 @@ target 'FinalProject' do
   # Tool to enforce Swift style and conventions
   pod 'SwiftLint', '0.27.0'
 
+  pod 'GoogleAPIClientForREST/YouTube', '~> 1.2.1'
+  pod 'Google/SignIn', '~> 3.0.3'
+  pod 'SDWebImage', '~> 5.0'
+  pod "youtube-ios-player-helper"
+
   target 'FinalProjectTests' do
     inherit! :search_paths
   end

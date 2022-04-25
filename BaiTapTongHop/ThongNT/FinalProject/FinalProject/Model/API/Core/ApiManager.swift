@@ -55,7 +55,9 @@ final class ApiManager {
 
     var defaultHTTPHeaders: [String: String] {
         var headers: [String: String] = [:]
-        headers["Content-Type"] = "application/json"
+        guard let accessToken = SceneDelegate.shared.accsesToken else { fatalError() }
+        headers["Accept"] = "application/json"
+        headers["Authorization"] = "Bearer " + accessToken
         return headers
     }
 }

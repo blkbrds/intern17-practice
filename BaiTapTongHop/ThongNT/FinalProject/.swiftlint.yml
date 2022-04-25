@@ -1,7 +1,7 @@
 # Swift 4.1, SwiftLint 0.25.1
 reporter: xcode
 opt_in_rules:
-  - force_unwrapping
+#  - force_unwrapping
   - vertical_whitespace
   - closure_end_indentation
   - closure_spacing
@@ -25,7 +25,7 @@ cyclomatic_complexity:
   warning: 18
 line_length: 200
 file_length: 1050
-force_unwrapping: error
+#force_unwrapping: error
 function_parameter_count:
   - 6
   - 8

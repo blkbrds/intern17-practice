@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="ChannelTableViewCell" customModule="FinalProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MonkeyImage" translatesAutoresizingMaskIntoConstraints="NO" id="mca-hv-OpF">
+                        <rect key="frame" x="20" y="20" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mca-hv-OpF" secondAttribute="height" id="AvO-XQ-GGJ"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rIW-bC-B9r">
+                        <rect key="frame" x="66" y="0.0" width="302" height="76"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSx-p1-6cV" userLabel="Title Label">
+                                <rect key="frame" x="0.0" y="0.0" width="302" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-lN-jhZ">
+                                <rect key="frame" x="0.0" y="38" width="302" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mca-hv-OpF" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.0978261" id="1y6-ZB-iKy"/>
+                    <constraint firstAttribute="bottom" secondItem="mca-hv-OpF" secondAttribute="bottom" constant="20" id="25m-id-8ZW"/>
+                    <constraint firstAttribute="bottom" secondItem="rIW-bC-B9r" secondAttribute="bottom" id="38f-M1-8KZ"/>
+                    <constraint firstItem="mca-hv-OpF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="BFP-36-msK"/>
+                    <constraint firstAttribute="trailing" secondItem="rIW-bC-B9r" secondAttribute="trailing" id="WZY-cB-Xn9"/>
+                    <constraint firstItem="rIW-bC-B9r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eAh-vg-rYX"/>
+                    <constraint firstItem="rIW-bC-B9r" firstAttribute="leading" secondItem="mca-hv-OpF" secondAttribute="trailing" constant="10" id="mcs-Cc-yI6"/>
+                    <constraint firstItem="mca-hv-OpF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ugv-vo-RJI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="channelImageView" destination="mca-hv-OpF" id="fV2-gY-kwZ"/>
+                <outlet property="titleLabel" destination="uSx-p1-6cV" id="4Ll-fp-pyv"/>
+            </connections>
+            <point key="canvasLocation" x="130.43478260869566" y="74.330357142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MonkeyImage" width="256" height="256"/>
+    </resources>
+</document>

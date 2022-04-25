@@ -25,7 +25,6 @@ extension ApiManager {
 
         var header = api.defaultHTTPHeaders
         header.updateValues(headers)
-
         let request = Alamofire.request(urlString.urlString,
                                         method: method,
                                         parameters: parameters,
