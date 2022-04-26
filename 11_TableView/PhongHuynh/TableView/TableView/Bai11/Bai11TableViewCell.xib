@@ -16,22 +16,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="275" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wna-p0-6yJ">
-                        <rect key="frame" x="16" y="11" width="243" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIj-Gu-IB8">
+                        <rect key="frame" x="26" y="21" width="223" height="103"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wna-p0-6yJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="VPX-1T-r7N"/>
-                    <constraint firstItem="wna-p0-6yJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="c7V-x5-2QD"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="wna-p0-6yJ" secondAttribute="trailing" id="ixg-A5-ePq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SIj-Gu-IB8" secondAttribute="trailing" constant="10" id="Bti-KE-6Bv"/>
+                    <constraint firstItem="SIj-Gu-IB8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="KOv-Aa-hzJ"/>
+                    <constraint firstItem="SIj-Gu-IB8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="VoB-WM-IdO"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="SIj-Gu-IB8" secondAttribute="bottom" constant="10" id="qPD-tw-rnp"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="nameLabel" destination="wna-p0-6yJ" id="qb2-ry-BfS"/>
+                <outlet property="nameLabel" destination="SIj-Gu-IB8" id="u2v-1T-JD6"/>
             </connections>
             <point key="canvasLocation" x="315" y="-58"/>
         </tableViewCell>

@@ -11,7 +11,6 @@ final class Bai12ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configTableView()
     }
     
@@ -37,7 +36,6 @@ final class Bai12ViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    
     private func insert() {
         nameData.append("Six")
     }

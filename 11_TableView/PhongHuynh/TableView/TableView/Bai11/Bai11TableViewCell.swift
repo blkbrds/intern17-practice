@@ -1,9 +1,11 @@
 import UIKit
 
-class Bai11TableViewCell: UITableViewCell {
+final class Bai11TableViewCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
        
@@ -11,8 +13,6 @@ class Bai11TableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        
     }
     
     func updateTableCell(subtitle: String) {

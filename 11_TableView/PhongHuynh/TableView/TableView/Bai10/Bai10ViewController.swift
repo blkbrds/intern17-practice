@@ -7,30 +7,38 @@ final class Bai10ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var filteredData: [String] = []
-    
     // MARK: - Properties
-    var garden: [[String]] = []
-    var gardenIndex: [String] = []
-    
-    enum Permission {
-        case granted
-        case denied
-    }
+    var arrayTong: [String] = []
+    var arraySection: [String] = []
+    var arrayDictionary: [String: [String]] = [:]
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "SECTIONS"
-        loadData()
+        
         configTableView()
         searchBar.delegate = self
-        contacts()
-        
+        contact()
+        loadData()
     }
     
-    func contacts() {
+    func loadData() {
+        for car in arrayTong {
+            let carKey = String(car.prefix(1))
+            if var carValues = arrayDictionary[carKey] {
+                carValues.append(car)
+                arrayDictionary[carKey] = carValues
+            } else {
+                arrayDictionary[carKey] = [car]
+            }
+        }
+        arraySection = [String](arrayDictionary.keys)
+        arraySection = arraySection.sorted(by: { $0 < $1 })
+    }
+    
+    func contact() {
         let store = CNContactStore()
         let authorizationStatus = CNContactStore.authorizationStatus(for: .contacts)
         if authorizationStatus == .notDetermined {
@@ -45,6 +53,7 @@ final class Bai10ViewController: UIViewController {
     }
     
     func retrieveContacts(from store: CNContactStore) {
+        var contacts: [CNContact] = []
         let containerId = store.defaultContainerIdentifier()
         let predicate = CNContact.predicateForContactsInContainer(withIdentifier: containerId)
         let keysToFetch = [CNContactGivenNameKey as CNKeyDescriptor,
@@ -52,46 +61,44 @@ final class Bai10ViewController: UIViewController {
                            CNContactImageDataAvailableKey as
                             CNKeyDescriptor,
                            CNContactImageDataKey as CNKeyDescriptor]
-        let contacts = try! store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
-        print(contacts)
+        contacts = try! store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
+        for i in contacts {
+            arrayTong.append(i.familyName + i.givenName)
+        }
     }
-    
     
     // MARK: - Private funtions
-    private func loadData() {
-        //        let giasuc: [String] = ["Heo", "Bò", "Trâu", "Ngựa", "Gà", "Vịt", "Cá", "Heo", "Bò", "Trâu", "Ngựa", "Gà", "Vịt", "Cá"]
-        //        let dovat: [String] = ["Tivi", "Dao", "Kéo", "Xe", "Chén","Tivi", "Dao", "Kéo", "Xe", "Chén", "Tivi", "Dao", "Kéo", "Xe", "Chén"]
-        //        let ten: [String] = ["Phong", "Tinh", "Thuan", "Tri", "Thong", "Phong", "Tinh", "Thuan", "Tri", "Thong"]
-        //        self.garden = [giasuc, dovat, ten]
-        //        gardenIndex = ["G", "Đ", "T"]
-        //    gardenIndex = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"]
-    }
-    
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
     }
-    
 }
 
 extension Bai10ViewController: UITableViewDataSource, UISearchBarDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return garden.count
+        return arraySection.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return garden[section].count
+        let carKey = arraySection[section]
+        if let carValues = arrayDictionary[carKey] {
+            return carValues.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = garden[indexPath.section][indexPath.row]
+        let carKey = arraySection[indexPath.section]
+        if let carValues = arrayDictionary[carKey] {
+            cell.textLabel?.text = carValues[indexPath.row]
+        }
         return cell
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return gardenIndex
+        return arraySection
     }
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
@@ -99,20 +106,15 @@ extension Bai10ViewController: UITableViewDataSource, UISearchBarDelegate {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0: return "Gia Súc"
-        case 1: return "Đồ Vật"
-        default: return "Tên"
-        }
+        return arraySection[section]
     }
     
-    //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    //        garden = searchText.isEmpty ? garden : garden.filter({(dataString: String) -> Bool in
-    //            return dataString.range(of: searchText, options: .caseInsensitive) != nil
-    //        })
-    //        tableView.reloadData()
-    //    }
-    
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+      
+        arrayTong = searchText.isEmpty ? arrayTong : arrayTong.filter({(dataString: String) -> Bool in
+            return dataString.range(of: searchText, options: .caseInsensitive) != nil
+        })
+       tableView.reloadData()
+    }
 }
 
