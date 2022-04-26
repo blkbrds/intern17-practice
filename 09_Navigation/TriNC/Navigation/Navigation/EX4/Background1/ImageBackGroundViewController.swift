@@ -13,9 +13,18 @@ final class ImageBackGroundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Gradient Background"
-        // iOS 15.4 cannot setbackground img
-        let img = UIImage(named: "ic-gradient")
-        navigationController?.navigationBar.setBackgroundImage(img, for: .default)
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .green
+        appearance.titleTextAttributes = [.font:
+        UIFont.boldSystemFont(ofSize: 20.0),
+                                      .foregroundColor: UIColor.white]
+
+        // Customizing our navigation bar
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "ic-gradient"), for: .default)
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 }
 
