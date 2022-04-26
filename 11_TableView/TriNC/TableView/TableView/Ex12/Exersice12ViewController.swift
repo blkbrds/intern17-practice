@@ -14,6 +14,7 @@ final class Exersice12ViewController: UIViewController {
     
     // MARK: - Properties
     var names: [String] = ["Tri", "Tinh", "Thuan", "Phong", "Thong"]
+    var selectArr: [String] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ final class Exersice12ViewController: UIViewController {
         setupUI()
     }
     
-    // MARK: - Function
+    // MARK: - UI
     func setupUI() {
         title = "Table reorder"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -30,7 +31,10 @@ final class Exersice12ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+        // navbar
         turnOffEditingMode()
+        let selectBarButtonItem = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(selectAction))
+        navigationItem.leftBarButtonItem = selectBarButtonItem
     }
         
     // MARK: - Objc
@@ -46,12 +50,31 @@ final class Exersice12ViewController: UIViewController {
         navigationItem.rightBarButtonItem = editingButton
     }
     
-    func delete(indexPath: IndexPath) {
+    @objc func selectAction() {
+        tableView.allowsMultipleSelectionDuringEditing = true
+        for row in 0..<names.count {
+            self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: false, scrollPosition: .none)
+        }
+    }
+    
+    
+    // MARK: - Function
+    func deleteCell(indexPath: IndexPath) {
         names.remove(at: indexPath.row)
     }
     
-    func insert() {
-        names.append("Hona")
+    func insertCell() {
+        names.append("Linh")
+    }
+    
+    func selectDeselectCell(tableView: UITableView, indexPath: IndexPath) {
+        self.selectArr.removeAll()
+        if let arr = tableView.indexPathForSelectedRow {
+            for _ in arr {
+                selectArr.append(names[indexPath.row])
+            }
+        }
+        print(selectArr)
     }
     
 }
@@ -85,8 +108,8 @@ extension Exersice12ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .none: return
-        case .delete: delete(indexPath: indexPath)
-        case .insert: insert()
+        case .delete: deleteCell(indexPath: indexPath)
+        case .insert: insertCell()
         }
         tableView.reloadData()
     }
@@ -94,10 +117,20 @@ extension Exersice12ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
+        
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let itemToMove = names[sourceIndexPath.row]
-        delete(indexPath: sourceIndexPath)
+        deleteCell(indexPath: sourceIndexPath)
         names.insert(itemToMove, at: destinationIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectDeselectCell(tableView: tableView, indexPath: indexPath)
+        print("select")
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.selectDeselectCell(tableView: tableView, indexPath: indexPath)
+        print("deselect")
     }
 }

@@ -20,7 +20,7 @@ final class Exercise11ViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupUI() {
-        title = "Auto"
+        title = "AutoSize"
         tableView.register(UINib(nibName: "ContentCell", bundle: nil), forCellReuseIdentifier: "ContentCell")
         tableView.delegate = self
         tableView.dataSource = self

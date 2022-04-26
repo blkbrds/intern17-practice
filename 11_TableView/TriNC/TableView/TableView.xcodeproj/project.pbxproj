@@ -34,6 +34,9 @@
 		229E1F3B2816992E0061B6FB /* Exercise11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229E1F392816992E0061B6FB /* Exercise11ViewController.xib */; };
 		229E1F3E2816995C0061B6FB /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E1F3C2816995C0061B6FB /* ContentCell.swift */; };
 		229E1F3F2816995C0061B6FB /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229E1F3D2816995C0061B6FB /* ContentCell.xib */; };
+		22D262D2281794BF004E1694 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22D262D1281794BF004E1694 /* Contacts.plist */; };
+		22D262DA28179CC0004E1694 /* Exersice10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D262D828179CC0004E1694 /* Exersice10ViewController.swift */; };
+		22D262DB28179CC0004E1694 /* Exersice10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D262D928179CC0004E1694 /* Exersice10ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		229E1F392816992E0061B6FB /* Exercise11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise11ViewController.xib; sourceTree = "<group>"; };
 		229E1F3C2816995C0061B6FB /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		229E1F3D2816995C0061B6FB /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
+		22D262D1281794BF004E1694 /* Contacts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Contacts.plist; sourceTree = "<group>"; };
+		22D262D828179CC0004E1694 /* Exersice10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exersice10ViewController.swift; sourceTree = "<group>"; };
+		22D262D928179CC0004E1694 /* Exersice10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exersice10ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 				2253616D28162FC900762A18 /* Master-Detail234 */,
 				2253618428164D1000762A18 /* Ex7 */,
 				2253618E281658B500762A18 /* Ex9 */,
+				22D262D3281799FF004E1694 /* Ex10 */,
 				229E1F372816991D0061B6FB /* Ex11 */,
 				229E1F3228167D550061B6FB /* Ex12 */,
 				2253616728162CB300762A18 /* Resource */,
@@ -158,6 +165,7 @@
 				22536189281653DB00762A18 /* Ex8Cell */,
 				2253618528164D2400762A18 /* Exercise07ViewController.swift */,
 				2253618628164D2400762A18 /* Exercise07ViewController.xib */,
+				22D262D1281794BF004E1694 /* Contacts.plist */,
 			);
 			path = Ex7;
 			sourceTree = "<group>";
@@ -208,6 +216,15 @@
 				229E1F3D2816995C0061B6FB /* ContentCell.xib */,
 			);
 			path = Ex11;
+			sourceTree = "<group>";
+		};
+		22D262D3281799FF004E1694 /* Ex10 */ = {
+			isa = PBXGroup;
+			children = (
+				22D262D828179CC0004E1694 /* Exersice10ViewController.swift */,
+				22D262D928179CC0004E1694 /* Exersice10ViewController.xib */,
+			);
+			path = Ex10;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +289,8 @@
 				22536177281633AA00762A18 /* DetailViewController.xib in Resources */,
 				2253615F28162BEE00762A18 /* LaunchScreen.storyboard in Resources */,
 				229E1F3628167D650061B6FB /* Exersice12ViewController.xib in Resources */,
+				22D262D2281794BF004E1694 /* Contacts.plist in Resources */,
+				22D262DB28179CC0004E1694 /* Exersice10ViewController.xib in Resources */,
 				2253616C28162D2200762A18 /* Exercise01ViewController.xib in Resources */,
 				229E1F3F2816995C0061B6FB /* ContentCell.xib in Resources */,
 				2253617128162FF200762A18 /* Exercise02ViewController.xib in Resources */,
@@ -303,6 +322,7 @@
 				2253618728164D2400762A18 /* Exercise07ViewController.swift in Sources */,
 				2253619628165AAC00762A18 /* Ex9Cell.swift in Sources */,
 				2253617028162FF200762A18 /* Exercise02ViewController.swift in Sources */,
+				22D262DA28179CC0004E1694 /* Exersice10ViewController.swift in Sources */,
 				229E1F302816782D0061B6FB /* SearchTailViewController.swift in Sources */,
 				2253615528162BEB00762A18 /* SceneDelegate.swift in Sources */,
 			);

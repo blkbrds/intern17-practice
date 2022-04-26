@@ -14,8 +14,9 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     enum ControllerType {
         case ex1
         case ex2
-        case ex7
+        case ex78
         case ex9
+        case ex10
         case ex11
         case ex12
         
@@ -25,10 +26,12 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 return Exercise01ViewController()
             case .ex2:
                 return Exercise02ViewController()
-            case .ex7:
+            case .ex78:
                 return Exercise07ViewController()
             case .ex9:
                 return Exercise09ViewController()
+            case .ex10:
+                return Exersice10ViewController()
             case .ex11:
                 return Exercise11ViewController()
             case .ex12:
@@ -41,7 +44,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let vc = ControllerType.ex1.controller
+        let vc = ControllerType.ex10.controller
         let nav = UINavigationController(rootViewController: vc)
         window.rootViewController = nav
         window.makeKeyAndVisible()

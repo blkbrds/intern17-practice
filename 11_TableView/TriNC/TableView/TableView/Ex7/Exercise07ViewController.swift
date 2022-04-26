@@ -13,14 +13,8 @@ final class Exercise07ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    var vatchat: [[String]] = [
-        ["Heo", "Ga", "Vit"],
-        ["Tivi", "Dao", "Keo"],
-        ["Hoa1", "Hoa2", "Hoa3"]
-    ]
-    
-    var vatchatIndex: [String] = []
-    var phanloai: [String] = ["Giasuc", "Dovat", "Hoa"]
+    var contactIndex: [String] = []
+    var contacts: [[String]] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -31,7 +25,7 @@ final class Exercise07ViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupUI() {
-        title = "VatChat"
+        title = "Sections"
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -45,7 +39,10 @@ final class Exercise07ViewController: UIViewController {
     }
     
     private func loadData() {
-        vatchatIndex = ["G", "D", "H"]
+        guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist") else { return }
+        guard let contactsData = NSArray(contentsOf: path) as? [[String]] else { return }
+        contacts = contactsData
+        contactIndex = ["A", "D", "T"]
     }
 }
 
@@ -53,33 +50,36 @@ final class Exercise07ViewController: UIViewController {
 extension Exercise07ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+        55
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 1: return "Arsenal"
+        case 2: return "Manchester"
+        default: return "Liverpool"
+        }
+    }
+        
     func numberOfSections(in tableView: UITableView) -> Int {
-        vatchat.count
+        return contacts.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vatchat[section].count
+        return contacts[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NameCell
-        cell.textLabel?.text = vatchat[indexPath.section][indexPath.row]
-        cell.nameLabel.text = "Name"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = contacts[indexPath.section][indexPath.row]
         return cell
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return vatchatIndex
+        return contactIndex
     }
 
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return index
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return phanloai[section]
     }
 }
