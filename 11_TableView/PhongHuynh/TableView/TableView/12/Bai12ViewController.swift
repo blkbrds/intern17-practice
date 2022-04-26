@@ -1,33 +1,53 @@
 import UIKit
 
-class Bai12ViewController: UIViewController {
+final class Bai12ViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
-    var nameData: [String] = []
+    // MARK: - Properties
+    var nameData: [String] = ["Two", "Tree", "Four", "Five"]
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadData()
         configTableView()
     }
     
     // MARK: - Private functions
-    private func loadData() {
-        guard let path = Bundle.main.url(forResource: "NameData", withExtension: "plist") else { return }
-        guard let contactsData = NSArray(contentsOf: path) as? [String] else { return }
-        nameData = contactsData
-    }
-    
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
         tableView.delegate  = self
+        turnOffEditingMode()
+    }
+    
+    // MARK: - Objc functions
+    @objc private func turnOnEditingMode() {
+        tableView.isEditing = true
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(turnOffEditingMode))
+        navigationItem.rightBarButtonItem = doneButton
+    }
+    
+    @objc private func turnOffEditingMode() {
+        tableView.isEditing = false
+        let editingButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(turnOnEditingMode))
+        navigationItem.rightBarButtonItem = editingButton
+    }
+    
+    // MARK: - Private functions
+    
+    private func insert() {
+        nameData.append("Six")
+    }
+    
+    private func delete(indexPath: IndexPath) {
+        nameData.remove(at: indexPath.row)
     }
 }
 
-// MARK: - UITableViewDelegate, UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension Bai12ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,42 +65,30 @@ extension Bai12ViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension Bai12ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = UIContextualAction(style: .normal, title: "Delete") { (action, view, completionHandler) in
-            self.nameData.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            tableView.reloadData()
-            completionHandler(true)
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        let result = indexPath.row % 3
+        switch result {
+        case 0: return .insert
+        case 1: return .none
+        default: return .delete
         }
-        delete.backgroundColor = .red
-        // swipe
-        let swipe = UISwipeActionsConfiguration(actions: [delete])
-        return swipe
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
     }
     
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let insert = UIContextualAction(style: .normal, title: "insert") { [self] (action, view, completionHandler) in
-            tableView.beginUpdates()
-            nameData.append("ABC")
-            tableView.insertRows(at: [IndexPath(row: self.nameData.count - 1, section: 0)], with: .automatic)
-            tableView.endUpdates()
-            tableView.reloadData()
-            completionHandler(true)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .insert: insert()
+        case .none: return
+        case .delete: delete(indexPath: indexPath)
         }
-        insert.image = UIImage(named: "insert.png")
-        let delete = UIContextualAction(style: .normal, title: "delete") { (action, view, completionHandler) in
-            self.nameData.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            tableView.reloadData()
-            completionHandler(true)
-        }
-        delete.image = UIImage(named: "delete.jpeg")
-        let swipe = UISwipeActionsConfiguration(actions: [insert, delete])
-        return swipe
+        tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let itemToMove = nameData[sourceIndexPath.row]
+        delete(indexPath: sourceIndexPath)
+        nameData.insert(itemToMove, at: destinationIndexPath.row)
     }
 }

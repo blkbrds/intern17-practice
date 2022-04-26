@@ -7,7 +7,7 @@ protocol Bai05DetailViewControllerDelegate: class {
 final class Bai05DetailViewController: UIViewController {
     
     enum Action {
-        case reload(array: [String])
+        case reload
     }
     
     // MARK: - IBOutlets
@@ -15,7 +15,6 @@ final class Bai05DetailViewController: UIViewController {
     
     // MARK: - Properties
     var search: String = ""
-    var array: [String]?
     weak var delegate: Bai05DetailViewControllerDelegate?
     
     // MARK: - Life cycle
@@ -29,10 +28,8 @@ final class Bai05DetailViewController: UIViewController {
     
     @objc private func backAction() {
         guard let navi = navigationController else { return }
-        if let array = array {
-            self.delegate?.controler(view: self, needsPerfom: .reload(array: array))
-        }
         navi.popToRootViewController(animated: true)
+        self.delegate?.controler(view: self, needsPerfom: .reload)
         
     }
 }

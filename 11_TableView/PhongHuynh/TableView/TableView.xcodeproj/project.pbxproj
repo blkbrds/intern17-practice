@@ -10,6 +10,10 @@
 		CB3E41902812885600482356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E418F2812885600482356 /* AppDelegate.swift */; };
 		CB3E41922812885600482356 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E41912812885600482356 /* SceneDelegate.swift */; };
 		CB3E41992812885800482356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3E41982812885800482356 /* Assets.xcassets */; };
+		CB4DC4892817C055007754E2 /* Bai11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC4872817C055007754E2 /* Bai11ViewController.swift */; };
+		CB4DC48A2817C055007754E2 /* Bai11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4DC4882817C055007754E2 /* Bai11ViewController.xib */; };
+		CB4DC48F2817C132007754E2 /* Bai11TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC48D2817C132007754E2 /* Bai11TableViewCell.swift */; };
+		CB4DC4902817C132007754E2 /* Bai11TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4DC48E2817C132007754E2 /* Bai11TableViewCell.xib */; };
 		CBA25FE62817975A004F600C /* Bai12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA25FE42817975A004F600C /* Bai12ViewController.swift */; };
 		CBA25FE72817975A004F600C /* Bai12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA25FE52817975A004F600C /* Bai12ViewController.xib */; };
 		CBA5257D2816712D00BE0232 /* Bai03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5257B2816712D00BE0232 /* Bai03ViewController.swift */; };
@@ -52,6 +56,10 @@
 		CB3E41912812885600482356 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB3E41982812885800482356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB3E419D2812885800482356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB4DC4872817C055007754E2 /* Bai11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai11ViewController.swift; sourceTree = "<group>"; };
+		CB4DC4882817C055007754E2 /* Bai11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai11ViewController.xib; sourceTree = "<group>"; };
+		CB4DC48D2817C132007754E2 /* Bai11TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai11TableViewCell.swift; sourceTree = "<group>"; };
+		CB4DC48E2817C132007754E2 /* Bai11TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai11TableViewCell.xib; sourceTree = "<group>"; };
 		CBA25FE42817975A004F600C /* Bai12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai12ViewController.swift; sourceTree = "<group>"; };
 		CBA25FE52817975A004F600C /* Bai12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai12ViewController.xib; sourceTree = "<group>"; };
 		CBA5257B2816712D00BE0232 /* Bai03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai03ViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +126,6 @@
 		CB3E418E2812885600482356 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				CBA25FE328179731004F600C /* 12 */,
 				CBB9EBFC281633BC00ED191A /* Bai1 */,
 				CBB9EC032816363D00ED191A /* Bai2 */,
 				CBA5257A281670F700BE0232 /* Bai3 */,
@@ -128,6 +135,8 @@
 				CBA52597281684F800BE0232 /* Bai8 */,
 				CBA5259E2816916200BE0232 /* Bai9 */,
 				CBCC2CF628178147002FE59D /* Bai10 */,
+				CB4DC4862817C043007754E2 /* Bai11 */,
+				CBA25FE328179731004F600C /* 12 */,
 				CBB9EBEE28162BB100ED191A /* Master - Detail */,
 				CB3E418F2812885600482356 /* AppDelegate.swift */,
 				CB3E41912812885600482356 /* SceneDelegate.swift */,
@@ -135,6 +144,17 @@
 				CB3E419D2812885800482356 /* Info.plist */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		CB4DC4862817C043007754E2 /* Bai11 */ = {
+			isa = PBXGroup;
+			children = (
+				CB4DC4872817C055007754E2 /* Bai11ViewController.swift */,
+				CB4DC4882817C055007754E2 /* Bai11ViewController.xib */,
+				CB4DC48D2817C132007754E2 /* Bai11TableViewCell.swift */,
+				CB4DC48E2817C132007754E2 /* Bai11TableViewCell.xib */,
+			);
+			path = Bai11;
 			sourceTree = "<group>";
 		};
 		CBA25FE328179731004F600C /* 12 */ = {
@@ -305,12 +325,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4DC4902817C132007754E2 /* Bai11TableViewCell.xib in Resources */,
 				CBA525A72816921200BE0232 /* ContactTableViewCell.xib in Resources */,
 				CBB9EC272816491500ED191A /* DataSection0.plist in Resources */,
 				CB3E41992812885800482356 /* Assets.xcassets in Resources */,
 				CBB9EC1428163AF000ED191A /* Bai05ViewController.xib in Resources */,
 				CBA525A22816917400BE0232 /* Bai09ViewController.xib in Resources */,
 				CBA5259428167F3B00BE0232 /* Bai07ViewController.xib in Resources */,
+				CB4DC48A2817C055007754E2 /* Bai11ViewController.xib in Resources */,
 				CBA5257E2816712D00BE0232 /* Bai03ViewController.xib in Resources */,
 				CBCC2CFA28178173002FE59D /* Bai10ViewController.xib in Resources */,
 				CBB9EC0A2816367E00ED191A /* NameData.plist in Resources */,
@@ -342,11 +364,13 @@
 				CBB9EC062816365300ED191A /* Bai02ViewController.swift in Sources */,
 				CBA5257D2816712D00BE0232 /* Bai03ViewController.swift in Sources */,
 				CB3E41922812885600482356 /* SceneDelegate.swift in Sources */,
+				CB4DC4892817C055007754E2 /* Bai11ViewController.swift in Sources */,
 				CBB9EC1328163AF000ED191A /* Bai05ViewController.swift in Sources */,
 				CBA525A62816921200BE0232 /* ContactTableViewCell.swift in Sources */,
 				CBA525822816717300BE0232 /* Bai03DetailViewController.swift in Sources */,
 				CBB9EBF92816325A00ED191A /* ContactDetailViewController.swift in Sources */,
 				CBB9EBF428162CA600ED191A /* ContactsViewController.swift in Sources */,
+				CB4DC48F2817C132007754E2 /* Bai11TableViewCell.swift in Sources */,
 				CBA5258D281677E800BE0232 /* Bai05DetailViewController.swift in Sources */,
 				CBB9EBFF281633D100ED191A /* Bai01ViewController.swift in Sources */,
 				CBA5259A2816850800BE0232 /* Bai08ViewController.swift in Sources */,

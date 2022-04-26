@@ -46,8 +46,8 @@ extension Bai05ViewController: UISearchBarDelegate, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = Bai05DetailViewController()
         vc.search =  filteredData[indexPath.row]
-        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -61,8 +61,7 @@ extension Bai05ViewController: UISearchBarDelegate, UITableViewDataSource, UITab
 extension Bai05ViewController: Bai05DetailViewControllerDelegate {
     func controler(view: Bai05DetailViewController, needsPerfom actions: Bai05DetailViewController.Action) {
         switch actions {
-        case .reload(let array):
-            filteredData = array
+        case .reload:
             tableView.reloadData()
         }
     }

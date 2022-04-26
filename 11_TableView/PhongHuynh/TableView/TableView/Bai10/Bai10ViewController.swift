@@ -3,12 +3,6 @@ import Contacts
 
 final class Bai10ViewController: UIViewController {
     
-    enum ContactsFilter {
-        case none
-        case mail
-        case message
-    }
-    
     // MARK: - IBOutlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -18,7 +12,6 @@ final class Bai10ViewController: UIViewController {
     // MARK: - Properties
     var garden: [[String]] = []
     var gardenIndex: [String] = []
-    let contactsStore = CNContactStore()
     
     enum Permission {
         case granted
@@ -30,14 +23,39 @@ final class Bai10ViewController: UIViewController {
         super.viewDidLoad()
         
         title = "SECTIONS"
-        self.requestAccess(completionHandler: { (permission) in
-            self.contact()
-        })
         loadData()
         configTableView()
         searchBar.delegate = self
-      //contact()
+        contacts()
+        
     }
+    
+    func contacts() {
+        let store = CNContactStore()
+        let authorizationStatus = CNContactStore.authorizationStatus(for: .contacts)
+        if authorizationStatus == .notDetermined {
+            store.requestAccess(for: .contacts) { [weak self] didAuthorize, error in
+                if didAuthorize {
+                    self?.retrieveContacts(from: store)
+                }
+            }
+        } else if authorizationStatus == .authorized {
+            retrieveContacts(from: store)
+        }
+    }
+    
+    func retrieveContacts(from store: CNContactStore) {
+        let containerId = store.defaultContainerIdentifier()
+        let predicate = CNContact.predicateForContactsInContainer(withIdentifier: containerId)
+        let keysToFetch = [CNContactGivenNameKey as CNKeyDescriptor,
+                           CNContactFamilyNameKey as CNKeyDescriptor,
+                           CNContactImageDataAvailableKey as
+                            CNKeyDescriptor,
+                           CNContactImageDataKey as CNKeyDescriptor]
+        let contacts = try! store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
+        print(contacts)
+    }
+    
     
     // MARK: - Private funtions
     private func loadData() {
@@ -54,33 +72,6 @@ final class Bai10ViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    func requestAccess(completionHandler: @escaping (Permission) -> ()) {
-        self.contactsStore.requestAccess(for: .contacts, completionHandler: { (granted, error) in
-            if granted {
-                completionHandler(.granted)
-            } else {
-                completionHandler(.denied)
-            }
-        })
-    }
-    
-    func contact() {
-        var contacts = [CNContact]()
-        let keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName)]
-        let request = CNContactFetchRequest(keysToFetch: keys)
-        
-        let contactStore = CNContactStore()
-        do {
-            try contactStore.enumerateContacts(with: request) {
-                (contact, stop) in
-                // Array containing all unified contacts from everywhere
-                contacts.append(contact)
-            }
-        }
-        catch {
-            print("unable to fetch contacts")
-        }
-    }
 }
 
 extension Bai10ViewController: UITableViewDataSource, UISearchBarDelegate {
