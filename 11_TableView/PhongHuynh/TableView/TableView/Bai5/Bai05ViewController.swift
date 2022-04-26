@@ -1,10 +1,5 @@
 import UIKit
 
-// MARK: - Bai05ViewControllerDatasource
-protocol Bai05ViewControllerDatasource: class {
-    func controller() -> [String]
-}
-
 final class Bai05ViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -14,7 +9,6 @@ final class Bai05ViewController: UIViewController {
     // MARK: - Properties
     var filteredData: [String] = []
     var array: [String] = ["Nguyễn Văn Tèo", "Lê Thị Lung Linh", "Trần Trẻ Trung", "Lý Líu Lo", "Mộng Thị Mơ", "Chí Văn Phèo", "Hoàng Hí Hửng", "Võ Vênh Váo", "Mai Văn Mốt", "Nguyễn Văn Tếu"]
-    weak var datasource: Bai05ViewControllerDatasource?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -52,6 +46,7 @@ extension Bai05ViewController: UISearchBarDelegate, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = Bai05DetailViewController()
         vc.search =  filteredData[indexPath.row]
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -60,5 +55,15 @@ extension Bai05ViewController: UISearchBarDelegate, UITableViewDataSource, UITab
             return dataString.range(of: searchText, options: .caseInsensitive) != nil
         })
         tableView.reloadData()
+    }
+}
+
+extension Bai05ViewController: Bai05DetailViewControllerDelegate {
+    func controler(view: Bai05DetailViewController, needsPerfom actions: Bai05DetailViewController.Action) {
+        switch actions {
+        case .reload(let array):
+            filteredData = array
+            tableView.reloadData()
+        }
     }
 }

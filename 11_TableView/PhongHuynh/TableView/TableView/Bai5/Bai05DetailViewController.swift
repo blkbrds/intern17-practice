@@ -1,6 +1,14 @@
 import UIKit
 
+protocol Bai05DetailViewControllerDelegate: class {
+    func controler(view: Bai05DetailViewController, needsPerfom actions: Bai05DetailViewController.Action)
+}
+
 final class Bai05DetailViewController: UIViewController {
+    
+    enum Action {
+        case reload(array: [String])
+    }
     
     // MARK: - IBOutlets
     @IBOutlet private weak var searchLabel: UILabel!
@@ -8,6 +16,7 @@ final class Bai05DetailViewController: UIViewController {
     // MARK: - Properties
     var search: String = ""
     var array: [String]?
+    weak var delegate: Bai05DetailViewControllerDelegate?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -20,19 +29,11 @@ final class Bai05DetailViewController: UIViewController {
     
     @objc private func backAction() {
         guard let navi = navigationController else { return }
-        if let homevc = navi.viewControllers[0] as? Bai05ViewController {
-            homevc.datasource = self
+        if let array = array {
+            self.delegate?.controler(view: self, needsPerfom: .reload(array: array))
         }
         navi.popToRootViewController(animated: true)
+        
     }
 }
 
-// MARK: - Bai05ViewControllerDatasource
-extension Bai05DetailViewController: Bai05ViewControllerDatasource {
-    func controller() -> [String] {
-        guard let array = array else {
-            return ["Nguyễn Văn Tèo", "Lê Thị Lung Linh", "Trần Trẻ Trung", "Lý Líu Lo", "Mộng Thị Mơ", "Chí Văn Phèo", "Hoàng Hí Hửng", "Võ Vênh Váo", "Mai Văn Mốt", "Nguyễn Văn Tếu"]
-        }
-        return array
-    }
-}
