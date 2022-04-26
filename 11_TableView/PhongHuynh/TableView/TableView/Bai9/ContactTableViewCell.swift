@@ -18,18 +18,8 @@ class ContactTableViewCell: UITableViewCell {
         avatarImageView.layer.cornerRadius = 10
         avatarImageView.clipsToBounds = true
         
-        let callButton = UIButton(frame: CGRect(x: 300, y: 0, width: 50, height: 100))
-        callButton.setImage(UIImage(named: "imgName.png"), for: .normal)
-        callButton.addTarget(self, action: #selector(makeCall), for: .touchUpInside)
-        addSubview(callButton)
-
-        
     }
     
-    @objc func makeCall() {
-        delegate?.makeCall(view: self)
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -40,9 +30,12 @@ class ContactTableViewCell: UITableViewCell {
         avatarImageView.image = UIImage(named: avatar)
         contactNamelabel.text = contactName
         subtitleLabel.text = subtitle
-        
+        clickButton.setImage(UIImage(named: button), for: .normal)
     }
     
-   
+    @IBAction func clickButton(_ sender: Any) {
+        delegate?.makeCall(view: self)
+    }
+    
     
 }

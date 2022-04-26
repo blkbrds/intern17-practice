@@ -40,6 +40,8 @@
 		CBB9EC22281648EA00ED191A /* Bai04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9EC20281648EA00ED191A /* Bai04ViewController.swift */; };
 		CBB9EC23281648EA00ED191A /* Bai04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB9EC21281648EA00ED191A /* Bai04ViewController.xib */; };
 		CBB9EC272816491500ED191A /* DataSection0.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBB9EC262816491500ED191A /* DataSection0.plist */; };
+		CBCC2CF928178173002FE59D /* Bai10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC2CF728178173002FE59D /* Bai10ViewController.swift */; };
+		CBCC2CFA28178173002FE59D /* Bai10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCC2CF828178173002FE59D /* Bai10ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		CBB9EC20281648EA00ED191A /* Bai04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai04ViewController.swift; sourceTree = "<group>"; };
 		CBB9EC21281648EA00ED191A /* Bai04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai04ViewController.xib; sourceTree = "<group>"; };
 		CBB9EC262816491500ED191A /* DataSection0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataSection0.plist; sourceTree = "<group>"; };
+		CBCC2CF728178173002FE59D /* Bai10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai10ViewController.swift; sourceTree = "<group>"; };
+		CBCC2CF828178173002FE59D /* Bai10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai10ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 				CBA5259028167F2500BE0232 /* Bai7 */,
 				CBA52597281684F800BE0232 /* Bai8 */,
 				CBA5259E2816916200BE0232 /* Bai9 */,
+				CBCC2CF628178147002FE59D /* Bai10 */,
 				CBB9EBEE28162BB100ED191A /* Master - Detail */,
 				CB3E418F2812885600482356 /* AppDelegate.swift */,
 				CB3E41912812885600482356 /* SceneDelegate.swift */,
@@ -220,6 +225,15 @@
 			path = Bai4;
 			sourceTree = "<group>";
 		};
+		CBCC2CF628178147002FE59D /* Bai10 */ = {
+			isa = PBXGroup;
+			children = (
+				CBCC2CF728178173002FE59D /* Bai10ViewController.swift */,
+				CBCC2CF828178173002FE59D /* Bai10ViewController.xib */,
+			);
+			path = Bai10;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +298,7 @@
 				CBA525A22816917400BE0232 /* Bai09ViewController.xib in Resources */,
 				CBA5259428167F3B00BE0232 /* Bai07ViewController.xib in Resources */,
 				CBA5257E2816712D00BE0232 /* Bai03ViewController.xib in Resources */,
+				CBCC2CFA28178173002FE59D /* Bai10ViewController.xib in Resources */,
 				CBB9EC0A2816367E00ED191A /* NameData.plist in Resources */,
 				CBB9EBF028162C0200ED191A /* Contacts.plist in Resources */,
 				CBA5258E281677E800BE0232 /* Bai05DetailViewController.xib in Resources */,
@@ -305,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCC2CF928178173002FE59D /* Bai10ViewController.swift in Sources */,
 				CBA525A12816917400BE0232 /* Bai09ViewController.swift in Sources */,
 				CB3E41902812885600482356 /* AppDelegate.swift in Sources */,
 				CBB9EC062816365300ED191A /* Bai02ViewController.swift in Sources */,

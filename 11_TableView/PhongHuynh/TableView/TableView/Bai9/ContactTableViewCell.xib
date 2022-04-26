@@ -24,36 +24,42 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1bu-t9-aGu">
-                        <rect key="frame" x="133" y="15" width="284" height="103"/>
+                        <rect key="frame" x="133" y="15" width="295" height="103"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHK-D7-DC3">
-                                <rect key="frame" x="0.0" y="0.0" width="284" height="36.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="295" height="36.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7F-jS-P7v">
-                                <rect key="frame" x="0.0" y="66.5" width="284" height="36.5"/>
+                                <rect key="frame" x="0.0" y="66.5" width="295" height="36.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-74-Fr0">
-                        <rect key="frame" x="437" y="50" width="61" height="33"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-74-Fr0">
+                        <rect key="frame" x="448" y="41.5" width="50" height="50"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
-                        <state key="normal" title="Tap me"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="MlS-ub-szz"/>
+                            <constraint firstAttribute="width" secondItem="kbA-74-Fr0" secondAttribute="height" id="y7R-yg-KsS"/>
+                        </constraints>
+                        <state key="normal" image="imgName"/>
+                        <connections>
+                            <action selector="clickButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4mt-nj-lvi"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="1bu-t9-aGu" firstAttribute="leading" secondItem="tv2-Ri-2ls" secondAttribute="trailing" constant="10" id="3lZ-08-EI0"/>
-                    <constraint firstItem="kbA-74-Fr0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="G1b-j5-oZi"/>
+                    <constraint firstItem="kbA-74-Fr0" firstAttribute="centerY" secondItem="tv2-Ri-2ls" secondAttribute="centerY" id="8GN-rg-D7w"/>
                     <constraint firstAttribute="trailing" secondItem="kbA-74-Fr0" secondAttribute="trailing" constant="20" id="OyB-4X-dsh"/>
                     <constraint firstAttribute="bottom" secondItem="1bu-t9-aGu" secondAttribute="bottom" constant="15" id="PAt-KK-SGt"/>
                     <constraint firstItem="kbA-74-Fr0" firstAttribute="leading" secondItem="1bu-t9-aGu" secondAttribute="trailing" constant="20" id="SNs-bp-4C5"/>
                     <constraint firstAttribute="bottom" secondItem="tv2-Ri-2ls" secondAttribute="bottom" constant="10" id="WXD-hg-Peb"/>
-                    <constraint firstAttribute="bottom" secondItem="kbA-74-Fr0" secondAttribute="bottom" constant="50" id="h6S-l0-uJU"/>
                     <constraint firstItem="tv2-Ri-2ls" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="m6t-zF-tPp"/>
                     <constraint firstItem="tv2-Ri-2ls" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vYt-Ho-p32"/>
                     <constraint firstItem="1bu-t9-aGu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="zdh-sW-Vpi"/>
@@ -70,6 +76,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="imgName" width="820" height="800"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

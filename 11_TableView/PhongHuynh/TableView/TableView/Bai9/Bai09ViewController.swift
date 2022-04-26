@@ -49,7 +49,7 @@ extension Bai09ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactTableViewCell", for: indexPath) as! ContactTableViewCell
-        cell.updateTableCell(avatar: "husky.jpeg", contactName: garden[indexPath.section][indexPath.row], subtitle: "Subtitle", button: "")
+        cell.updateTableCell(avatar: "husky.jpeg", contactName: garden[indexPath.section][indexPath.row], subtitle: "Subtitle", button: "imgName")
         cell.delegate = self
         return cell
     }
@@ -75,9 +75,6 @@ extension Bai09ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension Bai09ViewController: ContactTableViewCellDelegate {
     func makeCall(view: ContactTableViewCell) {
-        var contactName = ""
-        print("Make \(contactName)")
+        print("Make")
     }
-    
-    
 }
