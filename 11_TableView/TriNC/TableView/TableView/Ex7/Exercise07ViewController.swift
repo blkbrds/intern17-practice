@@ -42,7 +42,7 @@ final class Exercise07ViewController: UIViewController {
         guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist") else { return }
         guard let contactsData = NSArray(contentsOf: path) as? [[String]] else { return }
         contacts = contactsData
-        contactIndex = ["A", "D", "T"]
+        contactIndex = ["A", "M", "L"]
     }
 }
 
@@ -55,8 +55,8 @@ extension Exercise07ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 1: return "Arsenal"
-        case 2: return "Manchester"
+        case 0: return "Arsenal"
+        case 1: return "Manchester"
         default: return "Liverpool"
         }
     }

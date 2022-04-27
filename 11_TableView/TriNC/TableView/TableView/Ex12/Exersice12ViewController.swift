@@ -8,7 +8,7 @@
 import UIKit
 
 final class Exersice12ViewController: UIViewController {
-
+    
     // MARK: - IBOutlet
     @IBOutlet private weak var tableView: UITableView!
     
@@ -22,21 +22,21 @@ final class Exersice12ViewController: UIViewController {
         setupUI()
     }
     
-    // MARK: - UI
-    func setupUI() {
-        title = "Table reorder"
+    // MARK: - Private Function
+    private func setupUI() {
+        title = "Table Swipe"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        // delegate && datasource
+        // Delegate && Datasource
         tableView.delegate = self
         tableView.dataSource = self
-
-        // navbar
+        
+        // Navigation Bar
         turnOffEditingMode()
         let selectBarButtonItem = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(selectAction))
         navigationItem.leftBarButtonItem = selectBarButtonItem
     }
-        
+    
     // MARK: - Objc
     @objc func turnOnEditingMode() {
         tableView.isEditing = true
@@ -57,7 +57,6 @@ final class Exersice12ViewController: UIViewController {
         }
     }
     
-    
     // MARK: - Function
     func deleteCell(indexPath: IndexPath) {
         names.remove(at: indexPath.row)
@@ -68,15 +67,12 @@ final class Exersice12ViewController: UIViewController {
     }
     
     func selectDeselectCell(tableView: UITableView, indexPath: IndexPath) {
-        self.selectArr.removeAll()
         if let arr = tableView.indexPathForSelectedRow {
             for _ in arr {
                 selectArr.append(names[indexPath.row])
             }
         }
-        print(selectArr)
     }
-    
 }
 
 // MARK: - Extention
@@ -110,6 +106,7 @@ extension Exersice12ViewController: UITableViewDelegate, UITableViewDataSource {
         case .none: return
         case .delete: deleteCell(indexPath: indexPath)
         case .insert: insertCell()
+        default: return
         }
         tableView.reloadData()
     }
@@ -117,7 +114,7 @@ extension Exersice12ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-        
+    
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let itemToMove = names[sourceIndexPath.row]
         deleteCell(indexPath: sourceIndexPath)
@@ -126,11 +123,16 @@ extension Exersice12ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectDeselectCell(tableView: tableView, indexPath: indexPath)
-        print("select")
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         self.selectDeselectCell(tableView: tableView, indexPath: indexPath)
-        print("deselect")
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        UIView.animate(withDuration: 1, delay: 0.2 * Double(indexPath.row), animations: {
+            cell.alpha = 1
+        })
     }
 }

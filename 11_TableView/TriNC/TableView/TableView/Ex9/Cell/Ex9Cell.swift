@@ -23,6 +23,7 @@ final class Ex9Cell: UITableViewCell {
     var indexRow: Int = 0
     weak var delegate: Ex9CellDelegate?
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }

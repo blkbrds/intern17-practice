@@ -61,8 +61,9 @@ extension Exercise01ViewController: UITableViewDelegate, UITableViewDataSource ,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = SearchTailViewController()
-        vc.name = names[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
+        vc.delegate = self
+        vc.name = fillteredNames[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -70,5 +71,14 @@ extension Exercise01ViewController: UITableViewDelegate, UITableViewDataSource ,
             return dataString.range(of: searchText, options: .caseInsensitive) != nil
         })
         tableView.reloadData()
+    }
+}
+
+// MARK: - Implement Protocol
+extension Exercise01ViewController: SearchDetailViewControllerDelegate {
+    func controller(controller: SearchTailViewController, needsPerform action: SearchTailViewController.Action) {
+        switch action {
+        case .reload: tableView.reloadData()
+        }
     }
 }

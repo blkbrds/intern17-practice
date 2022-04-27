@@ -14,7 +14,6 @@ final class Exercise02ViewController: UIViewController {
     
     // MARK: - Properties
     var names: [[String]] = []
-    var teams: [String] = ["iOS", "Fluter"]
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -25,17 +24,24 @@ final class Exercise02ViewController: UIViewController {
     
     // MARK: - Private Fucntions
     private func setupUI() {
+        // title
         title = "Ex234"
+        view.backgroundColor = .lightGray
+        
+        // Register
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        // Delegate && Datasource
         tableView.dataSource = self
         tableView.delegate = self
     }
     
     private func setupData() {
-        loadData()
+        loadDataPlist()
     }
     
-    func loadData() {
+    // MARK: - Public Function
+    func loadDataPlist() {
         guard let path = Bundle.main.url(forResource: "Names", withExtension: "plist") else { return }
         guard let namesData = NSArray(contentsOf: path) as? [[String]] else { return }
         names = namesData
@@ -46,7 +52,11 @@ final class Exercise02ViewController: UIViewController {
 extension Exercise02ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return teams[section]
+        switch section {
+        case 0: return "Section 1"
+        case 1: return "Section 2"
+        default: return "Section 3"
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

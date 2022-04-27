@@ -9,14 +9,15 @@ import UIKit
 
 final class ContentCell: UITableViewCell {
 
-    // MARK: - Properties
-    @IBOutlet weak var contentLabel: UILabel!
+    // MARK: - IBOutlet
+    @IBOutlet private weak var contentLabel: UILabel!
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentLabel.text = ""
     }
     
+    // MARK: - Function
     func config(text: String) {
         contentLabel.text = text
     }

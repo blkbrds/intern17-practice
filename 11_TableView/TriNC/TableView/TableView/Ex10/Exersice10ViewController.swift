@@ -13,14 +13,13 @@ struct Contact {
     let name: String
 }
 
-final class Exersice10ViewController: UIViewController  {
+final class Exersice10ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-//    var contacts: [Contact] = []
     var sortedContacts: [String: [Contact]] = [:]
     var keys: [String] = []
     
@@ -28,7 +27,7 @@ final class Exersice10ViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        fetchContacts()
+        setupData()
     }
     
     // MARK: - Private Functions
@@ -42,8 +41,12 @@ final class Exersice10ViewController: UIViewController  {
         searchBar.delegate = self
     }
     
+    private func setupData() {
+        fetchContacts()
+    }
+    
+    // MARK: - Fetch Data
     private func fetchContacts() {
-        
         let store = CNContactStore()
         store.requestAccess(for: .contacts) { granted, err in
             if let err = err {
@@ -52,8 +55,6 @@ final class Exersice10ViewController: UIViewController  {
             }
             
             if granted {
-                print("Access granted")
-                
                 let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
                 let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
                 request.sortOrder = CNContactSortOrder.userDefault
@@ -72,7 +73,6 @@ final class Exersice10ViewController: UIViewController  {
                     }
                     self.keys = Array(self.sortedContacts.keys)
                     self.keys = self.keys.sorted { $0.lowercased() < $1.lowercased() }
-
                     self.tableView.reloadData()
                 } catch let err {
                     print("Failed to enum contacts", err)
@@ -87,20 +87,19 @@ final class Exersice10ViewController: UIViewController  {
 
 // MARK: - Extention UITableView Delegate && Datasource
 extension Exersice10ViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return sortedContacts.count
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let key = keys[section]
         return sortedContacts[key]?.count ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let tableLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
-
+        let tableLabel = UILabel(frame: CGRect(x: 30, y: 0, width: 200, height: 50))
         let key = keys[indexPath.section]
         let contacts = sortedContacts[key] ?? []
         let contact = contacts[indexPath.row]
@@ -108,11 +107,18 @@ extension Exersice10ViewController: UITableViewDelegate, UITableViewDataSource, 
         cell.addSubview(tableLabel)
         return cell
     }
-
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return keys
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return keys[section]
     }
-
+    
+    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return index
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {}
-
 }

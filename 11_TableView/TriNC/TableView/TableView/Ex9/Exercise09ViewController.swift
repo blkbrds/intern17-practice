@@ -15,7 +15,6 @@ final class Exercise09ViewController: UIViewController {
     // MARK: - Properties
     var names: [[String]] = []
     var teamsIndex: [String] = []
-    var teams: [String] = ["iOS", "Fluter", "Reacnative"]
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -36,10 +35,10 @@ final class Exercise09ViewController: UIViewController {
     }
     
     private func setupData() {
-        loadData()
+        loadDataPlist()
     }
     
-    func loadData() {
+    func loadDataPlist() {
         guard let path = Bundle.main.url(forResource: "Names", withExtension: "plist") else { return }
         guard let namesData = NSArray(contentsOf: path) as? [[String]] else { return }
         names = namesData
@@ -79,10 +78,15 @@ extension Exercise09ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return teams[section]
+        switch section {
+        case 0: return "iOS"
+        case 1: return "Fluter"
+        default: return "ReactNative"
+        }
     }
 }
 
+// MARK: - Implement Protocol
 extension Exercise09ViewController: Ex9CellDelegate {
     func viewCell(_ viewCell: Ex9Cell, needsPerform action: Ex9Cell.Action) {
         switch action {
