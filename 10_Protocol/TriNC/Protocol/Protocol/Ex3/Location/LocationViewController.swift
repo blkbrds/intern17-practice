@@ -51,6 +51,6 @@ final class LocationViewController: UIViewController {
     @objc private func editButtonAction() {
         let vc = RegionViewController()
         vc.location = location
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

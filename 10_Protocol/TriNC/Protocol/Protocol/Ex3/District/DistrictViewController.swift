@@ -52,7 +52,7 @@ final class DistrictViewController: UIViewController, LocationDatasource {
     }
     
     // MARK: - IBActions
-    @IBAction func changweColor(_ sender: UIButton) {
+    @IBAction private func changweColor(_ sender: UIButton) {
         changeColer(tag: sender.tag)
         location?.district = sender.tag
     }

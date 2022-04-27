@@ -7,6 +7,11 @@
 
 import UIKit
 
+// MARK: Dummy Data
+struct Config {
+    static let cities: [String] = ["London", "Manchester", "Liverpool", "Madrid", "Paris", "Praha", "Hanoi", "BangKok", "Tokyo", "Seoul", "Cairo", "Hawait", "Roma", "Milan", "NewYork", "California", "Sanfrancisco", "Chicago", "Danang", "Saigon", "Vience", "Berlin", "Bayern"]
+}
+
 final class Ex4ViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -16,7 +21,7 @@ final class Ex4ViewController: UIViewController {
     
     // MARK: - Properties
     var filteredCities: [String] = []
-    var cities: [String] = ["London", "Manchester", "Liverpool", "Madrid", "Paris", "Praha", "Hanoi", "BangKok", "Tokyo", "Seoul", "Cairo", "Hawait", "Roma", "Milan", "NewYork", "California", "Sanfrancisco", "Chicago", "Danang", "Saigon", "Vience", "Berlin", "Bayern"]
+    var cities = Config.cities
     
     // MARK: - Life cycle
     override func viewDidLoad() {

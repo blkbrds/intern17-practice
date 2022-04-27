@@ -78,6 +78,7 @@ final class SelectCalculatorView: UIView {
         xValueLabel.text = ""
         yValueLabel.text = ""
         guard let delegate = delegate else { return }
+        self.isHidden = true
         delegate.view(self, needsPerform: .clearResult(clearValue: ""))
     }
 }

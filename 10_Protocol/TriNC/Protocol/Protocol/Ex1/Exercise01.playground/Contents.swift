@@ -94,7 +94,7 @@ final class CaMap: Ca {
 
 let arrAnimals: [DongVat] = [Bo(), Heo(), HaiCau(), Doi(), CaSau(), Ga(), Vit(), CaChuon(), CaMap()]
 
-enum allAnimals {
+enum Allanimals {
     case bietBay
     case bietBoi
     case bietDi
@@ -182,4 +182,4 @@ enum allAnimals {
     }
 }
 
-allAnimals.bietDi.lietkeDongVat()
+Allanimals.bietDi.lietkeDongVat()
