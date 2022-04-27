@@ -97,23 +97,44 @@ class HomeViewController: UIViewController {
         collectionView.dataSource = self
     }
     
-//    func configNavigationBar() {
-//        title = ""
-//        turn
-//    }
-//
-//    @objc func turnOnStandarMode() {
-//        changeFlo
-//    }
+    func configNavigationBar() {
+        title = "MARVEL"
+        turnOnStandarMode()
+    }
     
-//    func changeFlowLayout(status: Status) {
-//        self.status = status
-//        if let headerViews = self.collectionView.visibleSupplementaryViews(ofKind: UICollectionView.elementKindSectionHeader) as? [TeamHeaderReusableView] {
-//            for headerView in headerViews {
-//                headerView.updat
-//            }
-//        }
-//    }
+    @objc func turnOnStandarMode() {
+        changeFlowLayout(status: .standard)
+        let smallButton = UIBarButtonItem(title: "Small", style: .plain, target: self, action: #selector(turnOnSmallMode))
+        navigationItem.rightBarButtonItem = smallButton
+    }
+
+    @objc func turnOnSmallMode() {
+        changeFlowLayout(status: .small)
+        let standardButton = UIBarButtonItem(title: "Standard", style: .plain, target: self, action: #selector(turnOnStandarMode))
+        navigationItem.rightBarButtonItem = standardButton
+    }
+    
+    func changeFlowLayout(status: Status) {
+        self.status = status
+        if let headerViews = self.collectionView.visibleSupplementaryViews(ofKind: UICollectionView.elementKindSectionHeader) as? [TeamHeaderReusableView] {
+            for headerView in headerViews {
+                headerView.updateHeaderView(status: status)
+            }
+        }
+        if let cells = self.collectionView.visibleCells as? [HomeCell] {
+            for cell in cells {
+                cell.updateCell(status: status)
+                cell.setNeedsLayout()
+            }
+        }
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        flowLayout.itemSize = status.itemSize
+        flowLayout.sectionInset = status.sectionInset
+        flowLayout.headerReferenceSize = status.headerReferenceSize
+        flowLayout.footerReferenceSize = status.footerReferenceSize
+        collectionView.setCollectionViewLayout(flowLayout, animated: true)
+    }
 
 }
 
