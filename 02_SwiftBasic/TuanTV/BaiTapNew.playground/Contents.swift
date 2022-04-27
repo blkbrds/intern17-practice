@@ -2,99 +2,96 @@ import UIKit
 
 // MARK: - Bai Tap 1
 
-func dienTichVaTheTichHinhCau(_ R: Double) -> (S: Double, V: Double) {
-    let Pi = 3.14
-    let R2 = R * R
-    let R3 = R * R * R
-    var DienTich = 0.0
-    var TheTich = 0.0
-    TheTich = 4/3 * Pi * R3
-    DienTich = 4 * Pi * R2
-    return (S: DienTich, V: TheTich)
+func dienTichVaTheTichHinhCau(_ r: Double) -> (s: Double, v: Double) {
+    let pi = 3.14
+    let r2 = r * r
+    let r3 = r * r * r
+    var dienTich = 0.0
+    var theTich = 0.0
+    theTich = 4/3 * pi * r3
+    dienTich = 4 * pi * r2
+    return (s: dienTich, v: theTich)
 }
 var q = dienTichVaTheTichHinhCau(2)
-print("the tich = \(q.S)")
-print("dien tich = \(q.V)")
-
-var calc = { (R: Double) -> (S: Double, V: Double) in
-    let Pi = 3.14
-    let R2 = R * R
-    let R3 = R * R * R
-    var DienTich = 0.0
-    var TheTich = 0.0
-    TheTich = 4/3 * Pi * R3
-    DienTich = 4 * Pi * R2
-    return (S: DienTich, V: TheTich)
+print("the tich = \(q.s)")
+print("dien tich = \(q.v)")
+var calc = { (r: Double) -> (s: Double, v: Double) in
+    let pi = 3.14
+    let r2 = r * r
+    let r3 = r * r * r
+    var dienTich = 0.0
+    var theTich = 0.0
+    theTich = 4/3 * pi * r3
+    dienTich = 4 * pi * r2
+    return (s: dienTich, v: theTich)
 }
 var b = calc(4)
 // MARK: - Bai Tap 2
 
-
 enum NghiemPTB22 {
-    case vonghiem
-    case vosonghiem
-    case motnghiemtuyentinh(Float)
-    case motnghiemkep(Float)
-    case hainghiem(Float, Float)
+    case voNghiem
+    case voSoNghiem
+    case motNghiemTuyenTinh(Float)
+    case motNghiemKep(Float)
+    case haiNghiem(Float, Float)
 }
 
 func giaiPTB2(a: Float, b: Float, c: Float) -> NghiemPTB22 {
     var delta: Float = 0
-    var nghiem = NghiemPTB22.vonghiem
+    var nghiem = NghiemPTB22.voNghiem
     if a == 0 {
         if b == 0 {
             if c == 0 {
-                nghiem = NghiemPTB22.vosonghiem
+                nghiem = NghiemPTB22.voSoNghiem
             } else {
                 // c != 0
-                nghiem = NghiemPTB22.vonghiem
+                nghiem = NghiemPTB22.voNghiem
             }
         } else {
             // b != 0
-            nghiem = NghiemPTB22.motnghiemtuyentinh(-c / a)
+            nghiem = NghiemPTB22.motNghiemTuyenTinh(-c / a)
         }
-    }else {
+    } else {
         // a != 0
         delta = b * b - 4 * a * c
         if delta < 0 {
-            nghiem = NghiemPTB22.vonghiem
+            nghiem = NghiemPTB22.voNghiem
         } else if delta == 0 {
-            nghiem = NghiemPTB22.motnghiemkep(-b / (2 * a))
+            nghiem = NghiemPTB22.motNghiemKep(-b / (2 * a))
         } else {
             // delta > 0
-            nghiem = NghiemPTB22.hainghiem((-b + sqrt(delta)) / (2 * a), (-b - sqrt(delta)) / (2 * a))
+            nghiem = NghiemPTB22.haiNghiem((-b + sqrt(delta)) / (2 * a), (-b - sqrt(delta)) / (2 * a))
         }
     }
     return nghiem
 }
 var h = giaiPTB2(a: 1, b: -3, c: 2)
 func testPTB2() {
-    let thamsoA: [Float] = [-3,-2,-1,0,1,2,3]
-    let thamsoB: [Float] = [-3,-2,-1,0,1,2,3]
-    let thamsoC: [Float] = [-3,-2,-1,0,1,2,3]
+    let thamsoA: [Float] = [-3, -2, -1, 0, 1, 2, 3]
+    let thamsoB: [Float] = [-3, -2, -1, 0, 1, 2, 3]
+    let thamsoC: [Float] = [-3, -2, -1, 0, 1, 2, 3]
     for a in thamsoA {
         for b in thamsoB {
             for c in thamsoC {
                 //MARK: -FIX ME
                 let nghiem = giaiPTB2(a: a, b: b, c: c)
                 switch nghiem {
-                case .vonghiem:
+                case .voNghiem:
                     print("phuong trinh vo nghiem")
-                case .motnghiemtuyentinh(let x):
+                case .motNghiemTuyenTinh(let x):
                     print("phuong trinh co nghiem tuyen tinh =",x)
-                case .hainghiem(let x1, let x2):
+                case .haiNghiem(let x1, let x2):
                     print("phuong trinh co 2 nghiem x1 = \(x1), x2 = \(x2)")
-                case .motnghiemkep(let x):
+                case .motNghiemKep(let x):
                     print("phuong trinh co nghiem kep x = ", x)
-                case .vosonghiem:
+                case .voSoNghiem:
                     print("phuong trinh co vo so nghiem")
+                }
             }
         }
     }
 }
-}
 testPTB2()
-
 // MARK: - GIAI HE PHUONG TRINH
 class PhuongTrinhBac1 {
     var a: Float
@@ -107,45 +104,43 @@ class PhuongTrinhBac1 {
     }
 }
 enum NghiemHPTB1 {
-    case VoNghiem
-    case VoSoNghiem
-    case MotNghiem(Float, Float)
+    case voNghiem
+    case voSoNghiem
+    case motNghiem(Float, Float)
 }
 func giaiHePhuongTrinh(thamsoPT1: PhuongTrinhBac1, thamsoPT2: PhuongTrinhBac1) -> NghiemHPTB1{
-    var nghiem = NghiemHPTB1.VoNghiem
+    var nghiem = NghiemHPTB1.voNghiem
     if -thamsoPT1.a / thamsoPT1.b == -thamsoPT2.a / thamsoPT2.b, thamsoPT1.c / thamsoPT1.b == thamsoPT2.c / thamsoPT2.b {
         // 2 dt trung nhau
-        nghiem = NghiemHPTB1.VoSoNghiem
+        nghiem = NghiemHPTB1.voSoNghiem
     } else if -thamsoPT1.a / thamsoPT1.b == -thamsoPT2.a / thamsoPT2.b, thamsoPT1.c / thamsoPT1.b != thamsoPT2.c / thamsoPT2.b {
         // 2 dt song song
-        nghiem = NghiemHPTB1.VoNghiem
+        nghiem = NghiemHPTB1.voNghiem
     } else {
         var x: Float = 0
         var y: Float = 0
         x = (thamsoPT1.c - thamsoPT1.b * y) / thamsoPT1.a
         y = (thamsoPT2.c - thamsoPT2.a * x) / thamsoPT2.b
         x = (thamsoPT1.c - thamsoPT1.b * y) / thamsoPT1.a
-        nghiem = NghiemHPTB1.MotNghiem(x, y)
+        nghiem = NghiemHPTB1.motNghiem(x, y)
     }
     return nghiem
 }
-
 func testHPTB1(){
     let thamsoPT1 = PhuongTrinhBac1.init(a: 1, b: 2, c: 4)
     let thamsoPt2 = PhuongTrinhBac1.init(a: 3, b: 5, c: 9)
     let result: NghiemHPTB1 = giaiHePhuongTrinh(thamsoPT1: thamsoPT1, thamsoPT2: thamsoPt2)
     switch result {
-    case .VoNghiem:
+    case .voNghiem:
         print("he pt vo nghiem" )
-    case .VoSoNghiem:
+    case .voSoNghiem:
         print("he phuong trinh vo so nghiem")
-    case .MotNghiem(let x, let y):
+    case .motNghiem(let x, let y):
         print("he phuong trinh co nghiem x = \(x), y = \(y)")
     }
 }
 // MARK: -BAI TAP 4
 // TONG SO 100 SO FIBONACI DAU TIEN
-
 func fibonaci(index: Int) -> Int {
     var a = 1, b = 0
     var temp = 0
@@ -158,22 +153,17 @@ func fibonaci(index: Int) -> Int {
     }
     return b
 }
-
 func tinhTongFibonaci(num: Int) -> Int{
     var i = 0
-    var S = 0
+    var s = 0
     while i < num {
-        S = S + fibonaci(index: i)
+        s = s + fibonaci(index: i)
         i += 1
     }
-    return S
+    return s
 }
-//print("tong la", tinhTongFibonaci(num: 5))
-//print("fibonaci", fibonaci(index: 0))
- 
 //MARK: -BT4 - Liet ke Fibonacy
 // Liet ke 100 so FIBINACI dau tien
-
 func lietkeFibonaci(num: Int) {
     var i = 0
     while i < num {
@@ -181,11 +171,8 @@ func lietkeFibonaci(num: Int) {
         i += 1
     }
 }
- 
 lietkeFibonaci(num: 5)
- 
 //MARK: -BT4 - Tinh sin cos chuoi Taylor
-
 func hesoSinXTaylor(num: Int) -> Float {
     var result: Float = 0
     var m: Float = Float(num)
@@ -230,9 +217,7 @@ func tinhCosxTaylor(x: Float, num: Int) -> Float {
 }
 print(1020/100)
 tinhCosxTaylor(x: 1.57, num: 4)
-
 //MARK: -Liet ke so hanh phuc < 10000
-
 func tinhLuyThuaSoInt(num: Int, mu: Int) -> Int {
     var a = 1
     var result = 1
@@ -279,7 +264,6 @@ func checkSoHanhPhuc(num: Int) -> Int{
         result = -1
     }
     return result
-    
 }
 checkSoHanhPhuc(num: 11)
 func lietKeSoHanhPhuc(behon num: Int) {
@@ -293,11 +277,10 @@ func lietKeSoHanhPhuc(behon num: Int) {
     }
 }
 lietKeSoHanhPhuc(behon: 10000)
-
 //MARK: -BT5
 func demSoLuongChuoiConTrongChuoiMe(chuoiMe: String) -> Int {
-    var chuoiMe = chuoiMe
-    var arrChuoiCon = chuoiMe.components(separatedBy: "ab")
+    let chuoiMe = chuoiMe
+    let arrChuoiCon = chuoiMe.components(separatedBy: "ab")
     return arrChuoiCon.count - 1
 }
 //MARK: -BT6
@@ -316,6 +299,3 @@ func replaceElement(arr: [Int],elementToReplace: Int, substitutionReplace: Int )
     })
 }
 replaceElement(arr: [1,2,1], elementToReplace: 1, substitutionReplace: 3)
-
-
-
