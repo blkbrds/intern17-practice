@@ -234,6 +234,40 @@ final class Date {
         self.year = year
     }
     
+    func daysIn(month: Int) -> Int {
+        switch month {
+        case 1, 3, 5, 7, 8, 10, 12:
+            return 31
+        case 4, 6, 9, 11:
+            return 30
+        case 2:
+            return 28
+        default:
+            print("Month is not correct, please type again")
+            return 0
+        }
+    }
+    
+    func normalize() -> Date {
+        if date > 0, date <= daysIn(month: month), month > 0, month <= 12, year > 0, year == 1 {
+            return Date(date: date, month: month, year: year)
+        } else {
+            print("Date is not correct, please retype your date")
+            return Date(date: 0, month: 0, year: 0)
+        }
+    }
+    
+    func advance(date: Date) -> Date {
+        let date = date.normalize()
+        if date.date != 0 {
+            self.date = self.date + date.date
+            self.month = self.month + date.month
+            self.year = self.year + date.year
+            let tempDate = Date(date: self.date, month: self.month, year: self.year).normalize()
+            return tempDate
+        }
+        return Date(date: 0, month: 0, year: 0)
+    }
 }
 
 //MARK: -BAI TAP 9
@@ -242,6 +276,7 @@ final class Mang1c<Element: Comparable> {
     func printArr() {
         arr.forEach { print($0) }
     }
+    
     func findMinMax() -> (min: Element?, max: Element?) {
         return (min: arr.min(), max: arr.max())
     }
