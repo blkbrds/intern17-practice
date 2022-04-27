@@ -62,34 +62,45 @@ struct Youtube {
         }
     }
 
-//    static func loadAPI(with id: String, completion: @escaping Completion<Videos?>) {
-//        let urlString = APIPath.Videos.init(videoId: id).video
-//        api.request(method: .get, urlString: urlString) { result in
-//            DispatchQueue.main.async {
-//                switch result {
-//                case .success(let value):
-//                    guard let dataJSON = value as? JSObject else { return }
-//                    let video = Mapper<Videos>().map(JSON: dataJSON)
-//                    completion(.success(video))
-//                case .failure(let error):
-//                    completion(.failure(error))
-//                }
-//            }
-//        }
-//    }
-
-    // Download image with url
-    static func downloadImage(with url: String, completion: @escaping Completion<UIImage?>) {
-        api.request(method: .get, urlString: url) { result in
+    // Load relate videos by videoId
+    static func loadRelateAPI(with id: String, completion: @escaping Completion<Videos?>) {
+        let urlString = APIPath.Videos().loadRelateVideos(with: id)
+        api.request(method: .get, urlString: urlString) { result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let imageData):
-                    guard let data = imageData as? Data else { return }
-                    completion(.success(UIImage(data: data)))
+                case .success(let data):
+                    guard let dataJSON = data as? JSObject else { return }
+                    guard var videos = Mapper<Videos>().map(JSON: dataJSON) else { return }
+                    let snippets = Youtube().checkEmptySnippet(snippets: videos.items)
+                    videos.items = snippets
+                    completion(.success(videos))
                 case .failure(let error):
                     completion(.failure(error))
                 }
             }
+        }
+    }
+
+    // Load more videos in scope
+    static func loadMore(with nextToken: String, completion: @escaping Completion<Videos?>) {
+        let urlString = APIPath.Videos().loadMoreVideos(with: nextToken)
+        api.request(method: .get, urlString: urlString) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let value):
+                    guard let dataJSON = value as? JSObject else { return }
+                    let video = Mapper<Videos>().map(JSON: dataJSON)
+                    completion(.success(video))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
+    private func checkEmptySnippet(snippets: [Snippet]) -> [Snippet] {
+        snippets.filter {
+            $0.id != nil && $0.publishedAt != nil
         }
     }
 }

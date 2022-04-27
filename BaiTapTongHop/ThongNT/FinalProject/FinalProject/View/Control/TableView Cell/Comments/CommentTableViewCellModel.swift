@@ -21,4 +21,10 @@ final class CommentTableViewCellModel {
         guard let comment = comments[index].comment else { return "" }
         return comment
     }
+
+    func getAuthorImageURL(with index: Int) -> String {
+        guard index >= 0, index < comments.count else { return "" }
+        guard let imageURL = comments[index].authorImgeURL else { return "" }
+        return imageURL
+    }
 }

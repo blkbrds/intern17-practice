@@ -9,17 +9,15 @@
 import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
+import NVActivityIndicatorView
 
 class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
 
-    // If modifying these scopes, delete your previously saved credentials by
-    // resetting the iOS simulator or uninstall the app.
     private let scopes = [kGTLRAuthScopeYouTubeReadonly,
                           kGTLRAuthScopeYouTubeForceSsl]
 
     private let service = GTLRYouTubeService()
     let signInButton = GIDSignInButton()
-    let output = UITextView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +28,15 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
         GIDSignIn.sharedInstance().signInSilently()
 
         // Add the sign-in button.
-        signInButton.frame.origin = CGPoint(x: view.bounds.minX, y: view.bounds.midY)
         view.addSubview(signInButton)
+        signInButton.center = UIScreen.main.bounds.mid
 
-        // Add a UITextView to display output.
-        output.frame = view.bounds
-        output.isEditable = false
-        output.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
-        output.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        output.isHidden = true
-        view.addSubview(output)
+        // Add hud when loading API
+        var hudFrame = CGRect(origin: .zero, size: CGSize(width: 50, height: 50))
+        let hud = NVActivityIndicatorView(frame: hudFrame, type: .ballBeat, color: .green, padding: 0)
+        hud.center = UIScreen.main.bounds.mid
+        view.addSubview(hud)
+        hud.startAnimating()
     }
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
@@ -49,9 +46,6 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
             self.service.authorizer = nil
         } else {
             self.signInButton.isHidden = true
-            self.output.isHidden = false
-            self.service.authorizer = user.authentication.fetcherAuthorizer()
-            //            fetchChannelResource()
             guard GIDSignIn.sharedInstance().currentUser != nil,
                   let accessToken = GIDSignIn.sharedInstance().currentUser.authentication.accessToken else {
                 return
@@ -61,8 +55,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
         }
     }
 
-    // Helper for showing an alert
-    func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String) {
         let alert = UIAlertController(
             title: title,
             message: message,

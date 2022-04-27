@@ -12,11 +12,15 @@ import ObjectMapper
 struct Videos: Mappable {
 
     var items: [Snippet] = []
+    var nextPageToken: String?
+    var prevPageToken: String?
 
     init?(map: Map) { }
 
     mutating func mapping(map: Map) {
         items <- map["items"]
+        nextPageToken <- map["nextPageToken"]
+        prevPageToken <- map["prevPageToken"]
     }
 }
 
@@ -34,12 +38,15 @@ struct Snippet: Mappable {
 
     mutating func mapping(map: Map) {
         id <- map["id"]
-        title <- map["snippet.localized.title"]
+        if id == nil {
+            id <- map["id.videoId"]
+        }
+        title <- map["snippet.title"]
         publishedAt <- map["snippet.publishedAt"]
         channelId <- map["snippet.channelId"]
         channelTitle <- map["snippet.channelTitle"]
         description <- map["snippet.localized.description"]
-        imageString <- map["snippet.thumbnails.standard.url"]
+        imageString <- map["snippet.thumbnails.medium.url"]
     }
 }
 
@@ -87,8 +94,8 @@ struct CommentSnippet: Mappable {
     init?(map: Map) { }
 
     mutating func mapping(map: Map) {
-        comment <- map["snippet.snippet.textOriginal"]
-        authorName <- map["snippet.snippet.authorDisplayName"]
-        authorImgeURL <- map["snippet.snippet.authorProfileImageUrl"]
+        comment <- map["snippet.topLevelComment.snippet.textOriginal"]
+        authorName <- map["snippet.topLevelComment.snippet.authorDisplayName"]
+        authorImgeURL <- map["snippet.topLevelComment.snippet.authorProfileImageUrl"]
     }
 }

@@ -11,6 +11,7 @@ import SDWebImage
 
 final class ChannelTableViewCell: UITableViewCell {
 
+    // MARK: - IBOulet private properties
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var channelImageView: UIImageView!
 
@@ -23,6 +24,13 @@ final class ChannelTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
+    }
+
+    // MARK: - Private functions
+    private func setupUI() {
+        channelImageView.clipsToBounds = true
+        channelImageView.layer.cornerRadius = 18
     }
 
     private func updateUI() {

@@ -19,17 +19,14 @@ final class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
         configTableView()
-        loadApi()
-        loadCommentApi()
-        loadVideoApi()
         setupUI()
     }
 
     // MARK: - Private functions
     private func setupUI() {
         title = "Details"
-        getVideo()
         videoView.clipsToBounds = true
         videoView.layer.cornerRadius = 5
     }
@@ -39,14 +36,23 @@ final class DetailViewController: UIViewController {
         tableView.register(ChannelTableViewCell.self)
         tableView.register(CommentsTableViewCell.self)
         tableView.register(ThumbnailTableViewCell.self)
+        tableView.backgroundColor = .clear
         tableView.delegate = self
         tableView.dataSource = self
     }
 
+    // Prepare data for view
+    private func loadData() {
+        getVideo()
+        loadApi()
+        loadCommentApi()
+        loadVideoApi()
+    }
+
     private func loadApi() {
         viewModel?.loadChannelApi(completion: { error in
-            if error != nil {
-                // Show elert
+            if let error = error?.localizedDescription {
+                self.showAlert(title: "Channel Warning", message: error)
             } else {
                 self.tableView.reloadData()
             }
@@ -55,8 +61,8 @@ final class DetailViewController: UIViewController {
 
     private func loadCommentApi() {
         viewModel?.loadCommentsApi(completion: { error in
-            if error != nil {
-                // Show Alert
+            if let error = error?.localizedDescription {
+                self.showAlert(title: "Comments Warning", message: error)
             } else {
                 self.tableView.reloadData()
             }
@@ -65,21 +71,46 @@ final class DetailViewController: UIViewController {
 
     private func loadVideoApi() {
         viewModel?.api(completion: { error in
-            if error != nil {
-                // show alert
+            if let error = error?.localizedDescription {
+                self.showAlert(title: "Video Warning", message: error)
             } else {
                 self.tableView.reloadData()
             }
         })
     }
 
+    private func loadMore() {
+        viewModel?.loadMore { error in
+            if let error = error?.localizedDescription {
+                self.showAlert(title: "Load More Warning", message: error)
+            } else {
+                self.tableView.reloadData()
+            }
+        }
+    }
+
     private func getVideo() {
         guard let videoId = viewModel?.getVideoId() else { return }
         videoView.load(withVideoId: videoId)
     }
+
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: UIAlertController.Style.alert
+        )
+        let ok = UIAlertAction(
+            title: "OK",
+            style: UIAlertAction.Style.default,
+            handler: nil
+        )
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
-// MARK: - Extension delegate and dataSource of tableview
+// MARK: - Extension dataSource of tableview
 extension DetailViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -128,9 +159,11 @@ extension DetailViewController: UITableViewDataSource {
             default: break
             }
         case 1:
+            // List of videos
             guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "ThumbnailTableViewCell", for: indexPath) as? ThumbnailTableViewCell else { return UITableViewCell() }
             videoCell.selectionStyle = .none
             let snippet = viewModel?.getSnippet(with: indexPath.row)
+            print("snippet: ", snippet)
             videoCell.viewModel = ThumbnailTableViewCellModel(snippet: snippet)
             return videoCell
         default: break
@@ -138,11 +171,35 @@ extension DetailViewController: UITableViewDataSource {
         return UITableViewCell()
     }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = .clear
+        return headerView
     }
 }
 
+// MARK:  - Extension delegate of Tableview
 extension DetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        if indexPath.row == (viewModel.getVideosCount() - 1) {
+//            loadMore()
+        }
+    }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            let snippet = viewModel?.getSnippet(with: indexPath.row)
+            viewModel = DetailViewControllerModel(snippet: snippet)
+            loadData()
+        }
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }

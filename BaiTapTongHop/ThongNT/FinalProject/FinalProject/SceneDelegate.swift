@@ -45,23 +45,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                                                  annotation: annotation)
     }
 
+    // Set root view of application when login
     func setRootView(with status: UserStatus) {
         switch status {
         case .logined:
-            configTabbar()
-            window?.rootViewController = tabbarViewController
+            let homeVC = HomeViewController()
+            let homeNavi = UINavigationController(rootViewController: homeVC)
+            window?.rootViewController = homeNavi
         case .logout:
             window?.rootViewController = LoginViewController()
         }
-    }
-
-    func configTabbar() {
-        let homeVC = HomeViewController()
-        let homeNavi = UINavigationController(rootViewController: homeVC)
-        homeNavi.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "play"), tag: 0)
-
-        let viewControllers = [homeNavi]
-        tabbarViewController.setViewControllers(viewControllers, animated: true)
-        tabbarViewController.tabBar.isTranslucent = false
     }
 }

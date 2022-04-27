@@ -81,10 +81,11 @@ final class DetailViewControllerModel {
     }
 
     func api(completion: @escaping (Error?) -> Void) {
-        Youtube.loadAPI { [weak self] result in
+        print("videoID: ", getVideoId())
+        Youtube.loadRelateAPI(with: getVideoId()) { result in
             switch result {
             case .success(let data):
-                self?.videos = data
+                self.videos = data
                 completion(nil)
             case .failure(let error):
                 completion(error)
@@ -101,5 +102,20 @@ final class DetailViewControllerModel {
         guard let videos = videos else { return nil }
         guard index >= 0, index < videos.items.count else { return nil }
         return videos.items[index]
+    }
+
+    func loadMore(completion: @escaping (Error?) -> Void) {
+        guard let nextToken = videos?.nextPageToken else { return }
+        Youtube.loadMore(with: nextToken) { [weak self] result in
+            switch result {
+            case .success(let newVideos):
+                guard let newVideos = newVideos else { return }
+                self?.videos?.items.append(contentsOf: newVideos.items)
+                self?.videos?.nextPageToken = newVideos.nextPageToken
+                completion(nil)
+            case .failure(let error):
+                completion(error)
+            }
+        }
     }
 }

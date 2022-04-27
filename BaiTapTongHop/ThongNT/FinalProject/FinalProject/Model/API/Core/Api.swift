@@ -14,6 +14,7 @@ typealias APIPath = Api.Path
 final class Api {
 
     struct Path {
+        static let maxResults: Int = 10
         static let apiKey: String = "AIzaSyCkEdbynPk3x78egrkR7B5sBg2AGr9kaEU"
         static let baseURL = "https://youtube.googleapis.com/youtube/v3"
     }
@@ -21,24 +22,23 @@ final class Api {
 
 extension Api.Path {
 
-    // API to get videos most popular
+    // API to get videos and relation
     struct Videos {
 
-//        let videoIds: [String]
-
-        // Get videos by region with maximum results
+        // Get videos by region and most popular with maximum results
         var videos: String {
-            return baseURL / "videos?part=snippet&chart=mostPopular&maxResults=2&regionCode=VN&key=\(apiKey)"
+            return baseURL / "videos?part=snippet&chart=mostPopular&maxResults=\(maxResults)&regionCode=VN&key=\(apiKey)"
         }
 
-//        // Get video by list of id
-//        var video: String {
-//            var stringOfIds: String = ""
-//            videoIds.forEach {
-//                stringOfIds.append("id=\($0)&")
-//            }
-//            return baseURL / "videos?part=id&part=snippet&id=\(stringOfIds)key=\(apiKey)"
-//        }
+        // Load more video with nextPageToken
+        func loadMoreVideos(with nextToken: String) -> String {
+            return baseURL / "videos?part=id&part=snippet&chart=mostPopular&maxResults=\(maxResults)&pageToken=\(nextToken)&key=\(apiKey)"
+        }
+
+        // Load relate video with video Id
+        func loadRelateVideos(with videoId: String) -> String {
+            return baseURL / "search?part=snippet&maxResults=\(maxResults)&relatedToVideoId=\(videoId)&type=video&key=\(apiKey)"
+        }
     }
 
     // API get info of channel with id channel

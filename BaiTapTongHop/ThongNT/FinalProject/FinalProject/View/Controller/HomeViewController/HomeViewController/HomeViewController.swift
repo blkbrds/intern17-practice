@@ -18,12 +18,14 @@ final class HomeViewController: ViewController {
     // MARK: - IBOutlet private variables
     @IBOutlet private weak var tableView: UITableView!
 
-    let viewModel = HomViewModel()
+    var viewModel = HomViewModel()
+    let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         configTableView()
+        configRefreshControl()
     }
 
     // MARK: - Private functions
@@ -32,35 +34,81 @@ final class HomeViewController: ViewController {
         loadAPI()
     }
 
-    func loadAPI() {
-        viewModel.api { [weak self] error in
-            if let _ = error {
-                // TODO: - Show alert
-            } else {
-                self?.tableView.reloadData()
-            }
-        }
-    }
-
     private func configTableView() {
         tableView.register(ThumbnailTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        tableView.addSubview(refreshControl)
+    }
+
+    private func configRefreshControl() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing")
+        refreshControl.tintColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+    }
+
+    @objc private func refreshTableView() {
+        loadAPI()
+    }
+
+    private func loadAPI() {
+        viewModel.api { [weak self] error in
+            if let error = error?.localizedDescription {
+                self?.showAlert(title: "Load Videos Warning", message: error)
+            } else {
+                self?.refreshControl.endRefreshing()
+                self?.tableView.reloadData()
+            }
+        }
+    }
+
+    private func loadMore() {
+        viewModel.loadMore { error in
+            if let error = error?.localizedDescription {
+                self.showAlert(title: "Load More Warning", message: error)
+            } else {
+                self.tableView.reloadData()
+            }
+        }
+    }
+
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: UIAlertController.Style.alert
+        )
+        let ok = UIAlertAction(
+            title: "OK",
+            style: UIAlertAction.Style.default,
+            handler: nil
+        )
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
 }
 
-// MARK: - Extension datasource and delegate of UITableView
+// MARK: - Extension delegate of UITableView
 extension HomeViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailViewController()
         let snippet = viewModel.getSnippet(with: indexPath.row)
         detailVC.viewModel = DetailViewControllerModel(snippet: snippet)
         navigationController?.present(detailVC, animated: true, completion: nil)
     }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (viewModel.getVideosCount() - 1) {
+            loadMore()
+        }
+    }
 }
 
+// MARK: - Extension datasource of UITableView
 extension HomeViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = viewModel.video?.items.count else { return 0 }
         return count
