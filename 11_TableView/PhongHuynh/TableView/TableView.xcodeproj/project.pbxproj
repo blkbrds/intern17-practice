@@ -14,6 +14,8 @@
 		CB4DC48A2817C055007754E2 /* Bai11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4DC4882817C055007754E2 /* Bai11ViewController.xib */; };
 		CB4DC48F2817C132007754E2 /* Bai11TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC48D2817C132007754E2 /* Bai11TableViewCell.swift */; };
 		CB4DC4902817C132007754E2 /* Bai11TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4DC48E2817C132007754E2 /* Bai11TableViewCell.xib */; };
+		CB8B39A72818CEA100DE2E0B /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B39A52818CEA100DE2E0B /* SearchBarViewController.swift */; };
+		CB8B39A82818CEA100DE2E0B /* SearchBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8B39A62818CEA100DE2E0B /* SearchBarViewController.xib */; };
 		CBA25FE62817975A004F600C /* Bai12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA25FE42817975A004F600C /* Bai12ViewController.swift */; };
 		CBA25FE72817975A004F600C /* Bai12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA25FE52817975A004F600C /* Bai12ViewController.xib */; };
 		CBA5257D2816712D00BE0232 /* Bai03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5257B2816712D00BE0232 /* Bai03ViewController.swift */; };
@@ -60,6 +62,8 @@
 		CB4DC4882817C055007754E2 /* Bai11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai11ViewController.xib; sourceTree = "<group>"; };
 		CB4DC48D2817C132007754E2 /* Bai11TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai11TableViewCell.swift; sourceTree = "<group>"; };
 		CB4DC48E2817C132007754E2 /* Bai11TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai11TableViewCell.xib; sourceTree = "<group>"; };
+		CB8B39A52818CEA100DE2E0B /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		CB8B39A62818CEA100DE2E0B /* SearchBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarViewController.xib; sourceTree = "<group>"; };
 		CBA25FE42817975A004F600C /* Bai12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai12ViewController.swift; sourceTree = "<group>"; };
 		CBA25FE52817975A004F600C /* Bai12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai12ViewController.xib; sourceTree = "<group>"; };
 		CBA5257B2816712D00BE0232 /* Bai03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai03ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		CB3E418E2812885600482356 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				CB8B39A42818CE8A00DE2E0B /* Bai12 */,
 				CBB9EBFC281633BC00ED191A /* Bai1 */,
 				CBB9EC032816363D00ED191A /* Bai2 */,
 				CBA5257A281670F700BE0232 /* Bai3 */,
@@ -155,6 +160,15 @@
 				CB4DC48E2817C132007754E2 /* Bai11TableViewCell.xib */,
 			);
 			path = Bai11;
+			sourceTree = "<group>";
+		};
+		CB8B39A42818CE8A00DE2E0B /* Bai12 */ = {
+			isa = PBXGroup;
+			children = (
+				CB8B39A52818CEA100DE2E0B /* SearchBarViewController.swift */,
+				CB8B39A62818CEA100DE2E0B /* SearchBarViewController.xib */,
+			);
+			path = Bai12;
 			sourceTree = "<group>";
 		};
 		CBA25FE328179731004F600C /* 12 */ = {
@@ -337,6 +351,7 @@
 				CBCC2CFA28178173002FE59D /* Bai10ViewController.xib in Resources */,
 				CBB9EC0A2816367E00ED191A /* NameData.plist in Resources */,
 				CBB9EBF028162C0200ED191A /* Contacts.plist in Resources */,
+				CB8B39A82818CEA100DE2E0B /* SearchBarViewController.xib in Resources */,
 				CBA5258E281677E800BE0232 /* Bai05DetailViewController.xib in Resources */,
 				CBB9EC23281648EA00ED191A /* Bai04ViewController.xib in Resources */,
 				CBB9EBFA2816325A00ED191A /* ContactDetailViewController.xib in Resources */,
@@ -363,6 +378,7 @@
 				CB3E41902812885600482356 /* AppDelegate.swift in Sources */,
 				CBB9EC062816365300ED191A /* Bai02ViewController.swift in Sources */,
 				CBA5257D2816712D00BE0232 /* Bai03ViewController.swift in Sources */,
+				CB8B39A72818CEA100DE2E0B /* SearchBarViewController.swift in Sources */,
 				CB3E41922812885600482356 /* SceneDelegate.swift in Sources */,
 				CB4DC4892817C055007754E2 /* Bai11ViewController.swift in Sources */,
 				CBB9EC1328163AF000ED191A /* Bai05ViewController.swift in Sources */,

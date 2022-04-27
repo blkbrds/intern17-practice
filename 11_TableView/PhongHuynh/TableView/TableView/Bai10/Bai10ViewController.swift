@@ -11,6 +11,7 @@ final class Bai10ViewController: UIViewController {
     var arrayTong: [String] = []
     var arraySection: [String] = []
     var arrayDictionary: [String: [String]] = [:]
+    var contacts: [String] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -22,16 +23,17 @@ final class Bai10ViewController: UIViewController {
         searchBar.delegate = self
         contact()
         loadData()
+        configSearchBar()
     }
     
     func loadData() {
-        for car in arrayTong {
-            let carKey = String(car.prefix(1))
-            if var carValues = arrayDictionary[carKey] {
-                carValues.append(car)
-                arrayDictionary[carKey] = carValues
+        for array in arrayTong {
+            let arrayKey = String(array.prefix(1))
+            if var arrayValues = arrayDictionary[arrayKey] {
+                arrayValues.append(array)
+                arrayDictionary[arrayKey] = arrayValues
             } else {
-                arrayDictionary[carKey] = [car]
+                arrayDictionary[arrayKey] = [array]
             }
         }
         arraySection = [String](arrayDictionary.keys)
@@ -63,7 +65,7 @@ final class Bai10ViewController: UIViewController {
                            CNContactImageDataKey as CNKeyDescriptor]
         contacts = try! store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
         for i in contacts {
-            arrayTong.append(i.familyName + i.givenName)
+            arrayTong.append(i.familyName + " " + i.givenName)
         }
     }
     
@@ -72,28 +74,60 @@ final class Bai10ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
     }
+    
+    func configSearchBar() {
+        searchBar.delegate = self
+        contacts = arrayTong
+    }
+    
+    func search(keyword: String) {
+        contacts = getContacts(keyword: keyword)
+        tableView.reloadData()
+    }
+    
+    func getContacts(keyword: String) -> [String] {
+        if keyword.trimmingCharacters(in: CharacterSet(charactersIn: " ")) == "" {
+            return arrayTong
+        } else {
+            var data: [String] = []
+            for contact in arrayTong {
+                if let _ = contact.range(of: keyword) {
+                    data.append(contact)
+                }
+            }
+        return data
+        }
+        
+    }
 }
 
-extension Bai10ViewController: UITableViewDataSource, UISearchBarDelegate {
+extension Bai10ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return arraySection.count
+      //  return arraySection.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let carKey = arraySection[section]
-        if let carValues = arrayDictionary[carKey] {
-            return carValues.count
-        }
-        return 0
+//        let arrayKey = arraySection[section]
+//        if let arrayValues = arrayDictionary[arrayKey] {
+//            return arrayValues.count
+//        }
+//        return 0
+        
+        return contacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+//        let arrayKey = arraySection[indexPath.section]
+//        if let arrayValues = arrayDictionary[arrayKey] {
+//            cell.textLabel?.text = arrayValues[indexPath.row]
+//        }
+//        return cell
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        let carKey = arraySection[indexPath.section]
-        if let carValues = arrayDictionary[carKey] {
-            cell.textLabel?.text = carValues[indexPath.row]
-        }
+        cell.textLabel?.text = "\(contacts[indexPath.row])"
         return cell
     }
     
@@ -108,13 +142,31 @@ extension Bai10ViewController: UITableViewDataSource, UISearchBarDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return arraySection[section]
     }
+}
+
+extension Bai10ViewController: UISearchBarDelegate {
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-      
-        arrayTong = searchText.isEmpty ? arrayTong : arrayTong.filter({(dataString: String) -> Bool in
-            return dataString.range(of: searchText, options: .caseInsensitive) != nil
-        })
-       tableView.reloadData()
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        var currentText = ""
+        if let searchBarText = searchBar.text {
+            currentText = searchBarText
+        }
+        let keyword = (currentText as NSString).replacingCharacters(in: range, with: text)
+        search(keyword: keyword)
+        return true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let keyWord = searchBar.text else {
+            search(keyword: "")
+            return
+        }
+        search(keyword: keyWord)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        search(keyword: "")
     }
 }
 
