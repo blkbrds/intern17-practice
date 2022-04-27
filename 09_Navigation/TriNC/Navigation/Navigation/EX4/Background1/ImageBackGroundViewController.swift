@@ -19,10 +19,8 @@ final class ImageBackGroundViewController: UIViewController {
         appearance.titleTextAttributes = [.font:
         UIFont.boldSystemFont(ofSize: 20.0),
                                       .foregroundColor: UIColor.white]
-
-        // Customizing our navigation bar
+//        // Customizing our navigation bar
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "ic-gradient"), for: .default)
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
