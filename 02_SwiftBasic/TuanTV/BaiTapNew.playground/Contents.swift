@@ -108,28 +108,28 @@ enum NghiemHPTB1 {
     case voSoNghiem
     case motNghiem(Float, Float)
 }
-func giaiHePhuongTrinh(thamsoPT1: PhuongTrinhBac1, thamsoPT2: PhuongTrinhBac1) -> NghiemHPTB1{
+func giaiHePhuongTrinh(thamSoPT1: PhuongTrinhBac1, thamSoPT2: PhuongTrinhBac1) -> NghiemHPTB1{
     var nghiem = NghiemHPTB1.voNghiem
-    if -thamsoPT1.a / thamsoPT1.b == -thamsoPT2.a / thamsoPT2.b, thamsoPT1.c / thamsoPT1.b == thamsoPT2.c / thamsoPT2.b {
+    if -thamSoPT1.a / thamSoPT1.b == -thamSoPT2.a / thamSoPT2.b, thamSoPT1.c / thamSoPT1.b == thamSoPT2.c / thamSoPT2.b {
         // 2 dt trung nhau
         nghiem = NghiemHPTB1.voSoNghiem
-    } else if -thamsoPT1.a / thamsoPT1.b == -thamsoPT2.a / thamsoPT2.b, thamsoPT1.c / thamsoPT1.b != thamsoPT2.c / thamsoPT2.b {
+    } else if -thamSoPT1.a / thamSoPT1.b == -thamSoPT2.a / thamSoPT2.b, thamSoPT1.c / thamSoPT1.b != thamSoPT2.c / thamSoPT2.b {
         // 2 dt song song
         nghiem = NghiemHPTB1.voNghiem
     } else {
         var x: Float = 0
         var y: Float = 0
-        x = (thamsoPT1.c - thamsoPT1.b * y) / thamsoPT1.a
-        y = (thamsoPT2.c - thamsoPT2.a * x) / thamsoPT2.b
-        x = (thamsoPT1.c - thamsoPT1.b * y) / thamsoPT1.a
+        x = (thamSoPT1.c - thamSoPT1.b * y) / thamSoPT1.a
+        y = (thamSoPT2.c - thamSoPT2.a * x) / thamSoPT2.b
+        x = (thamSoPT1.c - thamSoPT1.b * y) / thamSoPT1.a
         nghiem = NghiemHPTB1.motNghiem(x, y)
     }
     return nghiem
 }
 func testHPTB1(){
-    let thamsoPT1 = PhuongTrinhBac1.init(a: 1, b: 2, c: 4)
-    let thamsoPt2 = PhuongTrinhBac1.init(a: 3, b: 5, c: 9)
-    let result: NghiemHPTB1 = giaiHePhuongTrinh(thamsoPT1: thamsoPT1, thamsoPT2: thamsoPt2)
+    let thamSoPT1 = PhuongTrinhBac1.init(a: 1, b: 2, c: 4)
+    let thamSoPt2 = PhuongTrinhBac1.init(a: 3, b: 5, c: 9)
+    let result: NghiemHPTB1 = giaiHePhuongTrinh(thamSoPT1: thamSoPT1, thamSoPT2: thamSoPt2)
     switch result {
     case .voNghiem:
         print("he pt vo nghiem" )
@@ -164,18 +164,18 @@ func tinhTongFibonaci(num: Int) -> Int{
 }
 //MARK: -BT4 - Liet ke Fibonacy
 // Liet ke 100 so FIBINACI dau tien
-func lietkeFibonaci(num: Int) {
+func lietKeFibonaci(num: Int) {
     var i = 0
     while i < num {
         print(fibonaci(index: i))
         i += 1
     }
 }
-lietkeFibonaci(num: 5)
+lietKeFibonaci(num: 5)
 //MARK: -BT4 - Tinh sin cos chuoi Taylor
-func hesoSinXTaylor(num: Int) -> Float {
+func heSoSinxTaylor(num: Int) -> Float {
     var result: Float = 0
-    var m: Float = Float(num)
+    let m: Float = Float(num)
     if m >= 1 {
         result = powf(-1, m - 1) / Float(tinhGiaiThua(num: (2 * Int(m) - 1)))
     } else {
@@ -190,15 +190,15 @@ func tinhSinxTaylor(x: Float, num : Int) -> Float {
     var i: Int = 1
     var calc: Float = 0
     while i <= num {
-        calc = calc + hesoSinXTaylor(num: i) * powf(x, Float(2 * i - 1))
+        calc = calc + heSoSinxTaylor(num: i) * powf(x, Float(2 * i - 1))
         i += 1
     }
     return calc
 }
 //MARK: -BT4 - Tinh cos chuoi Taylor
-func hesoCosxTaylor(num: Int) -> Float {
+func heSoCosxTaylor(num: Int) -> Float {
     var result: Float = 0
-    var m: Float = Float(num)
+    let m: Float = Float(num)
     if m >= 0 {
         result = powf(-1, m) / Float(tinhGiaiThua(num: 2 * Int(m)))
     } else {
@@ -210,7 +210,7 @@ func tinhCosxTaylor(x: Float, num: Int) -> Float {
     var i: Int = 0
     var calc: Float = 0
     while i <= num {
-        calc = calc + hesoCosxTaylor(num: i) * powf(x, Float(2 * i))
+        calc = calc + heSoCosxTaylor(num: i) * powf(x, Float(2 * i))
         i += 1
     }
     return calc
@@ -287,7 +287,7 @@ func demSoLuongChuoiConTrongChuoiMe(chuoiMe: String) -> Int {
 func hienThiNgauNhienMang(arr : [Int]) -> [Int]{
     return arr.shuffled()
 }
-print(hienThiNgauNhienMang(arr: [0,1,2,3,4,5,6,7,8,9]))
+print(hienThiNgauNhienMang(arr: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]))
 //MARK: -BT7
 func replaceElement(arr: [Int],elementToReplace: Int, substitutionReplace: Int ) -> [Int]{
     return arr.map({
@@ -298,4 +298,4 @@ func replaceElement(arr: [Int],elementToReplace: Int, substitutionReplace: Int )
         return value
     })
 }
-replaceElement(arr: [1,2,1], elementToReplace: 1, substitutionReplace: 3)
+replaceElement(arr: [1, 2, 1], elementToReplace: 1, substitutionReplace: 3)
