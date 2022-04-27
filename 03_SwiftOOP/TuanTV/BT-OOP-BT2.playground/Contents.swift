@@ -1,5 +1,6 @@
 import UIKit
 
+//MARK: -BAI TAP 2
 class DaGiac {
     var soCanhDaGiac: Int
     var mangDoLonCanhDaGiac: [Int]
@@ -24,6 +25,7 @@ class DaGiac {
 
 DaGiac.init(n: 3, mangDoLon: [1,2,3]).inGiaTriCacCanh()
 
+//MARK: -BAI TAP 3 & 4
 class TamGiac: DaGiac {
     
     func tinhDienTichTamGiac() {
@@ -51,6 +53,8 @@ class TamGiac: DaGiac {
     
 }
 TamGiac(n: 3, mangDoLon: [1,2,3]).inCacCanhTamGiacPitago(dsTamGiac: [TamGiac(n: 3, mangDoLon: [1,2,3]), TamGiac(n: 3, mangDoLon: [3,4,5]), TamGiac(n: 3, mangDoLon: [1,2,1])])
+
+//MARK: -BAI TAP 5
 class CStack {
     var size: Int
     var top: Int
@@ -78,7 +82,7 @@ class CStack {
         }
     }
     
-    func pop(item: Int) {
+    func pop() {
         if isEmpty() {
             print("stack is empty")
         } else {
@@ -219,3 +223,42 @@ class HocSinh {
 }
 HocSinh(ho: "a", ten: "b", namSinh: 2011, tongDiem: 2).testBT7()
 
+//MARK: -BAI TAP 8
+final class Date {
+    var date: Int
+    var month: Int
+    var year: Int
+    init(date: Int, month: Int, year: Int) {
+        self.date = date
+        self.month = month
+        self.year = year
+    }
+    
+}
+
+//MARK: -BAI TAP 9
+final class Mang1c<Element: Comparable> {
+    var arr: [Element] = []
+    func printArr() {
+        arr.forEach { print($0) }
+    }
+    func findMinMax() -> (min: Element?, max: Element?) {
+        return (min: arr.min(), max: arr.max())
+    }
+}
+var a = Mang1c<Int>()
+a.arr = [1, 2, 3]
+a.findMinMax()
+
+
+
+//MARK: -BAI TAP 10
+final class A {
+    var number: Int = 100
+    init(number: Int) {
+        self.number = number
+    }
+    func sum(n: Int) -> Int {
+        return n * (n + 1) / 2
+    }
+}

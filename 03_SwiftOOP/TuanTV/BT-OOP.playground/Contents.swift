@@ -1,5 +1,6 @@
 import UIKit
 
+//MARK: -BAI TAP 1
 class PhanSo {
     //MARK: prototype
     var tuso: Int
@@ -8,10 +9,7 @@ class PhanSo {
         self.tuso = tuso
         self.mauso = mauso
     }
-            
     //MARK: function
-    
-    
     func congHaiPhanSo(_ phanSo1: PhanSo, _ phanSo2: PhanSo) -> PhanSo? {
         if phanSo1.mauso != 0 && phanSo2.mauso != 0 {
             self.tuso = phanSo1.tuso * phanSo2.mauso + phanSo2.tuso * phanSo1.mauso
@@ -48,8 +46,6 @@ class PhanSo {
         return nil
     }
     
-    
-    
     func inPhanSo() -> String {
         print(tuso, "/", mauso)
         return "\(tuso) / \(mauso)"
@@ -72,7 +68,8 @@ class PhanSo {
             }
         }
         return a
-    }    
+    }
+    
     func rutGonPhanSo(phanSo: PhanSo) -> PhanSo {
         let a = uSCLN(phanSo: phanSo)
         return PhanSo(tuso: phanSo.tuso / a, mauso: phanSo.mauso / a)
@@ -85,7 +82,6 @@ class PhanSo {
         
     }
     func test(phanSo1: PhanSo, phanSo2: PhanSo){
-        
         guard let tong = congHaiPhanSo(phanSo1, phanSo2) else {
             print("phan so co mau = 0 la phan so khong xac dinh")
             return
@@ -113,8 +109,6 @@ class PhanSo {
         }
         print("tich 2 phan so = " + rutGonPhanSo(phanSo: thuong).inPhanSo())
     }
-    
-    
 }
 var phanso = PhanSo.init(tuso: 1, mauso: 1)
 
