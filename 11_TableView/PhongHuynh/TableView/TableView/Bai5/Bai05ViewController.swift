@@ -18,10 +18,19 @@ final class Bai05ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        filteredData = array
+        configTableView()
+        configSearchBar()
+    }
+    
+    // MARK: - Private functions
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
-        filteredData = array
+    }
+    
+    private func configSearchBar() {
         searchBar.delegate = self
     }
 }
@@ -58,7 +67,9 @@ extension Bai05ViewController: UISearchBarDelegate, UITableViewDataSource, UITab
     }
 }
 
+// MARK: - Bai05DetailViewControllerDelegate
 extension Bai05ViewController: Bai05DetailViewControllerDelegate {
+    
     func controler(view: Bai05DetailViewController, needsPerfom actions: Bai05DetailViewController.Action) {
         switch actions {
         case .reload:

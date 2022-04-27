@@ -13,10 +13,8 @@ final class Bai03ViewController: UIViewController {
         super.viewDidLoad()
         
         title = "HOME"
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        tableView.dataSource = self
-        tableView.delegate = self
         loadData()
+        configTableView()
     }
     
     // MARK: - Private functions
@@ -24,6 +22,12 @@ final class Bai03ViewController: UIViewController {
         guard let path = Bundle.main.url(forResource: "NameData", withExtension: "plist") else { return }
         guard let contactsData = NSArray(contentsOf: path) as? [String] else { return }
         names = contactsData
+    }
+    
+    private func configTableView() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 

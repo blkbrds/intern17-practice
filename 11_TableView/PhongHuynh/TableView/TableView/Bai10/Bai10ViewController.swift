@@ -4,29 +4,27 @@ import Contacts
 final class Bai10ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     var arrayTong: [String] = []
     var arraySection: [String] = []
     var arrayDictionary: [String: [String]] = [:]
-    var contacts: [String] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "SECTIONS"
-        
         configTableView()
         searchBar.delegate = self
         contact()
-        loadData()
+        configData()
         configSearchBar()
     }
     
-    func loadData() {
+    // MARK: - Private functions
+    private func configData() {
         for array in arrayTong {
             let arrayKey = String(array.prefix(1))
             if var arrayValues = arrayDictionary[arrayKey] {
@@ -40,7 +38,7 @@ final class Bai10ViewController: UIViewController {
         arraySection = arraySection.sorted(by: { $0 < $1 })
     }
     
-    func contact() {
+    private func contact() {
         let store = CNContactStore()
         let authorizationStatus = CNContactStore.authorizationStatus(for: .contacts)
         if authorizationStatus == .notDetermined {
@@ -54,7 +52,7 @@ final class Bai10ViewController: UIViewController {
         }
     }
     
-    func retrieveContacts(from store: CNContactStore) {
+    private func retrieveContacts(from store: CNContactStore) {
         var contacts: [CNContact] = []
         let containerId = store.defaultContainerIdentifier()
         let predicate = CNContact.predicateForContactsInContainer(withIdentifier: containerId)
@@ -64,28 +62,29 @@ final class Bai10ViewController: UIViewController {
                             CNKeyDescriptor,
                            CNContactImageDataKey as CNKeyDescriptor]
         contacts = try! store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
-        for i in contacts {
-            arrayTong.append(i.familyName + " " + i.givenName)
+        for contact in contacts {
+            arrayTong.append(contact.familyName + " " + contact.givenName)
         }
     }
     
-    // MARK: - Private funtions
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
     }
     
-    func configSearchBar() {
+    private func configSearchBar() {
         searchBar.delegate = self
-        contacts = arrayTong
     }
     
-    func search(keyword: String) {
-        contacts = getContacts(keyword: keyword)
+    private func search(keyword: String) {
+        arrayTong = getContacts(keyword: keyword)
+        arraySection = []
+        arrayDictionary = [:]
+        configData()
         tableView.reloadData()
     }
     
-    func getContacts(keyword: String) -> [String] {
+    private func getContacts(keyword: String) -> [String] {
         if keyword.trimmingCharacters(in: CharacterSet(charactersIn: " ")) == "" {
             return arrayTong
         } else {
@@ -95,39 +94,33 @@ final class Bai10ViewController: UIViewController {
                     data.append(contact)
                 }
             }
-        return data
+            return data
         }
-        
     }
 }
 
+// MARK: - UITableViewDataSource
 extension Bai10ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-      //  return arraySection.count
-        return 1
+        return arraySection.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        let arrayKey = arraySection[section]
-//        if let arrayValues = arrayDictionary[arrayKey] {
-//            return arrayValues.count
-//        }
-//        return 0
+        let arrayKey = arraySection[section]
+        if let arrayValues = arrayDictionary[arrayKey] {
+            return arrayValues.count
+        }
+        return 0
         
-        return contacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-//        let arrayKey = arraySection[indexPath.section]
-//        if let arrayValues = arrayDictionary[arrayKey] {
-//            cell.textLabel?.text = arrayValues[indexPath.row]
-//        }
-//        return cell
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = "\(contacts[indexPath.row])"
+        let arrayKey = arraySection[indexPath.section]
+        if let arrayValues = arrayDictionary[arrayKey] {
+            cell.textLabel?.text = arrayValues[indexPath.row]
+        }
         return cell
     }
     
@@ -144,6 +137,7 @@ extension Bai10ViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension Bai10ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -166,6 +160,10 @@ extension Bai10ViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
+        arrayTong = []
+        arraySection = []
+        arrayDictionary = [:]
+        contact()
         search(keyword: "")
     }
 }

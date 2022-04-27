@@ -1,11 +1,13 @@
 import UIKit
 
+// MARK: - Bai05DetailViewControllerDelegate
 protocol Bai05DetailViewControllerDelegate: class {
     func controler(view: Bai05DetailViewController, needsPerfom actions: Bai05DetailViewController.Action)
 }
 
 final class Bai05DetailViewController: UIViewController {
     
+    // MARK: - Define
     enum Action {
         case reload
     }
@@ -26,11 +28,11 @@ final class Bai05DetailViewController: UIViewController {
         searchLabel.text = search
     }
     
+    // MARK: - Objc functions
     @objc private func backAction() {
         guard let navi = navigationController else { return }
         navi.popToRootViewController(animated: true)
         self.delegate?.controler(view: self, needsPerfom: .reload)
-        
     }
 }
 

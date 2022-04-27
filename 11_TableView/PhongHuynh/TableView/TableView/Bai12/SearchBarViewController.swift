@@ -1,23 +1,27 @@
 import UIKit
 
-class SearchBarViewController: UIViewController {
-
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+final class SearchBarViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Properties
     var contactsData: [String] = []
     var contacts: [String] = []
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configSearchBar()
         loadData()
         configTableView()
         
     }
     
-    func loadData() {
+    // MARK: - Private functions
+    private func loadData() {
         guard let path = Bundle.main.url(forResource: "NameData", withExtension: "plist") else { return }
         guard let contactData = NSArray(contentsOf: path) as? [String] else { return }
         contactsData = contactData
@@ -29,16 +33,16 @@ class SearchBarViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    func configSearchBar() {
+    private func configSearchBar() {
         searchBar.delegate = self
     }
     
-    func search(keyword: String) {
+    private func search(keyword: String) {
         contacts = getContacts(keyword: keyword)
         tableView.reloadData()
     }
     
-    func getContacts(keyword: String) -> [String] {
+    private func getContacts(keyword: String) -> [String] {
         if keyword.trimmingCharacters(in: CharacterSet(charactersIn: " ")) == "" {
             return contactsData
         } else {
@@ -48,12 +52,12 @@ class SearchBarViewController: UIViewController {
                     data.append(contact)
                 }
             }
-        return data
+            return data
         }
-        
     }
 }
 
+// MARK: - UITableViewDataSource
 extension SearchBarViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -71,6 +75,7 @@ extension SearchBarViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension SearchBarViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

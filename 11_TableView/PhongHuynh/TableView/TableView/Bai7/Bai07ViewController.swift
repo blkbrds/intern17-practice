@@ -3,7 +3,7 @@ import UIKit
 final class Bai07ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     var garden: [[String]] = []

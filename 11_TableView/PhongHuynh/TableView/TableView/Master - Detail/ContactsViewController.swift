@@ -1,32 +1,37 @@
 import UIKit
 
-class ContactsViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+final class ContactsViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Properties
     var contacts: [String] = []
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         loadData()
         configTableView()
-      
+        
     }
     
-    func loadData() {
+    // MARK: - Private functions
+    private func loadData() {
         guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist") else { return }
         guard let contactsData = NSArray(contentsOf: path) as? [String] else { return }
         contacts = contactsData
     }
     
-    func configTableView() {
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
         tableView.delegate  = self
     }
 }
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
 extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
