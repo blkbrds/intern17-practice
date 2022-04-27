@@ -7,12 +7,25 @@ class HomeCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        layer.cornerRadius = 10
+        clipsToBounds = true
+        avatarImageView.layer.cornerRadius = 65
+        avatarImageView.clipsToBounds = true
     }
     
-    func updateCell(avatar: UIImage, name: String) {
+    func updateCell(avatar: UIImage, name: String, status: Status) {
         avatarImageView.image = avatar
         nameLabel.text = name
+        updateCell(status: status)
+    }
+    
+    func updateCell(status: Status) {
+        switch status {
+        case .standard:
+            avatarImageView.layer.cornerRadius = 65
+        case .small:
+            avatarImageView.layer.cornerRadius = 30
+        }
     }
 
 }
