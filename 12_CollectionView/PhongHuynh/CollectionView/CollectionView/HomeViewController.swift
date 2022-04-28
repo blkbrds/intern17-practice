@@ -81,7 +81,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         configCollectionView()
-        
+        configNavigationBar()
     }
     
     func configCollectionView() {
@@ -89,10 +89,10 @@ class HomeViewController: UIViewController {
         collectionView.register(cellNib, forCellWithReuseIdentifier: "HomeCell")
         
         let headerNib = UINib(nibName: "TeamHeaderReusableView", bundle: Bundle.main)
-        collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamHeaderReusableView")
+        collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TeamHeaderReusableView")
         
-        let footerNib = UINib(nibName: "TeamHeaderReusableView", bundle: Bundle.main)
-        collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TeamHeaderReusableView")
+//        let footerNib = UINib(nibName: "TeamHeaderReusableView", bundle: Bundle.main)
+//        collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamHeaderReusableView")
      //   collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -132,7 +132,7 @@ class HomeViewController: UIViewController {
         flowLayout.itemSize = status.itemSize
         flowLayout.sectionInset = status.sectionInset
         flowLayout.headerReferenceSize = status.headerReferenceSize
-        flowLayout.footerReferenceSize = status.footerReferenceSize
+    //    flowLayout.footerReferenceSize = status.footerReferenceSize
         collectionView.setCollectionViewLayout(flowLayout, animated: true)
     }
 
@@ -195,9 +195,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: 400, height: 80)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: 400, height: 40)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+//        return CGSize(width: 400, height: 40)
+//    }
     
 }
 

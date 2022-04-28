@@ -16,6 +16,16 @@
 		CB42C6942818F9940036D2C8 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB42C6922818F9940036D2C8 /* HomeCell.xib */; };
 		CB42C698281900EF0036D2C8 /* TeamHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42C696281900EF0036D2C8 /* TeamHeaderReusableView.swift */; };
 		CB42C699281900EF0036D2C8 /* TeamHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB42C697281900EF0036D2C8 /* TeamHeaderReusableView.xib */; };
+		CBBE7F31281A38970064B44B /* Bai01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7F2F281A38970064B44B /* Bai01ViewController.swift */; };
+		CBBE7F32281A38970064B44B /* Bai01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE7F30281A38970064B44B /* Bai01ViewController.xib */; };
+		CBBE7F37281A39B90064B44B /* Bai01CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7F35281A39B90064B44B /* Bai01CollectionViewCell.swift */; };
+		CBBE7F38281A39B90064B44B /* Bai01CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE7F36281A39B90064B44B /* Bai01CollectionViewCell.xib */; };
+		CBBE7F45281A3E350064B44B /* Bai02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7F43281A3E350064B44B /* Bai02ViewController.swift */; };
+		CBBE7F46281A3E350064B44B /* Bai02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE7F44281A3E350064B44B /* Bai02ViewController.xib */; };
+		CBBE7F4A281A3E6F0064B44B /* Bai02CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7F48281A3E6F0064B44B /* Bai02CollectionViewCell.swift */; };
+		CBBE7F4B281A3E6F0064B44B /* Bai02CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE7F49281A3E6F0064B44B /* Bai02CollectionViewCell.xib */; };
+		CBBE7F53281A56A00064B44B /* TeamFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7F51281A569F0064B44B /* TeamFooterReusableView.swift */; };
+		CBBE7F54281A56A00064B44B /* TeamFooterReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE7F52281A569F0064B44B /* TeamFooterReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +40,16 @@
 		CB42C6922818F9940036D2C8 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		CB42C696281900EF0036D2C8 /* TeamHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHeaderReusableView.swift; sourceTree = "<group>"; };
 		CB42C697281900EF0036D2C8 /* TeamHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamHeaderReusableView.xib; sourceTree = "<group>"; };
+		CBBE7F2F281A38970064B44B /* Bai01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01ViewController.swift; sourceTree = "<group>"; };
+		CBBE7F30281A38970064B44B /* Bai01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01ViewController.xib; sourceTree = "<group>"; };
+		CBBE7F35281A39B90064B44B /* Bai01CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01CollectionViewCell.swift; sourceTree = "<group>"; };
+		CBBE7F36281A39B90064B44B /* Bai01CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01CollectionViewCell.xib; sourceTree = "<group>"; };
+		CBBE7F43281A3E350064B44B /* Bai02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai02ViewController.swift; sourceTree = "<group>"; };
+		CBBE7F44281A3E350064B44B /* Bai02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai02ViewController.xib; sourceTree = "<group>"; };
+		CBBE7F48281A3E6F0064B44B /* Bai02CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai02CollectionViewCell.swift; sourceTree = "<group>"; };
+		CBBE7F49281A3E6F0064B44B /* Bai02CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai02CollectionViewCell.xib; sourceTree = "<group>"; };
+		CBBE7F51281A569F0064B44B /* TeamFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFooterReusableView.swift; sourceTree = "<group>"; };
+		CBBE7F52281A569F0064B44B /* TeamFooterReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamFooterReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +66,8 @@
 		CB42C6692818F5FB0036D2C8 = {
 			isa = PBXGroup;
 			children = (
+				CBBE7F3A281A3DF10064B44B /* Bai02 */,
+				CBBE7F2E281A38810064B44B /* Bai01 */,
 				CB42C6742818F5FB0036D2C8 /* CollectionView */,
 				CB42C6732818F5FB0036D2C8 /* Products */,
 			);
@@ -72,8 +94,32 @@
 				CB42C6922818F9940036D2C8 /* HomeCell.xib */,
 				CB42C696281900EF0036D2C8 /* TeamHeaderReusableView.swift */,
 				CB42C697281900EF0036D2C8 /* TeamHeaderReusableView.xib */,
+				CBBE7F51281A569F0064B44B /* TeamFooterReusableView.swift */,
+				CBBE7F52281A569F0064B44B /* TeamFooterReusableView.xib */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		CBBE7F2E281A38810064B44B /* Bai01 */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE7F2F281A38970064B44B /* Bai01ViewController.swift */,
+				CBBE7F30281A38970064B44B /* Bai01ViewController.xib */,
+				CBBE7F35281A39B90064B44B /* Bai01CollectionViewCell.swift */,
+				CBBE7F36281A39B90064B44B /* Bai01CollectionViewCell.xib */,
+			);
+			path = Bai01;
+			sourceTree = "<group>";
+		};
+		CBBE7F3A281A3DF10064B44B /* Bai02 */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE7F43281A3E350064B44B /* Bai02ViewController.swift */,
+				CBBE7F44281A3E350064B44B /* Bai02ViewController.xib */,
+				CBBE7F48281A3E6F0064B44B /* Bai02CollectionViewCell.swift */,
+				CBBE7F49281A3E6F0064B44B /* Bai02CollectionViewCell.xib */,
+			);
+			path = Bai02;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,10 +179,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBE7F38281A39B90064B44B /* Bai01CollectionViewCell.xib in Resources */,
+				CBBE7F4B281A3E6F0064B44B /* Bai02CollectionViewCell.xib in Resources */,
 				CB42C67F2818F5FF0036D2C8 /* Assets.xcassets in Resources */,
 				CB42C699281900EF0036D2C8 /* TeamHeaderReusableView.xib in Resources */,
+				CBBE7F32281A38970064B44B /* Bai01ViewController.xib in Resources */,
 				CB42C6942818F9940036D2C8 /* HomeCell.xib in Resources */,
 				CB42C68F2818F6240036D2C8 /* HomeViewController.xib in Resources */,
+				CBBE7F54281A56A00064B44B /* TeamFooterReusableView.xib in Resources */,
+				CBBE7F46281A3E350064B44B /* Bai02ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,9 +199,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB42C6762818F5FC0036D2C8 /* AppDelegate.swift in Sources */,
+				CBBE7F45281A3E350064B44B /* Bai02ViewController.swift in Sources */,
 				CB42C698281900EF0036D2C8 /* TeamHeaderReusableView.swift in Sources */,
+				CBBE7F53281A56A00064B44B /* TeamFooterReusableView.swift in Sources */,
 				CB42C6782818F5FC0036D2C8 /* SceneDelegate.swift in Sources */,
 				CB42C6932818F9940036D2C8 /* HomeCell.swift in Sources */,
+				CBBE7F31281A38970064B44B /* Bai01ViewController.swift in Sources */,
+				CBBE7F4A281A3E6F0064B44B /* Bai02CollectionViewCell.swift in Sources */,
+				CBBE7F37281A39B90064B44B /* Bai01CollectionViewCell.swift in Sources */,
 				CB42C68E2818F6240036D2C8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

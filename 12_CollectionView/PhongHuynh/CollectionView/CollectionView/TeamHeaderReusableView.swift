@@ -6,6 +6,7 @@ class TeamHeaderReusableView: UICollectionReusableView {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var teamNameLabelLeadingConstraint: NSLayoutConstraint!
     
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         avatarImageView.layer.cornerRadius = 30
