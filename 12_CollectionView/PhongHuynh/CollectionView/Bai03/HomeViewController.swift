@@ -5,6 +5,7 @@ struct Member {
     let avatar: UIImage
 }
 
+// MARK: - Define
 enum Status {
     case standard
     case small
@@ -45,9 +46,17 @@ enum Team: Int {
     
     var teamName: String {
         switch self {
-        case .avengers: return "Avengers"
-        case .guardians: return "Guardians of the galaxy"
-        case .xmen: return "X-men"
+        case .avengers: return "Section 1"
+        case .guardians: return "Section 2"
+        case .xmen: return "Section 3"
+        }
+    }
+    
+    var teamFooter: String {
+        switch self {
+        case .avengers: return "Click to see detail 1"
+        case .guardians: return "Click to see detail 2"
+        case .xmen: return "Click to see detail 3"
         }
     }
     
@@ -71,54 +80,49 @@ enum Team: Int {
     static var count: Int { return Team.xmen.rawValue + 1}
 }
 
-class HomeViewController: UIViewController {
-
+final class HomeViewController: UIViewController {
+    
+    // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    // MARK: - Properties
     var status = Status.standard
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configCollectionView()
         configNavigationBar()
     }
     
-    func configCollectionView() {
+    // MARK: - Private functions
+    private func configCollectionView() {
         let cellNib = UINib(nibName: "HomeCell", bundle: Bundle.main)
         collectionView.register(cellNib, forCellWithReuseIdentifier: "HomeCell")
-        
         let headerNib = UINib(nibName: "TeamHeaderReusableView", bundle: Bundle.main)
         collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TeamHeaderReusableView")
-        
-//        let footerNib = UINib(nibName: "TeamHeaderReusableView", bundle: Bundle.main)
-//        collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamHeaderReusableView")
-     //   collectionView.delegate = self
+        let footerNib = UINib(nibName: "TeamFooterReusableView", bundle: Bundle.main)
+        collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamFooterReusableView")
+        // collectionView.delegate = self
         collectionView.dataSource = self
     }
     
-    func configNavigationBar() {
+    private func configNavigationBar() {
         title = "MARVEL"
         turnOnStandarMode()
     }
     
-    @objc func turnOnStandarMode() {
-        changeFlowLayout(status: .standard)
-        let smallButton = UIBarButtonItem(title: "Small", style: .plain, target: self, action: #selector(turnOnSmallMode))
-        navigationItem.rightBarButtonItem = smallButton
-    }
-
-    @objc func turnOnSmallMode() {
-        changeFlowLayout(status: .small)
-        let standardButton = UIBarButtonItem(title: "Standard", style: .plain, target: self, action: #selector(turnOnStandarMode))
-        navigationItem.rightBarButtonItem = standardButton
-    }
-    
-    func changeFlowLayout(status: Status) {
+    private func changeFlowLayout(status: Status) {
         self.status = status
         if let headerViews = self.collectionView.visibleSupplementaryViews(ofKind: UICollectionView.elementKindSectionHeader) as? [TeamHeaderReusableView] {
             for headerView in headerViews {
                 headerView.updateHeaderView(status: status)
+            }
+        }
+        if let footerViews = self.collectionView.visibleSupplementaryViews(ofKind: UICollectionView.elementKindSectionFooter) as? [TeamFooterReusableView] {
+            for footerView in footerViews {
+                footerView.updateFooterView(status: status)
             }
         }
         if let cells = self.collectionView.visibleCells as? [HomeCell] {
@@ -132,12 +136,25 @@ class HomeViewController: UIViewController {
         flowLayout.itemSize = status.itemSize
         flowLayout.sectionInset = status.sectionInset
         flowLayout.headerReferenceSize = status.headerReferenceSize
-    //    flowLayout.footerReferenceSize = status.footerReferenceSize
+        flowLayout.footerReferenceSize = status.footerReferenceSize
         collectionView.setCollectionViewLayout(flowLayout, animated: true)
     }
-
+    
+    // MARK: - Objc functions
+    @objc private func turnOnStandarMode() {
+        changeFlowLayout(status: .standard)
+        let smallButton = UIBarButtonItem(title: "Small", style: .plain, target: self, action: #selector(turnOnSmallMode))
+        navigationItem.rightBarButtonItem = smallButton
+    }
+    
+    @objc private func turnOnSmallMode() {
+        changeFlowLayout(status: .small)
+        let standardButton = UIBarButtonItem(title: "Standard", style: .plain, target: self, action: #selector(turnOnStandarMode))
+        navigationItem.rightBarButtonItem = standardButton
+    }
 }
 
+// MARK: - UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -173,7 +190,11 @@ extension HomeViewController: UICollectionViewDataSource {
             header.updateHeaderView(avatar: team.teamAvatar, name: team.teamName, status: status)
             return header
         case UICollectionView.elementKindSectionFooter:
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamHeaderReusableView", for: indexPath) as! TeamHeaderReusableView
+            guard let team = Team(rawValue: indexPath.section) else {
+                fatalError("Team value is nil")
+            }
+            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamFooterReusableView", for: indexPath) as! TeamFooterReusableView
+            footer.updateFooterView(click: team.teamFooter, status: status)
             return footer
         default:
             return UICollectionReusableView()
@@ -181,6 +202,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -195,10 +217,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: 400, height: 80)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-//        return CGSize(width: 400, height: 40)
-//    }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: 400, height: 40)
+    }
 }
 
 

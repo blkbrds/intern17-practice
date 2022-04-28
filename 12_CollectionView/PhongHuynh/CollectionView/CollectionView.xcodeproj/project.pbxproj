@@ -16,6 +16,10 @@
 		CB42C6942818F9940036D2C8 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB42C6922818F9940036D2C8 /* HomeCell.xib */; };
 		CB42C698281900EF0036D2C8 /* TeamHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42C696281900EF0036D2C8 /* TeamHeaderReusableView.swift */; };
 		CB42C699281900EF0036D2C8 /* TeamHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB42C697281900EF0036D2C8 /* TeamHeaderReusableView.xib */; };
+		CB92AECD281A69BB00FB3FCF /* Bai04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92AECB281A69BB00FB3FCF /* Bai04ViewController.swift */; };
+		CB92AECE281A69BB00FB3FCF /* Bai04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB92AECC281A69BB00FB3FCF /* Bai04ViewController.xib */; };
+		CB92AED2281A6FA900FB3FCF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92AED0281A6FA900FB3FCF /* CollectionViewCell.swift */; };
+		CB92AED3281A6FA900FB3FCF /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB92AED1281A6FA900FB3FCF /* CollectionViewCell.xib */; };
 		CBBE7F31281A38970064B44B /* Bai01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7F2F281A38970064B44B /* Bai01ViewController.swift */; };
 		CBBE7F32281A38970064B44B /* Bai01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE7F30281A38970064B44B /* Bai01ViewController.xib */; };
 		CBBE7F37281A39B90064B44B /* Bai01CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7F35281A39B90064B44B /* Bai01CollectionViewCell.swift */; };
@@ -40,6 +44,10 @@
 		CB42C6922818F9940036D2C8 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		CB42C696281900EF0036D2C8 /* TeamHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHeaderReusableView.swift; sourceTree = "<group>"; };
 		CB42C697281900EF0036D2C8 /* TeamHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamHeaderReusableView.xib; sourceTree = "<group>"; };
+		CB92AECB281A69BB00FB3FCF /* Bai04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai04ViewController.swift; sourceTree = "<group>"; };
+		CB92AECC281A69BB00FB3FCF /* Bai04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai04ViewController.xib; sourceTree = "<group>"; };
+		CB92AED0281A6FA900FB3FCF /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CB92AED1281A6FA900FB3FCF /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		CBBE7F2F281A38970064B44B /* Bai01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01ViewController.swift; sourceTree = "<group>"; };
 		CBBE7F30281A38970064B44B /* Bai01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01ViewController.xib; sourceTree = "<group>"; };
 		CBBE7F35281A39B90064B44B /* Bai01CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -66,6 +74,8 @@
 		CB42C6692818F5FB0036D2C8 = {
 			isa = PBXGroup;
 			children = (
+				CB92AECA281A699100FB3FCF /* Bai04 */,
+				CB92AEC8281A692D00FB3FCF /* Bai03 */,
 				CBBE7F3A281A3DF10064B44B /* Bai02 */,
 				CBBE7F2E281A38810064B44B /* Bai01 */,
 				CB42C6742818F5FB0036D2C8 /* CollectionView */,
@@ -88,6 +98,13 @@
 				CB42C6772818F5FC0036D2C8 /* SceneDelegate.swift */,
 				CB42C67E2818F5FF0036D2C8 /* Assets.xcassets */,
 				CB42C6832818F5FF0036D2C8 /* Info.plist */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		CB92AEC8281A692D00FB3FCF /* Bai03 */ = {
+			isa = PBXGroup;
+			children = (
 				CB42C68C2818F6240036D2C8 /* HomeViewController.swift */,
 				CB42C68D2818F6240036D2C8 /* HomeViewController.xib */,
 				CB42C6912818F9940036D2C8 /* HomeCell.swift */,
@@ -97,7 +114,18 @@
 				CBBE7F51281A569F0064B44B /* TeamFooterReusableView.swift */,
 				CBBE7F52281A569F0064B44B /* TeamFooterReusableView.xib */,
 			);
-			path = CollectionView;
+			path = Bai03;
+			sourceTree = "<group>";
+		};
+		CB92AECA281A699100FB3FCF /* Bai04 */ = {
+			isa = PBXGroup;
+			children = (
+				CB92AECB281A69BB00FB3FCF /* Bai04ViewController.swift */,
+				CB92AECC281A69BB00FB3FCF /* Bai04ViewController.xib */,
+				CB92AED0281A6FA900FB3FCF /* CollectionViewCell.swift */,
+				CB92AED1281A6FA900FB3FCF /* CollectionViewCell.xib */,
+			);
+			path = Bai04;
 			sourceTree = "<group>";
 		};
 		CBBE7F2E281A38810064B44B /* Bai01 */ = {
@@ -181,9 +209,11 @@
 			files = (
 				CBBE7F38281A39B90064B44B /* Bai01CollectionViewCell.xib in Resources */,
 				CBBE7F4B281A3E6F0064B44B /* Bai02CollectionViewCell.xib in Resources */,
+				CB92AED3281A6FA900FB3FCF /* CollectionViewCell.xib in Resources */,
 				CB42C67F2818F5FF0036D2C8 /* Assets.xcassets in Resources */,
 				CB42C699281900EF0036D2C8 /* TeamHeaderReusableView.xib in Resources */,
 				CBBE7F32281A38970064B44B /* Bai01ViewController.xib in Resources */,
+				CB92AECE281A69BB00FB3FCF /* Bai04ViewController.xib in Resources */,
 				CB42C6942818F9940036D2C8 /* HomeCell.xib in Resources */,
 				CB42C68F2818F6240036D2C8 /* HomeViewController.xib in Resources */,
 				CBBE7F54281A56A00064B44B /* TeamFooterReusableView.xib in Resources */,
@@ -200,11 +230,13 @@
 			files = (
 				CB42C6762818F5FC0036D2C8 /* AppDelegate.swift in Sources */,
 				CBBE7F45281A3E350064B44B /* Bai02ViewController.swift in Sources */,
+				CB92AED2281A6FA900FB3FCF /* CollectionViewCell.swift in Sources */,
 				CB42C698281900EF0036D2C8 /* TeamHeaderReusableView.swift in Sources */,
 				CBBE7F53281A56A00064B44B /* TeamFooterReusableView.swift in Sources */,
 				CB42C6782818F5FC0036D2C8 /* SceneDelegate.swift in Sources */,
 				CB42C6932818F9940036D2C8 /* HomeCell.swift in Sources */,
 				CBBE7F31281A38970064B44B /* Bai01ViewController.swift in Sources */,
+				CB92AECD281A69BB00FB3FCF /* Bai04ViewController.swift in Sources */,
 				CBBE7F4A281A3E6F0064B44B /* Bai02CollectionViewCell.swift in Sources */,
 				CBBE7F37281A39B90064B44B /* Bai01CollectionViewCell.swift in Sources */,
 				CB42C68E2818F6240036D2C8 /* HomeViewController.swift in Sources */,

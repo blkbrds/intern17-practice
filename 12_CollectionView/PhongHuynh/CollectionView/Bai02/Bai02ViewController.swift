@@ -63,8 +63,7 @@ extension Bai02ViewController: UICollectionViewDataSource {
 extension Bai02ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    //    CGFloat(Int.random(in: 2..<3))
-        return CGSize(width: (view.frame.size.width - (20 * 4)) / 3, height: view.frame.size.height/5)
+        return CGSize(width: (view.frame.size.width - (20 * 4)) / 3, height: CGFloat(Int.random(in: 50..<200)))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

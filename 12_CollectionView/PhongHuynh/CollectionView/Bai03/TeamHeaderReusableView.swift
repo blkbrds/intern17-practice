@@ -1,12 +1,12 @@
 import UIKit
 
-class TeamHeaderReusableView: UICollectionReusableView {
-
-    @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var teamNameLabelLeadingConstraint: NSLayoutConstraint!
+final class TeamHeaderReusableView: UICollectionReusableView {
     
-  
+    // MARK: - IBOutlets
+    @IBOutlet private weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var teamNameLabelLeadingConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         avatarImageView.layer.cornerRadius = 30
@@ -29,5 +29,4 @@ class TeamHeaderReusableView: UICollectionReusableView {
             teamNameLabelLeadingConstraint.constant = 10
         }
     }
-    
 }

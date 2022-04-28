@@ -1,18 +1,21 @@
 import UIKit
 
-class HomeCell: UICollectionViewCell {
-
-    @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+final class HomeCell: UICollectionViewCell {
+    
+    // MARK: - IBOutlets
+    @IBOutlet private weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         layer.cornerRadius = 10
         clipsToBounds = true
         avatarImageView.layer.cornerRadius = 65
         avatarImageView.clipsToBounds = true
     }
     
+    // MARK: - Funtions
     func updateCell(avatar: UIImage, name: String, status: Status) {
         avatarImageView.image = avatar
         nameLabel.text = name
@@ -27,5 +30,4 @@ class HomeCell: UICollectionViewCell {
             avatarImageView.layer.cornerRadius = 30
         }
     }
-
 }
