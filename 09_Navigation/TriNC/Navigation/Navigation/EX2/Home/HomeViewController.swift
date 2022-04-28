@@ -42,14 +42,14 @@ final class HomeViewController: UIViewController {
     @objc private func editingAction() {
         let vc = EditViewController()
         vc.delegate = self
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func logoutAction() {
         if let delegate = delegate {
             delegate.homeController(view: self, needsPerform: .logout)
         }
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }
 

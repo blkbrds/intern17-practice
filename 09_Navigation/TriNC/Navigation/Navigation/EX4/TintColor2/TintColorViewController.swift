@@ -23,8 +23,6 @@ final class TintColorViewController: UIViewController {
     }
     
     private func changeColorAndTintColorBar() {
-        // title navi
-        self.navigationController?.navigationBar.backgroundColor = .blue
         // tintcolor
         self.navigationController?.navigationBar.tintColor = .white
         // titlecolor

@@ -20,12 +20,11 @@ final class SeachBarViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupBar() {
-        title = "Search Bar"
-        navigationController?.navigationBar.prefersLargeTitles = true
         let leftBarButtonItem = UIBarButtonItem(customView: searchBar)
         self.navigationItem.leftBarButtonItem = leftBarButtonItem
         
         let rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelActions))
+        rightBarButtonItem.tintColor = .white
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
