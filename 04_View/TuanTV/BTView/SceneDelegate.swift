@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .white
-        let vc = BT5ViewController()
+        let vc = BT3XViewController()
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
