@@ -18,6 +18,7 @@
 		894E8BBE2816065C0074CE9F /* BT4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BBD2816065C0074CE9F /* BT4ViewController.swift */; };
 		894E8BC1281615DC0074CE9F /* BT5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BC0281615DC0074CE9F /* BT5ViewController.swift */; };
 		894E8BE8281A254C0074CE9F /* BT3XViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E8BE7281A254C0074CE9F /* BT3XViewController.swift */; };
+		89A87468281A6D980054FFD9 /* BT4XViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A87467281A6D980054FFD9 /* BT4XViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		894E8BBD2816065C0074CE9F /* BT4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT4ViewController.swift; sourceTree = "<group>"; };
 		894E8BC0281615DC0074CE9F /* BT5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT5ViewController.swift; sourceTree = "<group>"; };
 		894E8BE7281A254C0074CE9F /* BT3XViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT3XViewController.swift; sourceTree = "<group>"; };
+		89A87467281A6D980054FFD9 /* BT4XViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT4XViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				894E8BBD2816065C0074CE9F /* BT4ViewController.swift */,
 				894E8BC0281615DC0074CE9F /* BT5ViewController.swift */,
 				894E8BE7281A254C0074CE9F /* BT3XViewController.swift */,
+				89A87467281A6D980054FFD9 /* BT4XViewController.swift */,
 			);
 			path = BTView;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89A87468281A6D980054FFD9 /* BT4XViewController.swift in Sources */,
 				894E8B9F281160B80074CE9F /* ViewController.swift in Sources */,
 				894E8B9B281160B80074CE9F /* AppDelegate.swift in Sources */,
 				894E8B9D281160B80074CE9F /* SceneDelegate.swift in Sources */,
