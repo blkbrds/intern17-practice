@@ -187,7 +187,7 @@ extension DetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let viewModel = viewModel else { return }
         if indexPath.row == (viewModel.getVideosCount() - 1) {
-//            loadMore()
+            loadMore()
         }
     }
 

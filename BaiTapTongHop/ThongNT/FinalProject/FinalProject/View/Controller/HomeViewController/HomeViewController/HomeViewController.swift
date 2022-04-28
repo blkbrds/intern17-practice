@@ -32,6 +32,9 @@ final class HomeViewController: ViewController {
     private func setupUI() {
         title = "Videos"
         loadAPI()
+        navigationController?.navigationBar.barTintColor = .systemRed
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.isTranslucent = true
     }
 
     private func configTableView() {

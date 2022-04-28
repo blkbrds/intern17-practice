@@ -19,7 +19,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-za-q5s">
                         <rect key="frame" x="5" y="5" width="358" height="50"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MonkeyImage" translatesAutoresizingMaskIntoConstraints="NO" id="mca-hv-OpF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YoutubeImage" translatesAutoresizingMaskIntoConstraints="NO" id="mca-hv-OpF">
                                 <rect key="frame" x="5" y="5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mca-hv-OpF" secondAttribute="height" id="D6l-9A-asV"/>
@@ -80,6 +80,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="MonkeyImage" width="256" height="256"/>
+        <image name="YoutubeImage" width="900" height="900"/>
     </resources>
 </document>
