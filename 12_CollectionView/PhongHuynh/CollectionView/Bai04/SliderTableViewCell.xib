@@ -16,9 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="343" height="164"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="N14-uD-aBh">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="N14-uD-aBh">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="164"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MNe-R6-Yzm">
                             <size key="itemSize" width="128" height="128"/>
@@ -27,15 +26,51 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Br0-71-wnK">
+                        <rect key="frame" x="40" y="57" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Ypi-FY-6ob"/>
+                            <constraint firstAttribute="height" constant="50" id="gYg-9e-h6q"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="back1"/>
+                        <connections>
+                            <action selector="leftButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JSl-hk-UqZ"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-Vk-5A3">
+                        <rect key="frame" x="253" y="57" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="NXr-QE-CRf"/>
+                            <constraint firstAttribute="height" constant="50" id="x0U-LG-7yt"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="next"/>
+                        <connections>
+                            <action selector="rightButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OQp-gJ-j2I"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Br0-71-wnK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="Acu-vp-QBX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="eaS-Vk-5A3" secondAttribute="trailing" constant="20" id="MB1-yp-tCS"/>
+                    <constraint firstAttribute="bottom" secondItem="N14-uD-aBh" secondAttribute="bottom" id="SOT-y0-x6F"/>
+                    <constraint firstItem="Br0-71-wnK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ah7-9B-mvI"/>
+                    <constraint firstItem="N14-uD-aBh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="b7z-Ud-0Bo"/>
+                    <constraint firstItem="eaS-Vk-5A3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nAl-4J-qDD"/>
+                    <constraint firstItem="N14-uD-aBh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ozP-tc-frb"/>
+                    <constraint firstAttribute="trailing" secondItem="N14-uD-aBh" secondAttribute="trailing" id="vRm-8c-AON"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="collectionView" destination="N14-uD-aBh" id="n7A-3d-dWd"/>
+                <outlet property="leftButton" destination="Br0-71-wnK" id="u2Z-80-7HA"/>
+                <outlet property="rightButton" destination="eaS-Vk-5A3" id="MIg-3a-IAw"/>
             </connections>
             <point key="canvasLocation" x="-9.4202898550724647" y="-70.3125"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="back1" width="256" height="256"/>
+        <image name="next" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

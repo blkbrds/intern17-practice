@@ -25,6 +25,12 @@ final class SliderTableViewCell: UITableViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    @IBAction func leftButton(_ sender: Any) {
+    }
+    
+    @IBAction func rightButton(_ sender: Any) {
+        configCollectionView()
+    }
     
 }
 
