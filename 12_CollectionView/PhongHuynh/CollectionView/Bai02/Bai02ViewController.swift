@@ -21,17 +21,19 @@ extension Label {
     }
 }
 
-class Bai02ViewController: UIViewController {
-
+final class Bai02ViewController: UIViewController {
+    
+    // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    // MARK: - Properties
     var label: [Label] = Label.getDummyDatas()
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configCollectionView()
-      
     }
     
     // MARK: - Private functions
@@ -70,6 +72,3 @@ extension Bai02ViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     }
 }
-
-
-

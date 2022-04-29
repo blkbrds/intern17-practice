@@ -221,7 +221,3 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: 400, height: 40)
     }
 }
-
-
-
-

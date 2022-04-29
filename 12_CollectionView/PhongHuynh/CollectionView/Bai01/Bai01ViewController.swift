@@ -22,7 +22,7 @@ extension User {
 }
 
 final class Bai01ViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -32,7 +32,7 @@ final class Bai01ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configCollectionView()
     }
     

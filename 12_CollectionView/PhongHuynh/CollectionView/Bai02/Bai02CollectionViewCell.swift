@@ -1,12 +1,12 @@
 import UIKit
 
-class Bai02CollectionViewCell: UICollectionViewCell {
-
+final class Bai02CollectionViewCell: UICollectionViewCell {
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var blueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
-
 }
