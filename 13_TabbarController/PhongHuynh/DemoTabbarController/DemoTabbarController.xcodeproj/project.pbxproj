@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0EBEF3281BEBE4009E6FA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0EBEF1281BEBE4009E6FA1 /* LoginViewController.swift */; };
+		CB0EBEF4281BEBE4009E6FA1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0EBEF2281BEBE4009E6FA1 /* LoginViewController.xib */; };
+		CB0EBEF8281BEDB2009E6FA1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0EBEF6281BEDB2009E6FA1 /* HomeViewController.swift */; };
+		CB0EBEF9281BEDB2009E6FA1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0EBEF7281BEDB2009E6FA1 /* HomeViewController.xib */; };
 		CBB5A2FD281BC5E700681257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5A2FC281BC5E700681257 /* AppDelegate.swift */; };
 		CBB5A2FF281BC5E700681257 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5A2FE281BC5E700681257 /* SceneDelegate.swift */; };
 		CBB5A306281BC5EA00681257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB5A305281BC5EA00681257 /* Assets.xcassets */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB0EBEF1281BEBE4009E6FA1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CB0EBEF2281BEBE4009E6FA1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CB0EBEF6281BEDB2009E6FA1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CB0EBEF7281BEDB2009E6FA1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		CBB5A2F9281BC5E700681257 /* DemoTabbarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoTabbarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB5A2FC281BC5E700681257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB5A2FE281BC5E700681257 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +55,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB0EBEF0281BEAFA009E6FA1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CB0EBEF1281BEBE4009E6FA1 /* LoginViewController.swift */,
+				CB0EBEF2281BEBE4009E6FA1 /* LoginViewController.xib */,
+				CB0EBEF6281BEDB2009E6FA1 /* HomeViewController.swift */,
+				CB0EBEF7281BEDB2009E6FA1 /* HomeViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		CBB5A2F0281BC5E700681257 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +99,7 @@
 		CBB5A316281BC64D00681257 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CB0EBEF0281BEAFA009E6FA1 /* Login */,
 				CBB5A319281BC67900681257 /* ProfileVC */,
 				CBB5A31A281BC68800681257 /* MessagesVC */,
 				CBB5A31B281BC69E00681257 /* FriendsVC */,
@@ -197,8 +217,10 @@
 			files = (
 				CBB5A32A281BC6FD00681257 /* FriendsViewController.xib in Resources */,
 				CBB5A325281BC6EE00681257 /* MessagesViewController.xib in Resources */,
+				CB0EBEF4281BEBE4009E6FA1 /* LoginViewController.xib in Resources */,
 				CBB5A32F281BC70B00681257 /* HomeViewController.xib in Resources */,
 				CBB5A320281BC6CF00681257 /* ProfileViewController.xib in Resources */,
+				CB0EBEF9281BEDB2009E6FA1 /* HomeViewController.xib in Resources */,
 				CBB5A306281BC5EA00681257 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,8 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0EBEF3281BEBE4009E6FA1 /* LoginViewController.swift in Sources */,
 				CBB5A31F281BC6CF00681257 /* ProfileViewController.swift in Sources */,
 				CBB5A329281BC6FD00681257 /* FriendsViewController.swift in Sources */,
+				CB0EBEF8281BEDB2009E6FA1 /* HomeViewController.swift in Sources */,
 				CBB5A2FD281BC5E700681257 /* AppDelegate.swift in Sources */,
 				CBB5A324281BC6EE00681257 /* MessagesViewController.swift in Sources */,
 				CBB5A2FF281BC5E700681257 /* SceneDelegate.swift in Sources */,

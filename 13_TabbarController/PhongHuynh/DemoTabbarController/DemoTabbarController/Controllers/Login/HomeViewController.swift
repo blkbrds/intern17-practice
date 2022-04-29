@@ -1,7 +1,6 @@
-
-
 import UIKit
 
+// MARK: - HomeViewControllerDelegate
 protocol HomeViewControllerDelegate: class {
     func controller(view: HomeViewController, needsPerfom actions: HomeViewController.Action)
 }

@@ -11,19 +11,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let homeVC = HomeViewController()
         let homeNavi = UINavigationController(rootViewController: homeVC)
-        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
-        let messagesVC = MessagesViewController()
-        let messagesNavi = UINavigationController(rootViewController: messagesVC)
-        messagesVC.tabBarItem = UITabBarItem(title: "Messages", image: UIImage(systemName: "message"), selectedImage: UIImage(named: "ic-tabbar-messages-selected"))
-        messagesNavi.tabBarItem.badgeValue = "99"
-        let friendsVC = FriendsViewController()
-        let friendsNavi = UINavigationController(rootViewController: friendsVC)
-        friendsNavi.tabBarItem = UITabBarItem(title: "Friends", image: UIImage(systemName: "camera"), tag: 2)
+        homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+        let mapVC = MessagesViewController()
+        let mapNavi = UINavigationController(rootViewController: mapVC)
+        mapNavi.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), tag: 1)
+        let favoriteVC = FriendsViewController()
+        let favoriteNavi = UINavigationController(rootViewController: favoriteVC)
+        favoriteNavi.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star"), tag: 2)
         let profileVC = ProfileViewController()
         let profileNavi = UINavigationController(rootViewController: profileVC)
-        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "stop"), tag: 3)
+        profileNavi.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), tag: 3)
         let tabbarController = UITabBarController()
-        tabbarController.setViewControllers([homeNavi, messagesNavi, friendsNavi, profileNavi], animated: true)
+        tabbarController.setViewControllers([homeNavi, mapNavi, favoriteNavi, profileNavi], animated: true)
         tabbarController.tabBar.tintColor = .red
         window?.rootViewController = tabbarController
         window?.makeKeyAndVisible()
