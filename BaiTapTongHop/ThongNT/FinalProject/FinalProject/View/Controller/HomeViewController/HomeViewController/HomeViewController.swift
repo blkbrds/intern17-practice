@@ -104,7 +104,7 @@ extension HomeViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == (viewModel.getVideosCount() - 1) {
-            loadMore()
+//            loadMore()
         }
     }
 }

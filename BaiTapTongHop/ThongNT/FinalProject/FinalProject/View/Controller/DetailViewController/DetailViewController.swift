@@ -24,6 +24,11 @@ final class DetailViewController: UIViewController {
         setupUI()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        animate()
+    }
+
     // MARK: - Private functions
     private func setupUI() {
         title = "Details"
@@ -39,6 +44,14 @@ final class DetailViewController: UIViewController {
         tableView.backgroundColor = .clear
         tableView.delegate = self
         tableView.dataSource = self
+    }
+
+    private func animate() {
+        tableView.transform = CGAffineTransform(scaleX: 0.3, y: 2)
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: [.allowUserInteraction, .curveEaseOut], animations: {
+            self.tableView.transform = .identity
+        })
+        tableView.alpha = 1
     }
 
     // Prepare data for view
@@ -163,7 +176,6 @@ extension DetailViewController: UITableViewDataSource {
             guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "ThumbnailTableViewCell", for: indexPath) as? ThumbnailTableViewCell else { return UITableViewCell() }
             videoCell.selectionStyle = .none
             let snippet = viewModel?.getSnippet(with: indexPath.row)
-            print("snippet: ", snippet)
             videoCell.viewModel = ThumbnailTableViewCellModel(snippet: snippet)
             return videoCell
         default: break
@@ -196,6 +208,24 @@ extension DetailViewController: UITableViewDelegate {
             let snippet = viewModel?.getSnippet(with: indexPath.row)
             viewModel = DetailViewControllerModel(snippet: snippet)
             loadData()
+        }
+
+        switch indexPath.section {
+        case 0:
+            if indexPath.row == 2 {
+                guard let commentDetailView = Bundle.main.loadNibNamed("CommentsDetailView", owner: self, options: nil)?.first as? CommentsDetailView else { return }
+                let origin = CGPoint(x: 0, y: 0)
+                let frame = tableView.contentSize
+                commentDetailView.frame = CGRect(origin: origin, size: frame)
+                if let comments = viewModel?.getComments() {
+                    commentDetailView.viewModel = CommentsDetailViewModel(comments: comments)
+                }
+                tableView.addSubview(commentDetailView)
+            }
+        case 1:
+            break
+        default:
+            break
         }
     }
 

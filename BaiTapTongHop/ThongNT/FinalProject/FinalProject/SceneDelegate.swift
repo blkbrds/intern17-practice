@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     var accsesToken: String?
-    let tabbarViewController = UITabBarController()
+    let tabbarController = UITabBarController()
 
     static var shared: SceneDelegate {
         guard let scene = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else {
@@ -49,11 +49,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func setRootView(with status: UserStatus) {
         switch status {
         case .logined:
-            let homeVC = HomeViewController()
-            let homeNavi = UINavigationController(rootViewController: homeVC)
-            window?.rootViewController = homeNavi
+            configTabbar()
+            window?.rootViewController = tabbarController
         case .logout:
             window?.rootViewController = LoginViewController()
         }
+    }
+
+    private func configTabbar() {
+        let homeVC = HomeViewController()
+        let homeNavi = UINavigationController(rootViewController: homeVC)
+        homeNavi.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "play"), tag: 0)
+
+        let viewControllers = [homeNavi]
+        tabbarController.setViewControllers(viewControllers, animated: true)
+        tabbarController.tabBar.isTranslucent = false
     }
 }
