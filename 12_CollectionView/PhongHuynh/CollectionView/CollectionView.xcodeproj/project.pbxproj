@@ -28,6 +28,10 @@
 		CBBE7F4B281A3E6F0064B44B /* Bai02CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE7F49281A3E6F0064B44B /* Bai02CollectionViewCell.xib */; };
 		CBBE7F53281A56A00064B44B /* TeamFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7F51281A569F0064B44B /* TeamFooterReusableView.swift */; };
 		CBBE7F54281A56A00064B44B /* TeamFooterReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE7F52281A569F0064B44B /* TeamFooterReusableView.xib */; };
+		CBE30E3B281B860600EF343F /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE30E39281B860600EF343F /* SliderTableViewCell.swift */; };
+		CBE30E3C281B860700EF343F /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE30E3A281B860600EF343F /* SliderTableViewCell.xib */; };
+		CBE30E40281B87F500EF343F /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE30E3E281B87F500EF343F /* HomeTableViewCell.swift */; };
+		CBE30E41281B87F500EF343F /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE30E3F281B87F500EF343F /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		CBBE7F49281A3E6F0064B44B /* Bai02CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai02CollectionViewCell.xib; sourceTree = "<group>"; };
 		CBBE7F51281A569F0064B44B /* TeamFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFooterReusableView.swift; sourceTree = "<group>"; };
 		CBBE7F52281A569F0064B44B /* TeamFooterReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamFooterReusableView.xib; sourceTree = "<group>"; };
+		CBE30E39281B860600EF343F /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
+		CBE30E3A281B860600EF343F /* SliderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderTableViewCell.xib; sourceTree = "<group>"; };
+		CBE30E3E281B87F500EF343F /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		CBE30E3F281B87F500EF343F /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,10 @@
 			children = (
 				CB768B08281B7F5800FA3255 /* Bai04ViewController.swift */,
 				CB768B09281B7F5800FA3255 /* Bai04ViewController.xib */,
+				CBE30E3E281B87F500EF343F /* HomeTableViewCell.swift */,
+				CBE30E3F281B87F500EF343F /* HomeTableViewCell.xib */,
+				CBE30E39281B860600EF343F /* SliderTableViewCell.swift */,
+				CBE30E3A281B860600EF343F /* SliderTableViewCell.xib */,
 			);
 			path = Bai04;
 			sourceTree = "<group>";
@@ -205,11 +217,13 @@
 				CBBE7F4B281A3E6F0064B44B /* Bai02CollectionViewCell.xib in Resources */,
 				CB42C67F2818F5FF0036D2C8 /* Assets.xcassets in Resources */,
 				CB42C699281900EF0036D2C8 /* TeamHeaderReusableView.xib in Resources */,
+				CBE30E3C281B860700EF343F /* SliderTableViewCell.xib in Resources */,
 				CBBE7F32281A38970064B44B /* Bai01ViewController.xib in Resources */,
 				CB768B0B281B7F5800FA3255 /* Bai04ViewController.xib in Resources */,
 				CB42C6942818F9940036D2C8 /* HomeCell.xib in Resources */,
 				CB42C68F2818F6240036D2C8 /* HomeViewController.xib in Resources */,
 				CBBE7F54281A56A00064B44B /* TeamFooterReusableView.xib in Resources */,
+				CBE30E41281B87F500EF343F /* HomeTableViewCell.xib in Resources */,
 				CBBE7F46281A3E350064B44B /* Bai02ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +237,7 @@
 			files = (
 				CB42C6762818F5FC0036D2C8 /* AppDelegate.swift in Sources */,
 				CBBE7F45281A3E350064B44B /* Bai02ViewController.swift in Sources */,
+				CBE30E40281B87F500EF343F /* HomeTableViewCell.swift in Sources */,
 				CB42C698281900EF0036D2C8 /* TeamHeaderReusableView.swift in Sources */,
 				CBBE7F53281A56A00064B44B /* TeamFooterReusableView.swift in Sources */,
 				CB42C6782818F5FC0036D2C8 /* SceneDelegate.swift in Sources */,
@@ -231,6 +246,7 @@
 				CB768B0A281B7F5800FA3255 /* Bai04ViewController.swift in Sources */,
 				CBBE7F4A281A3E6F0064B44B /* Bai02CollectionViewCell.swift in Sources */,
 				CBBE7F37281A39B90064B44B /* Bai01CollectionViewCell.swift in Sources */,
+				CBE30E3B281B860600EF343F /* SliderTableViewCell.swift in Sources */,
 				CB42C68E2818F6240036D2C8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
