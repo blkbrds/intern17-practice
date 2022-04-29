@@ -57,5 +57,4 @@ extension Bai04ViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension Bai04ViewController: UITableViewDelegate {
-    
 }

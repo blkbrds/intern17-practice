@@ -1,37 +1,46 @@
 import UIKit
 
 final class SliderTableViewCell: UITableViewCell {
-
+    
+    // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet weak var leftButton: UIButton!
-    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet private weak var leftButton: UIButton!
+    @IBOutlet private weak var rightButton: UIButton!
     
+    // MARK: - Properties
+    private var currentIndex: IndexPath = IndexPath(item: 0, section: 0) {
+        didSet {
+            currentIndex.item = currentIndex.item < 0 ? 0 : currentIndex.item
+            currentIndex.item = currentIndex.item > 19 ? 19 : currentIndex.item
+        }
+    }
     
-        override func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
         configCollectionView()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
-    func updateTableCell( imageLeftButton: String, imageRightButton: String) {
-        
-    }
     
-    func configCollectionView() {
+    // MARK: - Private funtions
+    private func configCollectionView() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-    @IBAction func leftButton(_ sender: Any) {
+    
+    // MARK: - IBActions
+    @IBAction private func leftButton(_ sender: Any) {
+        currentIndex.item -= 1
+        collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
     }
     
-    @IBAction func rightButton(_ sender: Any) {
-        configCollectionView()
+    @IBAction private func rightButton(_ sender: Any) {
+        currentIndex.item += 1
+        collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
     }
-    
 }
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegateFlowLayout

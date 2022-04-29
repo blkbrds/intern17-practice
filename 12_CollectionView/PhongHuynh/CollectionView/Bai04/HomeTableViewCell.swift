@@ -1,7 +1,8 @@
 import UIKit
 
 final class HomeTableViewCell: UITableViewCell {
-
+    
+    // MARK: - IBOutlets
     @IBOutlet private weak var collectionView2: UICollectionView!
     
     override func awakeFromNib() {
@@ -9,18 +10,19 @@ final class HomeTableViewCell: UITableViewCell {
         
         configCollectionView()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
     }
     
-    func configCollectionView() {
+    // MARK: - Private functions
+    private func configCollectionView() {
         collectionView2.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
         collectionView2.dataSource = self
         collectionView2.delegate = self
     }
-  
+    
 }
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegateFlowLayout

@@ -43,7 +43,7 @@
                             <constraint firstAttribute="width" constant="50" id="NXr-QE-CRf"/>
                             <constraint firstAttribute="height" constant="50" id="x0U-LG-7yt"/>
                         </constraints>
-                        <state key="normal" title="Button" image="next"/>
+                        <state key="normal" title="Button" image="back1-1"/>
                         <connections>
                             <action selector="rightButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OQp-gJ-j2I"/>
                         </connections>
@@ -70,7 +70,7 @@
     </objects>
     <resources>
         <image name="back1" width="256" height="256"/>
-        <image name="next" width="225" height="225"/>
+        <image name="back1-1" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
