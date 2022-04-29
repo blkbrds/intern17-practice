@@ -18,27 +18,45 @@ class BackgroundViewController: UIViewController {
     @IBOutlet weak var sliderBlue: UISlider!
     @IBOutlet weak var labelColor: UILabel!
     
+    var red: Float = 0.5
+    var blue: Float = 0.5
+    var green: Float = 0.5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+       
         // Do any additional setup after loading the view.
     }
+//    private func setUI() {
+//        let redSlider: Int = Int(red * 225)
+//        let greenSlider: Int = Int(green * 225)
+//        let blueSlider: Int = Int(blue * 225)
+//
+//        labelColor.text = "r: \(redSlider) , g: \(greenSlider), b: \(blueSlider)"
+//        bgrColor.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
+//
+//        sliderRed.text = "Red"
+//        sliderGreen.text = "Green"
+//        sliderBlue.text = "Blue"
+//    }
+    
+//    @IBAction func sliderChanged(_ sender: Any) {
+//
+//        let redValue = CGFloat(sliderRed.value)
+//        let greenValue = CGFloat(sliderGreen.value)
+//        let blueValue = CGFloat(sliderBlue.value)
+//        labelColor.text = "r:\(redValue), g:\(greenValue), b:\(blueValue)"
+//        bgrColor.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1)
+//    }
+    
     
     @IBAction func sliderChanged(_ sender: Any) {
-        let redValue = CGFloat(sliderRed.value)
-        let greenValue = CGFloat(sliderGreen.value)
-        let blueValue = CGFloat(sliderBlue.value)
+        
+        let redValue = CGFloat(sliderRed.value) / 255
+        let greenValue = CGFloat(sliderGreen.value) / 255
+        let blueValue = CGFloat(sliderBlue.value) / 255
         labelColor.text = "r:\(redValue), g:\(greenValue), b:\(blueValue)"
         bgrColor.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1)
-    }
-    @IBAction func sliderRedAction(_ sender: UISlider) {
-        
-    }
-
-    @IBAction func sliderGreenAction(_ sender: UISlider) {
-    }
-    
-    @IBAction func sliderBlueAction(_ sender: UISlider) {
     }
     
 }

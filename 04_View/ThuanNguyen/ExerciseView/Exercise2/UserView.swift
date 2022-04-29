@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserView: UIView {
+final class UserView: UIView {
     var avatarImageView: UIImageView?
     var nameLabel: UILabel?
     var markButton: UIButton?

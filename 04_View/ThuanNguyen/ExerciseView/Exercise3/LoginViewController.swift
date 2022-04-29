@@ -29,8 +29,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        
-        
     }
     private func setUpUI() {
         title = "Login"
@@ -40,7 +38,12 @@ class LoginViewController: UIViewController {
         btnClear.layer.masksToBounds = true
         txtUsername.delegate = self
         txtPassword.delegate = self
-        txtPassword.text
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBAction func loginActionTouchUpInside(_ sender: UIButton) {

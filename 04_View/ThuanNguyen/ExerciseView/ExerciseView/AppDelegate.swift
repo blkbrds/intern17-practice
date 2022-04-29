@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         
-        let homeViewController = MonkeyViewController()
+        let homeViewController = LoginViewController()
         window?.rootViewController = homeViewController
         
         return true

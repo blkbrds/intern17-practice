@@ -13,6 +13,7 @@ class Monkey1ViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.alpha = 0
         label.layer.borderWidth = 1
         label.backgroundColor = .darkGray
         label.layer.cornerRadius = 10

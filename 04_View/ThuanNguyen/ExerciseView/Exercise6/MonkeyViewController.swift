@@ -7,11 +7,10 @@
 
 import UIKit
 
-class MonkeyViewController: UIViewController {
+final class MonkeyViewController: UIViewController {
 
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet private weak var image: UIImageView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +27,8 @@ class MonkeyViewController: UIViewController {
 
     @objc func handlePinGesture(recognizer: UIPinchGestureRecognizer) {
         guard let view = recognizer.view, recognizer.scale >= 0.5 && recognizer.scale <= 2.0 else { return }
-        view.transform = view.transform.scaledBy(x: recognizer.scale, y: recognizer.scale)
+        let transform = CGAffineTransform(scaleX: recognizer.scale, y: recognizer.scale)
+        view.transform = transform
     }
     
     @objc func handleRotaGesture(recognizer: UIRotationGestureRecognizer) {
