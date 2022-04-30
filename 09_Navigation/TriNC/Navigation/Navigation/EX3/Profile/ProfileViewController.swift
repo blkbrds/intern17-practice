@@ -19,10 +19,10 @@ final class ProfileViewController: UIViewController {
     @IBOutlet private weak var nameTextField: UITextField!
     
     // MARK: - Properties
+    weak var delegate: ProfileViewControllerDelegate?
     var username: String = ""
     var userImage: UIImage?
     var index: Int = 0
-    weak var delegate: ProfileViewControllerDelegate?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -41,9 +41,9 @@ final class ProfileViewController: UIViewController {
     
     // MARK: - Objc
     @objc private func doneActionBackHome() {
-        guard let delegate = delegate else { return }
-        delegate.controller(self, needsPerform: .changeNameUser(username: username, index: index))
-        self.navigationController?.popToRootViewController(animated: true)
+        guard let newUserName = nameTextField.text , let delegate = delegate else { return }
+        delegate.controller(self, needsPerform: .changeNameUser(username: newUserName, index: index))
+        navigationController?.popViewController(animated: true)
     }
 }
 

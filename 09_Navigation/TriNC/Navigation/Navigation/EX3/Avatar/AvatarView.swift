@@ -16,12 +16,12 @@ protocol AvatarViewDelegate: class {
 final class AvatarView: UIView {
     
     // MARK: - Properties
-    var name: String = "Avatar"
+    weak var delegate: AvatarViewDelegate?
+    var name: String = ""
     var index: Int = 0
     var userAvatarImageView: UIImageView = UIImageView()
     var usernameLabel: UILabel = UILabel()
     var button: UIButton = UIButton()
-    weak var delegate: AvatarViewDelegate?
     
     // MARK: - Life cycle
     override init(frame: CGRect) {
@@ -58,7 +58,7 @@ final class AvatarView: UIView {
     // MARK: - Objc
     @objc private func didClickButton() {
         guard let delegate = delegate else { return }
-        delegate.view(self, needsPerform: .tap(nameLabel: usernameLabel.text ?? "", nameImage: userAvatarImageView.image, index: index))
+        delegate.view(self, needsPerform: .tap(userNameLabel: usernameLabel.text ?? "", userImage: userAvatarImageView.image, index: index))
     }
 
     required init?(coder: NSCoder) {
@@ -70,6 +70,6 @@ final class AvatarView: UIView {
 extension AvatarView {
     // MARK: - Enum
     enum Action {
-        case tap(nameLabel: String, nameImage: UIImage?, index: Int)
+        case tap(userNameLabel: String, userImage: UIImage?, index: Int)
     }
 }

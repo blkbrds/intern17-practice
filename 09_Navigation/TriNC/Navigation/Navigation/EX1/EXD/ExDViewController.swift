@@ -18,20 +18,20 @@ final class ExDViewController: UIViewController {
     // MARK: - IBActions
     @IBAction private func nextButtonTouchUpinside(_ sender: Any) {
         let vc = ExEViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction private func cButtonTouchUpInside(_ sender: Any) {
         guard let vc = (self.navigationController?.viewControllers[2]) else { return }
-        self.navigationController?.popToViewController(vc, animated: true)
+        navigationController?.popToViewController(vc, animated: true)
     }
     
     @IBAction private func bButtonTouchUpInside(_ sender: Any) {
         guard let vc = (self.navigationController?.viewControllers[1]) else { return }
-        self.navigationController?.popToViewController(vc, animated: true)
+        navigationController?.popToViewController(vc, animated: true)
     }
     
     @IBAction private func rootButtonTouchUpInside(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

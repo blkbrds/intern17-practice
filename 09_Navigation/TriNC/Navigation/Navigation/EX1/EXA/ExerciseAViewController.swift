@@ -18,6 +18,6 @@ final class ExerciseAViewController: UIViewController {
     // MARK: - IBAction
     @IBAction private func nextTouchUpInside(_ sender: Any) {
         let vc = ExBViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -19,13 +19,7 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-    
-    // MARK: - Touch
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
+        
     // MARK: - Private Functions
     private func setupUI() {
         title = "Login"
@@ -38,6 +32,7 @@ final class LoginViewController: UIViewController {
         navigationItem.rightBarButtonItem = doneBarButtonItem
     }
         
+    // MARK: - Objc
     @objc private func doneAction() {
         guard let username = usernameTextField.text, let password = passwordTextField.text, !username.isEmpty, !password.isEmpty else {
             notificationLabel.text = "Please enter data"
@@ -53,15 +48,11 @@ final class LoginViewController: UIViewController {
             notificationLabel.text = "Wrong username or password"
         }
     }
-}
-
-// MARK: - Extention UITextFieldDelegate
-extension LoginViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == usernameTextField {
-            passwordTextField.becomeFirstResponder()
-        }
-        return true
+    
+    // MARK: - Touch Event
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 }
 
@@ -73,5 +64,15 @@ extension LoginViewController: HomeViewControllerDelegate {
             usernameTextField.text = ""
             passwordTextField.text = ""
         }
+    }
+}
+
+// MARK: - Extention UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        }
+        return true
     }
 }

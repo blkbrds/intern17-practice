@@ -42,7 +42,7 @@ final class EditViewController: UIViewController {
     
     // MARK: - Objc
     @objc private func cancelAction() {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     @objc private func doneAction() {
@@ -50,7 +50,7 @@ final class EditViewController: UIViewController {
         if let delegate = delegate {
             delegate.didTapEditViewController(view: self, needsPeform: .tapDone(username: username))
         }
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }
 
