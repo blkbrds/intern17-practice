@@ -69,7 +69,7 @@ final class Ga: Chim {
 final class Vit: Chim, Ca, Thu {
     var isBay: Bool { return true }
     var isBoi: Bool { return true }
-    var isDi: Bool { return true}
+    var isDi: Bool { return true }
     func ten() -> String {
         return "VitDonan"
     }
@@ -113,7 +113,7 @@ enum Allanimals {
         var boiDis: [DongVat] = []
         var bietCa3s: [DongVat] = []
         var biet1Trong3s: [DongVat] = []
-        
+
         switch self {
         case .bietBay:
             for animal in arrAnimals {
@@ -122,7 +122,7 @@ enum Allanimals {
                 }
             }
             return bietBays
-            
+
         case .bietBoi:
             for animal in arrAnimals {
                 if animal is Ca {
@@ -130,7 +130,7 @@ enum Allanimals {
                 }
             }
             return bietBois
-            
+
         case .bietDi:
             for animal in arrAnimals {
                 if animal is Thu {
@@ -138,31 +138,31 @@ enum Allanimals {
                 }
             }
             return bietDis
-         
+
         case .bayBoi:
             for animal in arrAnimals {
-                if animal is Chim {
+                if animal is Chim && animal is Ca  {
                     bayBois.append(animal)
                 }
             }
             return bayBois
-            
+
         case .diBay:
             for animal in arrAnimals {
-                if animal is Chim {
+                if animal is Chim && animal is Thu {
                     diBays.append(animal)
                 }
             }
             return diBays
-            
+
         case .boiDi:
             for animal in arrAnimals {
-                if animal is Ca {
+                if animal is Ca && animal is Thu {
                     boiDis.append(animal)
                 }
             }
             return boiDis
-            
+
         case .bietCa3:
             for animal in arrAnimals {
                 if animal is Chim && animal is Ca && animal is Thu {
@@ -170,7 +170,7 @@ enum Allanimals {
                 }
             }
             return bietCa3s
-            
+
         case .biet1Trong3:
             for animal in arrAnimals {
                 if animal is Chim || animal is Ca || animal is Thu {
