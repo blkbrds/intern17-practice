@@ -19,7 +19,7 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-        
+  
     // MARK: - Private Functions
     private func setupUI() {
         title = "Login"
@@ -32,6 +32,7 @@ final class LoginViewController: UIViewController {
         navigationItem.rightBarButtonItem = doneBarButtonItem
     }
         
+
     // MARK: - Objc
     @objc private func doneAction() {
         guard let username = usernameTextField.text, let password = passwordTextField.text, !username.isEmpty, !password.isEmpty else {
@@ -39,7 +40,8 @@ final class LoginViewController: UIViewController {
             return
         }
         
-        if DataManager.checkData(userName: username, password: password) {
+
+        if DataManager.checkData(username: username, password: password) {
             let vc = HomeViewController()
             vc.delegate = self
             vc.username = username
@@ -48,22 +50,12 @@ final class LoginViewController: UIViewController {
             notificationLabel.text = "Wrong username or password"
         }
     }
+
     
     // MARK: - Touch Event
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
-    }
-}
-
-// MARK: - Implement Protocol
-extension LoginViewController: HomeViewControllerDelegate {
-    func homeController(view: HomeViewController, needsPerform action: HomeViewController.Action) {
-        switch action {
-        case .logout:
-            usernameTextField.text = ""
-            passwordTextField.text = ""
-        }
     }
 }
 
@@ -76,3 +68,15 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
 }
+
+// MARK: - Implement HomeProtocol
+extension LoginViewController: HomeViewControllerDelegate {
+    func homeController(view: HomeViewController, needsPerform action: HomeViewController.Action) {
+        switch action {
+        case .logout:
+            usernameTextField.text = ""
+            passwordTextField.text = ""
+        }
+    }
+}
+

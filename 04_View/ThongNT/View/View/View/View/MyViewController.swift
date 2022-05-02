@@ -20,8 +20,10 @@ final class MyViewController: UIViewController {
         view.subviews
             .compactMap { $0 as? UIButton }
             .forEach { configButton($0) }
-        
         self.title = "View"
+        
+        let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
+        navigationItem.rightBarButtonItem = logoutButton
     }
     
     private func configButton(_ button: UIButton) {
@@ -31,6 +33,10 @@ final class MyViewController: UIViewController {
         button.clipsToBounds = true
         button.layer.cornerRadius = 10
         button.frame.size = CGSize(width: 150, height: 90)
+    }
+    
+    @objc private func logout() {
+        SceneDelegate.shared.changeFlow(with: .logout)
     }
     
     @IBAction private func buttonTouchUpInSide(_ sender: UIButton) {

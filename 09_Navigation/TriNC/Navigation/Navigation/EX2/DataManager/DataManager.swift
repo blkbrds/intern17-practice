@@ -8,13 +8,13 @@
 import Foundation
 
 final class DataManager {
-    
     // MARK: - Function
-    static func checkData(userName: String, password: String) -> Bool {
+    static func checkData(username: String, password: String) -> Bool {
         if let path = Bundle.main.path(forResource: "User", ofType: "plist"),
            let myDict = NSDictionary(contentsOfFile: path) {
             for dict in myDict {
-                if dict.key as! String == userName {
+                if dict.key as! String == username {
+
                     return dict.value as! String == password
                 }
             }
