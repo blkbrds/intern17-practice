@@ -23,6 +23,8 @@ final class Exersice10ViewController: UIViewController {
     var sortedContacts: [String: [Contact]] = [:]
     var keys: [String] = []
     
+    var tempArr: [String: [Contact]] = [:]
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,7 @@ final class Exersice10ViewController: UIViewController {
     
     private func setupData() {
         fetchContacts()
+        tempArr = sortedContacts
     }
     
     // MARK: - Fetch Data
@@ -99,12 +102,13 @@ extension Exersice10ViewController: UITableViewDelegate, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let tableLabel = UILabel(frame: CGRect(x: 30, y: 0, width: 200, height: 50))
+        //let tableLabel = UILabel(frame: CGRect(x: 30, y: 0, width: 200, height: 50))
         let key = keys[indexPath.section]
         let contacts = sortedContacts[key] ?? []
         let contact = contacts[indexPath.row]
-        tableLabel.text = contact.name
-        cell.addSubview(tableLabel)
+        //tableLabel.text = contact.name
+        //cell.addSubview(tableLabel)
+        cell.textLabel?.text = contact.name
         return cell
     }
     
@@ -120,5 +124,43 @@ extension Exersice10ViewController: UITableViewDelegate, UITableViewDataSource, 
         return index
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {}
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            sortedContacts = tempArr
+        } else {
+            sortedContacts.removeAll()
+            
+            var namesArray = [Contact]()
+            
+            for (_, value) in tempArr {
+                namesArray += value
+            }
+            
+            let namesFilteredArray = namesArray.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+            
+            for filteredName in namesFilteredArray {
+                let letter = keys.first!
+                if sortedContacts[String(letter)] != nil {
+                    sortedContacts[String(letter)]?.append(filteredName)
+                } else {
+                    sortedContacts[String(letter)] = [filteredName]
+                }
+            }
+        }
+        tableView.reloadData()
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
