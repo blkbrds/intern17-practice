@@ -11,11 +11,11 @@ import UIKit
 final class User {
     
     // MARK: - Properties
-    var name: String
+    var number: String
     
     // init
-    init(name: String) {
-        self.name = name
+    init(number: String) {
+        self.number = number
     }
 }
 
@@ -24,7 +24,7 @@ extension User {
     static func getDummyData() -> [User] {
         var users: [User] = []
         for i in 0...49 {
-            let user = User(name: "\(i)")
+            let user = User(number: "\(i)")
             users.append(user)
         }
         return users
@@ -66,11 +66,10 @@ extension Ex1ViewController: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Ex1Cell
-        let item = users[indexPath.row]
-        cell.numberLabel.text = item.name
+        let items = users[indexPath.row]
+        cell.numberLabel.text = items.number
         return cell
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: Config.screenWidth, height: Config.screenHeight)

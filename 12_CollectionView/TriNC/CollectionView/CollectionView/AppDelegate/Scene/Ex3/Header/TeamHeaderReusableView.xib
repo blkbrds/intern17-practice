@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="TeamHeaderReusableView" customModule="CollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XUF-5O-nM4">
+                    <rect key="frame" x="10" y="82" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Lyj-sw-bRz"/>
+                        <constraint firstAttribute="height" constant="60" id="U78-Ma-Rga"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIT-2f-3Uo">
+                    <rect key="frame" x="82" y="99.5" width="80" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="k2I-Ja-ThE"/>
+                        <constraint firstAttribute="width" constant="80" id="n5u-E9-F0a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <color key="textColor" systemColor="systemOrangeColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <color key="backgroundColor" systemColor="systemTealColor"/>
+            <constraints>
+                <constraint firstItem="CIT-2f-3Uo" firstAttribute="centerY" secondItem="VXr-Tz-HHm" secondAttribute="centerY" id="ADm-ZA-cQ8"/>
+                <constraint firstItem="XUF-5O-nM4" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="Vw6-4W-Q8e"/>
+                <constraint firstItem="XUF-5O-nM4" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" constant="22" id="kFD-25-Axi"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="CIT-2f-3Uo" secondAttribute="trailing" constant="200" id="lpw-Es-mxt"/>
+            </constraints>
+            <connections>
+                <outlet property="teamAvatarImageView" destination="XUF-5O-nM4" id="u1f-FG-yWy"/>
+                <outlet property="teamNameLabel" destination="CIT-2f-3Uo" id="uQE-KV-YTt"/>
+            </connections>
+            <point key="canvasLocation" x="-28.985507246376812" y="151.33928571428569"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

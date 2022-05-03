@@ -9,8 +9,10 @@ import UIKit
 
 final class Ex2Cell: UICollectionViewCell {
     
+    // MARK: - Identifier
     static let identifier = "Ex2Cell"
     
+    // MARK: - Properties
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -18,6 +20,7 @@ final class Ex2Cell: UICollectionViewCell {
         return imageView
     }()
     
+    // MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(imageView)

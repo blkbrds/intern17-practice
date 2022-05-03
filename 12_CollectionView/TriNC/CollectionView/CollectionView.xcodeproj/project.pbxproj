@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223F17C52820C5F9009BD6F2 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F17C42820C5F9009BD6F2 /* Member.swift */; };
+		223F17CB2820C916009BD6F2 /* TeamHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F17C92820C916009BD6F2 /* TeamHeaderReusableView.swift */; };
+		223F17CC2820C916009BD6F2 /* TeamHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223F17CA2820C916009BD6F2 /* TeamHeaderReusableView.xib */; };
+		223F17CF2820CBA8009BD6F2 /* TeamFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F17CD2820CBA8009BD6F2 /* TeamFooterReusableView.swift */; };
+		223F17D02820CBA8009BD6F2 /* TeamFooterReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223F17CE2820CBA8009BD6F2 /* TeamFooterReusableView.xib */; };
+		223F17D42820CC4A009BD6F2 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F17D22820CC4A009BD6F2 /* HeroCell.swift */; };
+		223F17D52820CC4A009BD6F2 /* HeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223F17D32820CC4A009BD6F2 /* HeroCell.xib */; };
 		224BB70F281F7C110018D3EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB70E281F7C110018D3EF /* AppDelegate.swift */; };
 		224BB711281F7C110018D3EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB710281F7C110018D3EF /* SceneDelegate.swift */; };
 		224BB718281F7C130018D3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224BB717281F7C130018D3EF /* Assets.xcassets */; };
@@ -27,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		223F17C42820C5F9009BD6F2 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		223F17C92820C916009BD6F2 /* TeamHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHeaderReusableView.swift; sourceTree = "<group>"; };
+		223F17CA2820C916009BD6F2 /* TeamHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamHeaderReusableView.xib; sourceTree = "<group>"; };
+		223F17CD2820CBA8009BD6F2 /* TeamFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFooterReusableView.swift; sourceTree = "<group>"; };
+		223F17CE2820CBA8009BD6F2 /* TeamFooterReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamFooterReusableView.xib; sourceTree = "<group>"; };
+		223F17D22820CC4A009BD6F2 /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		223F17D32820CC4A009BD6F2 /* HeroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCell.xib; sourceTree = "<group>"; };
 		224BB70B281F7C110018D3EF /* CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224BB70E281F7C110018D3EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		224BB710281F7C110018D3EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +73,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		223F17C62820C8E2009BD6F2 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				223F17C92820C916009BD6F2 /* TeamHeaderReusableView.swift */,
+				223F17CA2820C916009BD6F2 /* TeamHeaderReusableView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		223F17C72820C8E8009BD6F2 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				223F17CD2820CBA8009BD6F2 /* TeamFooterReusableView.swift */,
+				223F17CE2820CBA8009BD6F2 /* TeamFooterReusableView.xib */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		223F17C82820C8ED009BD6F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				223F17C42820C5F9009BD6F2 /* Member.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		223F17D12820CC33009BD6F2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				223F17D22820CC4A009BD6F2 /* HeroCell.swift */,
+				223F17D32820CC4A009BD6F2 /* HeroCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		224BB702281F7C110018D3EF = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +189,10 @@
 		224BB72B281F7D320018D3EF /* Ex3 */ = {
 			isa = PBXGroup;
 			children = (
+				223F17C82820C8ED009BD6F2 /* Model */,
+				223F17C72820C8E8009BD6F2 /* Footer */,
+				223F17C62820C8E2009BD6F2 /* Header */,
+				223F17D12820CC33009BD6F2 /* Cell */,
 				224BB735281F7D900018D3EF /* Ex3ViewController.swift */,
 				224BB736281F7D900018D3EF /* Ex3ViewController.xib */,
 			);
@@ -233,11 +286,14 @@
 				224BB71B281F7C130018D3EF /* LaunchScreen.storyboard in Resources */,
 				224BB738281F7D900018D3EF /* Ex3ViewController.xib in Resources */,
 				224BB745281F83E90018D3EF /* Ex1Cell.xib in Resources */,
+				223F17D52820CC4A009BD6F2 /* HeroCell.xib in Resources */,
 				224BB718281F7C130018D3EF /* Assets.xcassets in Resources */,
 				224BB734281F7D880018D3EF /* Ex2ViewController.xib in Resources */,
 				224BB728281F7CF00018D3EF /* HomeViewController.xib in Resources */,
 				224BB73C281F7D980018D3EF /* Ex4ViewController.xib in Resources */,
 				224BB730281F7D800018D3EF /* Ex1ViewController.xib in Resources */,
+				223F17CC2820C916009BD6F2 /* TeamHeaderReusableView.xib in Resources */,
+				223F17D02820CBA8009BD6F2 /* TeamFooterReusableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +305,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				224BB733281F7D880018D3EF /* Ex2ViewController.swift in Sources */,
+				223F17D42820CC4A009BD6F2 /* HeroCell.swift in Sources */,
 				224BB70F281F7C110018D3EF /* AppDelegate.swift in Sources */,
+				223F17CB2820C916009BD6F2 /* TeamHeaderReusableView.swift in Sources */,
+				223F17CF2820CBA8009BD6F2 /* TeamFooterReusableView.swift in Sources */,
 				224BB74C281F95A20018D3EF /* Ex2Cell.swift in Sources */,
 				224BB711281F7C110018D3EF /* SceneDelegate.swift in Sources */,
 				224BB737281F7D900018D3EF /* Ex3ViewController.swift in Sources */,
@@ -257,6 +316,7 @@
 				224BB73B281F7D980018D3EF /* Ex4ViewController.swift in Sources */,
 				224BB744281F83E90018D3EF /* Ex1Cell.swift in Sources */,
 				224BB72F281F7D800018D3EF /* Ex1ViewController.swift in Sources */,
+				223F17C52820C5F9009BD6F2 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
