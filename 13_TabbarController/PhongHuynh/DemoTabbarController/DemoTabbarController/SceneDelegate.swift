@@ -1,31 +1,60 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
+    enum check {
+        case tabbar
+        case login
+    }
+    
+    static var shared: SceneDelegate {
+        guard let scene = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else {
+            fatalError("errol")
+        }
+        return scene
+    }
 
     var window: UIWindow?
+    let tabbarController = UITabBarController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        
+        setroot(with: .login)
+        window?.makeKeyAndVisible()
+    }
+    
+    func setTabbar() {
         let homeVC = HomeViewController()
         let homeNavi = UINavigationController(rootViewController: homeVC)
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
         let mapVC = MessagesViewController()
         let mapNavi = UINavigationController(rootViewController: mapVC)
         mapNavi.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), tag: 1)
+        mapNavi.tabBarItem.badgeValue = "99"
+        mapNavi.tabBarItem.badgeColor = .blue
         let favoriteVC = FriendsViewController()
         let favoriteNavi = UINavigationController(rootViewController: favoriteVC)
         favoriteNavi.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star"), tag: 2)
         let profileVC = ProfileViewController()
         let profileNavi = UINavigationController(rootViewController: profileVC)
         profileNavi.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), tag: 3)
-        let tabbarController = UITabBarController()
         tabbarController.setViewControllers([homeNavi, mapNavi, favoriteNavi, profileNavi], animated: true)
-        tabbarController.tabBar.tintColor = .red
-        window?.rootViewController = tabbarController
-        window?.makeKeyAndVisible()
+        tabbarController.tabBar.tintColor = .orange
+        UITabBar.appearance().barTintColor = UIColor.black
+    }
+    
+    func setroot(with set: check) {
+        switch set {
+        case .tabbar:
+            setTabbar()
+            window?.rootViewController = tabbarController
+        case .login:
+            let vc = Bai2LoginViewController()
+            let navi = UINavigationController(rootViewController: vc)
+            window?.rootViewController = navi
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

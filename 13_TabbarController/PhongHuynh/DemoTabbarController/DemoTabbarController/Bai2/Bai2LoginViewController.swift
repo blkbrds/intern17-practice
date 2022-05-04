@@ -29,14 +29,15 @@ class Bai2LoginViewController: UIViewController {
             showLabel.text = "Chua nhap gia tri"
             return
         }
-//        if DataManager.checkData(userName: userName, password: password) {
-//            let vc = Bai2HomeViewController()
-//            vc.userName = userName
-//            vc.delegate = self
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        } else {
-//            showLabel.text = "Sai username hoac password"
-//        }
+        if DataManager.checkData(userName: userName, password: password) {
+            let vc = Bai2HomeViewController()
+            vc.userName = userName
+            vc.delegate = self
+          //  SceneDelegate.shared.setroot(with: .login)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            showLabel.text = "Sai username hoac password"
+        }
     }
 }
 
@@ -44,7 +45,7 @@ extension Bai2LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passwordTextField.becomeFirstResponder()
         if textField.returnKeyType == .done {
-            rightAction()
+            SceneDelegate.shared.setroot(with: .tabbar)
         }
         return true
     }

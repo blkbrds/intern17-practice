@@ -17,7 +17,6 @@ class Bai2EditViewController: UIViewController {
     }
     
     // MARK: - Properties
-    var username: String?
     weak var delegate: Bai2EditViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -35,11 +34,9 @@ class Bai2EditViewController: UIViewController {
     }
     
     @objc private func rightAction() {
-     //   username = usernameTextField.text
         if let username = usernameTextField.text, let delegate = delegate {
             delegate.controller(view: self, needsPerfom: .tap(username: username))
         }
         self.navigationController?.popViewController(animated: true)
     }
-
 }

@@ -41,6 +41,7 @@ class Bai2HomeViewController: UIViewController {
     @objc private func rightAction() {
         let vc = Bai2EditViewController()
         vc.delegate = self
+        SceneDelegate.shared.setroot(with: .tabbar)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
