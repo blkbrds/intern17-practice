@@ -1,11 +1,13 @@
 import UIKit
 
-class Bai2LoginViewController: UIViewController {
+final class Bai2LoginViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var showLabel: UILabel!
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -15,7 +17,6 @@ class Bai2LoginViewController: UIViewController {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         passwordTextField.returnKeyType = .done
-       
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -41,6 +42,7 @@ class Bai2LoginViewController: UIViewController {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension Bai2LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passwordTextField.becomeFirstResponder()

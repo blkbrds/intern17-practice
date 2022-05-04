@@ -28,15 +28,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func setTabbar() {
         let homeVC = HomeViewController()
         let homeNavi = UINavigationController(rootViewController: homeVC)
-        homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+        homeNavi.tabBarItem = UITabBarItem(title: "Home",image: UIImage(systemName: "house"), tag: 0)
         let mapVC = MessagesViewController()
         let mapNavi = UINavigationController(rootViewController: mapVC)
-        mapNavi.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), tag: 1)
-        mapNavi.tabBarItem.badgeValue = "99"
-        mapNavi.tabBarItem.badgeColor = .blue
+        mapNavi.tabBarItem = UITabBarItem(title: "Map", image: #imageLiteral(resourceName: "icons8-instagram-30"), tag: 1)
         let favoriteVC = FriendsViewController()
         let favoriteNavi = UINavigationController(rootViewController: favoriteVC)
-        favoriteNavi.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star"), tag: 2)
+        favoriteNavi.tabBarItem = UITabBarItem(title: "Favorites", image: #imageLiteral(resourceName: "icons8-gmail-logo-30"), tag: 2)
+        favoriteNavi.tabBarItem.badgeValue = "99"
+        favoriteNavi.tabBarItem.badgeColor = .blue
         let profileVC = ProfileViewController()
         let profileNavi = UINavigationController(rootViewController: profileVC)
         profileNavi.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), tag: 3)
@@ -84,7 +84,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-

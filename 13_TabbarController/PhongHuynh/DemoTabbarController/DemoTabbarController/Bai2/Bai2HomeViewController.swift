@@ -1,10 +1,11 @@
 import UIKit
 
+// MARK: - Bai2HomeViewControllerDelegate
 protocol Bai2HomeViewControllerDelegate: class {
     func controller(view: Bai2HomeViewController, needsPerfom actions: Bai2HomeViewController.Action)
 }
 
-class Bai2HomeViewController: UIViewController {
+final class Bai2HomeViewController: UIViewController {
 
     // MARK: - Define
     enum Action {

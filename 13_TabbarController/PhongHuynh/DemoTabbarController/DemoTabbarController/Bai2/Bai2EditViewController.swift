@@ -5,8 +5,9 @@ protocol Bai2EditViewControllerDelegate: class {
     func controller(view: Bai2EditViewController, needsPerfom actions: Bai2EditViewController.Action)
 }
 
-class Bai2EditViewController: UIViewController {
+final class Bai2EditViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var newpasswordTextField: UITextField!
     @IBOutlet private weak var confirmpasswordTextField: UITextField!
@@ -29,6 +30,7 @@ class Bai2EditViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightButton
     }
     
+    // MARK: - Objc functions
     @objc private func leftAction() {
         self.navigationController?.popViewController(animated: true)
     }

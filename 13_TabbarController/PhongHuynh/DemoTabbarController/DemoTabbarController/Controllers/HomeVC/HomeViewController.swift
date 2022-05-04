@@ -1,6 +1,6 @@
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
    
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -8,5 +8,4 @@ class HomeViewController: UIViewController {
 
         title = "Home"
     }
-
 }
