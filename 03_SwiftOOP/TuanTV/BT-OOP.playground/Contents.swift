@@ -3,57 +3,57 @@ import UIKit
 //MARK: -BAI TAP 1
 class PhanSo {
     //MARK: prototype
-    var tuso: Int
-    var mauso: Int
-    init(tuso: Int, mauso: Int) {
-        self.tuso = tuso
-        self.mauso = mauso
+    var tuSo: Int
+    var mauSo: Int
+    init(tuSo: Int, mauSo: Int) {
+        self.tuSo = tuSo
+        self.mauSo = mauSo
     }
     //MARK: function
     func congHaiPhanSo(_ phanSo1: PhanSo, _ phanSo2: PhanSo) -> PhanSo? {
-        if phanSo1.mauso != 0 && phanSo2.mauso != 0 {
-            self.tuso = phanSo1.tuso * phanSo2.mauso + phanSo2.tuso * phanSo1.mauso
-            self.mauso = phanSo1.mauso * phanSo2.mauso
-            return PhanSo(tuso: self.tuso , mauso: self.mauso)
+        if phanSo1.mauSo != 0 && phanSo2.mauSo != 0 {
+            self.tuSo = phanSo1.tuSo * phanSo2.mauSo + phanSo2.tuSo * phanSo1.mauSo
+            self.mauSo = phanSo1.mauSo * phanSo2.mauSo
+            return PhanSo(tuSo: self.tuSo , mauSo: self.mauSo)
         }
         return nil
     }
     
     func truHaiPhanSo(_ phanSo1: PhanSo, _ phanSo2: PhanSo) -> PhanSo? {
-        if phanSo1.mauso != 0 && phanSo2.mauso != 0 {
-            self.tuso = phanSo1.tuso * phanSo2.mauso - phanSo2.tuso * phanSo1.mauso
-            self.mauso = phanSo1.mauso * phanSo2.mauso
-            return PhanSo(tuso: self.tuso , mauso: self.mauso)
+        if phanSo1.mauSo != 0 && phanSo2.mauSo != 0 {
+            self.tuSo = phanSo1.tuSo * phanSo2.mauSo - phanSo2.tuSo * phanSo1.mauSo
+            self.mauSo = phanSo1.mauSo * phanSo2.mauSo
+            return PhanSo(tuSo: self.tuSo , mauSo: self.mauSo)
         }
         return nil
     }
     
     func nhanHaiPhanSo(_ phanSo1: PhanSo, _ phanSo2: PhanSo) -> PhanSo? {
-        if phanSo1.mauso != 0 && phanSo2.mauso != 0 {
-            self.tuso = phanSo1.tuso * phanSo2.tuso
-            self.mauso = phanSo1.mauso * phanSo2.mauso
-            return PhanSo(tuso: self.tuso , mauso: self.mauso)
+        if phanSo1.mauSo != 0 && phanSo2.mauSo != 0 {
+            self.tuSo = phanSo1.tuSo * phanSo2.tuSo
+            self.mauSo = phanSo1.mauSo * phanSo2.mauSo
+            return PhanSo(tuSo: self.tuSo , mauSo: self.mauSo)
         }
         return nil
     }
     
     func chiaHaiPhanSo(_ phanSo1: PhanSo, _ phanSo2: PhanSo) -> PhanSo? {
-        if phanSo1.mauso != 0 && phanSo2.mauso != 0 {
-            self.tuso = phanSo1.tuso * phanSo2.mauso
-            self.mauso = phanSo1.mauso * phanSo2.tuso
-            return PhanSo(tuso: self.tuso , mauso: self.mauso)
+        if phanSo1.mauSo != 0 && phanSo2.mauSo != 0 {
+            self.tuSo = phanSo1.tuSo * phanSo2.mauSo
+            self.mauSo = phanSo1.mauSo * phanSo2.tuSo
+            return PhanSo(tuSo: self.tuSo , mauSo: self.mauSo)
         }
         return nil
     }
     
     func inPhanSo() -> String {
-        print(tuso, "/", mauso)
-        return "\(tuso) / \(mauso)"
+        print(tuSo, "/", mauSo)
+        return "\(tuSo) / \(mauSo)"
     }
     
     func uSCLN(phanSo: PhanSo) -> Int {
-        var a = abs(phanSo.tuso)
-        var b = abs(phanSo.mauso)
+        var a = abs(phanSo.tuSo)
+        var b = abs(phanSo.mauSo)
         if b != 0 {
             if (a == 0) {
                 return a + b
@@ -72,12 +72,12 @@ class PhanSo {
     
     func rutGonPhanSo(phanSo: PhanSo) -> PhanSo {
         let a = uSCLN(phanSo: phanSo)
-        return PhanSo(tuso: phanSo.tuso / a, mauso: phanSo.mauso / a)
+        return PhanSo(tuSo: phanSo.tuSo / a, mauSo: phanSo.mauSo / a)
     }
     
     func dinhGiaTri(phanSo: PhanSo) -> Float {
         var result: Float = 0
-        result = Float(phanSo.tuso) / Float(phanSo.mauso)
+        result = Float(phanSo.tuSo) / Float(phanSo.mauSo)
         return result
         
     }
@@ -110,9 +110,9 @@ class PhanSo {
         print("tich 2 phan so = " + rutGonPhanSo(phanSo: thuong).inPhanSo())
     }
 }
-var phanso = PhanSo.init(tuso: 1, mauso: 1)
+var phanSo = PhanSo.init(tuSo: 1, mauSo: 1)
 
-phanso.test(phanSo1: PhanSo(tuso: 1, mauso: 2), phanSo2: PhanSo(tuso: 3, mauso: 4))
+phanSo.test(phanSo1: PhanSo(tuSo: 1, mauSo: 2), phanSo2: PhanSo(tuSo: 3, mauSo: 4))
 
 
 

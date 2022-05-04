@@ -8,14 +8,15 @@ class DaGiac {
         self.soCanhDaGiac = n
         self.mangDoLonCanhDaGiac = Array(mangDoLon[0..<n])
     }
-    func tinhChuVi() -> Int{
+    
+    func tinhChuVi() -> Int {
         var chuVi: Int = 0
         for doLonCanh in mangDoLonCanhDaGiac {
             chuVi = chuVi + doLonCanh
         }
         return chuVi
-        
     }
+    
     func inGiaTriCacCanh(){
         for (index,doLonCanh) in mangDoLonCanhDaGiac.enumerated() {
             print("do lon cua canh thu \(index) = \(doLonCanh)")
@@ -23,7 +24,7 @@ class DaGiac {
     }
 }
 
-DaGiac.init(n: 3, mangDoLon: [1,2,3]).inGiaTriCacCanh()
+DaGiac.init(n: 3, mangDoLon: [1, 2, 3]).inGiaTriCacCanh()
 
 //MARK: -BAI TAP 3 & 4
 class TamGiac: DaGiac {
@@ -35,12 +36,9 @@ class TamGiac: DaGiac {
     
     func inCacCanhTamGiacPitago(dsTamGiac: [TamGiac]) {
         for tamGiac in dsTamGiac {
-            var canhA = 0
-            var canhB = 0
-            var canhC = 0
-            canhA = tamGiac.mangDoLonCanhDaGiac[0]
-            canhB = tamGiac.mangDoLonCanhDaGiac[1]
-            canhC = tamGiac.mangDoLonCanhDaGiac[2]
+            let canhA = tamGiac.mangDoLonCanhDaGiac[0]
+            let canhB = tamGiac.mangDoLonCanhDaGiac[1]
+            let canhC = tamGiac.mangDoLonCanhDaGiac[2]
             if canhA * canhA == canhB * canhB + canhC * canhC ||
                 canhB * canhB == canhA * canhA + canhC * canhC ||
                 canhC * canhC == canhA * canhA + canhB * canhB {
@@ -50,9 +48,8 @@ class TamGiac: DaGiac {
             }
         }
     }
-    
 }
-TamGiac(n: 3, mangDoLon: [1,2,3]).inCacCanhTamGiacPitago(dsTamGiac: [TamGiac(n: 3, mangDoLon: [1,2,3]), TamGiac(n: 3, mangDoLon: [3,4,5]), TamGiac(n: 3, mangDoLon: [1,2,1])])
+TamGiac(n: 3, mangDoLon: [1, 2, 3]).inCacCanhTamGiacPitago(dsTamGiac: [TamGiac(n: 3, mangDoLon: [1, 2, 3]), TamGiac(n: 3, mangDoLon: [3, 4, 5]), TamGiac(n: 3, mangDoLon: [1, 2, 1])])
 
 //MARK: -BAI TAP 5
 class CStack {
@@ -66,11 +63,11 @@ class CStack {
     }
     
     func isEmpty() -> Bool {
-        return top == 0 ? true : false
+        return top == 0
     }
     
     func isFull() -> Bool {
-        return top == size ? true : false
+        return top == size
     }
     
     func push(item: Int) {
@@ -147,7 +144,7 @@ class TamGiac1: HaiChieu {
         return canhA + canhB + canhC
     }
     override func tinhDienTich() -> Float {
-        var chuVi = tinhChuVi()
+        let chuVi = tinhChuVi()
         return sqrtf(chuVi * (chuVi - canhA) * (chuVi - canhB) * (chuVi - canhC))
     }
 }
@@ -172,7 +169,7 @@ class HinhCau: BaChieu {
         return 4 / 3 * pi * banKinh * banKinh * banKinh
     }
 }
-class HinhlapPhuong: BaChieu {
+class HinhLapPhuong: BaChieu {
     var canh: Float
     init(canh: Float) {
         self.canh = canh
