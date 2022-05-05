@@ -1,6 +1,6 @@
 import UIKit
 
-final class Bai2LoginViewController: UIViewController {
+final class Bai2LoginViewController: BaseViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
