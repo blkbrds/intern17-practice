@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB028CC928237434002D1163 /* NetWorkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB028CC728237434002D1163 /* NetWorkingViewController.swift */; };
+		CB028CCA28237434002D1163 /* NetWorkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB028CC828237434002D1163 /* NetWorkingViewController.xib */; };
+		CB028CCF282374B0002D1163 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB028CCD282374B0002D1163 /* HomeCell.swift */; };
+		CB028CD0282374B0002D1163 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB028CCE282374B0002D1163 /* HomeCell.xib */; };
+		CB028CD728238805002D1163 /* Data.Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB028CD628238805002D1163 /* Data.Ext.swift */; };
 		CB7D1DDA2822772C00150409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D1DD92822772C00150409 /* AppDelegate.swift */; };
 		CB7D1DDC2822772C00150409 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D1DDB2822772C00150409 /* SceneDelegate.swift */; };
 		CB7D1DE32822772E00150409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7D1DE22822772E00150409 /* Assets.xcassets */; };
@@ -30,9 +35,16 @@
 		CB7D1E3D2822868100150409 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D1E3C2822868100150409 /* LoginViewModel.swift */; };
 		CB7D1E402822879F00150409 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D1E3F2822879F00150409 /* DataManager.swift */; };
 		CB7D1E4328228A4700150409 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D1E4228228A4700150409 /* HomeViewModel.swift */; };
+		CBFB78172823AD0A00DEA8E8 /* Bai1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFB78152823AD0A00DEA8E8 /* Bai1ViewController.swift */; };
+		CBFB78182823AD0A00DEA8E8 /* Bai1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBFB78162823AD0A00DEA8E8 /* Bai1ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB028CC728237434002D1163 /* NetWorkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkingViewController.swift; sourceTree = "<group>"; };
+		CB028CC828237434002D1163 /* NetWorkingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetWorkingViewController.xib; sourceTree = "<group>"; };
+		CB028CCD282374B0002D1163 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		CB028CCE282374B0002D1163 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		CB028CD628238805002D1163 /* Data.Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.Ext.swift; sourceTree = "<group>"; };
 		CB7D1DD62822772C00150409 /* API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7D1DD92822772C00150409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB7D1DDB2822772C00150409 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +70,8 @@
 		CB7D1E3C2822868100150409 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CB7D1E3F2822879F00150409 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CB7D1E4228228A4700150409 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CBFB78152823AD0A00DEA8E8 /* Bai1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai1ViewController.swift; sourceTree = "<group>"; };
+		CBFB78162823AD0A00DEA8E8 /* Bai1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai1ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB028CC6282373EE002D1163 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				CB028CC728237434002D1163 /* NetWorkingViewController.swift */,
+				CB028CC828237434002D1163 /* NetWorkingViewController.xib */,
+				CB028CCD282374B0002D1163 /* HomeCell.swift */,
+				CB028CCE282374B0002D1163 /* HomeCell.xib */,
+				CB028CD628238805002D1163 /* Data.Ext.swift */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
 		CB7D1DCD2822772C00150409 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +130,8 @@
 		CB7D1DF628227F0E00150409 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CBFB78142823ACDD00DEA8E8 /* Bai1 */,
+				CB028CC6282373EE002D1163 /* NetWorking */,
 				CB7D1E0228227FBD00150409 /* ForgotPassword */,
 				CB7D1E0028227F5A00150409 /* Register */,
 				CB7D1E362822856300150409 /* Login */,
@@ -206,6 +234,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		CBFB78142823ACDD00DEA8E8 /* Bai1 */ = {
+			isa = PBXGroup;
+			children = (
+				CBFB78152823AD0A00DEA8E8 /* Bai1ViewController.swift */,
+				CBFB78162823AD0A00DEA8E8 /* Bai1ViewController.xib */,
+			);
+			path = Bai1;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,12 +301,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB7D1E3A2822857800150409 /* LoginViewController.xib in Resources */,
+				CB028CCA28237434002D1163 /* NetWorkingViewController.xib in Resources */,
 				CB7D1DE32822772E00150409 /* Assets.xcassets in Resources */,
 				CB7D1E332822824F00150409 /* ProfileViewController.xib in Resources */,
+				CB028CD0282374B0002D1163 /* HomeCell.xib in Resources */,
 				CB7D1E292822822900150409 /* FriendsViewController.xib in Resources */,
 				CB7D1E2E2822823B00150409 /* MessagesViewController.xib in Resources */,
 				CB7D1E242822821000150409 /* HomeViewController.xib in Resources */,
 				CB7D1E0628227FDF00150409 /* RegisterViewController.xib in Resources */,
+				CBFB78182823AD0A00DEA8E8 /* Bai1ViewController.xib in Resources */,
 				CB7D1E0B28227FF900150409 /* ForgotPasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,9 +321,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB028CC928237434002D1163 /* NetWorkingViewController.swift in Sources */,
 				CB7D1E392822857800150409 /* LoginViewController.swift in Sources */,
 				CB7D1E0528227FDF00150409 /* RegisterViewController.swift in Sources */,
 				CB7D1E0A28227FF900150409 /* ForgotPasswordViewController.swift in Sources */,
+				CB028CD728238805002D1163 /* Data.Ext.swift in Sources */,
 				CB7D1E402822879F00150409 /* DataManager.swift in Sources */,
 				CB7D1E1A2822814C00150409 /* BaseNavigationViewController.swift in Sources */,
 				CB7D1DDA2822772C00150409 /* AppDelegate.swift in Sources */,
@@ -293,7 +335,9 @@
 				CB7D1E3D2822868100150409 /* LoginViewModel.swift in Sources */,
 				CB7D1DDC2822772C00150409 /* SceneDelegate.swift in Sources */,
 				CB7D1E14282280FA00150409 /* BaseViewController.swift in Sources */,
+				CB028CCF282374B0002D1163 /* HomeCell.swift in Sources */,
 				CB7D1E2D2822823B00150409 /* MessagesViewController.swift in Sources */,
+				CBFB78172823AD0A00DEA8E8 /* Bai1ViewController.swift in Sources */,
 				CB7D1E4328228A4700150409 /* HomeViewModel.swift in Sources */,
 				CB7D1E1D2822818700150409 /* BaseTabBarViewController.swift in Sources */,
 			);

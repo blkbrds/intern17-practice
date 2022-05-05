@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
         let homeVC = HomeViewController()
         let homeNavi = UINavigationController(rootViewController: homeVC)
         homeNavi.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
-        
+    
         //Messages
         let messagesVC = MessagesViewController()
         let messagesNavi = UINavigationController(rootViewController: messagesVC)
@@ -36,7 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
         //Friends
         let friendsVC = FriendsViewController()
         let friendsNavi = UINavigationController(rootViewController: friendsVC)
-        friendsNavi.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "icons8-instagram-30"), tag: 2)
+        friendsNavi.tabBarItem = UITabBarItem(title: "Camera", image: #imageLiteral(resourceName: "icons8-instagram-30"), tag: 2)
         
         
         //Profile
@@ -54,7 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
     }
     
     func createLogin() {
-        let loginVC = LoginViewController()
+        let loginVC = Bai1ViewController()
         let loginNavi = BaseNavigationViewController(rootViewController: loginVC)
         window?.rootViewController = loginNavi
     }
