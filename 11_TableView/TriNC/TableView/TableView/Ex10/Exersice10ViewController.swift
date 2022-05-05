@@ -102,12 +102,12 @@ extension Exersice10ViewController: UITableViewDelegate, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //let tableLabel = UILabel(frame: CGRect(x: 30, y: 0, width: 200, height: 50))
+//        let tableLabel = UILabel(frame: CGRect(x: 30, y: 0, width: 200, height: 50))
         let key = keys[indexPath.section]
         let contacts = sortedContacts[key] ?? []
         let contact = contacts[indexPath.row]
-        //tableLabel.text = contact.name
-        //cell.addSubview(tableLabel)
+//        tableLabel.text = contact.name
+//        cell.addSubview(tableLabel)
         cell.textLabel?.text = contact.name
         return cell
     }
@@ -123,7 +123,7 @@ extension Exersice10ViewController: UITableViewDelegate, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return index
     }
-    
+        
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
             sortedContacts = tempArr
