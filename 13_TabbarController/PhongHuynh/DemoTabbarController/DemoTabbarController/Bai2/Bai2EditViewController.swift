@@ -6,7 +6,7 @@ protocol Bai2EditViewControllerDelegate: class {
 }
 
 final class Bai2EditViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var newpasswordTextField: UITextField!
@@ -22,7 +22,7 @@ final class Bai2EditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Edit"
         let leftButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(leftAction))
         navigationItem.leftBarButtonItem = leftButton

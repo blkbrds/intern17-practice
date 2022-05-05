@@ -6,7 +6,7 @@ protocol Bai2HomeViewControllerDelegate: class {
 }
 
 final class Bai2HomeViewController: UIViewController {
-
+    
     // MARK: - Define
     enum Action {
         case logout
@@ -36,7 +36,8 @@ final class Bai2HomeViewController: UIViewController {
         if let delegate = delegate {
             delegate.controller(view: self, needsPerfom: .logout)
         }
-        self.navigationController?.popViewController(animated: true)
+        //      navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     @objc private func rightAction() {

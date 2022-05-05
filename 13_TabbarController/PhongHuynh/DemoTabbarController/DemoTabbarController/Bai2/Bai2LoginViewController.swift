@@ -1,7 +1,7 @@
 import UIKit
 
 final class Bai2LoginViewController: BaseViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -10,7 +10,7 @@ final class Bai2LoginViewController: BaseViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Login"
         let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
@@ -18,7 +18,7 @@ final class Bai2LoginViewController: BaseViewController {
         passwordTextField.delegate = self
         passwordTextField.returnKeyType = .done
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
@@ -34,8 +34,10 @@ final class Bai2LoginViewController: BaseViewController {
             let vc = Bai2HomeViewController()
             vc.userName = userName
             vc.delegate = self
-          //  SceneDelegate.shared.setroot(with: .login)
-            self.navigationController?.pushViewController(vc, animated: true)
+            //          navigationController?.pushViewController(vc, animated: true)
+            let navi = BaseNavigationController(rootViewController: vc)
+            navi.modalPresentationStyle = .fullScreen
+            present(navi, animated: true, completion: nil)
         } else {
             showLabel.text = "Sai username hoac password"
         }

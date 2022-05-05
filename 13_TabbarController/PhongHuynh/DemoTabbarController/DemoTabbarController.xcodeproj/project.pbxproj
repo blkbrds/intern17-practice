@@ -10,8 +10,6 @@
 		CB028CBD28235EA4002D1163 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB028CBC28235EA4002D1163 /* BaseViewController.swift */; };
 		CB028CC028235EEE002D1163 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB028CBF28235EEE002D1163 /* BaseNavigationController.swift */; };
 		CB028CC328235F17002D1163 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB028CC228235F17002D1163 /* BaseTabBarController.swift */; };
-		CB7D1DC928225F0700150409 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D1DC728225F0700150409 /* TabBarViewController.swift */; };
-		CB7D1DCA28225F0700150409 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7D1DC828225F0700150409 /* TabBarViewController.xib */; };
 		CB8B983028220D51005C0DAD /* Bai2HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B982E28220D51005C0DAD /* Bai2HomeViewController.swift */; };
 		CB8B983128220D51005C0DAD /* Bai2HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8B982F28220D51005C0DAD /* Bai2HomeViewController.xib */; };
 		CB8B983528220D75005C0DAD /* Bai2LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B983328220D75005C0DAD /* Bai2LoginViewController.swift */; };
@@ -37,8 +35,6 @@
 		CB028CBC28235EA4002D1163 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CB028CBF28235EEE002D1163 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		CB028CC228235F17002D1163 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		CB7D1DC728225F0700150409 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		CB7D1DC828225F0700150409 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		CB8B982E28220D51005C0DAD /* Bai2HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai2HomeViewController.swift; sourceTree = "<group>"; };
 		CB8B982F28220D51005C0DAD /* Bai2HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai2HomeViewController.xib; sourceTree = "<group>"; };
 		CB8B983328220D75005C0DAD /* Bai2LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai2LoginViewController.swift; sourceTree = "<group>"; };
@@ -73,15 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB00DE492822397700E74D52 /* Bai3 */ = {
-			isa = PBXGroup;
-			children = (
-				CB7D1DC728225F0700150409 /* TabBarViewController.swift */,
-				CB7D1DC828225F0700150409 /* TabBarViewController.xib */,
-			);
-			path = Bai3;
-			sourceTree = "<group>";
-		};
 		CB028CBB28235E50002D1163 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +113,6 @@
 		CBB5A2FB281BC5E700681257 /* DemoTabbarController */ = {
 			isa = PBXGroup;
 			children = (
-				CB00DE492822397700E74D52 /* Bai3 */,
 				CB8B982D28220D34005C0DAD /* Bai2 */,
 				CBB5A316281BC64D00681257 /* Controllers */,
 				CBB5A318281BC66100681257 /* Views */,
@@ -258,7 +244,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB7D1DCA28225F0700150409 /* TabBarViewController.xib in Resources */,
 				CBB5A32A281BC6FD00681257 /* FriendsViewController.xib in Resources */,
 				CB8B983128220D51005C0DAD /* Bai2HomeViewController.xib in Resources */,
 				CB8B983628220D75005C0DAD /* Bai2LoginViewController.xib in Resources */,
@@ -282,7 +267,6 @@
 				CB028CC028235EEE002D1163 /* BaseNavigationController.swift in Sources */,
 				CBB5A31F281BC6CF00681257 /* ProfileViewController.swift in Sources */,
 				CB8B9845282212FB005C0DAD /* DataManager.swift in Sources */,
-				CB7D1DC928225F0700150409 /* TabBarViewController.swift in Sources */,
 				CB8B983A28220D8A005C0DAD /* Bai2EditViewController.swift in Sources */,
 				CBB5A329281BC6FD00681257 /* FriendsViewController.swift in Sources */,
 				CB028CBD28235EA4002D1163 /* BaseViewController.swift in Sources */,
