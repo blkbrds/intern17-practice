@@ -22,7 +22,6 @@ final class Exersice10ViewController: UIViewController {
     // MARK: - Properties
     var sortedContacts: [String: [Contact]] = [:]
     var keys: [String] = []
-    
     var tempArr: [String: [Contact]] = [:]
     
     // MARK: - Life cycle
@@ -102,12 +101,9 @@ extension Exersice10ViewController: UITableViewDelegate, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        let tableLabel = UILabel(frame: CGRect(x: 30, y: 0, width: 200, height: 50))
         let key = keys[indexPath.section]
         let contacts = sortedContacts[key] ?? []
         let contact = contacts[indexPath.row]
-//        tableLabel.text = contact.name
-//        cell.addSubview(tableLabel)
         cell.textLabel?.text = contact.name
         return cell
     }
