@@ -1,15 +1,31 @@
 import Foundation
 
+class User {
+    var name: String
+    var avatar: String
+    
+    init(name: String, avatar: String) {
+        self.name = name
+        self.avatar = avatar
+    }
+}
+
 typealias Completion = (Bool, String) -> Void
 
 class HomeViewModel {
-    var email: String = ""
-    var password: String = ""
-    var names: [String] = []
+    var users: [User] = []
+    
+    func numberOfRowsInSection() -> Int {
+        return users.count
+    }
+    
+    func viewModelForCell(at indexPath: IndexPath) -> HomeCellViewModel {
+        return HomeCellViewModel(users: users[indexPath.row])
+    }
     
     func loadAPI(completion: @escaping Completion) {
         //create request
-        let urlString = "https://rss.itunes.apple.com/api/v1/us/itunes-music/hot-tracks/all/100/explicit.json"
+        let urlString = "https://rss.applemarketingtools.com/api/v2/us/music/most-played/10/albums.json"
         let url = URL(string: urlString)
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
@@ -34,7 +50,8 @@ class HomeViewModel {
                         
                         for item in results {
                             let name = item["name"] as! String
-                            self.names.append(name)
+                            let avatar = item["artworkUrl100"] as! String
+                            self.users.append(User(name: name, avatar: avatar))
                         }
                         
                         completion(true, "")
@@ -46,24 +63,5 @@ class HomeViewModel {
         }
         
         task.resume()
-        print("DONE")
-    }
-    
-    func fetchData(completion: (Bool, String, String) -> ()) {
-        let data = DataManager.shared().read()
-        let email = data.0
-        let password = data.1
-        
-        if email != "" || password != "" {
-            //lưu trữ dữ liệu
-            self.email = email
-            self.password = password
-            
-            //callback
-            completion(true, email, password)
-        } else {
-            //callback
-            completion(false, "", "")
-        }
     }
 }

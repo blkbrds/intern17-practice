@@ -3,6 +3,7 @@ import UIKit
 class NetWorkingViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
     var viewmodel = HomeViewModel()
     
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ class NetWorkingViewController: BaseViewController {
         tableView.register(nib, forCellReuseIdentifier: "cell")
         
         //navi
-        let resetTabbarItem = UIBarButtonItem(image: UIImage(named: "back1"), style: .plain, target: self, action: #selector(loadAPI))
+        let resetTabbarItem = UIBarButtonItem(title: "load", style: .plain, target: self, action: #selector(loadAPI))
         self.navigationItem.rightBarButtonItem = resetTabbarItem
     }
     
@@ -50,7 +51,7 @@ class NetWorkingViewController: BaseViewController {
 //MARK: - Tableview Delegate & Datasource
 extension NetWorkingViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewmodel.names.count
+        viewmodel.numberOfRowsInSection()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,7 +60,7 @@ extension NetWorkingViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeCell
-        cell.updateCell(name: viewmodel.names[indexPath.row], avatar: "back1")
+        cell.viewModel = viewmodel.viewModelForCell(at: indexPath)
         return cell
     }
 }

@@ -5,6 +5,10 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var apiImageView: UIImageView!
     
+    var viewModel: HomeCellViewModel? {
+        didSet { updateView()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -15,9 +19,9 @@ class HomeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func updateCell(name: String, avatar: String) {
-        nameLabel.text = name
-        apiImageView.image = UIImage(named: avatar)
+    func updateView() {
+        nameLabel.text = viewModel?.users.name
+  //      apiImageView.image = UIImage(named: "\(viewModel?.users.avatar)")
     }
     
 }

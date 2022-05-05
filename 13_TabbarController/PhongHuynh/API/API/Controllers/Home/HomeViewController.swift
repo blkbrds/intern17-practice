@@ -13,16 +13,10 @@ class HomeViewController: UIViewController {
     }
     
     func updateUI() {
-        emailLabel.text = viewmodel.email
+        
     }
     
     func fetchData() {
-        viewmodel.fetchData { (done, email, password) in
-            if done {
-                self.updateUI()
-            } else {
-                print("LỖI")
-            }
-        }
+       
     }
 }

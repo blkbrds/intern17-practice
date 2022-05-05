@@ -54,7 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
     }
     
     func createLogin() {
-        let loginVC = Bai1ViewController()
+        let loginVC = NetWorkingViewController()
         let loginNavi = BaseNavigationViewController(rootViewController: loginVC)
         window?.rootViewController = loginNavi
     }
