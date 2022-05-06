@@ -57,11 +57,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func configTabbar() {
+        // HomeViewController
         let homeVC = HomeViewController()
         let homeNavi = UINavigationController(rootViewController: homeVC)
         homeNavi.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "play"), tag: 0)
 
-        let viewControllers = [homeNavi]
+        // FavoriteViewController
+        let favoriteVC = FavoriteViewController()
+        favoriteVC.viewModel = FavoriteViewControllerModel()
+        let favoriteNavi = UINavigationController(rootViewController: favoriteVC)
+        favoriteVC.tabBarItem = UITabBarItem(title: "Favorite", image: UIImage(systemName: "heart"), tag: 1)
+
+        let viewControllers = [homeNavi, favoriteNavi]
         tabbarController.setViewControllers(viewControllers, animated: true)
         tabbarController.tabBar.isTranslucent = false
     }

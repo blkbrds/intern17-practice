@@ -99,6 +99,7 @@ extension HomeViewController: UITableViewDelegate {
         let detailVC = DetailViewController()
         let snippet = viewModel.getSnippet(with: indexPath.row)
         detailVC.viewModel = DetailViewControllerModel(snippet: snippet)
+        detailVC.modalPresentationStyle = .fullScreen
         navigationController?.present(detailVC, animated: true, completion: nil)
     }
 

@@ -21,19 +21,20 @@ final class DetailViewController: UIViewController {
         super.viewDidLoad()
         loadData()
         configTableView()
+        configGesture()
         setupUI()
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        animate()
     }
 
     // MARK: - Private functions
     private func setupUI() {
         title = "Details"
-        videoView.clipsToBounds = true
-        videoView.layer.cornerRadius = 5
+    }
+
+    private func configGesture() {
+        let downGesture = UISwipeGestureRecognizer(target: self, action: #selector(downSwipe))
+        downGesture.direction = .down
+        downGesture.delegate = self
+        view.addGestureRecognizer(downGesture)
     }
 
     private func configTableView() {
@@ -151,6 +152,15 @@ extension DetailViewController: UITableViewDataSource {
                 guard let titleCell = tableView.dequeueReusableCell(withIdentifier: "TitleTableViewCell")
                         as? TitleTableViewCell else { return UITableViewCell() }
                 titleCell.title = viewModel?.getTitle()
+                titleCell.isLiked = {
+                    self.viewModel?.addVideo(completion: { done in
+                        if done {
+                            // layousubview
+                        } else {
+                            self.showAlert(title: "Warning", message: "Cannot add this video to your Favorite")
+                        }
+                    })
+                }
                 titleCell.selectionStyle = .none
                 return titleCell
             case 1:
@@ -204,12 +214,6 @@ extension DetailViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 1 {
-            let snippet = viewModel?.getSnippet(with: indexPath.row)
-            viewModel = DetailViewControllerModel(snippet: snippet)
-            loadData()
-        }
-
         switch indexPath.section {
         case 0:
             if indexPath.row == 2 {
@@ -220,10 +224,13 @@ extension DetailViewController: UITableViewDelegate {
                 if let comments = viewModel?.getComments() {
                     commentDetailView.viewModel = CommentsDetailViewModel(comments: comments)
                 }
+                animate()
                 tableView.addSubview(commentDetailView)
             }
         case 1:
-            break
+            let snippet = viewModel?.getSnippet(with: indexPath.row)
+            viewModel = DetailViewControllerModel(snippet: snippet)
+            loadData()
         default:
             break
         }
@@ -231,5 +238,17 @@ extension DetailViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+// MARK: UIGestureRecognizer Delegate
+extension DetailViewController: UIGestureRecognizerDelegate {
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        true
+    }
+
+    @objc private func downSwipe() {
+        self.dismiss(animated: true, completion: nil)
     }
 }

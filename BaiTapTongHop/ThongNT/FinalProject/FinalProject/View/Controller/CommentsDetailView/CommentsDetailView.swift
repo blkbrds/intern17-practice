@@ -59,13 +59,19 @@ extension CommentsDetailView: UITableViewDataSource {
             cell.viewModel = CommentDetaiTableViewCellModel(with: comment)
             print("comment \(indexPath.row):", comment)
         }
+        cell.selectionStyle = .none
         return cell
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let customHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as? CustomHeaderView else { return UIView() }
+        customHeader.isDismiss = {
+            self.removeFromSuperview()
+        }
         let headerView = UIView()
         headerView.backgroundColor = .white
+
+        customHeader.viewModel = CustomHeaderViewModel()
         customHeader.frame = headerView.frame
         headerView.addSubview(customHeader)
         return headerView

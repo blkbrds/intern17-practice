@@ -43,11 +43,11 @@ PODS:
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
   - ObjectMapper (3.3.0)
-  - Realm (3.17.3):
-    - Realm/Headers (= 3.17.3)
-  - Realm/Headers (3.17.3)
-  - RealmSwift (3.17.3):
-    - Realm (= 3.17.3)
+  - Realm (10.25.2):
+    - Realm/Headers (= 10.25.2)
+  - Realm/Headers (10.25.2)
+  - RealmSwift (10.25.2):
+    - Realm (= 10.25.2)
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
@@ -83,7 +83,7 @@ DEPENDENCIES:
   - MVVM-Swift (= 1.1.0)
   - NVActivityIndicatorView
   - ObjectMapper (= 3.3.0)
-  - RealmSwift
+  - RealmSwift (~> 10)
   - SDWebImage (~> 5.0)
   - SVProgressHUD
   - SwifterSwift (~> 5.0)
@@ -92,7 +92,7 @@ DEPENDENCIES:
   - youtube-ios-player-helper
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - FirebaseAnalytics
     - FirebaseCore
@@ -106,14 +106,15 @@ SPEC REPOS:
     - MVVM-Swift
     - NVActivityIndicatorView
     - ObjectMapper
-    - Realm
-    - RealmSwift
     - SDWebImage
     - SVProgressHUD
     - SwifterSwift
     - SwiftLint
     - SwiftUtils
     - youtube-ios-player-helper
+  trunk:
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -129,8 +130,8 @@ SPEC CHECKSUMS:
   MVVM-Swift: 54749cc12bb30af41632f30a2c576a18bf9e4bc8
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
-  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
+  Realm: 978303663d0509166498f423d112e5ee97d4c91b
+  RealmSwift: a0c30c1efc49e928a0a6f8fb141bb2629616d79b
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
@@ -138,6 +139,6 @@ SPEC CHECKSUMS:
   SwiftUtils: de77bcd1df216c9be6ec7011777302c60a2018a6
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 3845150405b85c9068988cc65e700bc25a51741e
+PODFILE CHECKSUM: 08fa0a4e9560f32b6beb26e741d21095adaf8331
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.11.3

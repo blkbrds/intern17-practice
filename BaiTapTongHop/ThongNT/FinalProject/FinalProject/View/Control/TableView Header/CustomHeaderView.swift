@@ -10,4 +10,13 @@ import UIKit
 
 final class CustomHeaderView: UITableViewHeaderFooterView {
 
+    @IBOutlet private weak var cancelButton: UIButton!
+
+    var isDismiss: (() -> Void)?
+
+    var viewModel: CustomHeaderViewModel?
+
+    @IBAction private func dismissView(_ sender: UIButton) {
+        isDismiss?()
+    }
 }

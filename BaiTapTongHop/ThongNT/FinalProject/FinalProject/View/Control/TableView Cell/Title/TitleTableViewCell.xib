@@ -4,13 +4,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="KGk-i7-Jjw" customClass="TitleTableViewCell" customModule="FinalProject" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="84" id="KGk-i7-Jjw" customClass="TitleTableViewCell" customModule="FinalProject" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="364" height="84"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -18,36 +17,43 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2K-I2-lW9">
-                        <rect key="frame" x="0.0" y="0.0" width="342" height="84"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="84"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AHY-ow-wZb">
-                        <rect key="frame" x="347" y="5" width="17" height="74.5"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6A1-B4-5m1">
+                        <rect key="frame" x="334" y="31" width="25" height="22"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="AHY-ow-wZb" secondAttribute="height" multiplier="1:5" id="z8l-ms-qNa"/>
+                            <constraint firstAttribute="width" constant="25" id="ukd-H0-Gkq"/>
                         </constraints>
-                    </imageView>
+                        <state key="normal" image="hand.thumbsup" catalog="system"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="imageForSelected" value="hand.thumbsup.fill" catalog="system"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="likeVideo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="S0v-Fb-fFd"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="AHY-ow-wZb" secondAttribute="trailing" id="GPq-Ur-jOp"/>
+                    <constraint firstAttribute="trailing" secondItem="6A1-B4-5m1" secondAttribute="trailing" constant="5" id="Eu2-V9-vRe"/>
                     <constraint firstAttribute="bottom" secondItem="S2K-I2-lW9" secondAttribute="bottom" id="Kap-Td-JGS"/>
-                    <constraint firstItem="AHY-ow-wZb" firstAttribute="leading" secondItem="S2K-I2-lW9" secondAttribute="trailing" constant="5" id="PnQ-Im-ZwS"/>
                     <constraint firstItem="S2K-I2-lW9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QN9-ep-Ngd"/>
-                    <constraint firstItem="AHY-ow-wZb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SYE-2C-T47"/>
-                    <constraint firstAttribute="bottom" secondItem="AHY-ow-wZb" secondAttribute="bottom" id="Um0-aJ-gce"/>
+                    <constraint firstItem="6A1-B4-5m1" firstAttribute="leading" secondItem="S2K-I2-lW9" secondAttribute="trailing" constant="10" id="XPZ-65-WJA"/>
+                    <constraint firstItem="6A1-B4-5m1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kqt-9j-Gg2"/>
                     <constraint firstItem="S2K-I2-lW9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oOT-63-Af5"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="likeButotn" destination="6A1-B4-5m1" id="vhA-Zo-OsO"/>
                 <outlet property="titleLabel" destination="S2K-I2-lW9" id="8K9-Aa-Twz"/>
             </connections>
             <point key="canvasLocation" x="127.53623188405798" y="77.008928571428569"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

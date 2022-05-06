@@ -45,6 +45,11 @@
 		E1890647281651D900DEEEA0 /* CommentTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1890646281651D900DEEEA0 /* CommentTableViewCellModel.swift */; };
 		E19963DB28115F8300B5547C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19963D928115F8300B5547C /* DetailViewController.swift */; };
 		E19963DC28115F8300B5547C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19963DA28115F8300B5547C /* DetailViewController.xib */; };
+		E19A04D628235E8F0085D4DF /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A04D428235E8F0085D4DF /* FavoriteViewController.swift */; };
+		E19A04D728235E8F0085D4DF /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19A04D528235E8F0085D4DF /* FavoriteViewController.xib */; };
+		E19A04DB28235ED10085D4DF /* FavoriteViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A04DA28235ED10085D4DF /* FavoriteViewControllerModel.swift */; };
+		E19A04DF282374930085D4DF /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A04DE282374930085D4DF /* RealmModel.swift */; };
+		E19A04E3282388DF0085D4DF /* TitleTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A04E2282388DF0085D4DF /* TitleTableViewCellModel.swift */; };
 		E1C4C17428123C7D000AE29A /* DetailViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4C17328123C7D000AE29A /* DetailViewControllerModel.swift */; };
 		E1C4C18D281251A9000AE29A /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4C18B281251A9000AE29A /* TitleTableViewCell.swift */; };
 		E1C4C18E281251A9000AE29A /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C4C18C281251A9000AE29A /* TitleTableViewCell.xib */; };
@@ -70,6 +75,7 @@
 		E1D19D4828110CE2002B552C /* ThumbnailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D19D4428110CE1002B552C /* ThumbnailTableViewCell.xib */; };
 		E1D19D4C28110E57002B552C /* ThumbnailTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D19D4B28110E57002B552C /* ThumbnailTableViewCellModel.swift */; };
 		E1D19D4D28110E57002B552C /* ThumbnailTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D19D4B28110E57002B552C /* ThumbnailTableViewCellModel.swift */; };
+		E1DB1EC628222DB00091D511 /* CustomHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB1EC528222DB00091D511 /* CustomHeaderViewModel.swift */; };
 		E1FCDD7D281B6F23006FD074 /* CommentsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCDD7C281B6F23006FD074 /* CommentsDetailView.swift */; };
 		E1FCDD81281B6F3C006FD074 /* CommentsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FCDD80281B6F3C006FD074 /* CommentsDetailView.xib */; };
 		E1FCDD87281B7713006FD074 /* CommentsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCDD86281B7713006FD074 /* CommentsDetailViewModel.swift */; };
@@ -132,6 +138,11 @@
 		E1890646281651D900DEEEA0 /* CommentTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCellModel.swift; sourceTree = "<group>"; };
 		E19963D928115F8300B5547C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E19963DA28115F8300B5547C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		E19A04D428235E8F0085D4DF /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		E19A04D528235E8F0085D4DF /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		E19A04DA28235ED10085D4DF /* FavoriteViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewControllerModel.swift; sourceTree = "<group>"; };
+		E19A04DE282374930085D4DF /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		E19A04E2282388DF0085D4DF /* TitleTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCellModel.swift; sourceTree = "<group>"; };
 		E1C4C17328123C7D000AE29A /* DetailViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerModel.swift; sourceTree = "<group>"; };
 		E1C4C18B281251A9000AE29A /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		E1C4C18C281251A9000AE29A /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
@@ -151,6 +162,7 @@
 		E1D19D4328110CE1002B552C /* ThumbnailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailTableViewCell.swift; sourceTree = "<group>"; };
 		E1D19D4428110CE1002B552C /* ThumbnailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbnailTableViewCell.xib; sourceTree = "<group>"; };
 		E1D19D4B28110E57002B552C /* ThumbnailTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailTableViewCellModel.swift; sourceTree = "<group>"; };
+		E1DB1EC528222DB00091D511 /* CustomHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderViewModel.swift; sourceTree = "<group>"; };
 		E1FCDD7C281B6F23006FD074 /* CommentsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDetailView.swift; sourceTree = "<group>"; };
 		E1FCDD80281B6F3C006FD074 /* CommentsDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsDetailView.xib; sourceTree = "<group>"; };
 		E1FCDD86281B7713006FD074 /* CommentsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDetailViewModel.swift; sourceTree = "<group>"; };
@@ -211,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D19CFE280FB023002B552C /* YouTubeResponse.swift */,
+				E19A04DE282374930085D4DF /* RealmModel.swift */,
 			);
 			path = Schema;
 			sourceTree = "<group>";
@@ -268,6 +281,7 @@
 		6AF60E252313C13600F5CBA2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E19A04D328235E620085D4DF /* FavoriteViewController */,
 				E19963D828115F5100B5547C /* DetailViewController */,
 				E19963D628115F2700B5547C /* HomeViewController */,
 				E173A2BE281A8CD600C715EF /* CommentsDetailView */,
@@ -390,6 +404,16 @@
 			path = DetailViewController;
 			sourceTree = "<group>";
 		};
+		E19A04D328235E620085D4DF /* FavoriteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E19A04D428235E8F0085D4DF /* FavoriteViewController.swift */,
+				E19A04D528235E8F0085D4DF /* FavoriteViewController.xib */,
+				E19A04DA28235ED10085D4DF /* FavoriteViewControllerModel.swift */,
+			);
+			path = FavoriteViewController;
+			sourceTree = "<group>";
+		};
 		E1BC516428169AFB00254228 /* Thumbnail */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +429,7 @@
 			children = (
 				E1C4C18B281251A9000AE29A /* TitleTableViewCell.swift */,
 				E1C4C18C281251A9000AE29A /* TitleTableViewCell.xib */,
+				E19A04E2282388DF0085D4DF /* TitleTableViewCellModel.swift */,
 			);
 			path = Title;
 			sourceTree = "<group>";
@@ -454,6 +479,7 @@
 			children = (
 				E10490D4281BC5B000A0C459 /* CustomHeaderView.swift */,
 				E10490D8281BC5C100A0C459 /* CustomHeaderView.xib */,
+				E1DB1EC528222DB00091D511 /* CustomHeaderViewModel.swift */,
 			);
 			path = "TableView Header";
 			sourceTree = "<group>";
@@ -563,6 +589,7 @@
 				E1D19CE6280F9EC4002B552C /* HomeViewController.xib in Resources */,
 				E10490C7281B8D4D00A0C459 /* CommentDetailTableViewCell.xib in Resources */,
 				E10490D9281BC5C100A0C459 /* CustomHeaderView.xib in Resources */,
+				E19A04D728235E8F0085D4DF /* FavoriteViewController.xib in Resources */,
 				E1D19D182810067D002B552C /* GoogleService-Info.plist in Resources */,
 				E1C4C19A281251D0000AE29A /* CommentsTableViewCell.xib in Resources */,
 				E1FCDD81281B6F3C006FD074 /* CommentsDetailView.xib in Resources */,
@@ -588,48 +615,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/MVVM-Swift/MVVM.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftUtils/SwiftUtils.framework",
-				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MVVM.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftUtils.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6AFD032323139854004940FA /* Swift Lint */ = {
@@ -700,20 +694,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -723,19 +712,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19A04D628235E8F0085D4DF /* FavoriteViewController.swift in Sources */,
 				E1C4C18D281251A9000AE29A /* TitleTableViewCell.swift in Sources */,
 				E19963DB28115F8300B5547C /* DetailViewController.swift in Sources */,
 				E1890647281651D900DEEEA0 /* CommentTableViewCellModel.swift in Sources */,
 				E1D19CE5280F9EC4002B552C /* HomeViewController.swift in Sources */,
 				E1D19D4528110CE1002B552C /* ThumbnailTableViewCell.swift in Sources */,
 				6AF60E0A2313B9C000F5CBA2 /* UIViewExt.swift in Sources */,
+				E19A04DB28235ED10085D4DF /* FavoriteViewControllerModel.swift in Sources */,
 				E1C4C193281251C0000AE29A /* ChannelTableViewCell.swift in Sources */,
 				6AF613B22313C13A00F5CBA2 /* Label.swift in Sources */,
 				E10490D5281BC5B000A0C459 /* CustomHeaderView.swift in Sources */,
 				6AF60DC42313B56B00F5CBA2 /* Error.swift in Sources */,
 				E1D19CFF280FB023002B552C /* YouTubeResponse.swift in Sources */,
+				E19A04DF282374930085D4DF /* RealmModel.swift in Sources */,
 				6AF60E132313B9C000F5CBA2 /* NSErrorExt.swift in Sources */,
 				6AF613B72313C13A00F5CBA2 /* CollectionView.swift in Sources */,
+				E19A04E3282388DF0085D4DF /* TitleTableViewCellModel.swift in Sources */,
 				E10490AC281B7F1E00A0C459 /* CommentDetaiTableViewCellModel.swift in Sources */,
 				6AFD0303231375EE004940FA /* AppDelegate.swift in Sources */,
 				E1FCDD87281B7713006FD074 /* CommentsDetailViewModel.swift in Sources */,
@@ -751,6 +744,7 @@
 				E1FCDD7D281B6F23006FD074 /* CommentsDetailView.swift in Sources */,
 				6AF60D802313B56B00F5CBA2 /* Session.swift in Sources */,
 				E189064128163D8F00DEEEA0 /* ChannelTableViewCellModel.swift in Sources */,
+				E1DB1EC628222DB00091D511 /* CustomHeaderViewModel.swift in Sources */,
 				6AF60DC62313B56B00F5CBA2 /* ResponseSerializer.swift in Sources */,
 				6AF60D192313B35800F5CBA2 /* Errors.swift in Sources */,
 				E1D19D2228100847002B552C /* LoginViewController.swift in Sources */,

@@ -19,6 +19,9 @@
                         <constraint firstAttribute="width" secondItem="L7K-7e-Kzz" secondAttribute="height" multiplier="1:1" id="DCV-Fv-cTM"/>
                     </constraints>
                     <state key="normal" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="dismissView:" destination="iN0-l3-epB" eventType="touchUpInside" id="xXC-dd-IHP"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d15-SH-MbU">
                     <rect key="frame" x="10" y="5" width="101" height="155"/>
@@ -37,6 +40,9 @@
                 <constraint firstItem="L7K-7e-Kzz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="zdY-kl-YK9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="L7K-7e-Kzz" id="Wis-h7-VTX"/>
+            </connections>
             <point key="canvasLocation" x="-124.6376811594203" y="-185.15625"/>
         </view>
     </objects>

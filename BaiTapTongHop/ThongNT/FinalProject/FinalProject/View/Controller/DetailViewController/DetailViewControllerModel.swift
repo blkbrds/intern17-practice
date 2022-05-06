@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class DetailViewControllerModel {
 
@@ -116,6 +117,26 @@ final class DetailViewControllerModel {
             case .failure(let error):
                 completion(error)
             }
+        }
+    }
+
+    func addVideo(completion: (Bool) -> Void) {
+        guard let snippet = snippet,
+              let id = snippet.id,
+              let imageString = snippet.imageString,
+              let publishedAt = snippet.publishedAt else { return }
+        let favoriteVideo = FavoriteVideos()
+        favoriteVideo.id = id
+        favoriteVideo.videoInfo?.imageString = imageString
+        favoriteVideo.videoInfo?.publishAt = publishedAt
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(favoriteVideo)
+                completion(true)
+            }
+        } catch {
+            completion(false)
         }
     }
 }
