@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,11 +15,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SC-Ya-oPJ">
-                    <rect key="frame" x="87" y="408" width="80" height="80"/>
+                    <rect key="frame" x="328" y="167" width="80" height="80"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="0SC-Ya-oPJ" secondAttribute="height" multiplier="1:1" id="2BS-3v-jdw"/>
@@ -27,14 +27,14 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeR-eq-sbH">
-                    <rect key="frame" x="247" y="408" width="80" height="80"/>
+                    <rect key="frame" x="488" y="167" width="80" height="80"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="xeR-eq-sbH" secondAttribute="height" multiplier="1:1" id="PPW-8F-t57"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lH1-Di-D35">
-                    <rect key="frame" x="167" y="432" width="80" height="32"/>
+                    <rect key="frame" x="408" y="191" width="80" height="32"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="KxH-KB-dZo"/>
