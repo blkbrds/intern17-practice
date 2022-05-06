@@ -68,7 +68,7 @@ extension HomieViewController: AvatarViewDelegate {
             vc.username = username
             vc.index = index
             vc.userImage = userImage
-            self.navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

@@ -213,9 +213,9 @@
 		22DDC2A92824E27B0017A711 /* EX3 */ = {
 			isa = PBXGroup;
 			children = (
+				22DDC2B02824E27B0017A711 /* Model */,
 				22DDC2AA2824E27B0017A711 /* Homie */,
 				22DDC2AD2824E27B0017A711 /* Profile */,
-				22DDC2B02824E27B0017A711 /* Model */,
 				22DDC2B22824E27B0017A711 /* Avatar */,
 			);
 			path = EX3;
@@ -224,8 +224,8 @@
 		22DDC2AA2824E27B0017A711 /* Homie */ = {
 			isa = PBXGroup;
 			children = (
-				22DDC2AB2824E27B0017A711 /* HomieViewController.xib */,
 				22DDC2AC2824E27B0017A711 /* HomieViewController.swift */,
+				22DDC2AB2824E27B0017A711 /* HomieViewController.xib */,
 			);
 			path = Homie;
 			sourceTree = "<group>";
@@ -233,8 +233,8 @@
 		22DDC2AD2824E27B0017A711 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				22DDC2AE2824E27B0017A711 /* ProfileViewController.xib */,
 				22DDC2AF2824E27B0017A711 /* ProfileViewController.swift */,
+				22DDC2AE2824E27B0017A711 /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -250,8 +250,8 @@
 		22DDC2B22824E27B0017A711 /* Avatar */ = {
 			isa = PBXGroup;
 			children = (
-				22DDC2B32824E27B0017A711 /* AvatarView.xib */,
 				22DDC2B42824E27B0017A711 /* AvatarView.swift */,
+				22DDC2B32824E27B0017A711 /* AvatarView.xib */,
 			);
 			path = Avatar;
 			sourceTree = "<group>";

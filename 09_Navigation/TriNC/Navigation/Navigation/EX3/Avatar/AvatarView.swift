@@ -30,6 +30,7 @@ final class AvatarView: UIView {
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         userAvatarImageView.frame = frame
         userAvatarImageView.image = UIImage(named: "ic-user")
+        userAvatarImageView.backgroundColor = .blue
         userAvatarImageView.contentMode = .scaleAspectFit
         addSubview(userAvatarImageView)
         
