@@ -13,8 +13,8 @@ final class Exersice12ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    var names: [String] = ["Tri", "Tinh", "Thuan", "Phong", "Thong"]
-    var selectArr: [String] = []
+    private var names: [String] = ["Tri", "Tinh", "Thuan", "Phong", "Thong"]
+    private var selectArr: [String] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -38,35 +38,35 @@ final class Exersice12ViewController: UIViewController {
     }
     
     // MARK: - Objc
-    @objc func turnOnEditingMode() {
+    @objc private func turnOnEditingMode() {
         tableView.isEditing = true
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(turnOffEditingMode))
         navigationItem.rightBarButtonItem = doneButton
     }
     
-    @objc func turnOffEditingMode() {
+    @objc private func turnOffEditingMode() {
         tableView.isEditing = false
         let editingButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(turnOnEditingMode))
         navigationItem.rightBarButtonItem = editingButton
     }
     
-    @objc func selectAction() {
+    @objc private func selectAction() {
         tableView.allowsMultipleSelectionDuringEditing = true
         for row in 0..<names.count {
             self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: false, scrollPosition: .none)
         }
     }
     
-    // MARK: - Function
-    func deleteCell(indexPath: IndexPath) {
+    // MARK: - Private Function
+    private func deleteCell(indexPath: IndexPath) {
         names.remove(at: indexPath.row)
     }
     
-    func insertCell() {
+    private func insertCell() {
         names.append("Linh")
     }
     
-    func selectDeselectCell(tableView: UITableView, indexPath: IndexPath) {
+    private func selectDeselectCell(tableView: UITableView, indexPath: IndexPath) {
         if let arr = tableView.indexPathForSelectedRow {
             for _ in arr {
                 selectArr.append(names[indexPath.row])
@@ -122,11 +122,11 @@ extension Exersice12ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectDeselectCell(tableView: tableView, indexPath: indexPath)
+        selectDeselectCell(tableView: tableView, indexPath: indexPath)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        self.selectDeselectCell(tableView: tableView, indexPath: indexPath)
+        selectDeselectCell(tableView: tableView, indexPath: indexPath)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

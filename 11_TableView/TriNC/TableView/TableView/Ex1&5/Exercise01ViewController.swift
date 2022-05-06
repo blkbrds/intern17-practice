@@ -15,8 +15,8 @@ final class Exercise01ViewController: UIViewController {
     @IBOutlet private weak var searchBar: UISearchBar!
     
     // MARK: - Properties
-    var names: [String] = ["Nguyen Van A", "Tran Van B", "Le Van C", "Du Van D", "Hoang Van E", "Huynh Van F", "Long Van G", "Ho Van DDE", "Kong Van AFA", "Jan Van CAA"]
-    var fillteredNames: [String] = []
+    private var names: [String] = ["Nguyen Van A", "Tran Van B", "Le Van C", "Du Van D", "Hoang Van E", "Huynh Van F", "Long Van G", "Ho Van DDE", "Kong Van AFA", "Jan Van CAA"]
+   private var fillteredNames: [String] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -61,7 +61,6 @@ extension Exercise01ViewController: UITableViewDelegate, UITableViewDataSource ,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = SearchTailViewController()
-        vc.delegate = self
         vc.name = fillteredNames[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -71,14 +70,5 @@ extension Exercise01ViewController: UITableViewDelegate, UITableViewDataSource ,
             return dataString.range(of: searchText, options: .caseInsensitive) != nil
         })
         tableView.reloadData()
-    }
-}
-
-// MARK: - Implement Protocol
-extension Exercise01ViewController: SearchDetailViewControllerDelegate {
-    func controller(controller: SearchTailViewController, needsPerform action: SearchTailViewController.Action) {
-        switch action {
-        case .reload: tableView.reloadData()
-        }
     }
 }
