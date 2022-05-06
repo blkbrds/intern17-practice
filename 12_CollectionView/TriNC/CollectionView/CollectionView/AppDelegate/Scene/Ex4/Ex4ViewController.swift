@@ -33,6 +33,8 @@ final class Ex4ViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: IdentifierEx4.cell.rawValue)
         let headerNib = UINib(nibName: IdentifierEx4.header.rawValue, bundle: .main)
         collectionView.register(headerNib, forCellWithReuseIdentifier: IdentifierEx4.header.rawValue)
+        
+        // delegate && datasource
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -46,7 +48,7 @@ extension Ex4ViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

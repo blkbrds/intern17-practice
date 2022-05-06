@@ -12,6 +12,14 @@ final class HeaderCell: UICollectionViewCell {
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    // MARK: - Properties
+    private var currentIndex: IndexPath = IndexPath(item: 0, section: 0) {
+        didSet {
+            currentIndex.row = currentIndex.row < 0 ? 0: currentIndex.row
+            currentIndex.row = currentIndex.row < 11 ? currentIndex.row : 11
+        }
+    }
+    
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,23 +36,39 @@ final class HeaderCell: UICollectionViewCell {
         layout.scrollDirection = .horizontal
         self.collectionView.collectionViewLayout = layout
     }
+    
+    // MARK: - IBActions
+    @IBAction private func previousButtonTouchUpInside(_ sender: Any) {
+        currentIndex.row -= 1
+        if currentIndex.row == 0 { return }
+        collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
+//        collectionView.contentOffset.x -= collectionView.bounds.width
+    }
+    
+    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
+        currentIndex.row += 1
+        if currentIndex.row > 12 { return }
+        collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
+//        collectionView.contentOffset.x += collectionView.bounds.width
+
+    }
 }
 
 // MARK: - Extention
 extension HeaderCell: UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 12
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .blue
+        cell.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Config.itemWidth, height: Config.itemHeight)
+        return CGSize(width: Config.itemWidth - 20, height: Config.itemHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
