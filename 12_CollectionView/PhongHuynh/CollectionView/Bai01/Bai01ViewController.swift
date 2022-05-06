@@ -56,7 +56,7 @@ extension Bai01ViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Bai01CollectionViewCell
         
         let item = users[indexPath.row]
-        cell.numberLabel.text = item.name
+        cell.number = item.name
         return cell
     }
 }
