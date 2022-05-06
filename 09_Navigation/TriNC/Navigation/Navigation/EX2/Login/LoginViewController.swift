@@ -39,8 +39,7 @@ final class LoginViewController: UIViewController {
             notificationLabel.text = "Please enter data"
             return
         }
-        
-
+    
         if DataManager.checkData(username: username, password: password) {
             let vc = HomeViewController()
             vc.delegate = self
@@ -51,7 +50,6 @@ final class LoginViewController: UIViewController {
         }
     }
 
-    
     // MARK: - Touch Event
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
