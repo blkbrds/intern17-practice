@@ -26,6 +26,7 @@ final class Ex4ViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupUI() {
+        // title
         title = "Collection4"
         
         // register

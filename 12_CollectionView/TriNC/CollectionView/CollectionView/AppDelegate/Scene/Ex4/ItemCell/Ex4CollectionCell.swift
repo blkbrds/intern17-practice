@@ -30,7 +30,7 @@ final class Ex4CollectionCell: UICollectionViewCell {
     }
 }
 
-// MARK: - Extention
+// MARK: - Extention UICollectionViewDataSource && UICollectionViewDelegateFlowLayout
 extension Ex4CollectionCell: UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
