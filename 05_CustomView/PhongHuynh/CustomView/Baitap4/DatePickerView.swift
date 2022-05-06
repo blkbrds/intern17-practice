@@ -10,7 +10,7 @@ class DatePickerView: UIView {
     
     // MARK: - Properties
     let datePicker: UIDatePicker = UIDatePicker()
-    let dateFormatte: String = "mm dd, yyyy"
+    let dateFormatte: String = "dd/MM/yyyy"
     
     weak var delegate: DatePickerViewDelegate?
     
@@ -40,8 +40,6 @@ class DatePickerView: UIView {
     @objc func doneDatePicker() {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormatte
-        formatter.dateStyle = .full
-        formatter.timeStyle = .none
         let date = formatter.string(from: datePicker.date)
         if let delegate = delegate {
             delegate.controller(view: self, date: date)
