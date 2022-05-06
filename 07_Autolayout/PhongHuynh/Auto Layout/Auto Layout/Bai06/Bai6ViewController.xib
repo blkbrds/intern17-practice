@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai6ViewController" customModule="Auto_Layout" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPB-9i-qNM" userLabel="View1">
+                    <rect key="frame" x="40" y="421.5" width="53.5" height="53.5"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="cPB-9i-qNM" secondAttribute="height" multiplier="1:1" id="1df-VG-Q12"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrm-Pf-KgA" userLabel="View2">
+                    <rect key="frame" x="133.5" y="421.5" width="53.5" height="53.5"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="zrm-Pf-KgA" secondAttribute="height" multiplier="1:1" id="Rzh-WK-P3E"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLo-da-WkE" userLabel="View4">
+                    <rect key="frame" x="227" y="421.5" width="53.5" height="53.5"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uLo-da-WkE" secondAttribute="height" multiplier="1:1" id="lqI-av-I7K"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFz-cS-ieK" userLabel="View3">
+                    <rect key="frame" x="320.5" y="421.5" width="53.5" height="53.5"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aFz-cS-ieK" secondAttribute="height" multiplier="1:1" id="vnX-GU-k2d"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aFz-cS-ieK" secondAttribute="trailing" constant="40" id="0c1-qs-bzc"/>
+                <constraint firstItem="uLo-da-WkE" firstAttribute="width" secondItem="cPB-9i-qNM" secondAttribute="width" id="Bjj-uf-jvh"/>
+                <constraint firstItem="aFz-cS-ieK" firstAttribute="leading" secondItem="uLo-da-WkE" secondAttribute="trailing" constant="40" id="JC6-Vv-1Dp"/>
+                <constraint firstItem="uLo-da-WkE" firstAttribute="leading" secondItem="zrm-Pf-KgA" secondAttribute="trailing" constant="40" id="KtG-1t-7N2"/>
+                <constraint firstItem="zrm-Pf-KgA" firstAttribute="width" secondItem="cPB-9i-qNM" secondAttribute="width" id="Owv-aP-e6x"/>
+                <constraint firstItem="cPB-9i-qNM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="S86-kp-qMs"/>
+                <constraint firstItem="cPB-9i-qNM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="S9z-NB-DJx"/>
+                <constraint firstItem="aFz-cS-ieK" firstAttribute="width" secondItem="cPB-9i-qNM" secondAttribute="width" id="ScJ-5Z-yqx"/>
+                <constraint firstItem="zrm-Pf-KgA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="e37-xL-ITz"/>
+                <constraint firstItem="aFz-cS-ieK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eP7-v8-ZXL"/>
+                <constraint firstItem="zrm-Pf-KgA" firstAttribute="leading" secondItem="cPB-9i-qNM" secondAttribute="trailing" constant="40" id="o09-xG-Dd1"/>
+                <constraint firstItem="uLo-da-WkE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wJ1-o3-83Q"/>
+            </constraints>
+            <point key="canvasLocation" x="142" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

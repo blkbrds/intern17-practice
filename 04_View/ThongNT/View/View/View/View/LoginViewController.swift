@@ -7,28 +7,27 @@
 
 import UIKit
 
-enum CheckInput: String {
-    case noUsername = "Chưa nhập tên đăng nhập"
-    case noPassword = "Chưa nhập mật khẩu"
-    case empty = "Chưa nhập dữ liệu"
-    case correct = "Nhập đúng"
-    case incorrect = "Nhập sai tên đặng nhập hoặc mật khẩu"
-}
-
 final class LoginViewController: UIViewController {
-    // MARK: - IBOulets
+    // MARK: - IBOulets private variables
     @IBOutlet private weak var userNameTextField: UITextField!
     @IBOutlet private weak var passWordTextField: UITextField!
     @IBOutlet private weak var loginBtn: UIButton!
     @IBOutlet private weak var clearBtn: UIButton!
     @IBOutlet private weak var informLabel: UILabel!
     
-    //MARK: - Variables
-    private var checkInput: CheckInput = .empty {
+    //MARK: - Private variables
+    private var checkInput: InputValidate = .empty {
         didSet {
-            showResult()
+            if checkInput != .correct {
+                showResult()
+            } else {
+                SceneDelegate.shared.changeFlow(with: .logined)
+//                goToHomeController()
+            }
         }
     }
+    
+    private var user = User(userName: "", password: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,21 +36,30 @@ final class LoginViewController: UIViewController {
     
     // MARK: - Private functions
     private func setupUI() {
-        loginBtn.layer.cornerRadius = 10
-        clearBtn.layer.cornerRadius = 10
+        configBarItem()
+        title = "Login"
+        view.subviews
+            .compactMap { $0 as? UIButton}
+            .forEach { configButton($0) }
+    }
+    
+    private func configButton(_ button: UIButton) {
+        button.layer.cornerRadius = 10
+        button.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.titleLabel?.textColor = UIColor.white
     }
     
     private func showResult() {
         informLabel.text = checkInput.rawValue
     }
     
-    private func loginProcess() {
+    // Compare username + password with database -> result
+    @objc private func loginProcess() {
         guard let userName = userNameTextField.text,
-              let password = passWordTextField.text else {
-            return
-        }
-        let user = User(userName: userName, password: password)
-        checkInput = user.checkUserPassword()
+              let password = passWordTextField.text else { return }
+        user = User(userName: userName, password: password)
+        checkInput = user.validateUserNamePasswordInput()
     }
     
     
@@ -61,10 +69,7 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction private func clearButtonTouchUpInSide(_ sender: UIButton) {
-        userNameTextField.text = ""
-        passWordTextField.text = ""
-        informLabel.text = ""
-        userNameTextField.becomeFirstResponder()
+        clearContent()
     }
     
     @IBAction private func clickOnNextKey(_ sender: AnyObject) {
@@ -76,6 +81,14 @@ final class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction private func registerTouchUpInside(_ sender: UIButton) {
+        navigationController?.pushViewController(RegisterViewController(), animated: true)
+    }
+    
+    @IBAction private func forgotPasswordTouchUpInside(_ sender: UIButton) {
+        navigationController?.pushViewController(ForgotPassWordViewController(), animated: true)
+    }
+    
     //MARK: - Override function
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -83,17 +96,33 @@ final class LoginViewController: UIViewController {
     }
 }
 
-struct User {
-    var userName: String
-    var password: String
+extension LoginViewController {
     
-    func checkUserPassword() -> CheckInput {
-        switch (userName, password) {
-        case ("abc", "123"): return .correct
-        case ("", ""): return .empty
-        case (_, ""): return .noPassword
-        case ("", _): return .noUsername
-        default: return .incorrect
-        }
+    //MARK: - Extension private functions
+    private func configBarItem() {
+        let doneButton = UIBarButtonItem(title: "Done",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(loginProcess))
+        navigationItem.rightBarButtonItem = doneButton
+        let logoutButton = UIBarButtonItem()
+        logoutButton.title = "Logout"
+        navigationItem.backBarButtonItem = logoutButton
+    }
+    
+    private func goToHomeController() {
+        navigationController?.pushViewController(HomeNaviViewController(user: user), animated: true)
+    }
+    
+    private func clearContent() {
+        userNameTextField.text = ""
+        passWordTextField.text = ""
+        informLabel.text = ""
+        userNameTextField.becomeFirstResponder()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        clearContent()
     }
 }

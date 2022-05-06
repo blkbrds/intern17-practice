@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserView" customModule="View" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="145"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="lEx-tp-cmN" userLabel="Username Label">
+                    <rect key="frame" x="0.0" y="100" width="100" height="45"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W7s-xi-Uxy" userLabel="User Image">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="W7s-xi-Uxy" secondAttribute="height" multiplier="1:1" id="ZBM-vo-Abt"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orJ-eE-Arr">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="145"/>
+                    <connections>
+                        <action selector="tapButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="zIo-nR-AoP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lEx-tp-cmN" secondAttribute="trailing" id="5V0-zh-NrB"/>
+                <constraint firstItem="lEx-tp-cmN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6TW-G2-Kuq"/>
+                <constraint firstItem="orJ-eE-Arr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7lx-Mg-rHL"/>
+                <constraint firstAttribute="bottom" secondItem="lEx-tp-cmN" secondAttribute="bottom" id="G1E-Qg-Cun"/>
+                <constraint firstItem="W7s-xi-Uxy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HWS-Yf-j0i"/>
+                <constraint firstAttribute="trailing" secondItem="orJ-eE-Arr" secondAttribute="trailing" id="WUr-YJ-AYB"/>
+                <constraint firstItem="W7s-xi-Uxy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XJX-AV-F2f"/>
+                <constraint firstItem="orJ-eE-Arr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aSF-el-J0V"/>
+                <constraint firstItem="lEx-tp-cmN" firstAttribute="top" secondItem="W7s-xi-Uxy" secondAttribute="bottom" id="qsc-Vi-DJP"/>
+                <constraint firstAttribute="trailing" secondItem="W7s-xi-Uxy" secondAttribute="trailing" id="rpl-bj-ErW"/>
+                <constraint firstAttribute="bottom" secondItem="orJ-eE-Arr" secondAttribute="bottom" id="xnT-qP-8Ec"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="userImageView" destination="W7s-xi-Uxy" id="4e2-No-foD"/>
+                <outlet property="userNameLabel" destination="lEx-tp-cmN" id="LT2-zh-dvu"/>
+            </connections>
+            <point key="canvasLocation" x="-86.956521739130437" y="-151.00446428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

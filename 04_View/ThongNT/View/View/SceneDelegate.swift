@@ -7,8 +7,21 @@
 
 import UIKit
 
+enum ApplicationStatus {
+    case logined
+    case logout
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
+    static var shared: SceneDelegate {
+        guard let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else {
+            fatalError("Can't find scence delegate")
+        }
+        return delegate
+    }
+
+    private let tabbarController = UITabBarController()
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -16,11 +29,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        window.rootViewController = configTabbar()
+        configTabbar()
+        changeFlow(with: .logout)
         window.makeKeyAndVisible()
     }
     
-    private func configTabbar() -> UITabBarController {
+    private func configTabbar() {
         // MyViewController
         let myVC = MyViewController()
         let myNavi = UINavigationController(rootViewController: myVC)
@@ -51,10 +65,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let naviNavi = UINavigationController(rootViewController: naviVC)
         naviNavi.tabBarItem = UITabBarItem(title: "Navi", image: UIImage(systemName: "arrow.up"), tag: 5)
         
-        let tabbarController = UITabBarController()
-        tabbarController.viewControllers = [myNavi, customNavi, tableNavi, collectionNavi, mapNavi, naviNavi]
+        // AutoLayoutViewController
+        let autoLayoutVC = AutoLayoutViewController()
+        let autoLayoutNavi = UINavigationController(rootViewController: autoLayoutVC)
+        autoLayoutNavi.tabBarItem = UITabBarItem(title: "Auto Layout", image: UIImage(systemName: "map"), tag: 6)
+            
+        // Cofig Tapbar controller
+        let viewControllers = [myNavi, customNavi, tableNavi, collectionNavi, mapNavi, naviNavi, autoLayoutNavi]
+        tabbarController.setViewControllers(viewControllers, animated: true)
         tabbarController.tabBar.tintColor = .systemPink
-        return tabbarController
+        tabbarController.selectedIndex = 0
+        tabbarController.tabBar.isTranslucent = false
+    }
+    
+    func changeFlow(with status: ApplicationStatus) {
+        switch status {
+        case .logined:
+            window?.rootViewController = tabbarController
+        case .logout:
+            let loginVC = LoginViewController()
+            let loginNavi = UINavigationController(rootViewController: loginVC)
+            window?.rootViewController = loginNavi
+        }
     }
 }
-

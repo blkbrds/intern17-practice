@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EViewController" customModule="View" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Iq-oU-BBp">
+                    <rect key="frame" x="192" y="180" width="30" height="30"/>
+                    <state key="normal" title="B"/>
+                    <connections>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="H3w-Nw-B8b"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPu-GB-u5D">
+                    <rect key="frame" x="192" y="300" width="30" height="30"/>
+                    <state key="normal" title="C"/>
+                    <connections>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Bqa-cP-net"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z77-SI-1fl">
+                    <rect key="frame" x="192" y="420" width="30" height="30"/>
+                    <state key="normal" title="D"/>
+                    <connections>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="uI3-ua-kpM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkk-hF-6pK">
+                    <rect key="frame" x="191" y="540" width="32" height="30"/>
+                    <state key="normal" title="Root"/>
+                    <connections>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Kbw-95-gtz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Zkk-hF-6pK" firstAttribute="top" secondItem="z77-SI-1fl" secondAttribute="bottom" constant="90" id="CKl-Yg-amd"/>
+                <constraint firstItem="SPu-GB-u5D" firstAttribute="top" secondItem="9Iq-oU-BBp" secondAttribute="bottom" constant="90" id="DP7-Yd-FTI"/>
+                <constraint firstItem="z77-SI-1fl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NVT-Kn-ZfQ"/>
+                <constraint firstItem="SPu-GB-u5D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NrO-cp-XyU"/>
+                <constraint firstItem="9Iq-oU-BBp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="180" id="Xlk-fJ-RAI"/>
+                <constraint firstItem="z77-SI-1fl" firstAttribute="top" secondItem="SPu-GB-u5D" secondAttribute="bottom" constant="90" id="kgF-b0-MGA"/>
+                <constraint firstItem="Zkk-hF-6pK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xeA-tA-iv2"/>
+                <constraint firstItem="9Iq-oU-BBp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zDs-cZ-b91"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="92.410714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
