@@ -5,22 +5,22 @@ struct Segment {
     var value: CGFloat
 }
 
-class PieChart: UIView {
+final class PieChart: UIView {
     var segments = [Segment]() {
         didSet {
             setNeedsDisplay()
         }
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         isOpaque = false
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     override func draw(_ rect: CGRect) {
         let ctx = UIGraphicsGetCurrentContext()
         let radius = min(frame.size.width, frame.size.height) * 0.5

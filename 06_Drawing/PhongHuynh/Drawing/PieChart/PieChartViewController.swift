@@ -1,7 +1,8 @@
 import UIKit
 
-class PieChartViewController: UIViewController {
+final class PieChartViewController: UIViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         

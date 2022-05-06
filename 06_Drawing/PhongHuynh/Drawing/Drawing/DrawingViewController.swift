@@ -1,6 +1,6 @@
 import UIKit
 
-class DrawingViewController: UIViewController {
+final class DrawingViewController: UIViewController {
     
     lazy var barChartView: Drawing = {
           let barChartView = Drawing()
@@ -8,6 +8,7 @@ class DrawingViewController: UIViewController {
           return barChartView
        }()
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,26 +23,24 @@ class DrawingViewController: UIViewController {
                 BarEntry(score: 20, title: "Today")
             ]
         view.addSubview(barChartView)
-        
         drawLine(start: CGPoint(x: 20, y: 50), end: CGPoint(x: 400, y: 50))
         drawLine(start: CGPoint(x: 20, y: 200), end: CGPoint(x: 400, y: 200))
         drawLine(start: CGPoint(x: 20, y: 350), end: CGPoint(x: 400, y: 350))
         drawLine(start: CGPoint(x: 20, y: 500), end: CGPoint(x: 400, y: 500))
     }
     
-    func drawLine(start: CGPoint, end: CGPoint) {
+    // MARK: - Private functions
+    private func drawLine(start: CGPoint, end: CGPoint) {
            // PATH
            let path = UIBezierPath()
            path.move(to: start)
            path.addLine(to: end)
            path.close()
-           
            //LAYER
            let shapeLayer = CAShapeLayer()
            shapeLayer.strokeColor = UIColor.blue.cgColor
            shapeLayer.lineWidth = 0.2
            shapeLayer.path = path.cgPath
-           
            //ADD LAYER
            self.view.layer.addSublayer(shapeLayer)
        }
