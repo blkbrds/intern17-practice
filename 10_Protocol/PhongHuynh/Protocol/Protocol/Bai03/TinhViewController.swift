@@ -1,7 +1,7 @@
 import UIKit
 
 final class TinhViewController: UIViewController {
-
+    
     // MARK: - IBOutlects
     @IBOutlet private var tinhButton: [UIButton]!
     
@@ -11,7 +11,7 @@ final class TinhViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Tỉnh"
         let backButton = UIBarButtonItem(image: UIImage(named: "back1.png"), style: .plain, target: self, action: #selector(leftAction))
         navigationItem.rightBarButtonItem = backButton
@@ -24,18 +24,19 @@ final class TinhViewController: UIViewController {
     }
     
     // MARK: - Objc functions
-    @objc func rightAction() {
+    @objc private func rightAction() {
         guard let navi = navigationController else { return }
         let vc = HuyenViewController()
         vc.diadiem = diadiem
         navi.pushViewController(vc, animated: true)
     }
     
-    @objc func leftAction() {
+    @objc private func leftAction() {
         guard let navi = navigationController else { return }
         navi.popViewController(animated: true)
     }
     
+    // MARK: - IBActions
     @IBAction private func changeColerButton(_ sender: UIButton) {
         changecoler(tag: sender.tag)
         diadiem?.tinh = sender.tag

@@ -4,7 +4,7 @@ final class MienViewController: UIViewController {
     
     // MARK: - IBOutlect
     @IBOutlet private var mienButton: [UIButton]!
-  
+    
     // MARK: - Properties
     var diadiem: DiaDiem?
     
@@ -24,12 +24,12 @@ final class MienViewController: UIViewController {
     }
     
     // MARK: - Objc functions
-    @objc func leftAction() {
+    @objc private func leftAction() {
         guard let navi = navigationController else { return }
         navi.popViewController(animated: true)
     }
     
-    @objc func rightAction() {
+    @objc private func rightAction() {
         guard let navi = navigationController else { return }
         let vc = TinhViewController()
         vc.diadiem = diadiem

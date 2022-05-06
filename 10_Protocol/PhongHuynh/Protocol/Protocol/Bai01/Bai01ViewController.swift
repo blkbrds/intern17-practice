@@ -123,25 +123,25 @@ final class Bai01ViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    func bietbay(array: [DongVat]) {
+    private func bietbay(array: [DongVat]) {
         for dongvat in array where dongvat is Chim {
             print(dongvat.ten())
         }
     }
     
-    func bietBoi(array: [DongVat]) {
+    private func bietBoi(array: [DongVat]) {
         for dongvat in array where dongvat is Ca {
             print(dongvat.ten())
         }
     }
     
-    func bietDi(array: [DongVat]) {
+    private func bietDi(array: [DongVat]) {
         for dongvat in array where dongvat is Thu {
             print(dongvat.ten())
         }
     }
     
-    func bietMotTrongBa(array: [DongVat]) {
+    private func bietMotTrongBa(array: [DongVat]) {
         for dongvat in array {
             if (dongvat is Chim && !(dongvat is Ca) && !(dongvat is Thu))
                 || (dongvat is Ca && !(dongvat is Chim) && !(dongvat is Thu))
@@ -151,7 +151,7 @@ final class Bai01ViewController: UIViewController {
         }
     }
     
-    func bietcaBa(array: [DongVat]) {
+    private func bietcaBa(array: [DongVat]) {
         for dongvat in array {
             if dongvat is Chim && dongvat is Ca && dongvat is Thu {
                 print(dongvat.ten())
@@ -159,7 +159,7 @@ final class Bai01ViewController: UIViewController {
         }
     }
     
-    func vuaBoiVuaDi(array: [DongVat]) {
+    private func vuaBoiVuaDi(array: [DongVat]) {
         for dongvat in array {
             if !(dongvat is Chim) && dongvat is Ca && dongvat is Thu {
                 print(dongvat.ten())
@@ -167,7 +167,7 @@ final class Bai01ViewController: UIViewController {
         }
     }
     
-    func vuaDiVuaBay(array: [DongVat]) {
+    private func vuaDiVuaBay(array: [DongVat]) {
         for dongvat in array {
             if (dongvat is Chim) && !(dongvat is Ca) && dongvat is Thu {
                 print(dongvat.ten())
@@ -175,7 +175,7 @@ final class Bai01ViewController: UIViewController {
         }
     }
     
-    func vuaBayVuaBoi(array: [DongVat]) {
+    private func vuaBayVuaBoi(array: [DongVat]) {
         for dongvat in array {
             if dongvat is Chim && dongvat is Ca && !(dongvat is Thu) {
                 print(dongvat.ten())

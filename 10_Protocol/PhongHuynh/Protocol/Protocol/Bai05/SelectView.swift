@@ -1,19 +1,20 @@
 import UIKit
 
 // MARK: - SelectViewDatasource
-protocol SelectViewDatasource {
+protocol SelectViewDatasource: class {
     
     func setXY() -> (x: String, y: String)
 }
 
 // MARK: - SelectViewDelegate
-protocol SelectViewDelegate {
+protocol SelectViewDelegate: class {
     
     func view(view: SelectView, needsPerfom actions: SelectView.Action)
 }
 
 class SelectView: UIView {
     
+    // MARK: - Define
     enum Action {
         case done(result: String, operation: Operation)
         case cancel
@@ -31,13 +32,13 @@ class SelectView: UIView {
     var numberOnScreen: Double = 0
     var previousNumber: Double = 0
     var operation: Operation = .cong
-    var dataSource: SelectViewDatasource? {
+    weak var dataSource: SelectViewDatasource? {
         didSet {
             receiveValue()
             changeBoderButton()
         }
     }
-    var delegate: SelectViewDelegate?
+    weak var delegate: SelectViewDelegate?
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -88,10 +89,10 @@ class SelectView: UIView {
     
     @IBAction private func doneButton(_ sender: UIButton) {
         if let result = resultLabel.text {
-            self.delegate?.view(view: self, needsPerfom: .done(result: result, operation: operation))
+            delegate?.view(view: self, needsPerfom: .done(result: result, operation: operation))
         }
     }
-    @IBAction func clearButton(_ sender: Any) {
+    @IBAction private func clearButton(_ sender: Any) {
         xLabel.text = ""
         yLabel.text = ""
         if let x = xLabel.text, let y = yLabel.text {

@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - Define
 enum Operation {
     case cong
     case tru
@@ -38,17 +39,17 @@ final class Bai05ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-    func setView(view: UIView, isHidden: Bool) {
+    // MARK: - Private functions
+    private func setView(view: UIView, isHidden: Bool) {
         UIView.transition(with: view, duration: 3, options: .transitionCrossDissolve, animations: {
             view.isHidden = isHidden
         })
     }
     
     // MARK: - IBActions
-    @IBAction func push(_ sender: Any) {
+    @IBAction private func push(_ sender: Any) {
         guard let selectView = Bundle.main.loadNibNamed("SelectView", owner: self, options: nil)?.first as? SelectView else { return }
         self.selectView = selectView
         selectView.frame = CGRect(x: 0, y: view.bounds.maxY - (view.bounds.height/3), width: view.bounds.width, height: view.bounds.height / 3)
@@ -77,16 +78,26 @@ extension Bai05ViewController: SelectViewDelegate {
         case .done(let result, let operation):
             resultLabel.text = result
             operationButton.setTitle(operation.title, for: .normal)
+            UIView.transition(with: selectView, duration: 0.7,
+                              options: [.curveEaseOut,
+                                        .transitionFlipFromTop],
+                              animations: {
+                                self.selectView.alpha = 0.1
+                              },
+                              completion: { _ in
+                                self.selectView.removeFromSuperview()
+                              }
+            )
         case .cancel:
             UIView.transition(with: selectView, duration: 0.7,
                               options: [.curveEaseOut,
                                         .transitionFlipFromTop],
-              animations: {
-                self.selectView.alpha = 0.1
-              },
-              completion: { _ in
-                self.selectView.removeFromSuperview()
-              }
+                              animations: {
+                                self.selectView.alpha = 0.1
+                              },
+                              completion: { _ in
+                                self.selectView.removeFromSuperview()
+                              }
             )
         case .clear(let x, let y):
             xTextField.text = x

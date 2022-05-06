@@ -1,13 +1,6 @@
 import UIKit
 
-final class HuyenViewController: UIViewController, DiaDiemDatasouce {
-    
-    func getDiaDiem() -> DiaDiem {
-        guard let diadiem = diadiem else {
-            return DiaDiem(mien: 0, tinh: 0, huyen: 0)
-        }
-        return diadiem
-    }
+final class HuyenViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private var huyenButton: [UIButton]!
@@ -18,7 +11,7 @@ final class HuyenViewController: UIViewController, DiaDiemDatasouce {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Huyện"
         let backButton = UIBarButtonItem(image: UIImage(named: "back1.png"), style: .plain, target: self, action: #selector(leftAction))
         navigationItem.rightBarButtonItem = backButton
@@ -31,7 +24,7 @@ final class HuyenViewController: UIViewController, DiaDiemDatasouce {
     }
     
     // MARK: - Objc functions
-    @objc func rightAction() {
+    @objc private func rightAction() {
         guard let navi = navigationController else { return }
         if let homevc = navi.viewControllers[0] as? DiaDiemViewController {
             homevc.datasouce = self
@@ -39,11 +32,11 @@ final class HuyenViewController: UIViewController, DiaDiemDatasouce {
         navi.popToRootViewController(animated: true)
     }
     
-    @objc func leftAction() {
+    @objc private func leftAction() {
         guard let navi = navigationController else { return }
         navi.popViewController(animated: true)
     }
-
+    
     // MARK: - IBActions
     @IBAction private func changeColerButton(_ sender: UIButton) {
         changecoler(tag: sender.tag)
@@ -56,5 +49,18 @@ final class HuyenViewController: UIViewController, DiaDiemDatasouce {
             button.backgroundColor = button.tag == tag ? .blue : .white
         }
     }
-    
 }
+
+// MARK: - DiaDiemDatasouce
+extension HuyenViewController: DiaDiemDatasouce {
+    
+    func getDiaDiem() -> DiaDiem {
+        guard let diadiem = diadiem else {
+            return DiaDiem(mien: 0, tinh: 0, huyen: 0)
+        }
+        return diadiem
+    }
+}
+
+
+

@@ -1,6 +1,6 @@
 import UIKit
 
-class DiaDiem {
+final class DiaDiem {
     var mien: Int
     var tinh: Int
     var huyen: Int
@@ -24,8 +24,6 @@ final class DiaDiemViewController: UIViewController {
     @IBOutlet private weak var mienLabel: UILabel!
     @IBOutlet private weak var tinhLabel: UILabel!
     @IBOutlet private weak var huyenLabel: UILabel!
-
-    
     
     // MARK: - Properties
     var datasouce: DiaDiemDatasouce?
@@ -46,14 +44,14 @@ final class DiaDiemViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Địa điểm"
         let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
         self.navigationItem.rightBarButtonItem = editButton
     }
     
     // MARK: - Objc functions
-    @objc func editAction() {
+    @objc private func editAction() {
         let vc = MienViewController()
         vc.diadiem = diadiem
         self.navigationController?.pushViewController(vc, animated: true)
