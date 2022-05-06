@@ -10,7 +10,7 @@ import UIKit
 final class Ex4CollectionCell: UICollectionViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Life cycle
     override func awakeFromNib() {
