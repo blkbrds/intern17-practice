@@ -53,7 +53,7 @@ final class Exersice12ViewController: UIViewController {
     @objc private func selectAction() {
         tableView.allowsMultipleSelectionDuringEditing = true
         for row in 0..<names.count {
-            self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: false, scrollPosition: .none)
+            tableView.selectRow(at: IndexPath(row: row, section: 0), animated: false, scrollPosition: .none)
         }
     }
     
