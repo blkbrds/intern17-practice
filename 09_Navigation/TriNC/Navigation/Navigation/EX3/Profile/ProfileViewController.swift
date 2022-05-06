@@ -36,8 +36,8 @@ final class ProfileViewController: UIViewController {
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneActionBackHome))
         navigationItem.rightBarButtonItem = doneButton
         nameTextField.text = username
-        avatarImageView.image = userImage
-        avatarImageView.backgroundColor = .blue
+//        avatarImageView.image = userImage
+        avatarImageView.backgroundColor = .lightGray
     }
     
     // MARK: - Objc

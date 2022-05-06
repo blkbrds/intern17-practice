@@ -30,7 +30,7 @@ final class AvatarView: UIView {
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         userAvatarImageView.frame = frame
 //        userAvatarImageView.image = UIImage(named: "ic-user")
-        userAvatarImageView.backgroundColor = .blue
+        userAvatarImageView.backgroundColor = .lightGray
         userAvatarImageView.contentMode = .scaleAspectFit
         addSubview(userAvatarImageView)
         
@@ -38,8 +38,8 @@ final class AvatarView: UIView {
         usernameLabel.frame = CGRect(x: 0, y: 100, width: 100, height: 25)
         usernameLabel.text = name
         usernameLabel.textAlignment = .center
-        usernameLabel.textColor = .blue
-        usernameLabel.backgroundColor = .lightGray
+        usernameLabel.textColor = .white
+        usernameLabel.backgroundColor = .red
         addSubview(usernameLabel)
         
         // add button
