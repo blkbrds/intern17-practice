@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22371ED1282501570046286D /* Ex2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371ECF282501570046286D /* Ex2ViewController.swift */; };
+		22371ED2282501570046286D /* Ex2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22371ED0282501570046286D /* Ex2ViewController.xib */; };
+		22371ED5282501870046286D /* Ex2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371ED3282501870046286D /* Ex2Cell.swift */; };
+		22371ED6282501870046286D /* Ex2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22371ED4282501870046286D /* Ex2Cell.xib */; };
+		22371EDA28250B4D0046286D /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371ED828250B4C0046286D /* HeaderCell.swift */; };
+		22371EDB28250B4D0046286D /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22371ED928250B4D0046286D /* HeaderCell.xib */; };
 		223F17C52820C5F9009BD6F2 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F17C42820C5F9009BD6F2 /* Member.swift */; };
 		223F17CB2820C916009BD6F2 /* TeamHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F17C92820C916009BD6F2 /* TeamHeaderReusableView.swift */; };
 		223F17CC2820C916009BD6F2 /* TeamHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223F17CA2820C916009BD6F2 /* TeamHeaderReusableView.xib */; };
@@ -22,20 +28,23 @@
 		224BB728281F7CF00018D3EF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224BB726281F7CF00018D3EF /* HomeViewController.xib */; };
 		224BB72F281F7D800018D3EF /* Ex1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB72D281F7D800018D3EF /* Ex1ViewController.swift */; };
 		224BB730281F7D800018D3EF /* Ex1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224BB72E281F7D800018D3EF /* Ex1ViewController.xib */; };
-		224BB733281F7D880018D3EF /* Ex2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB731281F7D880018D3EF /* Ex2ViewController.swift */; };
-		224BB734281F7D880018D3EF /* Ex2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224BB732281F7D880018D3EF /* Ex2ViewController.xib */; };
 		224BB737281F7D900018D3EF /* Ex3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB735281F7D900018D3EF /* Ex3ViewController.swift */; };
 		224BB738281F7D900018D3EF /* Ex3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224BB736281F7D900018D3EF /* Ex3ViewController.xib */; };
 		224BB73B281F7D980018D3EF /* Ex4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB739281F7D980018D3EF /* Ex4ViewController.swift */; };
 		224BB73C281F7D980018D3EF /* Ex4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224BB73A281F7D980018D3EF /* Ex4ViewController.xib */; };
 		224BB744281F83E90018D3EF /* Ex1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB742281F83E90018D3EF /* Ex1Cell.swift */; };
 		224BB745281F83E90018D3EF /* Ex1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224BB743281F83E90018D3EF /* Ex1Cell.xib */; };
-		224BB74C281F95A20018D3EF /* Ex2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB74B281F95A20018D3EF /* Ex2Cell.swift */; };
 		228AF04D2824AD5200AC029B /* Ex4CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AF04B2824AD5200AC029B /* Ex4CollectionCell.swift */; };
 		228AF04E2824AD5200AC029B /* Ex4CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228AF04C2824AD5200AC029B /* Ex4CollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22371ECF282501570046286D /* Ex2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2ViewController.swift; sourceTree = "<group>"; };
+		22371ED0282501570046286D /* Ex2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex2ViewController.xib; sourceTree = "<group>"; };
+		22371ED3282501870046286D /* Ex2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2Cell.swift; sourceTree = "<group>"; };
+		22371ED4282501870046286D /* Ex2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex2Cell.xib; sourceTree = "<group>"; };
+		22371ED828250B4C0046286D /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		22371ED928250B4D0046286D /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		223F17C42820C5F9009BD6F2 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		223F17C92820C916009BD6F2 /* TeamHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHeaderReusableView.swift; sourceTree = "<group>"; };
 		223F17CA2820C916009BD6F2 /* TeamHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamHeaderReusableView.xib; sourceTree = "<group>"; };
@@ -53,15 +62,12 @@
 		224BB726281F7CF00018D3EF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		224BB72D281F7D800018D3EF /* Ex1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex1ViewController.swift; sourceTree = "<group>"; };
 		224BB72E281F7D800018D3EF /* Ex1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex1ViewController.xib; sourceTree = "<group>"; };
-		224BB731281F7D880018D3EF /* Ex2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2ViewController.swift; sourceTree = "<group>"; };
-		224BB732281F7D880018D3EF /* Ex2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex2ViewController.xib; sourceTree = "<group>"; };
 		224BB735281F7D900018D3EF /* Ex3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex3ViewController.swift; sourceTree = "<group>"; };
 		224BB736281F7D900018D3EF /* Ex3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex3ViewController.xib; sourceTree = "<group>"; };
 		224BB739281F7D980018D3EF /* Ex4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex4ViewController.swift; sourceTree = "<group>"; };
 		224BB73A281F7D980018D3EF /* Ex4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex4ViewController.xib; sourceTree = "<group>"; };
 		224BB742281F83E90018D3EF /* Ex1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex1Cell.swift; sourceTree = "<group>"; };
 		224BB743281F83E90018D3EF /* Ex1Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex1Cell.xib; sourceTree = "<group>"; };
-		224BB74B281F95A20018D3EF /* Ex2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2Cell.swift; sourceTree = "<group>"; };
 		228AF04B2824AD5200AC029B /* Ex4CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex4CollectionCell.swift; sourceTree = "<group>"; };
 		228AF04C2824AD5200AC029B /* Ex4CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex4CollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22371ED728250B380046286D /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				22371ED828250B4C0046286D /* HeaderCell.swift */,
+				22371ED928250B4D0046286D /* HeaderCell.xib */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
 		223F17C62820C8E2009BD6F2 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,8 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				224BB746281F8AFE0018D3EF /* Cell */,
-				224BB731281F7D880018D3EF /* Ex2ViewController.swift */,
-				224BB732281F7D880018D3EF /* Ex2ViewController.xib */,
+				22371ECF282501570046286D /* Ex2ViewController.swift */,
+				22371ED0282501570046286D /* Ex2ViewController.xib */,
 			);
 			path = Ex2;
 			sourceTree = "<group>";
@@ -206,6 +221,7 @@
 		224BB72C281F7D370018D3EF /* Ex4 */ = {
 			isa = PBXGroup;
 			children = (
+				22371ED728250B380046286D /* HeaderCell */,
 				228AF04A2824AB6200AC029B /* ItemCell */,
 				224BB739281F7D980018D3EF /* Ex4ViewController.swift */,
 				224BB73A281F7D980018D3EF /* Ex4ViewController.xib */,
@@ -225,7 +241,8 @@
 		224BB746281F8AFE0018D3EF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				224BB74B281F95A20018D3EF /* Ex2Cell.swift */,
+				22371ED3282501870046286D /* Ex2Cell.swift */,
+				22371ED4282501870046286D /* Ex2Cell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -297,15 +314,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22371ED6282501870046286D /* Ex2Cell.xib in Resources */,
 				224BB71B281F7C130018D3EF /* LaunchScreen.storyboard in Resources */,
+				22371EDB28250B4D0046286D /* HeaderCell.xib in Resources */,
 				224BB738281F7D900018D3EF /* Ex3ViewController.xib in Resources */,
 				224BB745281F83E90018D3EF /* Ex1Cell.xib in Resources */,
 				228AF04E2824AD5200AC029B /* Ex4CollectionCell.xib in Resources */,
 				223F17D52820CC4A009BD6F2 /* HeroCell.xib in Resources */,
 				224BB718281F7C130018D3EF /* Assets.xcassets in Resources */,
-				224BB734281F7D880018D3EF /* Ex2ViewController.xib in Resources */,
 				224BB728281F7CF00018D3EF /* HomeViewController.xib in Resources */,
 				224BB73C281F7D980018D3EF /* Ex4ViewController.xib in Resources */,
+				22371ED2282501570046286D /* Ex2ViewController.xib in Resources */,
 				224BB730281F7D800018D3EF /* Ex1ViewController.xib in Resources */,
 				223F17CC2820C916009BD6F2 /* TeamHeaderReusableView.xib in Resources */,
 				223F17D02820CBA8009BD6F2 /* TeamFooterReusableView.xib in Resources */,
@@ -319,13 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224BB733281F7D880018D3EF /* Ex2ViewController.swift in Sources */,
 				228AF04D2824AD5200AC029B /* Ex4CollectionCell.swift in Sources */,
+				22371EDA28250B4D0046286D /* HeaderCell.swift in Sources */,
 				223F17D42820CC4A009BD6F2 /* HeroCell.swift in Sources */,
+				22371ED1282501570046286D /* Ex2ViewController.swift in Sources */,
 				224BB70F281F7C110018D3EF /* AppDelegate.swift in Sources */,
 				223F17CB2820C916009BD6F2 /* TeamHeaderReusableView.swift in Sources */,
+				22371ED5282501870046286D /* Ex2Cell.swift in Sources */,
 				223F17CF2820CBA8009BD6F2 /* TeamFooterReusableView.swift in Sources */,
-				224BB74C281F95A20018D3EF /* Ex2Cell.swift in Sources */,
 				224BB711281F7C110018D3EF /* SceneDelegate.swift in Sources */,
 				224BB737281F7D900018D3EF /* Ex3ViewController.swift in Sources */,
 				224BB727281F7CF00018D3EF /* HomeViewController.swift in Sources */,

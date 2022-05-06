@@ -12,6 +12,7 @@ final class Ex4ViewController: UIViewController {
     // MARK: - Enum
     enum IdentifierEx4: String {
         case cell = "Ex4CollectionCell"
+        case header = "HeaderCell"
     }
     
     // MARK: - IBOutlet
@@ -30,6 +31,8 @@ final class Ex4ViewController: UIViewController {
         // register
         let nib = UINib(nibName: IdentifierEx4.cell.rawValue, bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: IdentifierEx4.cell.rawValue)
+        let headerNib = UINib(nibName: IdentifierEx4.header.rawValue, bundle: .main)
+        collectionView.register(headerNib, forCellWithReuseIdentifier: IdentifierEx4.header.rawValue)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -47,12 +50,21 @@ extension Ex4ViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdentifierEx4.cell.rawValue, for: indexPath) as! Ex4CollectionCell
+        var cell = UICollectionViewCell()
+        if indexPath.row == 0 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdentifierEx4.header.rawValue, for: indexPath) as! HeaderCell
+        } else {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdentifierEx4.cell.rawValue, for: indexPath) as! Ex4CollectionCell
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Config.screenWidth, height: Config.screenHeight)
+        if indexPath.row == 0 {
+            return CGSize(width: Config.screenWidth, height: 150)
+        } else {
+            return CGSize(width: Config.screenWidth, height: Config.screenHeight)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
