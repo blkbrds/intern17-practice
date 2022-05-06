@@ -3,7 +3,6 @@ import Foundation
 var str = "Hello, playground"
 
 func tinhDienTichVaTheTich(banKinh: Double) -> (dienTich: Double, theTich: Double) {
-    
     var dienTich: Double = 0
     var theTich: Double = 0
     dienTich = Double(4 / 3 * 3.14 * banKinh * banKinh * banKinh)
@@ -16,7 +15,6 @@ print("dien tich là: \(tinhDienTichVaTheTich(banKinh: 5).dienTich), the tich l�
 //bai2
 
 func tinhPhuongTrinhBac2(a: Double, b: Double, c: Double) -> (x1: Double, x2: Double) {
-    
     var x1: Double = 0
     var x2: Double = 0
     var detar: Double = 0
@@ -39,7 +37,6 @@ print("phuong trinh bac hai la: \(tinhPhuongTrinhBac2(a: 2, b: 4, c: 2))")
 //bai 3
 
 func tinhPhuongTrinhBac1(a: Double, b: Double, c:Double, a1: Double, b1: Double, c1: Double) -> (x: Double, y: Double) {
-    
     var x: Double = 0
     var y: Double = 0
     var dx: Double = 0
@@ -76,7 +73,6 @@ print("day fibonaci là: \(fibonaci(n: 10))")
 //    tinh sin cos
 
 func chuoiTaylor(x: Float , n: Int) -> Double {
-    
     let a: Int
     if n % 2 == 0 {
         a = 1
@@ -127,7 +123,7 @@ func isHappyNumber(num: Int) -> Bool {
               tailsum += arr[i]
             }
         }
-        return presum == tailsum ? true : false
+        return presum == tailsum
     } else {
         return false
     }
