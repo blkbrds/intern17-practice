@@ -13,7 +13,6 @@ final class EditViewController: UIViewController {
     }
     
     // MARK: - Properties
-    var username: String?
     weak var delegate: EditViewControllerDelegate?
     
     // MARK: - IBOutlets
@@ -38,8 +37,7 @@ final class EditViewController: UIViewController {
     }
     
     @objc private func rightAction() {
-        username = usernameTextField.text
-        if let username = username, let delegate = delegate {
+        if let username = usernameTextField.text, let delegate = delegate {
             delegate.controller(view: self, needsPerfom: .tap(username: username))
         }
         self.navigationController?.popViewController(animated: true)

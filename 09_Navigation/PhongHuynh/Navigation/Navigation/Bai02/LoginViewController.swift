@@ -44,6 +44,7 @@ final class LoginViewController: UIViewController {
 
 // MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passwordTextField.becomeFirstResponder()
         if textField.returnKeyType == .done {
@@ -55,6 +56,7 @@ extension LoginViewController: UITextFieldDelegate {
 
 // MARK: - HomeViewControllerDelegate
 extension LoginViewController: HomeViewControllerDelegate {
+    
     func controller(view: HomeViewController, needsPerfom actions: HomeViewController.Action) {
         switch actions {
         case .logout:

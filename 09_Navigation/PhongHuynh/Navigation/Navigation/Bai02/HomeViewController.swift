@@ -47,6 +47,7 @@ final class HomeViewController: UIViewController {
 
 // MARK: - EditViewControllerDelegate
 extension HomeViewController: EditViewControllerDelegate {
+    
     func controller(view: EditViewController, needsPerfom actions: EditViewController.Action) {
         switch actions {
         case .tap(let userName):

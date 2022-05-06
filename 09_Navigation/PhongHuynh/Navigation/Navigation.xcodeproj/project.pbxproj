@@ -102,10 +102,10 @@
 		CB0B6E4B280D40620085E82C /* Bai03 */ = {
 			isa = PBXGroup;
 			children = (
-				CB0B6E51280D43CD0085E82C /* AvartarView.swift */,
-				CB0B6E54280D43DF0085E82C /* AvartarView.xib */,
 				CB0B6E59280D446C0085E82C /* Home3ViewController.swift */,
 				CB0B6E5A280D446C0085E82C /* Home3ViewController.xib */,
+				CB0B6E51280D43CD0085E82C /* AvartarView.swift */,
+				CB0B6E54280D43DF0085E82C /* AvartarView.xib */,
 				CB85D518280E449900B80790 /* ProfileViewController.swift */,
 				CB85D519280E449900B80790 /* ProfileViewController.xib */,
 			);
