@@ -31,6 +31,8 @@
 		224BB744281F83E90018D3EF /* Ex1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB742281F83E90018D3EF /* Ex1Cell.swift */; };
 		224BB745281F83E90018D3EF /* Ex1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224BB743281F83E90018D3EF /* Ex1Cell.xib */; };
 		224BB74C281F95A20018D3EF /* Ex2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BB74B281F95A20018D3EF /* Ex2Cell.swift */; };
+		228AF04D2824AD5200AC029B /* Ex4CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AF04B2824AD5200AC029B /* Ex4CollectionCell.swift */; };
+		228AF04E2824AD5200AC029B /* Ex4CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228AF04C2824AD5200AC029B /* Ex4CollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		224BB742281F83E90018D3EF /* Ex1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex1Cell.swift; sourceTree = "<group>"; };
 		224BB743281F83E90018D3EF /* Ex1Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex1Cell.xib; sourceTree = "<group>"; };
 		224BB74B281F95A20018D3EF /* Ex2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2Cell.swift; sourceTree = "<group>"; };
+		228AF04B2824AD5200AC029B /* Ex4CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex4CollectionCell.swift; sourceTree = "<group>"; };
+		228AF04C2824AD5200AC029B /* Ex4CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex4CollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 		224BB72C281F7D370018D3EF /* Ex4 */ = {
 			isa = PBXGroup;
 			children = (
+				228AF04A2824AB6200AC029B /* ItemCell */,
 				224BB739281F7D980018D3EF /* Ex4ViewController.swift */,
 				224BB73A281F7D980018D3EF /* Ex4ViewController.xib */,
 			);
@@ -223,6 +228,15 @@
 				224BB74B281F95A20018D3EF /* Ex2Cell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		228AF04A2824AB6200AC029B /* ItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				228AF04B2824AD5200AC029B /* Ex4CollectionCell.swift */,
+				228AF04C2824AD5200AC029B /* Ex4CollectionCell.xib */,
+			);
+			path = ItemCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +300,7 @@
 				224BB71B281F7C130018D3EF /* LaunchScreen.storyboard in Resources */,
 				224BB738281F7D900018D3EF /* Ex3ViewController.xib in Resources */,
 				224BB745281F83E90018D3EF /* Ex1Cell.xib in Resources */,
+				228AF04E2824AD5200AC029B /* Ex4CollectionCell.xib in Resources */,
 				223F17D52820CC4A009BD6F2 /* HeroCell.xib in Resources */,
 				224BB718281F7C130018D3EF /* Assets.xcassets in Resources */,
 				224BB734281F7D880018D3EF /* Ex2ViewController.xib in Resources */,
@@ -305,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				224BB733281F7D880018D3EF /* Ex2ViewController.swift in Sources */,
+				228AF04D2824AD5200AC029B /* Ex4CollectionCell.swift in Sources */,
 				223F17D42820CC4A009BD6F2 /* HeroCell.swift in Sources */,
 				224BB70F281F7C110018D3EF /* AppDelegate.swift in Sources */,
 				223F17CB2820C916009BD6F2 /* TeamHeaderReusableView.swift in Sources */,
