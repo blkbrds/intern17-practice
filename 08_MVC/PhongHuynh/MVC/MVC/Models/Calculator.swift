@@ -1,7 +1,8 @@
 import UIKit
 
-class Calculator {
+final class Calculator {
     
+    // MARK: - Properties
     var numberOnScreen: Double
     var previousNumber: Double
     
@@ -13,6 +14,4 @@ class Calculator {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-
 }

@@ -2,21 +2,22 @@ import UIKit
 
 final class MVCViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet private weak var label: UILabel!
-
+    
+    // MARK: - Properties
     var numberOnScreen: Double = 0
     var previousNumber: Double = 0
     var performingMath = false
     var operation = 0
     
-    
-    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func numbers(_ sender: UIButton) {
-        
+    // MARK: - IBActions
+    @IBAction private func numbers(_ sender: UIButton) {
         if performingMath == true {
             label.text = String(sender.tag - 1)
             numberOnScreen = Double(label.text!)!
@@ -27,8 +28,7 @@ final class MVCViewController: UIViewController {
         }
     }
     
-    @IBAction func calculatorTouchUpInside(_ sender: UIButton) {
-        
+    @IBAction private func calculatorTouchUpInside(_ sender: UIButton) {
         if label.text != "" && sender.tag != 11 && sender.tag != 16 {
             guard let text = label.text, let number = Double(text) else { return }
             previousNumber = number
