@@ -41,15 +41,13 @@ final class HeaderCell: UICollectionViewCell {
     @IBAction private func previousButtonTouchUpInside(_ sender: Any) {
         currentIndex.row -= 1
         if currentIndex.row == 0 { return }
-//        collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
-        collectionView.contentOffset.x -= collectionView.bounds.width
+        collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
     }
     
     @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         currentIndex.row += 1
         if currentIndex.row > 12 { return }
-//        collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
-        collectionView.contentOffset.x += collectionView.bounds.width
+        collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
     }
 }
 

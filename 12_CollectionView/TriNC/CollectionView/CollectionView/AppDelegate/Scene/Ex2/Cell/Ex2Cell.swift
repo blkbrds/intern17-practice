@@ -15,7 +15,6 @@ final class Ex2Cell: UICollectionViewCell {
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        numberLabel.textAlignment = .center
     }
 
 }
