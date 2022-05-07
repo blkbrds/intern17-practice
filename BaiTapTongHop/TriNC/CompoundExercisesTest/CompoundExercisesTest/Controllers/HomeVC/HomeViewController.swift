@@ -28,7 +28,6 @@ final class HomeViewController: BaseViewController {
     // MARK: - UI
     override func setupUI() {
         title = "Home"
-    
         // Register
         let nib = UINib(nibName: Identifier.cell.rawValue, bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: Identifier.cell.rawValue)
@@ -55,10 +54,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.cell.rawValue, for: indexPath) as! HomeCell
-        let users = users[indexPath.row]
-//        cell.nameLabel.text = users.name
-//        cell.dateOfBirthLabel.text = users.date
-        cell.updateProfile(name: users.name, dateOfBirth: users.date)
+        let user = users[indexPath.row]
+        cell.updateProfile(name: user.name, date: user.date)
         return cell
     }
     

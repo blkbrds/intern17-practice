@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 final class DetailViewController: BaseViewController {
     
     // MARK: - IBOutlets
@@ -18,6 +17,7 @@ final class DetailViewController: BaseViewController {
     
     // MARK: - Properties
     private var datePickerView = DatePickerView()
+    private var detailViewModel = DetailViewModel()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -39,12 +39,12 @@ final class DetailViewController: BaseViewController {
         nameTextField.clipsToBounds = true
         nameTextField.layer.borderColor = UIColor.black.cgColor
         nameTextField.layer.borderWidth = 1.0
-    
+        
         dateOfBirthTextField.layer.cornerRadius = 12
         dateOfBirthTextField.clipsToBounds = true
         dateOfBirthTextField.layer.borderColor = UIColor.black.cgColor
         dateOfBirthTextField.layer.borderWidth = 1.0
-    
+        
         // Button
         notificationButton.layer.cornerRadius = 12
         notificationButton.clipsToBounds = true
@@ -55,6 +55,12 @@ final class DetailViewController: BaseViewController {
     // MARK: - Data
     override func setupData() {
         updatePicker()
+        
+        detailViewModel.loadImage { image in
+            if let image = image {
+                self.thumbnailImageView.image = image
+            }
+        }
     }
     
     // MARK: - Private Function
@@ -72,8 +78,9 @@ final class DetailViewController: BaseViewController {
     @IBAction private func notificationButtonTouchUpInside(_ sender: Any) {
         let alertVC = UIAlertController(title: "Warning", message: "Do you want to edit this user with name and birthday", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
-        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        navigationController?.popViewController(animated: true)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.handleData()
+        }))
         present(alertVC, animated: true)
     }
 }

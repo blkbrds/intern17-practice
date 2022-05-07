@@ -7,12 +7,16 @@
 
 import UIKit
 
-class HomeCell: UITableViewCell {
-
+final class HomeCell: UITableViewCell {
+    
     // MARK: - IBOutlets
-    @IBOutlet weak var thumbnailImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var dateOfBirthLabel: UILabel!
+    @IBOutlet private weak var thumbnailImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var dateOfBirthLabel: UILabel!
+    @IBOutlet private weak var detailButton: UIButton!
+    
+    // MARK: - Properties
+    private var homeCellModel = HomeCellModel()
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -21,15 +25,28 @@ class HomeCell: UITableViewCell {
         thumbnailImageView.layer.borderColor = UIColor.black.cgColor
         thumbnailImageView.layer.borderWidth = 1.5
         thumbnailImageView.clipsToBounds = true
+        fetchImage()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - IBAction
+    @IBAction private func detailButtonTouchUpInside(_ sender: Any) {}
+    
     // MARK: Public Funtion
-    func updateProfile(name: String, dateOfBirth: String) {
+    func updateProfile(name: String, date: String) {
         nameLabel.text = name
-        dateOfBirthLabel.text = dateOfBirth
+        dateOfBirthLabel.text = date
+    }
+    
+    // MARK: Fetch Image
+    func fetchImage() {
+        homeCellModel.loadImage { image in
+            if let image = image {
+                self.thumbnailImageView.image = image
+            }
+        }
     }
 }

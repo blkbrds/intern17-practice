@@ -9,8 +9,8 @@ import Foundation
 
 // MARK: - Model
 struct User {
-    let name: String
-    let date: String
+    var name: String
+    var date: String
 }
 
 // MARK: - Extention
