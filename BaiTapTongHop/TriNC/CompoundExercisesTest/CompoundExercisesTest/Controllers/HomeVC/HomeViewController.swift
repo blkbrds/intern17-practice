@@ -28,12 +28,13 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - UI
     override func setupUI() {
-        title = "Girl"
+        title = "Home Girl"
         
+        // Navigation Bar
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = .systemPink
+        appearance.backgroundColor = .orange
         
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
@@ -68,7 +69,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 105
+        return 110
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,7 +81,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-// MARK: - Implement Protocol
+// MARK: - Implement Protocol DetailViewControllerViewDelegate
 extension HomeViewController: DetailViewControllerViewDelegate {
     func controller(view: DetailViewController, needsPerform action: DetailViewController.Action) {
         switch action {
@@ -91,6 +92,7 @@ extension HomeViewController: DetailViewControllerViewDelegate {
     }
 }
 
+// MARK: - Implement Protocol HomeCellDelegate
 extension HomeViewController: HomeCellDelegate {
     func cell(_ cell: HomeCell, needsPerform action: HomeCell.Action) {
         switch action {

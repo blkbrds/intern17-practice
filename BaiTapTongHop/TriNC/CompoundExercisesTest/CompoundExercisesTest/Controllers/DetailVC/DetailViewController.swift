@@ -42,25 +42,25 @@ final class DetailViewController: BaseViewController {
         // Image
         thumbnailImageView.layer.cornerRadius = 48
         thumbnailImageView.clipsToBounds = true
-        thumbnailImageView.layer.borderColor = UIColor.black.cgColor
-        thumbnailImageView.layer.borderWidth = 1.5
+        thumbnailImageView.layer.borderColor = UIColor.orange.cgColor
+        thumbnailImageView.layer.borderWidth = 1
         
         // TextField
         nameTextField.layer.cornerRadius = 12
         nameTextField.clipsToBounds = true
-        nameTextField.layer.borderColor = UIColor.black.cgColor
-        nameTextField.layer.borderWidth = 1.0
+        nameTextField.layer.borderColor = UIColor.lightGray.cgColor
+        nameTextField.layer.borderWidth = 0.8
         
         dateOfBirthTextField.layer.cornerRadius = 12
         dateOfBirthTextField.clipsToBounds = true
-        dateOfBirthTextField.layer.borderColor = UIColor.black.cgColor
-        dateOfBirthTextField.layer.borderWidth = 1.0
+        dateOfBirthTextField.layer.borderColor = UIColor.lightGray.cgColor
+        dateOfBirthTextField.layer.borderWidth = 0.8
         
         // Button
         notificationButton.layer.cornerRadius = 12
         notificationButton.clipsToBounds = true
         notificationButton.layer.borderColor = UIColor.lightGray.cgColor
-        notificationButton.layer.borderWidth = 1.0
+        notificationButton.layer.borderWidth = 0.8
     }
     
     // MARK: - Data
@@ -84,7 +84,7 @@ final class DetailViewController: BaseViewController {
     }
     
     private func handleData() {
-        guard let delegate = delegate,let name = nameTextField.text, let date = dateOfBirthTextField.text else { return }
+        guard let delegate = delegate, let name = nameTextField.text, let date = dateOfBirthTextField.text else { return }
         delegate.controller(view: self, needsPerform: .update(User(name: name, date: date)))
         navigationController?.popViewController(animated: true)
     }
@@ -100,7 +100,7 @@ final class DetailViewController: BaseViewController {
     }
 }
 
-// MARK: - Implement Protocol
+// MARK: - Implement Protocol DatePickerViewDelegate
 extension DetailViewController: DatePickerViewDelegate {
     func view(_ view: DatePickerView, needsPerform action: DatePickerView.Action) {
         switch action {

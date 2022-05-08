@@ -33,8 +33,8 @@ final class HomeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         thumbnailImageView.layer.cornerRadius = 48
-        thumbnailImageView.layer.borderColor = UIColor.black.cgColor
-        thumbnailImageView.layer.borderWidth = 1.5
+        thumbnailImageView.layer.borderColor = UIColor.orange.cgColor
+        thumbnailImageView.layer.borderWidth = 1
         thumbnailImageView.clipsToBounds = true
         fetchImage()
     }
