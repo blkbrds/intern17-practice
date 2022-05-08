@@ -19,6 +19,7 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - Properties
     private var users: [User] = User.getDummyData()
+    var index: Int = 0
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - UI
     override func setupUI() {
-        title = "Home"
+        title = "Girl 2K"
         // Register
         let nib = UINib(nibName: Identifier.cell.rawValue, bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: Identifier.cell.rawValue)
@@ -39,6 +40,11 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - Data
     override func setupData() {}
+    
+    // MARK: - Private Function
+    private func updateUser(user: User) {
+        users[index] = user
+    }
 }
 
 // MARK: - Extention UITableViewDataSource && UITableViewDelegate
@@ -54,14 +60,34 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.cell.rawValue, for: indexPath) as! HomeCell
-        let user = users[indexPath.row]
-        cell.updateProfile(name: user.name, date: user.date)
+        let users = users[indexPath.row]
+        cell.updateProfile(name: users.name, date: users.date)
+        cell.delegate = self
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let vc = DetailViewController()
-        navigationController?.pushViewController(vc, animated: true)
+}
+
+// MARK: - Implement Protocol
+extension HomeViewController: DetailViewControllerViewDelegate {
+
+    func controller(view: DetailViewController, needsPerform action: DetailViewController.Action) {
+        switch action {
+        case .update(let user):
+            self.updateUser(user: user)
+            tableView.reloadData()
+        }
+    }
+}
+
+extension HomeViewController: HomeCellDelegate {
+    func cell(_ cell: HomeCell, needsPerform action: HomeCell.Action) {
+        switch action {
+        case .screenToDetail:
+            guard let indexPath = tableView.indexPath(for: cell) else { return }
+            index = indexPath.row
+            let vc = DetailViewController()
+            vc.delegate = self
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

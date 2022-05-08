@@ -1,16 +1,16 @@
 //
-//  HomeCellModel.swift
+//  HomeCellViewModel.swift
 //  CompoundExercisesTest
 //
-//  Created by tri.nguyen on 07/05/2022.
+//  Created by tri.nguyen on 08/05/2022.
 //
 
 import Foundation
 import UIKit
 
-final class HomeCellModel {
+final class HomeCellViewModel {
     
-    // MARK: - Properties
+    // MARK: - Properties    
     let url = "https://s1.media.ngoisao.vn/resize_580/news/2021/07/31/le-phuong-anh-ngosaovn-1-ngoisaovn-w1536-h2048.jpg"
     
     // MARK: - LoadImage
@@ -19,6 +19,7 @@ final class HomeCellModel {
         
         let session = URLSession.shared
         let dataTask = session.dataTask(with: url) { (data, response, error) in
+            // Main Thread
             DispatchQueue.main.async {
                 if error != nil {
                     // callback

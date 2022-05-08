@@ -7,6 +7,11 @@
 
 import UIKit
 
+// MARK: - Protocol
+protocol DetailViewControllerViewDelegate: class {
+    func controller(view: DetailViewController, needsPerform action: DetailViewController.Action)
+}
+
 final class DetailViewController: BaseViewController {
     
     // MARK: - IBOutlets
@@ -15,7 +20,13 @@ final class DetailViewController: BaseViewController {
     @IBOutlet private weak var dateOfBirthTextField: UITextField!
     @IBOutlet private weak var notificationButton: UIButton!
     
+    // MARK: - Enum
+    enum Action {
+        case update(User)
+    }
+    
     // MARK: - Properties
+    weak var delegate: DetailViewControllerViewDelegate?
     private var datePickerView = DatePickerView()
     private var detailViewModel = DetailViewModel()
     
@@ -26,7 +37,7 @@ final class DetailViewController: BaseViewController {
     
     // MARK: - UI
     override func setupUI() {
-        title = "Detail"
+        title = "Profile Girl"
         
         // Image
         thumbnailImageView.layer.cornerRadius = 48
@@ -56,11 +67,12 @@ final class DetailViewController: BaseViewController {
     override func setupData() {
         updatePicker()
         
-        detailViewModel.loadImage { image in
+        // ViewModel -> View
+        detailViewModel.loadImage(completion: { image in
             if let image = image {
                 self.thumbnailImageView.image = image
             }
-        }
+        })
     }
     
     // MARK: - Private Function
@@ -71,8 +83,11 @@ final class DetailViewController: BaseViewController {
         view.addSubview(datePickerView)
     }
     
-    // MARK: - Todo:
-    private func handleData() {}
+    private func handleData() {
+        guard let delegate = delegate,let name = nameTextField.text, let date = dateOfBirthTextField.text else { return }
+        delegate.controller(view: self, needsPerform: .update(User(name: name, date: date)))
+        navigationController?.popViewController(animated: true)
+    }
     
     // MARK: - IBAction
     @IBAction private func notificationButtonTouchUpInside(_ sender: Any) {

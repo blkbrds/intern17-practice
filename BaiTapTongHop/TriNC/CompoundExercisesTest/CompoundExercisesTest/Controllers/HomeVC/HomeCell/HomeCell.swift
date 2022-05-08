@@ -7,16 +7,27 @@
 
 import UIKit
 
+// MARK: - Protocol
+protocol HomeCellDelegate: class {
+    func cell(_ cell: HomeCell, needsPerform action: HomeCell.Action)
+}
+
 final class HomeCell: UITableViewCell {
-    
+        
     // MARK: - IBOutlets
     @IBOutlet private weak var thumbnailImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var dateOfBirthLabel: UILabel!
     @IBOutlet private weak var detailButton: UIButton!
     
+    // MARK: - Enum
+    enum Action {
+        case screenToDetail
+    }
+    
     // MARK: - Properties
-    private var homeCellModel = HomeCellModel()
+    weak var delegate: HomeCellDelegate?
+    var homeCellViewModel = HomeCellViewModel()
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -33,7 +44,11 @@ final class HomeCell: UITableViewCell {
     }
     
     // MARK: - IBAction
-    @IBAction private func detailButtonTouchUpInside(_ sender: Any) {}
+    @IBAction private func detailButtonTouchUpInside(_ sender: Any) {
+        if let delegate = delegate {
+            delegate.cell(self, needsPerform: .screenToDetail)
+        }
+    }
     
     // MARK: Public Funtion
     func updateProfile(name: String, date: String) {
@@ -43,7 +58,7 @@ final class HomeCell: UITableViewCell {
     
     // MARK: Fetch Image
     func fetchImage() {
-        homeCellModel.loadImage { image in
+        homeCellViewModel.loadImage { image in
             if let image = image {
                 self.thumbnailImageView.image = image
             }

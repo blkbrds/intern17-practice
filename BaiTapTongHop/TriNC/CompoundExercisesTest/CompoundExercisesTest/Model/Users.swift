@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Model
 struct User {
     var name: String
-    var date: String
+    var date: String    
 }
 
 // MARK: - Extention
@@ -18,9 +18,11 @@ extension User {
     static func getDummyData() -> [User] {
         var users: [User] = []
         for i in 1...3 {
-            let user = User(name: "Name \(i)", date: "18/08/1998")
+            let user = User(name: "Ashley \(i)", date: "1/2/2000")
             users.append(user)
         }
         return users
     }
 }
+
+
