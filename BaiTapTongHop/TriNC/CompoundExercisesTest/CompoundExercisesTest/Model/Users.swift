@@ -17,8 +17,8 @@ struct User {
 extension User {
     static func getDummyData() -> [User] {
         var users: [User] = []
-        for i in 1...3 {
-            let user = User(name: "Ashley \(i)", date: "1/2/2000")
+        for i in 1...5 {
+            let user = User(name: "Beautiful Girl \(i)", date: "1/2/1996")
             users.append(user)
         }
         return users

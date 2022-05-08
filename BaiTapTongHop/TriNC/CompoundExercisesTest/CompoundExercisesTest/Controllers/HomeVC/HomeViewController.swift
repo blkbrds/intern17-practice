@@ -8,7 +8,7 @@
 import UIKit
 
 final class HomeViewController: BaseViewController {
-
+    
     // MARK: - Enum
     enum Identifier: String {
         case cell = "HomeCell"
@@ -28,7 +28,20 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - UI
     override func setupUI() {
-        title = "Girl 2K"
+        title = "Girl"
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.backgroundColor = .systemPink
+        
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.standardAppearance = appearance
+        if #available(iOS 15.0, *) {
+            navigationController!.navigationBar.compactScrollEdgeAppearance = appearance
+        }
+        
         // Register
         let nib = UINib(nibName: Identifier.cell.rawValue, bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: Identifier.cell.rawValue)
@@ -69,7 +82,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
 // MARK: - Implement Protocol
 extension HomeViewController: DetailViewControllerViewDelegate {
-
     func controller(view: DetailViewController, needsPerform action: DetailViewController.Action) {
         switch action {
         case .update(let user):
