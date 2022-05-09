@@ -7,6 +7,7 @@ final class User {
     var name: String
     var date: String
     
+    // MARK : - Init
     init(avatar: String, name: String, date: String) {
         self.avatar = avatar
         self.name = name

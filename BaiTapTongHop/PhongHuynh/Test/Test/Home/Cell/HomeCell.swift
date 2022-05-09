@@ -38,8 +38,9 @@ final class HomeCell: UITableViewCell {
     
     // MARK: - Private funtions
     private func updateView() {
-        nameLabel.text = viewModel?.user.name
-        dateLabel.text = viewModel?.user.date
+        guard let viewModel = viewModel else { return }
+        nameLabel.text = viewModel.user.name
+        dateLabel.text = viewModel.user.date
     }
     
     private func boderButton() {

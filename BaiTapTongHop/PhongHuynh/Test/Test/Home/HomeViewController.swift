@@ -36,8 +36,9 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let viewModel = viewModel else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell
-        cell.viewModel = viewModel?.viewModelForCell(at: indexPath)
+        cell.viewModel = viewModel.viewModelForCell(at: indexPath)
         cell.delegate = self
         return cell
     }
@@ -53,11 +54,11 @@ extension HomeViewController: HomeCellDelegate {
     func cell(cell: HomeCell, needsPerfom actions: HomeCell.Action) {
         switch actions {
         case .moveToDetail:
-            guard let indexPath = tableView.indexPath(for: cell) else { return }
-            viewModel?.index = indexPath.row
+            guard let indexPath = tableView.indexPath(for: cell), let viewModel = viewModel else { return }
+            viewModel.index = indexPath.row
             let vc = DetailViewController()
             vc.delegate = self
-            vc.viewModel = viewModel?.viewModelForDetail(at: indexPath)
+            vc.viewModel = viewModel.viewModelForDetail(at: indexPath)
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -69,7 +70,8 @@ extension HomeViewController: DetailViewControllerDelegate {
     func controller(view: DetailViewController, needsPerfom actions: DetailViewController.Action) {
         switch actions {
         case .update(let user):
-            viewModel?.updateUser(user: user)
+            guard let viewModel = viewModel else { return }
+            viewModel.updateUser(user: user)
             tableView.reloadData()
         }
     }
