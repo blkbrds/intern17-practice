@@ -35,6 +35,8 @@
 		CB7D1E3A2822857800150409 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7D1E382822857800150409 /* LoginViewController.xib */; };
 		CB7D1E402822879F00150409 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D1E3F2822879F00150409 /* DataManager.swift */; };
 		CB7D1E4328228A4700150409 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D1E4228228A4700150409 /* HomeViewModel.swift */; };
+		CBD6F7BD2828BC3E00A5DF51 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6F7BC2828BC3E00A5DF51 /* Music.swift */; };
+		CBD6F7C02828BD4F00A5DF51 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6F7BF2828BD4F00A5DF51 /* Networking.swift */; };
 		CBFB78172823AD0A00DEA8E8 /* Bai1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFB78152823AD0A00DEA8E8 /* Bai1ViewController.swift */; };
 		CBFB78182823AD0A00DEA8E8 /* Bai1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBFB78162823AD0A00DEA8E8 /* Bai1ViewController.xib */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		CB7D1E382822857800150409 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CB7D1E3F2822879F00150409 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CB7D1E4228228A4700150409 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CBD6F7BC2828BC3E00A5DF51 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		CBD6F7BF2828BD4F00A5DF51 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		CBFB78152823AD0A00DEA8E8 /* Bai1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai1ViewController.swift; sourceTree = "<group>"; };
 		CBFB78162823AD0A00DEA8E8 /* Bai1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai1ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +153,8 @@
 			children = (
 				CB7D1E4228228A4700150409 /* HomeViewModel.swift */,
 				CB0FC6772823D2FD0024E2CA /* HomeCellViewModel.swift */,
+				CBD6F7BC2828BC3E00A5DF51 /* Music.swift */,
+				CBD6F7BF2828BD4F00A5DF51 /* Networking.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,7 +333,9 @@
 				CB7D1E0A28227FF900150409 /* ForgotPasswordViewController.swift in Sources */,
 				CB028CD728238805002D1163 /* Data.Ext.swift in Sources */,
 				CB7D1E402822879F00150409 /* DataManager.swift in Sources */,
+				CBD6F7C02828BD4F00A5DF51 /* Networking.swift in Sources */,
 				CB7D1E1A2822814C00150409 /* BaseNavigationViewController.swift in Sources */,
+				CBD6F7BD2828BC3E00A5DF51 /* Music.swift in Sources */,
 				CB0FC6782823D2FD0024E2CA /* HomeCellViewModel.swift in Sources */,
 				CB7D1DDA2822772C00150409 /* AppDelegate.swift in Sources */,
 				CB7D1E232822821000150409 /* HomeViewController.swift in Sources */,

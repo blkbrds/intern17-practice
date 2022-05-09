@@ -1,30 +1,25 @@
 import UIKit
 
 class NetWorkingViewController: BaseViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet private weak var tableView: UITableView!
     
     var viewmodel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // updateUI()
+        
     }
     
     // MARK: - config
     override func setupUI() {
         super.setupUI()
-        //title
-        self.title = "Home"
         
-        //tableview
+        title = "Home"
         tableView.delegate = self
         tableView.dataSource = self
-        
         let nib = UINib(nibName: "HomeCell", bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: "cell")
-        
-        //navi
         let resetTabbarItem = UIBarButtonItem(title: "load", style: .plain, target: self, action: #selector(loadAPI))
         self.navigationItem.rightBarButtonItem = resetTabbarItem
     }
@@ -61,6 +56,22 @@ extension NetWorkingViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeCell
         cell.viewModel = viewmodel.viewModelForCell(at: indexPath)
+        
+//        if item.thumbnailImage != nil {
+//            cell.thumbnail.image = item.thumbnailImage
+//        } else {
+//            cell.thumbnail.image = nil
+//            
+//            //downloader
+//            Networking.shared().downloadImage(url: item.artworkUrl100) { (image) in
+//                if let image = image {
+//                    cell.thumbnail.image = image
+//                    item.thumbnailImage = image
+//                } else {
+//                    cell.thumbnail.image = nil
+//                }
+//            }
+//        }
         return cell
     }
 }
