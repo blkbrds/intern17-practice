@@ -28,6 +28,7 @@ final class DatePickerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Funtions
     func showDatePicker(datePickerTextField: UITextField) {
         let toolBar = UIToolbar()
         datePicker.datePickerMode = .date

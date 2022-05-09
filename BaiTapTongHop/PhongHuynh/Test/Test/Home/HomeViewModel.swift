@@ -6,6 +6,7 @@ final class HomeViewModel {
     var users: [User] = User.getDummyDatas()
     var index: Int = 0
     
+    // MARK: - Methods
     func numberOfRowsInSection() -> Int {
         return users.count
     }

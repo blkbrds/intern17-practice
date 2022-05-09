@@ -72,7 +72,7 @@ final class DetailViewController: UIViewController {
     // MARK: - IBActions
     @IBAction private func okButton(_ sender: Any) {
         guard let viewModel = viewModel else { return }
-        let alert = UIAlertController(title: "Warning", message: "Do you want to exit this user with name \(viewModel.user.name) and birthday \(viewModel.user.date)", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Warning", message: "Do you want to exit this user with name \"\(viewModel.user.name)\" and birthday \"\(viewModel.user.date)\"", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: {action in
             self.leftAction()
