@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - Protocol
-protocol DetailViewControllerViewDelegate: class {
+protocol DetailViewControllerDelegate: class {
     func controller(view: DetailViewController, needsPerform action: DetailViewController.Action)
 }
 
@@ -18,7 +18,7 @@ final class DetailViewController: BaseViewController {
     @IBOutlet private weak var thumbnailImageView: UIImageView!
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var dateOfBirthTextField: UITextField!
-    @IBOutlet private weak var notificationButton: UIButton!
+    @IBOutlet private weak var doneButton: UIButton!
     
     // MARK: - Enum
     enum Action {
@@ -26,7 +26,7 @@ final class DetailViewController: BaseViewController {
     }
     
     // MARK: - Properties
-    weak var delegate: DetailViewControllerViewDelegate?
+    weak var delegate: DetailViewControllerDelegate?
     private var datePickerView = DatePickerView()
     private var detailViewModel = DetailViewModel()
     
@@ -57,10 +57,10 @@ final class DetailViewController: BaseViewController {
         dateOfBirthTextField.layer.borderWidth = 0.8
         
         // Button
-        notificationButton.layer.cornerRadius = 12
-        notificationButton.clipsToBounds = true
-        notificationButton.layer.borderColor = UIColor.lightGray.cgColor
-        notificationButton.layer.borderWidth = 0.8
+        doneButton.layer.cornerRadius = 12
+        doneButton.clipsToBounds = true
+        doneButton.layer.borderColor = UIColor.lightGray.cgColor
+        doneButton.layer.borderWidth = 0.8
     }
     
     // MARK: - Data
@@ -68,9 +68,9 @@ final class DetailViewController: BaseViewController {
         updatePicker()
         
         // ViewModel -> View
-        detailViewModel.loadImage(completion: { image in
+        detailViewModel.loadImage(completion: { [weak self] image in
             if let image = image {
-                self.thumbnailImageView.image = image
+                self?.thumbnailImageView.image = image
             }
         })
     }
@@ -79,7 +79,7 @@ final class DetailViewController: BaseViewController {
     private func updatePicker() {
         datePickerView = DatePickerView(frame: CGRect(x: 0, y: view.bounds.height - 400, width: view.bounds.width, height: 400))
         datePickerView.delegate = self
-        datePickerView.showDatePicker(datePickerTextField: dateOfBirthTextField)
+        datePickerView.configDatePicker(datePickerTextField: dateOfBirthTextField)
         view.addSubview(datePickerView)
     }
     
@@ -90,7 +90,7 @@ final class DetailViewController: BaseViewController {
     }
     
     // MARK: - IBAction
-    @IBAction private func notificationButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func doneButtonTouchUpInside(_ sender: Any) {
         let alertVC = UIAlertController(title: "Warning", message: "Do you want to edit this user with name and birthday", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in

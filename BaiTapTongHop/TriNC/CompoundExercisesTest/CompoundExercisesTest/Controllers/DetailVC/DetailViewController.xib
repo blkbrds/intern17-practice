@@ -11,8 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="CompoundExercisesTest" customModuleProvider="target">
             <connections>
                 <outlet property="dateOfBirthTextField" destination="WFo-0W-4p5" id="NcE-TR-3Ke"/>
+                <outlet property="doneButton" destination="jZb-dA-Pc0" id="bFs-85-keq"/>
                 <outlet property="nameTextField" destination="KJm-cC-uia" id="9YT-1v-JiP"/>
-                <outlet property="notificationButton" destination="jZb-dA-Pc0" id="gon-wZ-UsC"/>
                 <outlet property="thumbnailImageView" destination="gaE-cN-5Ry" id="Eyl-7F-hSZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,8 +26,8 @@
                     <rect key="frame" x="157" y="64" width="100" height="100"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="width" secondItem="gaE-cN-5Ry" secondAttribute="height" multiplier="1:1" id="7XJ-30-8pR"/>
                         <constraint firstAttribute="width" constant="100" id="VJa-tX-3SI"/>
-                        <constraint firstAttribute="height" constant="100" id="WG6-Tq-96n"/>
                     </constraints>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJm-cC-uia">
@@ -40,9 +40,6 @@
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DateOfBirth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFo-0W-4p5">
                     <rect key="frame" x="20" y="254" width="374" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="sYB-Wm-aGD"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -59,7 +56,7 @@
                         <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="notificationButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Kyy-ZK-zSy"/>
+                        <action selector="doneButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="WWy-sF-WS0"/>
                     </connections>
                 </button>
             </subviews>
@@ -72,6 +69,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WFo-0W-4p5" secondAttribute="trailing" constant="20" id="GxU-19-lNi"/>
                 <constraint firstItem="WFo-0W-4p5" firstAttribute="centerX" secondItem="gaE-cN-5Ry" secondAttribute="centerX" id="HsP-D4-1qi"/>
                 <constraint firstItem="KJm-cC-uia" firstAttribute="centerX" secondItem="gaE-cN-5Ry" secondAttribute="centerX" id="VEe-g2-K1O"/>
+                <constraint firstItem="KJm-cC-uia" firstAttribute="height" secondItem="WFo-0W-4p5" secondAttribute="height" id="YtZ-4f-CNQ"/>
                 <constraint firstItem="jZb-dA-Pc0" firstAttribute="centerX" secondItem="gaE-cN-5Ry" secondAttribute="centerX" id="amo-59-Xmq"/>
                 <constraint firstItem="gaE-cN-5Ry" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kVE-RO-eI0"/>
                 <constraint firstItem="KJm-cC-uia" firstAttribute="top" secondItem="gaE-cN-5Ry" secondAttribute="bottom" constant="30" id="oxh-Ry-IFi"/>

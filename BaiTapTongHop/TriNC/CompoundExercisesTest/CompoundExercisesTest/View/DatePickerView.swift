@@ -5,7 +5,6 @@
 //  Created by tri.nguyen on 07/05/2022.
 //
 
-import Foundation
 import UIKit
 
 // MARK: - Protocol
@@ -17,7 +16,7 @@ final class DatePickerView: UIView {
     
     // MARK: - Properties
     private let datePicker: UIDatePicker = UIDatePicker()
-    private let dateFormatte: String = "MMM dd, yyyy"
+    private let dateFormatter: String = "MMM dd, yyyy"
     weak var delegate: DatePickerViewDelegate?
     
     // MARK: - Life cycle
@@ -30,7 +29,7 @@ final class DatePickerView: UIView {
     }
     
     // MARK: - Function
-    func showDatePicker(datePickerTextField: UITextField) {
+    func configDatePicker(datePickerTextField: UITextField) {
         // Format Date
         datePicker.datePickerMode = .date
         
@@ -54,7 +53,7 @@ final class DatePickerView: UIView {
     @objc private func doneDatePicker() {
         // Formatter
         let formatter = DateFormatter()
-        formatter.dateFormat = dateFormatte
+        formatter.dateFormat = dateFormatter
         formatter.dateStyle = .full
         formatter.timeStyle = .none
         

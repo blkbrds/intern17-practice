@@ -22,12 +22,12 @@ final class HomeCell: UITableViewCell {
     
     // MARK: - Enum
     enum Action {
-        case screenToDetail
+        case moveToDetail
     }
     
     // MARK: - Properties
     weak var delegate: HomeCellDelegate?
-    var homeCellViewModel = HomeCellViewModel()
+    private var homeCellViewModel = HomeCellViewModel()
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -45,9 +45,7 @@ final class HomeCell: UITableViewCell {
     
     // MARK: - IBAction
     @IBAction private func detailButtonTouchUpInside(_ sender: Any) {
-        if let delegate = delegate {
-            delegate.cell(self, needsPerform: .screenToDetail)
-        }
+        delegate?.cell(self, needsPerform: .moveToDetail)
     }
     
     // MARK: Public Funtion
@@ -57,10 +55,10 @@ final class HomeCell: UITableViewCell {
     }
     
     // MARK: Fetch Image
-    func fetchImage() {
-        homeCellViewModel.loadImage { image in
+    private func fetchImage() {
+        homeCellViewModel.loadImage { [weak self] image in
             if let image = image {
-                self.thumbnailImageView.image = image
+                self?.thumbnailImageView.image = image
             }
         }
     }

@@ -21,7 +21,7 @@
                         <rect key="frame" x="10" y="19.5" width="100" height="100"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="0Ng-cu-AwI"/>
+                            <constraint firstAttribute="width" secondItem="SkQ-u6-kdp" secondAttribute="height" multiplier="1:1" id="lF9-D7-vye"/>
                             <constraint firstAttribute="width" constant="100" id="uNG-5h-TXG"/>
                         </constraints>
                     </imageView>
@@ -43,7 +43,7 @@
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21f-mX-4e1">
-                        <rect key="frame" x="433" y="54.5" width="38" height="30"/>
+                        <rect key="frame" x="423" y="54.5" width="38" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="2ah-ek-QNY"/>
                         </constraints>
@@ -60,10 +60,10 @@
                 <constraints>
                     <constraint firstItem="SkQ-u6-kdp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="30t-TZ-qcD"/>
                     <constraint firstItem="gg1-mV-HPl" firstAttribute="leading" secondItem="SkQ-u6-kdp" secondAttribute="trailing" constant="20" id="9rv-02-FuF"/>
-                    <constraint firstAttribute="trailing" secondItem="21f-mX-4e1" secondAttribute="trailing" constant="10" id="O6v-Ib-7wJ"/>
+                    <constraint firstAttribute="trailing" secondItem="21f-mX-4e1" secondAttribute="trailing" constant="20" id="O6v-Ib-7wJ"/>
+                    <constraint firstItem="21f-mX-4e1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aeM-Bw-Fwc"/>
                     <constraint firstItem="SkQ-u6-kdp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="agB-eT-UhT"/>
-                    <constraint firstItem="gg1-mV-HPl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kqU-Pk-oN3"/>
-                    <constraint firstItem="21f-mX-4e1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="slC-0K-PBC"/>
+                    <constraint firstItem="gg1-mV-HPl" firstAttribute="centerY" secondItem="SkQ-u6-kdp" secondAttribute="centerY" id="z9g-dR-5iA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

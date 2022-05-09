@@ -76,10 +76,14 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.delegate = self
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 // MARK: - Implement Protocol DetailViewControllerViewDelegate
-extension HomeViewController: DetailViewControllerViewDelegate {
+extension HomeViewController: DetailViewControllerDelegate {
     func controller(view: DetailViewController, needsPerform action: DetailViewController.Action) {
         switch action {
         case .update(let user):
@@ -93,7 +97,7 @@ extension HomeViewController: DetailViewControllerViewDelegate {
 extension HomeViewController: HomeCellDelegate {
     func cell(_ cell: HomeCell, needsPerform action: HomeCell.Action) {
         switch action {
-        case .screenToDetail:
+        case .moveToDetail:
             guard let indexPath = tableView.indexPath(for: cell) else { return }
             index = indexPath.row
             let vc = DetailViewController()
