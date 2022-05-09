@@ -52,9 +52,6 @@ final class HomeViewController: BaseViewController {
         tableView.dataSource = self
     }
     
-    // MARK: - Data
-    override func setupData() {}
-    
     // MARK: - Private Function
     private func updateUser(user: User) {
         users[index] = user
