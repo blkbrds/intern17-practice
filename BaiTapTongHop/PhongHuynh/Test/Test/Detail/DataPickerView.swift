@@ -3,10 +3,15 @@ import UIKit
 // MARK: - DatePickerViewDelegate
 protocol DatePickerViewDelegate: class {
     
-    func controller(view: DatePickerView, date: String)
+    func controller(view: DatePickerView, needsPerfom actions: DatePickerView.Action)
 }
 
 final class DatePickerView: UIView {
+    
+    // MARK: - Define
+    enum Action {
+        case update(date: String)
+    }
     
     // MARK: - Properties
     let datePicker: UIDatePicker = UIDatePicker()
@@ -15,7 +20,6 @@ final class DatePickerView: UIView {
     // MARK: - Properties
     weak var delegate: DatePickerViewDelegate?
     
-    // MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -24,7 +28,6 @@ final class DatePickerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Private functions
     func showDatePicker(datePickerTextField: UITextField) {
         let toolBar = UIToolbar()
         datePicker.datePickerMode = .date
@@ -43,7 +46,7 @@ final class DatePickerView: UIView {
         formatter.dateFormat = dateFormatte
         let date = formatter.string(from: datePicker.date)
         if let delegate = delegate {
-            delegate.controller(view: self, date: date)
+            delegate.controller(view: self, needsPerfom: .update(date: date))
         }
     }
 }

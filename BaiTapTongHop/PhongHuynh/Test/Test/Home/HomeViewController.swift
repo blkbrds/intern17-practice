@@ -22,7 +22,6 @@ final class HomeViewController: UIViewController {
         let nib = UINib(nibName: "HomeCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "HomeCell")
         tableView.dataSource = self
-        tableView.delegate = self
     }
 }
 
@@ -50,6 +49,7 @@ extension HomeViewController: UITableViewDataSource {
 
 // MARK: - HomeCellDelegate
 extension HomeViewController: HomeCellDelegate {
+    
     func cell(cell: HomeCell, needsPerfom actions: HomeCell.Action) {
         switch actions {
         case .moveToDetail:
@@ -65,6 +65,7 @@ extension HomeViewController: HomeCellDelegate {
 
 // MARK: - DetailViewControllerDelegate
 extension HomeViewController: DetailViewControllerDelegate {
+    
     func controller(view: DetailViewController, needsPerfom actions: DetailViewController.Action) {
         switch actions {
         case .update(let user):
@@ -72,8 +73,4 @@ extension HomeViewController: DetailViewControllerDelegate {
             tableView.reloadData()
         }
     }
-}
-
-// MARK: - UITableViewDelegate
-extension HomeViewController: UITableViewDelegate {
 }

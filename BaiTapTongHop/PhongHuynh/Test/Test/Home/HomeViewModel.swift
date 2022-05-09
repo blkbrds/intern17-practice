@@ -23,7 +23,9 @@ final class HomeViewModel {
     }
 }
 
+// MARK: - User
 extension User {
+    
     static func getDummyDatas() -> [User] {
         var users: [User] = []
         for i in 1...3 {
