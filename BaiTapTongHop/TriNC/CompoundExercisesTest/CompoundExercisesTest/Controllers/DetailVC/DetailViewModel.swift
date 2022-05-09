@@ -11,7 +11,7 @@ import UIKit
 final class DetailViewModel {
     
     // MARK: - Properties
-    let url = "https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/2/14/13305451537340937166500036199037000332886527n-1613375263372211794836.jpg"
+    private let url = "https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/2/14/13305451537340937166500036199037000332886527n-1613375263372211794836.jpg"
     
     // MARK: - LoadImage
     func loadImage(completion: @escaping (UIImage?) -> ()) {

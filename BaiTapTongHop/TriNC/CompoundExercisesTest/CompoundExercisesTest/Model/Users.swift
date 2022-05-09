@@ -24,5 +24,3 @@ extension User {
         return users
     }
 }
-
-

@@ -67,6 +67,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="dateOfBirthLabel" destination="fSO-Jx-4YB" id="WV0-WW-MeC"/>
                 <outlet property="detailButton" destination="21f-mX-4e1" id="God-U3-B7k"/>

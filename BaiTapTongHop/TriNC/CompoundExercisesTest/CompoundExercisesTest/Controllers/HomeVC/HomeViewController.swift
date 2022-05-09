@@ -19,7 +19,7 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - Properties
     private var users: [User] = User.getDummyData()
-    var index: Int = 0
+    private var index: Int = 0
     
     // MARK: - Life cycle
     override func viewDidLoad() {
