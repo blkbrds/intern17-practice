@@ -7,11 +7,15 @@
 
 import UIKit
 
-final class MapViewController: UIViewController {
+final class MapViewController: BaseViewController {
 
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // MARK: - UI
+    override func setupUI() {
         title = "Map"
     }
 }

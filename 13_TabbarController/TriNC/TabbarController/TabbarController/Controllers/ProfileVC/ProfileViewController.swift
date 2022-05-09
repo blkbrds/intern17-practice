@@ -7,12 +7,21 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+final class ProfileViewController: BaseViewController {
 
+    // MARK: - IBOutlet
+    @IBOutlet private weak var loginButton: UIButton!
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // MARK: - UI
+    override func setupUI() {
         title = "Profile"
+        loginButton.layer.cornerRadius = 12
+        loginButton.clipsToBounds = true
     }
     
     // MARK: - IBAction

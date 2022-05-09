@@ -12,6 +12,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // MARK: - Enum
     enum TypeScreen {
         case login
+        case register
         case tabbar
     }
     
@@ -22,7 +23,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.makeKeyAndVisible()
-        changeScreen(type: .tabbar)
+        changeScreen(type: .login)
     }
     
     // MARK: - Public Function
@@ -30,6 +31,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         switch type {
         case .login:
             return createLogin()
+        case .register:
+            return registerScreen()
         case .tabbar:
             return createTabbar()
         }
@@ -41,6 +44,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeVC = HomeViewController()
         let homeNav = UINavigationController(rootViewController: homeVC)
         homeNav.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.fill"), tag: 0)
+        homeNav.tabBarItem.badgeColor = .red
+        homeNav.tabBarItem.badgeValue = "99"
         
         // Map
         let mapVC = MapViewController()
@@ -51,6 +56,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let favoritesVC = FavoritesViewController()
         let favortiesNav = UINavigationController(rootViewController: favoritesVC)
         favortiesNav.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star"), tag: 2)
+        favortiesNav.tabBarItem.badgeColor = .red
+        favortiesNav.tabBarItem.badgeValue = "22"
         
         // Profile
         let profileVC = ProfileViewController()
@@ -60,13 +67,28 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Tabbar
         let tabbarController = UITabBarController()
         tabbarController.viewControllers = [homeNav, mapNav, favortiesNav, profileNav]
+        tabbarController.tabBar.tintColor = .brown
+        tabbarController.tabBar.barTintColor = .red
+        tabbarController.tabBar.backgroundColor = .purple
         window!.rootViewController = tabbarController
     }
     
     private func createLogin() {
-        let login = LoginViewController()
-        let loginNav = BaseNavigationViewController(rootViewController: login)
+        let loginVC = LoginViewController()
+        let loginNav = BaseNavigationViewController(rootViewController: loginVC)
         window?.rootViewController = loginNav
+    }
+        
+    private func registerScreen() {
+        let registerVC = RegisterViewController()
+        let registerNav = BaseNavigationViewController(rootViewController: registerVC)
+        window?.rootViewController = registerNav
     }
 }
 
+// MARK: - Extention SceneDelegate
+extension SceneDelegate: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("Selected Tab : \(tabBarController.selectedIndex)")
+    }
+}

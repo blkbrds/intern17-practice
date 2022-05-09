@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  TabbarController
 //
 //  Created by tri.nguyen on 09/05/2022.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-final class LoginViewController: BaseViewController {
+final class RegisterViewController: BaseViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var createAccountButton: UIButton!
     
     // MARK: - Properties
-    private var loginViewModel = LoginViewModel(email: "", password: "")
+    private var registerViewModel = RegisterViewModel(email: "", password: "")
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -24,23 +24,23 @@ final class LoginViewController: BaseViewController {
     
     // MARK: - UI
     override func setupUI() {
-        title = "Login"
-        loginButton.layer.cornerRadius = 12
-        loginButton.clipsToBounds = true
+        title = "Register"
+        createAccountButton.layer.cornerRadius = 12
+        createAccountButton.clipsToBounds = true
     }
     
     // MARK: - Private Function
     private func updateView() {
-        emailTextField.text = loginViewModel.email
-        passwordTextField.text = loginViewModel.password
+        emailTextField.text = registerViewModel.email
+        passwordTextField.text = registerViewModel.password
     }
-    
-    // MARK: - IBACtions
-    @IBAction private func loginButtonTouchUpInside(_ sender: Any) {
+
+    // MARK: - IBAction
+    @IBAction private func createAccountButtonTouchUpInside(_ sender: Any) {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         
-        let complete: LoginViewModel.Completion = { (result) in
+        let complete: RegisterViewModel.Completion = { (result) in
             switch result {
             case .success:
                 self.updateView()
@@ -58,16 +58,6 @@ final class LoginViewController: BaseViewController {
                 }
             }
         }
-        loginViewModel.login(email: email, password: password, completion: complete)
-    }
-    
-    @IBAction private func registerButtonTouchUpInside(_ sender: Any) {
-        let vc = RegisterViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction private func forgotPassWordButtonTouchUpInside(_ sender: Any) {
-        let vc = ForgotViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        registerViewModel.register(email: email, password: password, completion: complete)
     }
 }

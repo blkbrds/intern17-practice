@@ -1,5 +1,5 @@
 //
-//  FavoritesViewController.swift
+//  ForgotViewController.swift
 //  TabbarController
 //
 //  Created by tri.nguyen on 09/05/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FavoritesViewController: BaseViewController {
+final class ForgotViewController: BaseViewController {
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -16,6 +16,6 @@ final class FavoritesViewController: BaseViewController {
     
     // MARK: - UI
     override func setupUI() {
-        title = "Favorites"
+        title = "Forgot"
     }
 }
