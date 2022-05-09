@@ -3,7 +3,7 @@ import Foundation
 final class HomeViewModel {
     
     // MARK: - Properties
-    var users: [User] = User.getDummyDatas()
+    private var users: [User] = User.getDummyDatas()
     var index: Int = 0
     
     // MARK: - Methods

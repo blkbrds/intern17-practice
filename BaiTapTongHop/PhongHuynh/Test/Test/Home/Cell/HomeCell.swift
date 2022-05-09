@@ -23,13 +23,13 @@ final class HomeCell: UITableViewCell {
     var viewModel: HomeCellViewModel? {
         didSet {
             updateView()
-            boderButton()
         }
     }
     weak var delegate: HomeCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configUserImageView()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,14 +43,14 @@ final class HomeCell: UITableViewCell {
         dateLabel.text = viewModel.user.date
     }
     
-    private func boderButton() {
+    private func configUserImageView() {
         userImageView.layer.cornerRadius = 40
         userImageView.layer.borderWidth = 0.5
         userImageView.layer.borderColor = UIColor.systemPink.cgColor
     }
     
     // MARK: - IBActions
-    @IBAction private func nextButton(_ sender: Any) {
+    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         if let delegate = delegate {
             delegate.cell(cell: self, needsPerfom: .moveToDetail)
         }

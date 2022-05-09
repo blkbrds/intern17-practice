@@ -11,7 +11,6 @@ final class HomeViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Home"
         viewModel = HomeViewModel()
         configTableView()
@@ -66,8 +65,7 @@ extension HomeViewController: HomeCellDelegate {
 
 // MARK: - DetailViewControllerDelegate
 extension HomeViewController: DetailViewControllerDelegate {
-    
-    func controller(view: DetailViewController, needsPerfom actions: DetailViewController.Action) {
+    func controller(_ controller: DetailViewController, needsPerfom actions: DetailViewController.Action) {
         switch actions {
         case .update(let user):
             guard let viewModel = viewModel else { return }

@@ -50,7 +50,7 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="okButton:" destination="-1" eventType="touchUpInside" id="Smv-TE-SJw"/>
+                        <action selector="okButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Smv-TE-SJw"/>
                     </connections>
                 </button>
             </subviews>

@@ -3,7 +3,7 @@ import UIKit
 // MARK: - DatePickerViewDelegate
 protocol DatePickerViewDelegate: class {
     
-    func controller(view: DatePickerView, needsPerfom actions: DatePickerView.Action)
+    func controller(_ controller: DatePickerView, needsPerfom actions: DatePickerView.Action)
 }
 
 final class DatePickerView: UIView {
@@ -14,8 +14,8 @@ final class DatePickerView: UIView {
     }
     
     // MARK: - Properties
-    let datePicker: UIDatePicker = UIDatePicker()
-    let dateFormatte: String = "dd/MM/yyyy"
+    private let datePicker: UIDatePicker = UIDatePicker()
+    private let dateFormatte: String = "dd/MM/yyyy"
     
     // MARK: - Properties
     weak var delegate: DatePickerViewDelegate?
@@ -29,7 +29,7 @@ final class DatePickerView: UIView {
     }
     
     // MARK: - Funtions
-    func showDatePicker(datePickerTextField: UITextField) {
+    func configDatePicker(datePickerTextField: UITextField) {
         let toolBar = UIToolbar()
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
@@ -43,11 +43,11 @@ final class DatePickerView: UIView {
     
     // MARK: - Objc functions
     @objc private func doneDatePicker() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = dateFormatte
-        let date = formatter.string(from: datePicker.date)
+        let format = DateFormatter()
+        format.dateFormat = dateFormatte
+        let date = format.string(from: datePicker.date)
         if let delegate = delegate {
-            delegate.controller(view: self, needsPerfom: .update(date: date))
+            delegate.controller(self, needsPerfom: .update(date: date))
         }
     }
 }
