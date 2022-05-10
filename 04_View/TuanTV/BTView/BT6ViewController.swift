@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BT6ViewController: UIViewController {
+final class BT6ViewController: UIViewController {
     let imageView = UIImageView()
     let imvChat = UIImageView()
     let lbChat = UILabel()

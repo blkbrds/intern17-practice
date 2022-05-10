@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BT2ControllerViewController: UIViewController {
+final class BT2ViewController: UIViewController {
     
     var nameList: [String] = []
     var avatarList: [UIImage?] = []
@@ -23,33 +23,29 @@ class BT2ControllerViewController: UIViewController {
         v.backgroundColor = .cyan
         return v
     }()
-    
-    
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareData()
         setupView()
     }
     
-    func prepareData() {
+    private func prepareData() {
         widthView = view.frame.width
         heightView = view.frame.height
         horizontalAvatarSpace = 10
         verticalAvatarSpace = 10
         for i in 1...9 {
             nameList.append("Name \(i)")
-            avatarList.append(UIImage(named: "UserImage"))
+            avatarList.append(UIImage(named: "icon_user"))
         }
         print(nameList)
     }
     
-    func setupView() {
+    private func setupView() {
         let frameView = CGRect(x: 10, y: 100, width: widthView - 20, height: 410)
         viewUsers.frame = frameView
         view.addSubview(viewUsers)
-    
         x = 0
         y = 0
         let widthViewUsers = viewUsers.frame.width
@@ -72,7 +68,6 @@ class BT2ControllerViewController: UIViewController {
                 lbName.backgroundColor = .blue
                 viewUser.addSubview(imvAvatar)
                 viewUser.addSubview(lbName)
-                
                 viewUsers.addSubview(viewUser)
     
                 x = x + widthViewUser + horizontalAvatarSpace
@@ -82,6 +77,4 @@ class BT2ControllerViewController: UIViewController {
             y = y + 130 + verticalAvatarSpace
         }
     }
-    
-
 }

@@ -7,14 +7,12 @@
 
 import UIKit
 
-class BT3XViewController: UIViewController {
+final class BT3XViewController: UIViewController {
     let tfUsername = UITextField()
     let tfPassword = UITextField()
     let lbError = UILabel()
     let btnLogin = UIButton()
     let btnClear = UIButton()
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +20,15 @@ class BT3XViewController: UIViewController {
         addActionToButtons()
         addGesture()
 
-        // Do any additional setup after loading the view.
     }
     
-    func addGesture() {
+    private func addGesture() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
     @objc func handleTap() {
-        print("tap")
         view.endEditing(true)
     }
     
@@ -136,19 +132,6 @@ class BT3XViewController: UIViewController {
             return .usernameIsNotCorrect(string: "Please check username")
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based app
-     lication, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 enum Result {

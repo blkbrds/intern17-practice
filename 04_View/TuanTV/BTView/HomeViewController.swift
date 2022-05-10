@@ -30,7 +30,7 @@ final class HomeViewController : UIViewController {
     }
     
     func setupView() {
-        let user1 = User(avatar: UIImage(named: "UserImage"), name: "Tuan")
+        let user1 = User(avatar: UIImage(named: "icon_user"), name: "Tuan")
         // add avatar view
         let frameAvatar = CGRect(x: 50, y: 100, width: 100, height: 100)
         imvAvatar.frame = frameAvatar

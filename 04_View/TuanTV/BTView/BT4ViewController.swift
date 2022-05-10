@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BT4ViewController: UIViewController {
+final class BT4ViewController: UIViewController {
     let arrButtons = ["1", "2", "3", "+", "4", "5", "6","-","7", "8", "9", "x", "AC", "0", "=", ":"]
 
     override func viewDidLoad() {

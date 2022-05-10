@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BT4XViewController: UIViewController {
+final class BT4XViewController: UIViewController {
     let lbColor = UILabel()
     let vColor = UIView()
     let lbRed = UILabel()
