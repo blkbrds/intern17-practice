@@ -30,6 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
+        LocationManager.shared().request()
         guard let windowScene = (scene as? UIWindowScene) else { return }
         GIDSignIn.sharedInstance().clientID = "289035542897-e70buft3aq39fi624qsf7d75kurr3163.apps.googleusercontent.com"
         let window = UIWindow(windowScene: windowScene)
@@ -68,8 +69,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let favoriteNavi = UINavigationController(rootViewController: favoriteVC)
         favoriteVC.tabBarItem = UITabBarItem(title: "Favorite", image: UIImage(systemName: "heart"), tag: 1)
 
-        let viewControllers = [homeNavi, favoriteNavi]
+        // MapViewController
+        let mapVC = MapViewController()
+        mapVC.viewModel = MapViewControllerModel()
+        let mapNavi = UINavigationController(rootViewController: mapVC)
+        mapNavi.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), tag: 2)
+
+        let viewControllers = [homeNavi, favoriteNavi, mapNavi]
         tabbarController.setViewControllers(viewControllers, animated: true)
         tabbarController.tabBar.isTranslucent = false
+        tabbarController.selectedIndex = 2
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,6 +50,11 @@
 		E19A04DB28235ED10085D4DF /* FavoriteViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A04DA28235ED10085D4DF /* FavoriteViewControllerModel.swift */; };
 		E19A04DF282374930085D4DF /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A04DE282374930085D4DF /* RealmModel.swift */; };
 		E19A04E3282388DF0085D4DF /* TitleTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A04E2282388DF0085D4DF /* TitleTableViewCellModel.swift */; };
+		E19A05282824D4350085D4DF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A05262824D4350085D4DF /* MapViewController.swift */; };
+		E19A05292824D4350085D4DF /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19A05272824D4350085D4DF /* MapViewController.xib */; };
+		E19A052F2824FFC50085D4DF /* MapViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A052E2824FFC50085D4DF /* MapViewControllerModel.swift */; };
+		E19A0533282501610085D4DF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A0532282501610085D4DF /* LocationManager.swift */; };
+		E1A7C72A282523B80008CDCA /* MyPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7C729282523B80008CDCA /* MyPin.swift */; };
 		E1C4C17428123C7D000AE29A /* DetailViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4C17328123C7D000AE29A /* DetailViewControllerModel.swift */; };
 		E1C4C18D281251A9000AE29A /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4C18B281251A9000AE29A /* TitleTableViewCell.swift */; };
 		E1C4C18E281251A9000AE29A /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C4C18C281251A9000AE29A /* TitleTableViewCell.xib */; };
@@ -143,6 +148,11 @@
 		E19A04DA28235ED10085D4DF /* FavoriteViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewControllerModel.swift; sourceTree = "<group>"; };
 		E19A04DE282374930085D4DF /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		E19A04E2282388DF0085D4DF /* TitleTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCellModel.swift; sourceTree = "<group>"; };
+		E19A05262824D4350085D4DF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E19A05272824D4350085D4DF /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		E19A052E2824FFC50085D4DF /* MapViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerModel.swift; sourceTree = "<group>"; };
+		E19A0532282501610085D4DF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E1A7C729282523B80008CDCA /* MyPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPin.swift; sourceTree = "<group>"; };
 		E1C4C17328123C7D000AE29A /* DetailViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerModel.swift; sourceTree = "<group>"; };
 		E1C4C18B281251A9000AE29A /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		E1C4C18C281251A9000AE29A /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
@@ -205,6 +215,7 @@
 				6AF60D072313B31200F5CBA2 /* App.swift */,
 				6AF60D0C2313B35700F5CBA2 /* Errors.swift */,
 				6AF60D152313B35800F5CBA2 /* String.swift */,
+				E1A7C729282523B80008CDCA /* MyPin.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -213,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				6AF60D242313B56B00F5CBA2 /* Session.swift */,
+				E19A0532282501610085D4DF /* LocationManager.swift */,
 				6AF60D252313B56B00F5CBA2 /* Schema */,
 				6AF60D672313B56B00F5CBA2 /* API */,
 			);
@@ -281,6 +293,7 @@
 		6AF60E252313C13600F5CBA2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E19A05252824D4190085D4DF /* MapViewController */,
 				E19A04D328235E620085D4DF /* FavoriteViewController */,
 				E19963D828115F5100B5547C /* DetailViewController */,
 				E19963D628115F2700B5547C /* HomeViewController */,
@@ -412,6 +425,16 @@
 				E19A04DA28235ED10085D4DF /* FavoriteViewControllerModel.swift */,
 			);
 			path = FavoriteViewController;
+			sourceTree = "<group>";
+		};
+		E19A05252824D4190085D4DF /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E19A05262824D4350085D4DF /* MapViewController.swift */,
+				E19A05272824D4350085D4DF /* MapViewController.xib */,
+				E19A052E2824FFC50085D4DF /* MapViewControllerModel.swift */,
+			);
+			path = MapViewController;
 			sourceTree = "<group>";
 		};
 		E1BC516428169AFB00254228 /* Thumbnail */ = {
@@ -592,6 +615,7 @@
 				E19A04D728235E8F0085D4DF /* FavoriteViewController.xib in Resources */,
 				E1D19D182810067D002B552C /* GoogleService-Info.plist in Resources */,
 				E1C4C19A281251D0000AE29A /* CommentsTableViewCell.xib in Resources */,
+				E19A05292824D4350085D4DF /* MapViewController.xib in Resources */,
 				E1FCDD81281B6F3C006FD074 /* CommentsDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,8 +748,10 @@
 				6AF613B22313C13A00F5CBA2 /* Label.swift in Sources */,
 				E10490D5281BC5B000A0C459 /* CustomHeaderView.swift in Sources */,
 				6AF60DC42313B56B00F5CBA2 /* Error.swift in Sources */,
+				E19A0533282501610085D4DF /* LocationManager.swift in Sources */,
 				E1D19CFF280FB023002B552C /* YouTubeResponse.swift in Sources */,
 				E19A04DF282374930085D4DF /* RealmModel.swift in Sources */,
+				E19A052F2824FFC50085D4DF /* MapViewControllerModel.swift in Sources */,
 				6AF60E132313B9C000F5CBA2 /* NSErrorExt.swift in Sources */,
 				6AF613B72313C13A00F5CBA2 /* CollectionView.swift in Sources */,
 				E19A04E3282388DF0085D4DF /* TitleTableViewCellModel.swift in Sources */,
@@ -742,9 +768,11 @@
 				E1C4C17428123C7D000AE29A /* DetailViewControllerModel.swift in Sources */,
 				E1C4C199281251D0000AE29A /* CommentsTableViewCell.swift in Sources */,
 				E1FCDD7D281B6F23006FD074 /* CommentsDetailView.swift in Sources */,
+				E1A7C72A282523B80008CDCA /* MyPin.swift in Sources */,
 				6AF60D802313B56B00F5CBA2 /* Session.swift in Sources */,
 				E189064128163D8F00DEEEA0 /* ChannelTableViewCellModel.swift in Sources */,
 				E1DB1EC628222DB00091D511 /* CustomHeaderViewModel.swift in Sources */,
+				E19A05282824D4350085D4DF /* MapViewController.swift in Sources */,
 				6AF60DC62313B56B00F5CBA2 /* ResponseSerializer.swift in Sources */,
 				6AF60D192313B35800F5CBA2 /* Errors.swift in Sources */,
 				E1D19D2228100847002B552C /* LoginViewController.swift in Sources */,
@@ -908,7 +936,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -926,7 +956,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

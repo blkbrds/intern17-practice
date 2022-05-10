@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="FinalProject" customModuleProvider="target">
+            <connections>
+                <outlet property="currentLocationButton" destination="KRK-7C-UuY" id="FpK-EE-INv"/>
+                <outlet property="mapView" destination="D60-5u-A4p" id="jQC-sF-UQg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D60-5u-A4p">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRK-7C-UuY" userLabel="Current Location Button">
+                    <rect key="frame" x="334" y="816" width="45" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="KRK-7C-UuY" secondAttribute="height" id="5zj-yu-oRO"/>
+                    </constraints>
+                    <state key="normal" image="location" catalog="system"/>
+                    <connections>
+                        <action selector="moveToCurrentLocation:" destination="-1" eventType="touchUpInside" id="KJv-gZ-jEH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KRK-7C-UuY" secondAttribute="trailing" constant="35" id="04k-Ep-HXZ"/>
+                <constraint firstAttribute="bottom" secondItem="D60-5u-A4p" secondAttribute="bottom" id="Iyk-f7-Dcx"/>
+                <constraint firstAttribute="trailing" secondItem="D60-5u-A4p" secondAttribute="trailing" id="O7T-sg-vDe"/>
+                <constraint firstItem="KRK-7C-UuY" firstAttribute="height" secondItem="D60-5u-A4p" secondAttribute="height" multiplier="0.05" id="Rp1-bn-pzR"/>
+                <constraint firstItem="D60-5u-A4p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g5d-S7-uh8"/>
+                <constraint firstItem="D60-5u-A4p" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="msS-7o-thb"/>
+                <constraint firstAttribute="bottom" secondItem="KRK-7C-UuY" secondAttribute="bottom" constant="35" id="wPx-OQ-pnk"/>
+            </constraints>
+            <point key="canvasLocation" x="96" y="55"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="location" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
