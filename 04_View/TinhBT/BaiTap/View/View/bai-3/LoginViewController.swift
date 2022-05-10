@@ -11,7 +11,6 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         userNameTextField.delegate = self
         passWordTextField.delegate = self
-        passWordTextField.returnKeyType = .done
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -20,6 +19,10 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction private func loginButtonTouchUpInside(_ sender: Any) {
+        login()
+    }
+    
+    private func login() {
         if userNameTextField.text == "Admin" && passWordTextField.text == "Admin123" {
             errorLabel.text = "Đăng nhập thành công"
         } else {
@@ -40,7 +43,7 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passWordTextField.becomeFirstResponder()
         if textField.returnKeyType == .done {
-            loginButtonTouchUpInside((Any).self)
+            login()
         }
         return true
     }
