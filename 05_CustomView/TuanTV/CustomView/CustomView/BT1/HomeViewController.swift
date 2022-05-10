@@ -36,11 +36,11 @@ class HomeViewController: UIViewController {
 }
 
 protocol  MyAvatarDelegate: class {
-    func myAvatar (_ myAvatar: MyAvatar, didSelect index: Int)
+    func myAvatar (_ myAvatar: MyAvatar, didSelect name: String)
 }
 
 extension HomeViewController: MyAvatarDelegate {
-    func myAvatar(_ myAvatar: MyAvatar, didSelect index: Int) {
-        print("Selected my avatar with index \(index)")
+    func myAvatar(_ myAvatar: MyAvatar, didSelect name: String) {
+        print("Selected my avatar with \(name)")
     }
 }
