@@ -18,8 +18,19 @@ final class HomeViewController: BaseViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    private var homeViewModel = HomeViewModel()
     private var index: Int = 0
+    private var users: [User] = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let users: [User] = [
+            User(name: "Ashley", date: formatter.date(from: "1997/10/08 00:00")),
+            User(name: "Lilly", date: formatter.date(from: "1998/02/05 00:00")),
+            User(name: "Selena", date: formatter.date(from: "1996/10/07 00:00")),
+            User(name: "Zoe", date: formatter.date(from: "1999/03/09 00:00")),
+            User(name: "Anna", date: formatter.date(from: "1994/02/06 00:00"))
+        ]
+        return users
+    }()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -30,7 +41,7 @@ final class HomeViewController: BaseViewController {
     override func setupUI() {
         title = "Home Girl"
         
-        // Navigation Bar
+        // navigation bar
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -43,18 +54,18 @@ final class HomeViewController: BaseViewController {
             navigationController!.navigationBar.compactScrollEdgeAppearance = appearance
         }
         
-        // Register
+        // register
         let nib = UINib(nibName: Identifier.cell.rawValue, bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: Identifier.cell.rawValue)
         
-        // Delegate && Datasource
+        // delegate && datasource
         tableView.delegate = self
         tableView.dataSource = self
     }
     
     // MARK: - Private Function
     private func updateUser(user: User) {
-        homeViewModel.users[index] = user
+        users[index] = user
     }
 }
 
@@ -62,7 +73,7 @@ final class HomeViewController: BaseViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeViewModel.users.count
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -71,7 +82,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.cell.rawValue, for: indexPath) as! HomeCell
-        let user = homeViewModel.users[indexPath.row]
+        let user = users[indexPath.row]
         var dateString: String = ""
 
         if let date = user.date {
@@ -84,7 +95,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                 dateString = "\(dayString)/\(monthString)/\(yearString)"
             }
         }
-
+        
         cell.updateProfile(name: user.name, date: dateString)
         cell.delegate = self
         return cell

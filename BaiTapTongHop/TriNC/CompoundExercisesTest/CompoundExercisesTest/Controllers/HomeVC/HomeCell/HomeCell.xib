@@ -43,7 +43,7 @@
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21f-mX-4e1">
-                        <rect key="frame" x="411" y="49.5" width="45" height="40.5"/>
+                        <rect key="frame" x="426" y="49.5" width="45" height="40.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40.5" id="ix0-fB-S1v"/>
                             <constraint firstAttribute="width" constant="45" id="l6D-iB-hnD"/>
@@ -61,7 +61,7 @@
                 <constraints>
                     <constraint firstItem="gg1-mV-HPl" firstAttribute="leading" secondItem="SkQ-u6-kdp" secondAttribute="trailing" constant="20" id="1zl-Bx-fV6"/>
                     <constraint firstItem="SkQ-u6-kdp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="30t-TZ-qcD"/>
-                    <constraint firstAttribute="trailing" secondItem="21f-mX-4e1" secondAttribute="trailing" constant="25" id="B0B-el-q2E"/>
+                    <constraint firstAttribute="trailing" secondItem="21f-mX-4e1" secondAttribute="trailing" constant="10" id="B0B-el-q2E"/>
                     <constraint firstItem="21f-mX-4e1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IbF-l0-Tii"/>
                     <constraint firstItem="21f-mX-4e1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gg1-mV-HPl" secondAttribute="trailing" constant="10" id="QeD-5r-UYy"/>
                     <constraint firstAttribute="bottom" secondItem="gg1-mV-HPl" secondAttribute="bottom" constant="20" id="Qig-5W-E1g"/>
