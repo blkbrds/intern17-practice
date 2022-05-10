@@ -268,7 +268,7 @@ final class Date {
 }
 
 //MARK: -BAI TAP 9
-final class Mang1c<Element: Comparable> {
+final class Mang1Chieu<Element: Comparable> {
     var arr: [Element] = []
     func printArr() {
         arr.forEach { print($0) }
@@ -278,7 +278,7 @@ final class Mang1c<Element: Comparable> {
         return (min: arr.min(), max: arr.max())
     }
 }
-var a = Mang1c<Int>()
+var a = Mang1Chieu<Int>()
 a.arr = [1, 2, 3]
 a.findMinMax()
 
