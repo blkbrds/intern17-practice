@@ -27,7 +27,6 @@ final class HomeCell: UITableViewCell {
     
     // MARK: - Properties
     weak var delegate: HomeCellDelegate?
-    private var homeCellViewModel = HomeCellViewModel()
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -56,7 +55,7 @@ final class HomeCell: UITableViewCell {
     
     // MARK: Fetch Image
     private func fetchImage() {
-        homeCellViewModel.loadImage { [weak self] image in
+        PhotoManager.shared.loadImage { [weak self] image in
             if let image = image {
                 self?.thumbnailImageView.image = image
             }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22524EAD28266B9B00E8F02A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22524EAC28266B9B00E8F02A /* DetailViewModel.swift */; };
-		22524EB328274FD300E8F02A /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22524EB228274FD300E8F02A /* HomeCellViewModel.swift */; };
+		221B57952829FA4E00B4DEE1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B57942829FA4D00B4DEE1 /* HomeViewModel.swift */; };
+		221B5798282A172E00B4DEE1 /* PhotoMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B5797282A172E00B4DEE1 /* PhotoMananger.swift */; };
 		226B5C42282602C900199C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B5C41282602C900199C77 /* AppDelegate.swift */; };
 		226B5C44282602C900199C77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B5C43282602C900199C77 /* SceneDelegate.swift */; };
 		226B5C4B282602CD00199C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 226B5C4A282602CD00199C77 /* Assets.xcassets */; };
@@ -26,8 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22524EAC28266B9B00E8F02A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		22524EB228274FD300E8F02A /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
+		221B57942829FA4D00B4DEE1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		221B5797282A172E00B4DEE1 /* PhotoMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMananger.swift; sourceTree = "<group>"; };
 		226B5C3E282602C800199C77 /* CompoundExercisesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompoundExercisesTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		226B5C41282602C900199C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		226B5C43282602C900199C77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221B5796282A169E00B4DEE1 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				221B5797282A172E00B4DEE1 /* PhotoMananger.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		226B5C35282602C800199C77 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +87,7 @@
 				226B5C592826035000199C77 /* AppDelegate */,
 				226B5C582826034A00199C77 /* View */,
 				226B5C572826034300199C77 /* Controllers */,
+				221B5796282A169E00B4DEE1 /* Manager */,
 				226B5C562826033E00199C77 /* Model */,
 				226B5C552826033600199C77 /* Resource */,
 				226B5C4F282602CD00199C77 /* Info.plist */,
@@ -136,6 +145,7 @@
 				226B5C69282605B800199C77 /* HomeCell */,
 				226B5C5C282603A100199C77 /* HomeViewController.swift */,
 				226B5C5D282603A100199C77 /* HomeViewController.xib */,
+				221B57942829FA4D00B4DEE1 /* HomeViewModel.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -145,7 +155,6 @@
 			children = (
 				226B5C60282603BA00199C77 /* DetailViewController.swift */,
 				226B5C61282603BA00199C77 /* DetailViewController.xib */,
-				22524EAC28266B9B00E8F02A /* DetailViewModel.swift */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -164,7 +173,6 @@
 			children = (
 				226B5C6A282605C800199C77 /* HomeCell.swift */,
 				226B5C6B282605C800199C77 /* HomeCell.xib */,
-				22524EB228274FD300E8F02A /* HomeCellViewModel.swift */,
 			);
 			path = HomeCell;
 			sourceTree = "<group>";
@@ -244,13 +252,13 @@
 			files = (
 				226B5C6F2826135800199C77 /* Users.swift in Sources */,
 				226B5C66282603E400199C77 /* BaseViewController.swift in Sources */,
+				221B5798282A172E00B4DEE1 /* PhotoMananger.swift in Sources */,
 				226B5C6C282605C800199C77 /* HomeCell.swift in Sources */,
-				22524EAD28266B9B00E8F02A /* DetailViewModel.swift in Sources */,
 				226B5C712826155900199C77 /* DatePickerView.swift in Sources */,
 				226B5C42282602C900199C77 /* AppDelegate.swift in Sources */,
 				226B5C44282602C900199C77 /* SceneDelegate.swift in Sources */,
+				221B57952829FA4E00B4DEE1 /* HomeViewModel.swift in Sources */,
 				226B5C68282603F000199C77 /* BaseNavigationViewController.swift in Sources */,
-				22524EB328274FD300E8F02A /* HomeCellViewModel.swift in Sources */,
 				226B5C5E282603A100199C77 /* HomeViewController.swift in Sources */,
 				226B5C62282603BA00199C77 /* DetailViewController.swift in Sources */,
 			);

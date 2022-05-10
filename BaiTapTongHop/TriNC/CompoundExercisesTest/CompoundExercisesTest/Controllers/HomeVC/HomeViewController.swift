@@ -18,7 +18,7 @@ final class HomeViewController: BaseViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    private var users: [User] = User.getDummyData()
+    private var homeViewModel = HomeViewModel()
     private var index: Int = 0
     
     // MARK: - Life cycle
@@ -54,7 +54,7 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - Private Function
     private func updateUser(user: User) {
-        users[index] = user
+        homeViewModel.users[index] = user
     }
 }
 
@@ -62,17 +62,30 @@ final class HomeViewController: BaseViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return homeViewModel.users.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return UITableView.automaticDimension // auto height
     }
-    
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.cell.rawValue, for: indexPath) as! HomeCell
-        let users = users[indexPath.row]
-        cell.updateProfile(name: users.name, date: users.date)
+        let user = homeViewModel.users[indexPath.row]
+        var dateString: String = ""
+
+        if let date = user.date {
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.day,.month,.year], from: date)
+            if let day = components.day, let month = components.month, let year = components.year {
+                let dayString = String(day)
+                let monthString = String(month)
+                let yearString = String(year)
+                dateString = "\(dayString)/\(monthString)/\(yearString)"
+            }
+        }
+
+        cell.updateProfile(name: user.name, date: dateString)
         cell.delegate = self
         return cell
     }

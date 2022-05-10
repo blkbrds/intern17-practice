@@ -19,7 +19,7 @@ final class DetailViewController: BaseViewController {
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var dateOfBirthTextField: UITextField!
     @IBOutlet private weak var doneButton: UIButton!
-    
+
     // MARK: - Enum
     enum Action {
         case update(User)
@@ -28,7 +28,7 @@ final class DetailViewController: BaseViewController {
     // MARK: - Properties
     weak var delegate: DetailViewControllerDelegate?
     private var datePickerView = DatePickerView()
-    private var detailViewModel = DetailViewModel()
+    var date: Date? // Save
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -68,7 +68,7 @@ final class DetailViewController: BaseViewController {
         updatePicker()
         
         // ViewModel -> View
-        detailViewModel.loadImage(completion: { [weak self] image in
+        PhotoManager.shared.loadImage(completion: { [weak self] image in
             if let image = image {
                 self?.thumbnailImageView.image = image
             }
@@ -84,14 +84,15 @@ final class DetailViewController: BaseViewController {
     }
     
     private func handleData() {
-        guard let delegate = delegate, let name = nameTextField.text, let date = dateOfBirthTextField.text else { return }
-        delegate.controller(view: self, needsPerform: .update(User(name: name, date: date)))
+        guard let name = nameTextField.text, let date = date else { return }
+        delegate?.controller(view: self, needsPerform: .update(User(name: name, date: date)))
         navigationController?.popViewController(animated: true)
     }
     
     // MARK: - IBAction
     @IBAction private func doneButtonTouchUpInside(_ sender: Any) {
-        let alertVC = UIAlertController(title: "Warning", message: "Do you want to edit this user with name and birthday", preferredStyle: .alert)
+        guard let name = nameTextField.text, let date = date else { return }
+        let alertVC = UIAlertController(title: "Warning", message: "Do you want to edit this user with name: \(name) and birthday: \(date)", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             self.handleData()
@@ -104,12 +105,24 @@ final class DetailViewController: BaseViewController {
 extension DetailViewController: DatePickerViewDelegate {
     func view(_ view: DatePickerView, needsPerform action: DatePickerView.Action) {
         switch action {
-        case .select(date: let action):
+        case .select(date: let date):
             UIView.animate(withDuration: 0.1) {
-                self.view.endEditing(true)
-            } completion: { _ in
-                self.dateOfBirthTextField.text = action
+                self.view.becomeFirstResponder()
+            } completion: { [weak self] _ in
+                guard let this = self else { return }
+                this.date = date
+                this.updateUIDateLabel(date: date)
             }
         }
+    }
+
+    func updateUIDateLabel(date: Date) {
+        let dateFormatter: String = "MMM dd, yyyy"
+        let formatter = DateFormatter()
+        formatter.dateFormat = dateFormatter
+        formatter.dateStyle = .full
+        formatter.timeStyle = .none
+        let dateString = formatter.string(from: date)
+        dateOfBirthTextField.text = dateString
     }
 }

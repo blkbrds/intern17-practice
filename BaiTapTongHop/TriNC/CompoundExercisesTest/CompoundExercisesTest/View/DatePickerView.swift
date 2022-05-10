@@ -27,7 +27,7 @@ final class DatePickerView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Function
     func configDatePicker(datePickerTextField: UITextField) {
         // Format Date
@@ -35,6 +35,9 @@ final class DatePickerView: UIView {
         
         // Style Picker
         datePicker.preferredDatePickerStyle = .wheels
+        
+        // Limit Date
+        datePicker.maximumDate = Date(timeIntervalSinceReferenceDate: NSDate().timeIntervalSinceReferenceDate)
         
         // Toolbar
         let toobar = UIToolbar()
@@ -51,14 +54,7 @@ final class DatePickerView: UIView {
     
     // MARK: - Objc
     @objc private func doneDatePicker() {
-        // Formatter
-        let formatter = DateFormatter()
-        formatter.dateFormat = dateFormatter
-        formatter.dateStyle = .full
-        formatter.timeStyle = .none
-        
-        let date = formatter.string(from: datePicker.date)
-        delegate?.view(self, needsPerform: .select(date: date))
+        delegate?.view(self, needsPerform: .select(date: datePicker.date))
     }
 }
 
@@ -66,6 +62,6 @@ final class DatePickerView: UIView {
 extension DatePickerView {
     // MARK: - Define
     enum Action {
-        case select(date: String)
+        case select(date: Date)
     }
 }
