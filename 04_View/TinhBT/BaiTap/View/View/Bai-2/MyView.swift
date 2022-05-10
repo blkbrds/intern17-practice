@@ -1,7 +1,7 @@
 
 import UIKit
 
-class MyView: UIView {
+final class MyView: UIView {
     
     var avatarImageView: UIImageView?
     var nameLabel: UILabel?

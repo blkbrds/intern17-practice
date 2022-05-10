@@ -1,13 +1,13 @@
 
 import UIKit
 
-class SliderViewController: UIViewController {
+final class SliderViewController: UIViewController {
     
-    @IBOutlet weak var displayLabel: UILabel!
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var bluSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var viewBackground: UIView!
+    @IBOutlet private weak var displayLabel: UILabel!
+    @IBOutlet private weak var redSlider: UISlider!
+    @IBOutlet private weak var bluSlider: UISlider!
+    @IBOutlet private weak var greenSlider: UISlider!
+    @IBOutlet private weak var viewBackground: UIView!
     
     var color: Color!
     
@@ -19,16 +19,16 @@ class SliderViewController: UIViewController {
         viewBackground.backgroundColor = color.getColor()
     }
     
-    @IBAction func sliderChange(_ sender: UISlider) {
-        if (sender.tag == 1) {
+    @IBAction private func sliderChange(_ sender: UISlider) {
+        if sender.tag == 1 {
             color.setRed(red: sender.value)
             displayLabel.text = color.getString()
             viewBackground.backgroundColor = color.getColor()
-        } else if (sender.tag == 2) {
+        } else if sender.tag == 2 {
             color.setGreen(green: sender.value)
             displayLabel.text = color.getString()
             viewBackground.backgroundColor = color.getColor()
-        } else if (sender.tag == 3) {
+        } else if sender.tag == 3 {
             color.setBlue(blue: sender.value)
             displayLabel.text = color.getString()
             viewBackground.backgroundColor = color.getColor()

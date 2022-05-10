@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     var names: [String] = ["name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8", "name9"]
     private let screenWidth = UIScreen.main.bounds.width
@@ -10,6 +10,7 @@ class ViewController: UIViewController {
     let imageWidth: CGFloat = 100
     let imageHeight: CGFloat = 100
     var space = 20
+    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()

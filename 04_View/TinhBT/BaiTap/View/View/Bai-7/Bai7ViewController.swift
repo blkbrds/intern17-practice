@@ -1,10 +1,10 @@
 
 import UIKit
 
-class Bai7ViewController: UIViewController {
+final class Bai7ViewController: UIViewController {
     
-    @IBOutlet weak var viewTap: UIImageView!
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet private weak var viewTap: UIImageView!
+    @IBOutlet private weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         

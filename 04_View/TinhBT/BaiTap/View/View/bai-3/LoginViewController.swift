@@ -20,15 +20,6 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction private func loginButtonTouchUpInside(_ sender: Any) {
-        login()
-    }
-    
-    @IBAction private func buttonClear(_ sender: Any) {
-        userNameTextField.text = ""
-        passWordTextField.text = ""
-    }
-    
-    func login() {
         if userNameTextField.text == "Admin" && passWordTextField.text == "Admin123" {
             errorLabel.text = "Đăng nhập thành công"
         } else {
@@ -36,13 +27,20 @@ final class LoginViewController: UIViewController {
         }
         errorLabel.isHidden = false
     }
+    
+    @IBAction private func buttonClear(_ sender: Any) {
+        userNameTextField.text = ""
+        passWordTextField.text = ""
+    }
 }
 
+// MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passWordTextField.becomeFirstResponder()
         if textField.returnKeyType == .done {
-            login()
+            loginButtonTouchUpInside((Any).self)
         }
         return true
     }

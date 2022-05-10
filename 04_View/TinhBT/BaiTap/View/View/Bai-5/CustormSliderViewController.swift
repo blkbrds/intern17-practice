@@ -1,12 +1,12 @@
 
 import UIKit
 
-class CustormSliderViewController: UIViewController {
+final class CustormSliderViewController: UIViewController {
     
-    @IBOutlet weak var orangeView: UIView!
-    @IBOutlet weak var redView: UIView!
-    @IBOutlet weak var blueView: UIView!
-    @IBOutlet weak var ratioLable: UILabel!
+    @IBOutlet private weak var orangeView: UIView!
+    @IBOutlet private weak var redView: UIView!
+    @IBOutlet private weak var blueView: UIView!
+    @IBOutlet private weak var ratioLable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
