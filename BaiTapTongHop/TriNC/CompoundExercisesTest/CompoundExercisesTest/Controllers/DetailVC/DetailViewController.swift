@@ -67,7 +67,7 @@ final class DetailViewController: BaseViewController {
     override func setupData() {
         updatePicker()
         
-        // Manager -> View
+        // singleton
         PhotoManager.shared.loadImage(completion: { [weak self] image in
             if let image = image {
                 self?.thumbnailImageView.image = image

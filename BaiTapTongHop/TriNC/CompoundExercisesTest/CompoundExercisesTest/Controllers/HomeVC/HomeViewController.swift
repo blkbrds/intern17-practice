@@ -95,7 +95,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                 dateString = "\(dayString)/\(monthString)/\(yearString)"
             }
         }
-        
         cell.updateProfile(name: user.name, date: dateString)
         cell.delegate = self
         return cell
