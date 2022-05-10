@@ -13,7 +13,7 @@ protocol DatePickerViewDelegate: class {
 
 final class DatePickerView: UIView {
     let datePicker = UIDatePicker()
-    var delegate: DatePickerViewDelegate?
+    weak var delegate: DatePickerViewDelegate?
     
     func showDatePicker(txtDateField: UITextField) {
         //Formate Date
