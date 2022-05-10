@@ -35,7 +35,7 @@ final class HomeCell: UITableViewCell {
         thumbnailImageView.layer.borderColor = UIColor.orange.cgColor
         thumbnailImageView.layer.borderWidth = 1
         thumbnailImageView.clipsToBounds = true
-        fetchImage()
+        loadImage()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -53,9 +53,9 @@ final class HomeCell: UITableViewCell {
         dateOfBirthLabel.text = date
     }
     
-    // MARK: Fetch Image
-    private func fetchImage() {
-        PhotoManager.shared.loadImage { [weak self] image in
+    // MARK: Load Image
+    private func loadImage() {
+        PhotoManager.shared.fetchImage { [weak self] image in
             if let image = image {
                 self?.thumbnailImageView.image = image
             }

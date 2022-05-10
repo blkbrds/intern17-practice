@@ -68,7 +68,7 @@ final class DetailViewController: BaseViewController {
         updatePicker()
         
         // singleton
-        PhotoManager.shared.loadImage(completion: { [weak self] image in
+        PhotoManager.shared.fetchImage(completion: { [weak self] image in
             if let image = image {
                 self?.thumbnailImageView.image = image
             }

@@ -16,7 +16,7 @@ final class PhotoManager {
     private init() {}
     
     // MARK: - Fetch image
-    func loadImage(completion: @escaping (UIImage?) -> ()) {
+    func fetchImage(completion: @escaping (UIImage?) -> ()) {
         let url = "https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/2/14/13305451537340937166500036199037000332886527n-1613375263372211794836.jpg"
         guard let url = URL(string: url) else { return }
         let session = URLSession.shared
