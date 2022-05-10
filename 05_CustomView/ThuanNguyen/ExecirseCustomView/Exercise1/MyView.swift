@@ -12,8 +12,6 @@ class MyView: UIView {
     var nameLabel: UILabel?
     var markButton: UIButton?
     var count = 0
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .blue
@@ -35,8 +33,6 @@ class MyView: UIView {
         markButton!.backgroundColor = .clear
         markButton?.addTarget(self, action: #selector(tap), for: .touchUpInside)
         self.addSubview(markButton!)
-        
-        
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

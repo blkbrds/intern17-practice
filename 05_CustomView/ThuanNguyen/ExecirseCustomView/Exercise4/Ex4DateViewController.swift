@@ -7,16 +7,16 @@
 
 import UIKit
 
-class Ex4DateViewController: UIViewController {
+final class Ex4DateViewController: UIViewController {
 
-    @IBOutlet weak var txtDatePicker: UITextField!
+    @IBOutlet private weak var txtDatePicker: UITextField!
     private var datePickerView: DatePickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        setupUI()
         
     }
-    private func setUI() {
+    private func setupUI() {
         datePickerView = DatePickerView(frame: CGRect(x: 0, y: view.bounds.height - 400, width: view.bounds.width, height: 400))
         datePickerView.delegate = self
         datePickerView.showDatePicker(txtDateField: txtDatePicker)

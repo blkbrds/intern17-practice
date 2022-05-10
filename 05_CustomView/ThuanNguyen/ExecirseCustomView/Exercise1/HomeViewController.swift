@@ -23,15 +23,14 @@ final class HomeViewController: UIViewController {
         let contentView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: scrollView.bounds.size.width, height: scrollView.bounds.size.height))
         scrollView.addSubview(contentView)
 
-        for i in 0..<Config.names.count {
+        for name in Config.names {
             let myAvatar = MyView(frame: CGRect(x: Config.x, y: Config.y, width: Config.imgW, height: Config.imgh))
-            myAvatar.nameLabel?.text = Config.names[i]
-            //myAvatar.avatarImageView?.image = UIImage(named: "avatar1.png")
+            myAvatar.nameLabel?.text = name
             contentView.addSubview(myAvatar)
 
             if Config.x + (Config.imgW + Config.space) * 2 > Config.screenSize.width {
                 Config.x = 50
-                Config.y = Config.y + Config.imgh + Config.space
+                Config.y += Config.y + Config.imgh + Config.space
             } else {
                 Config.x += Config.space + Config.imgW
             }

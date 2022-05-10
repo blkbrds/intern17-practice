@@ -11,7 +11,7 @@ protocol DatePickerViewDelegate: class {
     func view(_ view: DatePickerView, needsPerform action: DatePickerView.Action)
 }
 
-class DatePickerView: UIView {
+final class DatePickerView: UIView {
     let datePicker = UIDatePicker()
     var delegate: DatePickerViewDelegate?
     
