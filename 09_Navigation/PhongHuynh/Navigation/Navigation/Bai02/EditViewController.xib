@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditViewController" customModule="Navigation" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmpasswordTextField" destination="iX5-T0-yKj" id="gbW-CE-pbu"/>
+                <outlet property="newpasswordTextField" destination="hUd-uO-P5F" id="DZw-Oc-uc1"/>
+                <outlet property="usernameTextField" destination="ZKQ-Pa-6JK" id="fnh-qC-TLV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKQ-Pa-6JK">
+                    <rect key="frame" x="40" y="160" width="334" height="28.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iX5-T0-yKj">
+                    <rect key="frame" x="40" y="300.5" width="334" height="28.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUd-uO-P5F">
+                    <rect key="frame" x="40" y="233" width="334" height="28.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hUd-uO-P5F" firstAttribute="height" secondItem="ZKQ-Pa-6JK" secondAttribute="height" id="3dv-pk-yZF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZKQ-Pa-6JK" secondAttribute="trailing" constant="40" id="DbO-Ch-XfK"/>
+                <constraint firstItem="iX5-T0-yKj" firstAttribute="top" secondItem="hUd-uO-P5F" secondAttribute="bottom" constant="39" id="Dcf-HP-wrj"/>
+                <constraint firstItem="hUd-uO-P5F" firstAttribute="top" secondItem="ZKQ-Pa-6JK" secondAttribute="bottom" constant="44.5" id="Ffc-7I-xES"/>
+                <constraint firstItem="iX5-T0-yKj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GAK-2j-LJh"/>
+                <constraint firstItem="ZKQ-Pa-6JK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="116" id="Pw3-nw-wO6"/>
+                <constraint firstItem="hUd-uO-P5F" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QBk-4V-4mv"/>
+                <constraint firstItem="iX5-T0-yKj" firstAttribute="width" secondItem="ZKQ-Pa-6JK" secondAttribute="width" id="Tzo-KS-mNh"/>
+                <constraint firstItem="ZKQ-Pa-6JK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="WEz-B7-MH1"/>
+                <constraint firstItem="ZKQ-Pa-6JK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dqR-Ta-8s4"/>
+                <constraint firstItem="iX5-T0-yKj" firstAttribute="height" secondItem="ZKQ-Pa-6JK" secondAttribute="height" id="jjw-5O-YRn"/>
+                <constraint firstItem="hUd-uO-P5F" firstAttribute="width" secondItem="ZKQ-Pa-6JK" secondAttribute="width" id="tG6-cE-ZGC"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="123.88392857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
