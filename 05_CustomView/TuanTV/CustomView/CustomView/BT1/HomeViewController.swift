@@ -7,10 +7,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     private let spaceAvatar: Int = 10
 
-    @IBOutlet weak var scrView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -20,17 +20,14 @@ class HomeViewController: UIViewController {
         
         for i in 1...30 {
             let x: Int = 20 + (100 + spaceAvatar) * ((i - 1) % 3)
-            print("x = ", x)
             let y: Int = 0 + (120 + spaceAvatar) * Int((i - 1) / 3)
-            
             let myAvatar = Bundle.main.loadNibNamed("MyAvatar", owner: self, options: nil)?[0] as? MyAvatar
-
             myAvatar?.delegate = self
             myAvatar?.frame = CGRect(x: x, y: y, width: 100, height: 120)
             myAvatar?.lbName.text = "Name \(i)"
             myAvatar?.imvAvatar.image = UIImage(named: "user")
-            scrView.contentSize = CGSize(width: view.bounds.width, height: 2000)
-            scrView.addSubview(myAvatar!)
+            scrollView.contentSize = CGSize(width: view.bounds.width, height: 2000)
+            scrollView.addSubview(myAvatar!)
            }
        }
 }

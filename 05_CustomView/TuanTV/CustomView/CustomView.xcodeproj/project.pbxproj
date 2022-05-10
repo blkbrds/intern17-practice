@@ -15,6 +15,8 @@
 		8944A28728251FEA0070BC2D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8944A28528251FEA0070BC2D /* HomeViewController.xib */; };
 		8944A28A2825207B0070BC2D /* MyAvatar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8944A2892825207B0070BC2D /* MyAvatar.xib */; };
 		8944A28D282520940070BC2D /* MyAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944A28C282520940070BC2D /* MyAvatar.swift */; };
+		8955AF04282A4668000B6AAD /* BT3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955AF02282A4668000B6AAD /* BT3ViewController.swift */; };
+		8955AF05282A4668000B6AAD /* BT3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8955AF03282A4668000B6AAD /* BT3ViewController.xib */; };
 		89BF89A72828A60C001F2884 /* BT2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BF89A52828A60C001F2884 /* BT2ViewController.swift */; };
 		89BF89A82828A60C001F2884 /* BT2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89BF89A62828A60C001F2884 /* BT2ViewController.xib */; };
 		89BF89AB2828A677001F2884 /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BF89AA2828A677001F2884 /* MySliderView.swift */; };
@@ -32,6 +34,8 @@
 		8944A28528251FEA0070BC2D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		8944A2892825207B0070BC2D /* MyAvatar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAvatar.xib; sourceTree = "<group>"; };
 		8944A28C282520940070BC2D /* MyAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvatar.swift; sourceTree = "<group>"; };
+		8955AF02282A4668000B6AAD /* BT3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT3ViewController.swift; sourceTree = "<group>"; };
+		8955AF03282A4668000B6AAD /* BT3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT3ViewController.xib; sourceTree = "<group>"; };
 		89BF89A52828A60C001F2884 /* BT2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT2ViewController.swift; sourceTree = "<group>"; };
 		89BF89A62828A60C001F2884 /* BT2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT2ViewController.xib; sourceTree = "<group>"; };
 		89BF89AA2828A677001F2884 /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		89079F242822677B00796EDA /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				8955AF01282A4647000B6AAD /* BT3 */,
 				89BF89A42828A5DC001F2884 /* BT2 */,
 				89079F592823D09200796EDA /* BT1 */,
 				89079F502822862B00796EDA /* Controller */,
@@ -96,6 +101,15 @@
 				8944A28C282520940070BC2D /* MyAvatar.swift */,
 			);
 			path = BT1;
+			sourceTree = "<group>";
+		};
+		8955AF01282A4647000B6AAD /* BT3 */ = {
+			isa = PBXGroup;
+			children = (
+				8955AF02282A4668000B6AAD /* BT3ViewController.swift */,
+				8955AF03282A4668000B6AAD /* BT3ViewController.xib */,
+			);
+			path = BT3;
 			sourceTree = "<group>";
 		};
 		89BF89A42828A5DC001F2884 /* BT2 */ = {
@@ -167,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89079F322822677F00796EDA /* LaunchScreen.storyboard in Resources */,
+				8955AF05282A4668000B6AAD /* BT3ViewController.xib in Resources */,
 				89079F2F2822677F00796EDA /* Assets.xcassets in Resources */,
 				8944A28A2825207B0070BC2D /* MyAvatar.xib in Resources */,
 				8944A28728251FEA0070BC2D /* HomeViewController.xib in Resources */,
@@ -186,6 +201,7 @@
 				89079F262822677B00796EDA /* AppDelegate.swift in Sources */,
 				89079F282822677B00796EDA /* SceneDelegate.swift in Sources */,
 				89BF89AB2828A677001F2884 /* MySliderView.swift in Sources */,
+				8955AF04282A4668000B6AAD /* BT3ViewController.swift in Sources */,
 				8944A28D282520940070BC2D /* MyAvatar.swift in Sources */,
 				8944A28628251FEA0070BC2D /* HomeViewController.swift in Sources */,
 			);

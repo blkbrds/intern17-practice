@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BT2ViewController: UIViewController {
+final class BT2ViewController: UIViewController {
     
     var slider = MySliderView()
     
