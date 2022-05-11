@@ -7,8 +7,14 @@ final class TeamHeaderReusableView: UICollectionReusableView {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var teamNameLabelLeadingConstraint: NSLayoutConstraint!
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        configUI()
+    }
+    
+    // MARK: - Functions
+    func configUI() {
         avatarImageView.layer.cornerRadius = 30
         avatarImageView.clipsToBounds = true
     }

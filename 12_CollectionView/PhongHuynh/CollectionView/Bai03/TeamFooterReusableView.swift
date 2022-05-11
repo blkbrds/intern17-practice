@@ -6,11 +6,12 @@ final class TeamFooterReusableView: UICollectionViewCell {
     @IBOutlet private weak var clickLabel: UILabel!
     @IBOutlet private weak var teamFooterLabelLeadingConstraint: NSLayoutConstraint!
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
+    // MARK: - Funtions
     func updateFooterView(click: String, status: Status) {
         clickLabel.text = click
         updateFooterView(status: status)

@@ -2,13 +2,16 @@ import UIKit
 
 final class Label {
     
+    // MARK: - Properties
     var label: String
     
+    // MARK: - Init
     init(label: String) {
         self.label = label
     }
 }
 
+// MARK: Extension
 extension Label {
     
     static func getDummyDatas() -> [Label] {
@@ -32,10 +35,9 @@ final class Bai02ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configCollectionView()
     }
-    
+
     // MARK: - Private functions
     private func configCollectionView() {
         let nib = UINib(nibName: "Bai02CollectionViewCell", bundle: .main)

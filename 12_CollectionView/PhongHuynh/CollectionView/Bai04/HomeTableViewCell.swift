@@ -5,15 +5,14 @@ final class HomeTableViewCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView2: UICollectionView!
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         configCollectionView()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
     
     // MARK: - Private functions
@@ -22,7 +21,6 @@ final class HomeTableViewCell: UITableViewCell {
         collectionView2.dataSource = self
         collectionView2.delegate = self
     }
-    
 }
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegateFlowLayout

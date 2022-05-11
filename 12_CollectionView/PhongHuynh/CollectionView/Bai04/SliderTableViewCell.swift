@@ -15,6 +15,7 @@ final class SliderTableViewCell: UITableViewCell {
         }
     }
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configCollectionView()

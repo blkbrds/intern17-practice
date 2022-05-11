@@ -11,7 +11,6 @@ final class Bai04ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configTableView()
     }
     
@@ -27,7 +26,7 @@ final class Bai04ViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension Bai04ViewController: UITableViewDataSource {
+extension Bai04ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -53,8 +52,4 @@ extension Bai04ViewController: UITableViewDataSource {
         }
         return 150
     }
-}
-
-// MARK: - UITableViewDelegate
-extension Bai04ViewController: UITableViewDelegate {
 }

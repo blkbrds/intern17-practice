@@ -2,13 +2,16 @@ import UIKit
 
 final class User {
     
+    // MARK: - Properties
     var name: String
     
+    // MARK: - Init
     init(name: String) {
         self.name = name
     }
 }
 
+// MARK: - Extension
 extension User {
     
     static func getDummyDatas() -> [User] {
@@ -32,7 +35,6 @@ final class Bai01ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configCollectionView()
     }
     
@@ -54,7 +56,6 @@ extension Bai01ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Bai01CollectionViewCell
-        
         let item = users[indexPath.row]
         cell.number = item.name
         return cell

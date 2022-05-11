@@ -6,9 +6,9 @@ final class HomeCell: UICollectionViewCell {
     @IBOutlet private weak var avatarImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         layer.cornerRadius = 10
         clipsToBounds = true
         avatarImageView.layer.cornerRadius = 65
