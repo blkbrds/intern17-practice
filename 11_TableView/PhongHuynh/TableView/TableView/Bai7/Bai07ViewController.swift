@@ -12,7 +12,6 @@ final class Bai07ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "SECTIONS"
         loadData()
         configTableView()

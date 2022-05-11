@@ -11,7 +11,6 @@ final class Bai03DetailViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "DETAIL"
         detailLabel.text = name
     }

@@ -1,19 +1,19 @@
 import UIKit
 
 final class Bai12ViewController: UIViewController {
-    
+
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
-    
+
     // MARK: - Properties
     var nameData: [String] = ["Two", "Tree", "Four", "Five"]
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
     }
-    
+
     // MARK: - Private functions
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
@@ -21,20 +21,20 @@ final class Bai12ViewController: UIViewController {
         tableView.delegate  = self
         turnOffEditingMode()
     }
-    
+
     // MARK: - Objc functions
     @objc private func turnOnEditingMode() {
         tableView.isEditing = true
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(turnOffEditingMode))
         navigationItem.rightBarButtonItem = doneButton
     }
-    
+
     @objc private func turnOffEditingMode() {
         tableView.isEditing = false
         let editingButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(turnOnEditingMode))
         navigationItem.rightBarButtonItem = editingButton
     }
-    
+
     // MARK: - Private functions
     private func insert() {
         nameData.append("Six")
@@ -83,7 +83,7 @@ extension Bai12ViewController: UITableViewDelegate {
         }
         tableView.reloadData()
     }
-    
+
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let itemToMove = nameData[sourceIndexPath.row]
         delete(indexPath: sourceIndexPath)

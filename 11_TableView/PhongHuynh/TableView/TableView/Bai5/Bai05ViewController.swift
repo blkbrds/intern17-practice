@@ -10,14 +10,13 @@ final class Bai05ViewController: UIViewController {
     var filteredData: [String] = []
     var array: [String] = ["Nguyễn Văn Tèo", "Lê Thị Lung Linh", "Trần Trẻ Trung", "Lý Líu Lo", "Mộng Thị Mơ", "Chí Văn Phèo", "Hoàng Hí Hửng", "Võ Vênh Váo", "Mai Văn Mốt", "Nguyễn Văn Tếu"]
     
+    // MARK: - Life cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         filteredData = array
         configTableView()
         configSearchBar()

@@ -11,7 +11,6 @@ final class Bai04ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "SICTIONS"
         loadData()
         configTableView()
@@ -32,7 +31,6 @@ final class Bai04ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
     }
-    
 }
 
 // MARK: - UITableViewDataSource

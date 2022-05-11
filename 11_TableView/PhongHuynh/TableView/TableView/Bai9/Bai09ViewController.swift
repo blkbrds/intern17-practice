@@ -11,7 +11,6 @@ final class Bai09ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadData()
         configTableView()
     }
@@ -22,7 +21,6 @@ final class Bai09ViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "ContactTableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
-        
     }
     
     private func loadData() {
@@ -73,6 +71,7 @@ extension Bai09ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - ContactTableViewCellDelegate
 extension Bai09ViewController: ContactTableViewCellDelegate {
     func makeCall(view: ContactTableViewCell) {
         print("Make")

@@ -2,7 +2,7 @@ import UIKit
 import Contacts
 
 final class Bai10ViewController: UIViewController {
-    
+
     // MARK: - IBOutlets
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
@@ -11,11 +11,10 @@ final class Bai10ViewController: UIViewController {
     var arrayTong: [String] = []
     var arraySection: [String] = []
     var arrayDictionary: [String: [String]] = [:]
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configTableView()
         searchBar.delegate = self
         contact()
@@ -75,7 +74,7 @@ final class Bai10ViewController: UIViewController {
     private func configSearchBar() {
         searchBar.delegate = self
     }
-    
+
     private func search(keyword: String) {
         arrayTong = getContacts(keyword: keyword)
         arraySection = []
@@ -167,4 +166,3 @@ extension Bai10ViewController: UISearchBarDelegate {
         search(keyword: "")
     }
 }
-

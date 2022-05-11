@@ -18,7 +18,6 @@ class ContactTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         avatarImageView.layer.cornerRadius = 10
         avatarImageView.clipsToBounds = true
     }
