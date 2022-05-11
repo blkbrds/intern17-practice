@@ -36,6 +36,12 @@
 		224BB745281F83E90018D3EF /* Ex1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224BB743281F83E90018D3EF /* Ex1Cell.xib */; };
 		228AF04D2824AD5200AC029B /* Ex4CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AF04B2824AD5200AC029B /* Ex4CollectionCell.swift */; };
 		228AF04E2824AD5200AC029B /* Ex4CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228AF04C2824AD5200AC029B /* Ex4CollectionCell.xib */; };
+		228CE9A4282BE64500FA58C0 /* Ex5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228CE9A2282BE64500FA58C0 /* Ex5ViewController.swift */; };
+		228CE9A5282BE64500FA58C0 /* Ex5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228CE9A3282BE64500FA58C0 /* Ex5ViewController.xib */; };
+		228CE9A9282BE74D00FA58C0 /* Ex5TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228CE9A7282BE74D00FA58C0 /* Ex5TableViewCell.swift */; };
+		228CE9AA282BE74D00FA58C0 /* Ex5TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228CE9A8282BE74D00FA58C0 /* Ex5TableViewCell.xib */; };
+		228CE9AE282BEAB800FA58C0 /* SlideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228CE9AC282BEAB800FA58C0 /* SlideTableViewCell.swift */; };
+		228CE9AF282BEAB800FA58C0 /* SlideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228CE9AD282BEAB800FA58C0 /* SlideTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +76,12 @@
 		224BB743281F83E90018D3EF /* Ex1Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex1Cell.xib; sourceTree = "<group>"; };
 		228AF04B2824AD5200AC029B /* Ex4CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex4CollectionCell.swift; sourceTree = "<group>"; };
 		228AF04C2824AD5200AC029B /* Ex4CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex4CollectionCell.xib; sourceTree = "<group>"; };
+		228CE9A2282BE64500FA58C0 /* Ex5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex5ViewController.swift; sourceTree = "<group>"; };
+		228CE9A3282BE64500FA58C0 /* Ex5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex5ViewController.xib; sourceTree = "<group>"; };
+		228CE9A7282BE74D00FA58C0 /* Ex5TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex5TableViewCell.swift; sourceTree = "<group>"; };
+		228CE9A8282BE74D00FA58C0 /* Ex5TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex5TableViewCell.xib; sourceTree = "<group>"; };
+		228CE9AC282BEAB800FA58C0 /* SlideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTableViewCell.swift; sourceTree = "<group>"; };
+		228CE9AD282BEAB800FA58C0 /* SlideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,7 @@
 			children = (
 				224BB725281F7CF00018D3EF /* HomeViewController.swift */,
 				224BB726281F7CF00018D3EF /* HomeViewController.xib */,
+				228CE9A1282BE62800FA58C0 /* Ex5 */,
 				224BB72C281F7D370018D3EF /* Ex4 */,
 				224BB72B281F7D320018D3EF /* Ex3 */,
 				224BB72A281F7D2D0018D3EF /* Ex2 */,
@@ -256,6 +269,35 @@
 			path = ItemCell;
 			sourceTree = "<group>";
 		};
+		228CE9A1282BE62800FA58C0 /* Ex5 */ = {
+			isa = PBXGroup;
+			children = (
+				228CE9AB282BEA8600FA58C0 /* SlideCell */,
+				228CE9A6282BE73600FA58C0 /* Ex5Cell */,
+				228CE9A2282BE64500FA58C0 /* Ex5ViewController.swift */,
+				228CE9A3282BE64500FA58C0 /* Ex5ViewController.xib */,
+			);
+			path = Ex5;
+			sourceTree = "<group>";
+		};
+		228CE9A6282BE73600FA58C0 /* Ex5Cell */ = {
+			isa = PBXGroup;
+			children = (
+				228CE9A7282BE74D00FA58C0 /* Ex5TableViewCell.swift */,
+				228CE9A8282BE74D00FA58C0 /* Ex5TableViewCell.xib */,
+			);
+			path = Ex5Cell;
+			sourceTree = "<group>";
+		};
+		228CE9AB282BEA8600FA58C0 /* SlideCell */ = {
+			isa = PBXGroup;
+			children = (
+				228CE9AC282BEAB800FA58C0 /* SlideTableViewCell.swift */,
+				228CE9AD282BEAB800FA58C0 /* SlideTableViewCell.xib */,
+			);
+			path = SlideCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,12 +363,15 @@
 				224BB745281F83E90018D3EF /* Ex1Cell.xib in Resources */,
 				228AF04E2824AD5200AC029B /* Ex4CollectionCell.xib in Resources */,
 				223F17D52820CC4A009BD6F2 /* HeroCell.xib in Resources */,
+				228CE9A5282BE64500FA58C0 /* Ex5ViewController.xib in Resources */,
 				224BB718281F7C130018D3EF /* Assets.xcassets in Resources */,
 				224BB728281F7CF00018D3EF /* HomeViewController.xib in Resources */,
+				228CE9AA282BE74D00FA58C0 /* Ex5TableViewCell.xib in Resources */,
 				224BB73C281F7D980018D3EF /* Ex4ViewController.xib in Resources */,
 				22371ED2282501570046286D /* Ex2ViewController.xib in Resources */,
 				224BB730281F7D800018D3EF /* Ex1ViewController.xib in Resources */,
 				223F17CC2820C916009BD6F2 /* TeamHeaderReusableView.xib in Resources */,
+				228CE9AF282BEAB800FA58C0 /* SlideTableViewCell.xib in Resources */,
 				223F17D02820CBA8009BD6F2 /* TeamFooterReusableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +386,9 @@
 				228AF04D2824AD5200AC029B /* Ex4CollectionCell.swift in Sources */,
 				22371EDA28250B4D0046286D /* HeaderCell.swift in Sources */,
 				223F17D42820CC4A009BD6F2 /* HeroCell.swift in Sources */,
+				228CE9A4282BE64500FA58C0 /* Ex5ViewController.swift in Sources */,
 				22371ED1282501570046286D /* Ex2ViewController.swift in Sources */,
+				228CE9A9282BE74D00FA58C0 /* Ex5TableViewCell.swift in Sources */,
 				224BB70F281F7C110018D3EF /* AppDelegate.swift in Sources */,
 				223F17CB2820C916009BD6F2 /* TeamHeaderReusableView.swift in Sources */,
 				22371ED5282501870046286D /* Ex2Cell.swift in Sources */,
@@ -349,6 +396,7 @@
 				224BB711281F7C110018D3EF /* SceneDelegate.swift in Sources */,
 				224BB737281F7D900018D3EF /* Ex3ViewController.swift in Sources */,
 				224BB727281F7CF00018D3EF /* HomeViewController.swift in Sources */,
+				228CE9AE282BEAB800FA58C0 /* SlideTableViewCell.swift in Sources */,
 				224BB73B281F7D980018D3EF /* Ex4ViewController.swift in Sources */,
 				224BB744281F83E90018D3EF /* Ex1Cell.swift in Sources */,
 				224BB72F281F7D800018D3EF /* Ex1ViewController.swift in Sources */,

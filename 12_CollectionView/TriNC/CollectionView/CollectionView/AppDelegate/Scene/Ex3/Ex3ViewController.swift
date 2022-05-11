@@ -37,7 +37,7 @@ final class Ex3ViewController: UIViewController {
         collectionView.dataSource = self
     }
     
-    func configCollectionView() {
+    private func configCollectionView() {
         let nib = UINib(nibName: Identifier.cell.rawValue, bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: Identifier.cell.rawValue)
         

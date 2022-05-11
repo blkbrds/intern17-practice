@@ -1,25 +1,29 @@
 //
-//  Ex4CollectionCell.swift
+//  Ex5TableViewCell.swift
 //  CollectionView
 //
-//  Created by tri.nguyen on 06/05/2022.
+//  Created by tri.nguyen on 11/05/2022.
 //
 
 import UIKit
 
-final class Ex4CollectionCell: UICollectionViewCell {
-
-    // MARK: - IBOutlets
+final class Ex5TableViewCell: UITableViewCell {
+    
+    // MARK: - IBOutlet
     @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        configCollectionView()
+        configUI()
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
     
     // MARK: - Private Function
-    private func configCollectionView() {
+    private func configUI() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -30,11 +34,11 @@ final class Ex4CollectionCell: UICollectionViewCell {
     }
 }
 
-// MARK: - Extention UICollectionViewDataSource && UICollectionViewDelegateFlowLayout
-extension Ex4CollectionCell: UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
-        
+// MARK: - Extention  UICollectionViewDelegateFlowLayout && UICollectionViewDataSource
+extension Ex5TableViewCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -44,20 +48,6 @@ extension Ex4CollectionCell: UICollectionViewDataSource , UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Config.itemWidth, height: Config.itemHeight)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return CGSize(width: 80, height: 100)
     }
 }
-
-// MARK: - Config
-extension Ex4CollectionCell {
-    struct Config {
-        static let itemWidth: CGFloat = UIScreen.main.bounds.width / 4.0 - 10
-        static let itemHeight: CGFloat = 85
-    }
-}
-
-

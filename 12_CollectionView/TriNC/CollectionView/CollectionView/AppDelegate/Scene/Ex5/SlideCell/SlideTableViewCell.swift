@@ -1,33 +1,39 @@
 //
-//  Ex4CollectionCell.swift
+//  SlideTableViewCell.swift
 //  CollectionView
 //
-//  Created by tri.nguyen on 06/05/2022.
+//  Created by tri.nguyen on 11/05/2022.
 //
 
 import UIKit
 
-final class HeaderCell: UICollectionViewCell {
+final class SlideTableViewCell: UITableViewCell {
 
-    // MARK: - IBOutlets
+    // MARK: - Outlet
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var previousButton: UIButton!
+    @IBOutlet private weak var nextButton: UIButton!
     
     // MARK: - Properties
-    private var currentIndex: IndexPath = IndexPath(item: 0, section: 0) {
+    private var currentIndex: IndexPath = IndexPath(row: 0, section: 0) {
         didSet {
             currentIndex.row = currentIndex.row < 0 ? 0 : currentIndex.row
-            currentIndex.row = currentIndex.row < 11 ? currentIndex.row : 11
+            currentIndex.row = currentIndex.row > 11 ? 11 : currentIndex.row
         }
     }
     
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        configCollectionView()
+        configUI()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
     
     // MARK: - Private Function
-    private func configCollectionView() {
+    private func configUI() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -37,23 +43,22 @@ final class HeaderCell: UICollectionViewCell {
         collectionView.collectionViewLayout = layout
     }
     
-    // MARK: - IBActions
+    // MARK: - Actions
     @IBAction private func previousButtonTouchUpInside(_ sender: Any) {
         currentIndex.row -= 1
-        if currentIndex.row == 0 { return }
         collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
     }
     
+    
     @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         currentIndex.row += 1
-        if currentIndex.row > 12 { return }
         collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
     }
 }
 
-// MARK: - Extention
-extension HeaderCell: UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
-        
+// MARK: - Extention  UICollectionViewDataSource && UICollectionViewDelegateFlowLayout
+extension SlideTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 12
     }
@@ -65,20 +70,6 @@ extension HeaderCell: UICollectionViewDataSource , UICollectionViewDelegateFlowL
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Config.itemWidth - 20, height: Config.itemHeight)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return CGSize(width: UIScreen.main.bounds.width, height: 200)
     }
 }
-
-// MARK: - Config
-extension HeaderCell {
-    struct Config {
-        static let itemWidth: CGFloat = UIScreen.main.bounds.width
-        static let itemHeight: CGFloat = 200
-    }
-}
-
-

@@ -14,7 +14,5 @@ final class Ex1Cell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
 }

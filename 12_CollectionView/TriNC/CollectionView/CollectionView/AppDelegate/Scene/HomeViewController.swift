@@ -31,7 +31,7 @@ extension HomeViewController {
 // MARK: - Enums
 extension HomeViewController {
     enum ExerciseType {
-        case ex1, ex2, ex3, ex4
+        case ex1, ex2, ex3, ex4, ex5
         
         var viewController: UIViewController {
             switch self {
@@ -43,6 +43,8 @@ extension HomeViewController {
                 return Ex3ViewController()
             case .ex4:
                 return Ex4ViewController()
+            case .ex5:
+                return Ex5ViewController()
             }
         }
     }

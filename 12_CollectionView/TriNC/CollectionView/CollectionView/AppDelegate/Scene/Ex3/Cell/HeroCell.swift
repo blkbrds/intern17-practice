@@ -10,8 +10,8 @@ import UIKit
 final class HeroCell: UICollectionViewCell {
 
     // MARK: - Life cycle
-    @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +26,4 @@ final class HeroCell: UICollectionViewCell {
         avatarImageView.image = avatar
         nameLabel.text = name
     }
-
 }

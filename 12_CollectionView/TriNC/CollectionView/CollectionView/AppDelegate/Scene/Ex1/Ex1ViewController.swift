@@ -37,7 +37,7 @@ final class Ex1ViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Properties
-    var users: [User] = User.getDummyData()
+    private var users: [User] = User.getDummyData()
     
     // MARK: - Life cycle
     override func viewDidLoad() {

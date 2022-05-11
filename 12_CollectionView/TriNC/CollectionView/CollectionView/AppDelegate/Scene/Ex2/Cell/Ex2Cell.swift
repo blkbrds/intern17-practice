@@ -16,5 +16,4 @@ final class Ex2Cell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
 }

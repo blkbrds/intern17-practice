@@ -64,7 +64,7 @@ extension Ex4ViewController: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row == 0 {
-            return CGSize(width: Config.screenWidth, height: 150)
+            return CGSize(width: Config.screenWidth, height: 200)
         } else {
             return CGSize(width: Config.screenWidth, height: Config.screenHeight)
         }

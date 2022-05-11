@@ -10,10 +10,9 @@ import UIKit
 final class TeamFooterReusableView: UICollectionReusableView {
 
     // MARK: - Outlet
-    @IBOutlet weak var clickLabel: UILabel!
+    @IBOutlet private weak var clickLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
 }

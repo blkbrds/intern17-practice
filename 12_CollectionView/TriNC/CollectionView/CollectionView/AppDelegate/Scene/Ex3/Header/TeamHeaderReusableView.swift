@@ -10,8 +10,8 @@ import UIKit
 final class TeamHeaderReusableView: UICollectionReusableView {
 
     // MARK: - IBOutlet
-    @IBOutlet weak var teamAvatarImageView: UIImageView!
-    @IBOutlet weak var teamNameLabel: UILabel!
+    @IBOutlet private weak var teamAvatarImageView: UIImageView!
+    @IBOutlet private weak var teamNameLabel: UILabel!
     
     // MARK: - Life cycle
     override func awakeFromNib() {

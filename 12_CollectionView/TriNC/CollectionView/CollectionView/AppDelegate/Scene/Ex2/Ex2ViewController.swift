@@ -37,7 +37,7 @@ final class Ex2ViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Properties
-    var items: [Item] = Item.getDummyData()
+    private var items: [Item] = Item.getDummyData()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
