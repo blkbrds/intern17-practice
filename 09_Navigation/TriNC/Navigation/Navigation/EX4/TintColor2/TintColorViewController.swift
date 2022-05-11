@@ -18,19 +18,19 @@ final class TintColorViewController: UIViewController {
     // MARK: Private Functions
     private func setupBar() {
         changeColorAndTintColorBar()
-        navigationBarItem()
+        inCorrect()
         view.backgroundColor = .lightGray
     }
     
     private func changeColorAndTintColorBar() {
         // tintcolor
-        self.navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .white
         // titlecolor
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     // MARK: - NaviBar
-    private func navigationBarItem() {
+    private func inCorrect() {
         title = "News Feed"
         // navigation bar
         let leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(leftAction))

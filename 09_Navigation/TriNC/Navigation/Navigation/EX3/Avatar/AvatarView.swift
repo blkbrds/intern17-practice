@@ -10,6 +10,7 @@ import UIKit
 
 // MARK: - Protocol
 protocol AvatarViewDelegate: class {
+    
     func view(_ view: AvatarView, needsPerform action: AvatarView.Action)
 }
 

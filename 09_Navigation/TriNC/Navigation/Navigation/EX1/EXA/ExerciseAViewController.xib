@@ -28,7 +28,7 @@
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="nextTouchUpInside:" destination="-1" eventType="touchUpInside" id="OSX-uc-mke"/>
+                        <action selector="nextScreenBButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="xdq-wH-v9N"/>
                     </connections>
                 </button>
             </subviews>

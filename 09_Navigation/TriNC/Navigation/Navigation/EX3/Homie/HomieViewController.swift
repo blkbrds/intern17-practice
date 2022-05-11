@@ -60,6 +60,7 @@ final class HomieViewController: UIViewController {
 
 // MARK: - Extention
 extension HomieViewController: AvatarViewDelegate {
+    
     func view(_ view: AvatarView, needsPerform action: AvatarView.Action) {
         switch action {
         case .tap(userNameLabel: let username, userImage: let userImage, let index):
@@ -74,6 +75,7 @@ extension HomieViewController: AvatarViewDelegate {
 }
 
 extension HomieViewController: ProfileViewControllerDelegate {
+    
     func controller(_ controller: ProfileViewController, needsPerform action: ProfileViewController.Action) {
         switch action {
         case .changeNameUser(username: let username, index: let index):

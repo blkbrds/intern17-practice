@@ -42,14 +42,15 @@ final class ProfileViewController: UIViewController {
     
     // MARK: - Objc
     @objc private func doneActionBackHome() {
-        guard let newUserName = nameTextField.text , let delegate = delegate else { return }
-        delegate.controller(self, needsPerform: .changeNameUser(username: newUserName, index: index))
+        guard let newUserName = nameTextField.text else { return }
+        delegate?.controller(self, needsPerform: .changeNameUser(username: newUserName, index: index))
         navigationController?.popViewController(animated: true)
     }
 }
 
 // MARK: - Extention
 extension ProfileViewController {
+    
     // MARK: - Define
     enum Action {
         case changeNameUser(username: String, index: Int)

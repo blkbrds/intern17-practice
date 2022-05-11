@@ -46,15 +46,14 @@ final class HomeViewController: UIViewController {
     }
     
     @objc private func logoutAction() {
-        if let delegate = delegate {
-            delegate.homeController(view: self, needsPerform: .logout)
-        }
+        delegate?.homeController(view: self, needsPerform: .logout)
         navigationController?.popViewController(animated: true)
     }
 }
 
 // MARK: - Extention
 extension HomeViewController {
+    
     // MARK: - Define Action
     enum Action {
         case logout
@@ -63,6 +62,7 @@ extension HomeViewController {
 
 // MARK: - Implement EditProtocol
 extension HomeViewController: EditViewControllerDelegate {
+    
     func didTapEditViewController(view: EditViewController, needsPeform action: EditViewController.Action) {
         switch action {
         case .tapDone(let username):

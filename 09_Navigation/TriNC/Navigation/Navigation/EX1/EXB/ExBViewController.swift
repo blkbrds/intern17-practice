@@ -16,12 +16,12 @@ final class ExBViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func nextScreenCButtonTouchUpInside(_ sender: Any) {
         let vc = ExCViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction private func previousButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func previousScreenAButtonTouchUpInside(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 }

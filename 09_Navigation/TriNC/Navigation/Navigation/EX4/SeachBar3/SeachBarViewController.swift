@@ -25,7 +25,7 @@ final class SeachBarViewController: UIViewController {
         
         let rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelActions))
         rightBarButtonItem.tintColor = .white
-        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+        navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
     // MARK: - Objc

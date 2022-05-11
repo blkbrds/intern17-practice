@@ -28,7 +28,7 @@
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="previousButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="5NG-e8-HQx"/>
+                        <action selector="previousScreenAButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="g4H-jQ-kFk"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Mu-kn-ZS2">
@@ -41,7 +41,7 @@
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="nextButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="zGk-79-jQq"/>
+                        <action selector="nextScreenCButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="mfz-it-feK"/>
                     </connections>
                 </button>
             </subviews>
