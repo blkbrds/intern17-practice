@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TabbarController" customModuleProvider="target">
             <connections>
-                <outlet property="emailLabel" destination="Ow9-vA-jzm" id="mNF-JZ-w9Y"/>
+                <outlet property="tableView" destination="fSs-iT-0q2" id="3Ig-uC-aiC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ow9-vA-jzm">
-                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fSs-iT-0q2">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Ow9-vA-jzm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="71h-fD-Jam"/>
-                <constraint firstItem="Ow9-vA-jzm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JAS-g5-OmJ"/>
+                <constraint firstItem="fSs-iT-0q2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xew-Qg-098"/>
+                <constraint firstItem="fSs-iT-0q2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iM4-dP-nZw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fSs-iT-0q2" secondAttribute="trailing" id="id3-ox-AD6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fSs-iT-0q2" secondAttribute="bottom" id="oom-ya-0rl"/>
             </constraints>
             <point key="canvasLocation" x="133" y="110"/>
         </view>

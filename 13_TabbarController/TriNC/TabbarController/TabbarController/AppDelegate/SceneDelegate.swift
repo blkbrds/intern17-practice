@@ -68,7 +68,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabbarController = UITabBarController()
         tabbarController.viewControllers = [homeNav, mapNav, favortiesNav, profileNav]
         tabbarController.tabBar.tintColor = .brown
-        tabbarController.tabBar.barTintColor = .red
+        tabbarController.tabBar.barTintColor = .purple
         tabbarController.tabBar.backgroundColor = .purple
         window!.rootViewController = tabbarController
     }

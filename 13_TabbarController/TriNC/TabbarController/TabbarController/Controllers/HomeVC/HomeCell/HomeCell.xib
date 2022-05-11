@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="187" id="KGk-i7-Jjw" customClass="HomeCell" customModule="TabbarController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="187"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qav-9S-sxI">
+                        <rect key="frame" x="10" y="43.5" width="100" height="100"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qav-9S-sxI" secondAttribute="height" multiplier="1:1" id="1DL-zC-R3U"/>
+                            <constraint firstAttribute="height" constant="100" id="OuU-9P-apa"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-UV-UQf">
+                        <rect key="frame" x="120" y="59.5" width="322" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3j-5J-3Xh">
+                                <rect key="frame" x="0.0" y="0.0" width="322" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAw-q1-MgV">
+                                <rect key="frame" x="0.0" y="44" width="322" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="A3j-5J-3Xh" firstAttribute="width" secondItem="4ba-UV-UQf" secondAttribute="width" id="Orz-Xq-O80"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4ba-UV-UQf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7mw-eT-jl6"/>
+                    <constraint firstItem="4ba-UV-UQf" firstAttribute="leading" secondItem="qav-9S-sxI" secondAttribute="trailing" constant="10" id="H0E-5h-IvW"/>
+                    <constraint firstAttribute="trailing" secondItem="4ba-UV-UQf" secondAttribute="trailing" constant="10" id="cow-KY-t8n"/>
+                    <constraint firstItem="qav-9S-sxI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pZ8-qP-b75"/>
+                    <constraint firstItem="qav-9S-sxI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yJX-RH-vtm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.32765889813783761" green="0.17429281777290792" blue="0.42846653202474227" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <connections>
+                <outlet property="artistNameLabel" destination="wAw-q1-MgV" id="uId-MA-dHQ"/>
+                <outlet property="thumbnailImageView" destination="qav-9S-sxI" id="PBI-dp-nzt"/>
+                <outlet property="titleLabel" destination="A3j-5J-3Xh" id="pcR-ZZ-xEi"/>
+            </connections>
+            <point key="canvasLocation" x="227.536231884058" y="157.70089285714286"/>
+        </tableViewCell>
+    </objects>
+</document>
