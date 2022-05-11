@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - Bai2HomeViewControllerDelegate
 protocol Bai2HomeViewControllerDelegate: class {
-    func controller(view: Bai2HomeViewController, needsPerfom actions: Bai2HomeViewController.Action)
+    func controller(controller: Bai2HomeViewController, needsPerfom actions: Bai2HomeViewController.Action)
 }
 
 final class Bai2HomeViewController: UIViewController {
@@ -22,7 +22,11 @@ final class Bai2HomeViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configUI()
+    }
+    
+    // MARK: - Private functions
+    private func configUI() {
         title = "Home"
         let leftButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(leftAction))
         navigationItem.leftBarButtonItem = leftButton
@@ -34,9 +38,8 @@ final class Bai2HomeViewController: UIViewController {
     // MARK: - Objc functions
     @objc private func leftAction() {
         if let delegate = delegate {
-            delegate.controller(view: self, needsPerfom: .logout)
+            delegate.controller(controller: self, needsPerfom: .logout)
         }
-        //      navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     
@@ -48,9 +51,9 @@ final class Bai2HomeViewController: UIViewController {
     }
 }
 
-// MARK: - EditViewControllerDelegate
+// MARK: - Bai2EditViewControllerDelegate
 extension Bai2HomeViewController: Bai2EditViewControllerDelegate {
-    func controller(view: Bai2EditViewController, needsPerfom actions: Bai2EditViewController.Action) {
+    func controller(controller: Bai2EditViewController, needsPerfom actions: Bai2EditViewController.Action) {
         switch actions {
         case .tap(let userName):
             nameLabel.text = userName

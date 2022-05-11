@@ -1,8 +1,8 @@
 import UIKit
 
-// MARK: - EditViewControllerDelegate
+// MARK: - Bai2EditViewControllerDelegate
 protocol Bai2EditViewControllerDelegate: class {
-    func controller(view: Bai2EditViewController, needsPerfom actions: Bai2EditViewController.Action)
+    func controller(controller: Bai2EditViewController, needsPerfom actions: Bai2EditViewController.Action)
 }
 
 final class Bai2EditViewController: UIViewController {
@@ -20,9 +20,14 @@ final class Bai2EditViewController: UIViewController {
     // MARK: - Properties
     weak var delegate: Bai2EditViewControllerDelegate?
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configUI()
+    }
+    
+    // MARK: - Private functions
+    private func configUI() {
         title = "Edit"
         let leftButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(leftAction))
         navigationItem.leftBarButtonItem = leftButton
@@ -37,7 +42,7 @@ final class Bai2EditViewController: UIViewController {
     
     @objc private func rightAction() {
         if let username = usernameTextField.text, let delegate = delegate {
-            delegate.controller(view: self, needsPerfom: .tap(username: username))
+            delegate.controller(controller: self, needsPerfom: .tap(username: username))
         }
         self.navigationController?.popViewController(animated: true)
     }

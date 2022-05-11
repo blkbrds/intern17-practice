@@ -10,7 +10,16 @@ final class Bai2LoginViewController: BaseViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configUI()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
+    // MARK: - Private functions
+    private func configUI() {
         title = "Login"
         let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
@@ -19,27 +28,21 @@ final class Bai2LoginViewController: BaseViewController {
         passwordTextField.returnKeyType = .done
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        usernameTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-    }
-    
     // MARK: - Objc functions
     @objc private func rightAction() {
         guard let userName = usernameTextField.text, let password = passwordTextField.text, !userName.isEmpty, !password.isEmpty else {
-            showLabel.text = "Chua nhap gia tri"
+            showLabel.text = "Chưa nhập giá trị"
             return
         }
         if DataManager.checkData(userName: userName, password: password) {
             let vc = Bai2HomeViewController()
             vc.userName = userName
             vc.delegate = self
-            //          navigationController?.pushViewController(vc, animated: true)
             let navi = BaseNavigationController(rootViewController: vc)
             navi.modalPresentationStyle = .fullScreen
             present(navi, animated: true, completion: nil)
         } else {
-            showLabel.text = "Sai username hoac password"
+            showLabel.text = "Sai username hoặc password"
         }
     }
 }
@@ -55,9 +58,9 @@ extension Bai2LoginViewController: UITextFieldDelegate {
     }
 }
 
-// MARK: - HomeViewControllerDelegate
+// MARK: - Bai2HomeViewControllerDelegate
 extension Bai2LoginViewController: Bai2HomeViewControllerDelegate {
-    func controller(view: Bai2HomeViewController, needsPerfom actions: Bai2HomeViewController.Action) {
+    func controller(controller: Bai2HomeViewController, needsPerfom actions: Bai2HomeViewController.Action) {
         switch actions {
         case .logout:
             usernameTextField.text = ""

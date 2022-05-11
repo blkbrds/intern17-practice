@@ -5,7 +5,6 @@ final class ProfileViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "Profile"
         let leftButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(leftAction))
         navigationItem.leftBarButtonItem = leftButton

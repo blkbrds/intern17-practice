@@ -1,6 +1,6 @@
 import UIKit
 
-final class BaseViewController: UIViewController {
+class BaseViewController: UIViewController {
 
     // MARK: - Life cycle
     override func viewDidLoad() {
