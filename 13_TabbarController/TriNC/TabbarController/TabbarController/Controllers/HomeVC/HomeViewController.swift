@@ -57,8 +57,8 @@ final class HomeViewController: BaseViewController {
         loadAPI()
     }
     
-    // MARK: - Public Function
-    func updateUI() {
+    // MARK: - Private Function
+    private func updateUI() {
         tableView.reloadData()
     }
     
