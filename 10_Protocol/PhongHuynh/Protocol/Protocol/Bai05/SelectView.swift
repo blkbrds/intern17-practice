@@ -40,8 +40,33 @@ class SelectView: UIView {
     }
     weak var delegate: SelectViewDelegate?
     
+    // MARK: - Life cycle
     override func layoutSubviews() {
         super.layoutSubviews()
+        configUI()
+    }
+    
+    // MARK: - Private functions
+    private func changeColer(tag: Int) {
+        for button in operationButton {
+            button.backgroundColor = button.tag == tag ? .blue : .white
+        }
+    }
+    
+    private func receiveValue() {
+        let value = dataSource?.setXY()
+        xLabel.text = value?.x
+        yLabel.text = value?.y
+    }
+    
+    private func changeBoderButton() {
+        for boder in operationButton {
+            boder.layer.borderWidth = 1
+            boder.layer.borderColor = UIColor.black.cgColor
+        }
+    }
+    
+    private func configUI() {
         self.transform = CGAffineTransform(scaleX: 0.3, y: 2)
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: [.allowUserInteraction, .curveEaseOut], animations: {
             self.transform = .identity
@@ -92,31 +117,12 @@ class SelectView: UIView {
             delegate?.view(view: self, needsPerfom: .done(result: result, operation: operation))
         }
     }
+    
     @IBAction private func clearButton(_ sender: Any) {
         xLabel.text = ""
         yLabel.text = ""
         if let x = xLabel.text, let y = yLabel.text {
             delegate?.view(view: self, needsPerfom: .clear(x: x, y: y))
-        }
-    }
-    
-    // MARK: - Private functions
-    private func changeColer(tag: Int) {
-        for button in operationButton {
-            button.backgroundColor = button.tag == tag ? .blue : .white
-        }
-    }
-    
-    private func receiveValue() {
-        let value = dataSource?.setXY()
-        xLabel.text = value?.x
-        yLabel.text = value?.y
-    }
-    
-    private func changeBoderButton() {
-        for boder in operationButton {
-            boder.layer.borderWidth = 1
-            boder.layer.borderColor = UIColor.black.cgColor
         }
     }
 }

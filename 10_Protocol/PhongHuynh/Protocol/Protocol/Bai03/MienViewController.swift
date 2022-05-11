@@ -11,12 +11,26 @@ final class MienViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Miền"
+        configNavigation()
+        boderUI()
+    }
+    
+    // MARK: - Private functions
+    private func configNavigation() {
         let backButton = UIBarButtonItem(image: UIImage(named: "back1.png"), style: .plain, target: self, action: #selector(leftAction))
         navigationItem.rightBarButtonItem = backButton
         let rightButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
+    }
+    
+    private func changeColer(tag: Int) {
+        for button in mienButton {
+            button.backgroundColor = button.tag == tag ? .red : .white
+        }
+    }
+    
+    private func boderUI() {
         for button in mienButton {
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.blue.cgColor
@@ -40,12 +54,5 @@ final class MienViewController: UIViewController {
     @IBAction private func changeColerButton(_ sender: UIButton) {
         changeColer(tag: sender.tag)
         diadiem?.mien = sender.tag
-    }
-    
-    // MARK: - Private functions
-    private func changeColer(tag: Int) {
-        for button in mienButton {
-            button.backgroundColor = button.tag == tag ? .red : .white
-        }
     }
 }

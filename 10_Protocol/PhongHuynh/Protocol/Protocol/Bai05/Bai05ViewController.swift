@@ -34,6 +34,7 @@ final class Bai05ViewController: UIViewController {
     @IBOutlet private weak var resultLabel: UILabel!
     @IBOutlet private weak var operationButton: UIButton!
     
+    // MARK: - Properties
     var selectView = SelectView()
     
     // MARK: - Life cycle

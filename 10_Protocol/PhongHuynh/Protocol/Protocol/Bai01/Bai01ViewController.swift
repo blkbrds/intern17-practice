@@ -115,7 +115,6 @@ final class Bai01ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         bietbay(array: array)
         bietBoi(array: array)
         bietMotTrongBa(array: array)

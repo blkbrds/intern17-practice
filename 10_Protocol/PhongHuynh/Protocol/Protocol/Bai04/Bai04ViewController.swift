@@ -13,14 +13,8 @@ final class Bai04ViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         showTextView()
         searchBar.delegate = self
-    }
-    
-    // MARK: - IBActions
-    @IBAction private func resetButton(_ sender: Any) {
-        showTextView()
     }
     
     // MARK: - Private functions
@@ -30,6 +24,11 @@ final class Bai04ViewController: UIViewController {
             text += "- \(i)\n"
         }
         txtTextView.text = text
+    }
+    
+    // MARK: - IBActions
+    @IBAction private func resetButton(_ sender: Any) {
+        showTextView()
     }
 }
 

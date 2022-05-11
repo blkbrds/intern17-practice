@@ -11,15 +11,29 @@ final class TinhViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Tỉnh"
+        configNavigation()
+        configUI()
+    }
+    
+    // MARK: Private functions
+    private func configNavigation() {
         let backButton = UIBarButtonItem(image: UIImage(named: "back1.png"), style: .plain, target: self, action: #selector(leftAction))
         navigationItem.rightBarButtonItem = backButton
         let rightButton = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
+    }
+    
+    private func configUI() {
         for button in tinhButton {
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.blue.cgColor
+        }
+    }
+    
+    private func changecoler(tag: Int) {
+        for button in tinhButton {
+            button.backgroundColor = button.tag == tag ? .orange : .white
         }
     }
     
@@ -40,12 +54,5 @@ final class TinhViewController: UIViewController {
     @IBAction private func changeColerButton(_ sender: UIButton) {
         changecoler(tag: sender.tag)
         diadiem?.tinh = sender.tag
-    }
-    
-    // MARK: Private functions
-    private func changecoler(tag: Int) {
-        for button in tinhButton {
-            button.backgroundColor = button.tag == tag ? .orange : .white
-        }
     }
 }

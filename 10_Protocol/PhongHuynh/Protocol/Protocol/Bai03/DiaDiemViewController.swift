@@ -1,10 +1,13 @@
 import UIKit
 
 final class DiaDiem {
+    
+    // MARK: - Properties
     var mien: Int
     var tinh: Int
     var huyen: Int
     
+    // MARK: - Init
     init(mien: Int, tinh: Int, huyen: Int) {
         self.mien = mien
         self.tinh = tinh
@@ -13,7 +16,7 @@ final class DiaDiem {
 }
 
 // MARK: - DiaDiemDatasouce
-protocol DiaDiemDatasouce {
+protocol DiaDiemDatasouce: class {
     
     func getDiaDiem() -> DiaDiem
 }
@@ -26,28 +29,31 @@ final class DiaDiemViewController: UIViewController {
     @IBOutlet private weak var huyenLabel: UILabel!
     
     // MARK: - Properties
-    var datasouce: DiaDiemDatasouce?
+    weak var datasouce: DiaDiemDatasouce?
     var diadiem: DiaDiem = DiaDiem(mien: 0, tinh: 0, huyen: 0)
     
+    // MARK: Life cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        guard let diadiem = datasouce?.getDiaDiem() else { return }
-        mienLabel.text = "mien \(diadiem.mien)"
-        mienLabel.textColor = .blue
-        tinhLabel.text = "tinh \(diadiem.tinh)"
-        tinhLabel.textColor = .orange
-        huyenLabel.text = "huyen \(diadiem.huyen)"
-        huyenLabel.textColor = .red
+        configUI()
     }
     
-    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Địa điểm"
         let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
         self.navigationItem.rightBarButtonItem = editButton
+    }
+    
+    // MARK: - Private functions
+    private func configUI() {
+        guard let diadiem = datasouce?.getDiaDiem() else { return }
+        mienLabel.text = "miền \(diadiem.mien)"
+        mienLabel.textColor = .blue
+        tinhLabel.text = "tỉnh \(diadiem.tinh)"
+        tinhLabel.textColor = .orange
+        huyenLabel.text = "huyện \(diadiem.huyen)"
+        huyenLabel.textColor = .red
     }
     
     // MARK: - Objc functions
