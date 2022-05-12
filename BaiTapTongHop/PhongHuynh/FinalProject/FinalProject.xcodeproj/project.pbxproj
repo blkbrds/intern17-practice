@@ -39,6 +39,12 @@
 		CBB5C134282CA56100599DBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5C132282CA56000599DBD /* LoginViewController.swift */; };
 		CBB5C139282CA71C00599DBD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5C137282CA71C00599DBD /* DetailViewController.swift */; };
 		CBB5C13A282CA71C00599DBD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB5C138282CA71C00599DBD /* DetailViewController.xib */; };
+		CBB5C14C282CBD9300599DBD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5C14A282CBD9300599DBD /* HomeCell.swift */; };
+		CBB5C14D282CBD9300599DBD /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB5C14B282CBD9300599DBD /* HomeCell.xib */; };
+		CBC6558B282CC31D007A089D /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC6558A282CC31D007A089D /* HomeCellViewModel.swift */; };
+		CBC65595282CC3B8007A089D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC65594282CC3B8007A089D /* HomeViewModel.swift */; };
+		CBC65599282CC3D2007A089D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC65598282CC3D2007A089D /* LoginViewModel.swift */; };
+		CBC6559D282CC3E2007A089D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC6559C282CC3E2007A089D /* DetailViewModel.swift */; };
 		CBCC7E78282A588100DBD668 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC7E76282A588100DBD668 /* HomeViewController.swift */; };
 		CBCC7E79282A588100DBD668 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCC7E77282A588100DBD668 /* HomeViewController.xib */; };
 		CBCC7E81282A590100DBD668 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC7E7F282A590100DBD668 /* LibraryViewController.swift */; };
@@ -98,6 +104,12 @@
 		CBB5C132282CA56000599DBD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CBB5C137282CA71C00599DBD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CBB5C138282CA71C00599DBD /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		CBB5C14A282CBD9300599DBD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		CBB5C14B282CBD9300599DBD /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		CBC6558A282CC31D007A089D /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
+		CBC65594282CC3B8007A089D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CBC65598282CC3D2007A089D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CBC6559C282CC3E2007A089D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		CBCC7E76282A588100DBD668 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CBCC7E77282A588100DBD668 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		CBCC7E7F282A590100DBD668 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +314,7 @@
 			children = (
 				CBB5C132282CA56000599DBD /* LoginViewController.swift */,
 				CBB5C131282CA56000599DBD /* LoginViewController.xib */,
+				CBC65598282CC3D2007A089D /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -309,8 +322,10 @@
 		CB9BFCD72828F34700F08166 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CBB5C149282CBD6E00599DBD /* Cell */,
 				CBCC7E76282A588100DBD668 /* HomeViewController.swift */,
 				CBCC7E77282A588100DBD668 /* HomeViewController.xib */,
+				CBC65594282CC3B8007A089D /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -320,8 +335,19 @@
 			children = (
 				CBB5C137282CA71C00599DBD /* DetailViewController.swift */,
 				CBB5C138282CA71C00599DBD /* DetailViewController.xib */,
+				CBC6559C282CC3E2007A089D /* DetailViewModel.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		CBB5C149282CBD6E00599DBD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CBB5C14A282CBD9300599DBD /* HomeCell.swift */,
+				CBB5C14B282CBD9300599DBD /* HomeCell.xib */,
+				CBC6558A282CC31D007A089D /* HomeCellViewModel.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CBCC7E7C282A58BA00DBD668 /* Library */ = {
@@ -451,6 +477,7 @@
 				CBB5C133282CA56100599DBD /* LoginViewController.xib in Resources */,
 				6AFD030A231375EF004940FA /* Assets.xcassets in Resources */,
 				CBCC7E82282A590200DBD668 /* LibraryViewController.xib in Resources */,
+				CBB5C14D282CBD9300599DBD /* HomeCell.xib in Resources */,
 				CBCC7E79282A588100DBD668 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,13 +600,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBCC7E78282A588100DBD668 /* HomeViewController.swift in Sources */,
+				CBC65595282CC3B8007A089D /* HomeViewModel.swift in Sources */,
 				6AF60E0A2313B9C000F5CBA2 /* UIViewExt.swift in Sources */,
 				6AF613B22313C13A00F5CBA2 /* Label.swift in Sources */,
 				CBCC7E92282A59E000DBD668 /* ChanelViewController.swift in Sources */,
 				6AF60DC42313B56B00F5CBA2 /* Error.swift in Sources */,
 				CBB5C134282CA56100599DBD /* LoginViewController.swift in Sources */,
 				6AF60E132313B9C000F5CBA2 /* NSErrorExt.swift in Sources */,
+				CBC6558B282CC31D007A089D /* HomeCellViewModel.swift in Sources */,
 				6AF613B72313C13A00F5CBA2 /* CollectionView.swift in Sources */,
+				CBC65599282CC3D2007A089D /* LoginViewModel.swift in Sources */,
 				6AFD0303231375EE004940FA /* AppDelegate.swift in Sources */,
 				6AF613B02313C13A00F5CBA2 /* CollectionCell.swift in Sources */,
 				6AF60DC52313B56B00F5CBA2 /* ApiManager.swift in Sources */,
@@ -588,9 +618,11 @@
 				6AF60E1E2313B9C000F5CBA2 /* UIViewControllerExt.swift in Sources */,
 				CBCC7E81282A590100DBD668 /* LibraryViewController.swift in Sources */,
 				6AF60D082313B31200F5CBA2 /* App.swift in Sources */,
+				CBB5C14C282CBD9300599DBD /* HomeCell.swift in Sources */,
 				6AF60D802313B56B00F5CBA2 /* Session.swift in Sources */,
 				6AF60DC62313B56B00F5CBA2 /* ResponseSerializer.swift in Sources */,
 				6AF60D192313B35800F5CBA2 /* Errors.swift in Sources */,
+				CBC6559D282CC3E2007A089D /* DetailViewModel.swift in Sources */,
 				6AF613BF2313C13A00F5CBA2 /* ScrollView.swift in Sources */,
 				CBCC7E8A282A598000DBD668 /* ShortsViewController.swift in Sources */,
 				6AF60D222313B35800F5CBA2 /* String.swift in Sources */,
