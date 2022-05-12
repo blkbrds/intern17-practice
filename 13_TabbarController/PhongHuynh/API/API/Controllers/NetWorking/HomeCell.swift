@@ -3,7 +3,7 @@ import UIKit
 class HomeCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var apiImageView: UIImageView!
+    @IBOutlet weak var nameImageView: UIImageView!
     
     var viewModel: HomeCellViewModel? {
         didSet { updateView()
@@ -21,7 +21,9 @@ class HomeCell: UITableViewCell {
     
     func updateView() {
         nameLabel.text = viewModel?.users.name
-  //      apiImageView.image = UIImage(named: "\(viewModel?.users.avatar)")
+        Networking.shared().downloadImage(url: (viewModel?.users.avatar)!) { (image) in
+            self.nameImageView.image = image
+        }
     }
     
 }

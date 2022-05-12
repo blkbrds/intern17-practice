@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="API" customModuleProvider="target">
             <connections>
-                <outlet property="emailLabel" destination="Aam-3j-lVb" id="1RX-iF-SmL"/>
+                <outlet property="tableView" destination="T9v-Uo-PrT" id="Hue-uk-eHn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,16 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aam-3j-lVb">
-                    <rect key="frame" x="91" y="219" width="240" height="43"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T9v-Uo-PrT">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="T9v-Uo-PrT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4om-Mp-G5X"/>
+                <constraint firstItem="T9v-Uo-PrT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Y0m-vM-J5a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="T9v-Uo-PrT" secondAttribute="bottom" id="uxZ-3J-TvV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T9v-Uo-PrT" secondAttribute="trailing" id="yD1-89-jP8"/>
+            </constraints>
             <point key="canvasLocation" x="-33.333333333333336" y="106.47321428571428"/>
         </view>
     </objects>

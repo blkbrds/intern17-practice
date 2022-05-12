@@ -38,10 +38,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="apiImageView" destination="c4S-Zz-6ec" id="S0J-t8-jrm"/>
+                <outlet property="nameImageView" destination="c4S-Zz-6ec" id="S0J-t8-jrm"/>
                 <outlet property="nameLabel" destination="uWo-VP-RyE" id="Gqd-If-rT1"/>
             </connections>
-            <point key="canvasLocation" x="-452.17391304347831" y="25.446428571428569"/>
+            <point key="canvasLocation" x="-84" y="-1"/>
         </tableViewCell>
     </objects>
 </document>
