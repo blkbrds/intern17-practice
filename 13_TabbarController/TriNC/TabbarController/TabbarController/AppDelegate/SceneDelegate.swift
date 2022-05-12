@@ -23,7 +23,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.makeKeyAndVisible()
-        changeScreen(type: .login)
+        changeScreen(type: .tabbar)
     }
     
     // MARK: - Public Function

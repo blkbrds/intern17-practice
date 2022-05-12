@@ -9,36 +9,29 @@ import Foundation
 
 final class HomeViewModel {
     
-    typealias Completion = (Bool, String) -> Void
+    typealias Completion = (Bool, APIError?) -> Void
     
     // MARK: - Properties
-    var email: String = ""
-    var password: String = ""
-    var musics: [Music] = []
+    private(set) var email: String = ""
+    private(set) var password: String = ""
+    private(set) var musics: [Music] = []
     
     // MARK: - Load API
     func loadAPI(completion: @escaping Completion) {
-        let urlString = "https://rss.applemarketingtools.com/api/v2/us/music/most-played/25/albums.json"
-        API.shared().request(with: urlString) { (data, error) in
-            if let error = error {
-                completion(false, error.localizedDescription)
+        let urlString = "https://rss.applemarketingtools.com/api/v2/us/music/most-played/10/albums.json"
+        HomeService.getMusicDetail(urlString: urlString) { [weak self] datas in
+            if let music = datas {
+                guard let this = self else { return }
+                this.musics = music
+                completion(true, nil)
             } else {
-                if let data = data {
-                    let json = data.toJSON()
-                    let feed = json["feed"] as! JSON
-                    let results = feed["results"] as! [JSON]
-                    
-                    for item in results {
-                        let music = Music(json: item)
-                        self.musics.append(music)
-                        
-                        completion(true, "")
-                    }
-                } else {
-                    completion(false, "Data format is error.")
-                }
+                completion(false, .error("Data is nil"))
             }
         }
+    }
+
+    func viewModelForCell(at indexPath: IndexPath) -> HomeCellViewModel {
+        return HomeCellViewModel(music: musics[indexPath.row])
     }
     
     // MARK: - Fetch Data

@@ -10,9 +10,15 @@ import UIKit
 final class HomeCell: UITableViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var thumbnailImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var artistNameLabel: UILabel!
+    @IBOutlet private weak var thumbnailImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var artistNameLabel: UILabel!
+    
+    var viewModel: HomeCellViewModel? {
+        didSet {
+            updateView()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,4 +28,19 @@ final class HomeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - UI
+    private func updateView() {
+        guard let viewModel = viewModel else {
+            return
+        }
+
+        titleLabel.text = viewModel.music.name
+        artistNameLabel.text = viewModel.music.artistName
+        viewModel.loadImage(completion: { [weak self] in
+            guard let this = self,
+                  let imageData = viewModel.imageData else { return }
+            let image = UIImage(data: imageData)
+            this.thumbnailImageView.image = image
+        })
+    }
 }
