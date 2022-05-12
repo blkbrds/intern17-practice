@@ -39,6 +39,15 @@ extension Api.Path {
         func loadRelateVideos(with videoId: String) -> String {
             return baseURL / "search?part=snippet&maxResults=\(maxResults)&relatedToVideoId=\(videoId)&type=video&key=\(apiKey)"
         }
+
+        // Load videos with list of id
+        func loadVideosbyIds(with ids: [String]) -> String {
+            var stringOfIds = ""
+            ids.forEach { id in
+                stringOfIds.append("id=\(id)&")
+            }
+            return baseURL / "videos?part=snippet&part=id&\(stringOfIds)key=\(apiKey)"
+        }
     }
 
     // API get info of channel with id channel

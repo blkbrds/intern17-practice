@@ -98,6 +98,23 @@ struct Youtube {
         }
     }
 
+    // Load videos by list of Ids
+    static func loadVideoByIds(with ids: [String], completion: @escaping Completion<Videos?>) {
+        let urlString = APIPath.Videos().loadVideosbyIds(with: ids)
+        api.request(method: .get, urlString: urlString) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let data):
+                    guard let dataJSON = data as? JSObject else { return }
+                    let videos = Mapper<Videos>().map(JSON: dataJSON)
+                    completion(.success(videos))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
     private func checkEmptySnippet(snippets: [Snippet]) -> [Snippet] {
         snippets.filter {
             $0.id != nil && $0.publishedAt != nil

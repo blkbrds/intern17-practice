@@ -15,6 +15,7 @@ final class DetailViewControllerModel {
     private var channel: Channel?
     private var comments: [CommentSnippet]?
     private var videos: Videos?
+    private var isLiked: Bool = false
 
     init(snippet: Snippet?) {
         self.snippet = snippet
@@ -82,7 +83,6 @@ final class DetailViewControllerModel {
     }
 
     func api(completion: @escaping (Error?) -> Void) {
-        print("videoID: ", getVideoId())
         Youtube.loadRelateAPI(with: getVideoId()) { result in
             switch result {
             case .success(let data):
@@ -120,23 +120,43 @@ final class DetailViewControllerModel {
         }
     }
 
-    func addVideo(completion: (Bool) -> Void) {
+    func setLikeState(with state: Bool) {
+        isLiked = state
+    }
+
+    func isStored() -> Bool {
+        var tempValue: Bool = false
+        guard let id = snippet?.id else { return false }
+        RealmManager.shared().checkVideoIsFavo(with: id) { done in
+            print("done",done)
+            tempValue = done
+        }
+        return tempValue
+    }
+
+    // MARK: - functions with RealmManager
+    func addVideo(completion: DoneInform) {
         guard let snippet = snippet,
-              let id = snippet.id,
-              let imageString = snippet.imageString,
-              let publishedAt = snippet.publishedAt else { return }
-        let favoriteVideo = FavoriteVideos()
-        favoriteVideo.id = id
-        favoriteVideo.videoInfo?.imageString = imageString
-        favoriteVideo.videoInfo?.publishAt = publishedAt
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.add(favoriteVideo)
+              let id = snippet.id else { return }
+        let favoVideo = FavoriteVideo()
+        favoVideo.id = id
+        RealmManager.shared().addVideo(with: favoVideo) { done in
+            if done {
                 completion(true)
+            } else {
+                completion(false)
             }
-        } catch {
-            completion(false)
+        }
+    }
+
+    func removeVideo(completion: @escaping DoneInform) {
+        guard let removeWithId = snippet?.id else { return }
+        RealmManager.shared().removeVideo(with: removeWithId) { done in
+            if done {
+                completion(true)
+            } else {
+                completion(false)
+            }
         }
     }
 }

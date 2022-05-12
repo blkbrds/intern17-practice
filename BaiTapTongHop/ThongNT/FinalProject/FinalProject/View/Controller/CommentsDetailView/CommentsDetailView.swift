@@ -57,7 +57,6 @@ extension CommentsDetailView: UITableViewDataSource {
                                                        for: indexPath) as? CommentDetailTableViewCell else { return UITableViewCell() }
         if let comment = viewModel?.getComment(with: indexPath.row) {
             cell.viewModel = CommentDetaiTableViewCellModel(with: comment)
-            print("comment \(indexPath.row):", comment)
         }
         cell.selectionStyle = .none
         return cell

@@ -12,12 +12,14 @@ import RealmSwift
 final class FavoriteViewControllerModel {
 
     // MARK: Private Properties
-    private var favoritedVideos: [FavoriteVideos] = []
+    private var favoritedVideos: [FavoriteVideo] = []
+    private var notificationToken: NotificationToken?
+    private var snippet: Snippet?
 
-    func fetchData(completion: (Bool) -> ()) {
+    func fetchData(completion: (Bool) -> Void) {
         do {
             let realm = try Realm()
-            let results = realm.objects(FavoriteVideos.self)
+            let results = realm.objects(FavoriteVideo.self)
             favoritedVideos = Array(results)
             completion(true)
         } catch  {
@@ -25,7 +27,7 @@ final class FavoriteViewControllerModel {
         }
     }
 
-    func getFavoriteVideoInfo(with index: Int) -> FavoriteVideos? {
+    func getFavoriteVideoInfo(with index: Int) -> FavoriteVideo? {
         if 0..<favoritedVideos.count ~= index {
             return favoritedVideos[index]
         } else {
@@ -35,5 +37,28 @@ final class FavoriteViewControllerModel {
 
     func getVideosCount() -> Int {
         return favoritedVideos.count
+    }
+
+    func setupObserve(completion: @escaping DoneInform) {
+        do {
+            let realm = try Realm()
+            notificationToken = realm.objects(FavoriteVideo.self).observe({ change in
+                switch change {
+                case .update(_, deletions: _, insertions: _, modifications: _):
+                    completion(true)
+                case .initial(_):
+                    break
+                case .error(_):
+                    break
+                }
+            })
+        } catch {
+            completion(false)
+        }
+    }
+
+    func api(completion: @escaping (Error?) -> Void) {
+        guard let ids: [String] = favoritedVideos.compactMap { $0.}
+        Youtube.loadVideoByIds(with: [String], completion: <#T##Completion<Videos?>##Completion<Videos?>##(Result<Videos?>) -> Void#>)
     }
 }

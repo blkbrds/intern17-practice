@@ -143,6 +143,7 @@ extension DetailViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let viewModel = viewModel else { return UITableViewCell() }
         switch indexPath.section {
         // Define cells for section 0
         case 0:
@@ -151,15 +152,28 @@ extension DetailViewController: UITableViewDataSource {
                 // Title cell with row 0, section 0
                 guard let titleCell = tableView.dequeueReusableCell(withIdentifier: "TitleTableViewCell")
                         as? TitleTableViewCell else { return UITableViewCell() }
-                titleCell.title = viewModel?.getTitle()
-                titleCell.isLiked = {
-                    self.viewModel?.addVideo(completion: { done in
-                        if done {
-                            // layousubview
-                        } else {
-                            self.showAlert(title: "Warning", message: "Cannot add this video to your Favorite")
-                        }
-                    })
+                titleCell.viewModel = TitleTableViewCellModel(title: viewModel.getTitle(),
+                                                              isLiked: viewModel.isStored())
+                // Receive like action from cell
+                titleCell.viewModel?.isFavorite = { [weak self] done in
+                    if done {
+                        self?.viewModel?.addVideo(completion: { [weak self] done in
+                            if done {
+                                self?.viewModel?.setLikeState(with: true)
+                            } else {
+                                self?.showAlert(title: "Warning", message: "Cannot add this video to your Favorite")
+                            }
+                        })
+                    } else {
+                        self?.viewModel?.removeVideo(completion: { [weak self] done in
+                            if done {
+                                self?.viewModel?.setLikeState(with: false)
+//                                self?.showAlert(title: "Infrom", message: "Video unliked")
+                            } else {
+                                self?.showAlert(title: "Warning", message: "Cannot unliked")
+                            }
+                        })
+                    }
                 }
                 titleCell.selectionStyle = .none
                 return titleCell
@@ -167,7 +181,7 @@ extension DetailViewController: UITableViewDataSource {
                 // Channel table cell with row 1, section 0
                 guard let chanelCell = tableView.dequeueReusableCell(withIdentifier: "ChannelTableViewCell")
                         as? ChannelTableViewCell else { return UITableViewCell() }
-                let channelSippet = viewModel?.getChannelSnippet()
+                let channelSippet = viewModel.getChannelSnippet()
                 chanelCell.viewModel = ChannelTableViewCellModel(channelSnippet: channelSippet)
                 chanelCell.selectionStyle = .none
                 return chanelCell
@@ -175,8 +189,7 @@ extension DetailViewController: UITableViewDataSource {
                 // Comment table cell with row 2, section 0
                 guard let commentsCell = tableView.dequeueReusableCell(withIdentifier: "CommentsTableViewCell")
                         as? CommentsTableViewCell else { return UITableViewCell() }
-                guard let comments = viewModel?.getComments() else { return UITableViewCell() }
-                commentsCell.viewModel = CommentTableViewCellModel(commments: comments)
+                commentsCell.viewModel = CommentTableViewCellModel(commments: viewModel.getComments())
                 commentsCell.selectionStyle = .none
                 return commentsCell
             default: break
@@ -185,7 +198,7 @@ extension DetailViewController: UITableViewDataSource {
             // List of videos
             guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "ThumbnailTableViewCell", for: indexPath) as? ThumbnailTableViewCell else { return UITableViewCell() }
             videoCell.selectionStyle = .none
-            let snippet = viewModel?.getSnippet(with: indexPath.row)
+            let snippet = viewModel.getSnippet(with: indexPath.row)
             videoCell.viewModel = ThumbnailTableViewCellModel(snippet: snippet)
             return videoCell
         default: break

@@ -46,7 +46,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="likeButotn" destination="6A1-B4-5m1" id="vhA-Zo-OsO"/>
+                <outlet property="likeButton" destination="6A1-B4-5m1" id="goH-5v-07x"/>
                 <outlet property="titleLabel" destination="S2K-I2-lW9" id="8K9-Aa-Twz"/>
             </connections>
             <point key="canvasLocation" x="127.53623188405798" y="77.008928571428569"/>

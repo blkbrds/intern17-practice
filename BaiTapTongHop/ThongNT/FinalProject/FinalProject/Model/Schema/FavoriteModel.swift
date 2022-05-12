@@ -9,18 +9,10 @@
 import Foundation
 import RealmSwift
 
-final class FavoriteVideos: Object {
+final class FavoriteVideo: Object {
 
     @objc dynamic var id: String = ""
-    @objc dynamic var videoInfo: VideoInfo?
     override static func primaryKey() -> String? {
         return "id"
     }
-}
-
-final class VideoInfo: Object {
-
-    @objc dynamic var title: String = ""
-    @objc dynamic var publishAt: String = ""
-    @objc dynamic var imageString: String = ""
 }

@@ -8,16 +8,14 @@
 
 import UIKit
 
-class TitleTableViewCell: UITableViewCell {
+final class TitleTableViewCell: UITableViewCell {
 
     // MARK: Properties
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var likeButotn: UIButton!
+    @IBOutlet private weak var likeButton: UIButton!
 
-    var isLiked: (() -> Void)?
-    var viewModel: TitleTableViewCellModel?
-
-    var title: String? {
+    var isLiked: ((Bool) -> Void)?
+    var viewModel: TitleTableViewCellModel? {
         didSet {
             updateUI()
         }
@@ -28,18 +26,22 @@ class TitleTableViewCell: UITableViewCell {
     }
 
     private func updateUI() {
-        guard let title = title else { return }
-        titleLabel.text = title
-    }
-
-    private func like(status: Bool) {
-        if status {
-            likeButotn.image(for: .selected)
+        titleLabel.text = viewModel?.getTitle()
+        guard let viewModel = viewModel else { return }
+        if viewModel.getStateOfVideo() {
+            likeButton.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
+        } else {
+            likeButton.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
         }
     }
 
+    private func like() {
+        guard let viewModel = viewModel else { return }
+        viewModel.like()
+    }
+
     @IBAction private func likeVideo(_ sender: UIButton) {
-        like(status: true)
-        isLiked?()
+        like()
+        updateUI()
     }
 }

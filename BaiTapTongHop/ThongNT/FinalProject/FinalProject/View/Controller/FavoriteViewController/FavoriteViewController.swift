@@ -18,18 +18,26 @@ final class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTable()
-//        fetchData()
+        fetchData()
         setupUI()
+        updateData()
     }
 
     private func fetchData() {
         guard let viewModel = viewModel else { return }
-        viewModel.fetchData { done in
+        viewModel.fetchData { [weak self] done in
             if done {
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             } else {
-                fatalError()
+//                fatalError()
             }
+        }
+    }
+
+    private func updateData() {
+        guard let viewModel = viewModel else { return }
+        viewModel.setupObserve { [weak self] _ in
+            self?.fetchData()
         }
     }
 
@@ -62,9 +70,7 @@ final class FavoriteViewController: UIViewController {
 }
 
 // MARK: Extension Delegate of tableView
-extension FavoriteViewController: UITableViewDelegate {
-
-}
+extension FavoriteViewController: UITableViewDelegate { }
 
 // MARK: Extension Datasource of tableView
 extension FavoriteViewController: UITableViewDataSource {
@@ -76,8 +82,7 @@ extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ThumbnailTableViewCell",
                                                        for: indexPath) as? ThumbnailTableViewCell else { return UITableViewCell() }
-//        guard let snippet = viewModel?.getFavoriteVideoInfo(with: <#T##Int#>)
-//
+        guard let favo = viewModel?.getFavoriteVideoInfo(with: indexPath.row) else { return UITableViewCell() }
 //        cell.viewModel = ThumbnailTableViewCellModel(snippet: snippet)
         return cell
     }
