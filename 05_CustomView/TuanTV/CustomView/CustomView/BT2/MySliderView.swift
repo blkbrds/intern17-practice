@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MySliderView: UIView {
+final class MySliderView: UIView {
     var initialCenter = CGPoint()
     var rate: Int = 0
     var minValue: CGFloat = 25
@@ -41,10 +41,8 @@ class MySliderView: UIView {
         if panGesture.state == .began {
             // Save the view's original position.
             self.initialCenter = piece.center
-//            print("gia tri bat dau la", initialCenter)
         }
         if panGesture.state != .cancelled {
-//            print("gia tri hien tai ", piece.center)
             // Add the X and Y translation to the view's original position.
             let newCenter = CGPoint(x: initialCenter.x, y: initialCenter.y + translation.y)
             piece.center = newCenter
@@ -54,7 +52,6 @@ class MySliderView: UIView {
                 piece.center.y = minValue
             }
             let rate = Int((piece.center.y - 25) * 100 / 500)
-            print("rate", rate)
             reloadUI(rate: 100 - rate)
         }
         else {
@@ -63,7 +60,7 @@ class MySliderView: UIView {
         }
     }
 
-    func reloadUI(rate: Int) {
+    private func reloadUI(rate: Int) {
         lbRate.text = String(rate)
         thumbnailView.frame = CGRect(origin: CGPoint(x: 0, y: 500 - (rate * 500 / 100)), size: CGSize(width: 60, height: 50))
         rateView.frame = CGRect(origin: CGPoint(x: 15, y: 525), size: CGSize(width: 30, height: -1 * (rate * 500 / 100)))

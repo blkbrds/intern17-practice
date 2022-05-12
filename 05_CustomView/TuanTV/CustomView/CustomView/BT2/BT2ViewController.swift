@@ -11,7 +11,7 @@ final class BT2ViewController: UIViewController {
     
     var slider = MySliderView()
     
-    @IBOutlet weak var tfRate: UITextField!
+    @IBOutlet private weak var rateTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,18 +27,18 @@ final class BT2ViewController: UIViewController {
         slider.frame = CGRect(origin: CGPoint(x: widthView / 2 - 15, y: 50), size: CGSize(width: 60, height: 550))
         slider.backgroundColor = .clear
         view.addSubview(slider)
-        tfRate.text = "0"
-        tfRate.delegate = self
+        rateTextField.text = "0"
+        rateTextField.delegate = self
     }
 }
 
-protocol  SliderDelegate: class {
+protocol SliderDelegate: class {
     func sliderDelegate(_ rate: String)
 }
 
 extension BT2ViewController: SliderDelegate {
     func sliderDelegate(_ rate: String) {
-        tfRate.text = rate
+        rateTextField.text = rate
     }
 }
 

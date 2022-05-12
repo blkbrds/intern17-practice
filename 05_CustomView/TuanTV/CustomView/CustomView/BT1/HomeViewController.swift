@@ -24,8 +24,8 @@ final class HomeViewController: UIViewController {
             let myAvatar = Bundle.main.loadNibNamed("MyAvatar", owner: self, options: nil)?[0] as? MyAvatar
             myAvatar?.delegate = self
             myAvatar?.frame = CGRect(x: x, y: y, width: 100, height: 120)
-            myAvatar?.lbName.text = "Name \(i)"
-            myAvatar?.imvAvatar.image = UIImage(named: "user")
+            myAvatar?.nameLabel.text = "Name \(i)"
+            myAvatar?.avatarImageView.image = UIImage(named: "user")
             scrollView.contentSize = CGSize(width: view.bounds.width, height: 2000)
             scrollView.addSubview(myAvatar!)
            }

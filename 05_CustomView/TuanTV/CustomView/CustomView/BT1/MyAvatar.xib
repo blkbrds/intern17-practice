@@ -35,8 +35,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="imvAvatar" destination="gzj-tn-X8N" id="CqG-F1-dAG"/>
-                <outlet property="lbName" destination="GHc-ih-xcB" id="3Bc-ft-9V1"/>
+                <outlet property="avatarImageView" destination="gzj-tn-X8N" id="CqG-F1-dAG"/>
+                <outlet property="nameLabel" destination="GHc-ih-xcB" id="3Bc-ft-9V1"/>
             </connections>
             <point key="canvasLocation" x="-196" y="60"/>
         </view>

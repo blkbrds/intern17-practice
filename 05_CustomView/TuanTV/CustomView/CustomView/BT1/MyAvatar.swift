@@ -10,11 +10,11 @@ import UIKit
 
 class MyAvatar: UIView {
         
-    @IBOutlet weak var lbName: UILabel!
-    @IBOutlet weak var imvAvatar: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBAction func didTap(_ sender: Any) {
         print("haha")
-        delegate?.myAvatar(self, didSelect: lbName.text ?? "name 0")
+        delegate?.myAvatar(self, didSelect: nameLabel.text ?? "name 0")
     }
     weak var delegate: MyAvatarDelegate?
 }
