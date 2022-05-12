@@ -9,13 +9,9 @@ import UIKit
 
 final class BT3ViewController: UIViewController {
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
-
-
     }
     
     private func setupView() {
@@ -57,9 +53,7 @@ final class BT3ViewController: UIViewController {
         customButton3?.badgeLabel.layer.cornerRadius = 6
         customButton3?.badgeLabel.layer.masksToBounds = true
         view.addSubview(customButton3!)
-        
     }
-    
 }
 
 enum BadgePosition {

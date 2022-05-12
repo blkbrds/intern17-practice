@@ -14,16 +14,16 @@ final class CustomButton: UIView {
     var xMinButton: CGFloat {
         return button.frame.minX
     }
+    
     var xMaxButton: CGFloat {
         return button.frame.maxX
     }
+    
     var xMidButton: CGFloat {
         return button.center.x
     }
 
     var badgePosition: BadgePosition = .TopLeft {
-        
-        
         willSet {
             switch newValue {
             
@@ -44,7 +44,6 @@ final class CustomButton: UIView {
             case .BottomRight:
                 badgeLabel.frame = CGRect(x: xMaxButton - (badgeLabel.intrinsicContentSize.width + 10) / 2, y: 80, width: badgeLabel.intrinsicContentSize.width + 10, height: 20)
             }
-
         }
     }
     var badgeTitle: String = "" {
