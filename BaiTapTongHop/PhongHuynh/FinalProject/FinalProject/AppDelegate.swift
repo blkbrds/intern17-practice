@@ -3,18 +3,28 @@ import UIKit
 @available(iOS 13.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    static var shared: AppDelegate {
+        guard let scene = UIApplication.shared.connectedScenes.first?.delegate as? AppDelegate else {
+            fatalError("Errol")
+        }
+        return scene
+    }
+    
     var window: UIWindow?
     let tabbarController = UITabBarController()
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        setTabbar()
-        window?.rootViewController = tabbarController
+        let vc = DetailViewController()
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
+        //        setTabbar()
+        //        window?.rootViewController = tabbarController
+        //        window?.makeKeyAndVisible()
         return true
     }
-
+    
     func setTabbar() {
         let homeVC = HomeViewController()
         let homeNavi = UINavigationController(rootViewController: homeVC)
@@ -32,5 +42,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabbarController.tabBar.tintColor = .orange
         UITabBar.appearance().barTintColor = UIColor.white
     }
-
 }

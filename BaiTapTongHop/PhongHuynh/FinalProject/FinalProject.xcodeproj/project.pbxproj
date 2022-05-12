@@ -37,6 +37,8 @@
 		8882DA0118142BBAD083DDD9 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5084BD3D925876C8DE2E9504 /* Pods_FinalProject.framework */; };
 		CBB5C133282CA56100599DBD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB5C131282CA56000599DBD /* LoginViewController.xib */; };
 		CBB5C134282CA56100599DBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5C132282CA56000599DBD /* LoginViewController.swift */; };
+		CBB5C139282CA71C00599DBD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5C137282CA71C00599DBD /* DetailViewController.swift */; };
+		CBB5C13A282CA71C00599DBD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB5C138282CA71C00599DBD /* DetailViewController.xib */; };
 		CBCC7E78282A588100DBD668 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC7E76282A588100DBD668 /* HomeViewController.swift */; };
 		CBCC7E79282A588100DBD668 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCC7E77282A588100DBD668 /* HomeViewController.xib */; };
 		CBCC7E81282A590100DBD668 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC7E7F282A590100DBD668 /* LibraryViewController.swift */; };
@@ -94,6 +96,8 @@
 		7EB1AD2584DB4F2ED9CCF8A4 /* Pods-FinalProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProjectTests/Pods-FinalProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		CBB5C131282CA56000599DBD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CBB5C132282CA56000599DBD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CBB5C137282CA71C00599DBD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CBB5C138282CA71C00599DBD /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		CBCC7E76282A588100DBD668 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CBCC7E77282A588100DBD668 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		CBCC7E7F282A590100DBD668 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +318,8 @@
 		CB9BFCD82828F43B00F08166 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				CBB5C137282CA71C00599DBD /* DetailViewController.swift */,
+				CBB5C138282CA71C00599DBD /* DetailViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 			files = (
 				CBCC7E8B282A598000DBD668 /* ShortsViewController.xib in Resources */,
 				CBCC7E93282A59E000DBD668 /* ChanelViewController.xib in Resources */,
+				CBB5C13A282CA71C00599DBD /* DetailViewController.xib in Resources */,
 				CBB5C133282CA56100599DBD /* LoginViewController.xib in Resources */,
 				6AFD030A231375EF004940FA /* Assets.xcassets in Resources */,
 				CBCC7E82282A590200DBD668 /* LibraryViewController.xib in Resources */,
@@ -592,6 +599,7 @@
 				6AF613B32313C13A00F5CBA2 /* ViewController.swift in Sources */,
 				6AF613C12313C13A00F5CBA2 /* TableView.swift in Sources */,
 				6AF613C42313C13A00F5CBA2 /* TableCell.swift in Sources */,
+				CBB5C139282CA71C00599DBD /* DetailViewController.swift in Sources */,
 				6AF613C92313C13A00F5CBA2 /* ImageView.swift in Sources */,
 				6AF60E212313B9C000F5CBA2 /* CollectionExt.swift in Sources */,
 			);
