@@ -25,7 +25,7 @@ enum APIError: Error {
 
 final class Networking {
 
-    //MARK: - singleton
+    // MARK: - singleton
     private static var sharedNetworking: Networking = {
         let networking = Networking()
         return networking
@@ -35,20 +35,18 @@ final class Networking {
         return sharedNetworking
     }
 
-    //MARK: - init
+    // MARK: - Init
     private init() {}
 
-    //MARK: - request
+    // MARK: - request
     func request(with urlString: String, completion: @escaping (Data?, APIError?) -> Void) {
         guard let url = URL(string: urlString) else {
             let error = APIError.error("URL lỗi")
             completion(nil, error)
             return
         }
-
         let config = URLSessionConfiguration.ephemeral
         config.waitsForConnectivity = true
-
         let session = URLSession(configuration: config)
         let task = session.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {
@@ -65,8 +63,8 @@ final class Networking {
         }
         task.resume()
     }
-
-    //MARK: - downloader
+    
+    // MARK: - downloader
     func downloadImage(url: String, completion: @escaping (UIImage?) -> Void) {
         guard let url = URL(string: url) else {
             completion(nil)
@@ -91,5 +89,4 @@ final class Networking {
         }
         task.resume()
     }
-
 }

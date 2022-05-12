@@ -4,10 +4,13 @@ import UIKit
 typealias JSON = [String: Any]
 
 final class Video {
+
+    // MARK: - Properties
     var id: String?
     var imageURL: String?
     var title: String?
 
+    // MARK: - Init
     init(json: JSON) {
         if let id = json["id"] as? String,
            let snippet = json["snippet"] as? JSON,

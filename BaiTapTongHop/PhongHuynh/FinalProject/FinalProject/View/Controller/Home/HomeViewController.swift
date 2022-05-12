@@ -19,7 +19,7 @@ final class HomeViewController: UIViewController {
                 case .success:
                     this.tableView.reloadData()
                 case .failure(let error):
-                    print("error")
+                    print("error\(error)")
                 }
             }
         }
@@ -32,12 +32,11 @@ final class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
-    
 }
 
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfItems(section: section)
     }

@@ -8,17 +8,20 @@
 
 import UIKit
 
-class HomeCell: UITableViewCell {
-    
-    @IBOutlet weak var nameYoutubeLabel: UILabel!
-    @IBOutlet weak var youtubeImage: UIImageView!
-    
+final class HomeCell: UITableViewCell {
+
+    // MARK: - IBOutlets
+    @IBOutlet private weak var nameYoutubeLabel: UILabel!
+    @IBOutlet private weak var youtubeImage: UIImageView!
+
+    // MARK: - Properties
     var viewModel: HomeCellViewModel? {
         didSet {
             updateView()
         }
     }
-    
+
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -27,11 +30,11 @@ class HomeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func updateView() {
+    // MARK: - Private functions
+    private func updateView() {
         nameYoutubeLabel.text = viewModel?.video.title
         Networking.shared().downloadImage(url: viewModel?.video.imageURL ?? "") { (image) in
             self.youtubeImage.image = image
         }
     }
-    
 }

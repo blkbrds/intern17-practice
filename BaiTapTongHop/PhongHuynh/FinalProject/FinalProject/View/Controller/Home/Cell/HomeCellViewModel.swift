@@ -11,15 +11,18 @@ import UIKit
 
 final class HomeCellViewModel {
 
+    // MARK: Properties
     var video: Video
 
+    // MARK: - Init
     init(video: Video) {
         self.video = video
     }
-    
+
+    // MARK: - Methods
     func updateImageView(completion: @escaping (UIImage?) -> Void) {
         Networking.shared().downloadImage(url: video.imageURL ?? "") { (image) in
-                completion(image)
-            }
+            completion(image)
         }
+    }
 }
