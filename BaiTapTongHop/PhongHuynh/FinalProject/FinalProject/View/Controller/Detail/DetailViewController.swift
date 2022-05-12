@@ -8,12 +8,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet private weak var youtubeView: UIView!
+    @IBOutlet private weak var youtubeLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
-
 }

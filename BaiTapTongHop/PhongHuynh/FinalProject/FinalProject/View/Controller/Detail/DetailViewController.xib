@@ -11,7 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="FinalProject" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="ES4-hm-kCm" id="IsB-il-l4y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="youtubeLabel" destination="tQ6-lP-BMg" id="R70-HZ-RVN"/>
+                <outlet property="youtubeView" destination="oAp-UC-eMS" id="dFs-Et-Azm"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

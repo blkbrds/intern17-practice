@@ -9,9 +9,15 @@
 import UIKit
 
 class HomeCell: UITableViewCell {
-
-    @IBOutlet weak var imageYoutubeView: UIView!
+    
     @IBOutlet weak var nameYoutubeLabel: UILabel!
+    @IBOutlet weak var youtubeImage: UIImageView!
+    
+    var viewModel: HomeCellViewModel? {
+        didSet {
+            updateView()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,9 +26,12 @@ class HomeCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
-    func updateTableCell(contactName: String) {
-        nameYoutubeLabel.text = contactName
+
+    func updateView() {
+        nameYoutubeLabel.text = viewModel?.video.title
+        Networking.shared().downloadImage(url: viewModel?.video.imageURL ?? "") { (image) in
+            self.youtubeImage.image = image
+        }
     }
     
 }
