@@ -1,4 +1,5 @@
 import UIKit
+import GoogleSignIn
 
 final class LoginViewController: UIViewController {
 
@@ -21,5 +22,8 @@ final class LoginViewController: UIViewController {
         loginGmailButton.layer.cornerRadius = 8
         loginGmailButton.layer.borderWidth = 0.5
         loginGmailButton.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    @IBAction private func googleLogin(_ sender: Any) {
     }
 }

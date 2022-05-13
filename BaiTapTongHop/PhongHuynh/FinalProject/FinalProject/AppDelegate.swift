@@ -1,4 +1,6 @@
 import UIKit
+import GoogleSignIn
+import FirebaseCore
 
 @available(iOS 13.0, *)
 @UIApplicationMain
@@ -18,14 +20,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let tabbarController = UITabBarController()
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+           // Initialize Google sign-in.
+        //GIDSignIn.sharedInstance().clientID = "1067897935402-urdpk47r6q9m58tbj9c5ed0mn7ck5un0.apps.googleusercontent.com"
+        // 1067897935402-urdpk47r6q9m58tbj9c5ed0mn7ck5un0.apps.googleusercontent.com
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance.handle(url)
+    }
+    
+  
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         setroot(with: .tabbar)
         window?.makeKeyAndVisible()
+    
+        FirebaseApp.configure()
         return true
     }
-
+    
     func setTabbar() {
         let homeVC = HomeViewController()
         let homeNavi = UINavigationController(rootViewController: homeVC)
@@ -50,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               setTabbar()
               window?.rootViewController = tabbarController
           case .login:
-              let vc = LoginViewController()
+              let vc = HomeViewController()
               let navi = UINavigationController(rootViewController: vc)
               window?.rootViewController = navi
           }

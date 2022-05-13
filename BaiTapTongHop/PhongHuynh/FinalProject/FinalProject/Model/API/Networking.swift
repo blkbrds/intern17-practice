@@ -63,7 +63,7 @@ final class Networking {
         }
         task.resume()
     }
-    
+
     // MARK: - downloader
     func downloadImage(url: String, completion: @escaping (UIImage?) -> Void) {
         guard let url = URL(string: url) else {
@@ -75,7 +75,7 @@ final class Networking {
         let session = URLSession(configuration: config)
         let task = session.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {
-                if let _ = error {
+                if let error = error {
                     completion(nil)
                 } else {
                     if let data = data {
