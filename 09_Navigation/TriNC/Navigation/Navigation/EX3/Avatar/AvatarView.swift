@@ -59,8 +59,7 @@ final class AvatarView: UIView {
     
     // MARK: - Objc
     @objc private func didClickButton() {
-        guard let delegate = delegate else { return }
-        delegate.view(self, needsPerform: .tap(userNameLabel: usernameLabel.text ?? "", userImage: userAvatarImageView.image, index: index))
+        delegate?.view(self, needsPerform: .tap(userNameLabel: usernameLabel.text ?? "", userImage: userAvatarImageView.image, index: index))
     }
 
     required init?(coder: NSCoder) {

@@ -11,6 +11,7 @@
 		22371EE0282521CE0046286D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22371EDE282521CE0046286D /* DetailViewController.xib */; };
 		22A6D82A2824E39000518B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D6280E964300109357 /* AppDelegate.swift */; };
 		22A6D82B2824E39300518B7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D8280E964300109357 /* SceneDelegate.swift */; };
+		22D106A3282E8787009271ED /* HomieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D106A2282E8787009271ED /* HomieViewModel.swift */; };
 		22DDC2B52824E27B0017A711 /* SeachBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC29B2824E27A0017A711 /* SeachBarViewController.xib */; };
 		22DDC2B62824E27B0017A711 /* SeachBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC29C2824E27A0017A711 /* SeachBarViewController.swift */; };
 		22DDC2B72824E27B0017A711 /* TintColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC29E2824E27A0017A711 /* TintColorViewController.xib */; };
@@ -59,6 +60,7 @@
 		22AA10DF280E964400109357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22AA10E2280E964400109357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22AA10E4280E964400109357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D106A2282E8787009271ED /* HomieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomieViewModel.swift; sourceTree = "<group>"; };
 		22DDC29B2824E27A0017A711 /* SeachBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeachBarViewController.xib; sourceTree = "<group>"; };
 		22DDC29C2824E27A0017A711 /* SeachBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachBarViewController.swift; sourceTree = "<group>"; };
 		22DDC29E2824E27A0017A711 /* TintColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TintColorViewController.xib; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				22DDC2AC2824E27B0017A711 /* HomieViewController.swift */,
 				22DDC2AB2824E27B0017A711 /* HomieViewController.xib */,
+				22D106A2282E8787009271ED /* HomieViewModel.swift */,
 			);
 			path = Homie;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				22DDC2EF2824E2E30017A711 /* ExBViewController.swift in Sources */,
 				22DDC2C32824E27B0017A711 /* User.swift in Sources */,
 				22A6D82B2824E39300518B7F /* SceneDelegate.swift in Sources */,
+				22D106A3282E8787009271ED /* HomieViewModel.swift in Sources */,
 				22DDC2BE2824E27B0017A711 /* BarButtonTestViewController.swift in Sources */,
 				22DDC2ED2824E2E30017A711 /* ExEViewController.swift in Sources */,
 				22DDC2B92824E27B0017A711 /* MoreBarViewController.swift in Sources */,

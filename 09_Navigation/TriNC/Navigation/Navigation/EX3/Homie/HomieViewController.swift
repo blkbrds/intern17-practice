@@ -12,6 +12,9 @@ final class HomieViewController: UIViewController {
     // MARK: - Scroll View
     var scrollView: UIScrollView = UIScrollView()
     
+    // MARK: - Properties
+    private var viewModel = HomieViewModel()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +32,11 @@ final class HomieViewController: UIViewController {
         let heightUserView: CGFloat = 175
         var yView: CGFloat = 10
         var xView: CGFloat = (screenSize.width - widthUserView * 3 - (2 * space)) / 2
-        let numberRow = users.count / 3
+        let numberRow = viewModel.users.count / 3
         let heightScrollOne = heightUserView * CGFloat(numberRow) + space * CGFloat((numberRow - 1))
         let heightScroll1 = heightUserView * (CGFloat(numberRow) + 1) + space * CGFloat((numberRow - 1))
         
-        if users.count % 3 == 0 {
+        if viewModel.users.count % 3 == 0 {
             scrollView.contentSize = CGSize(width: screenSize.width, height: heightScrollOne)
         } else {
             scrollView.contentSize = CGSize(width: screenSize.width, height: heightScroll1)
@@ -41,10 +44,10 @@ final class HomieViewController: UIViewController {
         
         view.addSubview(scrollView)
         
-        for index in 0..<users.count {
+        for index in 0..<viewModel.users.count {
             let frame = CGRect(x: xView, y: yView, width: widthUserView, height: heightUserView)
             let avatarView = AvatarView(frame: frame, index: index)
-            avatarView.usernameLabel.text = users[index].name
+            avatarView.usernameLabel.text = viewModel.users[index].name
             avatarView.delegate = self
             scrollView.addSubview(avatarView)
             
@@ -79,7 +82,7 @@ extension HomieViewController: ProfileViewControllerDelegate {
     func controller(_ controller: ProfileViewController, needsPerform action: ProfileViewController.Action) {
         switch action {
         case .changeNameUser(username: let username, index: let index):
-            users[index].name = username
+            viewModel.users[index].name = username
             scrollView.subviews.forEach {
                 $0.removeFromSuperview()
             }

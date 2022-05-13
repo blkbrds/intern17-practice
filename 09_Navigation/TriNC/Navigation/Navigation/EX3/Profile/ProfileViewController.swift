@@ -9,6 +9,7 @@ import UIKit
 
 // MARK: - Protocol
 protocol ProfileViewControllerDelegate: class {
+    
     func controller(_ controller: ProfileViewController, needsPerform action: ProfileViewController.Action)
 }
 
