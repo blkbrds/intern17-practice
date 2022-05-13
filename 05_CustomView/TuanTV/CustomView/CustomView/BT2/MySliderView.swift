@@ -18,7 +18,7 @@ final class MySliderView: UIView {
     @IBOutlet weak var rateView: UIView!
     
     @IBOutlet weak var thumbnailView: UIView!
-    @IBOutlet weak var lbRate: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
     
     weak var delegate: SliderDelegate?
     
@@ -61,7 +61,7 @@ final class MySliderView: UIView {
     }
 
     func reloadUI(rate: Int) {
-        lbRate.text = String(rate)
+        rateLabel.text = String(rate)
         thumbnailView.frame = CGRect(origin: CGPoint(x: 0, y: 500 - (rate * 500 / 100)), size: CGSize(width: 60, height: 50))
         rateView.frame = CGRect(origin: CGPoint(x: 15, y: 525), size: CGSize(width: 30, height: -1 * (rate * 500 / 100)))
     }

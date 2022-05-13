@@ -13,7 +13,6 @@ class MyAvatar: UIView {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBAction func didTap(_ sender: Any) {
-        print("haha")
         delegate?.myAvatar(self, didSelect: nameLabel.text ?? "name 0")
     }
     weak var delegate: MyAvatarDelegate?

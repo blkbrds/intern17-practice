@@ -11,6 +11,10 @@ final class CustomButton: UIView {
     var buttonTitle: String = ""
     var buttonColor: UIColor = .blue
     var badgeColor: UIColor = .red
+    var badgeContentInset: CGFloat {
+        return (badgeLabel.intrinsicContentSize.width + 10) / 2
+    }
+    
     var xMinButton: CGFloat {
         return button.frame.minX
     }
@@ -23,29 +27,38 @@ final class CustomButton: UIView {
         return button.center.x
     }
 
-    var badgePosition: BadgePosition = .TopLeft {
+    var badgePosition: BadgePosition = .topLeft {
         willSet {
             switch newValue {
             
-            case .TopLeft:
-                badgeLabel.frame = CGRect(x: xMinButton - (badgeLabel.intrinsicContentSize.width + 10) / 2, y: 0, width: badgeLabel.intrinsicContentSize.width + 10, height: 20 )
-            case .TopRight:
-                badgeLabel.frame = CGRect(x: xMaxButton - (badgeLabel.intrinsicContentSize.width + 10) / 2, y: 0, width: badgeLabel.intrinsicContentSize.width + 10, height: 20)
-            case .TopCenter:
-                badgeLabel.frame = CGRect(x: xMidButton - (badgeLabel.intrinsicContentSize.width + 10) / 2, y: 0, width: badgeLabel.intrinsicContentSize.width + 10, height: 20)
-            case .CenterLeft:
-                badgeLabel.frame = CGRect(x: xMinButton - (badgeLabel.intrinsicContentSize.width + 10) / 2, y: 40, width: badgeLabel.intrinsicContentSize.width + 10, height: 20)
-            case .CenterRight:
-                badgeLabel.frame = CGRect(x: xMaxButton - (badgeLabel.intrinsicContentSize.width + 10) / 2, y: 40, width: badgeLabel.intrinsicContentSize.width + 10, height: 20)
-            case .BottomLeft:
-                badgeLabel.frame = CGRect(x: xMinButton - (badgeLabel.intrinsicContentSize.width + 10) / 2, y: 80, width: badgeLabel.intrinsicContentSize.width + 10, height: 20)
-            case .BottomCenter:
-                badgeLabel.frame = CGRect(x: xMidButton - (badgeLabel.intrinsicContentSize.width + 10) / 2, y: 80, width: badgeLabel.intrinsicContentSize.width + 10, height: 20)
-            case .BottomRight:
-                badgeLabel.frame = CGRect(x: xMaxButton - (badgeLabel.intrinsicContentSize.width + 10) / 2, y: 80, width: badgeLabel.intrinsicContentSize.width + 10, height: 20)
+            case .topLeft:
+                badgeLabel.frame = setFrameBadge(x: xMinButton - badgeContentInset,
+                                                 y: 0)
+            case .topRight:
+                badgeLabel.frame = setFrameBadge(x: xMaxButton - badgeContentInset,
+                                                 y: 0)
+            case .topCenter:
+                badgeLabel.frame = setFrameBadge(x: xMidButton - badgeContentInset,
+                                                 y: 0)
+            case .centerLeft:
+                badgeLabel.frame = setFrameBadge(x: xMinButton - badgeContentInset,
+                                                 y: 40)
+            case .centerRight:
+                badgeLabel.frame = setFrameBadge(x: xMaxButton - badgeContentInset,
+                                                 y: 40)
+            case .buttomLeft:
+                badgeLabel.frame = setFrameBadge(x: xMinButton - badgeContentInset,
+                                                 y: 80)
+            case .buttomCenter:
+                badgeLabel.frame = setFrameBadge(x: xMidButton - badgeContentInset,
+                                                 y: 80)
+            case .bottomRight:
+                badgeLabel.frame = setFrameBadge(x: xMaxButton - badgeContentInset,
+                                                 y: 80)
             }
         }
     }
+    
     var badgeTitle: String = "" {
         willSet {
             guard let number = Int(newValue) else {return}
@@ -59,7 +72,6 @@ final class CustomButton: UIView {
         }
     }
 
-    
     @IBOutlet weak var badgeView: UIView!
 
     @IBOutlet weak var button: UIButton!
@@ -73,6 +85,13 @@ final class CustomButton: UIView {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    private func setFrameBadge(x: CGFloat, y: CGFloat) -> CGRect {
+        return CGRect(x: x,
+                      y: y,
+                      width: badgeLabel.intrinsicContentSize.width + 10,
+                      height: 20)
     }
 
 }
