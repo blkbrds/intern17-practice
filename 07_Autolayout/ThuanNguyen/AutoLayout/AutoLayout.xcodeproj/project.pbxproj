@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF19DAD8282DF39C00906905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DAD7282DF39C00906905 /* AppDelegate.swift */; };
+		BF19DADA282DF39C00906905 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DAD9282DF39C00906905 /* SceneDelegate.swift */; };
+		BF19DAE1282DF39F00906905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF19DAE0282DF39F00906905 /* Assets.xcassets */; };
+		BF19DAF0282DF45200906905 /* Home1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DAEC282DF45200906905 /* Home1ViewController.xib */; };
+		BF19DAF1282DF45200906905 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DAED282DF45200906905 /* HomeViewController.xib */; };
+		BF19DAF2282DF45200906905 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DAEE282DF45200906905 /* HomeViewController.swift */; };
+		BF19DAF3282DF45200906905 /* Home1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DAEF282DF45200906905 /* Home1ViewController.swift */; };
+		BF19DB24282DF4EA00906905 /* Ex9ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DAF5282DF4EA00906905 /* Ex9ViewController.xib */; };
+		BF19DB25282DF4EA00906905 /* Ex9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DAF6282DF4EA00906905 /* Ex9ViewController.swift */; };
+		BF19DB26282DF4EA00906905 /* Ex7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DAF8282DF4EA00906905 /* Ex7ViewController.swift */; };
+		BF19DB27282DF4EA00906905 /* Ex7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DAF9282DF4EA00906905 /* Ex7ViewController.xib */; };
+		BF19DB28282DF4EA00906905 /* Ex8ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DAFB282DF4EA00906905 /* Ex8ViewController.xib */; };
+		BF19DB29282DF4EA00906905 /* Ex8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DAFC282DF4EA00906905 /* Ex8ViewController.swift */; };
+		BF19DB2A282DF4EA00906905 /* Ex5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DAFE282DF4EA00906905 /* Ex5ViewController.swift */; };
+		BF19DB2B282DF4EA00906905 /* Ex51ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DAFF282DF4EA00906905 /* Ex51ViewController.swift */; };
+		BF19DB2C282DF4EA00906905 /* Ex53ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB00282DF4EA00906905 /* Ex53ViewController.swift */; };
+		BF19DB2D282DF4EA00906905 /* Ex52ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB01282DF4EA00906905 /* Ex52ViewController.swift */; };
+		BF19DB2E282DF4EA00906905 /* Ex54ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB02282DF4EA00906905 /* Ex54ViewController.swift */; };
+		BF19DB2F282DF4EA00906905 /* Ex52ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB03282DF4EA00906905 /* Ex52ViewController.xib */; };
+		BF19DB30282DF4EA00906905 /* Ex53ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB04282DF4EA00906905 /* Ex53ViewController.xib */; };
+		BF19DB31282DF4EA00906905 /* Ex5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB05282DF4EA00906905 /* Ex5ViewController.xib */; };
+		BF19DB32282DF4EA00906905 /* Ex51ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB06282DF4EA00906905 /* Ex51ViewController.xib */; };
+		BF19DB33282DF4EA00906905 /* Ex54ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB07282DF4EA00906905 /* Ex54ViewController.xib */; };
+		BF19DB34282DF4EA00906905 /* Ex2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB09282DF4EA00906905 /* Ex2ViewController.swift */; };
+		BF19DB35282DF4EA00906905 /* Ex21ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB0A282DF4EA00906905 /* Ex21ViewController.xib */; };
+		BF19DB36282DF4EA00906905 /* Ex2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB0B282DF4EA00906905 /* Ex2ViewController.xib */; };
+		BF19DB37282DF4EA00906905 /* Ex21ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB0C282DF4EA00906905 /* Ex21ViewController.swift */; };
+		BF19DB38282DF4EA00906905 /* Ex3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB0E282DF4EA00906905 /* Ex3ViewController.swift */; };
+		BF19DB39282DF4EA00906905 /* Ex31ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB0F282DF4EA00906905 /* Ex31ViewController.xib */; };
+		BF19DB3A282DF4EA00906905 /* Ex32ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB10282DF4EA00906905 /* Ex32ViewController.swift */; };
+		BF19DB3B282DF4EA00906905 /* Ex31ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB11282DF4EA00906905 /* Ex31ViewController.swift */; };
+		BF19DB3C282DF4EA00906905 /* Ex3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB12282DF4EA00906905 /* Ex3ViewController.xib */; };
+		BF19DB3D282DF4EA00906905 /* Ex32ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB13282DF4EA00906905 /* Ex32ViewController.xib */; };
+		BF19DB3E282DF4EA00906905 /* Ex43ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB15282DF4EA00906905 /* Ex43ViewController.swift */; };
+		BF19DB3F282DF4EA00906905 /* Ex42ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB16282DF4EA00906905 /* Ex42ViewController.swift */; };
+		BF19DB40282DF4EA00906905 /* Ex41ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB17282DF4EA00906905 /* Ex41ViewController.xib */; };
+		BF19DB41282DF4EB00906905 /* Ex41ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB18282DF4EA00906905 /* Ex41ViewController.swift */; };
+		BF19DB42282DF4EB00906905 /* Ex44ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB19282DF4EA00906905 /* Ex44ViewController.xib */; };
+		BF19DB43282DF4EB00906905 /* Ex4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB1A282DF4EA00906905 /* Ex4ViewController.swift */; };
+		BF19DB44282DF4EB00906905 /* Ex44ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB1B282DF4EA00906905 /* Ex44ViewController.swift */; };
+		BF19DB45282DF4EB00906905 /* Ex43ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB1C282DF4EA00906905 /* Ex43ViewController.xib */; };
+		BF19DB46282DF4EB00906905 /* Ex42ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB1D282DF4EA00906905 /* Ex42ViewController.xib */; };
+		BF19DB47282DF4EB00906905 /* Ex4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB1E282DF4EA00906905 /* Ex4ViewController.xib */; };
+		BF19DB48282DF4EB00906905 /* Ex6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB20282DF4EA00906905 /* Ex6ViewController.swift */; };
+		BF19DB49282DF4EB00906905 /* Ex6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB21282DF4EA00906905 /* Ex6ViewController.xib */; };
+		BF19DB4A282DF4EB00906905 /* Ex61ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB22282DF4EA00906905 /* Ex61ViewController.swift */; };
+		BF19DB4B282DF4EB00906905 /* Ex61ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB23282DF4EA00906905 /* Ex61ViewController.xib */; };
+		BF19DB58282DF55100906905 /* Ex10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB4D282DF55000906905 /* Ex10ViewController.swift */; };
+		BF19DB59282DF55100906905 /* Ex10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB4E282DF55000906905 /* Ex10ViewController.xib */; };
+		BF19DB5A282DF55100906905 /* Ex12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB50282DF55100906905 /* Ex12ViewController.swift */; };
+		BF19DB5B282DF55100906905 /* Ex12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB51282DF55100906905 /* Ex12ViewController.xib */; };
+		BF19DB5C282DF55100906905 /* Ex11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB53282DF55100906905 /* Ex11ViewController.swift */; };
+		BF19DB5D282DF55100906905 /* Ex11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB54282DF55100906905 /* Ex11ViewController.xib */; };
+		BF19DB5E282DF55100906905 /* Ex14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19DB56282DF55100906905 /* Ex14ViewController.swift */; };
+		BF19DB5F282DF55100906905 /* Ex14ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF19DB57282DF55100906905 /* Ex14ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BF19DAD4282DF39C00906905 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF19DAD7282DF39C00906905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF19DAD9282DF39C00906905 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BF19DAE0282DF39F00906905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF19DAE5282DF39F00906905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF19DAEC282DF45200906905 /* Home1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home1ViewController.xib; sourceTree = "<group>"; };
+		BF19DAED282DF45200906905 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BF19DAEE282DF45200906905 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BF19DAEF282DF45200906905 /* Home1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewController.swift; sourceTree = "<group>"; };
+		BF19DAF5282DF4EA00906905 /* Ex9ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex9ViewController.xib; sourceTree = "<group>"; };
+		BF19DAF6282DF4EA00906905 /* Ex9ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex9ViewController.swift; sourceTree = "<group>"; };
+		BF19DAF8282DF4EA00906905 /* Ex7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex7ViewController.swift; sourceTree = "<group>"; };
+		BF19DAF9282DF4EA00906905 /* Ex7ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex7ViewController.xib; sourceTree = "<group>"; };
+		BF19DAFB282DF4EA00906905 /* Ex8ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex8ViewController.xib; sourceTree = "<group>"; };
+		BF19DAFC282DF4EA00906905 /* Ex8ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex8ViewController.swift; sourceTree = "<group>"; };
+		BF19DAFE282DF4EA00906905 /* Ex5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex5ViewController.swift; sourceTree = "<group>"; };
+		BF19DAFF282DF4EA00906905 /* Ex51ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex51ViewController.swift; sourceTree = "<group>"; };
+		BF19DB00282DF4EA00906905 /* Ex53ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex53ViewController.swift; sourceTree = "<group>"; };
+		BF19DB01282DF4EA00906905 /* Ex52ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex52ViewController.swift; sourceTree = "<group>"; };
+		BF19DB02282DF4EA00906905 /* Ex54ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex54ViewController.swift; sourceTree = "<group>"; };
+		BF19DB03282DF4EA00906905 /* Ex52ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex52ViewController.xib; sourceTree = "<group>"; };
+		BF19DB04282DF4EA00906905 /* Ex53ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex53ViewController.xib; sourceTree = "<group>"; };
+		BF19DB05282DF4EA00906905 /* Ex5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex5ViewController.xib; sourceTree = "<group>"; };
+		BF19DB06282DF4EA00906905 /* Ex51ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex51ViewController.xib; sourceTree = "<group>"; };
+		BF19DB07282DF4EA00906905 /* Ex54ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex54ViewController.xib; sourceTree = "<group>"; };
+		BF19DB09282DF4EA00906905 /* Ex2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex2ViewController.swift; sourceTree = "<group>"; };
+		BF19DB0A282DF4EA00906905 /* Ex21ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex21ViewController.xib; sourceTree = "<group>"; };
+		BF19DB0B282DF4EA00906905 /* Ex2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex2ViewController.xib; sourceTree = "<group>"; };
+		BF19DB0C282DF4EA00906905 /* Ex21ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex21ViewController.swift; sourceTree = "<group>"; };
+		BF19DB0E282DF4EA00906905 /* Ex3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex3ViewController.swift; sourceTree = "<group>"; };
+		BF19DB0F282DF4EA00906905 /* Ex31ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex31ViewController.xib; sourceTree = "<group>"; };
+		BF19DB10282DF4EA00906905 /* Ex32ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex32ViewController.swift; sourceTree = "<group>"; };
+		BF19DB11282DF4EA00906905 /* Ex31ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex31ViewController.swift; sourceTree = "<group>"; };
+		BF19DB12282DF4EA00906905 /* Ex3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex3ViewController.xib; sourceTree = "<group>"; };
+		BF19DB13282DF4EA00906905 /* Ex32ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex32ViewController.xib; sourceTree = "<group>"; };
+		BF19DB15282DF4EA00906905 /* Ex43ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex43ViewController.swift; sourceTree = "<group>"; };
+		BF19DB16282DF4EA00906905 /* Ex42ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex42ViewController.swift; sourceTree = "<group>"; };
+		BF19DB17282DF4EA00906905 /* Ex41ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex41ViewController.xib; sourceTree = "<group>"; };
+		BF19DB18282DF4EA00906905 /* Ex41ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex41ViewController.swift; sourceTree = "<group>"; };
+		BF19DB19282DF4EA00906905 /* Ex44ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex44ViewController.xib; sourceTree = "<group>"; };
+		BF19DB1A282DF4EA00906905 /* Ex4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex4ViewController.swift; sourceTree = "<group>"; };
+		BF19DB1B282DF4EA00906905 /* Ex44ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex44ViewController.swift; sourceTree = "<group>"; };
+		BF19DB1C282DF4EA00906905 /* Ex43ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex43ViewController.xib; sourceTree = "<group>"; };
+		BF19DB1D282DF4EA00906905 /* Ex42ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex42ViewController.xib; sourceTree = "<group>"; };
+		BF19DB1E282DF4EA00906905 /* Ex4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex4ViewController.xib; sourceTree = "<group>"; };
+		BF19DB20282DF4EA00906905 /* Ex6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex6ViewController.swift; sourceTree = "<group>"; };
+		BF19DB21282DF4EA00906905 /* Ex6ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex6ViewController.xib; sourceTree = "<group>"; };
+		BF19DB22282DF4EA00906905 /* Ex61ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex61ViewController.swift; sourceTree = "<group>"; };
+		BF19DB23282DF4EA00906905 /* Ex61ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex61ViewController.xib; sourceTree = "<group>"; };
+		BF19DB4D282DF55000906905 /* Ex10ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex10ViewController.swift; sourceTree = "<group>"; };
+		BF19DB4E282DF55000906905 /* Ex10ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex10ViewController.xib; sourceTree = "<group>"; };
+		BF19DB50282DF55100906905 /* Ex12ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex12ViewController.swift; sourceTree = "<group>"; };
+		BF19DB51282DF55100906905 /* Ex12ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex12ViewController.xib; sourceTree = "<group>"; };
+		BF19DB53282DF55100906905 /* Ex11ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex11ViewController.swift; sourceTree = "<group>"; };
+		BF19DB54282DF55100906905 /* Ex11ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex11ViewController.xib; sourceTree = "<group>"; };
+		BF19DB56282DF55100906905 /* Ex14ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex14ViewController.swift; sourceTree = "<group>"; };
+		BF19DB57282DF55100906905 /* Ex14ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex14ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF19DAD1282DF39C00906905 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF19DACB282DF39C00906905 = {
+			isa = PBXGroup;
+			children = (
+				BF19DAD6282DF39C00906905 /* AutoLayout */,
+				BF19DAD5282DF39C00906905 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF19DAD5282DF39C00906905 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DAD4282DF39C00906905 /* AutoLayout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF19DAD6282DF39C00906905 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DAD7282DF39C00906905 /* AppDelegate.swift */,
+				BF19DAD9282DF39C00906905 /* SceneDelegate.swift */,
+				BF19DAEB282DF45200906905 /* Exercise1 */,
+				BF19DB08282DF4EA00906905 /* Exercise2 */,
+				BF19DB0D282DF4EA00906905 /* Exercise3 */,
+				BF19DB14282DF4EA00906905 /* Exercise4 */,
+				BF19DAFD282DF4EA00906905 /* Exercise5 */,
+				BF19DB1F282DF4EA00906905 /* Exercise6 */,
+				BF19DAF7282DF4EA00906905 /* Exercise7 */,
+				BF19DAFA282DF4EA00906905 /* Exercise8 */,
+				BF19DAF4282DF4EA00906905 /* Exercise9 */,
+				BF19DB4C282DF55000906905 /* Exercise10 */,
+				BF19DB52282DF55100906905 /* Exercise11 */,
+				BF19DB4F282DF55100906905 /* Exercise12 */,
+				BF19DB55282DF55100906905 /* Exercise14 */,
+				BF19DAE0282DF39F00906905 /* Assets.xcassets */,
+				BF19DAE5282DF39F00906905 /* Info.plist */,
+			);
+			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		BF19DAEB282DF45200906905 /* Exercise1 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DAEC282DF45200906905 /* Home1ViewController.xib */,
+				BF19DAED282DF45200906905 /* HomeViewController.xib */,
+				BF19DAEE282DF45200906905 /* HomeViewController.swift */,
+				BF19DAEF282DF45200906905 /* Home1ViewController.swift */,
+			);
+			path = Exercise1;
+			sourceTree = "<group>";
+		};
+		BF19DAF4282DF4EA00906905 /* Exercise9 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DAF5282DF4EA00906905 /* Ex9ViewController.xib */,
+				BF19DAF6282DF4EA00906905 /* Ex9ViewController.swift */,
+			);
+			path = Exercise9;
+			sourceTree = "<group>";
+		};
+		BF19DAF7282DF4EA00906905 /* Exercise7 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DAF8282DF4EA00906905 /* Ex7ViewController.swift */,
+				BF19DAF9282DF4EA00906905 /* Ex7ViewController.xib */,
+			);
+			path = Exercise7;
+			sourceTree = "<group>";
+		};
+		BF19DAFA282DF4EA00906905 /* Exercise8 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DAFB282DF4EA00906905 /* Ex8ViewController.xib */,
+				BF19DAFC282DF4EA00906905 /* Ex8ViewController.swift */,
+			);
+			path = Exercise8;
+			sourceTree = "<group>";
+		};
+		BF19DAFD282DF4EA00906905 /* Exercise5 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DAFE282DF4EA00906905 /* Ex5ViewController.swift */,
+				BF19DAFF282DF4EA00906905 /* Ex51ViewController.swift */,
+				BF19DB00282DF4EA00906905 /* Ex53ViewController.swift */,
+				BF19DB01282DF4EA00906905 /* Ex52ViewController.swift */,
+				BF19DB02282DF4EA00906905 /* Ex54ViewController.swift */,
+				BF19DB03282DF4EA00906905 /* Ex52ViewController.xib */,
+				BF19DB04282DF4EA00906905 /* Ex53ViewController.xib */,
+				BF19DB05282DF4EA00906905 /* Ex5ViewController.xib */,
+				BF19DB06282DF4EA00906905 /* Ex51ViewController.xib */,
+				BF19DB07282DF4EA00906905 /* Ex54ViewController.xib */,
+			);
+			path = Exercise5;
+			sourceTree = "<group>";
+		};
+		BF19DB08282DF4EA00906905 /* Exercise2 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DB09282DF4EA00906905 /* Ex2ViewController.swift */,
+				BF19DB0A282DF4EA00906905 /* Ex21ViewController.xib */,
+				BF19DB0B282DF4EA00906905 /* Ex2ViewController.xib */,
+				BF19DB0C282DF4EA00906905 /* Ex21ViewController.swift */,
+			);
+			path = Exercise2;
+			sourceTree = "<group>";
+		};
+		BF19DB0D282DF4EA00906905 /* Exercise3 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DB0E282DF4EA00906905 /* Ex3ViewController.swift */,
+				BF19DB0F282DF4EA00906905 /* Ex31ViewController.xib */,
+				BF19DB10282DF4EA00906905 /* Ex32ViewController.swift */,
+				BF19DB11282DF4EA00906905 /* Ex31ViewController.swift */,
+				BF19DB12282DF4EA00906905 /* Ex3ViewController.xib */,
+				BF19DB13282DF4EA00906905 /* Ex32ViewController.xib */,
+			);
+			path = Exercise3;
+			sourceTree = "<group>";
+		};
+		BF19DB14282DF4EA00906905 /* Exercise4 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DB15282DF4EA00906905 /* Ex43ViewController.swift */,
+				BF19DB16282DF4EA00906905 /* Ex42ViewController.swift */,
+				BF19DB17282DF4EA00906905 /* Ex41ViewController.xib */,
+				BF19DB18282DF4EA00906905 /* Ex41ViewController.swift */,
+				BF19DB19282DF4EA00906905 /* Ex44ViewController.xib */,
+				BF19DB1A282DF4EA00906905 /* Ex4ViewController.swift */,
+				BF19DB1B282DF4EA00906905 /* Ex44ViewController.swift */,
+				BF19DB1C282DF4EA00906905 /* Ex43ViewController.xib */,
+				BF19DB1D282DF4EA00906905 /* Ex42ViewController.xib */,
+				BF19DB1E282DF4EA00906905 /* Ex4ViewController.xib */,
+			);
+			path = Exercise4;
+			sourceTree = "<group>";
+		};
+		BF19DB1F282DF4EA00906905 /* Exercise6 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DB20282DF4EA00906905 /* Ex6ViewController.swift */,
+				BF19DB21282DF4EA00906905 /* Ex6ViewController.xib */,
+				BF19DB22282DF4EA00906905 /* Ex61ViewController.swift */,
+				BF19DB23282DF4EA00906905 /* Ex61ViewController.xib */,
+			);
+			path = Exercise6;
+			sourceTree = "<group>";
+		};
+		BF19DB4C282DF55000906905 /* Exercise10 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DB4D282DF55000906905 /* Ex10ViewController.swift */,
+				BF19DB4E282DF55000906905 /* Ex10ViewController.xib */,
+			);
+			path = Exercise10;
+			sourceTree = "<group>";
+		};
+		BF19DB4F282DF55100906905 /* Exercise12 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DB50282DF55100906905 /* Ex12ViewController.swift */,
+				BF19DB51282DF55100906905 /* Ex12ViewController.xib */,
+			);
+			path = Exercise12;
+			sourceTree = "<group>";
+		};
+		BF19DB52282DF55100906905 /* Exercise11 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DB53282DF55100906905 /* Ex11ViewController.swift */,
+				BF19DB54282DF55100906905 /* Ex11ViewController.xib */,
+			);
+			path = Exercise11;
+			sourceTree = "<group>";
+		};
+		BF19DB55282DF55100906905 /* Exercise14 */ = {
+			isa = PBXGroup;
+			children = (
+				BF19DB56282DF55100906905 /* Ex14ViewController.swift */,
+				BF19DB57282DF55100906905 /* Ex14ViewController.xib */,
+			);
+			path = Exercise14;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF19DAD3282DF39C00906905 /* AutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF19DAE8282DF39F00906905 /* Build configuration list for PBXNativeTarget "AutoLayout" */;
+			buildPhases = (
+				BF19DAD0282DF39C00906905 /* Sources */,
+				BF19DAD1282DF39C00906905 /* Frameworks */,
+				BF19DAD2282DF39C00906905 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoLayout;
+			productName = AutoLayout;
+			productReference = BF19DAD4282DF39C00906905 /* AutoLayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF19DACC282DF39C00906905 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					BF19DAD3282DF39C00906905 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BF19DACF282DF39C00906905 /* Build configuration list for PBXProject "AutoLayout" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF19DACB282DF39C00906905;
+			productRefGroup = BF19DAD5282DF39C00906905 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF19DAD3282DF39C00906905 /* AutoLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF19DAD2282DF39C00906905 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF19DB28282DF4EA00906905 /* Ex8ViewController.xib in Resources */,
+				BF19DB39282DF4EA00906905 /* Ex31ViewController.xib in Resources */,
+				BF19DB31282DF4EA00906905 /* Ex5ViewController.xib in Resources */,
+				BF19DB35282DF4EA00906905 /* Ex21ViewController.xib in Resources */,
+				BF19DB59282DF55100906905 /* Ex10ViewController.xib in Resources */,
+				BF19DB5D282DF55100906905 /* Ex11ViewController.xib in Resources */,
+				BF19DB3C282DF4EA00906905 /* Ex3ViewController.xib in Resources */,
+				BF19DB47282DF4EB00906905 /* Ex4ViewController.xib in Resources */,
+				BF19DB4B282DF4EB00906905 /* Ex61ViewController.xib in Resources */,
+				BF19DB33282DF4EA00906905 /* Ex54ViewController.xib in Resources */,
+				BF19DB5F282DF55100906905 /* Ex14ViewController.xib in Resources */,
+				BF19DB40282DF4EA00906905 /* Ex41ViewController.xib in Resources */,
+				BF19DB45282DF4EB00906905 /* Ex43ViewController.xib in Resources */,
+				BF19DB27282DF4EA00906905 /* Ex7ViewController.xib in Resources */,
+				BF19DB32282DF4EA00906905 /* Ex51ViewController.xib in Resources */,
+				BF19DB3D282DF4EA00906905 /* Ex32ViewController.xib in Resources */,
+				BF19DAE1282DF39F00906905 /* Assets.xcassets in Resources */,
+				BF19DB5B282DF55100906905 /* Ex12ViewController.xib in Resources */,
+				BF19DB42282DF4EB00906905 /* Ex44ViewController.xib in Resources */,
+				BF19DB30282DF4EA00906905 /* Ex53ViewController.xib in Resources */,
+				BF19DAF0282DF45200906905 /* Home1ViewController.xib in Resources */,
+				BF19DB49282DF4EB00906905 /* Ex6ViewController.xib in Resources */,
+				BF19DB2F282DF4EA00906905 /* Ex52ViewController.xib in Resources */,
+				BF19DAF1282DF45200906905 /* HomeViewController.xib in Resources */,
+				BF19DB46282DF4EB00906905 /* Ex42ViewController.xib in Resources */,
+				BF19DB36282DF4EA00906905 /* Ex2ViewController.xib in Resources */,
+				BF19DB24282DF4EA00906905 /* Ex9ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF19DAD0282DF39C00906905 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF19DB48282DF4EB00906905 /* Ex6ViewController.swift in Sources */,
+				BF19DAD8282DF39C00906905 /* AppDelegate.swift in Sources */,
+				BF19DAF3282DF45200906905 /* Home1ViewController.swift in Sources */,
+				BF19DB37282DF4EA00906905 /* Ex21ViewController.swift in Sources */,
+				BF19DB34282DF4EA00906905 /* Ex2ViewController.swift in Sources */,
+				BF19DB3A282DF4EA00906905 /* Ex32ViewController.swift in Sources */,
+				BF19DB43282DF4EB00906905 /* Ex4ViewController.swift in Sources */,
+				BF19DB25282DF4EA00906905 /* Ex9ViewController.swift in Sources */,
+				BF19DB5E282DF55100906905 /* Ex14ViewController.swift in Sources */,
+				BF19DB2B282DF4EA00906905 /* Ex51ViewController.swift in Sources */,
+				BF19DB3B282DF4EA00906905 /* Ex31ViewController.swift in Sources */,
+				BF19DB41282DF4EB00906905 /* Ex41ViewController.swift in Sources */,
+				BF19DB2A282DF4EA00906905 /* Ex5ViewController.swift in Sources */,
+				BF19DB5A282DF55100906905 /* Ex12ViewController.swift in Sources */,
+				BF19DADA282DF39C00906905 /* SceneDelegate.swift in Sources */,
+				BF19DB3E282DF4EA00906905 /* Ex43ViewController.swift in Sources */,
+				BF19DB4A282DF4EB00906905 /* Ex61ViewController.swift in Sources */,
+				BF19DAF2282DF45200906905 /* HomeViewController.swift in Sources */,
+				BF19DB3F282DF4EA00906905 /* Ex42ViewController.swift in Sources */,
+				BF19DB38282DF4EA00906905 /* Ex3ViewController.swift in Sources */,
+				BF19DB5C282DF55100906905 /* Ex11ViewController.swift in Sources */,
+				BF19DB26282DF4EA00906905 /* Ex7ViewController.swift in Sources */,
+				BF19DB2E282DF4EA00906905 /* Ex54ViewController.swift in Sources */,
+				BF19DB29282DF4EA00906905 /* Ex8ViewController.swift in Sources */,
+				BF19DB2D282DF4EA00906905 /* Ex52ViewController.swift in Sources */,
+				BF19DB2C282DF4EA00906905 /* Ex53ViewController.swift in Sources */,
+				BF19DB58282DF55100906905 /* Ex10ViewController.swift in Sources */,
+				BF19DB44282DF4EB00906905 /* Ex44ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BF19DAE6282DF39F00906905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF19DAE7282DF39F00906905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF19DAE9282DF39F00906905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutoLayout/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Thuan.AutoLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF19DAEA282DF39F00906905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutoLayout/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Thuan.AutoLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF19DACF282DF39C00906905 /* Build configuration list for PBXProject "AutoLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF19DAE6282DF39F00906905 /* Debug */,
+				BF19DAE7282DF39F00906905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF19DAE8282DF39F00906905 /* Build configuration list for PBXNativeTarget "AutoLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF19DAE9282DF39F00906905 /* Debug */,
+				BF19DAEA282DF39F00906905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF19DACC282DF39C00906905 /* Project object */;
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Ex42ViewController" customModule="AutoLayout" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvC-wy-RiH" userLabel="BlueView">
+                    <rect key="frame" x="50" y="398" width="100" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4CS-sB-mUO" userLabel="YellView">
+                    <rect key="frame" x="264" y="398" width="100" height="100"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEB-ez-5He" userLabel="RedView">
+                    <rect key="frame" x="157" y="398" width="100" height="100"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="bb8-8g-7mG"/>
+                        <constraint firstAttribute="width" secondItem="SEB-ez-5He" secondAttribute="height" multiplier="1:1" id="qnc-hv-QMs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="DvC-wy-RiH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="4oH-rd-gPb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4CS-sB-mUO" secondAttribute="trailing" constant="50" id="6DK-xB-6dv"/>
+                <constraint firstItem="SEB-ez-5He" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Gyr-f4-IhR"/>
+                <constraint firstItem="DvC-wy-RiH" firstAttribute="height" secondItem="SEB-ez-5He" secondAttribute="height" id="Kh5-nU-ldV"/>
+                <constraint firstItem="4CS-sB-mUO" firstAttribute="width" secondItem="SEB-ez-5He" secondAttribute="width" id="SkR-7w-KJ3"/>
+                <constraint firstItem="DvC-wy-RiH" firstAttribute="centerY" secondItem="SEB-ez-5He" secondAttribute="centerY" id="asS-fz-kU5"/>
+                <constraint firstItem="DvC-wy-RiH" firstAttribute="width" secondItem="SEB-ez-5He" secondAttribute="width" id="ash-We-fpd"/>
+                <constraint firstItem="4CS-sB-mUO" firstAttribute="centerY" secondItem="SEB-ez-5He" secondAttribute="centerY" id="cxN-ZY-VyY"/>
+                <constraint firstItem="4CS-sB-mUO" firstAttribute="height" secondItem="SEB-ez-5He" secondAttribute="height" id="i4a-DO-EcD"/>
+                <constraint firstItem="SEB-ez-5He" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="j82-xF-Zv1"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
