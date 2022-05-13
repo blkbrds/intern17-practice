@@ -67,3 +67,9 @@ enum BadgePosition {
     case BottomRight
 }
 
+extension BT2ViewController {
+    var a : Int {
+        return 1
+    }
+}
+

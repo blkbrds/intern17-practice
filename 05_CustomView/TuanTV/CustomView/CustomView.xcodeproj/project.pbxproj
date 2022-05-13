@@ -15,10 +15,14 @@
 		8944A28728251FEA0070BC2D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8944A28528251FEA0070BC2D /* HomeViewController.xib */; };
 		8944A28A2825207B0070BC2D /* MyAvatar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8944A2892825207B0070BC2D /* MyAvatar.xib */; };
 		8944A28D282520940070BC2D /* MyAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944A28C282520940070BC2D /* MyAvatar.swift */; };
+		89542ACD282CC03F00890D1B /* BT4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89542ACB282CC03F00890D1B /* BT4ViewController.swift */; };
+		89542ACE282CC03F00890D1B /* BT4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89542ACC282CC03F00890D1B /* BT4ViewController.xib */; };
+		89542AD4282CC09500890D1B /* CustomDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89542AD3282CC09500890D1B /* CustomDatePickerView.swift */; };
 		8955AF04282A4668000B6AAD /* BT3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955AF02282A4668000B6AAD /* BT3ViewController.swift */; };
 		8955AF05282A4668000B6AAD /* BT3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8955AF03282A4668000B6AAD /* BT3ViewController.xib */; };
 		8955AF08282A513C000B6AAD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955AF07282A513C000B6AAD /* CustomButton.swift */; };
 		8955AF0B282A523B000B6AAD /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8955AF0A282A523B000B6AAD /* CustomButton.xib */; };
+		89A3A9EB282CEB0500BD5E08 /* CustomDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A3A9EA282CEB0500BD5E08 /* CustomDatePickerView.xib */; };
 		89BF89A72828A60C001F2884 /* BT2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BF89A52828A60C001F2884 /* BT2ViewController.swift */; };
 		89BF89A82828A60C001F2884 /* BT2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89BF89A62828A60C001F2884 /* BT2ViewController.xib */; };
 		89BF89AB2828A677001F2884 /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BF89AA2828A677001F2884 /* MySliderView.swift */; };
@@ -36,10 +40,14 @@
 		8944A28528251FEA0070BC2D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		8944A2892825207B0070BC2D /* MyAvatar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAvatar.xib; sourceTree = "<group>"; };
 		8944A28C282520940070BC2D /* MyAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvatar.swift; sourceTree = "<group>"; };
+		89542ACB282CC03F00890D1B /* BT4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT4ViewController.swift; sourceTree = "<group>"; };
+		89542ACC282CC03F00890D1B /* BT4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT4ViewController.xib; sourceTree = "<group>"; };
+		89542AD3282CC09500890D1B /* CustomDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePickerView.swift; sourceTree = "<group>"; };
 		8955AF02282A4668000B6AAD /* BT3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT3ViewController.swift; sourceTree = "<group>"; };
 		8955AF03282A4668000B6AAD /* BT3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT3ViewController.xib; sourceTree = "<group>"; };
 		8955AF07282A513C000B6AAD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		8955AF0A282A523B000B6AAD /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
+		89A3A9EA282CEB0500BD5E08 /* CustomDatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePickerView.xib; sourceTree = "<group>"; };
 		89BF89A52828A60C001F2884 /* BT2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT2ViewController.swift; sourceTree = "<group>"; };
 		89BF89A62828A60C001F2884 /* BT2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT2ViewController.xib; sourceTree = "<group>"; };
 		89BF89AA2828A677001F2884 /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
@@ -76,6 +84,7 @@
 		89079F242822677B00796EDA /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				89542ACA282CC02100890D1B /* BT4 */,
 				8955AF01282A4647000B6AAD /* BT3 */,
 				89BF89A42828A5DC001F2884 /* BT2 */,
 				89079F592823D09200796EDA /* BT1 */,
@@ -105,6 +114,17 @@
 				8944A28C282520940070BC2D /* MyAvatar.swift */,
 			);
 			path = BT1;
+			sourceTree = "<group>";
+		};
+		89542ACA282CC02100890D1B /* BT4 */ = {
+			isa = PBXGroup;
+			children = (
+				89542ACB282CC03F00890D1B /* BT4ViewController.swift */,
+				89542ACC282CC03F00890D1B /* BT4ViewController.xib */,
+				89542AD3282CC09500890D1B /* CustomDatePickerView.swift */,
+				89A3A9EA282CEB0500BD5E08 /* CustomDatePickerView.xib */,
+			);
+			path = BT4;
 			sourceTree = "<group>";
 		};
 		8955AF01282A4647000B6AAD /* BT3 */ = {
@@ -189,9 +209,11 @@
 				8955AF0B282A523B000B6AAD /* CustomButton.xib in Resources */,
 				89079F322822677F00796EDA /* LaunchScreen.storyboard in Resources */,
 				8955AF05282A4668000B6AAD /* BT3ViewController.xib in Resources */,
+				89A3A9EB282CEB0500BD5E08 /* CustomDatePickerView.xib in Resources */,
 				89079F2F2822677F00796EDA /* Assets.xcassets in Resources */,
 				8944A28A2825207B0070BC2D /* MyAvatar.xib in Resources */,
 				8944A28728251FEA0070BC2D /* HomeViewController.xib in Resources */,
+				89542ACE282CC03F00890D1B /* BT4ViewController.xib in Resources */,
 				89BF89A82828A60C001F2884 /* BT2ViewController.xib in Resources */,
 				89BF89AE2828A687001F2884 /* MySliderView.xib in Resources */,
 			);
@@ -211,7 +233,9 @@
 				8955AF08282A513C000B6AAD /* CustomButton.swift in Sources */,
 				8955AF04282A4668000B6AAD /* BT3ViewController.swift in Sources */,
 				8944A28D282520940070BC2D /* MyAvatar.swift in Sources */,
+				89542AD4282CC09500890D1B /* CustomDatePickerView.swift in Sources */,
 				8944A28628251FEA0070BC2D /* HomeViewController.swift in Sources */,
+				89542ACD282CC03F00890D1B /* BT4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
