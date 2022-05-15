@@ -44,8 +44,8 @@ final class SelectCalculatorView: UIView {
     
     @IBAction private func doneButtonTouchupInside(_ sender: Any) {
         self.isHidden = true
-        guard let result = result, let delegate = delegate else { return }
-        delegate.view(self, needsPerform: .getResult(resultValue: String(result)))
+        guard let result = result else { return }
+        delegate?.view(self, needsPerform: .getResult(resultValue: String(result)))
     }
     
     @IBAction private func handleCalculatorButton(_ sender: UIButton) {
@@ -77,9 +77,8 @@ final class SelectCalculatorView: UIView {
     @IBAction private func clearButtonTouchUpInside(_ sender: Any) {
         xValueLabel.text = ""
         yValueLabel.text = ""
-        guard let delegate = delegate else { return }
         self.isHidden = true
-        delegate.view(self, needsPerform: .clearResult(clearValue: ""))
+        delegate?.view(self, needsPerform: .clearResult(clearValue: ""))
     }
 }
 

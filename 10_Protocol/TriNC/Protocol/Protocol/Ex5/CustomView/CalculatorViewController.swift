@@ -26,7 +26,7 @@ final class CalculatorViewController: UIViewController {
     // MARK: - Private Functions
     private func setupUI() {
         guard let newCalculator = Bundle.main.loadNibNamed("SelectCalculatorView", owner: self, options: nil)?.first as? SelectCalculatorView else { return }
-        newCalculator.frame = CGRect(x: 0, y: 350, width: UIScreen.main.bounds.width, height: 350)
+        newCalculator.frame = CGRect(x: 0, y: 350, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 350)
         newCalculator.configView()
         newCalculator.delegate = self
         newCalculator.datasource = self
@@ -38,7 +38,6 @@ final class CalculatorViewController: UIViewController {
         calculatorAction.isHidden = false
         UIView.animate(withDuration: 1.0, animations: {
             self.setupUI()
-            self.calculatorAction.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 350, width: UIScreen.main.bounds.width, height: 350)
         })
     }
 }
