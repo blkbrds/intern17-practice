@@ -1,17 +1,46 @@
 import UIKit
+import GoogleSignIn
+import FirebaseCore
 
 @available(iOS 13.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    enum Check {
+           case tabbar
+           case login
+    }
+
+    static var shared: AppDelegate {
+        guard let scene = UIApplication.shared.connectedScenes.first?.delegate as? AppDelegate else {
+            fatalError("Errol")
+        }
+        return scene
+    }
+
     var window: UIWindow?
     let tabbarController = UITabBarController()
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        var handled: Bool
+        handled = GIDSignIn.sharedInstance.handle(url)
+        if handled {
+            return true
+        }
+        return false
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            if error != nil || user == nil {
+                // Show the app's signed-out state.
+            } else {
+                // Show the app's signed-in state.
+            }
+        }
         window = UIWindow(frame: UIScreen.main.bounds)
-        setTabbar()
-        window?.rootViewController = tabbarController
+        setroot(with: .login)
         window?.makeKeyAndVisible()
+        FirebaseApp.configure()
         return true
     }
 
@@ -33,4 +62,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().barTintColor = UIColor.white
     }
 
+    func setroot(with set: Check) {
+          switch set {
+          case .tabbar:
+              setTabbar()
+              window?.rootViewController = tabbarController
+          case .login:
+              let vc = LoginViewController()
+              let navi = UINavigationController(rootViewController: vc)
+              window?.rootViewController = navi
+          }
+      }
 }
