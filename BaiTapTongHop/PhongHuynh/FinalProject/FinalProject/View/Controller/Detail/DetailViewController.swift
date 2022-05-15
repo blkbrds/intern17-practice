@@ -17,7 +17,7 @@ final class DetailViewController: UIViewController {
 
     // MARK: - Properties
     var viewModel: DetailViewModel = DetailViewModel()
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,6 @@ final class DetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
 }
 
 // MARK: - UITableViewDataSource
