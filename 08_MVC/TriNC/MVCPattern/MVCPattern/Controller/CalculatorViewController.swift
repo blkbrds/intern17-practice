@@ -82,12 +82,12 @@ final class CalculatorViewController: UIViewController {
     }
     
     // MARK: - Private Function
-    private func getResultAsString(result: Double?) -> String{
+    private func getResultAsString(result: Double?) -> String {
         if let result = result {
-            if result.rounded(.up) == result.rounded(.down){
+            if result.rounded(.up) == result.rounded(.down) {
                 // number is integer
                 return String(Int(result))
-            }else{
+            } else {
                 // number is not integer
                 return String(result)
             }

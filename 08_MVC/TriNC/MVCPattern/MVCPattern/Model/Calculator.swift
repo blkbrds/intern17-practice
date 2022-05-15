@@ -8,6 +8,7 @@
 import Foundation
 
 struct Enumerations {
+    
     // MARK: - Define
     enum Operations: Int {
         case add = 0
@@ -57,8 +58,8 @@ final class Calculator {
     // MARK: - Private Function
     private func calculate(firstNumber: Double, secondNumber: Double, operation: Int) -> Double {
         var total = 0.0
-        if let oprations = Enumerations.Operations(rawValue: operation) {
-            switch oprations {
+        if let operations = Enumerations.Operations(rawValue: operation) {
+            switch operations {
             case .add:
                 total = firstNumber + secondNumber
             case .subtract:
