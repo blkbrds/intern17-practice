@@ -25,12 +25,14 @@ final class CalculatorViewController: UIViewController {
     // MARK: - Actions
     @IBAction private func numbersButtonTouchUpInside(_ sender: UIButton) {
         isValidPress = true
+        
         if clearDisPlay == true {
             resultCalculatorLabel.text = ""
             clearDisPlay = false
         }
-        resultCalculatorLabel.text! += sender.titleLabel!.text!
-        calculator.currentNumber = Double(resultCalculatorLabel.text!)!
+        
+        resultCalculatorLabel.text! += sender.titleLabel?.text ?? ""
+        calculator.currentNumber = Double(resultCalculatorLabel.text ?? "") ?? 0.0
     }
     
     @IBAction private func plusMinusButtonTouchUpInside(_ sender: Any) {
@@ -58,6 +60,7 @@ final class CalculatorViewController: UIViewController {
     
     @IBAction private func operatorButtonTouchUpInside(_ sender: UIButton) {
         clearDisPlay = true
+        
         if isValidPress {
             if calculator.calculationArray.count == 1 {
                 calculator.calculationArray.append(Double(sender.tag))
@@ -66,15 +69,19 @@ final class CalculatorViewController: UIViewController {
                 calculator.calculationArray.append(Double(sender.tag))
             }
         }
+        
         calculator.lastOperation = Double(sender.tag)
+        
         if let result = calculator.calculateValue(opertation: "operation") {
             resultCalculatorLabel.text = getResultAsString(result: result)
         }
+        
         isValidPress = false
     }
     
     @IBAction private func equalButtonTouchUpInside(_ sender: Any) {
         isValidPress = true
+        
         calculator.lastNumber = calculator.currentNumber
         if let result = calculator.calculateValue(opertation: "equals") {
             resultCalculatorLabel.text = getResultAsString(result: result)

@@ -14,6 +14,7 @@
 		22CB903E282DEAB1001D6C21 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CB903C282DEAB1001D6C21 /* CalculatorViewController.swift */; };
 		22CB903F282DEAB1001D6C21 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22CB903D282DEAB1001D6C21 /* CalculatorViewController.xib */; };
 		22CB9044282DFDE2001D6C21 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CB9043282DFDE2001D6C21 /* Calculator.swift */; };
+		22D2376D283288BE0047DA7A /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2376C283288BE0047DA7A /* Operator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		22CB903C282DEAB1001D6C21 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		22CB903D282DEAB1001D6C21 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		22CB9043282DFDE2001D6C21 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		22D2376C283288BE0047DA7A /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				22CB9043282DFDE2001D6C21 /* Calculator.swift */,
+				22D2376C283288BE0047DA7A /* Operator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				22CB9022282D3310001D6C21 /* AppDelegate.swift in Sources */,
 				22CB9044282DFDE2001D6C21 /* Calculator.swift in Sources */,
+				22D2376D283288BE0047DA7A /* Operator.swift in Sources */,
 				22CB903E282DEAB1001D6C21 /* CalculatorViewController.swift in Sources */,
 				22CB9024282D3310001D6C21 /* SceneDelegate.swift in Sources */,
 			);
