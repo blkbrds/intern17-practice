@@ -23,7 +23,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.makeKeyAndVisible()
-        changeScreen(type: .tabbar)
+        changeScreen(type: .login)
     }
     
     // MARK: - Public Function
@@ -70,7 +70,9 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabbarController.tabBar.tintColor = .brown
         tabbarController.tabBar.barTintColor = .purple
         tabbarController.tabBar.backgroundColor = .purple
-        window!.rootViewController = tabbarController
+        if let window = window {
+            window.rootViewController = tabbarController
+        }
     }
     
     private func createLogin() {

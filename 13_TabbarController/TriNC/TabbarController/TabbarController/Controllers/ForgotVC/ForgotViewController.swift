@@ -16,6 +16,7 @@ final class ForgotViewController: BaseViewController {
     
     // MARK: - UI
     override func setupUI() {
+        // title
         title = "Forgot"
     }
 }
