@@ -3,6 +3,11 @@ platform :ios, '9.0'
 target 'FinalProject' do
   use_frameworks!
 
+  pod "FirebaseAuth"
+  pod "GoogleSignIn"
+  pod "AppAuth"
+  pod "GTMAppAuth"
+  
   # Architect
   pod 'MVVM-Swift', '1.1.0' # MVVM Architect for iOS Application.
 

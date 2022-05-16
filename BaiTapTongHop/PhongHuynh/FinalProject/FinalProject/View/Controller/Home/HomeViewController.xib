@@ -21,22 +21,49 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="al3-Y4-5rz">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="85" width="414" height="777"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-yw-qAB">
+                    <rect key="frame" x="0.0" y="30" width="414" height="54"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBu-Bb-sd9">
+                            <rect key="frame" x="364" y="12" width="30" height="30"/>
+                            <state key="normal" image="icons8-person-30"/>
+                        </button>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jxE-WG-EWk">
+                            <rect key="frame" x="20" y="0.0" width="334" height="54"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="gBu-Bb-sd9" firstAttribute="centerY" secondItem="Rca-yw-qAB" secondAttribute="centerY" id="Hlq-gI-uNU"/>
+                        <constraint firstItem="jxE-WG-EWk" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="top" id="Mnd-Rp-qmP"/>
+                        <constraint firstItem="jxE-WG-EWk" firstAttribute="leading" secondItem="Rca-yw-qAB" secondAttribute="leading" constant="20" id="QcO-KE-HZm"/>
+                        <constraint firstItem="gBu-Bb-sd9" firstAttribute="leading" secondItem="jxE-WG-EWk" secondAttribute="trailing" constant="10" id="XLK-MF-7Qm"/>
+                        <constraint firstAttribute="bottom" secondItem="jxE-WG-EWk" secondAttribute="bottom" id="Y00-hr-9lF"/>
+                        <constraint firstAttribute="trailing" secondItem="gBu-Bb-sd9" secondAttribute="trailing" constant="20" id="lmQ-jC-PXC"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="al3-Y4-5rz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b5b-2p-zVr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="al3-Y4-5rz" secondAttribute="bottom" id="c5W-lV-9u8"/>
-                <constraint firstItem="al3-Y4-5rz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kJI-I9-9ib"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="al3-Y4-5rz" secondAttribute="trailing" id="lTf-Cn-YYT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rca-yw-qAB" secondAttribute="trailing" id="KJp-IQ-XKA"/>
+                <constraint firstItem="al3-Y4-5rz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QTq-wy-Df0"/>
+                <constraint firstItem="al3-Y4-5rz" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="bottom" constant="1" id="ZWT-cv-tUd"/>
+                <constraint firstItem="al3-Y4-5rz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="bhl-k3-e97"/>
+                <constraint firstItem="Rca-yw-qAB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eZ2-YO-1gf"/>
+                <constraint firstItem="Rca-yw-qAB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="jgl-XT-nq5"/>
+                <constraint firstItem="al3-Y4-5rz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="kYU-0G-nNS"/>
+                <constraint firstItem="Rca-yw-qAB" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="oLt-08-nsY"/>
             </constraints>
-            <point key="canvasLocation" x="142" y="131"/>
+            <point key="canvasLocation" x="-281.15942028985512" y="6.6964285714285712"/>
         </view>
     </objects>
     <resources>
+        <image name="icons8-person-30" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
