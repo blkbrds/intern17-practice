@@ -27,9 +27,8 @@ final class ProfileViewController: BaseViewController {
     // MARK: - IBAction
     @IBAction private func loginButtonTouchUpInside(_ sender: Any) {
         // change root
-        let scene = UIApplication.shared.connectedScenes.first
-        if let sd: SceneDelegate = (scene?.delegate as? SceneDelegate) {
-            sd.changeScreen(type: .login)
+        if let sceneDelegate: SceneDelegate = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate) {
+            sceneDelegate.changeScreen(type: .login)
         }
     }
 }

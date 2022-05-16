@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		226A697E2832095800343C0E /* BaseTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226A697D2832095800343C0E /* BaseTabbarViewController.swift */; };
 		2280331E2828A600001FD7E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2280331D2828A600001FD7E1 /* AppDelegate.swift */; };
 		228033202828A600001FD7E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2280331F2828A600001FD7E1 /* SceneDelegate.swift */; };
 		228033272828A601001FD7E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228033262828A601001FD7E1 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		226A697D2832095800343C0E /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarViewController.swift; sourceTree = "<group>"; };
 		2280331A2828A600001FD7E1 /* TabbarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2280331D2828A600001FD7E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2280331F2828A600001FD7E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				2280334E2828AC91001FD7E1 /* BaseNavigationViewController.swift */,
 				228033502828BB0E001FD7E1 /* BaseViewController.swift */,
+				226A697D2832095800343C0E /* BaseTabbarViewController.swift */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				2280334B2828ABE8001FD7E1 /* LoginViewController.swift in Sources */,
 				2280335A2828BD70001FD7E1 /* RegisterViewController.swift in Sources */,
 				228033462828A738001FD7E1 /* ProfileViewController.swift in Sources */,
+				226A697E2832095800343C0E /* BaseTabbarViewController.swift in Sources */,
 				2280331E2828A600001FD7E1 /* AppDelegate.swift in Sources */,
 				228033562828BD50001FD7E1 /* ForgotViewController.swift in Sources */,
 				2280334F2828AC91001FD7E1 /* BaseNavigationViewController.swift in Sources */,

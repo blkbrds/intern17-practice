@@ -28,9 +28,8 @@ final class LoginViewController: BaseViewController {
     
     // MARK: - IBACtions
     @IBAction private func loginButtonTouchUpInside(_ sender: Any) {
-        let scene = UIApplication.shared.connectedScenes.first
-        if let sd: SceneDelegate = (scene?.delegate as? SceneDelegate) {
-            sd.changeScreen(type: .tabbar)
+        if let sceneDelegate: SceneDelegate = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate) {
+            sceneDelegate.changeScreen(type: .tabbar)
         }
     }
     
