@@ -10,6 +10,8 @@ final class MVCViewController: UIViewController {
     var previousNumber: Double = 0
     var performingMath = false
     var operation = 0
+    var result: Double = 0
+    let caculator = Calculator()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -47,21 +49,20 @@ final class MVCViewController: UIViewController {
             operation = sender.tag
             performingMath = true
         } else if sender.tag == 16 {
-            
             if operation == 12 {
-                label.text = String(previousNumber + numberOnScreen)
-            }
-            
-            else if operation == 13 {
-                label.text = String(previousNumber - numberOnScreen)
+                result = caculator.add(a: numberOnScreen, b: previousNumber)
+                label.text = "\(result)"
+            } else if operation == 13 {
+                result = caculator.sub(a: previousNumber, b: numberOnScreen)
+                label.text = "\(result)"
             } else if operation == 14 {
-                label.text = String(previousNumber * numberOnScreen)
+                result = caculator.mul(a: numberOnScreen, b: previousNumber)
+                label.text = "\(result)"
+            } else if operation == 15 {
+                result = caculator.div(a: numberOnScreen, b: previousNumber)
+                label.text = "\(result)"
             }
-            else if operation == 15 {
-                label.text = String(previousNumber / numberOnScreen)
-            }
-        }
-        else if sender.tag == 11 {
+        } else if sender.tag == 11 {
             label.text = ""
             previousNumber = 0
             numberOnScreen = 0
