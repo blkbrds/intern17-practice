@@ -15,6 +15,7 @@
 		22045CFC282F57D9009A82FC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22045CFA282F57D9009A82FC /* HomeViewController.xib */; };
 		22045CFF282F586E009A82FC /* Ex1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22045CFD282F586E009A82FC /* Ex1ViewController.swift */; };
 		22045D00282F586E009A82FC /* Ex1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22045CFE282F586E009A82FC /* Ex1ViewController.xib */; };
+		226A6988283253A900343C0E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226A6987283253A900343C0E /* Data.swift */; };
 		22A5D56D2831E5970048D6E8 /* Ex2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A5D56B2831E5970048D6E8 /* Ex2ViewController.swift */; };
 		22A5D56E2831E5970048D6E8 /* Ex2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A5D56C2831E5970048D6E8 /* Ex2ViewController.xib */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		22045CFA282F57D9009A82FC /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		22045CFD282F586E009A82FC /* Ex1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex1ViewController.swift; sourceTree = "<group>"; };
 		22045CFE282F586E009A82FC /* Ex1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex1ViewController.xib; sourceTree = "<group>"; };
+		226A6987283253A900343C0E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		22A5D56B2831E5970048D6E8 /* Ex2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2ViewController.swift; sourceTree = "<group>"; };
 		22A5D56C2831E5970048D6E8 /* Ex2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex2ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 		22045CF5282F5774009A82FC /* Ex1 */ = {
 			isa = PBXGroup;
 			children = (
+				226A69842832538D00343C0E /* Model */,
 				22045CFD282F586E009A82FC /* Ex1ViewController.swift */,
 				22045CFE282F586E009A82FC /* Ex1ViewController.xib */,
 			);
@@ -141,6 +144,14 @@
 			children = (
 			);
 			path = Ext;
+			sourceTree = "<group>";
+		};
+		226A69842832538D00343C0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				226A6987283253A900343C0E /* Data.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A5D56D2831E5970048D6E8 /* Ex2ViewController.swift in Sources */,
+				226A6988283253A900343C0E /* Data.swift in Sources */,
 				22045CE2282F5755009A82FC /* AppDelegate.swift in Sources */,
 				22045CE4282F5755009A82FC /* SceneDelegate.swift in Sources */,
 				22045CFB282F57D9009A82FC /* HomeViewController.swift in Sources */,

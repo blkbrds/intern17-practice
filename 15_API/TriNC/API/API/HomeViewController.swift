@@ -8,28 +8,8 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-
-    // MARK: - Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-    }
-}
-
-// MARK: - Private Functions
-extension HomeViewController {
     
-    private func setupUI() {
-        selectExercise(with: .ex1)
-    }
-    
-    private func selectExercise(with type: ExerciseType) {
-        navigationController?.pushViewController(type.viewController, animated: true)
-    }
-}
-
-// MARK: - Enums
-extension HomeViewController {
+    // MARK: - Enum
     enum ExerciseType {
         case ex1, ex2
         
@@ -42,4 +22,20 @@ extension HomeViewController {
             }
         }
     }
+
+    // MARK: - Life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
+    // MARK: - Private Functions
+    private func setupUI() {
+        selectExercise(with: .ex1)
+    }
+    
+    private func selectExercise(with type: ExerciseType) {
+        navigationController?.pushViewController(type.viewController, animated: true)
+    }
+
 }

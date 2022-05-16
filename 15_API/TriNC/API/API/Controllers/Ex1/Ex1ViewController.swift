@@ -7,26 +7,8 @@
 
 import UIKit
 
-// MARK: - Model
-struct DataModel: Codable {
-    var feed: FeedModel?
-}
-
-struct FeedModel: Codable {
-    var author: AuthorModel?
-}
-
-struct AuthorModel: Codable {
-    var name: LabelModel?
-    var uri: LabelModel?
-}
-
-struct LabelModel: Codable {
-    var label: String?
-}
-
 final class Ex1ViewController: UIViewController {
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
