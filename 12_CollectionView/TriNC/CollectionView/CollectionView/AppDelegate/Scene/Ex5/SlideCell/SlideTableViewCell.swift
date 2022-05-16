@@ -17,8 +17,7 @@ final class SlideTableViewCell: UITableViewCell {
     // MARK: - Properties
     private var currentIndex: IndexPath = IndexPath(row: 0, section: 0) {
         didSet {
-            currentIndex.row = currentIndex.row < 0 ? 0 : currentIndex.row
-            currentIndex.row = currentIndex.row > 11 ? 11 : currentIndex.row
+            currentIndex.row = (currentIndex.row < 0) ? 0 : (currentIndex.row > 11 ? 11 : currentIndex.row)
         }
     }
     

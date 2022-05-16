@@ -54,6 +54,7 @@ extension Ex4CollectionCell: UICollectionViewDataSource , UICollectionViewDelega
 
 // MARK: - Config
 extension Ex4CollectionCell {
+    
     struct Config {
         static let itemWidth: CGFloat = UIScreen.main.bounds.width / 4.0 - 10
         static let itemHeight: CGFloat = 85

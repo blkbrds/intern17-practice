@@ -7,30 +7,6 @@
 
 import UIKit
 
-// MARK: - Model
-final class Item {
-    
-    // MARK: - Properties
-    var number: String
-    
-    // init
-    init(number: String) {
-        self.number = number
-    }
-}
-
-// MARK: - Dummy Data
-extension Item {
-    static func getDummyData() -> [Item] {
-        var items: [Item] = []
-        for i in 0...10 {
-            let item = Item(number: "\(i)")
-            items.append(item)
-        }
-        return items
-    }
-}
-
 final class Ex2ViewController: UIViewController {
 
     // MARK: - Life cycle
@@ -67,9 +43,11 @@ extension Ex2ViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Ex2Cell
-        cell.backgroundColor = .blue
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Ex2Cell {
+            cell.backgroundColor = .blue
+            return cell
+        }
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -83,6 +61,7 @@ extension Ex2ViewController: UICollectionViewDataSource, UICollectionViewDelegat
 
 // MARK: - Config
 extension Ex2ViewController {
+    
     struct Config {
         static let itemWidth: CGFloat = (UIScreen.main.bounds.width - 85) / 3
         static let itemHeight: CGFloat = .random(in: 100..<299)

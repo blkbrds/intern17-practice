@@ -15,8 +15,7 @@ final class HeaderCell: UICollectionViewCell {
     // MARK: - Properties
     private var currentIndex: IndexPath = IndexPath(item: 0, section: 0) {
         didSet {
-            currentIndex.row = currentIndex.row < 0 ? 0 : currentIndex.row
-            currentIndex.row = currentIndex.row < 11 ? currentIndex.row : 11
+            currentIndex.row = (currentIndex.row < 0) ? 0 : (currentIndex.row > 11 ? 11 : currentIndex.row)
         }
     }
     
@@ -40,13 +39,11 @@ final class HeaderCell: UICollectionViewCell {
     // MARK: - IBActions
     @IBAction private func previousButtonTouchUpInside(_ sender: Any) {
         currentIndex.row -= 1
-        if currentIndex.row == 0 { return }
         collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
     }
     
     @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         currentIndex.row += 1
-        if currentIndex.row > 12 { return }
         collectionView.scrollToItem(at: currentIndex, at: .centeredHorizontally, animated: true)
     }
 }
@@ -75,6 +72,7 @@ extension HeaderCell: UICollectionViewDataSource , UICollectionViewDelegateFlowL
 
 // MARK: - Config
 extension HeaderCell {
+    
     struct Config {
         static let itemWidth: CGFloat = UIScreen.main.bounds.width
         static let itemHeight: CGFloat = 200

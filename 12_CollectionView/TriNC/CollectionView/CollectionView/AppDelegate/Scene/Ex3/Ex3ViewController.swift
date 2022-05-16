@@ -8,7 +8,7 @@
 import UIKit
 
 final class Ex3ViewController: UIViewController {
-
+    
     // MARK: - IBOutlet
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -73,16 +73,19 @@ extension Ex3ViewController: UICollectionViewDataSource {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             guard let teams = Team(rawValue: indexPath.section) else { fatalError("Team value is nil")}
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Identifier.header.rawValue, for: indexPath) as! TeamHeaderReusableView
-            header.updateHeaderView(avatar: teams.teamAvatar, name: teams.teamName)
-            return header
+            if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Identifier.header.rawValue, for: indexPath) as? TeamHeaderReusableView {
+                header.updateHeaderView(avatar: teams.teamAvatar, name: teams.teamName)
+                return header
+            }
             
         case UICollectionView.elementKindSectionFooter:
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: Identifier.footer.rawValue, for: indexPath) as! TeamFooterReusableView
-            return footer
-            
+            if let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: Identifier.footer.rawValue, for: indexPath) as? TeamFooterReusableView {
+                return footer
+            }
         default: return UICollectionReusableView()
         }
+        
+        return UICollectionReusableView()
     }
 }
 
@@ -108,6 +111,7 @@ extension Ex3ViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - Config
 extension Ex3ViewController {
+    
     // Define
     struct Config {
         static let itemWidth: CGFloat = (UIScreen.main.bounds.width / 5)

@@ -52,10 +52,10 @@ extension Ex5ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.slideCell.rawValue, for: indexPath) as! SlideTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.slideCell.rawValue, for: indexPath) as? SlideTableViewCell ?? UITableViewCell()
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.ex5Cell.rawValue, for: indexPath) as! Ex5TableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.ex5Cell.rawValue, for: indexPath) as? Ex5TableViewCell ?? UITableViewCell()
             return cell
         }
     }

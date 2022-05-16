@@ -55,9 +55,9 @@ extension Ex4ViewController: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = UICollectionViewCell()
         if indexPath.row == 0 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdentifierEx4.header.rawValue, for: indexPath) as! HeaderCell
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdentifierEx4.header.rawValue, for: indexPath) as? HeaderCell ?? UICollectionViewCell()
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdentifierEx4.cell.rawValue, for: indexPath) as! Ex4CollectionCell
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdentifierEx4.cell.rawValue, for: indexPath) as? Ex4CollectionCell ?? UICollectionViewCell()
         }
         return cell
     }
@@ -77,6 +77,7 @@ extension Ex4ViewController: UICollectionViewDataSource, UICollectionViewDelegat
 
 // MARK: - Config
 extension Ex4ViewController {
+    
     struct Config {
         static let screenWidth: CGFloat = UIScreen.main.bounds.width - 10
         static let screenHeight: CGFloat = 85

@@ -7,32 +7,8 @@
 
 import UIKit
 
-// MARK: - Model
-final class User {
-    
-    // MARK: - Properties
-    var number: String
-    
-    // init
-    init(number: String) {
-        self.number = number
-    }
-}
-
-// MARK: - Dummy Data
-extension User {
-    static func getDummyData() -> [User] {
-        var users: [User] = []
-        for i in 0...49 {
-            let user = User(number: "\(i)")
-            users.append(user)
-        }
-        return users
-    }
-}
-
 final class Ex1ViewController: UIViewController {
-
+    
     // MARK: - IBOutlet
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -65,10 +41,12 @@ extension Ex1ViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Ex1Cell
-        let items = users[indexPath.row]
-        cell.numberLabel.text = items.number
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Ex1Cell {
+            let items = users[indexPath.row]
+            cell.numberLabel.text = items.number
+            return cell
+        }
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -82,6 +60,7 @@ extension Ex1ViewController: UICollectionViewDataSource, UICollectionViewDelegat
 
 // MARK: - Config
 extension Ex1ViewController {
+    
     struct Config {
         static let screenWidth: CGFloat = UIScreen.main.bounds.width / 6.0
         static let screenHeight: CGFloat = 70
