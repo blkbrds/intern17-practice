@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TinhViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="tinhButton" destination="mkJ-5y-hmA" collectionClass="NSMutableArray" id="2tC-I9-e9M"/>
+                <outletCollection property="tinhButton" destination="loq-zc-3QN" collectionClass="NSMutableArray" id="7lt-OJ-VdT"/>
+                <outletCollection property="tinhButton" destination="JMB-XU-h6B" collectionClass="NSMutableArray" id="kws-uc-rQC"/>
+                <outletCollection property="tinhButton" destination="Lgo-4V-LXG" collectionClass="NSMutableArray" id="JEW-g8-t9K"/>
+                <outletCollection property="tinhButton" destination="Z2w-Rg-kJQ" collectionClass="NSMutableArray" id="epn-cJ-psh"/>
+                <outletCollection property="tinhButton" destination="dz8-V1-O3H" collectionClass="NSMutableArray" id="BxB-sd-0px"/>
+                <outletCollection property="tinhButton" destination="Smh-GG-byk" collectionClass="NSMutableArray" id="FZ9-9L-kU2"/>
+                <outletCollection property="tinhButton" destination="TUh-2s-HjO" collectionClass="NSMutableArray" id="9sp-rU-bEU"/>
+                <outletCollection property="tinhButton" destination="V8L-nD-26h" collectionClass="NSMutableArray" id="unZ-Yd-xBC"/>
+                <outletCollection property="tinhButton" destination="hhH-u5-cZO" collectionClass="NSMutableArray" id="4kd-aa-KyU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vXx-G3-r5Q">
+                    <rect key="frame" x="50" y="94" width="314" height="718"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkJ-5y-hmA">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 1"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="TVZ-UZ-x7g"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loq-zc-3QN">
+                            <rect key="frame" x="0.0" y="73" width="314" height="62.5"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 2"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="coN-11-h12"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMB-XU-h6B">
+                            <rect key="frame" x="0.0" y="145.5" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 3"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="czg-aa-lmy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgo-4V-LXG">
+                            <rect key="frame" x="0.0" y="218.5" width="314" height="62.5"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 4"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Kma-vO-Prq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2w-Rg-kJQ">
+                            <rect key="frame" x="0.0" y="291" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 5"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="h56-wx-1dT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dz8-V1-O3H">
+                            <rect key="frame" x="0.0" y="364" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 6"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="veL-oC-EWp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smh-GG-byk">
+                            <rect key="frame" x="0.0" y="437" width="314" height="62.5"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 7"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="WMg-ua-jA0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUh-2s-HjO">
+                            <rect key="frame" x="0.0" y="509.5" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 8"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="sgv-Za-YlH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8L-nD-26h">
+                            <rect key="frame" x="0.0" y="582.5" width="314" height="62.5"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 9"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="fmO-Nv-7ct"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhH-u5-cZO">
+                            <rect key="frame" x="0.0" y="655" width="314" height="63"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Tỉnh 10"/>
+                            <connections>
+                                <action selector="changeColerButton:" destination="-1" eventType="touchUpInside" id="Tu0-Cu-FL2"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Smh-GG-byk" secondAttribute="trailing" id="436-Po-FJ9"/>
+                        <constraint firstItem="Smh-GG-byk" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="5Im-u9-sLo"/>
+                        <constraint firstItem="JMB-XU-h6B" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="6Dy-Ge-Jj4"/>
+                        <constraint firstAttribute="trailing" secondItem="Z2w-Rg-kJQ" secondAttribute="trailing" id="6tN-9s-iwU"/>
+                        <constraint firstAttribute="trailing" secondItem="mkJ-5y-hmA" secondAttribute="trailing" id="Gr3-Y9-gwW"/>
+                        <constraint firstItem="Z2w-Rg-kJQ" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="Pyh-rM-RRI"/>
+                        <constraint firstItem="V8L-nD-26h" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="Q8N-rC-q9d"/>
+                        <constraint firstAttribute="trailing" secondItem="TUh-2s-HjO" secondAttribute="trailing" id="Q9j-DY-6du"/>
+                        <constraint firstItem="dz8-V1-O3H" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="Xp1-Po-aG3"/>
+                        <constraint firstAttribute="trailing" secondItem="dz8-V1-O3H" secondAttribute="trailing" id="aVv-f0-fAo"/>
+                        <constraint firstItem="hhH-u5-cZO" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="afC-MT-t2O"/>
+                        <constraint firstAttribute="trailing" secondItem="hhH-u5-cZO" secondAttribute="trailing" id="cGH-Dg-CYm"/>
+                        <constraint firstItem="mkJ-5y-hmA" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="djV-SO-bIF"/>
+                        <constraint firstAttribute="trailing" secondItem="JMB-XU-h6B" secondAttribute="trailing" id="g4d-nY-Cab"/>
+                        <constraint firstItem="Lgo-4V-LXG" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="of8-Vt-B7d"/>
+                        <constraint firstAttribute="trailing" secondItem="V8L-nD-26h" secondAttribute="trailing" id="qW9-79-DUc"/>
+                        <constraint firstAttribute="trailing" secondItem="Lgo-4V-LXG" secondAttribute="trailing" id="thh-RA-AL2"/>
+                        <constraint firstItem="loq-zc-3QN" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="ty9-em-U8J"/>
+                        <constraint firstAttribute="trailing" secondItem="loq-zc-3QN" secondAttribute="trailing" id="w6l-T6-yEj"/>
+                        <constraint firstItem="TUh-2s-HjO" firstAttribute="leading" secondItem="vXx-G3-r5Q" secondAttribute="leading" id="wTa-Nu-IrZ"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vXx-G3-r5Q" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="0US-iT-uzJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vXx-G3-r5Q" secondAttribute="trailing" constant="50" id="PZP-Ko-lqZ"/>
+                <constraint firstItem="vXx-G3-r5Q" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hHf-bo-G0p"/>
+                <constraint firstItem="vXx-G3-r5Q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="ktC-7J-tqg"/>
+                <constraint firstItem="vXx-G3-r5Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="rPC-Ru-KOo"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
