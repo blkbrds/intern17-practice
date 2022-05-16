@@ -15,8 +15,8 @@
 		22045CFC282F57D9009A82FC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22045CFA282F57D9009A82FC /* HomeViewController.xib */; };
 		22045CFF282F586E009A82FC /* Ex1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22045CFD282F586E009A82FC /* Ex1ViewController.swift */; };
 		22045D00282F586E009A82FC /* Ex1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22045CFE282F586E009A82FC /* Ex1ViewController.xib */; };
-		22045D03282F596F009A82FC /* Ex2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22045D01282F596F009A82FC /* Ex2ViewController.swift */; };
-		22045D04282F596F009A82FC /* Ex2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22045D02282F596F009A82FC /* Ex2ViewController.xib */; };
+		22A5D56D2831E5970048D6E8 /* Ex2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A5D56B2831E5970048D6E8 /* Ex2ViewController.swift */; };
+		22A5D56E2831E5970048D6E8 /* Ex2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A5D56C2831E5970048D6E8 /* Ex2ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		22045CFA282F57D9009A82FC /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		22045CFD282F586E009A82FC /* Ex1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex1ViewController.swift; sourceTree = "<group>"; };
 		22045CFE282F586E009A82FC /* Ex1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex1ViewController.xib; sourceTree = "<group>"; };
-		22045D01282F596F009A82FC /* Ex2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2ViewController.swift; sourceTree = "<group>"; };
-		22045D02282F596F009A82FC /* Ex2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex2ViewController.xib; sourceTree = "<group>"; };
+		22A5D56B2831E5970048D6E8 /* Ex2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2ViewController.swift; sourceTree = "<group>"; };
+		22A5D56C2831E5970048D6E8 /* Ex2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex2ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 		22045CF6282F577A009A82FC /* Ex2 */ = {
 			isa = PBXGroup;
 			children = (
-				22045D01282F596F009A82FC /* Ex2ViewController.swift */,
-				22045D02282F596F009A82FC /* Ex2ViewController.xib */,
+				22A5D56B2831E5970048D6E8 /* Ex2ViewController.swift */,
+				22A5D56C2831E5970048D6E8 /* Ex2ViewController.xib */,
 			);
 			path = Ex2;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			files = (
 				22045CEE282F5759009A82FC /* LaunchScreen.storyboard in Resources */,
 				22045CEB282F5759009A82FC /* Assets.xcassets in Resources */,
-				22045D04282F596F009A82FC /* Ex2ViewController.xib in Resources */,
+				22A5D56E2831E5970048D6E8 /* Ex2ViewController.xib in Resources */,
 				22045CFC282F57D9009A82FC /* HomeViewController.xib in Resources */,
 				22045D00282F586E009A82FC /* Ex1ViewController.xib in Resources */,
 			);
@@ -216,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22045D03282F596F009A82FC /* Ex2ViewController.swift in Sources */,
+				22A5D56D2831E5970048D6E8 /* Ex2ViewController.swift in Sources */,
 				22045CE2282F5755009A82FC /* AppDelegate.swift in Sources */,
 				22045CE4282F5755009A82FC /* SceneDelegate.swift in Sources */,
 				22045CFB282F57D9009A82FC /* HomeViewController.swift in Sources */,
