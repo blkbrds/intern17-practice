@@ -16,5 +16,33 @@ final class FavoriteViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configTableView()
     }
+
+    // MARK: - Private functions
+    private func configTableView() {
+        let nib = UINib(nibName: "FavoriteCell", bundle: .main)
+        tableView.register(nib, forCellReuseIdentifier: "FavoriteCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+}
+
+extension FavoriteViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else { return UITableViewCell() }
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       return 150
+    }
+}
+
+extension FavoriteViewController: UITableViewDelegate {
 }

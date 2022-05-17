@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        setroot(with: .tabbar)
+        setroot(with: .login)
         window?.makeKeyAndVisible()
         return true
     }
@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             setTabbar()
             window?.rootViewController = tabbarController
         case .login:
-            let vc = LoginViewController()
+            let vc = HomeViewController()
             window?.rootViewController = vc
         }
     }

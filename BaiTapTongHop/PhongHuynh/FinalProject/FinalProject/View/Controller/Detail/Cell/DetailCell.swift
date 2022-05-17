@@ -10,6 +10,10 @@ import UIKit
 
 final class DetailCell: UITableViewCell {
 
+    // MARK: - IBOutlets
+    @IBOutlet private weak var youtubeVideoImageView: UIImageView!
+    @IBOutlet private weak var youtubeVideoLabel: UILabel!
+
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,24 +12,20 @@ final class HomeViewController: UIViewController {
     }
 
     // MARK: - Private functions
-        private func configTableView() {
-            let nib = UINib(nibName: "NewVideoHomeCell", bundle: Bundle.main)
-            let nib2 = UINib(nibName: "FeaturedVideoHomeCell", bundle: Bundle.main)
-            let nib3 = UINib(nibName: "NominationVideoCell", bundle: Bundle.main)
-            tableView.register(nib, forCellReuseIdentifier: "NewVideoHomeCell")
-            tableView.register(nib2, forCellReuseIdentifier: "FeaturedVideoHomeCell")
-            tableView.register(nib3, forCellReuseIdentifier: "NominationVideoCell")
-            tableView.dataSource = self
-            tableView.delegate = self
-        }
+    private func configTableView() {
+        let nib = UINib(nibName: "NewVideoHomeCell", bundle: Bundle.main)
+        let nib2 = UINib(nibName: "FeaturedVideoHomeCell", bundle: Bundle.main)
+        let nib3 = UINib(nibName: "NominationVideoCell", bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: "NewVideoHomeCell")
+        tableView.register(nib2, forCellReuseIdentifier: "FeaturedVideoHomeCell")
+        tableView.register(nib3, forCellReuseIdentifier: "NominationVideoCell")
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -50,13 +46,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
+        if indexPath.row <= 2 {
             return 300
-        } else if indexPath.row == 1 {
-            return 300
-        } else if indexPath.row == 2 {
-            return 300
+        } else {
+            return 0
         }
-        return 0
     }
 }
