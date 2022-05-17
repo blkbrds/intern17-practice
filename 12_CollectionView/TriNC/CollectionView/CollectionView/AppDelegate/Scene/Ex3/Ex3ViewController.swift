@@ -72,7 +72,7 @@ extension Ex3ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            guard let teams = Team(rawValue: indexPath.section) else { fatalError("Team value is nil")}
+            guard let teams = Team(rawValue: indexPath.section) else { return UICollectionReusableView() }
             if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Identifier.header.rawValue, for: indexPath) as? TeamHeaderReusableView {
                 header.updateHeaderView(avatar: teams.teamAvatar, name: teams.teamName)
                 return header
