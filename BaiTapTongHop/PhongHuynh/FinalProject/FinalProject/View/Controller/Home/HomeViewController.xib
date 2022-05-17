@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="FinalProject" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="al3-Y4-5rz" id="JY2-yU-eV7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,50 +19,56 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="al3-Y4-5rz">
-                    <rect key="frame" x="0.0" y="85" width="414" height="777"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-yw-qAB">
-                    <rect key="frame" x="0.0" y="30" width="414" height="54"/>
+                    <rect key="frame" x="0.0" y="30" width="414" height="89.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBu-Bb-sd9">
-                            <rect key="frame" x="364" y="12" width="30" height="30"/>
+                            <rect key="frame" x="20" y="0.0" width="30" height="30"/>
                             <state key="normal" image="icons8-person-30"/>
                         </button>
                         <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jxE-WG-EWk">
-                            <rect key="frame" x="20" y="0.0" width="334" height="54"/>
+                            <rect key="frame" x="20" y="30" width="374" height="56"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhs-If-AdF">
+                            <rect key="frame" x="370" y="0.0" width="24" height="24"/>
+                            <state key="normal" image="icons8-setting-24"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPK-OZ-krH">
+                            <rect key="frame" x="186.5" y="5" width="41.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="gBu-Bb-sd9" firstAttribute="centerY" secondItem="Rca-yw-qAB" secondAttribute="centerY" id="Hlq-gI-uNU"/>
-                        <constraint firstItem="jxE-WG-EWk" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="top" id="Mnd-Rp-qmP"/>
-                        <constraint firstItem="jxE-WG-EWk" firstAttribute="leading" secondItem="Rca-yw-qAB" secondAttribute="leading" constant="20" id="QcO-KE-HZm"/>
-                        <constraint firstItem="gBu-Bb-sd9" firstAttribute="leading" secondItem="jxE-WG-EWk" secondAttribute="trailing" constant="10" id="XLK-MF-7Qm"/>
-                        <constraint firstAttribute="bottom" secondItem="jxE-WG-EWk" secondAttribute="bottom" id="Y00-hr-9lF"/>
-                        <constraint firstAttribute="trailing" secondItem="gBu-Bb-sd9" secondAttribute="trailing" constant="20" id="lmQ-jC-PXC"/>
+                        <constraint firstItem="jxE-WG-EWk" firstAttribute="top" secondItem="gBu-Bb-sd9" secondAttribute="bottom" id="7PX-Qk-vMq"/>
+                        <constraint firstItem="jxE-WG-EWk" firstAttribute="leading" secondItem="Rca-yw-qAB" secondAttribute="leading" constant="20" id="A36-oU-yns"/>
+                        <constraint firstItem="gBu-Bb-sd9" firstAttribute="leading" secondItem="Rca-yw-qAB" secondAttribute="leading" constant="20" id="J19-vD-WWO"/>
+                        <constraint firstAttribute="trailing" secondItem="Jhs-If-AdF" secondAttribute="trailing" constant="20" id="S5i-PV-vsw"/>
+                        <constraint firstItem="gBu-Bb-sd9" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="top" id="Wiy-li-Efs"/>
+                        <constraint firstItem="qPK-OZ-krH" firstAttribute="centerX" secondItem="Rca-yw-qAB" secondAttribute="centerX" id="XQW-qZ-TsF"/>
+                        <constraint firstItem="Jhs-If-AdF" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="top" id="c7A-pG-qJ8"/>
+                        <constraint firstAttribute="trailing" secondItem="jxE-WG-EWk" secondAttribute="trailing" constant="20" id="dGO-A6-pBs"/>
+                        <constraint firstItem="qPK-OZ-krH" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="top" constant="5" id="xZC-Fl-3y2"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rca-yw-qAB" secondAttribute="trailing" id="KJp-IQ-XKA"/>
-                <constraint firstItem="al3-Y4-5rz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QTq-wy-Df0"/>
-                <constraint firstItem="al3-Y4-5rz" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="bottom" constant="1" id="ZWT-cv-tUd"/>
-                <constraint firstItem="al3-Y4-5rz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="bhl-k3-e97"/>
-                <constraint firstItem="Rca-yw-qAB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eZ2-YO-1gf"/>
-                <constraint firstItem="Rca-yw-qAB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="jgl-XT-nq5"/>
-                <constraint firstItem="al3-Y4-5rz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="kYU-0G-nNS"/>
-                <constraint firstItem="Rca-yw-qAB" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="oLt-08-nsY"/>
+                <constraint firstItem="Rca-yw-qAB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Odr-mo-7nE"/>
+                <constraint firstItem="Rca-yw-qAB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Tpv-bb-fLT"/>
+                <constraint firstItem="Rca-yw-qAB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="ftT-B0-vgf"/>
+                <constraint firstItem="Rca-yw-qAB" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" id="pwp-zY-HmT"/>
             </constraints>
             <point key="canvasLocation" x="-281.15942028985512" y="6.6964285714285712"/>
         </view>
     </objects>
     <resources>
         <image name="icons8-person-30" width="30" height="30"/>
+        <image name="icons8-setting-24" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
