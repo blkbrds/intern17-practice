@@ -13,6 +13,12 @@ final class NewVideoHomeCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var viewModel: NewVideoHomeCellViewModel? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,11 +42,13 @@ final class NewVideoHomeCell: UITableViewCell {
 extension NewVideoHomeCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.numberOfItems(section: section)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewVideoCell", for: indexPath) as? NominationCell else { return UICollectionViewCell() }
+        cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }
 }
@@ -49,6 +57,6 @@ extension NewVideoHomeCell: UICollectionViewDataSource {
 extension NewVideoHomeCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width - (10 * 4)) / 3, height: 200)
+        return CGSize(width: (UIScreen.main.bounds.width - (10 * 3)) / 2, height: 200)
     }
 }

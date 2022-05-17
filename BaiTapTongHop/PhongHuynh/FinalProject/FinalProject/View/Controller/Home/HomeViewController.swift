@@ -1,14 +1,25 @@
 import UIKit
 
+struct RevolutionsResponse {
+    let count: Int?
+    let previous: String?
+    let results: [[String: Any]]?
+    let next: String?
+}
+
 final class HomeViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
 
+    // MARK: - Properties
+    var viewModel: HomeViewModel = HomeViewModel()
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        loadData()
     }
 
     // MARK: - Private functions
@@ -21,6 +32,32 @@ final class HomeViewController: UIViewController {
         tableView.register(nib3, forCellReuseIdentifier: "NominationVideoCell")
         tableView.dataSource = self
         tableView.delegate = self
+//        tableView.rowHeight = UITableView.automaticDimension
+    }
+
+    private func loadData() {
+        viewModel.loadAPI { [weak self] (result) in
+            guard let this = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    this.tableView.reloadData()
+                case .failure(let error):
+                    print("error\(error)")
+                }
+            }
+        }
+        viewModel.loadNewVideoAPI { [weak self] (result) in
+            guard let this = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    this.tableView.reloadData()
+                case .failure(let error):
+                    print("error\(error)")
+                }
+            }
+        }
     }
 }
 
@@ -37,9 +74,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else if indexPath.row == 1 {
             guard let cell1 = tableView.dequeueReusableCell(withIdentifier: "NewVideoHomeCell") as? NewVideoHomeCell else { return UITableViewCell() }
+            cell1.viewModel = viewModel.viewModelForNewVideo(indexPath: indexPath)
             return cell1
         } else if indexPath.row == 2 {
             guard let cell2 = tableView.dequeueReusableCell(withIdentifier: "NominationVideoCell") as? NominationVideoCell else { return UITableViewCell() }
+            cell2.viewModel = viewModel.viewModelForNomination(indexPath: indexPath)
             return cell2
         }
         return UITableViewCell()

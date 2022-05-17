@@ -51,7 +51,7 @@
                                 <rect key="frame" x="0.0" y="5" width="320" height="132.5"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NHw-Al-COx">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="132.5"/>
+                                        <rect key="frame" x="10" y="0.0" width="310" height="132.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TYO-mF-koZ">
                                             <size key="itemSize" width="128" height="128"/>
@@ -65,7 +65,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="NHw-Al-COx" secondAttribute="bottom" id="5Ql-Fe-zsm"/>
                                     <constraint firstItem="NHw-Al-COx" firstAttribute="top" secondItem="ylx-fG-bpc" secondAttribute="top" id="b8f-8q-pLr"/>
-                                    <constraint firstItem="NHw-Al-COx" firstAttribute="leading" secondItem="ylx-fG-bpc" secondAttribute="leading" id="frv-DG-PUV"/>
+                                    <constraint firstItem="NHw-Al-COx" firstAttribute="leading" secondItem="ylx-fG-bpc" secondAttribute="leading" constant="10" id="frv-DG-PUV"/>
                                     <constraint firstAttribute="trailing" secondItem="NHw-Al-COx" secondAttribute="trailing" id="nPy-LY-QGJ"/>
                                 </constraints>
                             </view>

@@ -50,6 +50,6 @@ extension FeaturedVideoHomeCell: UICollectionViewDataSource {
 extension FeaturedVideoHomeCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-          return CGSize(width: UIScreen.main.bounds.width - 100, height: 200)
+          return CGSize(width: UIScreen.main.bounds.width, height: 200)
       }
 }
