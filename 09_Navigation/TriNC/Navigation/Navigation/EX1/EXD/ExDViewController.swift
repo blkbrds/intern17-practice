@@ -22,7 +22,7 @@ final class ExDViewController: UIViewController {
     }
     
     @IBAction private func cButtonTouchUpInside(_ sender: Any) {
-        for controller in self.navigationController!.viewControllers as Array {
+        for controller in (navigationController?.viewControllers ?? [UINavigationController()]) as Array {
             if controller.isKind(of: ExCViewController.self) {
                 navigationController?.popToViewController(controller, animated: true)
                 break
@@ -31,7 +31,7 @@ final class ExDViewController: UIViewController {
     }
     
     @IBAction private func bButtonTouchUpInside(_ sender: Any) {
-        for controller in self.navigationController!.viewControllers as Array {
+        for controller in (navigationController?.viewControllers ?? [UINavigationController()]) as Array {
             if controller.isKind(of: ExBViewController.self) {
                 navigationController?.popToViewController(controller, animated: true)
                 break

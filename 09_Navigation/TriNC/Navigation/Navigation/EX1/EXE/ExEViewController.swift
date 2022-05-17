@@ -8,7 +8,7 @@
 import UIKit
 
 final class ExEViewController: UIViewController {
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,13 +17,21 @@ final class ExEViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func cButtonTouchUpInside(_ sender: Any) {
-        guard let vc = (self.navigationController?.viewControllers[2]) else { return }
-        navigationController?.popToViewController(vc, animated: true)
+        for controller in (navigationController?.viewControllers ?? [UINavigationController()]) as Array {
+            if controller.isKind(of: ExCViewController.self) {
+                navigationController?.popToViewController(controller, animated: true)
+                break
+            }
+        }
     }
     
     @IBAction private func bButtonTouchUpInside(_ sender: Any) {
-        guard let vc = (self.navigationController?.viewControllers[1]) else { return }
-        navigationController?.popToViewController(vc, animated: true)
+        for controller in (navigationController?.viewControllers ?? [UINavigationController()]) as Array {
+            if controller.isKind(of: ExBViewController.self) {
+                navigationController?.popToViewController(controller, animated: true)
+                break
+            }
+        }
     }
     
     @IBAction private func dButtonTouchUpInside(_ sender: Any) {
