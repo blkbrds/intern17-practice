@@ -10,8 +10,10 @@ import UIKit
 
 final class FeaturedVideoHomeCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet private weak var featuredVideoImageView: UIImageView!
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +23,4 @@ final class FeaturedVideoHomeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-    
 }

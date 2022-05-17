@@ -108,7 +108,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="newVideoImageView" destination="Idc-1r-YCM" id="lrg-E6-Uod"/>
-                <outlet property="newVideoLabel" destination="pae-B9-Zo1" id="cku-EX-3W7"/>
                 <outlet property="titleNewVideLabel" destination="pae-B9-Zo1" id="7QY-uF-eGl"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="-67.299107142857139"/>

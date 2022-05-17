@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="FinalProject" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="cpy-ok-i1v" id="GAN-WV-xlu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-yw-qAB">
-                    <rect key="frame" x="0.0" y="30" width="414" height="89.5"/>
+                    <rect key="frame" x="0.0" y="40" width="414" height="89.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBu-Bb-sd9">
                             <rect key="frame" x="20" y="0.0" width="30" height="30"/>
                             <state key="normal" image="icons8-person-30"/>
                         </button>
-                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jxE-WG-EWk">
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="jxE-WG-EWk">
                             <rect key="frame" x="20" y="30" width="374" height="56"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
@@ -34,14 +35,13 @@
                             <rect key="frame" x="370" y="0.0" width="24" height="24"/>
                             <state key="normal" image="icons8-setting-24"/>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPK-OZ-krH">
-                            <rect key="frame" x="186.5" y="5" width="41.5" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPK-OZ-krH">
+                            <rect key="frame" x="175.5" y="5" width="63" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="jxE-WG-EWk" firstAttribute="top" secondItem="gBu-Bb-sd9" secondAttribute="bottom" id="7PX-Qk-vMq"/>
                         <constraint firstItem="jxE-WG-EWk" firstAttribute="leading" secondItem="Rca-yw-qAB" secondAttribute="leading" constant="20" id="A36-oU-yns"/>
@@ -54,13 +54,21 @@
                         <constraint firstItem="qPK-OZ-krH" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="top" constant="5" id="xZC-Fl-3y2"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cpy-ok-i1v">
+                    <rect key="frame" x="0.0" y="129.5" width="414" height="732.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cpy-ok-i1v" secondAttribute="bottom" id="3Xp-LY-n8p"/>
                 <constraint firstItem="Rca-yw-qAB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Odr-mo-7nE"/>
                 <constraint firstItem="Rca-yw-qAB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Tpv-bb-fLT"/>
-                <constraint firstItem="Rca-yw-qAB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="ftT-B0-vgf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cpy-ok-i1v" secondAttribute="trailing" id="az3-Gc-4Mx"/>
+                <constraint firstItem="cpy-ok-i1v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bEv-fE-pkd"/>
+                <constraint firstItem="cpy-ok-i1v" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="bottom" id="eAC-Y8-6K3"/>
+                <constraint firstItem="Rca-yw-qAB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="ftT-B0-vgf"/>
                 <constraint firstItem="Rca-yw-qAB" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" id="pwp-zY-HmT"/>
             </constraints>
             <point key="canvasLocation" x="-281.15942028985512" y="6.6964285714285712"/>

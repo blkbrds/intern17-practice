@@ -107,8 +107,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="newVideoImageView" destination="Idc-1r-YCM" id="Fkz-pT-fSV"/>
-                <outlet property="newVideoLabel" destination="pae-B9-Zo1" id="cku-EX-3W7"/>
                 <outlet property="titleLabel" destination="pae-B9-Zo1" id="6J5-sT-sAV"/>
                 <outlet property="videoImageView" destination="Idc-1r-YCM" id="GhS-vm-aCf"/>
             </connections>
