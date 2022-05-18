@@ -8,7 +8,17 @@
 
 import UIKit
 
+// MARK: - FeaturedVideoHomeCellDelegate
+protocol FeaturedVideoHomeCellDelegate: class {
+    func controller(controller: FeaturedVideoHomeCell, needsPerfom actions: FeaturedVideoHomeCell.Action)
+}
+
 final class FeaturedVideoHomeCell: UITableViewCell {
+    
+    // MARK: - Define
+    enum Action {
+        case moveToHome(indexPath: IndexPath)
+    }
 
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -19,6 +29,7 @@ final class FeaturedVideoHomeCell: UITableViewCell {
             collectionView.reloadData()
         }
     }
+    weak var delegate: FeaturedVideoHomeCellDelegate?
 
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -41,7 +52,7 @@ final class FeaturedVideoHomeCell: UITableViewCell {
 
 // MARK: - UICollectionViewDataSourceUICollectionViewDataSource
 extension FeaturedVideoHomeCell: UICollectionViewDataSource {
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let viewModel = viewModel else { return 0 }
         return viewModel.numberOfItems(section: section)
@@ -52,12 +63,18 @@ extension FeaturedVideoHomeCell: UICollectionViewDataSource {
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.controller(controller: self, needsPerfom: .moveToHome(indexPath: indexPath))
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegate
 extension FeaturedVideoHomeCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-          return CGSize(width: UIScreen.main.bounds.width, height: 200)
-      }
+        return CGSize(width: UIScreen.main.bounds.width, height: 200)
+    }
 }

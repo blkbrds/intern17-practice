@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol NewVideoHomeCellDelegate: class {
+    func controller(controller: NewVideoHomeCell, needsPerfom actions: NewVideoHomeCell.Action)
+}
+
 final class NewVideoHomeCell: UITableViewCell {
+    
+    enum Action {
+        case moveToHome(indexPath: IndexPath)
+    }
 
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,6 +27,7 @@ final class NewVideoHomeCell: UITableViewCell {
             collectionView.reloadData()
         }
     }
+    weak var delegate: NewVideoHomeCellDelegate?
 
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -51,6 +60,12 @@ extension NewVideoHomeCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewVideoCell", for: indexPath) as? NominationCell else { return UICollectionViewCell() }
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.controller(controller: self, needsPerfom: .moveToHome(indexPath: indexPath))
+        }
     }
 }
 

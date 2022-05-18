@@ -8,7 +8,16 @@
 
 import UIKit
 
+protocol NominationVideoCellDelegate: class {
+    func controller(controller: NominationVideoCell, needsPerfom actions: NominationVideoCell.Action)
+}
+
 final class NominationVideoCell: UITableViewCell {
+
+    // MARK: - Define
+    enum Action {
+        case moveToHome(indexPath: IndexPath)
+    }
 
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -19,6 +28,7 @@ final class NominationVideoCell: UITableViewCell {
             collectionView.reloadData()
         }
     }
+    weak var delegate: NominationVideoCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,6 +56,12 @@ extension NominationVideoCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NominationCell", for: indexPath) as? NominationCell else { return UICollectionViewCell() }
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.controller(controller: self, needsPerfom: .moveToHome(indexPath: indexPath))
+        }
     }
 }
 

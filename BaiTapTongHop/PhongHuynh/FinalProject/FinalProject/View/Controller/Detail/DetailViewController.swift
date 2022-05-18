@@ -20,7 +20,7 @@ final class DetailViewController: UIViewController {
     var viewModel: DetailViewModel? {
         didSet {
            // tableView.reloadData()
-         //   updateView()
+            updateView()
         }
     }
 
@@ -29,6 +29,7 @@ final class DetailViewController: UIViewController {
         super.viewDidLoad()
         configTableView()
         loadData()
+        player.load(withVideoId: "rAgu44vDBys")
     }
 
     // MARK: - Private functions
@@ -41,7 +42,7 @@ final class DetailViewController: UIViewController {
 
     private func updateView() {
       //  player.load(withVideoId: viewModel?.video.id ?? "")
-        titleLabel.text = viewModel?.video.title
+     //   titleLabel.text = viewModel?.video.title
     }
 
     private func loadData() {

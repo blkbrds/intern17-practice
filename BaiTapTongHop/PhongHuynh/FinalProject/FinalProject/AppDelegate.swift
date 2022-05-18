@@ -22,14 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        setroot(with: .login)
+        let vc = HomeViewController()
+        let navi = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navi
         window?.makeKeyAndVisible()
+//        setroot(with: .login)
+//        window?.makeKeyAndVisible()
         return true
     }
 
     func setTabbar() {
         let homeVC = HomeViewController()
-     //   let homeNavi = UINavigationController(rootViewController: homeVC)
+      //  let homeNavi = UINavigationController(rootViewController: homeVC)
         homeVC.tabBarItem = UITabBarItem(title: "Trang chủ", image: #imageLiteral(resourceName: "icons8-home-24"), tag: 0)
         let shortVC = ShortsViewController()
         let shortNavi = UINavigationController(rootViewController: shortVC)

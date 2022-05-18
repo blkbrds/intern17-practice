@@ -30,9 +30,9 @@ final class HomeViewModel {
         return FeaturedVideoHomeCellViewModel(videos: videos)
     }
 
-//    func viewModelForDetail(indexPath: IndexPath) -> DetailViewModel {
-//        return DetailViewModel(video: videos[indexPath.row], videos: videos)
-//    }
+    func viewModelForDetail(indexPath: IndexPath) -> DetailViewModel {
+        return DetailViewModel(video: videos[indexPath.row])
+    }
 
     func loadNominationVideoAPI(completion: @escaping APICompletion) {
         let urlString = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&channelId=UClyA28-01x4z60eWQ2kiNbA&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"

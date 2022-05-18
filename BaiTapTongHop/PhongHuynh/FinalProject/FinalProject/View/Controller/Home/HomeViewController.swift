@@ -13,6 +13,7 @@ final class HomeViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configNavigation()
         configTableView()
         loadData()
     }
@@ -29,58 +30,70 @@ final class HomeViewController: UIViewController {
         tableView.delegate = self
         //        tableView.rowHeight = UITableView.automaticDimension
     }
-    
+
+    private func configNavigation() {
+        title = "Youtube"
+        let leftProfile = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-person-30"), style: .plain, target: self, action: nil)
+        navigationItem.leftBarButtonItem = leftProfile
+        let rightSetting = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-setting-24"), style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = rightSetting
+    }
+
     private func loadData() {
         HUD.show()
         let group = DispatchGroup()
         group.enter()
-        loadNominationVideoData()
-        group.leave()
-        loadNewVideoData()
-        group.leave()
-        loadVideoTrendingData()
-        group.leave()
+        loadNominationVideoData {
+            group.leave()
+        }
+
+        group.enter()
+        loadNewVideoData {
+            group.leave()
+        }
+
+        group.enter()
+        loadVideoTrendingData {
+            group.leave()
+        }
         group.notify(queue: .main) {
             HUD.dismiss()
             self.tableView.reloadData()
         }
     }
 
-    private func loadNominationVideoData() {
-        viewModel.loadNominationVideoAPI { [weak self] (result) in
-            guard let this = self else { return }
+    private func loadNominationVideoData(completion: @escaping () -> Void ) {
+        viewModel.loadNominationVideoAPI { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    this.tableView.reloadData()
+                    completion()
                 case .failure(let error):
                     print("error\(error)")
                 }
             }
         }
     }
-    
-    private func loadNewVideoData() {
-        viewModel2.loadNewVideoAPI { [weak self] (result) in
-            guard let this = self else { return }
+
+    private func loadNewVideoData(completion: @escaping () -> Void ) {
+        viewModel2.loadNewVideoAPI { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    this.tableView.reloadData()
+                    completion()
                 case .failure(let error):
                     print("error\(error)")
                 }
             }
         }
     }
-    
-    private func loadVideoTrendingData() {
-        viewModel3.loadVideoTrendingAPI { [weak self] (result) in
-            guard let this = self else { return }
+
+    private func loadVideoTrendingData(completion: @escaping () -> Void ) {
+        viewModel3.loadVideoTrendingAPI { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    this.tableView.reloadData()
+                    completion()
                 case .failure(let error):
                     print("error\(error)")
                 }
@@ -93,30 +106,33 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.numberOfItems(section: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeaturedVideoHomeCell") as? FeaturedVideoHomeCell else { return UITableViewCell() }
             cell.viewModel = viewModel3.viewModelForFeaturedVideo(indexPath: indexPath)
+            cell.delegate = self
             return cell
         } else if indexPath.row == 1 {
             guard let cell1 = tableView.dequeueReusableCell(withIdentifier: "NewVideoHomeCell") as? NewVideoHomeCell else { return UITableViewCell() }
             cell1.viewModel = viewModel2.viewModelForNewVideo(indexPath: indexPath)
+            cell1.delegate = self
             return cell1
         } else if indexPath.row == 2 {
             guard let cell2 = tableView.dequeueReusableCell(withIdentifier: "NominationVideoCell") as? NominationVideoCell else { return UITableViewCell() }
             cell2.viewModel = viewModel.viewModelForNomination(indexPath: indexPath)
+            cell2.delegate = self
             return cell2
         }
         return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailViewController()
-     //   vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
-        navigationController?.pushViewController(vc, animated: true)
+//        let vc = DetailViewController()
+//        vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
+//        navigationController?.pushViewController(vc, animated: true)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -124,6 +140,40 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return 300
         } else {
             return 0
+        }
+    }
+}
+
+extension HomeViewController: NominationVideoCellDelegate {
+
+    func controller(controller: NominationVideoCell, needsPerfom actions: NominationVideoCell.Action) {
+        switch actions {
+        case .moveToHome(let indexPath):
+            let vc = DetailViewController()
+            vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+extension HomeViewController: NewVideoHomeCellDelegate {
+    func controller(controller: NewVideoHomeCell, needsPerfom actions: NewVideoHomeCell.Action) {
+        switch actions {
+        case .moveToHome(let indexPath):
+            let vc = DetailViewController()
+            vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+extension HomeViewController: FeaturedVideoHomeCellDelegate {
+    func controller(controller: FeaturedVideoHomeCell, needsPerfom actions: FeaturedVideoHomeCell.Action) {
+        switch actions {
+        case .moveToHome(let indexPath):
+            let vc = DetailViewController()
+            vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
