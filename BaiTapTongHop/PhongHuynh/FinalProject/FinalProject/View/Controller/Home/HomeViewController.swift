@@ -31,6 +31,22 @@ final class HomeViewController: UIViewController {
     }
     
     private func loadData() {
+        HUD.show()
+        let group = DispatchGroup()
+        group.enter()
+        loadNominationVideoData()
+        group.leave()
+        loadNewVideoData()
+        group.leave()
+        loadVideoTrendingData()
+        group.leave()
+        group.notify(queue: .main) {
+            HUD.dismiss()
+            self.tableView.reloadData()
+        }
+    }
+
+    private func loadNominationVideoData() {
         viewModel.loadNominationVideoAPI { [weak self] (result) in
             guard let this = self else { return }
             DispatchQueue.main.async {
@@ -42,6 +58,9 @@ final class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func loadNewVideoData() {
         viewModel2.loadNewVideoAPI { [weak self] (result) in
             guard let this = self else { return }
             DispatchQueue.main.async {
@@ -53,6 +72,9 @@ final class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func loadVideoTrendingData() {
         viewModel3.loadVideoTrendingAPI { [weak self] (result) in
             guard let this = self else { return }
             DispatchQueue.main.async {
@@ -89,6 +111,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return cell2
         }
         return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+     //   vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

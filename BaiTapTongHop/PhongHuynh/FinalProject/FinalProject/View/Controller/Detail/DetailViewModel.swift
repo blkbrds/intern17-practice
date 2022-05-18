@@ -11,5 +11,50 @@ import Foundation
 final class DetailViewModel {
 
     // MARK: - Private functions
+    var video: Video
     var videos: [Video] = []
+
+    init(video: Video) {
+        self.video = video
+    }
+
+    // MARK: - Methods
+    func numberOfItems(section: Int) -> Int {
+        return videos.count
+    }
+
+    func viewModelForItem(indexPath: IndexPath) -> DetailCellViewModel {
+        return DetailCellViewModel(video: videos[indexPath.row])
+    }
+
+    func loadNominationVideoAPIDetail(completion: @escaping APICompletion) {
+        let urlString = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&channelId=UClyA28-01x4z60eWQ2kiNbA&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
+        NetWorking.shared().request(with: urlString) { (data, error) in
+            if let data = data {
+                let json = self.convertToJSON(from: data)
+                if let items = json["items"] as? [JSON] {
+                    for item in items {
+                        self.videos.append(Video(json: item))
+                    }
+                    completion(.success)
+                }
+            } else {
+                if let error = error {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
+    func convertToJSON(from data: Data) -> [String: Any] {
+        var json: [String: Any] = [:]
+        do {
+            if let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
+                json = jsonObj
+            }
+        } catch {
+            print("JSON casting error")
+        }
+        return json
+    }
 }

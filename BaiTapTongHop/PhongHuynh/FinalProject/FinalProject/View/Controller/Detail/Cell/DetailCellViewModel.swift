@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import UIKit
+
+final class DetailCellViewModel {
+
+    // MARK: Properties
+    var video: Video
+
+    // MARK: - Init
+    init(video: Video) {
+        self.video = video
+    }
+
+    // MARK: - Methods
+    func updateImageView(completion: @escaping (UIImage?) -> Void) {
+        NetWorking.shared().downloadImage(url: video.imageURL ?? "") { (image) in
+            completion(image)
+        }
+    }
+}

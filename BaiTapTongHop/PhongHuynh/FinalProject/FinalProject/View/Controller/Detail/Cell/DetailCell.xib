@@ -18,14 +18,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="229" height="148"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="husky" translatesAutoresizingMaskIntoConstraints="NO" id="Dh0-xc-kfC">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dh0-xc-kfC">
                         <rect key="frame" x="0.0" y="0.0" width="229" height="103.5"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4b-0H-JVo">
                         <rect key="frame" x="0.0" y="104.5" width="229" height="43.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cII-4g-h9f">
-                                <rect key="frame" x="93.5" y="11.5" width="42" height="21"/>
+                                <rect key="frame" x="10" y="10" width="209" height="23.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,8 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cII-4g-h9f" firstAttribute="centerX" secondItem="t4b-0H-JVo" secondAttribute="centerX" id="Ieh-k0-RcP"/>
-                            <constraint firstItem="cII-4g-h9f" firstAttribute="centerY" secondItem="t4b-0H-JVo" secondAttribute="centerY" id="N1O-0O-5c4"/>
+                            <constraint firstAttribute="trailing" secondItem="cII-4g-h9f" secondAttribute="trailing" constant="10" id="OSv-EY-vBL"/>
+                            <constraint firstAttribute="bottom" secondItem="cII-4g-h9f" secondAttribute="bottom" constant="10" id="Yyb-ua-hoR"/>
+                            <constraint firstItem="cII-4g-h9f" firstAttribute="top" secondItem="t4b-0H-JVo" secondAttribute="top" constant="10" id="dRU-pA-2r9"/>
+                            <constraint firstItem="cII-4g-h9f" firstAttribute="leading" secondItem="t4b-0H-JVo" secondAttribute="leading" constant="10" id="jgy-yb-wQG"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -58,7 +60,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="husky" width="1280" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

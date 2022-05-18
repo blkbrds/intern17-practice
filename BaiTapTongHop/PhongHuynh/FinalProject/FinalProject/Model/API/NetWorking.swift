@@ -69,7 +69,7 @@ final class NetWorking {
         }
         task.resume()
     }
-    
+
     // MARK: - downloader
     func downloadImage(url: String, completion: @escaping (UIImage?) -> Void) {
         guard let url = URL(string: url) else {

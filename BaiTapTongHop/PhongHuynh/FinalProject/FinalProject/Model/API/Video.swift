@@ -8,8 +8,10 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 
 typealias JSON = [String: Any]
+typealias HUD = SVProgressHUD
 
 final class Video {
 
