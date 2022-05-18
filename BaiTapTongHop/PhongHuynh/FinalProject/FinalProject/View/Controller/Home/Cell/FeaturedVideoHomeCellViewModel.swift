@@ -1,15 +1,15 @@
 //
-//  NominationVideoCellViewModel.swift
+//  FeaturedVideoHomeCellViewModel.swift
 //  FinalProject
 //
-//  Created by Phong Huynh N. VN.Danang on 5/17/22.
+//  Created by Phong Huynh N. VN.Danang on 5/18/22.
 //  Copyright © 2022 Asiantech. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-final class NominationVideoCellViewModel {
+final class FeaturedVideoHomeCellViewModel {
 
     // MARK: Properties
     var videos: [Video]
@@ -18,13 +18,13 @@ final class NominationVideoCellViewModel {
     init(videos: [Video]) {
         self.videos = videos
     }
-    
+
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
         return videos.count
     }
 
-    func viewModelForItem(indexPath: IndexPath) -> NominationCellViewModel {
-        return NominationCellViewModel(video: videos[indexPath.row])
+    func viewModelForItem(indexPath: IndexPath) -> FeatureCellViewModel {
+        return FeatureCellViewModel(video: videos[indexPath.row])
     }
 }

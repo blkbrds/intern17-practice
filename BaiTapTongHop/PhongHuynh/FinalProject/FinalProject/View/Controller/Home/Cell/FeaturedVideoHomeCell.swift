@@ -13,6 +13,13 @@ final class FeaturedVideoHomeCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    // MARK: - Properties
+    var viewModel: FeaturedVideoHomeCellViewModel? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,12 +43,13 @@ final class FeaturedVideoHomeCell: UITableViewCell {
 extension FeaturedVideoHomeCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.numberOfItems(section: section)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedCell", for: indexPath) as? FeaturedCell else { return UICollectionViewCell() }
-        cell.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
+        cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }
 }

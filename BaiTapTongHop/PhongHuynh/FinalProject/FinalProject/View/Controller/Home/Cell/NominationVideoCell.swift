@@ -13,12 +13,13 @@ final class NominationVideoCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    // MARK: - Properties
     var viewModel: NominationVideoCellViewModel? {
         didSet {
             collectionView.reloadData()
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         configCollectionView()

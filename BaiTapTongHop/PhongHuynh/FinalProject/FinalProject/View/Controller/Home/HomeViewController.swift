@@ -1,12 +1,5 @@
 import UIKit
 
-struct RevolutionsResponse {
-    let count: Int?
-    let previous: String?
-    let results: [[String: Any]]?
-    let next: String?
-}
-
 final class HomeViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -14,6 +7,8 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Properties
     var viewModel: HomeViewModel = HomeViewModel()
+    var viewModel2: HomeViewModel = HomeViewModel()
+    var viewModel3: HomeViewModel = HomeViewModel()
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -32,11 +27,11 @@ final class HomeViewController: UIViewController {
         tableView.register(nib3, forCellReuseIdentifier: "NominationVideoCell")
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.rowHeight = UITableView.automaticDimension
+        //        tableView.rowHeight = UITableView.automaticDimension
     }
-
+    
     private func loadData() {
-        viewModel.loadAPI { [weak self] (result) in
+        viewModel.loadNominationVideoAPI { [weak self] (result) in
             guard let this = self else { return }
             DispatchQueue.main.async {
                 switch result {
@@ -47,7 +42,18 @@ final class HomeViewController: UIViewController {
                 }
             }
         }
-        viewModel.loadNewVideoAPI { [weak self] (result) in
+        viewModel2.loadNewVideoAPI { [weak self] (result) in
+            guard let this = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    this.tableView.reloadData()
+                case .failure(let error):
+                    print("error\(error)")
+                }
+            }
+        }
+        viewModel3.loadVideoTrendingAPI { [weak self] (result) in
             guard let this = self else { return }
             DispatchQueue.main.async {
                 switch result {
@@ -71,10 +77,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeaturedVideoHomeCell") as? FeaturedVideoHomeCell else { return UITableViewCell() }
+            cell.viewModel = viewModel3.viewModelForFeaturedVideo(indexPath: indexPath)
             return cell
         } else if indexPath.row == 1 {
             guard let cell1 = tableView.dequeueReusableCell(withIdentifier: "NewVideoHomeCell") as? NewVideoHomeCell else { return UITableViewCell() }
-            cell1.viewModel = viewModel.viewModelForNewVideo(indexPath: indexPath)
+            cell1.viewModel = viewModel2.viewModelForNewVideo(indexPath: indexPath)
             return cell1
         } else if indexPath.row == 2 {
             guard let cell2 = tableView.dequeueReusableCell(withIdentifier: "NominationVideoCell") as? NominationVideoCell else { return UITableViewCell() }

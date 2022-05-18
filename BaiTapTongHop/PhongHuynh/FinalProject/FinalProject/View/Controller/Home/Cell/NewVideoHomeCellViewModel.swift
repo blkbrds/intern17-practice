@@ -18,7 +18,8 @@ final class NewVideoHomeCellViewModel {
     init(videos: [Video]) {
         self.videos = videos
     }
-    
+
+    // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
         return videos.count
     }

@@ -16,6 +16,8 @@ final class DetailViewController: UIViewController {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var favoriteButton: UIButton!
 
+    var viewModel: DetailViewModel = DetailViewModel()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

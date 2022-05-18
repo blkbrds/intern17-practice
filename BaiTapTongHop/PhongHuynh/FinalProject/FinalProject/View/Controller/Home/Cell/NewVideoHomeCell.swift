@@ -13,12 +13,13 @@ final class NewVideoHomeCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // MARK: - Properties
     var viewModel: NewVideoHomeCellViewModel? {
         didSet {
             collectionView.reloadData()
         }
     }
-    
+
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -21,12 +21,54 @@ final class HomeViewModel {
     func viewModelForNomination(indexPath: IndexPath) -> NominationVideoCellViewModel {
         return NominationVideoCellViewModel(videos: videos)
     }
-    
+
     func viewModelForNewVideo(indexPath: IndexPath) -> NewVideoHomeCellViewModel {
         return NewVideoHomeCellViewModel(videos: videos)
     }
 
-    func loadAPI(completion: @escaping APICompletion) {
+    func viewModelForFeaturedVideo(indexPath: IndexPath) -> FeaturedVideoHomeCellViewModel {
+        return FeaturedVideoHomeCellViewModel(videos: videos)
+    }
+
+    func loadNominationVideoAPI(completion: @escaping APICompletion) {
+        let urlString = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&channelId=UClyA28-01x4z60eWQ2kiNbA&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
+        NetWorking.shared().request(with: urlString) { (data, error) in
+            if let data = data {
+                let json = self.convertToJSON(from: data)
+                if let items = json["items"] as? [JSON] {
+                    for item in items {
+                        self.videos.append(Video(json: item))
+                    }
+                    completion(.success)
+                }
+            } else {
+                if let error = error {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
+    func loadNewVideoAPI(completion: @escaping APICompletion) {
+        let urlString = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&channelId=UCd0neB_LB1xpwIYDetX2qTg&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
+        NetWorking.shared().request(with: urlString) { (data, error) in
+            if let data = data {
+                let json = self.convertToJSON(from: data)
+                if let items = json["items"] as? [JSON] {
+                    for item in items {
+                        self.videos.append(Video(json: item))
+                    }
+                    completion(.success)
+                }
+            } else {
+                if let error = error {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
+    func loadVideoTrendingAPI(completion: @escaping APICompletion) {
         let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
@@ -39,26 +81,7 @@ final class HomeViewModel {
                 }
             } else {
                 if let error = error {
-                completion(.failure(error))
-                }
-            }
-        }
-    }
-    
-    func loadNewVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=VN&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
-        NetWorking.shared().request(with: urlString) { (data, error) in
-            if let data = data {
-                let json = self.convertToJSON(from: data)
-                if let items = json["items"] as? [JSON] {
-                    for item in items {
-                        self.videos.append(Video(json: item))
-                    }
-                    completion(.success)
-                }
-            } else {
-                if let error = error {
-                completion(.failure(error))
+                    completion(.failure(error))
                 }
             }
         }
