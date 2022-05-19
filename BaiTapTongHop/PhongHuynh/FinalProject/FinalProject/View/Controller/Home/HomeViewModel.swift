@@ -12,6 +12,8 @@ final class HomeViewModel {
 
     // MARK: - Private functions
     var videos: [Video] = []
+    var featureVideos: [Video] = []
+    var nominationVideos: [Video] = []
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
@@ -19,7 +21,7 @@ final class HomeViewModel {
     }
 
     func viewModelForNomination(indexPath: IndexPath) -> NominationVideoCellViewModel {
-        return NominationVideoCellViewModel(videos: videos)
+        return NominationVideoCellViewModel(videos: nominationVideos)
     }
 
     func viewModelForNewVideo(indexPath: IndexPath) -> NewVideoHomeCellViewModel {
@@ -27,11 +29,19 @@ final class HomeViewModel {
     }
 
     func viewModelForFeaturedVideo(indexPath: IndexPath) -> FeaturedVideoHomeCellViewModel {
-        return FeaturedVideoHomeCellViewModel(videos: videos)
+        return FeaturedVideoHomeCellViewModel(videos: featureVideos)
     }
 
-    func viewModelForDetail(indexPath: IndexPath) -> DetailViewModel {
+    func viewModelForDetailNominationVideo(indexPath: IndexPath) -> DetailViewModel {
+        return DetailViewModel(video: nominationVideos[indexPath.row])
+    }
+    
+    func viewModelForDetailNewVideo(indexPath: IndexPath) -> DetailViewModel {
         return DetailViewModel(video: videos[indexPath.row])
+    }
+    
+    func viewModelForDetailFeaturedVideo(indexPath: IndexPath) -> DetailViewModel {
+        return DetailViewModel(video: featureVideos[indexPath.row])
     }
 
     func loadNominationVideoAPI(completion: @escaping APICompletion) {
@@ -41,7 +51,7 @@ final class HomeViewModel {
                 let json = self.convertToJSON(from: data)
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.videos.append(Video(json: item))
+                        self.nominationVideos.append(Video(json: item))
                     }
                     completion(.success)
                 }
@@ -79,7 +89,7 @@ final class HomeViewModel {
                 let json = self.convertToJSON(from: data)
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.videos.append(Video(json: item))
+                        self.featureVideos.append(Video(json: item))
                     }
                     completion(.success)
                 }

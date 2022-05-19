@@ -16,7 +16,7 @@ final class NominationVideoCell: UITableViewCell {
 
     // MARK: - Define
     enum Action {
-        case moveToHome(indexPath: IndexPath)
+        case moveToDetail(indexPath: IndexPath)
     }
 
     // MARK: - IBOutlets
@@ -60,7 +60,7 @@ extension NominationVideoCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let delegate = delegate {
-            delegate.controller(controller: self, needsPerfom: .moveToHome(indexPath: indexPath))
+            delegate.controller(controller: self, needsPerfom: .moveToDetail(indexPath: indexPath))
         }
     }
 }

@@ -7,8 +7,6 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Properties
     var viewModel: HomeViewModel = HomeViewModel()
-    var viewModel2: HomeViewModel = HomeViewModel()
-    var viewModel3: HomeViewModel = HomeViewModel()
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -76,7 +74,7 @@ final class HomeViewController: UIViewController {
     }
 
     private func loadNewVideoData(completion: @escaping () -> Void ) {
-        viewModel2.loadNewVideoAPI { (result) in
+        viewModel.loadNewVideoAPI { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
@@ -89,7 +87,7 @@ final class HomeViewController: UIViewController {
     }
 
     private func loadVideoTrendingData(completion: @escaping () -> Void ) {
-        viewModel3.loadVideoTrendingAPI { (result) in
+        viewModel.loadVideoTrendingAPI { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
@@ -120,12 +118,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeaturedVideoHomeCell") as? FeaturedVideoHomeCell else { return UITableViewCell() }
-            cell.viewModel = viewModel3.viewModelForFeaturedVideo(indexPath: indexPath)
+            cell.viewModel = viewModel.viewModelForFeaturedVideo(indexPath: indexPath)
             cell.delegate = self
             return cell
         } else if indexPath.row == 1 {
             guard let cell1 = tableView.dequeueReusableCell(withIdentifier: "NewVideoHomeCell") as? NewVideoHomeCell else { return UITableViewCell() }
-            cell1.viewModel = viewModel2.viewModelForNewVideo(indexPath: indexPath)
+            cell1.viewModel = viewModel.viewModelForNewVideo(indexPath: indexPath)
             cell1.delegate = self
             return cell1
         } else if indexPath.row == 2 {
@@ -156,9 +154,9 @@ extension HomeViewController: NominationVideoCellDelegate {
 
     func controller(controller: NominationVideoCell, needsPerfom actions: NominationVideoCell.Action) {
         switch actions {
-        case .moveToHome(let indexPath):
+        case .moveToDetail(let indexPath):
             let vc = DetailViewController()
-            vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
+            vc.viewModel = viewModel.viewModelForDetailNominationVideo(indexPath: indexPath)
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -167,9 +165,9 @@ extension HomeViewController: NominationVideoCellDelegate {
 extension HomeViewController: NewVideoHomeCellDelegate {
     func controller(controller: NewVideoHomeCell, needsPerfom actions: NewVideoHomeCell.Action) {
         switch actions {
-        case .moveToHome(let indexPath):
+        case .moveToDetail(let indexPath):
             let vc = DetailViewController()
-            vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
+            vc.viewModel = viewModel.viewModelForDetailNewVideo(indexPath: indexPath)
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -178,9 +176,9 @@ extension HomeViewController: NewVideoHomeCellDelegate {
 extension HomeViewController: FeaturedVideoHomeCellDelegate {
     func controller(controller: FeaturedVideoHomeCell, needsPerfom actions: FeaturedVideoHomeCell.Action) {
         switch actions {
-        case .moveToHome(let indexPath):
+        case .moveToDetail(let indexPath):
             let vc = DetailViewController()
-            vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
+            vc.viewModel = viewModel.viewModelForDetailFeaturedVideo(indexPath: indexPath)
             navigationController?.pushViewController(vc, animated: true)
         }
     }
