@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89025C6B2831E9AA005A0910 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025C6A2831E9AA005A0910 /* AppDelegate.swift */; };
+		89025C6D2831E9AA005A0910 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025C6C2831E9AA005A0910 /* SceneDelegate.swift */; };
+		89025C722831E9AA005A0910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89025C702831E9AA005A0910 /* Main.storyboard */; };
+		89025C742831E9AD005A0910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89025C732831E9AD005A0910 /* Assets.xcassets */; };
+		89025C772831E9AD005A0910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89025C752831E9AD005A0910 /* LaunchScreen.storyboard */; };
+		89025C832831EC37005A0910 /* BT1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025C812831EC37005A0910 /* BT1ViewController.swift */; };
+		89025C842831EC37005A0910 /* BT1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025C822831EC37005A0910 /* BT1ViewController.xib */; };
+		89025C892831F04F005A0910 /* BT1XViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025C872831F04F005A0910 /* BT1XViewController.swift */; };
+		89025C8A2831F04F005A0910 /* BT1XViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025C882831F04F005A0910 /* BT1XViewController.xib */; };
+		89025C8F2831F2C6005A0910 /* BT2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025C8D2831F2C6005A0910 /* BT2ViewController.swift */; };
+		89025C902831F2C6005A0910 /* BT2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025C8E2831F2C6005A0910 /* BT2ViewController.xib */; };
+		89025C952831F36F005A0910 /* BT22ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025C932831F36F005A0910 /* BT22ViewController.swift */; };
+		89025C962831F36F005A0910 /* BT22ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025C942831F36F005A0910 /* BT22ViewController.xib */; };
+		89025C9B2831F75E005A0910 /* BT3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025C992831F75E005A0910 /* BT3ViewController.swift */; };
+		89025C9C2831F75E005A0910 /* BT3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025C9A2831F75E005A0910 /* BT3ViewController.xib */; };
+		89025CA02831FD80005A0910 /* BT33ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025C9E2831FD80005A0910 /* BT33ViewController.swift */; };
+		89025CA12831FD80005A0910 /* BT33ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025C9F2831FD80005A0910 /* BT33ViewController.xib */; };
+		89025CA52831FEE1005A0910 /* BT333ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CA32831FEE1005A0910 /* BT333ViewController.swift */; };
+		89025CA62831FEE1005A0910 /* BT333ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CA42831FEE1005A0910 /* BT333ViewController.xib */; };
+		89025CAB283202D7005A0910 /* BT4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CA9283202D7005A0910 /* BT4ViewController.swift */; };
+		89025CAC283202D7005A0910 /* BT4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CAA283202D7005A0910 /* BT4ViewController.xib */; };
+		89025CB0283255FE005A0910 /* BT44ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CAE283255FE005A0910 /* BT44ViewController.swift */; };
+		89025CB1283255FE005A0910 /* BT44ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CAF283255FE005A0910 /* BT44ViewController.xib */; };
+		89025CB5283331AB005A0910 /* BT444ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CB3283331AB005A0910 /* BT444ViewController.swift */; };
+		89025CB6283331AB005A0910 /* BT444ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CB4283331AB005A0910 /* BT444ViewController.xib */; };
+		89025CBA28333316005A0910 /* BT4444ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CB828333316005A0910 /* BT4444ViewController.swift */; };
+		89025CBB28333316005A0910 /* BT4444ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CB928333316005A0910 /* BT4444ViewController.xib */; };
+		89025CC028333642005A0910 /* BT5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CBE28333642005A0910 /* BT5ViewController.swift */; };
+		89025CC128333642005A0910 /* BT5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CBF28333642005A0910 /* BT5ViewController.xib */; };
+		89025CC7283339E8005A0910 /* BT6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CC5283339E8005A0910 /* BT6ViewController.swift */; };
+		89025CC8283339E8005A0910 /* BT6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CC6283339E8005A0910 /* BT6ViewController.xib */; };
+		89025CD228333C23005A0910 /* BT74ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CD028333C23005A0910 /* BT74ViewController.swift */; };
+		89025CD328333C23005A0910 /* BT74ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CD128333C23005A0910 /* BT74ViewController.xib */; };
+		89025CD728333D4F005A0910 /* BT75ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CD528333D4F005A0910 /* BT75ViewController.swift */; };
+		89025CD828333D4F005A0910 /* BT75ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CD628333D4F005A0910 /* BT75ViewController.xib */; };
+		89025CDC2833414C005A0910 /* BT76ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CDA2833414C005A0910 /* BT76ViewController.swift */; };
+		89025CDD2833414C005A0910 /* BT76ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CDB2833414C005A0910 /* BT76ViewController.xib */; };
+		89025CE2283346F3005A0910 /* BT8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CE0283346F3005A0910 /* BT8ViewController.swift */; };
+		89025CE3283346F3005A0910 /* BT8ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CE1283346F3005A0910 /* BT8ViewController.xib */; };
+		89025CE928335080005A0910 /* BT9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CE728335080005A0910 /* BT9ViewController.swift */; };
+		89025CEA28335080005A0910 /* BT9ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CE828335080005A0910 /* BT9ViewController.xib */; };
+		89025CEF28339623005A0910 /* BT10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CED28339623005A0910 /* BT10ViewController.swift */; };
+		89025CF028339623005A0910 /* BT10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CEE28339623005A0910 /* BT10ViewController.xib */; };
+		89025CF82834DBB2005A0910 /* BT11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CF62834DBB2005A0910 /* BT11ViewController.swift */; };
+		89025CF92834DBB2005A0910 /* BT11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CF72834DBB2005A0910 /* BT11ViewController.xib */; };
+		89025CFF2834E8B0005A0910 /* BT12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025CFD2834E8B0005A0910 /* BT12ViewController.swift */; };
+		89025D002834E8B0005A0910 /* BT12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025CFE2834E8B0005A0910 /* BT12ViewController.xib */; };
+		89025D052834F998005A0910 /* BT14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025D032834F998005A0910 /* BT14ViewController.swift */; };
+		89025D062834F998005A0910 /* BT14ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025D042834F998005A0910 /* BT14ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		89025C672831E9AA005A0910 /* BTAutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTAutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89025C6A2831E9AA005A0910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89025C6C2831E9AA005A0910 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		89025C712831E9AA005A0910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89025C732831E9AD005A0910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89025C762831E9AD005A0910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89025C782831E9AD005A0910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89025C812831EC37005A0910 /* BT1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT1ViewController.swift; sourceTree = "<group>"; };
+		89025C822831EC37005A0910 /* BT1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT1ViewController.xib; sourceTree = "<group>"; };
+		89025C872831F04F005A0910 /* BT1XViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT1XViewController.swift; sourceTree = "<group>"; };
+		89025C882831F04F005A0910 /* BT1XViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT1XViewController.xib; sourceTree = "<group>"; };
+		89025C8D2831F2C6005A0910 /* BT2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT2ViewController.swift; sourceTree = "<group>"; };
+		89025C8E2831F2C6005A0910 /* BT2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT2ViewController.xib; sourceTree = "<group>"; };
+		89025C932831F36F005A0910 /* BT22ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT22ViewController.swift; sourceTree = "<group>"; };
+		89025C942831F36F005A0910 /* BT22ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT22ViewController.xib; sourceTree = "<group>"; };
+		89025C992831F75E005A0910 /* BT3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT3ViewController.swift; sourceTree = "<group>"; };
+		89025C9A2831F75E005A0910 /* BT3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT3ViewController.xib; sourceTree = "<group>"; };
+		89025C9E2831FD80005A0910 /* BT33ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT33ViewController.swift; sourceTree = "<group>"; };
+		89025C9F2831FD80005A0910 /* BT33ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT33ViewController.xib; sourceTree = "<group>"; };
+		89025CA32831FEE1005A0910 /* BT333ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT333ViewController.swift; sourceTree = "<group>"; };
+		89025CA42831FEE1005A0910 /* BT333ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT333ViewController.xib; sourceTree = "<group>"; };
+		89025CA9283202D7005A0910 /* BT4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT4ViewController.swift; sourceTree = "<group>"; };
+		89025CAA283202D7005A0910 /* BT4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT4ViewController.xib; sourceTree = "<group>"; };
+		89025CAE283255FE005A0910 /* BT44ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT44ViewController.swift; sourceTree = "<group>"; };
+		89025CAF283255FE005A0910 /* BT44ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT44ViewController.xib; sourceTree = "<group>"; };
+		89025CB3283331AB005A0910 /* BT444ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT444ViewController.swift; sourceTree = "<group>"; };
+		89025CB4283331AB005A0910 /* BT444ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT444ViewController.xib; sourceTree = "<group>"; };
+		89025CB828333316005A0910 /* BT4444ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT4444ViewController.swift; sourceTree = "<group>"; };
+		89025CB928333316005A0910 /* BT4444ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT4444ViewController.xib; sourceTree = "<group>"; };
+		89025CBE28333642005A0910 /* BT5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT5ViewController.swift; sourceTree = "<group>"; };
+		89025CBF28333642005A0910 /* BT5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT5ViewController.xib; sourceTree = "<group>"; };
+		89025CC5283339E8005A0910 /* BT6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT6ViewController.swift; sourceTree = "<group>"; };
+		89025CC6283339E8005A0910 /* BT6ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT6ViewController.xib; sourceTree = "<group>"; };
+		89025CD028333C23005A0910 /* BT74ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT74ViewController.swift; sourceTree = "<group>"; };
+		89025CD128333C23005A0910 /* BT74ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT74ViewController.xib; sourceTree = "<group>"; };
+		89025CD528333D4F005A0910 /* BT75ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT75ViewController.swift; sourceTree = "<group>"; };
+		89025CD628333D4F005A0910 /* BT75ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT75ViewController.xib; sourceTree = "<group>"; };
+		89025CDA2833414C005A0910 /* BT76ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT76ViewController.swift; sourceTree = "<group>"; };
+		89025CDB2833414C005A0910 /* BT76ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT76ViewController.xib; sourceTree = "<group>"; };
+		89025CE0283346F3005A0910 /* BT8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT8ViewController.swift; sourceTree = "<group>"; };
+		89025CE1283346F3005A0910 /* BT8ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT8ViewController.xib; sourceTree = "<group>"; };
+		89025CE728335080005A0910 /* BT9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT9ViewController.swift; sourceTree = "<group>"; };
+		89025CE828335080005A0910 /* BT9ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT9ViewController.xib; sourceTree = "<group>"; };
+		89025CED28339623005A0910 /* BT10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT10ViewController.swift; sourceTree = "<group>"; };
+		89025CEE28339623005A0910 /* BT10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT10ViewController.xib; sourceTree = "<group>"; };
+		89025CF62834DBB2005A0910 /* BT11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT11ViewController.swift; sourceTree = "<group>"; };
+		89025CF72834DBB2005A0910 /* BT11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT11ViewController.xib; sourceTree = "<group>"; };
+		89025CFD2834E8B0005A0910 /* BT12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT12ViewController.swift; sourceTree = "<group>"; };
+		89025CFE2834E8B0005A0910 /* BT12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT12ViewController.xib; sourceTree = "<group>"; };
+		89025D032834F998005A0910 /* BT14ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT14ViewController.swift; sourceTree = "<group>"; };
+		89025D042834F998005A0910 /* BT14ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT14ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89025C642831E9AA005A0910 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89025C5E2831E9AA005A0910 = {
+			isa = PBXGroup;
+			children = (
+				89025C692831E9AA005A0910 /* BTAutoLayout */,
+				89025C682831E9AA005A0910 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89025C682831E9AA005A0910 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89025C672831E9AA005A0910 /* BTAutoLayout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89025C692831E9AA005A0910 /* BTAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				89025D022834F981005A0910 /* BT14 */,
+				89025CFC2834E89E005A0910 /* BT12 */,
+				89025CF52834DB94005A0910 /* BT11 */,
+				89025CEC2833960A005A0910 /* BT10 */,
+				89025CE628335063005A0910 /* BT9 */,
+				89025CDF283346D9005A0910 /* BT8 */,
+				89025CCB28333BB5005A0910 /* BT7 */,
+				89025CC4283339D3005A0910 /* BT6 */,
+				89025CBD28333623005A0910 /* BT5 */,
+				89025CA8283202C1005A0910 /* BT4 */,
+				89025C982831F74B005A0910 /* BT3 */,
+				89025C8C2831F2AF005A0910 /* BT2 */,
+				89025C802831EC1F005A0910 /* BT1 */,
+				89025C6A2831E9AA005A0910 /* AppDelegate.swift */,
+				89025C6C2831E9AA005A0910 /* SceneDelegate.swift */,
+				89025C702831E9AA005A0910 /* Main.storyboard */,
+				89025C732831E9AD005A0910 /* Assets.xcassets */,
+				89025C752831E9AD005A0910 /* LaunchScreen.storyboard */,
+				89025C782831E9AD005A0910 /* Info.plist */,
+			);
+			path = BTAutoLayout;
+			sourceTree = "<group>";
+		};
+		89025C802831EC1F005A0910 /* BT1 */ = {
+			isa = PBXGroup;
+			children = (
+				89025C812831EC37005A0910 /* BT1ViewController.swift */,
+				89025C822831EC37005A0910 /* BT1ViewController.xib */,
+				89025C872831F04F005A0910 /* BT1XViewController.swift */,
+				89025C882831F04F005A0910 /* BT1XViewController.xib */,
+			);
+			path = BT1;
+			sourceTree = "<group>";
+		};
+		89025C8C2831F2AF005A0910 /* BT2 */ = {
+			isa = PBXGroup;
+			children = (
+				89025C8D2831F2C6005A0910 /* BT2ViewController.swift */,
+				89025C8E2831F2C6005A0910 /* BT2ViewController.xib */,
+				89025C932831F36F005A0910 /* BT22ViewController.swift */,
+				89025C942831F36F005A0910 /* BT22ViewController.xib */,
+			);
+			path = BT2;
+			sourceTree = "<group>";
+		};
+		89025C982831F74B005A0910 /* BT3 */ = {
+			isa = PBXGroup;
+			children = (
+				89025C992831F75E005A0910 /* BT3ViewController.swift */,
+				89025C9A2831F75E005A0910 /* BT3ViewController.xib */,
+				89025C9E2831FD80005A0910 /* BT33ViewController.swift */,
+				89025C9F2831FD80005A0910 /* BT33ViewController.xib */,
+				89025CA32831FEE1005A0910 /* BT333ViewController.swift */,
+				89025CA42831FEE1005A0910 /* BT333ViewController.xib */,
+			);
+			path = BT3;
+			sourceTree = "<group>";
+		};
+		89025CA8283202C1005A0910 /* BT4 */ = {
+			isa = PBXGroup;
+			children = (
+				89025CA9283202D7005A0910 /* BT4ViewController.swift */,
+				89025CAA283202D7005A0910 /* BT4ViewController.xib */,
+				89025CAE283255FE005A0910 /* BT44ViewController.swift */,
+				89025CAF283255FE005A0910 /* BT44ViewController.xib */,
+				89025CB3283331AB005A0910 /* BT444ViewController.swift */,
+				89025CB4283331AB005A0910 /* BT444ViewController.xib */,
+				89025CB828333316005A0910 /* BT4444ViewController.swift */,
+				89025CB928333316005A0910 /* BT4444ViewController.xib */,
+			);
+			path = BT4;
+			sourceTree = "<group>";
+		};
+		89025CBD28333623005A0910 /* BT5 */ = {
+			isa = PBXGroup;
+			children = (
+				89025CBE28333642005A0910 /* BT5ViewController.swift */,
+				89025CBF28333642005A0910 /* BT5ViewController.xib */,
+			);
+			path = BT5;
+			sourceTree = "<group>";
+		};
+		89025CC4283339D3005A0910 /* BT6 */ = {
+			isa = PBXGroup;
+			children = (
+				89025CC5283339E8005A0910 /* BT6ViewController.swift */,
+				89025CC6283339E8005A0910 /* BT6ViewController.xib */,
+			);
+			path = BT6;
+			sourceTree = "<group>";
+		};
+		89025CCB28333BB5005A0910 /* BT7 */ = {
+			isa = PBXGroup;
+			children = (
+				89025CD028333C23005A0910 /* BT74ViewController.swift */,
+				89025CD128333C23005A0910 /* BT74ViewController.xib */,
+				89025CD528333D4F005A0910 /* BT75ViewController.swift */,
+				89025CD628333D4F005A0910 /* BT75ViewController.xib */,
+				89025CDA2833414C005A0910 /* BT76ViewController.swift */,
+				89025CDB2833414C005A0910 /* BT76ViewController.xib */,
+			);
+			path = BT7;
+			sourceTree = "<group>";
+		};
+		89025CDF283346D9005A0910 /* BT8 */ = {
+			isa = PBXGroup;
+			children = (
+				89025CE0283346F3005A0910 /* BT8ViewController.swift */,
+				89025CE1283346F3005A0910 /* BT8ViewController.xib */,
+			);
+			path = BT8;
+			sourceTree = "<group>";
+		};
+		89025CE628335063005A0910 /* BT9 */ = {
+			isa = PBXGroup;
+			children = (
+				89025CE728335080005A0910 /* BT9ViewController.swift */,
+				89025CE828335080005A0910 /* BT9ViewController.xib */,
+			);
+			path = BT9;
+			sourceTree = "<group>";
+		};
+		89025CEC2833960A005A0910 /* BT10 */ = {
+			isa = PBXGroup;
+			children = (
+				89025CED28339623005A0910 /* BT10ViewController.swift */,
+				89025CEE28339623005A0910 /* BT10ViewController.xib */,
+			);
+			path = BT10;
+			sourceTree = "<group>";
+		};
+		89025CF52834DB94005A0910 /* BT11 */ = {
+			isa = PBXGroup;
+			children = (
+				89025CF62834DBB2005A0910 /* BT11ViewController.swift */,
+				89025CF72834DBB2005A0910 /* BT11ViewController.xib */,
+			);
+			path = BT11;
+			sourceTree = "<group>";
+		};
+		89025CFC2834E89E005A0910 /* BT12 */ = {
+			isa = PBXGroup;
+			children = (
+				89025CFD2834E8B0005A0910 /* BT12ViewController.swift */,
+				89025CFE2834E8B0005A0910 /* BT12ViewController.xib */,
+			);
+			path = BT12;
+			sourceTree = "<group>";
+		};
+		89025D022834F981005A0910 /* BT14 */ = {
+			isa = PBXGroup;
+			children = (
+				89025D032834F998005A0910 /* BT14ViewController.swift */,
+				89025D042834F998005A0910 /* BT14ViewController.xib */,
+			);
+			path = BT14;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89025C662831E9AA005A0910 /* BTAutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89025C7B2831E9AD005A0910 /* Build configuration list for PBXNativeTarget "BTAutoLayout" */;
+			buildPhases = (
+				89025C632831E9AA005A0910 /* Sources */,
+				89025C642831E9AA005A0910 /* Frameworks */,
+				89025C652831E9AA005A0910 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BTAutoLayout;
+			productName = BTAutoLayout;
+			productReference = 89025C672831E9AA005A0910 /* BTAutoLayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89025C5F2831E9AA005A0910 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					89025C662831E9AA005A0910 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 89025C622831E9AA005A0910 /* Build configuration list for PBXProject "BTAutoLayout" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89025C5E2831E9AA005A0910;
+			productRefGroup = 89025C682831E9AA005A0910 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89025C662831E9AA005A0910 /* BTAutoLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89025C652831E9AA005A0910 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89025CA62831FEE1005A0910 /* BT333ViewController.xib in Resources */,
+				89025D062834F998005A0910 /* BT14ViewController.xib in Resources */,
+				89025CC8283339E8005A0910 /* BT6ViewController.xib in Resources */,
+				89025C842831EC37005A0910 /* BT1ViewController.xib in Resources */,
+				89025CE3283346F3005A0910 /* BT8ViewController.xib in Resources */,
+				89025C8A2831F04F005A0910 /* BT1XViewController.xib in Resources */,
+				89025CEA28335080005A0910 /* BT9ViewController.xib in Resources */,
+				89025CD328333C23005A0910 /* BT74ViewController.xib in Resources */,
+				89025D002834E8B0005A0910 /* BT12ViewController.xib in Resources */,
+				89025C962831F36F005A0910 /* BT22ViewController.xib in Resources */,
+				89025CF92834DBB2005A0910 /* BT11ViewController.xib in Resources */,
+				89025CAC283202D7005A0910 /* BT4ViewController.xib in Resources */,
+				89025C772831E9AD005A0910 /* LaunchScreen.storyboard in Resources */,
+				89025CB6283331AB005A0910 /* BT444ViewController.xib in Resources */,
+				89025C902831F2C6005A0910 /* BT2ViewController.xib in Resources */,
+				89025C742831E9AD005A0910 /* Assets.xcassets in Resources */,
+				89025CB1283255FE005A0910 /* BT44ViewController.xib in Resources */,
+				89025CDD2833414C005A0910 /* BT76ViewController.xib in Resources */,
+				89025CBB28333316005A0910 /* BT4444ViewController.xib in Resources */,
+				89025C9C2831F75E005A0910 /* BT3ViewController.xib in Resources */,
+				89025CD828333D4F005A0910 /* BT75ViewController.xib in Resources */,
+				89025CA12831FD80005A0910 /* BT33ViewController.xib in Resources */,
+				89025C722831E9AA005A0910 /* Main.storyboard in Resources */,
+				89025CC128333642005A0910 /* BT5ViewController.xib in Resources */,
+				89025CF028339623005A0910 /* BT10ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89025C632831E9AA005A0910 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89025CF82834DBB2005A0910 /* BT11ViewController.swift in Sources */,
+				89025CC7283339E8005A0910 /* BT6ViewController.swift in Sources */,
+				89025CDC2833414C005A0910 /* BT76ViewController.swift in Sources */,
+				89025C952831F36F005A0910 /* BT22ViewController.swift in Sources */,
+				89025CB5283331AB005A0910 /* BT444ViewController.swift in Sources */,
+				89025CEF28339623005A0910 /* BT10ViewController.swift in Sources */,
+				89025CD228333C23005A0910 /* BT74ViewController.swift in Sources */,
+				89025C8F2831F2C6005A0910 /* BT2ViewController.swift in Sources */,
+				89025C832831EC37005A0910 /* BT1ViewController.swift in Sources */,
+				89025C6B2831E9AA005A0910 /* AppDelegate.swift in Sources */,
+				89025C9B2831F75E005A0910 /* BT3ViewController.swift in Sources */,
+				89025CC028333642005A0910 /* BT5ViewController.swift in Sources */,
+				89025CA52831FEE1005A0910 /* BT333ViewController.swift in Sources */,
+				89025D052834F998005A0910 /* BT14ViewController.swift in Sources */,
+				89025C892831F04F005A0910 /* BT1XViewController.swift in Sources */,
+				89025CE928335080005A0910 /* BT9ViewController.swift in Sources */,
+				89025CAB283202D7005A0910 /* BT4ViewController.swift in Sources */,
+				89025CA02831FD80005A0910 /* BT33ViewController.swift in Sources */,
+				89025CFF2834E8B0005A0910 /* BT12ViewController.swift in Sources */,
+				89025CE2283346F3005A0910 /* BT8ViewController.swift in Sources */,
+				89025CB0283255FE005A0910 /* BT44ViewController.swift in Sources */,
+				89025CD728333D4F005A0910 /* BT75ViewController.swift in Sources */,
+				89025CBA28333316005A0910 /* BT4444ViewController.swift in Sources */,
+				89025C6D2831E9AA005A0910 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89025C702831E9AA005A0910 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89025C712831E9AA005A0910 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89025C752831E9AD005A0910 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89025C762831E9AD005A0910 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89025C792831E9AD005A0910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89025C7A2831E9AD005A0910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89025C7C2831E9AD005A0910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BTAutoLayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = View.BTAutoLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89025C7D2831E9AD005A0910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BTAutoLayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = View.BTAutoLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89025C622831E9AA005A0910 /* Build configuration list for PBXProject "BTAutoLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89025C792831E9AD005A0910 /* Debug */,
+				89025C7A2831E9AD005A0910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89025C7B2831E9AD005A0910 /* Build configuration list for PBXNativeTarget "BTAutoLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89025C7C2831E9AD005A0910 /* Debug */,
+				89025C7D2831E9AD005A0910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89025C5F2831E9AA005A0910 /* Project object */;
+}
