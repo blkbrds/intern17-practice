@@ -13,9 +13,9 @@ final class DetailViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var favoriteButton: UIButton!
-    @IBOutlet weak var player: WKYTPlayerView!
+    @IBOutlet private weak var player: WKYTPlayerView!
+    @IBOutlet weak var titleYoutubeLabel: UILabel!
 
     var viewModel: DetailViewModel? {
         didSet {
@@ -42,7 +42,7 @@ final class DetailViewController: UIViewController {
 
     private func updateView() {
       //  player.load(withVideoId: viewModel?.video.id ?? "")
-     //   titleLabel.text = viewModel?.video.title
+       // titleYoutubeLabel.text = viewModel?.video.title
     }
 
     private func loadData() {

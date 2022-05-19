@@ -17,6 +17,7 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        dismiss(animated: true, completion: nil)
     }
 
     // MARK: - Private functions

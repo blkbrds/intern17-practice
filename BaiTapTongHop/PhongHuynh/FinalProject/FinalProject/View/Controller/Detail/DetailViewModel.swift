@@ -28,7 +28,7 @@ final class DetailViewModel {
     }
 
     func loadNominationVideoAPIDetail(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&channelId=UClyA28-01x4z60eWQ2kiNbA&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
+        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)

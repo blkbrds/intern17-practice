@@ -14,7 +14,7 @@
                 <outlet property="favoriteButton" destination="OcI-tu-u0i" id="vZS-Ar-018"/>
                 <outlet property="player" destination="oAp-UC-eMS" id="Lw3-Od-DGJ"/>
                 <outlet property="tableView" destination="ES4-hm-kCm" id="QHF-2h-OFV"/>
-                <outlet property="titleLabel" destination="tQ6-lP-BMg" id="25u-9r-Jhb"/>
+                <outlet property="titleYoutubeLabel" destination="tQ6-lP-BMg" id="fOl-Oy-L12"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

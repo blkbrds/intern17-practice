@@ -54,6 +54,8 @@
 		CB73135B28309A5E00A71129 /* NominationVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB73135928309A5E00A71129 /* NominationVideoCell.xib */; };
 		CB77C5322832029900CA4C58 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB77C5302832029900CA4C58 /* DetailCell.swift */; };
 		CB77C5332832029900CA4C58 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB77C5312832029900CA4C58 /* DetailCell.xib */; };
+		CB7AF63A2835DC2500138BB2 /* ProfileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7AF6392835DC2500138BB2 /* ProfileCellViewModel.swift */; };
+		CB7AF63E2835DC4100138BB2 /* FrofileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7AF63D2835DC4100138BB2 /* FrofileViewModel.swift */; };
 		CB80E380283361D50051FA29 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB80E37E283361D50051FA29 /* FeaturedCell.swift */; };
 		CB80E381283361D50051FA29 /* FeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB80E37F283361D50051FA29 /* FeaturedCell.xib */; };
 		CB80E3872833634B0051FA29 /* NominationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB80E3852833634B0051FA29 /* NominationCell.swift */; };
@@ -142,6 +144,8 @@
 		CB73135928309A5E00A71129 /* NominationVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NominationVideoCell.xib; sourceTree = "<group>"; };
 		CB77C5302832029900CA4C58 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		CB77C5312832029900CA4C58 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		CB7AF6392835DC2500138BB2 /* ProfileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellViewModel.swift; sourceTree = "<group>"; };
+		CB7AF63D2835DC4100138BB2 /* FrofileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrofileViewModel.swift; sourceTree = "<group>"; };
 		CB80E37E283361D50051FA29 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
 		CB80E37F283361D50051FA29 /* FeaturedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCell.xib; sourceTree = "<group>"; };
 		CB80E3852833634B0051FA29 /* NominationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationCell.swift; sourceTree = "<group>"; };
@@ -365,6 +369,7 @@
 				CB5447A82831F78900085BDC /* Cell */,
 				CB5447A22831F67700085BDC /* ProfileViewController.swift */,
 				CB5447A32831F67700085BDC /* ProfileViewController.xib */,
+				CB7AF63D2835DC4100138BB2 /* FrofileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 			children = (
 				CB5447A92831F7A700085BDC /* ProfileCell.swift */,
 				CB5447AA2831F7A700085BDC /* ProfileCell.xib */,
+				CB7AF6392835DC2500138BB2 /* ProfileCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -727,6 +733,7 @@
 				6AF60D802313B56B00F5CBA2 /* Session.swift in Sources */,
 				CB2EAA012833A07200E017E4 /* NominationCellViewModel.swift in Sources */,
 				CBF4E32C283349E500E7EECC /* FeaturedVideoHomeCell.swift in Sources */,
+				CB7AF63E2835DC4100138BB2 /* FrofileViewModel.swift in Sources */,
 				CB2EA9DF2833970900E017E4 /* Data.Ext.swift in Sources */,
 				6AF60DC62313B56B00F5CBA2 /* ResponseSerializer.swift in Sources */,
 				6AF60D192313B35800F5CBA2 /* Errors.swift in Sources */,
@@ -745,6 +752,7 @@
 				6AF613C12313C13A00F5CBA2 /* TableView.swift in Sources */,
 				6AF613C42313C13A00F5CBA2 /* TableCell.swift in Sources */,
 				CB2EA9EF28339C8A00E017E4 /* Video.swift in Sources */,
+				CB7AF63A2835DC2500138BB2 /* ProfileCellViewModel.swift in Sources */,
 				CB80E3872833634B0051FA29 /* NominationCell.swift in Sources */,
 				CB2EA9EB28339BD600E017E4 /* HomeViewModel.swift in Sources */,
 				CBB5C139282CA71C00599DBD /* DetailViewController.swift in Sources */,

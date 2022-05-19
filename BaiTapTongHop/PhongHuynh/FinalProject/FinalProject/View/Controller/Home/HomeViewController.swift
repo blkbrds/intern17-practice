@@ -33,9 +33,9 @@ final class HomeViewController: UIViewController {
 
     private func configNavigation() {
         title = "Youtube"
-        let leftProfile = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-person-30"), style: .plain, target: self, action: nil)
+        let leftProfile = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-person-30"), style: .plain, target: self, action: #selector(leftProfileAction))
         navigationItem.leftBarButtonItem = leftProfile
-        let rightSetting = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-setting-24"), style: .plain, target: self, action: nil)
+        let rightSetting = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-setting-24"), style: .plain, target: self, action: #selector(rightSettingAction))
         navigationItem.rightBarButtonItem = rightSetting
     }
 
@@ -99,6 +99,14 @@ final class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+
+    @objc func leftProfileAction() {
+        let vc = ProfileViewController()
+        present(vc, animated: true, completion: nil)
+    }
+
+    @objc func rightSettingAction() {
     }
 }
 
