@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF00AAA12817D55700F2C727 /* MyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00AAA02817D55700F2C727 /* MyButtonView.swift */; };
+		BF00AAA32817D58100F2C727 /* MyButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF00AAA22817D58100F2C727 /* MyButtonView.xib */; };
+		BF00AAA62817E8BB00F2C727 /* Ex3ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00AAA42817E8BB00F2C727 /* Ex3ButtonViewController.swift */; };
+		BF00AAA72817E8BB00F2C727 /* Ex3ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF00AAA52817E8BB00F2C727 /* Ex3ButtonViewController.xib */; };
+		BF1493682816866A001121E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1493672816866A001121E3 /* AppDelegate.swift */; };
+		BF1493712816866D001121E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF1493702816866D001121E3 /* Assets.xcassets */; };
+		BF1493742816866D001121E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1493722816866D001121E3 /* LaunchScreen.storyboard */; };
+		BF14938228168827001121E3 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14937F28168827001121E3 /* MyView.swift */; };
+		BF14938328168827001121E3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF14938028168827001121E3 /* HomeViewController.xib */; };
+		BF14938428168827001121E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14938128168827001121E3 /* HomeViewController.swift */; };
+		BF14938628168934001121E3 /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14938528168934001121E3 /* MySliderView.swift */; };
+		BF14938828168956001121E3 /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF14938728168956001121E3 /* MySliderView.xib */; };
+		BF14938C2816AB46001121E3 /* Ex2SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14938A2816AB46001121E3 /* Ex2SliderViewController.swift */; };
+		BF14938D2816AB46001121E3 /* Ex2SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF14938B2816AB46001121E3 /* Ex2SliderViewController.xib */; };
+		BF50F8E62818FA3E004BD31F /* Ex4DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50F8E42818FA3D004BD31F /* Ex4DateViewController.swift */; };
+		BF50F8E72818FA3E004BD31F /* Ex4DateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF50F8E52818FA3D004BD31F /* Ex4DateViewController.xib */; };
+		BF73CFA62818E10400E53FEA /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF73CFA52818E10400E53FEA /* DatePickerView.swift */; };
+		BF73CFA82818E12300E53FEA /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF73CFA72818E12300E53FEA /* DatePickerView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BF00AAA02817D55700F2C727 /* MyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonView.swift; sourceTree = "<group>"; };
+		BF00AAA22817D58100F2C727 /* MyButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyButtonView.xib; sourceTree = "<group>"; };
+		BF00AAA42817E8BB00F2C727 /* Ex3ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex3ButtonViewController.swift; sourceTree = "<group>"; };
+		BF00AAA52817E8BB00F2C727 /* Ex3ButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex3ButtonViewController.xib; sourceTree = "<group>"; };
+		BF1493642816866A001121E3 /* ExecirseCustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExecirseCustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF1493672816866A001121E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF1493702816866D001121E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF1493732816866D001121E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF1493752816866D001121E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF14937F28168827001121E3 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		BF14938028168827001121E3 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BF14938128168827001121E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BF14938528168934001121E3 /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
+		BF14938728168956001121E3 /* MySliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
+		BF14938A2816AB46001121E3 /* Ex2SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2SliderViewController.swift; sourceTree = "<group>"; };
+		BF14938B2816AB46001121E3 /* Ex2SliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex2SliderViewController.xib; sourceTree = "<group>"; };
+		BF50F8E42818FA3D004BD31F /* Ex4DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex4DateViewController.swift; sourceTree = "<group>"; };
+		BF50F8E52818FA3D004BD31F /* Ex4DateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex4DateViewController.xib; sourceTree = "<group>"; };
+		BF73CFA52818E10400E53FEA /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		BF73CFA72818E12300E53FEA /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF1493612816866A001121E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF00AAA82817E8CE00F2C727 /* ButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				BF00AAA02817D55700F2C727 /* MyButtonView.swift */,
+				BF00AAA22817D58100F2C727 /* MyButtonView.xib */,
+			);
+			path = ButtonView;
+			sourceTree = "<group>";
+		};
+		BF14935B2816866A001121E3 = {
+			isa = PBXGroup;
+			children = (
+				BF1493662816866A001121E3 /* ExecirseCustomView */,
+				BF73CFA22818E04100E53FEA /* Exercise4 */,
+				BF14937D281686FA001121E3 /* Exercise3 */,
+				BF14937C281686E8001121E3 /* Exercise2 */,
+				BF14937B281686AA001121E3 /* Exercise1 */,
+				BF1493652816866A001121E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF1493652816866A001121E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF1493642816866A001121E3 /* ExecirseCustomView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF1493662816866A001121E3 /* ExecirseCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				BF1493672816866A001121E3 /* AppDelegate.swift */,
+				BF1493702816866D001121E3 /* Assets.xcassets */,
+				BF1493722816866D001121E3 /* LaunchScreen.storyboard */,
+				BF1493752816866D001121E3 /* Info.plist */,
+			);
+			path = ExecirseCustomView;
+			sourceTree = "<group>";
+		};
+		BF14937B281686AA001121E3 /* Exercise1 */ = {
+			isa = PBXGroup;
+			children = (
+				BF14937F28168827001121E3 /* MyView.swift */,
+				BF14938128168827001121E3 /* HomeViewController.swift */,
+				BF14938028168827001121E3 /* HomeViewController.xib */,
+			);
+			path = Exercise1;
+			sourceTree = "<group>";
+		};
+		BF14937C281686E8001121E3 /* Exercise2 */ = {
+			isa = PBXGroup;
+			children = (
+				BF1493892816AABE001121E3 /* SliderView */,
+				BF14938A2816AB46001121E3 /* Ex2SliderViewController.swift */,
+				BF14938B2816AB46001121E3 /* Ex2SliderViewController.xib */,
+			);
+			path = Exercise2;
+			sourceTree = "<group>";
+		};
+		BF14937D281686FA001121E3 /* Exercise3 */ = {
+			isa = PBXGroup;
+			children = (
+				BF00AAA82817E8CE00F2C727 /* ButtonView */,
+				BF00AAA42817E8BB00F2C727 /* Ex3ButtonViewController.swift */,
+				BF00AAA52817E8BB00F2C727 /* Ex3ButtonViewController.xib */,
+			);
+			path = Exercise3;
+			sourceTree = "<group>";
+		};
+		BF1493892816AABE001121E3 /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				BF14938728168956001121E3 /* MySliderView.xib */,
+				BF14938528168934001121E3 /* MySliderView.swift */,
+			);
+			path = SliderView;
+			sourceTree = "<group>";
+		};
+		BF50F8E82818FA54004BD31F /* MyDateView */ = {
+			isa = PBXGroup;
+			children = (
+				BF73CFA52818E10400E53FEA /* DatePickerView.swift */,
+				BF73CFA72818E12300E53FEA /* DatePickerView.xib */,
+			);
+			path = MyDateView;
+			sourceTree = "<group>";
+		};
+		BF73CFA22818E04100E53FEA /* Exercise4 */ = {
+			isa = PBXGroup;
+			children = (
+				BF50F8E82818FA54004BD31F /* MyDateView */,
+				BF50F8E42818FA3D004BD31F /* Ex4DateViewController.swift */,
+				BF50F8E52818FA3D004BD31F /* Ex4DateViewController.xib */,
+			);
+			path = Exercise4;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF1493632816866A001121E3 /* ExecirseCustomView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF1493782816866D001121E3 /* Build configuration list for PBXNativeTarget "ExecirseCustomView" */;
+			buildPhases = (
+				BF1493602816866A001121E3 /* Sources */,
+				BF1493612816866A001121E3 /* Frameworks */,
+				BF1493622816866A001121E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExecirseCustomView;
+			productName = ExecirseCustomView;
+			productReference = BF1493642816866A001121E3 /* ExecirseCustomView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF14935C2816866A001121E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					BF1493632816866A001121E3 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = BF14935F2816866A001121E3 /* Build configuration list for PBXProject "ExecirseCustomView" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF14935B2816866A001121E3;
+			productRefGroup = BF1493652816866A001121E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF1493632816866A001121E3 /* ExecirseCustomView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF1493622816866A001121E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF00AAA32817D58100F2C727 /* MyButtonView.xib in Resources */,
+				BF14938D2816AB46001121E3 /* Ex2SliderViewController.xib in Resources */,
+				BF73CFA82818E12300E53FEA /* DatePickerView.xib in Resources */,
+				BF1493742816866D001121E3 /* LaunchScreen.storyboard in Resources */,
+				BF00AAA72817E8BB00F2C727 /* Ex3ButtonViewController.xib in Resources */,
+				BF14938828168956001121E3 /* MySliderView.xib in Resources */,
+				BF50F8E72818FA3E004BD31F /* Ex4DateViewController.xib in Resources */,
+				BF1493712816866D001121E3 /* Assets.xcassets in Resources */,
+				BF14938328168827001121E3 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF1493602816866A001121E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF00AAA62817E8BB00F2C727 /* Ex3ButtonViewController.swift in Sources */,
+				BF14938228168827001121E3 /* MyView.swift in Sources */,
+				BF14938C2816AB46001121E3 /* Ex2SliderViewController.swift in Sources */,
+				BF14938628168934001121E3 /* MySliderView.swift in Sources */,
+				BF1493682816866A001121E3 /* AppDelegate.swift in Sources */,
+				BF00AAA12817D55700F2C727 /* MyButtonView.swift in Sources */,
+				BF73CFA62818E10400E53FEA /* DatePickerView.swift in Sources */,
+				BF50F8E62818FA3E004BD31F /* Ex4DateViewController.swift in Sources */,
+				BF14938428168827001121E3 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF1493722816866D001121E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF1493732816866D001121E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF1493762816866D001121E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF1493772816866D001121E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF1493792816866D001121E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExecirseCustomView/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Thuan.ExecirseCustomView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF14937A2816866D001121E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExecirseCustomView/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Thuan.ExecirseCustomView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF14935F2816866A001121E3 /* Build configuration list for PBXProject "ExecirseCustomView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF1493762816866D001121E3 /* Debug */,
+				BF1493772816866D001121E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF1493782816866D001121E3 /* Build configuration list for PBXNativeTarget "ExecirseCustomView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF1493792816866D001121E3 /* Debug */,
+				BF14937A2816866D001121E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF14935C2816866A001121E3 /* Project object */;
+}
