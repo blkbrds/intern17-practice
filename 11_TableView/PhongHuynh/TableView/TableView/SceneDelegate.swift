@@ -8,7 +8,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let vc = SearchBarViewController()
+        let vc = Bai10ViewController()
         let navi = UINavigationController(rootViewController: vc)
         window?.rootViewController = navi
         window?.makeKeyAndVisible()

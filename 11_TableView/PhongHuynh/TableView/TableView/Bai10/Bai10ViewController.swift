@@ -64,6 +64,7 @@ final class Bai10ViewController: UIViewController {
         for contact in contacts {
             arrayTong.append(contact.familyName + " " + contact.givenName)
         }
+        tableView.reloadData()
     }
     
     private func configTableView() {
