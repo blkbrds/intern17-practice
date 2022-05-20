@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 final class ProfileCell: UITableViewCell {
 
@@ -18,9 +19,15 @@ final class ProfileCell: UITableViewCell {
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        configView()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+
+    private func configView() {
+        nameLabel.text = UserDefaults.standard.string(forKey: "user_name")
     }
 }

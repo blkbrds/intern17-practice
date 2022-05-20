@@ -32,12 +32,10 @@ final class LoginViewController: UIViewController {
                 // Show the app's signed-out state.
             } else {
                 AppDelegate.shared.setroot(with: .tabbar)
+                // Save to userdefault
+                UserDefaults.standard.setValue(user?.profile?.name, forKey: "user_name")
+                UserDefaults.standard.setValue(user?.profile?.imageURL(withDimension: 320), forKey: "image")
             }
         }
     }
-//            guard let error = error else { return }
-//            guard let user = user else { return }
-//            let fullName = user.profile?.name
-//            let profilePicUrl = user.profile?.imageURL(withDimension: 320)
-    
 }
