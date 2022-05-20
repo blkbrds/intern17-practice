@@ -75,6 +75,7 @@
 		CBCC7E8B282A598000DBD668 /* ShortsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCC7E89282A598000DBD668 /* ShortsViewController.xib */; };
 		CBCC7E92282A59E000DBD668 /* ChanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC7E90282A59E000DBD668 /* ChanelViewController.swift */; };
 		CBCC7E93282A59E000DBD668 /* ChanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCC7E91282A59E000DBD668 /* ChanelViewController.xib */; };
+		CBE179CD2837797E0018DA73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBE179CC2837797E0018DA73 /* GoogleService-Info.plist */; };
 		CBF4E32C283349E500E7EECC /* FeaturedVideoHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF4E32A283349E500E7EECC /* FeaturedVideoHomeCell.swift */; };
 		CBF4E32D283349E500E7EECC /* FeaturedVideoHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4E32B283349E500E7EECC /* FeaturedVideoHomeCell.xib */; };
 		CBF4E33228334A8800E7EECC /* NewVideoHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF4E33028334A8800E7EECC /* NewVideoHomeCell.swift */; };
@@ -166,6 +167,7 @@
 		CBCC7E89282A598000DBD668 /* ShortsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortsViewController.xib; sourceTree = "<group>"; };
 		CBCC7E90282A59E000DBD668 /* ChanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanelViewController.swift; sourceTree = "<group>"; };
 		CBCC7E91282A59E000DBD668 /* ChanelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChanelViewController.xib; sourceTree = "<group>"; };
+		CBE179CC2837797E0018DA73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBF4E32A283349E500E7EECC /* FeaturedVideoHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedVideoHomeCell.swift; sourceTree = "<group>"; };
 		CBF4E32B283349E500E7EECC /* FeaturedVideoHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedVideoHomeCell.xib; sourceTree = "<group>"; };
 		CBF4E33028334A8800E7EECC /* NewVideoHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVideoHomeCell.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 		6AFD02F6231375EE004940FA = {
 			isa = PBXGroup;
 			children = (
+				CBE179CC2837797E0018DA73 /* GoogleService-Info.plist */,
 				6AFD0301231375EE004940FA /* FinalProject */,
 				6AFD0316231375EF004940FA /* FinalProjectTests */,
 				6AFD0300231375EE004940FA /* Products */,
@@ -609,6 +612,7 @@
 				CB5447BC2831FDD800085BDC /* FavoriteCell.xib in Resources */,
 				6AFD030A231375EF004940FA /* Assets.xcassets in Resources */,
 				CBCC7E79282A588100DBD668 /* HomeViewController.xib in Resources */,
+				CBE179CD2837797E0018DA73 /* GoogleService-Info.plist in Resources */,
 				CB5447A52831F67700085BDC /* ProfileViewController.xib in Resources */,
 				CB73135B28309A5E00A71129 /* NominationVideoCell.xib in Resources */,
 				CBF4E33328334A8800E7EECC /* NewVideoHomeCell.xib in Resources */,
