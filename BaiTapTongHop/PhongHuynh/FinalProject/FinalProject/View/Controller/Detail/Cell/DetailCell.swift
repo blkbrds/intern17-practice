@@ -14,6 +14,7 @@ final class DetailCell: UITableViewCell {
     @IBOutlet private weak var youtubeVideoImageView: UIImageView!
     @IBOutlet private weak var youtubeVideoLabel: UILabel!
 
+    // MARK: - Life cycle
     var viewModel: DetailCellViewModel? {
         didSet {
             updateView()

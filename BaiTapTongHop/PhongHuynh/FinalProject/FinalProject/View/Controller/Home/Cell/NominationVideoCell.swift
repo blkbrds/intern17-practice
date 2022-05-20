@@ -8,7 +8,9 @@
 
 import UIKit
 
+// MARK: - NominationVideoCellDelegate
 protocol NominationVideoCellDelegate: class {
+    
     func controller(controller: NominationVideoCell, needsPerfom actions: NominationVideoCell.Action)
 }
 
@@ -30,6 +32,7 @@ final class NominationVideoCell: UITableViewCell {
     }
     weak var delegate: NominationVideoCellDelegate?
 
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configCollectionView()

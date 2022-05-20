@@ -11,11 +11,17 @@ import Foundation
 final class DetailViewModel {
 
     // MARK: - Private functions
-    var video: Video
+    var featuredVideo: Video?
+    var nominationVideo: NominationVideo?
+    var newVideo: NominationVideo?
+    var type: HomeViewModel.CellType
     var videos: [Video] = []
 
-    init(video: Video) {
-        self.video = video
+    init(featuredVideo: Video?, nominationVideo: NominationVideo?, newVideo: NominationVideo?, type: HomeViewModel.CellType) {
+        self.featuredVideo = featuredVideo
+        self.nominationVideo = nominationVideo
+        self.newVideo = newVideo
+        self.type = type
     }
 
     // MARK: - Methods

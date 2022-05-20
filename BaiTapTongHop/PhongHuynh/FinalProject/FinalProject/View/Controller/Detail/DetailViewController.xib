@@ -56,6 +56,9 @@
                                     <rect key="frame" x="295.5" y="0.0" width="58.5" height="34.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" image="icons8-favorite-24"/>
+                                    <connections>
+                                        <action selector="favoriteButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="b9d-Me-T1t"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

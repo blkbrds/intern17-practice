@@ -14,6 +14,7 @@ final class NominationCell: UICollectionViewCell {
     @IBOutlet private weak var nominationVideoImageView: UIImageView!
     @IBOutlet private weak var nominationVideoLabel: UILabel!
 
+    // MARK: - Life cycle
     var viewModel: NominationCellViewModel? {
         didSet {
             updateView()

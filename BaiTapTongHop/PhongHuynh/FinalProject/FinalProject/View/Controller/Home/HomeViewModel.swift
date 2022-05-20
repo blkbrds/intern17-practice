@@ -9,15 +9,26 @@
 import Foundation
 
 final class HomeViewModel {
+    
+    // MARK: - Define
+    enum CellType: Int {
+        case featured = 0
+        case nomination
+        case new
+    }
 
     // MARK: - Private functions
-    var videos: [Video] = []
     var featureVideos: [Video] = []
-    var nominationVideos: [Video] = []
+    var newVideos: [NominationVideo] = []
+    var nominationVideos: [NominationVideo] = []
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
-        return videos.count
+        return CellType.new.rawValue + 1
+    }
+
+    func viewModelForFeaturedVideo(indexPath: IndexPath) -> FeaturedVideoHomeCellViewModel {
+        return FeaturedVideoHomeCellViewModel(videos: featureVideos)
     }
 
     func viewModelForNomination(indexPath: IndexPath) -> NominationVideoCellViewModel {
@@ -25,33 +36,29 @@ final class HomeViewModel {
     }
 
     func viewModelForNewVideo(indexPath: IndexPath) -> NewVideoHomeCellViewModel {
-        return NewVideoHomeCellViewModel(videos: videos)
+        return NewVideoHomeCellViewModel(videos: newVideos)
     }
 
-    func viewModelForFeaturedVideo(indexPath: IndexPath) -> FeaturedVideoHomeCellViewModel {
-        return FeaturedVideoHomeCellViewModel(videos: featureVideos)
+    func viewModelForDetailFeaturedVideo(indexPath: IndexPath) -> DetailViewModel {
+        return DetailViewModel(featuredVideo: featureVideos[indexPath.row], nominationVideo: nil, newVideo: nil, type: .featured)
     }
 
     func viewModelForDetailNominationVideo(indexPath: IndexPath) -> DetailViewModel {
-        return DetailViewModel(video: nominationVideos[indexPath.row])
+        return DetailViewModel(featuredVideo: nil, nominationVideo: nominationVideos[indexPath.row], newVideo: nil, type: .nomination)
     }
-    
+
     func viewModelForDetailNewVideo(indexPath: IndexPath) -> DetailViewModel {
-        return DetailViewModel(video: videos[indexPath.row])
-    }
-    
-    func viewModelForDetailFeaturedVideo(indexPath: IndexPath) -> DetailViewModel {
-        return DetailViewModel(video: featureVideos[indexPath.row])
+        return DetailViewModel(featuredVideo: nil, nominationVideo: nil, newVideo: newVideos[indexPath.row], type: .new)
     }
 
     func loadNominationVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&channelId=UClyA28-01x4z60eWQ2kiNbA&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
+        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&regionCode=VN&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.nominationVideos.append(Video(json: item))
+                        self.nominationVideos.append(NominationVideo(json: item))
                     }
                     completion(.success)
                 }
@@ -64,13 +71,13 @@ final class HomeViewModel {
     }
 
     func loadNewVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&channelId=UCd0neB_LB1xpwIYDetX2qTg&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
+        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&relatedToVideoId=XtHh0uNscnk&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.videos.append(Video(json: item))
+                        self.newVideos.append(NominationVideo(json: item))
                     }
                     completion(.success)
                 }

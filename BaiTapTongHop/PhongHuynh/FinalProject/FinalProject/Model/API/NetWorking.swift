@@ -10,11 +10,11 @@ import UIKit
 import Foundation
 
 final class NetWorking {
-    
+
     enum APIError: Error {
         case error(String)
         case errorURL
-        
+
         var localizedDescription: String {
             switch self {
             case .error(let string):
@@ -24,26 +24,26 @@ final class NetWorking {
             }
         }
     }
-    
+
     enum APIResult {
         case success(Data?)
         case failure(APIError)
     }
-    
-    //MARK: - singleton
+
+    // MARK: - singleton
     private static var sharedNetworking: NetWorking = {
         let networking = NetWorking()
         return networking
     }()
-    
+
     class func shared() -> NetWorking {
         return sharedNetworking
     }
-    
-    //MARK: - init
+
+    // MARK: - init
     private init() {}
-    
-    //MARK: - request
+
+    // MARK: - request
     func request(with urlString: String, completion: @escaping (Data?, APIError?) -> Void) {
         guard let url = URL(string: urlString) else {
             let error = APIError.error("URL lỗi")
@@ -52,7 +52,6 @@ final class NetWorking {
         }
         let config = URLSessionConfiguration.ephemeral
         config.waitsForConnectivity = true
-        
         let session = URLSession(configuration: config)
         let task = session.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {

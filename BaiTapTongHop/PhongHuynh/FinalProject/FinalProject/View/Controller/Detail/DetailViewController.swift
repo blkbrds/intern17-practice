@@ -15,8 +15,9 @@ final class DetailViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var favoriteButton: UIButton!
     @IBOutlet private weak var player: WKYTPlayerView!
-    @IBOutlet weak var titleYoutubeLabel: UILabel!
+    @IBOutlet private weak var titleYoutubeLabel: UILabel!
 
+    // MARK: - Properties
     var viewModel: DetailViewModel? {
         didSet {
            // tableView.reloadData()
@@ -29,7 +30,6 @@ final class DetailViewController: UIViewController {
         configTableView()
         loadData()
         updateView()
-       // player.load(withVideoId: "rAgu44vDBys")
     }
 
     // MARK: - Private functions
@@ -41,8 +41,19 @@ final class DetailViewController: UIViewController {
     }
 
     private func updateView() {
-      //  player.load(withVideoId: viewModel?.video.id ?? "")
-        titleYoutubeLabel.text = viewModel?.video.title
+        switch viewModel?.type {
+        case .featured:
+            player.load(withVideoId: viewModel?.featuredVideo?.id ?? "")
+            titleYoutubeLabel.text = viewModel?.featuredVideo?.title
+        case .nomination:
+            player.load(withVideoId: viewModel?.nominationVideo?.videoId ?? "")
+            titleYoutubeLabel.text = viewModel?.nominationVideo?.title
+        case .new:
+            player.load(withVideoId: viewModel?.newVideo?.videoId ?? "")
+            titleYoutubeLabel.text = viewModel?.newVideo?.title
+        case .none:
+            break
+        }
     }
 
     private func loadData() {
@@ -59,8 +70,13 @@ final class DetailViewController: UIViewController {
             }
         }
     }
+
+    // MARK: - IBActions
+    @IBAction private func favoriteButtonTouchUpInside(_ sender: Any) {
+    }
 }
 
+// MARK: - UITableViewDataSource
 extension DetailViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,5 +95,6 @@ extension DetailViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension DetailViewController: UITableViewDelegate {
 }

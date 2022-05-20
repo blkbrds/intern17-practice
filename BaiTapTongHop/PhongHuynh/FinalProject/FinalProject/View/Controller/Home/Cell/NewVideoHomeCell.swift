@@ -13,13 +13,14 @@ protocol NewVideoHomeCellDelegate: class {
 }
 
 final class NewVideoHomeCell: UITableViewCell {
-    
+
+    // MARK: - Define
     enum Action {
         case moveToDetail(indexPath: IndexPath)
     }
 
     // MARK: - IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
     // MARK: - Properties
     var viewModel: NewVideoHomeCellViewModel? {
@@ -61,7 +62,7 @@ extension NewVideoHomeCell: UICollectionViewDataSource {
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let delegate = delegate {
             delegate.controller(controller: self, needsPerfom: .moveToDetail(indexPath: indexPath))

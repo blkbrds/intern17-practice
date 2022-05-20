@@ -18,12 +18,9 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Private functions
     private func configTableView() {
-        let nib = UINib(nibName: "NewVideoHomeCell", bundle: Bundle.main)
-        let nib2 = UINib(nibName: "FeaturedVideoHomeCell", bundle: Bundle.main)
-        let nib3 = UINib(nibName: "NominationVideoCell", bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: "NewVideoHomeCell")
-        tableView.register(nib2, forCellReuseIdentifier: "FeaturedVideoHomeCell")
-        tableView.register(nib3, forCellReuseIdentifier: "NominationVideoCell")
+        tableView.register(NewVideoHomeCell.self)
+        tableView.register(FeaturedVideoHomeCell.self)
+        tableView.register(NominationVideoCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         //        tableView.rowHeight = UITableView.automaticDimension
@@ -44,12 +41,10 @@ final class HomeViewController: UIViewController {
         loadNominationVideoData {
             group.leave()
         }
-
         group.enter()
         loadNewVideoData {
             group.leave()
         }
-
         group.enter()
         loadVideoTrendingData {
             group.leave()
@@ -99,57 +94,58 @@ final class HomeViewController: UIViewController {
         }
     }
 
-    @objc func leftProfileAction() {
+    // MARK: - Objc functions
+    @objc private func leftProfileAction() {
         let vc = ProfileViewController()
         present(vc, animated: true, completion: nil)
     }
 
-    @objc func rightSettingAction() {
+    @objc private func rightSettingAction() {
     }
 }
 
 // MARK: - UITableViewDataSource
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfItems(section: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeaturedVideoHomeCell") as? FeaturedVideoHomeCell else { return UITableViewCell() }
+        guard let cellType = HomeViewModel.CellType(rawValue: indexPath.row) else { return UITableViewCell() }
+        switch cellType {
+        case .featured:
+            let cell = tableView.dequeue(FeaturedVideoHomeCell.self)
             cell.viewModel = viewModel.viewModelForFeaturedVideo(indexPath: indexPath)
             cell.delegate = self
             return cell
-        } else if indexPath.row == 1 {
-            guard let cell1 = tableView.dequeueReusableCell(withIdentifier: "NewVideoHomeCell") as? NewVideoHomeCell else { return UITableViewCell() }
-            cell1.viewModel = viewModel.viewModelForNewVideo(indexPath: indexPath)
-            cell1.delegate = self
-            return cell1
-        } else if indexPath.row == 2 {
-            guard let cell2 = tableView.dequeueReusableCell(withIdentifier: "NominationVideoCell") as? NominationVideoCell else { return UITableViewCell() }
-            cell2.viewModel = viewModel.viewModelForNomination(indexPath: indexPath)
-            cell2.delegate = self
-            return cell2
+        case .new:
+            let cell = tableView.dequeue(NewVideoHomeCell.self)
+            cell.viewModel = viewModel.viewModelForNewVideo(indexPath: indexPath)
+            cell.delegate = self
+            return cell
+        case .nomination:
+            let cell = tableView.dequeue(NominationVideoCell.self)
+            cell.viewModel = viewModel.viewModelForNomination(indexPath: indexPath)
+            cell.delegate = self
+            return cell
         }
-        return UITableViewCell()
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = DetailViewController()
-//        vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
-//        navigationController?.pushViewController(vc, animated: true)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row <= 2 {
+        guard let cellType = HomeViewModel.CellType(rawValue: indexPath.row) else { return 0 }
+        switch cellType {
+        case .featured, .nomination, .new:
             return 300
-        } else {
-            return 0
         }
     }
 }
 
+// MARK: - UITableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+}
+
+// MARK: - NominationVideoCellDelegate
 extension HomeViewController: NominationVideoCellDelegate {
 
     func controller(controller: NominationVideoCell, needsPerfom actions: NominationVideoCell.Action) {
@@ -162,6 +158,7 @@ extension HomeViewController: NominationVideoCellDelegate {
     }
 }
 
+// MARK: - NewVideoHomeCellDelegate
 extension HomeViewController: NewVideoHomeCellDelegate {
     func controller(controller: NewVideoHomeCell, needsPerfom actions: NewVideoHomeCell.Action) {
         switch actions {
@@ -173,6 +170,7 @@ extension HomeViewController: NewVideoHomeCellDelegate {
     }
 }
 
+// MARK: - FeaturedVideoHomeCellDelegate
 extension HomeViewController: FeaturedVideoHomeCellDelegate {
     func controller(controller: FeaturedVideoHomeCell, needsPerfom actions: FeaturedVideoHomeCell.Action) {
         switch actions {

@@ -12,10 +12,10 @@ import UIKit
 final class NewVideoHomeCellViewModel {
 
     // MARK: Properties
-    var videos: [Video]
+    var videos: [NominationVideo]
 
     // MARK: - Init
-    init(videos: [Video]) {
+    init(videos: [NominationVideo]) {
         self.videos = videos
     }
 
