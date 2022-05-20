@@ -6,7 +6,7 @@ target 'FinalProject' do
   # Youtube
   pod 'GoogleSignIn'
   pod 'FirebaseAuth'
-  
+  pod 'YoutubePlayer-in-WKWebView'
   # Architect
   pod 'MVVM-Swift', '1.1.0' # MVVM Architect for iOS Application.
 
