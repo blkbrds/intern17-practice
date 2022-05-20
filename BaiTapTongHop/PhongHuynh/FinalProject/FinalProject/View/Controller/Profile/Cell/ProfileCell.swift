@@ -16,11 +16,13 @@ final class ProfileCell: UITableViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nextButton: UIButton!
 
+    // MARK: - Properties
+    var viewModel: ProfileCellViewModel = ProfileCellViewModel()
+
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configView()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,5 +31,9 @@ final class ProfileCell: UITableViewCell {
 
     private func configView() {
         nameLabel.text = UserDefaults.standard.string(forKey: "user_name")
+        viewModel.updateImageView(completion: { [weak self] (image) in
+            guard let this = self else { return }
+            this.userImageView.image = image
+        })
     }
 }

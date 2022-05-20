@@ -11,7 +11,7 @@ import Foundation
 final class FrofileViewModel {
     
     var video: Video
-    
+
     init(video: Video) {
         self.video = video
     }

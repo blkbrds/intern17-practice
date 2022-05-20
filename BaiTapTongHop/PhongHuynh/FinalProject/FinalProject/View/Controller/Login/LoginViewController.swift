@@ -26,6 +26,7 @@ final class LoginViewController: UIViewController {
         loginGmailButton.layer.borderColor = UIColor.white.cgColor
     }
 
+    // MARK: - IBActions
     @IBAction private func loginWithGmailButtonTouchUpInside(_ sender: Any) {
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
             if error != nil || user == nil {
@@ -34,7 +35,7 @@ final class LoginViewController: UIViewController {
                 AppDelegate.shared.setroot(with: .tabbar)
                 // Save to userdefault
                 UserDefaults.standard.setValue(user?.profile?.name, forKey: "user_name")
-                UserDefaults.standard.setValue(user?.profile?.imageURL(withDimension: 320), forKey: "image")
+                UserDefaults.standard.setValue(user?.profile?.imageURL(withDimension: 320)?.absoluteString, forKey: "image")
             }
         }
     }
