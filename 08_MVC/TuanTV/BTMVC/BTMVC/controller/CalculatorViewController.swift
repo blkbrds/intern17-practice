@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+final class CalculatorViewController: UIViewController {
     private var result: Float = 0
     private var isTyping = false
     var storeOperand = StoreOperand()
@@ -40,7 +40,6 @@ class CalculatorViewController: UIViewController {
             return value
         }
         set {
-            print("display value", newValue)
             displayLabel.text = String(Int(newValue))
         }
     }
