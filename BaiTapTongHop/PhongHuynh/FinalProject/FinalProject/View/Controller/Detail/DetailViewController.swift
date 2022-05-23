@@ -20,7 +20,7 @@ final class DetailViewController: UIViewController {
     // MARK: - Properties
     var viewModel: DetailViewModel? {
         didSet {
-           // tableView.reloadData()
+          //  tableView.reloadData()
         }
     }
 
@@ -56,18 +56,29 @@ final class DetailViewController: UIViewController {
         }
     }
 
-    private func loadData() {
-        guard let viewModel = viewModel else { return }
-        viewModel.loadNominationVideoAPIDetail { [weak self] (result) in
-            guard let this = self else { return }
+    private func loadVideoData(completion: @escaping () -> Void ) {
+        viewModel?.loadAPIDetail { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    this.tableView.reloadData()
+                    completion()
                 case .failure(let error):
                     print("error\(error)")
                 }
             }
+        }
+    }
+
+    private func loadData() {
+        HUD.show()
+        let group = DispatchGroup()
+        group.enter()
+        loadVideoData {
+            group.leave()
+        }
+        group.notify(queue: .main) {
+            HUD.dismiss()
+            self.tableView.reloadData()
         }
     }
 

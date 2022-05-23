@@ -9,7 +9,7 @@
 import Foundation
 
 final class HomeViewModel {
-    
+
     // MARK: - Define
     enum CellType: Int {
         case featured = 0
@@ -52,7 +52,7 @@ final class HomeViewModel {
     }
 
     func loadNominationVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&regionCode=VN&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
+        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&relatedToVideoId=XtHh0uNscnk&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)
@@ -71,7 +71,7 @@ final class HomeViewModel {
     }
 
     func loadNewVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&relatedToVideoId=XtHh0uNscnk&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
+        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&regionCode=VN&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)
@@ -91,6 +91,25 @@ final class HomeViewModel {
 
     func loadVideoTrendingAPI(completion: @escaping APICompletion) {
         let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
+        NetWorking.shared().request(with: urlString) { (data, error) in
+            if let data = data {
+                let json = self.convertToJSON(from: data)
+                if let items = json["items"] as? [JSON] {
+                    for item in items {
+                        self.featureVideos.append(Video(json: item))
+                    }
+                    completion(.success)
+                }
+            } else {
+                if let error = error {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
+    func loadSearchVideoAPI(completion: @escaping APICompletion) {
+        let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=YOURKEYWORD&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)

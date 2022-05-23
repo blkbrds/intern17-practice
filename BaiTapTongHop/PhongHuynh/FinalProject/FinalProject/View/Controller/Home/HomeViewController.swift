@@ -31,7 +31,8 @@ final class HomeViewController: UIViewController {
         let leftProfile = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-person-30"), style: .plain, target: self, action: #selector(leftProfileAction))
         navigationItem.leftBarButtonItem = leftProfile
         let rightSetting = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-setting-24"), style: .plain, target: self, action: #selector(rightSettingAction))
-        navigationItem.rightBarButtonItem = rightSetting
+        let rightSearch = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-search-30"), style: .plain, target: self, action: #selector(rightSearchAction))
+        navigationItem.rightBarButtonItems = [rightSetting, rightSearch]
     }
 
     private func loadData() {
@@ -101,6 +102,11 @@ final class HomeViewController: UIViewController {
     }
 
     @objc private func rightSettingAction() {
+    }
+
+    @objc private func rightSearchAction() {
+        let vc = SearchViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

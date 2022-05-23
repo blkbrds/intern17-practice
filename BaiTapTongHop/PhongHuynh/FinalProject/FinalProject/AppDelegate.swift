@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         window = UIWindow(frame: UIScreen.main.bounds)
-        setroot(with: .login)
+        setroot(with: .tabbar)
         window?.makeKeyAndVisible()
         return true
     }

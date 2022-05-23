@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - NominationVideoCellDelegate
 protocol NominationVideoCellDelegate: class {
-    
+
     func controller(controller: NominationVideoCell, needsPerfom actions: NominationVideoCell.Action)
 }
 

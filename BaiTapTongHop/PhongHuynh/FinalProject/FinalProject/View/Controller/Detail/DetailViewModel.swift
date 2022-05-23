@@ -33,8 +33,8 @@ final class DetailViewModel {
         return DetailCellViewModel(video: videos[indexPath.row])
     }
 
-    func loadNominationVideoAPIDetail(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
+    func loadAPIDetail(completion: @escaping APICompletion) {
+        let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)

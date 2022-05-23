@@ -20,36 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-yw-qAB">
-                    <rect key="frame" x="0.0" y="90" width="414" height="54"/>
-                    <subviews>
-                        <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="1pf-Iy-HXv">
-                            <rect key="frame" x="10" y="0.0" width="394" height="56"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="1pf-Iy-HXv" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="top" id="9NQ-Io-wHD"/>
-                        <constraint firstAttribute="trailing" secondItem="1pf-Iy-HXv" secondAttribute="trailing" constant="10" id="HrL-oU-Ipc"/>
-                        <constraint firstItem="1pf-Iy-HXv" firstAttribute="leading" secondItem="Rca-yw-qAB" secondAttribute="leading" constant="10" id="Koa-I0-ybW"/>
-                    </constraints>
-                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cpy-ok-i1v">
-                    <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cpy-ok-i1v" secondAttribute="bottom" id="3Xp-LY-n8p"/>
-                <constraint firstItem="Rca-yw-qAB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Odr-mo-7nE"/>
-                <constraint firstItem="Rca-yw-qAB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Tpv-bb-fLT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cpy-ok-i1v" secondAttribute="trailing" id="az3-Gc-4Mx"/>
-                <constraint firstItem="cpy-ok-i1v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bEv-fE-pkd"/>
-                <constraint firstItem="cpy-ok-i1v" firstAttribute="top" secondItem="Rca-yw-qAB" secondAttribute="bottom" id="eAC-Y8-6K3"/>
-                <constraint firstItem="Rca-yw-qAB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="ftT-B0-vgf"/>
-                <constraint firstItem="Rca-yw-qAB" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="pwp-zY-HmT"/>
+                <constraint firstItem="cpy-ok-i1v" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="54h-ZP-H1o"/>
+                <constraint firstItem="cpy-ok-i1v" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="b3J-d2-SZc"/>
+                <constraint firstItem="cpy-ok-i1v" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jcV-zK-7JS"/>
+                <constraint firstItem="cpy-ok-i1v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="quw-KX-BuK"/>
             </constraints>
             <point key="canvasLocation" x="-281.15942028985512" y="6.6964285714285712"/>
         </view>

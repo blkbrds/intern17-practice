@@ -9,7 +9,7 @@
 import Foundation
 
 final class NominationVideo {
-    
+
     // MARK: - Properties
     var videoId: String?
     var imageURL: String?
