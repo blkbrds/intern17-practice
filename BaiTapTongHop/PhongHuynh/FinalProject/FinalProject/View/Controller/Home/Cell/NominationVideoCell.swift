@@ -40,8 +40,7 @@ final class NominationVideoCell: UITableViewCell {
 
     // MARK: - Private functions
     private func configCollectionView() {
-        let nib = UINib(nibName: "NominationCell", bundle: Bundle.main)
-        collectionView.register(nib, forCellWithReuseIdentifier: "NominationCell")
+        collectionView.register(NominationCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -56,7 +55,7 @@ extension NominationVideoCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NominationCell", for: indexPath) as? NominationCell else { return UICollectionViewCell() }
+        let cell = collectionView.dequeue(NominationCell.self, forIndexPath: indexPath)
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }

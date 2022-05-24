@@ -9,9 +9,11 @@
 import Foundation
 
 final class FrofileViewModel {
-    
+
+    // MARK: - Properties
     var video: Video
 
+    // MARK: - Init
     init(video: Video) {
         self.video = video
     }

@@ -20,7 +20,6 @@ final class DetailViewController: UIViewController {
     // MARK: - Properties
     var viewModel: DetailViewModel? {
         didSet {
-          //  tableView.reloadData()
         }
     }
 
@@ -34,8 +33,7 @@ final class DetailViewController: UIViewController {
 
     // MARK: - Private functions
     private func configTableView() {
-        let nib = UINib(nibName: "DetailCell", bundle: .main)
-        tableView.register(nib, forCellReuseIdentifier: "DetailCell")
+        tableView.register(DetailCell.self)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -96,7 +94,7 @@ extension DetailViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as? DetailCell else { return UITableViewCell() }
+        let cell = tableView.dequeue(DetailCell.self)
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }

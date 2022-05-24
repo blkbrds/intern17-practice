@@ -10,11 +10,12 @@ import UIKit
 
 // MARK: - FeaturedVideoHomeCellDelegate
 protocol FeaturedVideoHomeCellDelegate: class {
+
     func controller(controller: FeaturedVideoHomeCell, needsPerfom actions: FeaturedVideoHomeCell.Action)
 }
 
 final class FeaturedVideoHomeCell: UITableViewCell {
-    
+
     // MARK: - Define
     enum Action {
         case moveToDetail(indexPath: IndexPath)
@@ -43,8 +44,7 @@ final class FeaturedVideoHomeCell: UITableViewCell {
 
     // MARK: - Private functions
     private func configCollectionView() {
-        let nib = UINib(nibName: "FeaturedCell", bundle: Bundle.main)
-        collectionView.register(nib, forCellWithReuseIdentifier: "FeaturedCell")
+        collectionView.register(FeaturedCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -52,14 +52,14 @@ final class FeaturedVideoHomeCell: UITableViewCell {
 
 // MARK: - UICollectionViewDataSourceUICollectionViewDataSource
 extension FeaturedVideoHomeCell: UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let viewModel = viewModel else { return 0 }
         return viewModel.numberOfItems(section: section)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedCell", for: indexPath) as? FeaturedCell else { return UICollectionViewCell() }
+        let cell = collectionView.dequeue(FeaturedCell.self, forIndexPath: indexPath)
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }

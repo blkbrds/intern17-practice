@@ -14,8 +14,7 @@ final class SearchViewController: UIViewController {
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
 
-    var contacts: [String] = []
-    var contactsData: [String] = []
+    // MARK: - Properties
     var viewModel: SearchViewModel = SearchViewModel()
 
     // MARK: - Life cycle
@@ -23,28 +22,15 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
         configTableView()
         configSearchBar()
-        loadData()
     }
 
-    private func loadData() {
-        HUD.show()
-        let group = DispatchGroup()
-        group.enter()
-        loadSearchVideoData {
-            group.leave()
-        }
-        group.notify(queue: .main) {
-            HUD.dismiss()
-            self.tableView.reloadData()
-        }
-    }
-
-    private func loadSearchVideoData(completion: @escaping () -> Void ) {
-        viewModel.loadSearchVideoAPI { (result) in
+    // MARK: - Private functions
+    private func loadSearchVideoData(keyword: String ) {
+        viewModel.loadSearchVideoAPI(keyword: keyword) { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    completion()
+                    self.tableView.reloadData()
                 case .failure(let error):
                     print("error\(error)")
                 }
@@ -53,8 +39,7 @@ final class SearchViewController: UIViewController {
     }
 
     private func configTableView() {
-        let nib = UINib(nibName: "SearchCell", bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: "SearchCell")
+        tableView.register(SearchCell.self)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -62,27 +47,9 @@ final class SearchViewController: UIViewController {
     private func configSearchBar() {
         searchBar.delegate = self
     }
-
-    private func search(keyword: String) {
-        contacts = getContacts(keyword: keyword)
-        tableView.reloadData()
-    }
-
-    private func getContacts(keyword: String) -> [String] {
-        if keyword.trimmingCharacters(in: CharacterSet(charactersIn: " ")) == "" {
-            return contactsData
-        } else {
-            var data: [String] = []
-            for contact in contactsData {
-                if let _ = contact.range(of: keyword) {
-                    data.append(contact)
-                }
-            }
-            return data
-        }
-    }
 }
 
+// MARK: - UITableViewDataSource
 extension SearchViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,7 +57,7 @@ extension SearchViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as? SearchCell else { return UITableViewCell() }
+        let cell = tableView.dequeue(SearchCell.self)
         cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
         return cell
     }
@@ -100,31 +67,19 @@ extension SearchViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension SearchViewController: UITableViewDelegate {
 }
 
+// MARK: - UISearchBarDelegate
 extension SearchViewController: UISearchBarDelegate {
 
-    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        var currentText = ""
-        if let searchBarText = searchBar.text {
-            currentText = searchBarText
-        }
-        let keyword = (currentText as NSString).replacingCharacters(in: range, with: text)
-        search(keyword: keyword)
-        return true
-    }
-
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let keyWord = searchBar.text else {
-            search(keyword: "")
-            return
-        }
-        search(keyword: keyWord)
+        guard let keyWord = searchBar.text else { return }
+        loadSearchVideoData(keyword: keyWord.replacingOccurrences(of: " ", with: ""))
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
-        search(keyword: "")
     }
 }

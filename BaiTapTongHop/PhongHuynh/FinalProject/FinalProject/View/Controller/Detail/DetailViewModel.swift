@@ -17,6 +17,7 @@ final class DetailViewModel {
     var type: HomeViewModel.CellType
     var videos: [Video] = []
 
+    // MARK: - Init
     init(featuredVideo: Video?, nominationVideo: NominationVideo?, newVideo: NominationVideo?, type: HomeViewModel.CellType) {
         self.featuredVideo = featuredVideo
         self.nominationVideo = nominationVideo

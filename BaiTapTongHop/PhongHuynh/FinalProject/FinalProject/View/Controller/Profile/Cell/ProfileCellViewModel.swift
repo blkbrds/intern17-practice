@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 final class ProfileCellViewModel {
-    
+
     // MARK: - Methods
     func updateImageView(completion: @escaping (UIImage?) -> Void) {
         NetWorking.shared().downloadImage(url: UserDefaults.standard.string(forKey: "image") ?? "") { (image) in

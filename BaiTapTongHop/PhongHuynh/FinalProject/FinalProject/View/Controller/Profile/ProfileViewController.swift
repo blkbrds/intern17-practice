@@ -22,13 +22,13 @@ final class ProfileViewController: UIViewController {
 
     // MARK: - Private functions
     private func configTableView() {
-        let nib = UINib(nibName: "ProfileCell", bundle: .main)
-        tableView.register(nib, forCellReuseIdentifier: "ProfileCell")
+        tableView.register(ProfileCell.self)
         tableView.delegate = self
         tableView.dataSource = self
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ProfileViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,7 +37,7 @@ extension ProfileViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as? ProfileCell else { return UITableViewCell() }
+            let cell = tableView.dequeue(ProfileCell.self)
             return cell
         } else {
             return UITableViewCell()
@@ -53,6 +53,6 @@ extension ProfileViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension ProfileViewController: UITableViewDelegate {
 }
-
