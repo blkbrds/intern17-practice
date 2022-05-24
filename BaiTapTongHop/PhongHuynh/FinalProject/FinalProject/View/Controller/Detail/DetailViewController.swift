@@ -8,6 +8,7 @@
 
 import UIKit
 import YoutubePlayer_in_WKWebView
+import RealmSwift
 
 final class DetailViewController: UIViewController {
 
@@ -82,6 +83,15 @@ final class DetailViewController: UIViewController {
 
     // MARK: - IBActions
     @IBAction private func favoriteButtonTouchUpInside(_ sender: Any) {
+        do {
+            let realm = try Realm()
+            let data = RealmVideo()
+            data.title = viewModel?.featuredVideo?.title ?? ""
+            data.id = viewModel?.featuredVideo?.imageURL ?? ""
+            try realm.write {
+                realm.add(data)
+            }} catch {
+            }
     }
 }
 

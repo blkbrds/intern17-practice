@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 final class FavoriteCell: UITableViewCell {
 
@@ -15,6 +16,7 @@ final class FavoriteCell: UITableViewCell {
     @IBOutlet private weak var favoriteVideoImageView: UIImageView!
     @IBOutlet private weak var titleFavoriteVideoLabel: UILabel!
 
+    var videos: [RealmVideo] = []
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +24,21 @@ final class FavoriteCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+
+    func updateView(title: String) {
+        titleFavoriteVideoLabel.text = title
+    }
+
+    @IBAction private func deleteData(_ sender: Any) {
+        do {
+        let realm = try Realm()
+        let results = realm.objects(RealmVideo.self)
+     //   videos = realm.objects(RealmVideo.self).toArray(ofType: RealmVideo.self)
+        try realm.write {
+            realm.delete(results)
+        }
+        } catch {
+        }
     }
 }
