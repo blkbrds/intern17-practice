@@ -8,18 +8,18 @@
 import UIKit
 
 final class BT3XViewController: UIViewController {
-    let tfUsername = UITextField()
-    let tfPassword = UITextField()
-    let lbError = UILabel()
-    let btnLogin = UIButton()
-    let btnClear = UIButton()
+    
+    let userNameTextField = UITextField()
+    let passwordTextField = UITextField()
+    let errorLabel = UILabel()
+    let loginButton = UIButton()
+    let clearButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         addActionToButtons()
         addGesture()
-
     }
     
     private func addGesture() {
@@ -28,98 +28,94 @@ final class BT3XViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    @objc func handleTap() {
+    @objc private func handleTap() {
         view.endEditing(true)
     }
     
-    func setupView(){
+    private func setupView(){
         let widthView = view.frame.width
-        let heightView = view.frame.height
         let frameUsername = CGRect(x: 20, y: 100, width: widthView - 40, height: 40)
-        tfUsername.frame = frameUsername
-        tfUsername.placeholder = " username"
-        tfUsername.layer.cornerRadius = 4
-        tfUsername.backgroundColor = .white
-        tfUsername.layer.borderWidth = 1
-        view.addSubview(tfUsername)
+        userNameTextField.frame = frameUsername
+        userNameTextField.placeholder = "username"
+        userNameTextField.layer.cornerRadius = 4
+        userNameTextField.backgroundColor = .white
+        userNameTextField.layer.borderWidth = 1
+        view.addSubview(userNameTextField)
         
         let framePassword = CGRect(x: 20, y: 170, width: widthView - 40, height: 40)
-        tfPassword.frame = framePassword
-        tfPassword.placeholder = " password"
-        tfPassword.layer.cornerRadius = 4
-        tfPassword.backgroundColor = .white
-        tfPassword.layer.borderWidth = 1
-        view.addSubview(tfPassword)
+        passwordTextField.frame = framePassword
+        passwordTextField.placeholder = " password"
+        passwordTextField.layer.cornerRadius = 4
+        passwordTextField.backgroundColor = .white
+        passwordTextField.layer.borderWidth = 1
+        view.addSubview(passwordTextField)
         
         let frameError = CGRect(x: 20, y: 220, width: widthView - 40, height: 40)
-        lbError.frame = frameError
-        lbError.backgroundColor = .white
-        lbError.textColor = .red
-        lbError.textAlignment = .center
-        lbError.text = "hahaahahahaha"
-        lbError.isHidden = true
-        view.addSubview(lbError)
+        errorLabel.frame = frameError
+        errorLabel.backgroundColor = .white
+        errorLabel.textColor = .red
+        errorLabel.textAlignment = .center
+        errorLabel.text = "hahaahahahaha"
+        errorLabel.isHidden = true
+        view.addSubview(errorLabel)
         
         let frameLogin = CGRect(x: 20, y: 270, width: widthView / 2 - 40, height: 40)
-        btnLogin.frame = frameLogin
-        btnLogin.layer.cornerRadius = 4
-        btnLogin.backgroundColor = .blue
-        btnLogin.setTitle("Login", for: .normal)
-        btnLogin.setTitleColor(.white, for: .normal)
-        view.addSubview(btnLogin)
+        loginButton.frame = frameLogin
+        loginButton.layer.cornerRadius = 4
+        loginButton.backgroundColor = .blue
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.setTitleColor(.white, for: .normal)
+        view.addSubview(loginButton)
         
         let frameClear = CGRect(x: widthView / 2 + 20, y: 270, width: widthView / 2 - 40, height: 40)
-        btnClear.frame = frameClear
-        btnClear.layer.cornerRadius = 4
-        btnClear.backgroundColor = .blue
-        btnClear.setTitle("Clear", for: .normal)
-        btnClear.setTitleColor(.white, for: .normal)
-        view.addSubview(btnClear)
+        clearButton.frame = frameClear
+        clearButton.layer.cornerRadius = 4
+        clearButton.backgroundColor = .blue
+        clearButton.setTitle("Clear", for: .normal)
+        clearButton.setTitleColor(.white, for: .normal)
+        view.addSubview(clearButton)
     }
     
-    func addActionToButtons() {
-        btnLogin.addTarget(self, action: #selector(didTap(sender:)), for: .touchUpInside)
-        btnClear.addTarget(self, action: #selector(didTap(sender:)), for: .touchUpInside)
+    private func addActionToButtons() {
+        loginButton.addTarget(self, action: #selector(didTap(sender:)), for: .touchUpInside)
+        clearButton.addTarget(self, action: #selector(didTap(sender:)), for: .touchUpInside)
     }
     
     @objc func didTap(sender: UIButton) {
-        print(tfUsername.text)
         switch sender {
-        case btnLogin:
-            print("login")
+        case loginButton:
             let result = validateLogin()
             print(result)
             switch result {
             case .success(string: let value):
-                lbError.text = value
-                lbError.isHidden = true
+                errorLabel.text = value
+                errorLabel.isHidden = true
             case .usernameIsNotCorrect(string: let value):
-                lbError.text = value
-                lbError.isHidden = false
+                errorLabel.text = value
+                errorLabel.isHidden = false
             case .passwordIsNotCorrect(string: let value):
-                lbError.text = value
-                lbError.isHidden = false
+                errorLabel.text = value
+                errorLabel.isHidden = false
             case .noTextInUserName(string: let value):
-                lbError.text = value
-                lbError.isHidden = false
+                errorLabel.text = value
+                errorLabel.isHidden = false
             case .noTextInPassword(string: let value):
-                lbError.text = value
-                lbError.isHidden = false
+                errorLabel.text = value
+                errorLabel.isHidden = false
             }
-        case btnClear:
-            print("clear")
-            tfUsername.text = nil
-            tfPassword.text = nil
+        case clearButton:
+            userNameTextField.text = nil
+            passwordTextField.text = nil
         default:
             break
         }
     }
     
-    func validateLogin() -> Result {
-        guard let username = tfUsername.text else {
+    private func validateLogin() -> Result {
+        guard let username = userNameTextField.text else {
             return .noTextInUserName(string: "Please fill username")
         }
-        guard let password = tfPassword.text else {
+        guard let password = passwordTextField.text else {
             return .noTextInPassword(string: "Please fill password")
         }
         if username == "Admin" {

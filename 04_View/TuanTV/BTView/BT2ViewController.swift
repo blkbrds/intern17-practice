@@ -19,9 +19,9 @@ final class BT2ViewController: UIViewController {
     var y: CGFloat = 0
     
     lazy var viewUsers: UIView = {
-        let v = UIView()
-        v.backgroundColor = .cyan
-        return v
+        let view = UIView()
+        view.backgroundColor = .cyan
+        return view
     }()
 
     override func viewDidLoad() {
@@ -39,7 +39,6 @@ final class BT2ViewController: UIViewController {
             nameList.append("Name \(i)")
             avatarList.append(UIImage(named: "icon_user"))
         }
-        print(nameList)
     }
     
     private func setupView() {

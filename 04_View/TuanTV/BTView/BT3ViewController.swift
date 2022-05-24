@@ -9,22 +9,22 @@ import UIKit
 
 final class BT3ViewController: UIViewController {
     
-    lazy var viewBarTotal: UIView = {
+    lazy var barTotalView: UIView = {
         let v = UIView()
         return v
     }()
     
-    lazy var viewBarAction: UIView = {
+    lazy var barActionView: UIView = {
         let v = UIView()
         return v
     }()
     
-    lazy var viewCircle: UIView = {
+    lazy var circleView: UIView = {
         let v = UIView()
         return v
     }()
     
-    lazy var lbRate: UILabel = {
+    lazy var rateLabel: UILabel = {
         let lb = UILabel()
         return lb
     }()
@@ -41,36 +41,36 @@ final class BT3ViewController: UIViewController {
         let widthView = view.frame.width
         let heightView = view.frame.height
         let frameViewBarTotal = CGRect(x: 19 / 40 * widthView , y: heightView / 4 , width: widthView / 20, height: heightView / 2)
-        viewBarTotal.frame = frameViewBarTotal
-        viewBarTotal.backgroundColor = .blue
-        view.addSubview(viewBarTotal)
+        barTotalView.frame = frameViewBarTotal
+        barTotalView.backgroundColor = .blue
+        view.addSubview(barTotalView)
         
         let frameViewBarAction = CGRect(x: 19 / 40 * widthView, y: heightView / 4 , width: widthView / 20, height: heightView / 3)
-        viewBarAction.frame = frameViewBarAction
-        viewBarAction.backgroundColor = .red
-        view.addSubview(viewBarAction)
+        barActionView.frame = frameViewBarAction
+        barActionView.backgroundColor = .red
+        view.addSubview(barActionView)
         
         let frameViewCircle = CGRect(x: (widthView - 30) / 2  , y: heightView / 4 + heightView / 3 - 15, width: 30, height: 30)
-        viewCircle.frame = frameViewCircle
-        viewCircle.layer.cornerRadius = 15
-        viewCircle.backgroundColor = .orange
-        view.addSubview(viewCircle)
+        circleView.frame = frameViewCircle
+        circleView.layer.cornerRadius = 15
+        circleView.backgroundColor = .orange
+        view.addSubview(circleView)
         
         let frameLabelRate = CGRect(x: 0 , y: 0, width: 30, height: 30)
-        lbRate.frame = frameLabelRate
-        lbRate.layer.cornerRadius = 15
-        lbRate.backgroundColor = .clear
-        lbRate.text = "70"
-        lbRate.font = UIFont.systemFont(ofSize: 10)
-        lbRate.textColor = .white
-        lbRate.textAlignment = .center
-        viewCircle.addSubview(lbRate)
+        rateLabel.frame = frameLabelRate
+        rateLabel.layer.cornerRadius = 15
+        rateLabel.backgroundColor = .clear
+        rateLabel.text = "70"
+        rateLabel.font = UIFont.systemFont(ofSize: 10)
+        rateLabel.textColor = .white
+        rateLabel.textAlignment = .center
+        circleView.addSubview(rateLabel)
         
     }
     
     private func addAction() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-        viewCircle.addGestureRecognizer(pan)
+        circleView.addGestureRecognizer(pan)
     }
     
     @objc func handleTap(_ sender: UIPanGestureRecognizer) {
@@ -83,25 +83,25 @@ final class BT3ViewController: UIViewController {
         case .changed:
             print(" thay doi")
             if location.y <= yStartPoint {
-                viewCircle.frame = CGRect(x: (view.frame.width - 30) / 2, y: yStartPoint - 15, width: 30, height: 30)
-                viewBarAction.frame = CGRect(x: (19 * view.frame.width) / 40, y: yStartPoint, width: view.frame.width / 20, height: 0)
-                lbRate.text = "0"
+                circleView.frame = CGRect(x: (view.frame.width - 30) / 2, y: yStartPoint - 15, width: 30, height: 30)
+                barActionView.frame = CGRect(x: (19 * view.frame.width) / 40, y: yStartPoint, width: view.frame.width / 20, height: 0)
+                rateLabel.text = "0"
             } else if location.y >= yEndPoint {
-                viewCircle.frame = CGRect(x: (view.frame.width - 30) / 2, y: yEndPoint - 15, width: 30, height: 30)
-                viewBarAction.frame = CGRect(x: (19 * view.frame.width) / 40, y: yStartPoint, width: view.frame.width / 20, height: view.frame.height / 2)
-                lbRate.text = "100"
+                circleView.frame = CGRect(x: (view.frame.width - 30) / 2, y: yEndPoint - 15, width: 30, height: 30)
+                barActionView.frame = CGRect(x: (19 * view.frame.width) / 40, y: yStartPoint, width: view.frame.width / 20, height: view.frame.height / 2)
+                rateLabel.text = "100"
             } else {
                 if location.y >= yEndPoint - 15 &&
                     location.y < yEndPoint
                 {
-                    viewCircle.frame = CGRect(x: (view.frame.width - 30) / 2, y: yEndPoint - 15, width: 30, height: 30)
-                    viewBarAction.frame = CGRect(x: (19 * view.frame.width) / 40, y: yStartPoint, width: view.frame.width / 20, height: location.y - yStartPoint)
+                    circleView.frame = CGRect(x: (view.frame.width - 30) / 2, y: yEndPoint - 15, width: 30, height: 30)
+                    barActionView.frame = CGRect(x: (19 * view.frame.width) / 40, y: yStartPoint, width: view.frame.width / 20, height: location.y - yStartPoint)
                 } else {
-                    viewCircle.frame = CGRect(x: (view.frame.width - 30) / 2, y: location.y - 15, width: 30, height: 30)
-                    viewBarAction.frame = CGRect(x: (19 * view.frame.width) / 40, y: yStartPoint, width: view.frame.width / 20, height: location.y - yStartPoint)
+                    circleView.frame = CGRect(x: (view.frame.width - 30) / 2, y: location.y - 15, width: 30, height: 30)
+                    barActionView.frame = CGRect(x: (19 * view.frame.width) / 40, y: yStartPoint, width: view.frame.width / 20, height: location.y - yStartPoint)
                 }
                 var rate = (location.y - yStartPoint) * 100 / (view.frame.height / 2)
-                lbRate.text = "\(round(rate))"
+                rateLabel.text = "\(round(rate))"
             }
             case .cancelled:
                 print("cancel")
