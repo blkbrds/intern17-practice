@@ -12,7 +12,7 @@ final class PieChart: UIView {
     private var originPieChart = CGPoint()
     var x: CGFloat = 0
     
-    var itemsValue: [Float] = [] {
+    var itemValues: [Float] = [] {
         willSet {
             setNeedsDisplay()
         }
@@ -20,11 +20,11 @@ final class PieChart: UIView {
     
     private var sumValueOfItems: Float {
         get {
-            return itemsValue.reduce(0, +)
+            return itemValues.reduce(0, +)
         }
     }
     
-    var itemsColor: [UIColor] = [] {
+    var itemColors: [UIColor] = [] {
         didSet {
             setNeedsDisplay()
         }
@@ -44,15 +44,15 @@ final class PieChart: UIView {
     override func draw(_ rect: CGRect) {
         var startAngle: Float = 0
         var endAngle: Float = 0
-        for i in 0..<itemsValue.count {
-            endAngle =  endAngle + itemsValue[i] * 2 * pi / sumValueOfItems
+        for i in 0..<itemValues.count {
+            endAngle =  endAngle + itemValues[i] * 2 * pi / sumValueOfItems
             let context = UIGraphicsGetCurrentContext()
             context?.setLineWidth(1)
-            context?.setStrokeColor(itemsColor[Int(i)].cgColor)
+            context?.setStrokeColor(itemColors[Int(i)].cgColor)
             context?.move(to: originPieChart)
             context?.addArc(center: originPieChart, radius: x, startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: false)
             context?.addLine(to: originPieChart)
-            context?.setFillColor(itemsColor[Int(i)].cgColor)
+            context?.setFillColor(itemColors[Int(i)].cgColor)
             context?.fillPath()
             startAngle = endAngle
         }

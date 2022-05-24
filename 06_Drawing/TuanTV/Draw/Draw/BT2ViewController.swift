@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BT2ViewController: UIViewController {
+final class BT2ViewController: UIViewController {
     
     var pieChartView = UIView()
 
@@ -20,8 +20,8 @@ class BT2ViewController: UIViewController {
         view.backgroundColor = .white
         let widthView = view.frame.width
         let pieChartView = PieChart(frame: CGRect(x: widthView / 4, y: 100, width: widthView / 2, height: widthView / 2))
-        pieChartView.itemsValue = [40.5, 30.6, 79, 37]
-        pieChartView.itemsColor = [.black, .yellow, .brown, .orange]
+        pieChartView.itemValues = [40.5, 30.6, 79, 37]
+        pieChartView.itemColors = [.black, .yellow, .brown, .orange]
         view.addSubview(pieChartView)
     }
 }
