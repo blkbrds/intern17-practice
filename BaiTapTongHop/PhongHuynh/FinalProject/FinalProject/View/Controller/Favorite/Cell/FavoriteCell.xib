@@ -25,7 +25,7 @@
                         <rect key="frame" x="125.5" y="0.0" width="185.5" height="135"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGc-uI-fXC">
-                                <rect key="frame" x="20" y="5" width="125.5" height="20.5"/>
+                                <rect key="frame" x="20" y="5" width="125.5" height="130"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,6 +45,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DGc-uI-fXC" secondAttribute="bottom" id="6KA-9W-dqZ"/>
                             <constraint firstItem="DGc-uI-fXC" firstAttribute="leading" secondItem="PMd-GF-Nfp" secondAttribute="leading" constant="20" id="6O3-jv-OJQ"/>
                             <constraint firstItem="DGc-uI-fXC" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" constant="5" id="MAz-UE-SEh"/>
                             <constraint firstItem="nsy-uG-7Ev" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" constant="5" id="d7J-Qv-tVc"/>

@@ -14,7 +14,8 @@ final class FavoriteViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
 
-    var viewModel: FavoriteViewModel?
+    // MARK: - Properties
+    var viewModel: FavoriteViewModel = FavoriteViewModel()
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -24,12 +25,13 @@ final class FavoriteViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        do {
-//        let realm = try Realm()
-//            viewModel?.videos = realm.objects(RealmVideo.self).toArray(ofType: RealmVideo.self)
-//        } catch {
-//
-//        }
+        do {
+        let realm = try Realm()
+            viewModel.videos = realm.objects(RealmVideo.self).toArray(ofType: RealmVideo.self)
+            tableView.reloadData()
+        } catch {
+
+        }
     }
 
     // MARK: - Private functions
@@ -41,21 +43,16 @@ final class FavoriteViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension FavoriteViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let viewModel = viewModel else { return 0 }
         return viewModel.numberOfItems(section: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        do {
-        let realm = try Realm()
-            viewModel?.videos = realm.objects(RealmVideo.self).toArray(ofType: RealmVideo.self)
-        } catch {
-        }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else { return UITableViewCell() }
-        cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
+        cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
         return cell
     }
 
@@ -64,5 +61,6 @@ extension FavoriteViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension FavoriteViewController: UITableViewDelegate {
 }

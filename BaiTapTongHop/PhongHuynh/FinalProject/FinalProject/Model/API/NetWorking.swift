@@ -53,7 +53,7 @@ final class NetWorking {
         let config = URLSessionConfiguration.ephemeral
         config.waitsForConnectivity = true
         let session = URLSession(configuration: config)
-        let task = session.dataTask(with: url) { (data, response, error) in
+        let task = session.dataTask(with: url) { (data, _, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     completion(nil, APIError.error(error.localizedDescription))
@@ -78,7 +78,7 @@ final class NetWorking {
         let config = URLSessionConfiguration.default
         config.waitsForConnectivity = true
         let session = URLSession(configuration: config)
-        let task = session.dataTask(with: url) { (data, response, error) in
+        let task = session.dataTask(with: url) { (data, _, error) in
             DispatchQueue.main.async {
                 if let _ = error {
                     completion(nil)

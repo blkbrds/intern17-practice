@@ -16,6 +16,7 @@ final class FavoriteCell: UITableViewCell {
     @IBOutlet private weak var favoriteVideoImageView: UIImageView!
     @IBOutlet private weak var titleFavoriteVideoLabel: UILabel!
 
+    // MARK: - Properties
     var viewModel: FavoriteCellViewModel? {
         didSet {
             updateView()
@@ -30,7 +31,8 @@ final class FavoriteCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func updateView() {
+    // MARK: - Private functions
+    private func updateView() {
         viewModel?.updateImageView(completion: { [weak self] (image) in
             guard let this = self else { return }
             this.favoriteVideoImageView.image = image
@@ -38,14 +40,14 @@ final class FavoriteCell: UITableViewCell {
         titleFavoriteVideoLabel.text = viewModel?.video.title
     }
 
+    // MARK: - IBActions
     @IBAction private func deleteData(_ sender: Any) {
         do {
-        let realm = try Realm()
-        let results = realm.objects(RealmVideo.self)
-     //   videos = realm.objects(RealmVideo.self).toArray(ofType: RealmVideo.self)
-        try realm.write {
-            realm.delete(results)
-        }
+            let realm = try Realm()
+            let results = realm.objects(RealmVideo.self)
+            try realm.write {
+                realm.delete(results)
+            }
         } catch {
         }
     }

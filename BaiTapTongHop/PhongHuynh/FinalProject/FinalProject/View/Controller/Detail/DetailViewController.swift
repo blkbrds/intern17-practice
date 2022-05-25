@@ -28,7 +28,7 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-        loadData()
+        loadSimilarVideoData()
         updateView()
     }
 
@@ -55,29 +55,46 @@ final class DetailViewController: UIViewController {
         }
     }
 
-    private func loadVideoData(completion: @escaping () -> Void ) {
-        viewModel?.loadAPIDetail { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success:
-                    completion()
-                case .failure(let error):
-                    print("error\(error)")
+    private func loadSimilarVideoData() {
+        switch viewModel?.type {
+        case .featured:
+            viewModel?.loadAPIDetail(id: viewModel?.featuredVideo?.id ?? "") { [weak self] (result) in
+                guard let this = self else { return }
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success:
+                        this.tableView.reloadData()
+                    case .failure(let error):
+                        print("error\(error)")
+                    }
                 }
             }
-        }
-    }
-
-    private func loadData() {
-        HUD.show()
-        let group = DispatchGroup()
-        group.enter()
-        loadVideoData {
-            group.leave()
-        }
-        group.notify(queue: .main) {
-            HUD.dismiss()
-            self.tableView.reloadData()
+        case .nomination:
+            viewModel?.loadAPIDetail(id: viewModel?.nominationVideo?.videoId ?? "") { [weak self] (result) in
+                guard let this = self else { return }
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success:
+                        this.tableView.reloadData()
+                    case .failure(let error):
+                        print("error\(error)")
+                    }
+                }
+            }
+        case .new:
+            viewModel?.loadAPIDetail(id: viewModel?.newVideo?.videoId ?? "") { [weak self] (result) in
+                guard let this = self else { return }
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success:
+                        this.tableView.reloadData()
+                    case .failure(let error):
+                        print("error\(error)")
+                    }
+                }
+            }
+        case .none:
+            break
         }
     }
 
@@ -86,8 +103,19 @@ final class DetailViewController: UIViewController {
         do {
             let realm = try Realm()
             let data = RealmVideo()
-            data.title = viewModel?.featuredVideo?.title ?? ""
-            data.image = viewModel?.featuredVideo?.imageURL ?? ""
+            switch viewModel?.type {
+            case .featured:
+                data.title = viewModel?.featuredVideo?.title ?? ""
+                data.image = viewModel?.featuredVideo?.imageURL ?? ""
+            case .nomination:
+                data.title = viewModel?.nominationVideo?.title ?? ""
+                data.image = viewModel?.nominationVideo?.imageURL ?? ""
+            case .new:
+                data.title = viewModel?.newVideo?.title ?? ""
+                data.image = viewModel?.newVideo?.imageURL ?? ""
+            case .none:
+                break
+            }
             try realm.write {
                 realm.add(data)
             }} catch {
@@ -109,8 +137,12 @@ extension DetailViewController: UITableViewDataSource {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        updateView()
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return 200
+        return 200
     }
 }
 

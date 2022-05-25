@@ -14,6 +14,7 @@ final class SearchCell: UITableViewCell {
     @IBOutlet private weak var searchImageView: UIImageView!
     @IBOutlet private weak var titleSearch: UILabel!
 
+    // MARK: - Properties
     var viewModel: SearchCellViewModel? {
         didSet {
             updateView()

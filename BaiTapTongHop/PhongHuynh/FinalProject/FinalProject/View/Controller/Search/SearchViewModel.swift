@@ -22,6 +22,10 @@ final class SearchViewModel {
         return SearchCellViewModel(video: searchsVideo[indexPath.row])
     }
 
+    func viewModelForDetailNominationVideo(indexPath: IndexPath) -> DetailViewModel {
+        return DetailViewModel(featuredVideo: nil, nominationVideo: searchsVideo[indexPath.row], newVideo: nil, type: .nomination)
+    }
+
     func loadSearchVideoAPI(keyword: String, completion: @escaping APICompletion) {
         let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=\(keyword)&type=video&key=AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
         NetWorking.shared().request(with: urlString) { (data, error) in

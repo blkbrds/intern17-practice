@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - NewVideoHomeCellDelegate
 protocol NewVideoHomeCellDelegate: class {
     func controller(controller: NewVideoHomeCell, needsPerfom actions: NewVideoHomeCell.Action)
 }

@@ -11,6 +11,7 @@ import RealmSwift
 
 final class FavoriteViewModel {
 
+    // MARK: - Properties
     var videos: [RealmVideo] = []
 
     // MARK: - Methods
@@ -23,6 +24,7 @@ final class FavoriteViewModel {
     }
 }
 
+// MARK: - Results
 extension Results {
     func toArray<T>(ofType: T.Type) -> [T] {
         var array = [T]()
