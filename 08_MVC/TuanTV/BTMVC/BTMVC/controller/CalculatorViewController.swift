@@ -8,6 +8,9 @@
 import UIKit
 
 final class CalculatorViewController: UIViewController {
+    //MARK: - IBOutlets
+    @IBOutlet weak var displayLabel: UILabel!
+    
     private var result: Float = 0
     private var isTyping = false
     var storeOperand = StoreOperand()
@@ -43,22 +46,21 @@ final class CalculatorViewController: UIViewController {
             displayLabel.text = String(Int(newValue))
         }
     }
-
-    @IBOutlet weak var displayLabel: UILabel!
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func clearResult(_ sender: UIButton) {
+    //MARK: - IBActions
+    @IBAction private func clearResult(_ sender: UIButton) {
         result = 0
         displayValue = result
         storeOperand.firstOperand = nil
         storeOperand.secondOperand = nil
     }
-    @IBAction func tapAC(_ sender: UIButton) {
-    }
-    @IBAction func tapDigit(_ sender: UIButton) {
+     
+    @IBAction private func tapDigit(_ sender: UIButton) {
         
         guard let digit = sender.currentTitle else {return}
         if isTyping {
@@ -70,7 +72,7 @@ final class CalculatorViewController: UIViewController {
         }
     }
     
-    @IBAction func performOperation(_ sender: UIButton) {
+    @IBAction private func performOperation(_ sender: UIButton) {
         guard let symbol = sender.currentTitle else {return}
         setOperand(operation: symbol)
     }

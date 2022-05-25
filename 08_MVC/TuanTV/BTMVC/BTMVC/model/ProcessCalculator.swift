@@ -8,6 +8,7 @@
 import Foundation
 
 final class ProcessCalculator {
+    //MARK: - Singleton
     private static var processCalculator: ProcessCalculator = {
         return ProcessCalculator()
     }()
