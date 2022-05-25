@@ -87,7 +87,7 @@ final class DetailViewController: UIViewController {
             let realm = try Realm()
             let data = RealmVideo()
             data.title = viewModel?.featuredVideo?.title ?? ""
-            data.id = viewModel?.featuredVideo?.imageURL ?? ""
+            data.image = viewModel?.featuredVideo?.imageURL ?? ""
             try realm.write {
                 realm.add(data)
             }} catch {

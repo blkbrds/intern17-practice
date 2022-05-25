@@ -61,6 +61,8 @@
 		CB80E381283361D50051FA29 /* FeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB80E37F283361D50051FA29 /* FeaturedCell.xib */; };
 		CB80E3872833634B0051FA29 /* NominationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB80E3852833634B0051FA29 /* NominationCell.swift */; };
 		CB80E3882833634B0051FA29 /* NominationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB80E3862833634B0051FA29 /* NominationCell.xib */; };
+		CB8A4B51283DC2EC00F97D77 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A4B50283DC2EC00F97D77 /* FavoriteViewModel.swift */; };
+		CB8A4B55283DC2F900F97D77 /* FavoriteCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A4B54283DC2F900F97D77 /* FavoriteCellViewModel.swift */; };
 		CBAEA38E283CD70200C61D82 /* RealmVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAEA38D283CD70200C61D82 /* RealmVideo.swift */; };
 		CBAF0B5F28348669006B59A7 /* FeaturedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAF0B5E28348669006B59A7 /* FeaturedCellViewModel.swift */; };
 		CBAF0B6328348724006B59A7 /* FeaturedVideoHomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAF0B6228348724006B59A7 /* FeaturedVideoHomeCellViewModel.swift */; };
@@ -160,6 +162,8 @@
 		CB80E37F283361D50051FA29 /* FeaturedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCell.xib; sourceTree = "<group>"; };
 		CB80E3852833634B0051FA29 /* NominationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationCell.swift; sourceTree = "<group>"; };
 		CB80E3862833634B0051FA29 /* NominationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NominationCell.xib; sourceTree = "<group>"; };
+		CB8A4B50283DC2EC00F97D77 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		CB8A4B54283DC2F900F97D77 /* FavoriteCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellViewModel.swift; sourceTree = "<group>"; };
 		CBAEA38D283CD70200C61D82 /* RealmVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmVideo.swift; sourceTree = "<group>"; };
 		CBAF0B5E28348669006B59A7 /* FeaturedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCellViewModel.swift; sourceTree = "<group>"; };
 		CBAF0B6228348724006B59A7 /* FeaturedVideoHomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedVideoHomeCellViewModel.swift; sourceTree = "<group>"; };
@@ -412,6 +416,7 @@
 				CB5447B82831FDBF00085BDC /* Cell */,
 				CB5447B22831FD8D00085BDC /* FavoriteViewController.swift */,
 				CB5447B32831FD8D00085BDC /* FavoriteViewController.xib */,
+				CB8A4B50283DC2EC00F97D77 /* FavoriteViewModel.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 			children = (
 				CB5447B92831FDD700085BDC /* FavoriteCell.swift */,
 				CB5447BA2831FDD700085BDC /* FavoriteCell.xib */,
+				CB8A4B54283DC2F900F97D77 /* FavoriteCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -765,6 +771,7 @@
 				CBB5C134282CA56100599DBD /* LoginViewController.swift in Sources */,
 				CB5447A42831F67700085BDC /* ProfileViewController.swift in Sources */,
 				6AF60E132313B9C000F5CBA2 /* NSErrorExt.swift in Sources */,
+				CB8A4B51283DC2EC00F97D77 /* FavoriteViewModel.swift in Sources */,
 				CB73135A28309A5E00A71129 /* NominationVideoCell.swift in Sources */,
 				CBB8342E283B1863003C50E4 /* SearchViewModel.swift in Sources */,
 				CBAF0B5F28348669006B59A7 /* FeaturedCellViewModel.swift in Sources */,
@@ -796,6 +803,7 @@
 				CBCC7E8A282A598000DBD668 /* ShortsViewController.swift in Sources */,
 				CB5447B42831FD8D00085BDC /* FavoriteViewController.swift in Sources */,
 				CB2EA9DB283396A900E017E4 /* NetWorking.swift in Sources */,
+				CB8A4B55283DC2F900F97D77 /* FavoriteCellViewModel.swift in Sources */,
 				6AF60D222313B35800F5CBA2 /* String.swift in Sources */,
 				6AF60DC22313B56B00F5CBA2 /* RequestSerializer.swift in Sources */,
 				CBF4E33228334A8800E7EECC /* NewVideoHomeCell.swift in Sources */,

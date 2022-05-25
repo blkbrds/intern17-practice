@@ -12,5 +12,11 @@ import RealmSwift
 final class RealmVideo: Object {
 
     @objc dynamic var title: String = ""
-    @objc dynamic var id: String = ""
+    @objc dynamic var image: String = ""
+
+    convenience init(title: String, image: String) {
+           self.init()
+           self.title = title
+           self.image = image
+    }
 }

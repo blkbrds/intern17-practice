@@ -14,7 +14,7 @@ final class FavoriteViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
 
-    var videos: [RealmVideo] = []
+    var viewModel: FavoriteViewModel?
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -24,13 +24,12 @@ final class FavoriteViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        do {
-        let realm = try Realm()
-            videos = realm.objects(RealmVideo.self).toArray(ofType: RealmVideo.self)
-        } catch {
-
-        }
-        tableView.reloadData()
+//        do {
+//        let realm = try Realm()
+//            viewModel?.videos = realm.objects(RealmVideo.self).toArray(ofType: RealmVideo.self)
+//        } catch {
+//
+//        }
     }
 
     // MARK: - Private functions
@@ -45,13 +44,18 @@ final class FavoriteViewController: UIViewController {
 extension FavoriteViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return videos.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.numberOfItems(section: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        do {
+        let realm = try Realm()
+            viewModel?.videos = realm.objects(RealmVideo.self).toArray(ofType: RealmVideo.self)
+        } catch {
+        }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else { return UITableViewCell() }
-       // cell.textLabel?.text = videos[indexPath.row].title
-        cell.updateView(title: videos[indexPath.row].title)
+        cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }
 
@@ -61,16 +65,4 @@ extension FavoriteViewController: UITableViewDataSource {
 }
 
 extension FavoriteViewController: UITableViewDelegate {
-}
-
-extension Results {
-    func toArray<T>(ofType: T.Type) -> [T] {
-        var array = [T]()
-        for i in 0 ..< count {
-            if let result = self[i] as? T {
-                array.append(result)
-            }
-        }
-        return array
-    }
 }

@@ -16,7 +16,11 @@ final class FavoriteCell: UITableViewCell {
     @IBOutlet private weak var favoriteVideoImageView: UIImageView!
     @IBOutlet private weak var titleFavoriteVideoLabel: UILabel!
 
-    var videos: [RealmVideo] = []
+    var viewModel: FavoriteCellViewModel? {
+        didSet {
+            updateView()
+        }
+    }
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,8 +30,12 @@ final class FavoriteCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func updateView(title: String) {
-        titleFavoriteVideoLabel.text = title
+    func updateView() {
+        viewModel?.updateImageView(completion: { [weak self] (image) in
+            guard let this = self else { return }
+            this.favoriteVideoImageView.image = image
+        })
+        titleFavoriteVideoLabel.text = viewModel?.video.title
     }
 
     @IBAction private func deleteData(_ sender: Any) {
