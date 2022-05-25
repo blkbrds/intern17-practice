@@ -55,7 +55,7 @@ extension Bai01ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Bai01CollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Bai01CollectionViewCell else { return UICollectionViewCell() }
         let item = users[indexPath.row]
         cell.number = item.name
         return cell

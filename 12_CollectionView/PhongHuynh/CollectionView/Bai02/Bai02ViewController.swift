@@ -55,10 +55,9 @@ extension Bai02ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Bai02CollectionViewCell
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Bai02CollectionViewCell else { return UICollectionViewCell() }
         let item = label[indexPath.row]
-        cell.blueLabel.text = item.label
+        cell.name = item.label
         return cell
     }
 }
