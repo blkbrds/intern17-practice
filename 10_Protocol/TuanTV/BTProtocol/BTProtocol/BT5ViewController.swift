@@ -8,22 +8,31 @@
 import UIKit
 
 class BT5ViewController: UIViewController {
-
+    
+    //MARK: - IBOutlets
+    @IBOutlet weak var firstOperandTextField: UITextField!
+    @IBOutlet weak var secondOperandTextField: UITextField!
+    
+    @IBOutlet weak var calculatorButton: UIButton!
+    //MARK: -IBActions
+    @IBAction func performCalculator(_ sender: UIButton) {
+    }
+    
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView(radius: 10, color: .green, borderWidth: 1)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func setupView(radius: CGFloat, color: UIColor, borderWidth: CGFloat) {
+        firstOperandTextField.layer.cornerRadius = radius
+        firstOperandTextField.layer.borderColor = color.cgColor
+        firstOperandTextField.layer.borderWidth = borderWidth
+        secondOperandTextField.layer.cornerRadius = radius
+        secondOperandTextField.layer.borderColor = color.cgColor
+        secondOperandTextField.layer.borderWidth = borderWidth
+        calculatorButton.layer.cornerRadius = radius
+        
     }
-    */
-
+    
 }
