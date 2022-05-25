@@ -11,6 +11,8 @@
 		89025DAC283DCF53005A0910 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025DAB283DCF53005A0910 /* SceneDelegate.swift */; };
 		89025DB3283DCF56005A0910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89025DB2283DCF56005A0910 /* Assets.xcassets */; };
 		89025DB6283DCF56005A0910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89025DB4283DCF56005A0910 /* LaunchScreen.storyboard */; };
+		89025DC3283DD5DE005A0910 /* BT4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025DC1283DD5DE005A0910 /* BT4ViewController.swift */; };
+		89025DC4283DD5DE005A0910 /* BT4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025DC2283DD5DE005A0910 /* BT4ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		89025DB2283DCF56005A0910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89025DB5283DCF56005A0910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89025DB7283DCF56005A0910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89025DC1283DD5DE005A0910 /* BT4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT4ViewController.swift; sourceTree = "<group>"; };
+		89025DC2283DD5DE005A0910 /* BT4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT4ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		89025DA8283DCF53005A0910 /* BTProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				89025DC0283DD5BE005A0910 /* BT4 */,
 				89025DA9283DCF53005A0910 /* AppDelegate.swift */,
 				89025DAB283DCF53005A0910 /* SceneDelegate.swift */,
 				89025DB2283DCF56005A0910 /* Assets.xcassets */,
@@ -59,6 +64,15 @@
 				89025DB7283DCF56005A0910 /* Info.plist */,
 			);
 			path = BTProtocol;
+			sourceTree = "<group>";
+		};
+		89025DC0283DD5BE005A0910 /* BT4 */ = {
+			isa = PBXGroup;
+			children = (
+				89025DC1283DD5DE005A0910 /* BT4ViewController.swift */,
+				89025DC2283DD5DE005A0910 /* BT4ViewController.xib */,
+			);
+			path = BT4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89025DC4283DD5DE005A0910 /* BT4ViewController.xib in Resources */,
 				89025DB6283DCF56005A0910 /* LaunchScreen.storyboard in Resources */,
 				89025DB3283DCF56005A0910 /* Assets.xcassets in Resources */,
 			);
@@ -132,6 +147,7 @@
 			files = (
 				89025DAA283DCF53005A0910 /* AppDelegate.swift in Sources */,
 				89025DAC283DCF53005A0910 /* SceneDelegate.swift in Sources */,
+				89025DC3283DD5DE005A0910 /* BT4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
