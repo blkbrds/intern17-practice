@@ -13,7 +13,6 @@ final class BT4ViewController: UIViewController, UISearchBarDelegate {
     var cityList: [String] = ["Hoà Bình", "Sơn La", "Điện Biên", "Lai Châu", "Lào Cai", "Yên Bái", "Phú Thọ", "Hà Giang", "Tuyên Quang", "Cao Bằng", "Bắc Cạn", "Thái Nguyên", "Lạng Sơn", "Bắc Giang", "Quảng Ninh", "Hà Nội", "Bắc Ninh", "Hà Nam", "Hải Dương", "Hải Phòng", "Hưng Yên", "Nam Định", "Thái Bình", "Vĩnh Phúc", "Ninh Bình", "Thanh Hoá"]
     var tempCityList: [String] = [] {
         didSet {
-            // Khi thay đổi du lieu temp thi chuyen qua set string Display
             stringDisplay = ""
             for city in tempCityList {
                 stringDisplay = stringDisplay + "- \(city)\n"
@@ -29,7 +28,6 @@ final class BT4ViewController: UIViewController, UISearchBarDelegate {
     
     //MARK: - IBActions
     @IBAction func cancelTapped(_ sender: UIButton) {
-        print("cancel")
         tempCityList = cityList
         searchBar.text = ""
     }
@@ -42,7 +40,6 @@ final class BT4ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
         if searchText.isEmpty == false {
             tempCityList = cityList.filter({$0.contains(searchText)})
         } else {
