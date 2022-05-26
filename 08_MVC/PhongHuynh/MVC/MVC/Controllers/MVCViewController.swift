@@ -20,7 +20,7 @@ final class MVCViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func numbers(_ sender: UIButton) {
-        if performingMath == true {
+        if performingMath {
             label.text = String(sender.tag - 1)
             numberOnScreen = Double(label.text!)!
             performingMath = false

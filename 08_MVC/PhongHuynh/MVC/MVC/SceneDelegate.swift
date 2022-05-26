@@ -10,7 +10,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc = MVCViewController()
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
-        
     }
 }
-
