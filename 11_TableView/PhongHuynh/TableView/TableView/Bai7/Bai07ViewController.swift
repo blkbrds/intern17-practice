@@ -29,11 +29,12 @@ final class Bai07ViewController: UIViewController {
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
 // MARK: - UITableViewDataSource
-extension Bai07ViewController: UITableViewDataSource {
+extension Bai07ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return garden.count
@@ -49,6 +50,10 @@ extension Bai07ViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return gardenIndex
     }

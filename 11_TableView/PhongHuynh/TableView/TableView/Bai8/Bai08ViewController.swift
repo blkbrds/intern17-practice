@@ -32,6 +32,7 @@ final class Bai08ViewController: UIViewController {
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     // MARK: - Objc functions
@@ -49,7 +50,7 @@ final class Bai08ViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension Bai08ViewController: UITableViewDataSource {
+extension Bai08ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return garden.count
@@ -67,6 +68,10 @@ extension Bai08ViewController: UITableViewDataSource {
         lable.textColor = .red
         cell.addSubview(lable)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

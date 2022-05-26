@@ -51,5 +51,6 @@ extension Bai03ViewController: UITableViewDataSource, UITableViewDelegate {
         let vc = Bai03DetailViewController()
         vc.name =  names[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

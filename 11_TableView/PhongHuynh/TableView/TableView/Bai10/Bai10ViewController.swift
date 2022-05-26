@@ -70,6 +70,7 @@ final class Bai10ViewController: UIViewController {
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     private func configSearchBar() {
@@ -123,7 +124,7 @@ extension Bai10ViewController: UITableViewDataSource {
         }
         return cell
     }
-    
+
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return arraySection
     }
@@ -135,6 +136,13 @@ extension Bai10ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return arraySection[section]
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension Bai10ViewController: UITableViewDelegate {
 }
 
 // MARK: - UISearchBarDelegate

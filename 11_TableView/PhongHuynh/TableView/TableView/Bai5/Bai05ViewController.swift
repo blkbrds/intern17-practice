@@ -55,7 +55,7 @@ extension Bai05ViewController: UISearchBarDelegate, UITableViewDataSource, UITab
         let vc = Bai05DetailViewController()
         vc.search =  filteredData[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
-        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

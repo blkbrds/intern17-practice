@@ -45,4 +45,8 @@ extension Bai02ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = "\(nameData[indexPath.row])"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

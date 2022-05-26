@@ -50,5 +50,6 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
         let contactsDetailViewController = ContactDetailViewController()
         contactsDetailViewController.contactname = contacts[indexPath.row]
         navigationController?.pushViewController(contactsDetailViewController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
