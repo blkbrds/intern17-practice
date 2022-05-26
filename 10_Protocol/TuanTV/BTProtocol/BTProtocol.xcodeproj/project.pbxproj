@@ -15,6 +15,8 @@
 		89025DC4283DD5DE005A0910 /* BT4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025DC2283DD5DE005A0910 /* BT4ViewController.xib */; };
 		89025DCC283E1A84005A0910 /* BT5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025DCA283E1A84005A0910 /* BT5ViewController.swift */; };
 		89025DCD283E1A84005A0910 /* BT5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025DCB283E1A84005A0910 /* BT5ViewController.xib */; };
+		89025DD1283E20ED005A0910 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025DD0283E20ED005A0910 /* Calculator.swift */; };
+		89025DD5283E2109005A0910 /* Calculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025DD4283E2109005A0910 /* Calculator.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		89025DC2283DD5DE005A0910 /* BT4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT4ViewController.xib; sourceTree = "<group>"; };
 		89025DCA283E1A84005A0910 /* BT5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT5ViewController.swift; sourceTree = "<group>"; };
 		89025DCB283E1A84005A0910 /* BT5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT5ViewController.xib; sourceTree = "<group>"; };
+		89025DD0283E20ED005A0910 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		89025DD4283E2109005A0910 /* Calculator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Calculator.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +64,13 @@
 		89025DA8283DCF53005A0910 /* BTProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				89025DCF283E20C2005A0910 /* BT5 */,
 				89025DC0283DD5BE005A0910 /* BT4 */,
 				89025DA9283DCF53005A0910 /* AppDelegate.swift */,
 				89025DAB283DCF53005A0910 /* SceneDelegate.swift */,
 				89025DB2283DCF56005A0910 /* Assets.xcassets */,
 				89025DB4283DCF56005A0910 /* LaunchScreen.storyboard */,
 				89025DB7283DCF56005A0910 /* Info.plist */,
-				89025DCA283E1A84005A0910 /* BT5ViewController.swift */,
-				89025DCB283E1A84005A0910 /* BT5ViewController.xib */,
 			);
 			path = BTProtocol;
 			sourceTree = "<group>";
@@ -79,6 +82,17 @@
 				89025DC2283DD5DE005A0910 /* BT4ViewController.xib */,
 			);
 			path = BT4;
+			sourceTree = "<group>";
+		};
+		89025DCF283E20C2005A0910 /* BT5 */ = {
+			isa = PBXGroup;
+			children = (
+				89025DCA283E1A84005A0910 /* BT5ViewController.swift */,
+				89025DCB283E1A84005A0910 /* BT5ViewController.xib */,
+				89025DD0283E20ED005A0910 /* Calculator.swift */,
+				89025DD4283E2109005A0910 /* Calculator.xib */,
+			);
+			path = BT5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,7 @@
 				89025DCD283E1A84005A0910 /* BT5ViewController.xib in Resources */,
 				89025DC4283DD5DE005A0910 /* BT4ViewController.xib in Resources */,
 				89025DB6283DCF56005A0910 /* LaunchScreen.storyboard in Resources */,
+				89025DD5283E2109005A0910 /* Calculator.xib in Resources */,
 				89025DB3283DCF56005A0910 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +170,7 @@
 				89025DCC283E1A84005A0910 /* BT5ViewController.swift in Sources */,
 				89025DAA283DCF53005A0910 /* AppDelegate.swift in Sources */,
 				89025DAC283DCF53005A0910 /* SceneDelegate.swift in Sources */,
+				89025DD1283E20ED005A0910 /* Calculator.swift in Sources */,
 				89025DC3283DD5DE005A0910 /* BT4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

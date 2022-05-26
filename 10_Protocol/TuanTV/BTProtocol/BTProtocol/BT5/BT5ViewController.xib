@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="calculatorButton" destination="jJv-cO-c5I" id="2hy-bT-0JH"/>
                 <outlet property="firstOperandTextField" destination="gDC-xx-rrc" id="zWH-Ae-R43"/>
+                <outlet property="resultLabel" destination="TMk-ev-023" id="mer-uq-098"/>
                 <outlet property="secondOperandTextField" destination="Fj3-oq-yg4" id="HoA-hT-ywB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -50,7 +51,7 @@
                         <constraint firstAttribute="height" constant="40" id="k8p-3G-m1Y"/>
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="?"/>
                     <connections>
                         <action selector="performCalculator:" destination="-1" eventType="touchUpInside" id="uab-1c-07F"/>
                     </connections>
