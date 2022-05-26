@@ -17,6 +17,8 @@
 		89025E07283F3F1A005A0910 /* BT3TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025E05283F3F1A005A0910 /* BT3TableViewController.xib */; };
 		89025E0B283F4174005A0910 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025E09283F4174005A0910 /* ContactDetailViewController.swift */; };
 		89025E0C283F4174005A0910 /* ContactDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025E0A283F4174005A0910 /* ContactDetailViewController.xib */; };
+		89025E10283F655E005A0910 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025E0F283F655E005A0910 /* DataManager.swift */; };
+		89025E14283F65C6005A0910 /* TableViewData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89025E13283F65C6005A0910 /* TableViewData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		89025E05283F3F1A005A0910 /* BT3TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT3TableViewController.xib; sourceTree = "<group>"; };
 		89025E09283F4174005A0910 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		89025E0A283F4174005A0910 /* ContactDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailViewController.xib; sourceTree = "<group>"; };
+		89025E0F283F655E005A0910 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		89025E13283F65C6005A0910 /* TableViewData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TableViewData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		89025DE3283F2B2E005A0910 /* BTTableView */ = {
 			isa = PBXGroup;
 			children = (
+				89025E0E283F612F005A0910 /* BT4 */,
 				89025E03283F3E89005A0910 /* BT3 */,
 				89025DFB283F3281005A0910 /* BT1 */,
 				89025DE4283F2B2E005A0910 /* AppDelegate.swift */,
@@ -93,6 +98,15 @@
 				89025E0A283F4174005A0910 /* ContactDetailViewController.xib */,
 			);
 			path = BT3;
+			sourceTree = "<group>";
+		};
+		89025E0E283F612F005A0910 /* BT4 */ = {
+			isa = PBXGroup;
+			children = (
+				89025E0F283F655E005A0910 /* DataManager.swift */,
+				89025E13283F65C6005A0910 /* TableViewData.plist */,
+			);
+			path = BT4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89025E14283F65C6005A0910 /* TableViewData.plist in Resources */,
 				89025DF1283F2B31005A0910 /* LaunchScreen.storyboard in Resources */,
 				89025DEE283F2B31005A0910 /* Assets.xcassets in Resources */,
 				89025DFF283F39DA005A0910 /* BT1TableViewController.xib in Resources */,
@@ -168,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89025DE5283F2B2E005A0910 /* AppDelegate.swift in Sources */,
+				89025E10283F655E005A0910 /* DataManager.swift in Sources */,
 				89025E0B283F4174005A0910 /* ContactDetailViewController.swift in Sources */,
 				89025DFE283F39DA005A0910 /* BT1TableViewController.swift in Sources */,
 				89025DE7283F2B2E005A0910 /* SceneDelegate.swift in Sources */,
