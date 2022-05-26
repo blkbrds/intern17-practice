@@ -11,6 +11,8 @@
 		89025DE7283F2B2E005A0910 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025DE6283F2B2E005A0910 /* SceneDelegate.swift */; };
 		89025DEE283F2B31005A0910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89025DED283F2B31005A0910 /* Assets.xcassets */; };
 		89025DF1283F2B31005A0910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89025DEF283F2B31005A0910 /* LaunchScreen.storyboard */; };
+		89025DFE283F39DA005A0910 /* BT1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025DFC283F39DA005A0910 /* BT1TableViewController.swift */; };
+		89025DFF283F39DA005A0910 /* BT1TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025DFD283F39DA005A0910 /* BT1TableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		89025DED283F2B31005A0910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89025DF0283F2B31005A0910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89025DF2283F2B31005A0910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89025DFC283F39DA005A0910 /* BT1TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT1TableViewController.swift; sourceTree = "<group>"; };
+		89025DFD283F39DA005A0910 /* BT1TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT1TableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		89025DE3283F2B2E005A0910 /* BTTableView */ = {
 			isa = PBXGroup;
 			children = (
+				89025DFB283F3281005A0910 /* BT1 */,
 				89025DE4283F2B2E005A0910 /* AppDelegate.swift */,
 				89025DE6283F2B2E005A0910 /* SceneDelegate.swift */,
 				89025DED283F2B31005A0910 /* Assets.xcassets */,
@@ -59,6 +64,15 @@
 				89025DF2283F2B31005A0910 /* Info.plist */,
 			);
 			path = BTTableView;
+			sourceTree = "<group>";
+		};
+		89025DFB283F3281005A0910 /* BT1 */ = {
+			isa = PBXGroup;
+			children = (
+				89025DFC283F39DA005A0910 /* BT1TableViewController.swift */,
+				89025DFD283F39DA005A0910 /* BT1TableViewController.xib */,
+			);
+			path = BT1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +134,7 @@
 			files = (
 				89025DF1283F2B31005A0910 /* LaunchScreen.storyboard in Resources */,
 				89025DEE283F2B31005A0910 /* Assets.xcassets in Resources */,
+				89025DFF283F39DA005A0910 /* BT1TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89025DE5283F2B2E005A0910 /* AppDelegate.swift in Sources */,
+				89025DFE283F39DA005A0910 /* BT1TableViewController.swift in Sources */,
 				89025DE7283F2B2E005A0910 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
