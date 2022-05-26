@@ -53,13 +53,14 @@ extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else { return UITableViewCell() }
         cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
+        cell.delegate = self
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        return 150
     }
-    
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == UITableViewCell.EditingStyle.delete{
 //            do {
@@ -78,6 +79,20 @@ extension FavoriteViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension FavoriteViewController: UITableViewDelegate {
-    
-    
+}
+
+extension FavoriteViewController: FavoriteCellDelegate {
+    func cell(cell: FavoriteCell, needsPerfom actions: FavoriteCell.Action) {
+        switch actions {
+        case .delete(let results):
+            do {
+                let realm = try Realm()
+                try realm.write {
+                    realm.delete(results)
+                    tableView.reloadData()
+                }
+            } catch {
+            }
+        }
+    }
 }
