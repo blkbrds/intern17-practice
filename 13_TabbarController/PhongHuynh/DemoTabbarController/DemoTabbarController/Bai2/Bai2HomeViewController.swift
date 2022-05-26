@@ -2,6 +2,7 @@ import UIKit
 
 // MARK: - Bai2HomeViewControllerDelegate
 protocol Bai2HomeViewControllerDelegate: class {
+
     func controller(controller: Bai2HomeViewController, needsPerfom actions: Bai2HomeViewController.Action)
 }
 
@@ -28,22 +29,22 @@ final class Bai2HomeViewController: UIViewController {
     // MARK: - Private functions
     private func configUI() {
         title = "Home"
-        let leftButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(leftAction))
+        let leftButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(leftButtonTouchUpInside))
         navigationItem.leftBarButtonItem = leftButton
-        let rightButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(rightAction))
+        let rightButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(rightButtonTouchUpInside))
         navigationItem.rightBarButtonItem = rightButton
         nameLabel.text = userName
     }
     
     // MARK: - Objc functions
-    @objc private func leftAction() {
+    @objc private func leftButtonTouchUpInside() {
         if let delegate = delegate {
             delegate.controller(controller: self, needsPerfom: .logout)
         }
         dismiss(animated: true, completion: nil)
     }
     
-    @objc private func rightAction() {
+    @objc private func rightButtonTouchUpInside() {
         let vc = Bai2EditViewController()
         vc.delegate = self
         SceneDelegate.shared.setroot(with: .tabbar)
@@ -53,6 +54,7 @@ final class Bai2HomeViewController: UIViewController {
 
 // MARK: - Bai2EditViewControllerDelegate
 extension Bai2HomeViewController: Bai2EditViewControllerDelegate {
+
     func controller(controller: Bai2EditViewController, needsPerfom actions: Bai2EditViewController.Action) {
         switch actions {
         case .tap(let userName):

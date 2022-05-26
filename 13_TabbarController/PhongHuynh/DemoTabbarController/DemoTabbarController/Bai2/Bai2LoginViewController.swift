@@ -25,7 +25,6 @@ final class Bai2LoginViewController: BaseViewController {
         navigationItem.rightBarButtonItem = rightButton
         usernameTextField.delegate = self
         passwordTextField.delegate = self
-        passwordTextField.returnKeyType = .done
     }
     
     // MARK: - Objc functions
@@ -49,6 +48,7 @@ final class Bai2LoginViewController: BaseViewController {
 
 // MARK: - UITextFieldDelegate
 extension Bai2LoginViewController: UITextFieldDelegate {
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passwordTextField.becomeFirstResponder()
         if textField.returnKeyType == .done {
@@ -60,6 +60,7 @@ extension Bai2LoginViewController: UITextFieldDelegate {
 
 // MARK: - Bai2HomeViewControllerDelegate
 extension Bai2LoginViewController: Bai2HomeViewControllerDelegate {
+
     func controller(controller: Bai2HomeViewController, needsPerfom actions: Bai2HomeViewController.Action) {
         switch actions {
         case .logout:

@@ -6,12 +6,12 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
-        let leftButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(leftAction))
+        let leftButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(leftButtonTouchUpInside))
         navigationItem.leftBarButtonItem = leftButton
     }
     
     // MARK: - Objc functions
-    @objc private func leftAction() {
+    @objc private func leftButtonTouchUpInside() {
         SceneDelegate.shared.setroot(with: .login)
     }
 }

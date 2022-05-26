@@ -14,7 +14,7 @@ final class Bai2EditViewController: UIViewController {
     
     // MARK: - Define
     enum Action {
-        case tap(username: String)
+        case tap(userName: String)
     }
     
     // MARK: - Properties
@@ -29,20 +29,20 @@ final class Bai2EditViewController: UIViewController {
     // MARK: - Private functions
     private func configUI() {
         title = "Edit"
-        let leftButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(leftAction))
+        let leftButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(leftButtonTouchUpInside))
         navigationItem.leftBarButtonItem = leftButton
-        let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
+        let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightButtonTouchUpInside))
         navigationItem.rightBarButtonItem = rightButton
     }
     
     // MARK: - Objc functions
-    @objc private func leftAction() {
+    @objc private func leftButtonTouchUpInside() {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    @objc private func rightAction() {
-        if let username = usernameTextField.text, let delegate = delegate {
-            delegate.controller(controller: self, needsPerfom: .tap(username: username))
+
+    @objc private func rightButtonTouchUpInside() {
+        if let userName = usernameTextField.text, let delegate = delegate {
+            delegate.controller(controller: self, needsPerfom: .tap(userName: userName))
         }
         self.navigationController?.popViewController(animated: true)
     }
