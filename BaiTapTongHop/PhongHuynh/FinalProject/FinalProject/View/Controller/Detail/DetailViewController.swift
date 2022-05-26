@@ -55,46 +55,17 @@ final class DetailViewController: UIViewController {
         }
     }
 
-    private func loadSimilarVideoData() {
-        switch viewModel?.type {
-        case .featured:
-            viewModel?.loadAPIDetail(id: viewModel?.featuredVideo?.id ?? "") { [weak self] (result) in
-                guard let this = self else { return }
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success:
-                        this.tableView.reloadData()
-                    case .failure(let error):
-                        print("error\(error)")
-                    }
+    private func loadSimilarVideoData(id: String? = nil) {
+        viewModel?.loadAPIDetail(id: id) { [weak self] (result) in
+            guard let this = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    this.tableView.reloadData()
+                case .failure(let error):
+                    print("error\(error)")
                 }
             }
-        case .nomination:
-            viewModel?.loadAPIDetail(id: viewModel?.nominationVideo?.id ?? "") { [weak self] (result) in
-                guard let this = self else { return }
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success:
-                        this.tableView.reloadData()
-                    case .failure(let error):
-                        print("error\(error)")
-                    }
-                }
-            }
-        case .new:
-            viewModel?.loadAPIDetail(id: viewModel?.newVideo?.id ?? "") { [weak self] (result) in
-                guard let this = self else { return }
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success:
-                        this.tableView.reloadData()
-                    case .failure(let error):
-                        print("error\(error)")
-                    }
-                }
-            }
-        case .none:
-            break
         }
     }
 
@@ -138,7 +109,9 @@ extension DetailViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        updateView()
+        player.load(withVideoId: viewModel?.videos[indexPath.row].id ?? "")
+        titleYoutubeLabel.text = viewModel?.videos[indexPath.row].title ?? ""
+        loadSimilarVideoData(id: viewModel?.videos[indexPath.row].id)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

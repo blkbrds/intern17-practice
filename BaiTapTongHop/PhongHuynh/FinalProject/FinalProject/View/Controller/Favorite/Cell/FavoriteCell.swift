@@ -9,16 +9,8 @@
 import UIKit
 import RealmSwift
 
-protocol FavoriteCellDelegate: class {
-    func cell(cell: FavoriteCell, needsPerfom actions: FavoriteCell.Action)
-}
-
 final class FavoriteCell: UITableViewCell {
-    
-    enum Action {
-        case delete(results: [RealmVideo])
-    }
-
+   
     // MARK: - IBOutlets
     @IBOutlet private weak var deleteButton: UIButton!
     @IBOutlet private weak var favoriteVideoImageView: UIImageView!
@@ -30,8 +22,7 @@ final class FavoriteCell: UITableViewCell {
             updateView()
         }
     }
-    weak var delegate: FavoriteCellDelegate?
-    
+
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,17 +39,5 @@ final class FavoriteCell: UITableViewCell {
             this.favoriteVideoImageView.image = image
         })
         titleFavoriteVideoLabel.text = viewModel?.video.title
-    }
-
-    // MARK: - IBActions
-    @IBAction private func deleteData(_ sender: Any) {
-        do {
-            let realm = try Realm()
-            let results = realm.objects(RealmVideo.self).filter("title = \(viewModel?.video.title) AND image = \(viewModel?.video.image)").toArray(ofType: RealmVideo.self)
-            if let delegate = delegate {
-                delegate.cell(cell: self, needsPerfom: .delete(results: results))
-            }
-        } catch {
-        }
     }
 }

@@ -22,6 +22,10 @@ final class FavoriteViewModel {
     func viewModelForItem(indexPath: IndexPath) -> FavoriteCellViewModel {
         return FavoriteCellViewModel(video: videos[indexPath.row])
     }
+
+    func removeVideo(indexPath: IndexPath) {
+        videos.remove(at: indexPath.row)
+    }
 }
 
 // MARK: - Results

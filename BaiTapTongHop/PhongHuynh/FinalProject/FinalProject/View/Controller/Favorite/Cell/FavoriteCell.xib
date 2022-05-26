@@ -38,9 +38,6 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="delete.left.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="deleteData:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iY8-OO-IQK"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

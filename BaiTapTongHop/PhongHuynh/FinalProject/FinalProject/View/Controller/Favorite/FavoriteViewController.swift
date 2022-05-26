@@ -53,7 +53,7 @@ extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else { return UITableViewCell() }
         cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
-        cell.delegate = self
+       // cell.delegate = self
         return cell
     }
 
@@ -62,18 +62,18 @@ extension FavoriteViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == UITableViewCell.EditingStyle.delete{
-//            do {
-//                let realm = try Realm()
-//                if let item = viewModel.viewModelForItem(indexPath: indexPath) {
-//                    try realm.write {
-//                        realm.delete(item)
-//                    }
-//                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-//                }
-//            } catch {
-//            }
-//        }
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            do {
+                let realm = try Realm()
+                let item = viewModel.videos[indexPath.row]
+                try realm.write {
+                    realm.delete(item)
+                    viewModel.removeVideo(indexPath: indexPath)
+                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                }
+            } catch {
+            }
+        }
     }
 }
 
@@ -81,18 +81,3 @@ extension FavoriteViewController: UITableViewDataSource {
 extension FavoriteViewController: UITableViewDelegate {
 }
 
-extension FavoriteViewController: FavoriteCellDelegate {
-    func cell(cell: FavoriteCell, needsPerfom actions: FavoriteCell.Action) {
-        switch actions {
-        case .delete(let results):
-            do {
-                let realm = try Realm()
-                try realm.write {
-                    realm.delete(results)
-                    tableView.reloadData()
-                }
-            } catch {
-            }
-        }
-    }
-}

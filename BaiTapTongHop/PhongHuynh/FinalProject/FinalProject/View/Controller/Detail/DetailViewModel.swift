@@ -34,11 +34,31 @@ final class DetailViewModel {
         return DetailCellViewModel(video: videos[indexPath.row])
     }
 
-    func loadAPIDetail(id: String, completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&relatedToVideoId=\(id)&regionCode=VN&key=AIzaSyDWgw7njdG6PA3QZ3S8cHIRI3b3xw55c80"
+    func getId() -> String {
+        var id = ""
+        switch type {
+        case .featured:
+            id = featuredVideo?.id ?? ""
+        case .nomination:
+            id = nominationVideo?.id ?? ""
+        case .new:
+            id = newVideo?.id ?? ""
+        }
+        return id
+    }
+
+    func loadAPIDetail(id: String? = nil, completion: @escaping APICompletion) {
+        var videoID = ""
+        if let id = id {
+            videoID = id
+        } else {
+            videoID = getId()
+        }
+        let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&relatedToVideoId=\(videoID)&regionCode=VN&key=AIzaSyDWgw7njdG6PA3QZ3S8cHIRI3b3xw55c80"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)
+                self.videos = []
                 if let items = json["items"] as? [JSON] {
                     for item in items {
                         self.videos.append(Video(json: item))
