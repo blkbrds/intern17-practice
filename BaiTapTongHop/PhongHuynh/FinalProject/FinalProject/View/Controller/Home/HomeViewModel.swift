@@ -71,7 +71,7 @@ final class HomeViewModel {
     }
 
     func loadNewVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&regionCode=VN&key=AIzaSyDWgw7njdG6PA3QZ3S8cHIRI3b3xw55c80"
+        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&relatedToVideoId=jXKR9kl5tR8&type=video&key=AIzaSyDWgw7njdG6PA3QZ3S8cHIRI3b3xw55c80"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)

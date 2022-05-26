@@ -25,13 +25,13 @@
                         <rect key="frame" x="125.5" y="0.0" width="185.5" height="135"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGc-uI-fXC">
-                                <rect key="frame" x="20" y="5" width="125.5" height="130"/>
+                                <rect key="frame" x="20" y="0.0" width="125.5" height="135"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsy-uG-7Ev">
-                                <rect key="frame" x="150.5" y="5" width="30" height="30"/>
+                                <rect key="frame" x="150.5" y="10" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="als-4U-Fbj"/>
                                     <constraint firstAttribute="width" constant="30" id="h4e-Oe-F3n"/>
@@ -47,8 +47,8 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="DGc-uI-fXC" secondAttribute="bottom" id="6KA-9W-dqZ"/>
                             <constraint firstItem="DGc-uI-fXC" firstAttribute="leading" secondItem="PMd-GF-Nfp" secondAttribute="leading" constant="20" id="6O3-jv-OJQ"/>
-                            <constraint firstItem="DGc-uI-fXC" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" constant="5" id="MAz-UE-SEh"/>
-                            <constraint firstItem="nsy-uG-7Ev" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" constant="5" id="d7J-Qv-tVc"/>
+                            <constraint firstItem="DGc-uI-fXC" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" id="MAz-UE-SEh"/>
+                            <constraint firstItem="nsy-uG-7Ev" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" constant="10" id="d7J-Qv-tVc"/>
                             <constraint firstItem="nsy-uG-7Ev" firstAttribute="leading" secondItem="DGc-uI-fXC" secondAttribute="trailing" constant="5" id="o7o-AZ-3pu"/>
                             <constraint firstAttribute="trailing" secondItem="nsy-uG-7Ev" secondAttribute="trailing" constant="5" id="zDc-eS-fvf"/>
                         </constraints>

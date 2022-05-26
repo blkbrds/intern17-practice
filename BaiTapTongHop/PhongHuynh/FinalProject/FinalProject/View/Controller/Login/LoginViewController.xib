@@ -35,16 +35,24 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfN-03-iPf">
-                            <rect key="frame" x="90" y="301" width="234" height="48"/>
+                            <rect key="frame" x="95" y="301" width="224" height="48"/>
                             <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="224" id="adn-Q2-K0b"/>
+                                <constraint firstAttribute="height" constant="48" id="gjd-wk-PJn"/>
+                            </constraints>
                             <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                             <state key="normal" title="Login with Facebook" image="iconfacebook">
                                 <color key="titleColor" systemColor="systemRedColor"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="868-ZH-IKp">
-                            <rect key="frame" x="90" y="369" width="234" height="48"/>
+                            <rect key="frame" x="95" y="369" width="224" height="48"/>
                             <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="224" id="6Iq-Gw-b46"/>
+                                <constraint firstAttribute="height" constant="48" id="Dw4-OG-q9Y"/>
+                            </constraints>
                             <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
                             <state key="normal" title="Login with Gmail  " image="icons8-gmail-login-48">
                                 <color key="titleColor" systemColor="systemRedColor"/>
@@ -56,15 +64,15 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="868-ZH-IKp" secondAttribute="trailing" constant="90" id="CZ6-gL-DRB"/>
-                        <constraint firstAttribute="trailing" secondItem="vfN-03-iPf" secondAttribute="trailing" constant="90" id="Lzl-cc-vMU"/>
+                        <constraint firstItem="vfN-03-iPf" firstAttribute="leading" secondItem="ISV-K4-fZ7" secondAttribute="leading" constant="95" id="8eX-mR-Jx3"/>
+                        <constraint firstItem="vfN-03-iPf" firstAttribute="top" secondItem="3ae-je-OJB" secondAttribute="bottom" constant="160" id="DVC-tq-bwn"/>
                         <constraint firstItem="3ae-je-OJB" firstAttribute="leading" secondItem="ISV-K4-fZ7" secondAttribute="leading" constant="100" id="PYz-q4-1X8"/>
-                        <constraint firstItem="868-ZH-IKp" firstAttribute="top" secondItem="vfN-03-iPf" secondAttribute="bottom" constant="20" id="SEc-LS-Ox7"/>
-                        <constraint firstItem="vfN-03-iPf" firstAttribute="top" secondItem="3ae-je-OJB" secondAttribute="bottom" constant="160" id="SaK-Qv-365"/>
-                        <constraint firstItem="vfN-03-iPf" firstAttribute="leading" secondItem="ISV-K4-fZ7" secondAttribute="leading" constant="90" id="Xbn-2z-mYn"/>
+                        <constraint firstAttribute="trailing" secondItem="868-ZH-IKp" secondAttribute="trailing" constant="95" id="fqs-gd-dYD"/>
+                        <constraint firstAttribute="trailing" secondItem="vfN-03-iPf" secondAttribute="trailing" constant="95" id="hSN-Sj-6fj"/>
                         <constraint firstAttribute="trailing" secondItem="3ae-je-OJB" secondAttribute="trailing" constant="100" id="iZI-tQ-0RU"/>
-                        <constraint firstItem="868-ZH-IKp" firstAttribute="leading" secondItem="ISV-K4-fZ7" secondAttribute="leading" constant="90" id="jBZ-UM-Bad"/>
+                        <constraint firstItem="868-ZH-IKp" firstAttribute="leading" secondItem="ISV-K4-fZ7" secondAttribute="leading" constant="95" id="scV-g0-vci"/>
                         <constraint firstItem="3ae-je-OJB" firstAttribute="top" secondItem="ISV-K4-fZ7" secondAttribute="top" constant="100" id="vUa-GK-b6D"/>
+                        <constraint firstItem="868-ZH-IKp" firstAttribute="top" secondItem="vfN-03-iPf" secondAttribute="bottom" constant="20" id="wXs-KU-9WP"/>
                     </constraints>
                 </view>
             </subviews>

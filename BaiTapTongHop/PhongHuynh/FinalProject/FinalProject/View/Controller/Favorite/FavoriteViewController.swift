@@ -59,8 +59,25 @@ extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        return 150
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == UITableViewCell.EditingStyle.delete{
+//            do {
+//                let realm = try Realm()
+//                if let item = viewModel.viewModelForItem(indexPath: indexPath) {
+//                    try realm.write {
+//                        realm.delete(item)
+//                    }
+//                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+//                }
+//            } catch {
+//            }
+//        }
+    }
 }
 
 // MARK: - UITableViewDelegate
 extension FavoriteViewController: UITableViewDelegate {
+    
+    
 }

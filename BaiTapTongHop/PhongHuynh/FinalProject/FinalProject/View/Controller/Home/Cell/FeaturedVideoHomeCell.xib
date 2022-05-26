@@ -44,19 +44,19 @@
                         <rect key="frame" x="20" y="200.5" width="282" height="60.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CSd-1n-Wyi">
-                                <rect key="frame" x="5" y="5" width="272" height="35.5"/>
+                                <rect key="frame" x="5" y="5" width="272" height="32"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-music-32" translatesAutoresizingMaskIntoConstraints="NO" id="xND-lY-BC5">
-                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="35.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="32"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-video-32" translatesAutoresizingMaskIntoConstraints="NO" id="csd-UI-P5y">
-                                        <rect key="frame" x="70.5" y="0.0" width="60.5" height="35.5"/>
+                                        <rect key="frame" x="70.5" y="0.0" width="60.5" height="32"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-music-notation-32" translatesAutoresizingMaskIntoConstraints="NO" id="f6L-qH-06f">
-                                        <rect key="frame" x="141" y="0.0" width="60.5" height="35.5"/>
+                                        <rect key="frame" x="141" y="0.0" width="60.5" height="32"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-music-record-32" translatesAutoresizingMaskIntoConstraints="NO" id="GRS-lt-yLq">
-                                        <rect key="frame" x="211.5" y="0.0" width="60.5" height="35.5"/>
+                                        <rect key="frame" x="211.5" y="0.0" width="60.5" height="32"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -95,7 +95,6 @@
                             <constraint firstAttribute="trailing" secondItem="CSd-1n-Wyi" secondAttribute="trailing" constant="5" id="CZ2-1I-oj8"/>
                             <constraint firstItem="CSd-1n-Wyi" firstAttribute="top" secondItem="Euo-Xu-PVe" secondAttribute="top" constant="5" id="eDd-Ot-ZVx"/>
                             <constraint firstAttribute="trailing" secondItem="Xht-NH-GH4" secondAttribute="trailing" constant="5" id="kC8-kB-KqW"/>
-                            <constraint firstAttribute="bottom" secondItem="CSd-1n-Wyi" secondAttribute="bottom" constant="20" id="kJA-o3-BQQ"/>
                             <constraint firstItem="Xht-NH-GH4" firstAttribute="leading" secondItem="Euo-Xu-PVe" secondAttribute="leading" constant="5" id="pfy-s1-ap3"/>
                             <constraint firstItem="CSd-1n-Wyi" firstAttribute="leading" secondItem="Euo-Xu-PVe" secondAttribute="leading" constant="5" id="rJu-JO-U7v"/>
                             <constraint firstAttribute="bottom" secondItem="Xht-NH-GH4" secondAttribute="bottom" id="rNp-dz-75o"/>

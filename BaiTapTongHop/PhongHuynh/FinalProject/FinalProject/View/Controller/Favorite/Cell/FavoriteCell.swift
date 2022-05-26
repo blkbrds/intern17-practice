@@ -44,7 +44,7 @@ final class FavoriteCell: UITableViewCell {
     @IBAction private func deleteData(_ sender: Any) {
         do {
             let realm = try Realm()
-            let results = realm.objects(RealmVideo.self)
+            let results = realm.objects(RealmVideo.self).filter("title = \(viewModel?.video.title) AND image = \(viewModel?.video.image)")
             try realm.write {
                 realm.delete(results)
             }
