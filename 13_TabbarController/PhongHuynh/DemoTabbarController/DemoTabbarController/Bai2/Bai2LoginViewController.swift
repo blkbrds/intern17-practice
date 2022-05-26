@@ -21,14 +21,14 @@ final class Bai2LoginViewController: BaseViewController {
     // MARK: - Private functions
     private func configUI() {
         title = "Login"
-        let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
+        let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightButtonTouchUpInside))
         navigationItem.rightBarButtonItem = rightButton
         usernameTextField.delegate = self
         passwordTextField.delegate = self
     }
     
     // MARK: - Objc functions
-    @objc private func rightAction() {
+    @objc private func rightButtonTouchUpInside() {
         guard let userName = usernameTextField.text, let password = passwordTextField.text, !userName.isEmpty, !password.isEmpty else {
             showLabel.text = "Chưa nhập giá trị"
             return

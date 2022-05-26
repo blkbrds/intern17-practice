@@ -2,6 +2,7 @@ import UIKit
 
 // MARK: - Bai2EditViewControllerDelegate
 protocol Bai2EditViewControllerDelegate: class {
+
     func controller(controller: Bai2EditViewController, needsPerfom actions: Bai2EditViewController.Action)
 }
 
