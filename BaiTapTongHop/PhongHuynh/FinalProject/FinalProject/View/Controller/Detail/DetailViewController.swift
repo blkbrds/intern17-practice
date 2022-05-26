@@ -45,10 +45,10 @@ final class DetailViewController: UIViewController {
             player.load(withVideoId: viewModel?.featuredVideo?.id ?? "")
             titleYoutubeLabel.text = viewModel?.featuredVideo?.title
         case .nomination:
-            player.load(withVideoId: viewModel?.nominationVideo?.videoId ?? "")
+            player.load(withVideoId: viewModel?.nominationVideo?.id ?? "")
             titleYoutubeLabel.text = viewModel?.nominationVideo?.title
         case .new:
-            player.load(withVideoId: viewModel?.newVideo?.videoId ?? "")
+            player.load(withVideoId: viewModel?.newVideo?.id ?? "")
             titleYoutubeLabel.text = viewModel?.newVideo?.title
         case .none:
             break
@@ -70,7 +70,7 @@ final class DetailViewController: UIViewController {
                 }
             }
         case .nomination:
-            viewModel?.loadAPIDetail(id: viewModel?.nominationVideo?.videoId ?? "") { [weak self] (result) in
+            viewModel?.loadAPIDetail(id: viewModel?.nominationVideo?.id ?? "") { [weak self] (result) in
                 guard let this = self else { return }
                 DispatchQueue.main.async {
                     switch result {
@@ -82,7 +82,7 @@ final class DetailViewController: UIViewController {
                 }
             }
         case .new:
-            viewModel?.loadAPIDetail(id: viewModel?.newVideo?.videoId ?? "") { [weak self] (result) in
+            viewModel?.loadAPIDetail(id: viewModel?.newVideo?.id ?? "") { [weak self] (result) in
                 guard let this = self else { return }
                 DispatchQueue.main.async {
                     switch result {

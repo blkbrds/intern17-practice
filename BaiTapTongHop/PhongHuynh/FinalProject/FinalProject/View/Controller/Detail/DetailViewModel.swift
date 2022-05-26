@@ -12,13 +12,13 @@ final class DetailViewModel {
 
     // MARK: - Private functions
     var featuredVideo: Video?
-    var nominationVideo: NominationVideo?
-    var newVideo: NominationVideo?
+    var nominationVideo: Video?
+    var newVideo: Video?
     var type: HomeViewModel.CellType
     var videos: [Video] = []
 
     // MARK: - Init
-    init(featuredVideo: Video?, nominationVideo: NominationVideo?, newVideo: NominationVideo?, type: HomeViewModel.CellType) {
+    init(featuredVideo: Video?, nominationVideo: Video?, newVideo: Video?, type: HomeViewModel.CellType) {
         self.featuredVideo = featuredVideo
         self.nominationVideo = nominationVideo
         self.newVideo = newVideo

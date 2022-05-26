@@ -11,7 +11,7 @@ import Foundation
 final class SearchViewModel {
 
     // MARK: Properties
-    var searchsVideo: [NominationVideo] = []
+    var searchsVideo: [Video] = []
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
@@ -34,7 +34,7 @@ final class SearchViewModel {
                 if let items = json["items"] as? [JSON] {
                     self.searchsVideo = []
                     for item in items {
-                        self.searchsVideo.append(NominationVideo(json: item))
+                        self.searchsVideo.append(Video(jsonNominationVideo: item))
                     }
                     completion(.success)
                 }

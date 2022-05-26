@@ -19,8 +19,8 @@ final class HomeViewModel {
 
     // MARK: - Private functions
     var featureVideos: [Video] = []
-    var newVideos: [NominationVideo] = []
-    var nominationVideos: [NominationVideo] = []
+    var newVideos: [Video] = []
+    var nominationVideos: [Video] = []
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
@@ -58,7 +58,7 @@ final class HomeViewModel {
                 let json = self.convertToJSON(from: data)
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.nominationVideos.append(NominationVideo(json: item))
+                        self.nominationVideos.append(Video(jsonNominationVideo: item))
                     }
                     completion(.success)
                 }
@@ -77,7 +77,7 @@ final class HomeViewModel {
                 let json = self.convertToJSON(from: data)
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.newVideos.append(NominationVideo(json: item))
+                        self.newVideos.append(Video(jsonNominationVideo: item))
                     }
                     completion(.success)
                 }
