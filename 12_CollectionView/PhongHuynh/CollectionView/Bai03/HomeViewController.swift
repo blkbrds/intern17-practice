@@ -103,7 +103,6 @@ final class HomeViewController: UIViewController {
         collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TeamHeaderReusableView")
         let footerNib = UINib(nibName: "TeamFooterReusableView", bundle: Bundle.main)
         collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamFooterReusableView")
-        // collectionView.delegate = self
         collectionView.dataSource = self
     }
     
@@ -161,20 +160,14 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let team = Team(rawValue: section) else {
-            fatalError("Team value is nil")
-        }
+        guard let team = Team(rawValue: section) else { return 0 }
         return team.members.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let team = Team(rawValue: indexPath.section) else {
-            fatalError("Team value is nil")
-        }
-        guard indexPath.item < team.members.count else {
-            fatalError("Member index is out of bounds")
-        }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCell
+        guard let team = Team(rawValue: indexPath.section) else { return UICollectionViewCell() }
+        guard indexPath.item < team.members.count else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as? HomeCell else { return UICollectionViewCell() }
         cell.updateCell(avatar: team.members[indexPath.item].avatar, name: team.members[indexPath.item].name, status: status)
         return cell
     }
@@ -182,17 +175,13 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            guard let team = Team(rawValue: indexPath.section) else {
-                fatalError("Team value is nil")
-            }
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TeamHeaderReusableView", for: indexPath) as! TeamHeaderReusableView
+            guard let team = Team(rawValue: indexPath.section) else { return UICollectionReusableView() }
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TeamHeaderReusableView", for: indexPath) as? TeamHeaderReusableView else { return UICollectionReusableView() }
             header.updateHeaderView(avatar: team.teamAvatar, name: team.teamName, status: status)
             return header
         case UICollectionView.elementKindSectionFooter:
-            guard let team = Team(rawValue: indexPath.section) else {
-                fatalError("Team value is nil")
-            }
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamFooterReusableView", for: indexPath) as! TeamFooterReusableView
+            guard let team = Team(rawValue: indexPath.section) else { return UICollectionViewCell() }
+            guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamFooterReusableView", for: indexPath) as? TeamFooterReusableView else { return UICollectionReusableView() }
             footer.updateFooterView(click: team.teamFooter, status: status)
             return footer
         default:

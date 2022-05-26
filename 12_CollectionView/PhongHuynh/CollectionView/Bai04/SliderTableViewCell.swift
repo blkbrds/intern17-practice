@@ -20,11 +20,7 @@ final class SliderTableViewCell: UITableViewCell {
         super.awakeFromNib()
         configCollectionView()
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
+
     // MARK: - Private funtions
     private func configCollectionView() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
