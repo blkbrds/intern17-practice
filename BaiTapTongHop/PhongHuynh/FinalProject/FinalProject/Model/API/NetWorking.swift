@@ -29,6 +29,8 @@ final class NetWorking {
         case success(Data?)
         case failure(APIError)
     }
+    
+    let customError = NSError(message: "Error Not Define")
 
     // MARK: - singleton
     private static var sharedNetworking: NetWorking = {

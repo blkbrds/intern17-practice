@@ -1,5 +1,6 @@
 import UIKit
 import GoogleSignIn
+import SwiftUtils
 
 @available(iOS 13.0, *)
 final class LoginViewController: UIViewController {
@@ -7,8 +8,6 @@ final class LoginViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var loginFacebookButton: UIButton!
     @IBOutlet private weak var loginGmailButton: UIButton!
-
-    let signInConfig = GIDConfiguration.init(clientID: "1067897935402-urdpk47r6q9m58tbj9c5ed0mn7ck5un0.apps.googleusercontent.com")
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -28,14 +27,13 @@ final class LoginViewController: UIViewController {
 
     // MARK: - IBActions
     @IBAction private func loginWithGmailButtonTouchUpInside(_ sender: Any) {
-        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
-            if error != nil || user == nil {
-                // Show the app's signed-out state.
-            } else {
+        LoginService.login(controller: self) { [weak self] (result) in
+            guard let this = self else { return }
+            switch result {
+            case .success:
                 AppDelegate.shared.setroot(with: .tabbar)
-                // Save to userdefault
-                UserDefaults.standard.setValue(user?.profile?.name, forKey: "user_name")
-                UserDefaults.standard.setValue(user?.profile?.imageURL(withDimension: 320)?.absoluteString, forKey: "image")
+            case .failure(let error):
+                this.alert(title: "Error", msg: error.localizedDescription, handler: nil)
             }
         }
     }

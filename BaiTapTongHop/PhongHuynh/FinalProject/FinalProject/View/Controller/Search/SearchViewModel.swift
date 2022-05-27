@@ -34,7 +34,7 @@ final class SearchViewModel {
                 if let items = json["items"] as? [JSON] {
                     self.searchsVideo = []
                     for item in items {
-                        self.searchsVideo.append(Video(jsonNominationVideo: item))
+                        self.searchsVideo.append(Video(json: item))
                     }
                     completion(.success)
                 }

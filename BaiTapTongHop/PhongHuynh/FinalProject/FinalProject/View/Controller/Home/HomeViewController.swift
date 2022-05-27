@@ -58,40 +58,55 @@ final class HomeViewController: UIViewController {
     }
 
     private func loadNominationVideoData(completion: @escaping () -> Void ) {
-        viewModel.loadNominationVideoAPI { (result) in
+        viewModel.loadNominationVideoAPI { [weak self] (result) in
+            guard let this = self else {
+                completion()
+                return
+            }
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    completion()
+                    break
                 case .failure(let error):
-                    print("error\(error)")
+                    this.alert(title: "Error", msg: error.localizedDescription, handler: nil)
                 }
+                completion()
             }
         }
     }
 
     private func loadNewVideoData(completion: @escaping () -> Void ) {
-        viewModel.loadNewVideoAPI { (result) in
+        viewModel.loadNewVideoAPI { [weak self] (result) in
+            guard let this = self else {
+                completion()
+                return
+            }
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    completion()
+                    break
                 case .failure(let error):
-                    print("error\(error)")
+                    this.alert(title: "Error", msg: error.localizedDescription, handler: nil)
                 }
+                completion()
             }
         }
     }
 
     private func loadVideoTrendingData(completion: @escaping () -> Void ) {
-        viewModel.loadVideoTrendingAPI { (result) in
+        viewModel.loadVideoTrendingAPI { [weak self] (result) in
+            guard let this = self else {
+                completion()
+                return
+            }
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    completion()
+                    break
                 case .failure(let error):
-                    print("error\(error)")
+                    this.alert(title: "Error", msg: error.localizedDescription, handler: nil)
                 }
+                completion()
             }
         }
     }

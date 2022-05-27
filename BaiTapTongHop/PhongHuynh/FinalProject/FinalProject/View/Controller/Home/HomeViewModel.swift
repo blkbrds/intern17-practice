@@ -52,58 +52,52 @@ final class HomeViewModel {
     }
 
     func loadVideoTrendingAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
-        NetWorking.shared().request(with: urlString) { (data, error) in
-            if let data = data {
-                let json = self.convertToJSON(from: data)
-                if let items = json["items"] as? [JSON] {
+        VideoService.loadVideoTrendingAPI { (result) in
+            switch result {
+            case .success(let json):
+                guard let jsonObj = json as? JSObject else { return }
+                if let items = jsonObj["items"] as? [JSON] {
                     for item in items {
                         self.featureVideos.append(Video(json: item))
                     }
                     completion(.success)
                 }
-            } else {
-                if let error = error {
-                    completion(.failure(error))
-                }
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }
 
     func loadNominationVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&relatedToVideoId=XtHh0uNscnk&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
-        NetWorking.shared().request(with: urlString) { (data, error) in
-            if let data = data {
-                let json = self.convertToJSON(from: data)
-                if let items = json["items"] as? [JSON] {
+        VideoService.loadVideoNominationAPI { (result) in
+            switch result {
+            case .success(let json):
+                guard let jsonObj = json as? JSObject else { return }
+                if let items = jsonObj["items"] as? [JSON] {
                     for item in items {
-                        self.nominationVideos.append(Video(jsonNominationVideo: item))
+                        self.nominationVideos.append(Video(json: item))
                     }
                     completion(.success)
                 }
-            } else {
-                if let error = error {
-                    completion(.failure(error))
-                }
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }
 
     func loadNewVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&relatedToVideoId=jXKR9kl5tR8&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
-        NetWorking.shared().request(with: urlString) { (data, error) in
-            if let data = data {
-                let json = self.convertToJSON(from: data)
-                if let items = json["items"] as? [JSON] {
+        VideoService.loadVideoNewAPI { (result) in
+            switch result {
+            case .success(let json):
+                guard let jsonObj = json as? JSObject else { return }
+                if let items = jsonObj["items"] as? [JSON] {
                     for item in items {
-                        self.newVideos.append(Video(jsonNominationVideo: item))
+                        self.newVideos.append(Video(json: item))
                     }
                     completion(.success)
                 }
-            } else {
-                if let error = error {
-                    completion(.failure(error))
-                }
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }

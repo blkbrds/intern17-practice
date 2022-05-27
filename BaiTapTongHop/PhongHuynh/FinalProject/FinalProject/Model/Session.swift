@@ -8,13 +8,27 @@
 
 import Foundation
 
+let apiKeyYoutube = "apiKeyYoutube"
+
 final class Session {
 
     static let shared = Session()
 
     private init() {}
+    
+    var apiKey: String {
+        get {
+            return UserDefaults.standard.string(forKey: apiKeyYoutube) ?? ""
+        }
+        
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: apiKeyYoutube)
+        }
+    }
+        
 }
 
 // MARK: - Protocol
 protocol SessionProtocol: class {
+    
 }

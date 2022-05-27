@@ -61,7 +61,7 @@ final class DetailViewModel {
                 self.videos = []
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.videos.append(Video(jsonNominationVideo: item))
+                        self.videos.append(Video(json: item))
                     }
                     completion(.success)
                 }
