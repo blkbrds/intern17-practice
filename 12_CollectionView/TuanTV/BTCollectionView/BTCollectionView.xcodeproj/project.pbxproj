@@ -13,6 +13,14 @@
 		89025E5528408CFE005A0910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89025E5328408CFE005A0910 /* LaunchScreen.storyboard */; };
 		89025E62284091EC005A0910 /* BT1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025E60284091EC005A0910 /* BT1ViewController.swift */; };
 		89025E63284091EC005A0910 /* BT1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025E61284091EC005A0910 /* BT1ViewController.xib */; };
+		89025E692840AC5C005A0910 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025E682840AC5C005A0910 /* User.swift */; };
+		89025E712840AF43005A0910 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025E6F2840AF43005A0910 /* UserCell.swift */; };
+		89025E722840AF43005A0910 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025E702840AF43005A0910 /* UserCell.xib */; };
+		89025E772840BA8F005A0910 /* BT2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025E752840BA8F005A0910 /* BT2ViewController.swift */; };
+		89025E782840BA8F005A0910 /* BT2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025E762840BA8F005A0910 /* BT2ViewController.xib */; };
+		89025E7D2840BFBE005A0910 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025E7B2840BFBE005A0910 /* ImageCell.swift */; };
+		89025E7E2840BFBE005A0910 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89025E7C2840BFBE005A0910 /* ImageCell.xib */; };
+		89025E822840D967005A0910 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89025E812840D967005A0910 /* PinterestLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		89025E5628408CFE005A0910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89025E60284091EC005A0910 /* BT1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT1ViewController.swift; sourceTree = "<group>"; };
 		89025E61284091EC005A0910 /* BT1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT1ViewController.xib; sourceTree = "<group>"; };
+		89025E682840AC5C005A0910 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		89025E6F2840AF43005A0910 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		89025E702840AF43005A0910 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		89025E752840BA8F005A0910 /* BT2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT2ViewController.swift; sourceTree = "<group>"; };
+		89025E762840BA8F005A0910 /* BT2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT2ViewController.xib; sourceTree = "<group>"; };
+		89025E7B2840BFBE005A0910 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		89025E7C2840BFBE005A0910 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		89025E812840D967005A0910 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 		89025E4728408CFA005A0910 /* BTCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				89025E742840B9B1005A0910 /* BT2 */,
 				89025E5F28408D34005A0910 /* BT1 */,
 				89025E4828408CFA005A0910 /* AppDelegate.swift */,
 				89025E4A28408CFA005A0910 /* SceneDelegate.swift */,
@@ -71,8 +88,23 @@
 			children = (
 				89025E60284091EC005A0910 /* BT1ViewController.swift */,
 				89025E61284091EC005A0910 /* BT1ViewController.xib */,
+				89025E682840AC5C005A0910 /* User.swift */,
+				89025E6F2840AF43005A0910 /* UserCell.swift */,
+				89025E702840AF43005A0910 /* UserCell.xib */,
 			);
 			path = BT1;
+			sourceTree = "<group>";
+		};
+		89025E742840B9B1005A0910 /* BT2 */ = {
+			isa = PBXGroup;
+			children = (
+				89025E752840BA8F005A0910 /* BT2ViewController.swift */,
+				89025E762840BA8F005A0910 /* BT2ViewController.xib */,
+				89025E7B2840BFBE005A0910 /* ImageCell.swift */,
+				89025E7C2840BFBE005A0910 /* ImageCell.xib */,
+				89025E812840D967005A0910 /* PinterestLayout.swift */,
+			);
+			path = BT2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +164,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89025E722840AF43005A0910 /* UserCell.xib in Resources */,
 				89025E5528408CFE005A0910 /* LaunchScreen.storyboard in Resources */,
 				89025E63284091EC005A0910 /* BT1ViewController.xib in Resources */,
+				89025E7E2840BFBE005A0910 /* ImageCell.xib in Resources */,
 				89025E5228408CFE005A0910 /* Assets.xcassets in Resources */,
+				89025E782840BA8F005A0910 /* BT2ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,9 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89025E692840AC5C005A0910 /* User.swift in Sources */,
 				89025E62284091EC005A0910 /* BT1ViewController.swift in Sources */,
 				89025E4928408CFA005A0910 /* AppDelegate.swift in Sources */,
+				89025E712840AF43005A0910 /* UserCell.swift in Sources */,
+				89025E822840D967005A0910 /* PinterestLayout.swift in Sources */,
 				89025E4B28408CFA005A0910 /* SceneDelegate.swift in Sources */,
+				89025E7D2840BFBE005A0910 /* ImageCell.swift in Sources */,
+				89025E772840BA8F005A0910 /* BT2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
