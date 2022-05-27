@@ -22,7 +22,7 @@ final class DataManager {
     private init() {}
     
     func read() throws -> [String: [String]] {
-        guard let plistURL = Bundle.main.url(forResource: "users", withExtension: "plist") else { return ["": ["",""]] }
+        guard let plistURL = Bundle.main.url(forResource: "TableViewData", withExtension: "plist") else { return ["": [""]] }
         let data = try Data(contentsOf: plistURL)
         guard let plist = try PropertyListSerialization.propertyList(from: data, format: nil) as? [String:[String]] else {
             return [:]
