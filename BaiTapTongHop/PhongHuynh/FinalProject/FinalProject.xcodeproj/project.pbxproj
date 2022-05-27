@@ -90,6 +90,10 @@
 		CBF4E32D283349E500E7EECC /* FeaturedVideoHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4E32B283349E500E7EECC /* FeaturedVideoHomeCell.xib */; };
 		CBF4E33228334A8800E7EECC /* NewVideoHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF4E33028334A8800E7EECC /* NewVideoHomeCell.swift */; };
 		CBF4E33328334A8800E7EECC /* NewVideoHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4E33128334A8800E7EECC /* NewVideoHomeCell.xib */; };
+		CBFAAA752840C2F300354F7A /* InterestListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAAA732840C2F300354F7A /* InterestListCell.swift */; };
+		CBFAAA762840C2F300354F7A /* InterestListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBFAAA742840C2F300354F7A /* InterestListCell.xib */; };
+		CBFAAA7B2840C31900354F7A /* LogOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFAAA792840C31900354F7A /* LogOutCell.swift */; };
+		CBFAAA7C2840C31900354F7A /* LogOutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBFAAA7A2840C31900354F7A /* LogOutCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +196,10 @@
 		CBF4E32B283349E500E7EECC /* FeaturedVideoHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedVideoHomeCell.xib; sourceTree = "<group>"; };
 		CBF4E33028334A8800E7EECC /* NewVideoHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVideoHomeCell.swift; sourceTree = "<group>"; };
 		CBF4E33128334A8800E7EECC /* NewVideoHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewVideoHomeCell.xib; sourceTree = "<group>"; };
+		CBFAAA732840C2F300354F7A /* InterestListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListCell.swift; sourceTree = "<group>"; };
+		CBFAAA742840C2F300354F7A /* InterestListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestListCell.xib; sourceTree = "<group>"; };
+		CBFAAA792840C31900354F7A /* LogOutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutCell.swift; sourceTree = "<group>"; };
+		CBFAAA7A2840C31900354F7A /* LogOutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogOutCell.xib; sourceTree = "<group>"; };
 		D72EC1050944689B4414E5C7 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		DD4A2FBD85737A9282EA2264 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -408,6 +416,10 @@
 				CB5447A92831F7A700085BDC /* ProfileCell.swift */,
 				CB5447AA2831F7A700085BDC /* ProfileCell.xib */,
 				CB7AF6392835DC2500138BB2 /* ProfileCellViewModel.swift */,
+				CBFAAA732840C2F300354F7A /* InterestListCell.swift */,
+				CBFAAA742840C2F300354F7A /* InterestListCell.xib */,
+				CBFAAA792840C31900354F7A /* LogOutCell.swift */,
+				CBFAAA7A2840C31900354F7A /* LogOutCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -658,6 +670,7 @@
 				CBCC7E93282A59E000DBD668 /* ChanelViewController.xib in Resources */,
 				CB5447B52831FD8D00085BDC /* FavoriteViewController.xib in Resources */,
 				CBB5C13A282CA71C00599DBD /* DetailViewController.xib in Resources */,
+				CBFAAA7C2840C31900354F7A /* LogOutCell.xib in Resources */,
 				CB80E381283361D50051FA29 /* FeaturedCell.xib in Resources */,
 				CB77C5332832029900CA4C58 /* DetailCell.xib in Resources */,
 				CBB5C133282CA56100599DBD /* LoginViewController.xib in Resources */,
@@ -665,6 +678,7 @@
 				CBF4E32D283349E500E7EECC /* FeaturedVideoHomeCell.xib in Resources */,
 				CB5447BC2831FDD800085BDC /* FavoriteCell.xib in Resources */,
 				6AFD030A231375EF004940FA /* Assets.xcassets in Resources */,
+				CBFAAA762840C2F300354F7A /* InterestListCell.xib in Resources */,
 				CBCC7E79282A588100DBD668 /* HomeViewController.xib in Resources */,
 				CBE179CD2837797E0018DA73 /* GoogleService-Info.plist in Resources */,
 				CB5447A52831F67700085BDC /* ProfileViewController.xib in Resources */,
@@ -787,6 +801,7 @@
 				CB73135A28309A5E00A71129 /* NominationVideoCell.swift in Sources */,
 				CBB8342E283B1863003C50E4 /* SearchViewModel.swift in Sources */,
 				CBAF0B5F28348669006B59A7 /* FeaturedCellViewModel.swift in Sources */,
+				CBFAAA7B2840C31900354F7A /* LogOutCell.swift in Sources */,
 				6AF613B72313C13A00F5CBA2 /* CollectionView.swift in Sources */,
 				6AFD0303231375EE004940FA /* AppDelegate.swift in Sources */,
 				6AF613B02313C13A00F5CBA2 /* CollectionCell.swift in Sources */,
@@ -807,6 +822,7 @@
 				6AF60DC62313B56B00F5CBA2 /* ResponseSerializer.swift in Sources */,
 				6AF60D192313B35800F5CBA2 /* Errors.swift in Sources */,
 				CBAF0B6328348724006B59A7 /* FeaturedVideoHomeCellViewModel.swift in Sources */,
+				CBFAAA752840C2F300354F7A /* InterestListCell.swift in Sources */,
 				CBB83429283B14A9003C50E4 /* SearchViewController.swift in Sources */,
 				CB8EA7122840808A0014ADA0 /* VideoService.swift in Sources */,
 				CB77C5322832029900CA4C58 /* DetailCell.swift in Sources */,
