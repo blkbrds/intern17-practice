@@ -14,7 +14,7 @@ final class DetailCellViewModel {
     // MARK: Properties
     var video: Video
 
-    // MARK: - Init
+    // MARK: - init
     init(video: Video) {
         self.video = video
     }

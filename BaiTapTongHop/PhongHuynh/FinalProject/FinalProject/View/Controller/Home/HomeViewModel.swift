@@ -17,7 +17,7 @@ final class HomeViewModel {
         case new
     }
 
-    // MARK: - Private functions
+    // MARK: - Properties
     var featureVideos: [Video] = []
     var newVideos: [Video] = []
     var nominationVideos: [Video] = []
@@ -51,8 +51,27 @@ final class HomeViewModel {
         return DetailViewModel(featuredVideo: nil, nominationVideo: nil, newVideo: newVideos[indexPath.row], type: .new)
     }
 
+    func loadVideoTrendingAPI(completion: @escaping APICompletion) {
+        let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=VN&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
+        NetWorking.shared().request(with: urlString) { (data, error) in
+            if let data = data {
+                let json = self.convertToJSON(from: data)
+                if let items = json["items"] as? [JSON] {
+                    for item in items {
+                        self.featureVideos.append(Video(json: item))
+                    }
+                    completion(.success)
+                }
+            } else {
+                if let error = error {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
     func loadNominationVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&relatedToVideoId=XtHh0uNscnk&type=video&key=AIzaSyDWgw7njdG6PA3QZ3S8cHIRI3b3xw55c80"
+        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&relatedToVideoId=XtHh0uNscnk&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)
@@ -71,32 +90,13 @@ final class HomeViewModel {
     }
 
     func loadNewVideoAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&relatedToVideoId=jXKR9kl5tR8&type=video&key=AIzaSyDWgw7njdG6PA3QZ3S8cHIRI3b3xw55c80"
+        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&relatedToVideoId=jXKR9kl5tR8&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)
                 if let items = json["items"] as? [JSON] {
                     for item in items {
                         self.newVideos.append(Video(jsonNominationVideo: item))
-                    }
-                    completion(.success)
-                }
-            } else {
-                if let error = error {
-                    completion(.failure(error))
-                }
-            }
-        }
-    }
-
-    func loadVideoTrendingAPI(completion: @escaping APICompletion) {
-        let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&relatedToVideoId=&regionCode=VN&key=AIzaSyDWgw7njdG6PA3QZ3S8cHIRI3b3xw55c80"
-        NetWorking.shared().request(with: urlString) { (data, error) in
-            if let data = data {
-                let json = self.convertToJSON(from: data)
-                if let items = json["items"] as? [JSON] {
-                    for item in items {
-                        self.featureVideos.append(Video(json: item))
                     }
                     completion(.success)
                 }

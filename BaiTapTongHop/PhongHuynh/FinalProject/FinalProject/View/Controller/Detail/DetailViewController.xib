@@ -36,6 +36,32 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="OyM-mT-TuR">
+                            <rect key="frame" x="10" y="129" width="394" height="24"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R2-GK-RTK">
+                                    <rect key="frame" x="0.0" y="0.0" width="68.5" height="24"/>
+                                    <state key="normal" image="icons8-like-24"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkY-yS-sVv">
+                                    <rect key="frame" x="108.5" y="0.0" width="68.5" height="24"/>
+                                    <state key="normal" image="icons8-dislike-24"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5Z-gs-NT7">
+                                    <rect key="frame" x="217" y="0.0" width="68.5" height="24"/>
+                                    <color key="tintColor" red="0.19148720850000001" green="0.19148720850000001" blue="0.19148720850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" image="icons8-share-24"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcI-tu-u0i">
+                                    <rect key="frame" x="325.5" y="0.0" width="68.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" image="icons8-favorite-24"/>
+                                    <connections>
+                                        <action selector="favoriteButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="b9d-Me-T1t"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="wu6-fH-0bh">
                             <rect key="frame" x="10" y="154" width="394" height="20.5"/>
                             <subviews>
@@ -63,32 +89,6 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                            </subviews>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="OyM-mT-TuR">
-                            <rect key="frame" x="10" y="121" width="394" height="32"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R2-GK-RTK">
-                                    <rect key="frame" x="0.0" y="0.0" width="68.5" height="32"/>
-                                    <state key="normal" image="icons8-like-24"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkY-yS-sVv">
-                                    <rect key="frame" x="108.5" y="0.0" width="68.5" height="32"/>
-                                    <state key="normal" image="icons8-thumbs-down-32"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5Z-gs-NT7">
-                                    <rect key="frame" x="217" y="0.0" width="68.5" height="32"/>
-                                    <color key="tintColor" red="0.19148720850000001" green="0.19148720850000001" blue="0.19148720850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcI-tu-u0i">
-                                    <rect key="frame" x="325.5" y="0.0" width="68.5" height="32"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <state key="normal" image="icons8-favorite-24"/>
-                                    <connections>
-                                        <action selector="favoriteButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="b9d-Me-T1t"/>
-                                    </connections>
-                                </button>
                             </subviews>
                         </stackView>
                     </subviews>
@@ -140,10 +140,10 @@
         </view>
     </objects>
     <resources>
-        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <image name="icons8-dislike-24" width="24" height="24"/>
         <image name="icons8-favorite-24" width="24" height="24"/>
         <image name="icons8-like-24" width="24" height="24"/>
-        <image name="icons8-thumbs-down-32" width="32" height="32"/>
+        <image name="icons8-share-24" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

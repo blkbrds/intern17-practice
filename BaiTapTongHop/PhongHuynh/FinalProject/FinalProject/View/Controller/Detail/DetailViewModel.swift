@@ -17,7 +17,7 @@ final class DetailViewModel {
     var type: HomeViewModel.CellType
     var videos: [Video] = []
 
-    // MARK: - Init
+    // MARK: - init
     init(featuredVideo: Video?, nominationVideo: Video?, newVideo: Video?, type: HomeViewModel.CellType) {
         self.featuredVideo = featuredVideo
         self.nominationVideo = nominationVideo
@@ -54,14 +54,14 @@ final class DetailViewModel {
         } else {
             videoID = getId()
         }
-        let urlString = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&relatedToVideoId=\(videoID)&regionCode=VN&key=AIzaSyDWgw7njdG6PA3QZ3S8cHIRI3b3xw55c80"
+        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&relatedToVideoId=\(videoID)&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
         NetWorking.shared().request(with: urlString) { (data, error) in
             if let data = data {
                 let json = self.convertToJSON(from: data)
                 self.videos = []
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.videos.append(Video(json: item))
+                        self.videos.append(Video(jsonNominationVideo: item))
                     }
                     completion(.success)
                 }

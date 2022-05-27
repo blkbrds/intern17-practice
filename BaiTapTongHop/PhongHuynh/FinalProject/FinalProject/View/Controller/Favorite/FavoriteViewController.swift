@@ -53,7 +53,6 @@ extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else { return UITableViewCell() }
         cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
-       // cell.delegate = self
         return cell
     }
 
@@ -80,4 +79,3 @@ extension FavoriteViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension FavoriteViewController: UITableViewDelegate {
 }
-

@@ -21,11 +21,6 @@ final class NominationCell: UICollectionViewCell {
         }
     }
 
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     // MARK: - Private funcitons
     private func updateView() {
         viewModel?.updateImageView(completion: { [weak self] (image) in

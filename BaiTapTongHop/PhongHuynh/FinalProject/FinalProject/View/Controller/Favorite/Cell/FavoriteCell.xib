@@ -19,35 +19,24 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzm-X9-qb5">
-                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="135"/>
+                        <rect key="frame" x="5" y="0.0" width="124.5" height="135"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMd-GF-Nfp">
-                        <rect key="frame" x="125.5" y="0.0" width="185.5" height="135"/>
+                        <rect key="frame" x="130.5" y="0.0" width="180.5" height="135"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGc-uI-fXC">
-                                <rect key="frame" x="20" y="0.0" width="125.5" height="135"/>
+                                <rect key="frame" x="5" y="0.0" width="170.5" height="135"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsy-uG-7Ev">
-                                <rect key="frame" x="150.5" y="10" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="als-4U-Fbj"/>
-                                    <constraint firstAttribute="width" constant="30" id="h4e-Oe-F3n"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="delete.left.fill" catalog="system"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="DGc-uI-fXC" secondAttribute="bottom" id="6KA-9W-dqZ"/>
-                            <constraint firstItem="DGc-uI-fXC" firstAttribute="leading" secondItem="PMd-GF-Nfp" secondAttribute="leading" constant="20" id="6O3-jv-OJQ"/>
-                            <constraint firstItem="DGc-uI-fXC" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" id="MAz-UE-SEh"/>
-                            <constraint firstItem="nsy-uG-7Ev" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" constant="10" id="d7J-Qv-tVc"/>
-                            <constraint firstItem="nsy-uG-7Ev" firstAttribute="leading" secondItem="DGc-uI-fXC" secondAttribute="trailing" constant="5" id="o7o-AZ-3pu"/>
-                            <constraint firstAttribute="trailing" secondItem="nsy-uG-7Ev" secondAttribute="trailing" constant="5" id="zDc-eS-fvf"/>
+                            <constraint firstAttribute="bottom" secondItem="DGc-uI-fXC" secondAttribute="bottom" id="6bh-hc-baY"/>
+                            <constraint firstAttribute="trailing" secondItem="DGc-uI-fXC" secondAttribute="trailing" constant="5" id="fDj-I2-hj9"/>
+                            <constraint firstItem="DGc-uI-fXC" firstAttribute="leading" secondItem="PMd-GF-Nfp" secondAttribute="leading" constant="5" id="msK-SF-THb"/>
+                            <constraint firstItem="DGc-uI-fXC" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" id="xKJ-kp-pnh"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -57,14 +46,13 @@
                     <constraint firstAttribute="trailing" secondItem="PMd-GF-Nfp" secondAttribute="trailing" id="3SZ-am-2f5"/>
                     <constraint firstAttribute="bottom" secondItem="bzm-X9-qb5" secondAttribute="bottom" id="7wo-44-wRm"/>
                     <constraint firstItem="PMd-GF-Nfp" firstAttribute="leading" secondItem="bzm-X9-qb5" secondAttribute="trailing" constant="1" id="CPh-gg-A3U"/>
-                    <constraint firstItem="bzm-X9-qb5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UcY-Ol-OaG"/>
+                    <constraint firstItem="bzm-X9-qb5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="UcY-Ol-OaG"/>
                     <constraint firstItem="bzm-X9-qb5" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/2.5" id="dDI-ee-1NP"/>
                     <constraint firstItem="PMd-GF-Nfp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jks-MN-iND"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="deleteButton" destination="nsy-uG-7Ev" id="WlH-fr-ah4"/>
                 <outlet property="favoriteVideoImageView" destination="bzm-X9-qb5" id="aec-v8-wRd"/>
                 <outlet property="titleFavoriteVideoLabel" destination="DGc-uI-fXC" id="6Ga-Pc-0Ir"/>
             </connections>
@@ -72,7 +60,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="delete.left.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

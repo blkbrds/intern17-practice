@@ -20,11 +20,6 @@ final class FeaturedCell: UICollectionViewCell {
         }
     }
 
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     // MARK: - Private functions
     private func updateView() {
         viewModel?.updateImageView(completion: { [weak self] (image) in

@@ -17,7 +17,6 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-        dismiss(animated: true, completion: nil)
     }
 
     // MARK: - Private functions
@@ -38,6 +37,7 @@ extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeue(ProfileCell.self)
+            cell.delegate = self
             return cell
         } else {
             return UITableViewCell()
@@ -46,7 +46,7 @@ extension ProfileViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 100
+            return 150
         } else {
             return 40
         }
@@ -55,4 +55,15 @@ extension ProfileViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension ProfileViewController: UITableViewDelegate {
+}
+
+// MARK: - ProfileCellDelegate
+extension ProfileViewController: ProfileCellDelegate {
+
+    func cell(cell: ProfileCell, needsPerfom actions: ProfileCell.Action) {
+        switch actions {
+        case .cancel:
+            dismiss(animated: true, completion: nil)
+        }
+    }
 }

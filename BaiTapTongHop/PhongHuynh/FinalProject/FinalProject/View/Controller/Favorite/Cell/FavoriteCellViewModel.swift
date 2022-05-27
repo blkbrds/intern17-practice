@@ -15,7 +15,7 @@ final class FavoriteCellViewModel {
     // MARK: Properties
     var video: RealmVideo
 
-    // MARK: - Init
+    // MARK: - init
     init(video: RealmVideo) {
         self.video = video
     }

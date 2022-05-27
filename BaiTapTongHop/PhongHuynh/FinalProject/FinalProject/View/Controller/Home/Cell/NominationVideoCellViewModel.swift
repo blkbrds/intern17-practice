@@ -14,7 +14,7 @@ final class NominationVideoCellViewModel {
     // MARK: Properties
     var videos: [Video]
 
-    // MARK: - Init
+    // MARK: - init
     init(videos: [Video]) {
         self.videos = videos
     }

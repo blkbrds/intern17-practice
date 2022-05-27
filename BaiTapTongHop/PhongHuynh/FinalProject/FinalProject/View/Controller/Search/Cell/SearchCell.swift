@@ -21,15 +21,6 @@ final class SearchCell: UITableViewCell {
         }
     }
 
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
     // MARK: - Private funcitons
     private func updateView() {
         viewModel?.updateImageView(completion: { [weak self] (image) in
