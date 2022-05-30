@@ -27,6 +27,12 @@
 		13BBFB00283F76EA001F01DA /* Bai2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BBFAFE283F76EA001F01DA /* Bai2CollectionViewCell.xib */; };
 		13BBFB05283F7702001F01DA /* Bai2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BBFB03283F7702001F01DA /* Bai2ViewController.swift */; };
 		13BBFB06283F7702001F01DA /* Bai2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BBFB04283F7702001F01DA /* Bai2ViewController.xib */; };
+		13E8DCDE2844A98500F37E7B /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E8DCDC2844A98500F37E7B /* Bai4ViewController.swift */; };
+		13E8DCDF2844A98500F37E7B /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E8DCDD2844A98500F37E7B /* Bai4ViewController.xib */; };
+		13E8DCE32844A99B00F37E7B /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E8DCE12844A99B00F37E7B /* CollectionTableViewCell.swift */; };
+		13E8DCE42844A99B00F37E7B /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E8DCE22844A99B00F37E7B /* CollectionTableViewCell.xib */; };
+		13E8DCEF2844B63A00F37E7B /* Collection2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E8DCED2844B63A00F37E7B /* Collection2TableViewCell.swift */; };
+		13E8DCF02844B63A00F37E7B /* Collection2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E8DCEE2844B63A00F37E7B /* Collection2TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,12 @@
 		13BBFAFE283F76EA001F01DA /* Bai2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai2CollectionViewCell.xib; sourceTree = "<group>"; };
 		13BBFB03283F7702001F01DA /* Bai2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai2ViewController.swift; sourceTree = "<group>"; };
 		13BBFB04283F7702001F01DA /* Bai2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai2ViewController.xib; sourceTree = "<group>"; };
+		13E8DCDC2844A98500F37E7B /* Bai4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai4ViewController.swift; sourceTree = "<group>"; };
+		13E8DCDD2844A98500F37E7B /* Bai4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai4ViewController.xib; sourceTree = "<group>"; };
+		13E8DCE12844A99B00F37E7B /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		13E8DCE22844A99B00F37E7B /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		13E8DCED2844B63A00F37E7B /* Collection2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection2TableViewCell.swift; sourceTree = "<group>"; };
+		13E8DCEE2844B63A00F37E7B /* Collection2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Collection2TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,7 @@
 		139402B8283E36A00042A6D1 /* collectionView */ = {
 			isa = PBXGroup;
 			children = (
+				13E8DCDB2844A96300F37E7B /* Bai-4 */,
 				138308B128405B4F00CDB4AE /* Bai-3 */,
 				13BBFAFC283F76CE001F01DA /* Bai-2 */,
 				139402CE283E36EB0042A6D1 /* Bai-1 */,
@@ -131,6 +144,19 @@
 				13BBFB04283F7702001F01DA /* Bai2ViewController.xib */,
 			);
 			path = "Bai-2";
+			sourceTree = "<group>";
+		};
+		13E8DCDB2844A96300F37E7B /* Bai-4 */ = {
+			isa = PBXGroup;
+			children = (
+				13E8DCDC2844A98500F37E7B /* Bai4ViewController.swift */,
+				13E8DCDD2844A98500F37E7B /* Bai4ViewController.xib */,
+				13E8DCE12844A99B00F37E7B /* CollectionTableViewCell.swift */,
+				13E8DCE22844A99B00F37E7B /* CollectionTableViewCell.xib */,
+				13E8DCED2844B63A00F37E7B /* Collection2TableViewCell.swift */,
+				13E8DCEE2844B63A00F37E7B /* Collection2TableViewCell.xib */,
+			);
+			path = "Bai-4";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,11 +217,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				139402C6283E36A30042A6D1 /* LaunchScreen.storyboard in Resources */,
+				13E8DCF02844B63A00F37E7B /* Collection2TableViewCell.xib in Resources */,
 				138308BD2840634400CDB4AE /* Bai3CollectionViewCell.xib in Resources */,
 				13BBFB06283F7702001F01DA /* Bai2ViewController.xib in Resources */,
 				13BBFAF7283F6DA0001F01DA /* Assets.xcassets in Resources */,
+				13E8DCDF2844A98500F37E7B /* Bai4ViewController.xib in Resources */,
 				138308B528405DF200CDB4AE /* Bai3ViewController.xib in Resources */,
 				139402D3283E37320042A6D1 /* Bai1ViewController.xib in Resources */,
+				13E8DCE42844A99B00F37E7B /* CollectionTableViewCell.xib in Resources */,
 				13BBFB00283F76EA001F01DA /* Bai2CollectionViewCell.xib in Resources */,
 				13BBFAF4283F6CB9001F01DA /* CollectionViewCell.xib in Resources */,
 				138308C328406EB900CDB4AE /* TeamHeaderReusableView.xib in Resources */,
@@ -210,15 +239,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E8DCDE2844A98500F37E7B /* Bai4ViewController.swift in Sources */,
 				13BBFAFF283F76EA001F01DA /* Bai2CollectionViewCell.swift in Sources */,
 				13BBFAF3283F6CB9001F01DA /* CollectionViewCell.swift in Sources */,
 				139402BA283E36A00042A6D1 /* AppDelegate.swift in Sources */,
 				138308C728406ECD00CDB4AE /* TeamFooterReusableView.swift in Sources */,
 				139402D2283E37320042A6D1 /* Bai1ViewController.swift in Sources */,
 				138308C228406EB900CDB4AE /* TeamHeaderReusableView.swift in Sources */,
+				13E8DCE32844A99B00F37E7B /* CollectionTableViewCell.swift in Sources */,
 				138308B428405DF200CDB4AE /* Bai3ViewController.swift in Sources */,
 				13BBFB05283F7702001F01DA /* Bai2ViewController.swift in Sources */,
 				139402BC283E36A00042A6D1 /* SceneDelegate.swift in Sources */,
+				13E8DCEF2844B63A00F37E7B /* Collection2TableViewCell.swift in Sources */,
 				138308BC2840634400CDB4AE /* Bai3CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
