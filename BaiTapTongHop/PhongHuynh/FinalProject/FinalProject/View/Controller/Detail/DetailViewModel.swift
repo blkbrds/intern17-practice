@@ -11,18 +11,14 @@ import Foundation
 final class DetailViewModel {
 
     // MARK: - Private functions
-    var featuredVideo: Video?
-    var nominationVideo: Video?
-    var newVideo: Video?
-    var type: HomeViewModel.CellType
     var videos: [Video] = []
+    var video: Video?
+    
+    init() { }
 
     // MARK: - init
-    init(featuredVideo: Video?, nominationVideo: Video?, newVideo: Video?, type: HomeViewModel.CellType) {
-        self.featuredVideo = featuredVideo
-        self.nominationVideo = nominationVideo
-        self.newVideo = newVideo
-        self.type = type
+    init(video: Video) {
+        self.video = video
     }
 
     // MARK: - Methods
@@ -35,15 +31,7 @@ final class DetailViewModel {
     }
 
     func getId() -> String {
-        var id = ""
-        switch type {
-        case .featured:
-            id = featuredVideo?.id ?? ""
-        case .nomination:
-            id = nominationVideo?.id ?? ""
-        case .new:
-            id = newVideo?.id ?? ""
-        }
+        guard let id = video?.id else { return "" }
         return id
     }
 
@@ -59,26 +47,16 @@ final class DetailViewModel {
             case .success(let json):
                 guard let json = json as? JSON else { return }
                 if let items = json["items"] as? [JSON] {
+                    var videos: [Video] = []
                     for item in items {
-                        self.videos.append(Video(json: item))
+                        videos.append(Video(json: item))
                     }
+                    self.videos = videos
                     completion(.success)
                 }
             case .failure(let error):
                 completion(.failure(error))
             }
         }
-    }
-
-    func convertToJSON(from data: Data) -> [String: Any] {
-        var json: [String: Any] = [:]
-        do {
-            if let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-                json = jsonObj
-            }
-        } catch {
-            print("JSON casting error")
-        }
-        return json
     }
 }

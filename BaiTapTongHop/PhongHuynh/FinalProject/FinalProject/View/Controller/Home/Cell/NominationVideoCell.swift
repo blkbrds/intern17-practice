@@ -18,16 +18,18 @@ final class NominationVideoCell: UITableViewCell {
 
     // MARK: - Define
     enum Action {
-        case moveToDetail(indexPath: IndexPath)
+        case moveToDetail(indexPath: IndexPath, type: HomeViewModel.CellType)
     }
 
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var sectionLabel: UILabel!
 
     // MARK: - Properties
     var viewModel: NominationVideoCellViewModel? {
         didSet {
             collectionView.reloadData()
+            sectionLabel.text = viewModel?.type.title
         }
     }
     weak var delegate: NominationVideoCellDelegate?
@@ -61,8 +63,8 @@ extension NominationVideoCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let delegate = delegate {
-            delegate.controller(controller: self, needsPerfom: .moveToDetail(indexPath: indexPath))
+        if let delegate = delegate, let type = viewModel?.type {
+            delegate.controller(controller: self, needsPerfom: .moveToDetail(indexPath: indexPath, type: type))
         }
     }
 }

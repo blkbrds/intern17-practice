@@ -12,8 +12,9 @@ import UIKit
 final class FeaturedVideoHomeCellViewModel {
 
     // MARK: Properties
-    var videos: [Video]
-
+    var videos: [Video] = []
+    
+    init() {}
     // MARK: - init
     init(videos: [Video]) {
         self.videos = videos

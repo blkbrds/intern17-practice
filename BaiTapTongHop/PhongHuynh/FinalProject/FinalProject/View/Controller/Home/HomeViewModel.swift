@@ -15,40 +15,44 @@ final class HomeViewModel {
         case featured = 0
         case nomination
         case new
+
+        var title: String {
+            switch self {
+            case .nomination:
+                return "Sự kiện"
+            case .new:
+                return "Video mới"
+            case .featured:
+                return ""
+            }
+        }
     }
 
     // MARK: - Properties
-    var featureVideos: [Video] = []
-    var newVideos: [Video] = []
-    var nominationVideos: [Video] = []
+    var datas: [CellType: [Video]] = [
+        .featured: [],
+        .nomination: [],
+        .new: []
+    ]
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
-        return CellType.new.rawValue + 1
+        return datas.count
     }
 
     func viewModelForFeaturedVideo(indexPath: IndexPath) -> FeaturedVideoHomeCellViewModel {
-        return FeaturedVideoHomeCellViewModel(videos: featureVideos)
+        guard let videos = datas[.featured] else { return FeaturedVideoHomeCellViewModel() }
+        return FeaturedVideoHomeCellViewModel(videos: videos)
     }
 
     func viewModelForNomination(indexPath: IndexPath) -> NominationVideoCellViewModel {
-        return NominationVideoCellViewModel(videos: nominationVideos)
+        guard let cellType = CellType(rawValue: indexPath.row), let videos = datas[cellType], indexPath.row != 0 else { return NominationVideoCellViewModel() }
+        return NominationVideoCellViewModel(videos: videos, type: cellType)
     }
 
-    func viewModelForNewVideo(indexPath: IndexPath) -> NewVideoHomeCellViewModel {
-        return NewVideoHomeCellViewModel(videos: newVideos)
-    }
-
-    func viewModelForDetailFeaturedVideo(indexPath: IndexPath) -> DetailViewModel {
-        return DetailViewModel(featuredVideo: featureVideos[indexPath.row], nominationVideo: nil, newVideo: nil, type: .featured)
-    }
-
-    func viewModelForDetailNominationVideo(indexPath: IndexPath) -> DetailViewModel {
-        return DetailViewModel(featuredVideo: nil, nominationVideo: nominationVideos[indexPath.row], newVideo: nil, type: .nomination)
-    }
-
-    func viewModelForDetailNewVideo(indexPath: IndexPath) -> DetailViewModel {
-        return DetailViewModel(featuredVideo: nil, nominationVideo: nil, newVideo: newVideos[indexPath.row], type: .new)
+    func viewModelForDetail(cellType: CellType, indexPath: IndexPath) -> DetailViewModel {
+        guard let videos = datas[cellType] else { return DetailViewModel() }
+        return DetailViewModel(video: videos[indexPath.row])
     }
 
     func loadVideoTrendingAPI(completion: @escaping APICompletion) {
@@ -58,7 +62,7 @@ final class HomeViewModel {
                 guard let json = json as? JSON else { return }
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.featureVideos.append(Video(json: item))
+                        self.datas[.featured]?.append(Video(json: item))
                     }
                     completion(.success)
                 }
@@ -74,9 +78,11 @@ final class HomeViewModel {
             case .success(let json):
                 guard let json = json as? JSON else { return }
                 if let items = json["items"] as? [JSON] {
+                    var videos: [Video] = []
                     for item in items {
-                        self.nominationVideos.append(Video(json: item))
+                        videos.append(Video(json: item))
                     }
+                    self.datas[.nomination] = videos
                     completion(.success)
                 }
             case .failure(let error):
@@ -92,7 +98,7 @@ final class HomeViewModel {
                 guard let json = json as? JSON else { return }
                 if let items = json["items"] as? [JSON] {
                     for item in items {
-                        self.newVideos.append(Video(json: item))
+                        self.datas[.new]?.append(Video(json: item))
                     }
                     completion(.success)
                 }

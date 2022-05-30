@@ -12,11 +12,15 @@ import UIKit
 final class NominationVideoCellViewModel {
 
     // MARK: Properties
-    var videos: [Video]
-
+    var videos: [Video] = []
+    var type: HomeViewModel.CellType = .nomination
+    
+    init() {}
+    
     // MARK: - init
-    init(videos: [Video]) {
+    init(videos: [Video], type: HomeViewModel.CellType = .nomination) {
         self.videos = videos
+        self.type = type
     }
 
     // MARK: - Methods

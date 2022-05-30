@@ -37,19 +37,8 @@ final class DetailViewController: UIViewController {
     }
 
     private func updateView() {
-        switch viewModel?.type {
-        case .featured:
-            player.load(withVideoId: viewModel?.featuredVideo?.id ?? "")
-            titleYoutubeLabel.text = viewModel?.featuredVideo?.title
-        case .nomination:
-            player.load(withVideoId: viewModel?.nominationVideo?.id ?? "")
-            titleYoutubeLabel.text = viewModel?.nominationVideo?.title
-        case .new:
-            player.load(withVideoId: viewModel?.newVideo?.id ?? "")
-            titleYoutubeLabel.text = viewModel?.newVideo?.title
-        case .none:
-            break
-        }
+        player.load(withVideoId: viewModel?.video?.id ?? "")
+        titleYoutubeLabel.text = viewModel?.video?.title
     }
 
     private func loadSimilarVideoData(id: String? = nil) {
@@ -68,26 +57,17 @@ final class DetailViewController: UIViewController {
 
     // MARK: - IBActions
     @IBAction private func favoriteButtonTouchUpInside(_ sender: Any) {
+        favoriteButton.isSelected.toggle()
         do {
             let realm = try Realm()
             let data = RealmVideo()
-            switch viewModel?.type {
-            case .featured:
-                data.title = viewModel?.featuredVideo?.title ?? ""
-                data.image = viewModel?.featuredVideo?.imageURL ?? ""
-            case .nomination:
-                data.title = viewModel?.nominationVideo?.title ?? ""
-                data.image = viewModel?.nominationVideo?.imageURL ?? ""
-            case .new:
-                data.title = viewModel?.newVideo?.title ?? ""
-                data.image = viewModel?.newVideo?.imageURL ?? ""
-            case .none:
-                break
-            }
+            data.title = viewModel?.video?.title ?? ""
+            data.image = viewModel?.video?.imageURL ?? ""
             try realm.write {
                 realm.add(data)
-            }} catch {
             }
+        } catch {
+        }
     }
 }
 
@@ -109,6 +89,7 @@ extension DetailViewController: UITableViewDataSource {
         player.load(withVideoId: viewModel?.videos[indexPath.row].id ?? "")
         titleYoutubeLabel.text = viewModel?.videos[indexPath.row].title ?? ""
         loadSimilarVideoData(id: viewModel?.videos[indexPath.row].id)
+        tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

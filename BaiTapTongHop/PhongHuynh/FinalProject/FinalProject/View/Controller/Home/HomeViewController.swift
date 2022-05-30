@@ -18,7 +18,6 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Private functions
     private func configTableView() {
-        tableView.register(NewVideoHomeCell.self)
         tableView.register(FeaturedVideoHomeCell.self)
         tableView.register(NominationVideoCell.self)
         tableView.dataSource = self
@@ -143,12 +142,7 @@ extension HomeViewController: UITableViewDataSource {
             cell.viewModel = viewModel.viewModelForFeaturedVideo(indexPath: indexPath)
             cell.delegate = self
             return cell
-        case .new:
-            let cell = tableView.dequeue(NewVideoHomeCell.self)
-            cell.viewModel = viewModel.viewModelForNewVideo(indexPath: indexPath)
-            cell.delegate = self
-            return cell
-        case .nomination:
+        case .new, .nomination:
             let cell = tableView.dequeue(NominationVideoCell.self)
             cell.viewModel = viewModel.viewModelForNomination(indexPath: indexPath)
             cell.delegate = self
@@ -157,11 +151,7 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let cellType = HomeViewModel.CellType(rawValue: indexPath.row) else { return 0 }
-        switch cellType {
-        case .featured, .nomination, .new:
-            return 300
-        }
+        return 300
     }
 }
 
@@ -174,21 +164,9 @@ extension HomeViewController: NominationVideoCellDelegate {
 
     func controller(controller: NominationVideoCell, needsPerfom actions: NominationVideoCell.Action) {
         switch actions {
-        case .moveToDetail(let indexPath):
+        case .moveToDetail(let indexPath, let type):
             let vc = DetailViewController()
-            vc.viewModel = viewModel.viewModelForDetailNominationVideo(indexPath: indexPath)
-            navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-}
-
-// MARK: - NewVideoHomeCellDelegate
-extension HomeViewController: NewVideoHomeCellDelegate {
-    func controller(controller: NewVideoHomeCell, needsPerfom actions: NewVideoHomeCell.Action) {
-        switch actions {
-        case .moveToDetail(let indexPath):
-            let vc = DetailViewController()
-            vc.viewModel = viewModel.viewModelForDetailNewVideo(indexPath: indexPath)
+            vc.viewModel = viewModel.viewModelForDetail(cellType: type, indexPath: indexPath)
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -200,7 +178,7 @@ extension HomeViewController: FeaturedVideoHomeCellDelegate {
         switch actions {
         case .moveToDetail(let indexPath):
             let vc = DetailViewController()
-            vc.viewModel = viewModel.viewModelForDetailFeaturedVideo(indexPath: indexPath)
+            vc.viewModel = viewModel.viewModelForDetail(cellType: .featured, indexPath: indexPath)
             navigationController?.pushViewController(vc, animated: true)
         }
     }
