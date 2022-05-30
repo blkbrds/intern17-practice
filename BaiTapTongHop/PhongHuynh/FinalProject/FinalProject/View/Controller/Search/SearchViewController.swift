@@ -25,7 +25,7 @@ final class SearchViewController: UIViewController {
     }
 
     // MARK: - Private functions
-    private func loadSearchVideoData(keyword: String ) {
+    private func loadSearchVideoData(keyword: String) {
         viewModel.loadSearchVideoAPI(keyword: keyword) { [weak self] (result) in
             guard let this = self else { return }
             DispatchQueue.main.async {
@@ -33,7 +33,7 @@ final class SearchViewController: UIViewController {
                 case .success:
                     this.tableView.reloadData()
                 case .failure(let error):
-                    print("error\(error)")
+                    this.alert(title: "Error", msg: error.localizedDescription, handler: nil)
                 }
             }
         }

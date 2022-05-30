@@ -54,21 +54,18 @@ final class DetailViewModel {
         } else {
             videoID = getId()
         }
-        let urlString = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&relatedToVideoId=\(videoID)&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
-        NetWorking.shared().request(with: urlString) { (data, error) in
-            if let data = data {
-                let json = self.convertToJSON(from: data)
-                self.videos = []
+        VideoService.loadDetailAPI(id: videoID) { (result) in
+            switch result {
+            case .success(let json):
+                guard let json = json as? JSON else { return }
                 if let items = json["items"] as? [JSON] {
                     for item in items {
                         self.videos.append(Video(json: item))
                     }
                     completion(.success)
                 }
-            } else {
-                if let error = error {
-                    completion(.failure(error))
-                }
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }

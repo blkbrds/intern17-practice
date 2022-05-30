@@ -13,6 +13,9 @@ final class ProfileViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
 
+    // MARK: - Properties
+    var viewModel: ProfileViewModel = ProfileViewModel()
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,7 @@ final class ProfileViewController: UIViewController {
     // MARK: - Private functions
     private func configTableView() {
         tableView.register(ProfileCell.self)
+        tableView.register(LogOutCell.self)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -31,24 +35,29 @@ final class ProfileViewController: UIViewController {
 extension ProfileViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.numberOfItems(section: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        guard let cellType = ProfileViewModel.CellType(rawValue: indexPath.row) else { return UITableViewCell() }
+        switch cellType {
+        case .profile:
             let cell = tableView.dequeue(ProfileCell.self)
             cell.delegate = self
             return cell
-        } else {
-            return UITableViewCell()
+        case .logout:
+            let cell = tableView.dequeue(LogOutCell.self)
+            return cell
         }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
+        guard let cellType = ProfileViewModel.CellType(rawValue: indexPath.row) else { return 0 }
+        switch cellType {
+        case .profile:
             return 150
-        } else {
-            return 40
+        case .logout:
+            return 350
         }
     }
 }

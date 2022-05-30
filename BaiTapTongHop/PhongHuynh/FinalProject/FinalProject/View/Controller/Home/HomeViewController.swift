@@ -34,6 +34,7 @@ final class HomeViewController: UIViewController {
         let rightSearch = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-search-30"), style: .plain, target: self, action: #selector(rightSearchAction))
         navigationItem.rightBarButtonItems = [rightSetting, rightSearch]
         navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.barTintColor = UIColor.green
     }
 
     private func loadData() {
@@ -57,7 +58,7 @@ final class HomeViewController: UIViewController {
         }
     }
 
-    private func loadNominationVideoData(completion: @escaping () -> Void ) {
+    private func loadNominationVideoData(completion: @escaping () -> Void) {
         viewModel.loadNominationVideoAPI { [weak self] (result) in
             guard let this = self else {
                 completion()

@@ -19,10 +19,7 @@ final class DetailViewController: UIViewController {
     @IBOutlet private weak var titleYoutubeLabel: UILabel!
 
     // MARK: - Properties
-    var viewModel: DetailViewModel? {
-        didSet {
-        }
-    }
+    var viewModel: DetailViewModel?
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -63,7 +60,7 @@ final class DetailViewController: UIViewController {
                 case .success:
                     this.tableView.reloadData()
                 case .failure(let error):
-                    print("error\(error)")
+                    this.alert(title: "Error", msg: error.localizedDescription, handler: nil)
                 }
             }
         }

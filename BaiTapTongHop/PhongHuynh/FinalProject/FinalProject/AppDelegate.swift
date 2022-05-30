@@ -34,13 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Session.shared.apiKey = "AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
+        Session.shared.login = ""
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
             } else {
             }
         }
         window = UIWindow(frame: UIScreen.main.bounds)
-        setroot(with: .login)
+        setroot(with: .tabbar)
         window?.makeKeyAndVisible()
         return true
     }

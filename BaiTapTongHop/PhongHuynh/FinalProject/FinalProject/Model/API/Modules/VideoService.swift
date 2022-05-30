@@ -49,4 +49,30 @@ final class VideoService {
             completion(result)
         }
     }
+
+    class func loadDetailAPI(id: String, completion: @escaping CompletionAny) {
+        var params: [String: Any] = [:]
+        params["part"] = "snippet"
+        params["maxResults"] = 20
+        params["relatedToVideoId"] = id
+        params["type"] = "video"
+        params["key"] = Session.shared.apiKey
+        let url = "https://youtube.googleapis.com/youtube/v3/search"
+        api.request(method: .get, urlString: url, parameters: params) { (result) in
+            completion(result)
+        }
+    }
+
+    class func loadSearchVideoAPI(keyword: String, completion: @escaping CompletionAny) {
+        var params: [String: Any] = [:]
+        params["part"] = "snippet"
+        params["maxResults"] = 20
+        params["q"] = keyword
+        params["type"] = "video"
+        params["key"] = Session.shared.apiKey
+        let url = "https://youtube.googleapis.com/youtube/v3/search"
+        api.request(method: .get, urlString: url, parameters: params) { (result) in
+            completion(result)
+        }
+    }
 }

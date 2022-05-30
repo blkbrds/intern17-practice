@@ -9,6 +9,7 @@
 import Foundation
 
 let apiKeyYoutube = "apiKeyYoutube"
+let loginGmail = "loginGmail"
 
 final class Session {
 
@@ -22,6 +23,14 @@ final class Session {
         }
         set {
             UserDefaults.standard.setValue(newValue, forKey: apiKeyYoutube)
+        }
+    }
+    var login: String {
+        get {
+            return UserDefaults.standard.string(forKey: loginGmail) ?? ""
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: loginGmail)
         }
     }
 }

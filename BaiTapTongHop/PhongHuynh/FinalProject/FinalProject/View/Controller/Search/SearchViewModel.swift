@@ -27,23 +27,37 @@ final class SearchViewModel {
     }
 
     func loadSearchVideoAPI(keyword: String, completion: @escaping APICompletion) {
-        let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=\(keyword)&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
-        NetWorking.shared().request(with: urlString) { (data, error) in
-            if let data = data {
-                let json = self.convertToJSON(from: data)
+        VideoService.loadSearchVideoAPI(keyword: keyword, completion: { (result) in
+            switch result {
+            case .success(let json):
+                guard let json = json as? JSON else { return }
                 if let items = json["items"] as? [JSON] {
-                    self.searchsVideo = []
                     for item in items {
                         self.searchsVideo.append(Video(json: item))
                     }
                     completion(.success)
                 }
-            } else {
-                if let error = error {
-                    completion(.failure(error))
-                }
+            case .failure(let error):
+                completion(.failure(error))
             }
-        }
+        })
+//        let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=\(keyword)&type=video&key=AIzaSyCse0aAqAFAuuXQUesyaEQPX4YEgY4KKoc"
+//        NetWorking.shared().request(with: urlString) { (data, error) in
+//            if let data = data {
+//                let json = self.convertToJSON(from: data)
+//                if let items = json["items"] as? [JSON] {
+//                    self.searchsVideo = []
+//                    for item in items {
+//                        self.searchsVideo.append(Video(json: item))
+//                    }
+//                    completion(.success)
+//                }
+//            } else {
+//                if let error = error {
+//                    completion(.failure(error))
+//                }
+//            }
+//        }
     }
 
     func convertToJSON(from data: Data) -> [String: Any] {
