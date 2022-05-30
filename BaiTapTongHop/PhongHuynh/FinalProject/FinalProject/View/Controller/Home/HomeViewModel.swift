@@ -55,8 +55,8 @@ final class HomeViewModel {
         VideoService.loadVideoTrendingAPI { (result) in
             switch result {
             case .success(let json):
-                guard let jsonObj = json as? JSObject else { return }
-                if let items = jsonObj["items"] as? [JSON] {
+                guard let json = json as? JSON else { return }
+                if let items = json["items"] as? [JSON] {
                     for item in items {
                         self.featureVideos.append(Video(json: item))
                     }
@@ -72,8 +72,8 @@ final class HomeViewModel {
         VideoService.loadVideoNominationAPI { (result) in
             switch result {
             case .success(let json):
-                guard let jsonObj = json as? JSObject else { return }
-                if let items = jsonObj["items"] as? [JSON] {
+                guard let json = json as? JSON else { return }
+                if let items = json["items"] as? [JSON] {
                     for item in items {
                         self.nominationVideos.append(Video(json: item))
                     }
@@ -89,8 +89,8 @@ final class HomeViewModel {
         VideoService.loadVideoNewAPI { (result) in
             switch result {
             case .success(let json):
-                guard let jsonObj = json as? JSObject else { return }
-                if let items = jsonObj["items"] as? [JSON] {
+                guard let json = json as? JSON else { return }
+                if let items = json["items"] as? [JSON] {
                     for item in items {
                         self.newVideos.append(Video(json: item))
                     }
@@ -100,17 +100,5 @@ final class HomeViewModel {
                 completion(.failure(error))
             }
         }
-    }
-
-    func convertToJSON(from data: Data) -> [String: Any] {
-        var json: [String: Any] = [:]
-        do {
-            if let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-                json = jsonObj
-            }
-        } catch {
-            print("JSON casting error")
-        }
-        return json
     }
 }

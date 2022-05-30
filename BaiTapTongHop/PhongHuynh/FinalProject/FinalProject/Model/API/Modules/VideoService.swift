@@ -23,7 +23,7 @@ final class VideoService {
             completion(result)
         }
     }
-    
+
     class func loadVideoNominationAPI(completion: @escaping CompletionAny) {
         var params: [String: Any] = [:]
         params["part"] = "snippet"

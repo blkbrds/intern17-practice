@@ -15,13 +15,13 @@ typealias JSON = [String: Any]
 typealias HUD = SVProgressHUD
 
 final class Video {
-    
+
     // MARK: - Properties
     var id: String?
     var imageURL: String?
     var title: String?
     var description: String?
-    
+
     // MARK: - Init
     init(json: JSON) {
         if let id = json["id"] as? String {
@@ -40,20 +40,4 @@ final class Video {
             self.imageURL = imageURL
         }
     }
-
-//    init(jsonNominationVideo: JSON) {
-//        if let id = jsonNominationVideo["id"] as? JSON,
-//           let videoId = id["videoId"] as? String,
-//           let snippet = jsonNominationVideo["snippet"] as? JSON,
-//           let title = snippet["title"] as? String,
-//           let description = snippet["description"] as? String,
-//           let thumbnails = snippet["thumbnails"] as? JSON,
-//           let medium = thumbnails["medium"] as? JSON,
-//           let imageURL = medium["url"] as? String {
-//            self.id = videoId
-//            self.title = title
-//            self.description = description
-//            self.imageURL = imageURL
-//        }
-//    }
 }

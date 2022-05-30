@@ -36,8 +36,7 @@ final class FavoriteViewController: UIViewController {
 
     // MARK: - Private functions
     private func configTableView() {
-        let nib = UINib(nibName: "FavoriteCell", bundle: .main)
-        tableView.register(nib, forCellReuseIdentifier: "FavoriteCell")
+        tableView.register(FavoriteCell.self)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -51,7 +50,7 @@ extension FavoriteViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else { return UITableViewCell() }
+        let cell = tableView.dequeue(FavoriteCell.self)
         cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
         return cell
     }

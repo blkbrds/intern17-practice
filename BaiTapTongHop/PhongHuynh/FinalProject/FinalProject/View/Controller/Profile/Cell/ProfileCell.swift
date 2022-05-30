@@ -25,7 +25,6 @@ final class ProfileCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet private weak var userImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var nextButton: UIButton!
 
     // MARK: - Properties
     var viewModel: ProfileCellViewModel = ProfileCellViewModel()
