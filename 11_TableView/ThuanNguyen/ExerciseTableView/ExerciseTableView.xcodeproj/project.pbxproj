@@ -18,19 +18,6 @@
 		BF91BD95283C7E6000FAE131 /* Ex4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF91BD93283C7E6000FAE131 /* Ex4ViewController.swift */; };
 		BF91BD96283C7E6000FAE131 /* Ex4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF91BD94283C7E6000FAE131 /* Ex4ViewController.xib */; };
 		BF91BD98283C7EF600FAE131 /* Listds.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF91BD97283C7EF600FAE131 /* Listds.plist */; };
-		BF9BC872283C96B400546901 /* ListName.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC871283C96B400546901 /* ListName.plist */; };
-		BF9BC87D283CD19600546901 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC87B283CD19600546901 /* HomeCell.swift */; };
-		BF9BC87E283CD19600546901 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC87C283CD19600546901 /* HomeCell.xib */; };
-		BF9BC881283CD72400546901 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC87F283CD72400546901 /* HomeViewController.swift */; };
-		BF9BC882283CD72400546901 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC880283CD72400546901 /* HomeViewController.xib */; };
-		BF9BC886283CE36300546901 /* ContactPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC884283CE36300546901 /* ContactPhoneViewController.swift */; };
-		BF9BC887283CE36300546901 /* ContactPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC885283CE36300546901 /* ContactPhoneViewController.xib */; };
-		BF9BC889283DB8C400546901 /* ListTH.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC888283DB8C300546901 /* ListTH.plist */; };
-		BF9BC88D283E36E200546901 /* Ex11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC88B283E36E200546901 /* Ex11ViewController.swift */; };
-		BF9BC88E283E36E200546901 /* Ex11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC88C283E36E200546901 /* Ex11ViewController.xib */; };
-		BF9BC890283F1ABC00546901 /* FetchedContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC88F283F1ABB00546901 /* FetchedContact.swift */; };
-		BFD40D1E283C8941002D0C6F /* Ex5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD40D1C283C8941002D0C6F /* Ex5ViewController.swift */; };
-		BFD40D1F283C8941002D0C6F /* Ex5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD40D1D283C8941002D0C6F /* Ex5ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,19 +34,6 @@
 		BF91BD93283C7E6000FAE131 /* Ex4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex4ViewController.swift; sourceTree = "<group>"; };
 		BF91BD94283C7E6000FAE131 /* Ex4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex4ViewController.xib; sourceTree = "<group>"; };
 		BF91BD97283C7EF600FAE131 /* Listds.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Listds.plist; sourceTree = "<group>"; };
-		BF9BC871283C96B400546901 /* ListName.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ListName.plist; sourceTree = "<group>"; };
-		BF9BC87B283CD19600546901 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		BF9BC87C283CD19600546901 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
-		BF9BC87F283CD72400546901 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		BF9BC880283CD72400546901 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		BF9BC884283CE36300546901 /* ContactPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPhoneViewController.swift; sourceTree = "<group>"; };
-		BF9BC885283CE36300546901 /* ContactPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactPhoneViewController.xib; sourceTree = "<group>"; };
-		BF9BC888283DB8C300546901 /* ListTH.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ListTH.plist; sourceTree = "<group>"; };
-		BF9BC88B283E36E200546901 /* Ex11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex11ViewController.swift; sourceTree = "<group>"; };
-		BF9BC88C283E36E200546901 /* Ex11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex11ViewController.xib; sourceTree = "<group>"; };
-		BF9BC88F283F1ABB00546901 /* FetchedContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedContact.swift; sourceTree = "<group>"; };
-		BFD40D1C283C8941002D0C6F /* Ex5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex5ViewController.swift; sourceTree = "<group>"; };
-		BFD40D1D283C8941002D0C6F /* Ex5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex5ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +66,6 @@
 		BF91BD66283C7B7700FAE131 /* ExerciseTableView */ = {
 			isa = PBXGroup;
 			children = (
-				BF9BC88A283E36BB00546901 /* Exercise11 */,
-				BF9BC883283CE33900546901 /* Exercise10 */,
-				BF9BC87A283CD16700546901 /* Exercise9 */,
-				BFD40D1B283C890F002D0C6F /* Exercise5 */,
 				BF91BD92283C7E0400FAE131 /* Exercise4 */,
 				BF91BD87283C7CF300FAE131 /* Exercise123 */,
 				BF91BD7B283C7BDA00FAE131 /* AppDelegate */,
@@ -134,47 +104,6 @@
 				BF91BD97283C7EF600FAE131 /* Listds.plist */,
 			);
 			path = Exercise4;
-			sourceTree = "<group>";
-		};
-		BF9BC87A283CD16700546901 /* Exercise9 */ = {
-			isa = PBXGroup;
-			children = (
-				BF9BC87B283CD19600546901 /* HomeCell.swift */,
-				BF9BC87C283CD19600546901 /* HomeCell.xib */,
-				BF9BC87F283CD72400546901 /* HomeViewController.swift */,
-				BF9BC880283CD72400546901 /* HomeViewController.xib */,
-				BF9BC888283DB8C300546901 /* ListTH.plist */,
-			);
-			path = Exercise9;
-			sourceTree = "<group>";
-		};
-		BF9BC883283CE33900546901 /* Exercise10 */ = {
-			isa = PBXGroup;
-			children = (
-				BF9BC884283CE36300546901 /* ContactPhoneViewController.swift */,
-				BF9BC885283CE36300546901 /* ContactPhoneViewController.xib */,
-				BF9BC88F283F1ABB00546901 /* FetchedContact.swift */,
-			);
-			path = Exercise10;
-			sourceTree = "<group>";
-		};
-		BF9BC88A283E36BB00546901 /* Exercise11 */ = {
-			isa = PBXGroup;
-			children = (
-				BF9BC88B283E36E200546901 /* Ex11ViewController.swift */,
-				BF9BC88C283E36E200546901 /* Ex11ViewController.xib */,
-			);
-			path = Exercise11;
-			sourceTree = "<group>";
-		};
-		BFD40D1B283C890F002D0C6F /* Exercise5 */ = {
-			isa = PBXGroup;
-			children = (
-				BFD40D1C283C8941002D0C6F /* Ex5ViewController.swift */,
-				BFD40D1D283C8941002D0C6F /* Ex5ViewController.xib */,
-				BF9BC871283C96B400546901 /* ListName.plist */,
-			);
-			path = Exercise5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,18 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF91BD96283C7E6000FAE131 /* Ex4ViewController.xib in Resources */,
-				BF9BC87E283CD19600546901 /* HomeCell.xib in Resources */,
 				BF91BD90283C7D8400FAE131 /* Ex1TableViewController.xib in Resources */,
 				BF91BD8F283C7D8400FAE131 /* Table2ViewController.xib in Resources */,
 				BF91BD89283C7D7000FAE131 /* DanhSach.plist in Resources */,
-				BF9BC88E283E36E200546901 /* Ex11ViewController.xib in Resources */,
-				BFD40D1F283C8941002D0C6F /* Ex5ViewController.xib in Resources */,
-				BF9BC889283DB8C400546901 /* ListTH.plist in Resources */,
-				BF9BC872283C96B400546901 /* ListName.plist in Resources */,
-				BF9BC882283CD72400546901 /* HomeViewController.xib in Resources */,
 				BF91BD71283C7B7B00FAE131 /* Assets.xcassets in Resources */,
 				BF91BD98283C7EF600FAE131 /* Listds.plist in Resources */,
-				BF9BC887283CE36300546901 /* ContactPhoneViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,15 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF9BC890283F1ABC00546901 /* FetchedContact.swift in Sources */,
 				BF91BD68283C7B7700FAE131 /* AppDelegate.swift in Sources */,
-				BF9BC87D283CD19600546901 /* HomeCell.swift in Sources */,
-				BFD40D1E283C8941002D0C6F /* Ex5ViewController.swift in Sources */,
-				BF9BC886283CE36300546901 /* ContactPhoneViewController.swift in Sources */,
-				BF9BC881283CD72400546901 /* HomeViewController.swift in Sources */,
 				BF91BD8E283C7D8400FAE131 /* Ex1TableViewController.swift in Sources */,
 				BF91BD91283C7D8400FAE131 /* Table2ViewController.swift in Sources */,
-				BF9BC88D283E36E200546901 /* Ex11ViewController.swift in Sources */,
 				BF91BD95283C7E6000FAE131 /* Ex4ViewController.swift in Sources */,
 				BF91BD6A283C7B7700FAE131 /* SceneDelegate.swift in Sources */,
 			);
