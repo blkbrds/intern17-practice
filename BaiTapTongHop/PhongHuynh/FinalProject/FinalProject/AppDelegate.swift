@@ -2,6 +2,7 @@ import UIKit
 import SVProgressHUD
 import GoogleSignIn
 import AppAuth
+import RealmSwift
 
 @available(iOS 13.0, *)
 @UIApplicationMain
@@ -33,12 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Session.shared.apiKey = "AIzaSyCAcqvUxA9vw7qcwu-fZbCc6JglC414Eoc"
+        Session.shared.apiKey = "AIzaSyC5WO8Ov8jbXB3ftr5o3QDU6II-6XD5ppA"
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
             } else {
             }
         }
+        configRealm()
         window = UIWindow(frame: UIScreen.main.bounds)
         if Session.shared.isLogin {
             setroot(with: .tabbar)
@@ -47,6 +49,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window?.makeKeyAndVisible()
         return true
+    }
+
+    func configRealm() {
+        let fileManager = FileManager.default
+            var config = Realm.Configuration()
+            let urls = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask)
+            if let applicationSupportURL = urls.last {
+                do {
+                    try fileManager.createDirectory(at: applicationSupportURL, withIntermediateDirectories: true, attributes: nil)
+                    config.fileURL = applicationSupportURL.appendingPathComponent("demo.realm")
+                } catch let err {
+                    print(err)
+                }
+            }
+        config.deleteRealmIfMigrationNeeded = true
+            // Set this as the configuration used for the default Realm
+            Realm.Configuration.defaultConfiguration = config
+        //    print (Realm.Configuration.defaultConfiguration.fileURL ?? "")
     }
 
     func setTabbar() {

@@ -23,10 +23,11 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilV-FV-kgn">
                         <rect key="frame" x="21" y="114" width="215" height="43"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="ilV-FV-kgn" firstAttribute="top" secondItem="7RN-dl-Sgp" secondAttribute="bottom" constant="5" id="ByM-Oz-77V"/>
                     <constraint firstItem="7RN-dl-Sgp" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.65" id="DDZ-xe-1ff"/>

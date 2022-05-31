@@ -23,9 +23,14 @@
                             <constraint firstAttribute="width" constant="30" id="Jhe-qz-vXy"/>
                             <constraint firstAttribute="height" constant="30" id="uRN-OQ-eLC"/>
                         </constraints>
-                        <state key="normal" image="icons8-cancel-32">
+                        <state key="normal" image="icons8-close-window-48">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <action selector="cancelButtonTouchUpInSide:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HAk-lI-L8h"/>
                         </connections>
@@ -42,21 +47,8 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chS-26-bzY">
-                        <rect key="frame" x="326.5" y="60" width="15.5" height="30"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="G4N-zY-x9T"/>
-                            <constraint firstAttribute="width" constant="15.5" id="QvP-To-vDf"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" image="greaterthan" catalog="system">
-                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </state>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-75-ByF">
-                        <rect key="frame" x="65" y="65" width="251.5" height="20.5"/>
+                        <rect key="frame" x="65" y="65" width="41.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -72,14 +64,11 @@
                 <constraints>
                     <constraint firstItem="zR4-UQ-m5c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="2Dc-gy-elM"/>
                     <constraint firstItem="u8W-AG-WU0" firstAttribute="top" secondItem="scM-75-ByF" secondAttribute="bottom" constant="15" id="EwI-Z8-Fd1"/>
-                    <constraint firstItem="chS-26-bzY" firstAttribute="leading" secondItem="scM-75-ByF" secondAttribute="trailing" constant="10" id="H1G-IM-uF4"/>
                     <constraint firstItem="u8W-AG-WU0" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="MmX-ch-s0g"/>
                     <constraint firstItem="zR4-UQ-m5c" firstAttribute="top" secondItem="3x1-pI-T14" secondAttribute="bottom" constant="15" id="NB3-rk-PX0"/>
                     <constraint firstItem="scM-75-ByF" firstAttribute="leading" secondItem="zR4-UQ-m5c" secondAttribute="trailing" constant="10" id="O4y-VB-fM5"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="chS-26-bzY" secondAttribute="trailing" id="ask-DS-zlB"/>
                     <constraint firstItem="3x1-pI-T14" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="c42-86-O7u"/>
                     <constraint firstItem="3x1-pI-T14" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="c9j-aZ-0Vk"/>
-                    <constraint firstItem="chS-26-bzY" firstAttribute="centerY" secondItem="zR4-UQ-m5c" secondAttribute="centerY" id="h8K-sO-fgS"/>
                     <constraint firstItem="u8W-AG-WU0" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="med-i1-EFZ"/>
                     <constraint firstItem="scM-75-ByF" firstAttribute="centerY" secondItem="zR4-UQ-m5c" secondAttribute="centerY" id="sot-gy-syL"/>
                 </constraints>
@@ -93,7 +82,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="greaterthan" catalog="system" width="128" height="111"/>
-        <image name="icons8-cancel-32" width="32" height="32"/>
+        <image name="icons8-close-window-48" width="48" height="48"/>
     </resources>
 </document>

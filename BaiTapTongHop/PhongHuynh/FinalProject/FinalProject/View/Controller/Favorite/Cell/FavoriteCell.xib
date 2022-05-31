@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,11 +26,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGc-uI-fXC">
                                 <rect key="frame" x="5" y="0.0" width="170.5" height="135"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="DGc-uI-fXC" secondAttribute="bottom" id="6bh-hc-baY"/>
                             <constraint firstAttribute="trailing" secondItem="DGc-uI-fXC" secondAttribute="trailing" constant="5" id="fDj-I2-hj9"/>
@@ -40,6 +39,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="PMd-GF-Nfp" secondAttribute="bottom" id="0sj-d6-mx8"/>
                     <constraint firstItem="bzm-X9-qb5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1lk-CM-27p"/>
@@ -59,9 +59,4 @@
             <point key="canvasLocation" x="132.60869565217394" y="53.90625"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

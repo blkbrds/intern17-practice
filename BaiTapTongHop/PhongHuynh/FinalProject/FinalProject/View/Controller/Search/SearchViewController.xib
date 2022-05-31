@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="FinalProject" customModuleProvider="target">
             <connections>
-                <outlet property="searchBar" destination="5ge-SY-sKx" id="jGY-e0-PwI"/>
+                <outlet property="searchBar" destination="Iia-jd-Xab" id="gf0-RI-bW4"/>
                 <outlet property="tableView" destination="32r-4S-P0E" id="dda-a3-tzC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,24 +22,43 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="32r-4S-P0E">
-                    <rect key="frame" x="0.0" y="110" width="414" height="752"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="133.5" width="414" height="728.5"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.85428587147887325" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
-                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="5ge-SY-sKx">
-                    <rect key="frame" x="5" y="54" width="404" height="56"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KL5-rb-6Tx">
+                    <rect key="frame" x="0.0" y="44" width="414" height="89.5"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Iia-jd-Xab">
+                            <rect key="frame" x="10" y="30" width="394" height="29.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.85428587150000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Iia-jd-Xab" secondAttribute="bottom" constant="30" id="0o3-PV-Jx9"/>
+                        <constraint firstItem="Iia-jd-Xab" firstAttribute="top" secondItem="KL5-rb-6Tx" secondAttribute="top" constant="30" id="BAc-ZD-JDz"/>
+                        <constraint firstAttribute="trailing" secondItem="Iia-jd-Xab" secondAttribute="trailing" constant="10" id="EJB-ey-BWy"/>
+                        <constraint firstItem="Iia-jd-Xab" firstAttribute="leading" secondItem="KL5-rb-6Tx" secondAttribute="leading" constant="10" id="iGf-kg-AcC"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5ge-SY-sKx" secondAttribute="trailing" constant="5" id="Lxn-PD-qYD"/>
-                <constraint firstItem="5ge-SY-sKx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Qak-CD-ag9"/>
-                <constraint firstItem="32r-4S-P0E" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Vyw-3I-j7D"/>
-                <constraint firstItem="32r-4S-P0E" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Y2o-zF-MFp"/>
-                <constraint firstItem="32r-4S-P0E" firstAttribute="top" secondItem="5ge-SY-sKx" secondAttribute="bottom" id="c2N-gf-gGL"/>
-                <constraint firstItem="32r-4S-P0E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fNf-bF-c2N"/>
-                <constraint firstItem="5ge-SY-sKx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="iCj-pQ-i7P"/>
+                <constraint firstItem="KL5-rb-6Tx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2k9-gh-1Oc"/>
+                <constraint firstItem="32r-4S-P0E" firstAttribute="top" secondItem="KL5-rb-6Tx" secondAttribute="bottom" id="360-oO-NdT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KL5-rb-6Tx" secondAttribute="trailing" id="O1I-uU-wwD"/>
+                <constraint firstItem="KL5-rb-6Tx" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" id="TYj-Rk-I3o"/>
+                <constraint firstItem="32r-4S-P0E" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="YEj-4t-eVI"/>
+                <constraint firstItem="32r-4S-P0E" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Zcg-Y3-agR"/>
+                <constraint firstItem="KL5-rb-6Tx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kTB-OL-0rp"/>
+                <constraint firstItem="32r-4S-P0E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qvX-Uq-SAF"/>
             </constraints>
             <point key="canvasLocation" x="21.739130434782609" y="79.6875"/>
         </view>
