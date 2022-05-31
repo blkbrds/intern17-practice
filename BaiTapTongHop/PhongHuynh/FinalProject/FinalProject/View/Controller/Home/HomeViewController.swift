@@ -32,8 +32,8 @@ final class HomeViewController: UIViewController {
         let rightSetting = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-setting-24"), style: .plain, target: self, action: #selector(rightSettingAction))
         let rightSearch = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-search-30"), style: .plain, target: self, action: #selector(rightSearchAction))
         navigationItem.rightBarButtonItems = [rightSetting, rightSearch]
-        navigationController?.navigationBar.tintColor = UIColor.black
-        navigationController?.navigationBar.barTintColor = UIColor.green
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor.black
     }
 
     private func loadData() {

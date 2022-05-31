@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Session.shared.apiKey = "AIzaSyDWgw7njdG6PA3QZ3S8cHIRI3b3xw55c80"
+        Session.shared.apiKey = "AIzaSyCAcqvUxA9vw7qcwu-fZbCc6JglC414Eoc"
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
             } else {
@@ -63,8 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let libraryNavi = UINavigationController(rootViewController: libraryVC)
         libraryNavi.tabBarItem = UITabBarItem(title: "Thư viện", image: #imageLiteral(resourceName: "icons8-video-playlist-24"), tag: 3)
         tabbarController.setViewControllers([homeNavi, shortNavi, chanelNavi, libraryNavi], animated: true)
-        tabbarController.tabBar.tintColor = .black
-        UITabBar.appearance().barTintColor = UIColor.green
+        tabbarController.tabBar.tintColor = .white
+        UITabBar.appearance().barTintColor = UIColor.black
     }
 
     func setroot(with set: Check) {
