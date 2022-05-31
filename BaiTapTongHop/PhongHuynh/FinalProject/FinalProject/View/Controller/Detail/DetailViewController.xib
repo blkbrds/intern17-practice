@@ -62,7 +62,7 @@
                                         <state key="normal" image="icons8-favorite-24"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="imageForNormal" value="icons8-favorite-24"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForSelected" value="icons8-share-24"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForSelected" value="iconsfavorite-24"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="favoriteButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="b9d-Me-T1t"/>
@@ -141,6 +141,7 @@
         <image name="icons8-favorite-24" width="24" height="24"/>
         <image name="icons8-like-24" width="24" height="24"/>
         <image name="icons8-share-24" width="24" height="24"/>
+        <image name="iconsfavorite-24" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

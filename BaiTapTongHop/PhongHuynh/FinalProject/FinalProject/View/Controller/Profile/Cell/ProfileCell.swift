@@ -37,7 +37,7 @@ final class ProfileCell: UITableViewCell {
     }
 
     private func configView() {
-        nameLabel.text = UserDefaults.standard.string(forKey: "user_name")
+        nameLabel.text = UserDefaults.standard.string(forKey: "userName")
         viewModel.updateImageView(completion: { [weak self] (image) in
             guard let this = self else { return }
             this.userImageView.image = image

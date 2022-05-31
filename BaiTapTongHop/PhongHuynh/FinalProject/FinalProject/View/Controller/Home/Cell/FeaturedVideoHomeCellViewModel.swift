@@ -13,7 +13,7 @@ final class FeaturedVideoHomeCellViewModel {
 
     // MARK: Properties
     var videos: [Video] = []
-    
+
     init() {}
     // MARK: - init
     init(videos: [Video]) {

@@ -10,10 +10,10 @@ import Foundation
 
 final class DetailViewModel {
 
-    // MARK: - Private functions
+    // MARK: - Properties
     var videos: [Video] = []
     var video: Video?
-    
+
     init() { }
 
     // MARK: - init

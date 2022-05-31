@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         libraryNavi.tabBarItem = UITabBarItem(title: "Thư viện", image: #imageLiteral(resourceName: "icons8-video-playlist-24"), tag: 3)
         tabbarController.setViewControllers([homeNavi, shortNavi, chanelNavi, libraryNavi], animated: true)
         tabbarController.tabBar.tintColor = .black
-        UITabBar.appearance().barTintColor = UIColor.white
+        UITabBar.appearance().barTintColor = UIColor.green
     }
 
     func setroot(with set: Check) {

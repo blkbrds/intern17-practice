@@ -22,6 +22,7 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
         configTableView()
         configSearchBar()
+        configNavigation()
     }
 
     // MARK: - Private functions
@@ -47,6 +48,12 @@ final class SearchViewController: UIViewController {
 
     private func configSearchBar() {
         searchBar.delegate = self
+    }
+
+    private func configNavigation() {
+        title = "Search"
+        navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.barTintColor = UIColor.green
     }
 }
 

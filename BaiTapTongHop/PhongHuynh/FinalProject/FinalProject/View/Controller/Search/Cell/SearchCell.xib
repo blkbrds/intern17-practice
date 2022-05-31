@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="257" height="109"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilV-FV-kgn">
-                        <rect key="frame" x="26" y="114" width="210" height="48"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                        <rect key="frame" x="21" y="114" width="215" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -30,10 +30,10 @@
                 <constraints>
                     <constraint firstItem="ilV-FV-kgn" firstAttribute="top" secondItem="7RN-dl-Sgp" secondAttribute="bottom" constant="5" id="ByM-Oz-77V"/>
                     <constraint firstItem="7RN-dl-Sgp" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.65" id="DDZ-xe-1ff"/>
-                    <constraint firstItem="ilV-FV-kgn" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="5" id="M3d-by-V4K"/>
+                    <constraint firstItem="ilV-FV-kgn" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="M3d-by-V4K"/>
                     <constraint firstItem="7RN-dl-Sgp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cn6-QE-ium"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ilV-FV-kgn" secondAttribute="trailing" constant="5" id="eJB-hf-h3n"/>
-                    <constraint firstItem="ilV-FV-kgn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="pmv-L9-fvc"/>
+                    <constraint firstItem="ilV-FV-kgn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="pmv-L9-fvc"/>
                     <constraint firstAttribute="trailing" secondItem="7RN-dl-Sgp" secondAttribute="trailing" id="rvC-fl-43Z"/>
                     <constraint firstItem="7RN-dl-Sgp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zPf-kv-fO9"/>
                 </constraints>
