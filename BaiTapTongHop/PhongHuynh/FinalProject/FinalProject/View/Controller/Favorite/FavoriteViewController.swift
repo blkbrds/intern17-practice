@@ -9,22 +9,13 @@
 import UIKit
 import RealmSwift
 
-protocol FavoriteViewControllerDelegate: class {
-    func controller(_ controller: FavoriteViewController, needsPerfom actions: FavoriteViewController.Action)
-}
-
 final class FavoriteViewController: UIViewController {
-    
-    enum Action {
-        case moToDetail(id: RealmVideo, title: RealmVideo)
-    }
 
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
 
     // MARK: - Properties
     var viewModel: FavoriteViewModel = FavoriteViewModel()
-    weak var delegate: FavoriteViewControllerDelegate?
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -53,8 +44,9 @@ final class FavoriteViewController: UIViewController {
 
     private func configNavigation() {
         title = "Favorite"
-        navigationController?.navigationBar.tintColor = UIColor.black
-        navigationController?.navigationBar.barTintColor = UIColor.green
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }
 
@@ -68,16 +60,6 @@ extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(FavoriteCell.self)
         cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
-        do {
-            let realm = try Realm()
-            let data = RealmVideo()
-            if data.image.isNotEmpty && data.title.isNotEmpty {
-                try realm.write {
-                    realm.delete(data)
-                }
-            }
-        } catch {
-        }
         return cell
     }
 
@@ -86,16 +68,6 @@ extension FavoriteViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        do {
-//            let realm = try Realm()
-//            let data = RealmVideo()
-//            let vc = DetailViewController()
-//            if let delegate = delegate {
-//                delegate.controller(self, needsPerfom: .moToDetail(id: data.image, title: data.title))
-//            }
-//            navigationController?.pushViewController(vc, animated: true)
-//        } catch {
-//        }
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

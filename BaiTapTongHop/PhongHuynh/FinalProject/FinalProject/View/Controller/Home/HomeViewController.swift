@@ -26,7 +26,9 @@ final class HomeViewController: UIViewController {
     }
 
     private func configNavigation() {
-        title = "Youtube"
+        let logo = UIImage(named: "youtube")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
         let leftProfile = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-person-30"), style: .plain, target: self, action: #selector(leftProfileAction))
         navigationItem.leftBarButtonItem = leftProfile
         let rightSetting = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-setting-24"), style: .plain, target: self, action: #selector(rightSettingAction))
@@ -34,6 +36,7 @@ final class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItems = [rightSetting, rightSearch]
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.red]
     }
 
     private func loadData() {
@@ -151,7 +154,13 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        guard let cellType = HomeViewModel.CellType(rawValue: indexPath.row) else { return 0 }
+        switch cellType {
+        case .featured:
+            return 270
+        case .nomination, .new:
+            return 255
+        }
     }
 }
 

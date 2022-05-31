@@ -73,6 +73,6 @@ extension NominationVideoCell: UICollectionViewDataSource {
 extension NominationVideoCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width - (10 * 3)) / 2, height: 200)
+        return CGSize(width: (UIScreen.main.bounds.width - (1 * 4)) / 2.2, height: 250)
         }
 }
