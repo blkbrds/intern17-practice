@@ -26,6 +26,13 @@ final class FavoriteViewModel {
     func removeVideo(indexPath: IndexPath) {
         videos.remove(at: indexPath.row)
     }
+
+    func viewModelForDetail(indexPath: IndexPath) -> DetailViewModel {
+        let videoFavorite: Video = Video()
+        videoFavorite.id = videos[indexPath.row].image
+        videoFavorite.title = videos[indexPath.row].title
+        return DetailViewModel(video: videoFavorite)
+    }
 }
 
 // MARK: - Results

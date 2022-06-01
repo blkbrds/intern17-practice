@@ -22,6 +22,9 @@ final class Video {
     var title: String?
     var description: String?
 
+    init() {
+    }
+    
     // MARK: - Init
     init(json: JSON) {
         if let id = json["id"] as? String {

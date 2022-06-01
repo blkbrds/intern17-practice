@@ -26,9 +26,8 @@ final class HomeViewController: UIViewController {
     }
 
     private func configNavigation() {
-        let logo = UIImage(named: "youtube")
-        let imageView = UIImageView(image:logo)
-        self.navigationItem.titleView = imageView
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "youtube"))
+        navigationItem.titleView = imageView
         let leftProfile = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-person-30"), style: .plain, target: self, action: #selector(leftProfileAction))
         navigationItem.leftBarButtonItem = leftProfile
         let rightSetting = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-setting-24"), style: .plain, target: self, action: #selector(rightSettingAction))
