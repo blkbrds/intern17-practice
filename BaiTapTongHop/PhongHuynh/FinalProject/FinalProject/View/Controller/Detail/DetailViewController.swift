@@ -63,8 +63,18 @@ final class DetailViewController: UIViewController {
             let data = RealmVideo()
             data.title = viewModel?.video?.title ?? ""
             data.image = viewModel?.video?.imageURL ?? ""
-            try realm.write {
-                realm.add(data)
+            data.id = viewModel?.video?.id ?? ""
+            let dataFilters = realm.objects(RealmVideo.self).filter("title = \(viewModel?.video?.title ?? "") AND image = \(viewModel?.video?.imageURL ?? "") ").toArray(ofType: RealmVideo.self).first
+            if let dataFilters = dataFilters {
+                favoriteButton.setImage(#imageLiteral(resourceName: "iconsfavorite-24"), for: .normal)
+                try realm.write {
+                    realm.delete(dataFilters)
+                }
+            } else {
+                try realm.write {
+                    realm.add(data)
+                }
+                favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite-24"), for: .normal)
             }
         } catch {
         }

@@ -24,7 +24,7 @@ final class Video {
 
     init() {
     }
-    
+
     // MARK: - Init
     init(json: JSON) {
         if let id = json["id"] as? String {

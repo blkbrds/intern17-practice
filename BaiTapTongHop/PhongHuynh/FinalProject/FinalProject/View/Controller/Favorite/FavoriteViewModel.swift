@@ -29,7 +29,7 @@ final class FavoriteViewModel {
 
     func viewModelForDetail(indexPath: IndexPath) -> DetailViewModel {
         let videoFavorite: Video = Video()
-        videoFavorite.id = videos[indexPath.row].image
+        videoFavorite.id = videos[indexPath.row].id
         videoFavorite.title = videos[indexPath.row].title
         return DetailViewModel(video: videoFavorite)
     }
