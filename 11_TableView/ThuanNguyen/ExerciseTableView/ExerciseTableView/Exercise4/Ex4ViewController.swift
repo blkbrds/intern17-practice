@@ -12,7 +12,7 @@ class Ex4ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var list: [[String]] = []
-    private var listIndex: [String] = []
+    private var listIndex: [String] = ["F", "A", "D"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +22,10 @@ class Ex4ViewController: UIViewController {
     }
     
     private func loadData() {
-        guard let path = Bundle.main.url(forResource: "Listds", withExtension: "plist")
-        else { return }
-        guard let contactsData = NSArray(contentsOf: path) as? [[String]]
+        guard let path = Bundle.main.url(forResource: "Listds", withExtension: "plist"),
+              let contactsData = NSArray(contentsOf: path) as? [[String]]
         else { return }
         list = contactsData
-        listIndex = ["F", "A", "D"]
     }
     
     private func configTableView() {

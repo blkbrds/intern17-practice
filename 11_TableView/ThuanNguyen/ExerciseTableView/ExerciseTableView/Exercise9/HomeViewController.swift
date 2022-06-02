@@ -7,10 +7,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate {
+class HomeViewController: UIViewController {
     
     private var list: [[String]] = []
-    private var listIndex: [String] = []
+    private var listIndex: [String] = ["F", "A", "D"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,15 +40,13 @@ class HomeViewController: UIViewController, UITableViewDelegate {
     }
     
     func loadData() {
-        guard let path = Bundle.main.url(forResource: "ListTH", withExtension: "plist")
-        else { return }
-        guard let contactsData = NSArray(contentsOf: path) as? [[String]]
+        guard let path = Bundle.main.url(forResource: "ListTH", withExtension: "plist"),
+              let contactsData = NSArray(contentsOf: path) as? [[String]]
         else { return }
         list = contactsData
-        listIndex = ["F", "A", "D"]
     }
 }
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return list.count

@@ -13,7 +13,7 @@ class Ex5ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
     
-    private var listname: [String] = []
+    private var listName: [String] = []
     private var name: [String] = []
     
     override func viewDidLoad() {
@@ -24,11 +24,10 @@ class Ex5ViewController: UIViewController {
         
     }
     func loadData() {
-        guard let path = Bundle.main.url(forResource: "ListName", withExtension: "plist")
+        guard let path = Bundle.main.url(forResource: "ListName", withExtension: "plist"),
+              let contactsData = NSArray(contentsOf: path) as? [String]
         else { return }
-        guard let contactsData = NSArray(contentsOf: path) as? [String]
-        else { return }
-        listname = contactsData
+        listName = contactsData
         name = contactsData
     }
     
@@ -40,7 +39,6 @@ class Ex5ViewController: UIViewController {
     func configSearchBar() {
         searchBar.delegate = self
         searchBar.showsCancelButton = true
-        //searchBar.showsSearchButton = true
     }
     func search(keyword: String) {
         name = getList(keyword: keyword)
@@ -48,10 +46,10 @@ class Ex5ViewController: UIViewController {
     }
     func getList(keyword: String) -> [String] {
         if keyword.trimmingCharacters(in: CharacterSet(charactersIn: "")) == "" {
-            return listname
+            return listName
         }else {
             var data: [String] = []
-            for i in listname {
+            for i in listName {
                 if let _ = i.range(of: keyword) {
                     data.append(i)
                 }
@@ -79,12 +77,12 @@ extension Ex5ViewController: UITableViewDataSource {
 extension Ex5ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        var currentText = ""
-        if let searchBarText = searchBar.text {
-            currentText = searchBarText
-        }
-        let keyword = (currentText as NSString).replacingCharacters(in: range, with: text)
-        search(keyword: keyword)
+//        var currentText = ""
+//        if let searchBarText = searchBar.text {
+//            currentText = searchBarText
+//        }
+//        let keyword = (currentText as NSString).replacingCharacters(in: range, with: text)
+        search(keyword: text)
         return true
     }
     

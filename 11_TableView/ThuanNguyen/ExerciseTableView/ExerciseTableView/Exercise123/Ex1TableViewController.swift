@@ -9,7 +9,7 @@ import UIKit
 
 class Ex1TableViewController: UITableViewController {
     
-    var danhsach: [String] = []
+    var userList: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +23,10 @@ class Ex1TableViewController: UITableViewController {
     }
     
     func loadData() {
-        guard let path = Bundle.main.url(forResource: "DanhSach", withExtension: "plist")
+        guard let path = Bundle.main.url(forResource: "DanhSach", withExtension: "plist"),
+              let contactsData = NSArray(contentsOf: path) as? [String]
         else { return }
-        guard let contactsData = NSArray(contentsOf: path) as? [String]
-        else { return }
-        danhsach = contactsData
+        userList = contactsData
     }
     
     func configTableView() {
@@ -45,18 +44,18 @@ class Ex1TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return danhsach.count
+        return userList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = "\(danhsach[indexPath.row])"
+        cell.textLabel?.text = "\(userList[indexPath.row])"
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = Table2ViewController()
-        vc.name = danhsach[indexPath.row]
+        vc.name = userList[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }

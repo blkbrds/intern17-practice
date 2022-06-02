@@ -18,6 +18,19 @@
 		BF91BD95283C7E6000FAE131 /* Ex4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF91BD93283C7E6000FAE131 /* Ex4ViewController.swift */; };
 		BF91BD96283C7E6000FAE131 /* Ex4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF91BD94283C7E6000FAE131 /* Ex4ViewController.xib */; };
 		BF91BD98283C7EF600FAE131 /* Listds.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF91BD97283C7EF600FAE131 /* Listds.plist */; };
+		BF9BC8EA2845BF2E00546901 /* Ex5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC8DA2845BF2E00546901 /* Ex5ViewController.swift */; };
+		BF9BC8EB2845BF2E00546901 /* ListName.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC8DB2845BF2E00546901 /* ListName.plist */; };
+		BF9BC8EC2845BF2E00546901 /* Ex5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC8DC2845BF2E00546901 /* Ex5ViewController.xib */; };
+		BF9BC8ED2845BF2E00546901 /* ContactPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC8DE2845BF2E00546901 /* ContactPhoneViewController.xib */; };
+		BF9BC8EE2845BF2E00546901 /* ContactPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC8DF2845BF2E00546901 /* ContactPhoneViewController.swift */; };
+		BF9BC8EF2845BF2E00546901 /* FetchedContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC8E02845BF2E00546901 /* FetchedContact.swift */; };
+		BF9BC8F02845BF2E00546901 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC8E22845BF2E00546901 /* HomeCell.swift */; };
+		BF9BC8F12845BF2E00546901 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC8E32845BF2E00546901 /* HomeViewController.xib */; };
+		BF9BC8F22845BF2E00546901 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC8E42845BF2E00546901 /* HomeViewController.swift */; };
+		BF9BC8F32845BF2E00546901 /* ListTH.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC8E52845BF2E00546901 /* ListTH.plist */; };
+		BF9BC8F42845BF2E00546901 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC8E62845BF2E00546901 /* HomeCell.xib */; };
+		BF9BC8F52845BF2E00546901 /* Ex11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC8E82845BF2E00546901 /* Ex11ViewController.swift */; };
+		BF9BC8F62845BF2E00546901 /* Ex11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC8E92845BF2E00546901 /* Ex11ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +47,19 @@
 		BF91BD93283C7E6000FAE131 /* Ex4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex4ViewController.swift; sourceTree = "<group>"; };
 		BF91BD94283C7E6000FAE131 /* Ex4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ex4ViewController.xib; sourceTree = "<group>"; };
 		BF91BD97283C7EF600FAE131 /* Listds.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Listds.plist; sourceTree = "<group>"; };
+		BF9BC8DA2845BF2E00546901 /* Ex5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex5ViewController.swift; sourceTree = "<group>"; };
+		BF9BC8DB2845BF2E00546901 /* ListName.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListName.plist; sourceTree = "<group>"; };
+		BF9BC8DC2845BF2E00546901 /* Ex5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex5ViewController.xib; sourceTree = "<group>"; };
+		BF9BC8DE2845BF2E00546901 /* ContactPhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactPhoneViewController.xib; sourceTree = "<group>"; };
+		BF9BC8DF2845BF2E00546901 /* ContactPhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactPhoneViewController.swift; sourceTree = "<group>"; };
+		BF9BC8E02845BF2E00546901 /* FetchedContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedContact.swift; sourceTree = "<group>"; };
+		BF9BC8E22845BF2E00546901 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		BF9BC8E32845BF2E00546901 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BF9BC8E42845BF2E00546901 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BF9BC8E52845BF2E00546901 /* ListTH.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListTH.plist; sourceTree = "<group>"; };
+		BF9BC8E62845BF2E00546901 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		BF9BC8E82845BF2E00546901 /* Ex11ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex11ViewController.swift; sourceTree = "<group>"; };
+		BF9BC8E92845BF2E00546901 /* Ex11ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex11ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +92,10 @@
 		BF91BD66283C7B7700FAE131 /* ExerciseTableView */ = {
 			isa = PBXGroup;
 			children = (
+				BF9BC8D92845BF2E00546901 /* Exercise5 */,
+				BF9BC8E12845BF2E00546901 /* Exercise9 */,
+				BF9BC8DD2845BF2E00546901 /* Exercise10 */,
+				BF9BC8E72845BF2E00546901 /* Exercise11 */,
 				BF91BD92283C7E0400FAE131 /* Exercise4 */,
 				BF91BD87283C7CF300FAE131 /* Exercise123 */,
 				BF91BD7B283C7BDA00FAE131 /* AppDelegate */,
@@ -104,6 +134,47 @@
 				BF91BD97283C7EF600FAE131 /* Listds.plist */,
 			);
 			path = Exercise4;
+			sourceTree = "<group>";
+		};
+		BF9BC8D92845BF2E00546901 /* Exercise5 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC8DA2845BF2E00546901 /* Ex5ViewController.swift */,
+				BF9BC8DB2845BF2E00546901 /* ListName.plist */,
+				BF9BC8DC2845BF2E00546901 /* Ex5ViewController.xib */,
+			);
+			path = Exercise5;
+			sourceTree = "<group>";
+		};
+		BF9BC8DD2845BF2E00546901 /* Exercise10 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC8DE2845BF2E00546901 /* ContactPhoneViewController.xib */,
+				BF9BC8DF2845BF2E00546901 /* ContactPhoneViewController.swift */,
+				BF9BC8E02845BF2E00546901 /* FetchedContact.swift */,
+			);
+			path = Exercise10;
+			sourceTree = "<group>";
+		};
+		BF9BC8E12845BF2E00546901 /* Exercise9 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC8E22845BF2E00546901 /* HomeCell.swift */,
+				BF9BC8E32845BF2E00546901 /* HomeViewController.xib */,
+				BF9BC8E42845BF2E00546901 /* HomeViewController.swift */,
+				BF9BC8E52845BF2E00546901 /* ListTH.plist */,
+				BF9BC8E62845BF2E00546901 /* HomeCell.xib */,
+			);
+			path = Exercise9;
+			sourceTree = "<group>";
+		};
+		BF9BC8E72845BF2E00546901 /* Exercise11 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC8E82845BF2E00546901 /* Ex11ViewController.swift */,
+				BF9BC8E92845BF2E00546901 /* Ex11ViewController.xib */,
+			);
+			path = Exercise11;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,10 +237,17 @@
 			files = (
 				BF91BD96283C7E6000FAE131 /* Ex4ViewController.xib in Resources */,
 				BF91BD90283C7D8400FAE131 /* Ex1TableViewController.xib in Resources */,
+				BF9BC8EB2845BF2E00546901 /* ListName.plist in Resources */,
 				BF91BD8F283C7D8400FAE131 /* Table2ViewController.xib in Resources */,
+				BF9BC8F32845BF2E00546901 /* ListTH.plist in Resources */,
+				BF9BC8F62845BF2E00546901 /* Ex11ViewController.xib in Resources */,
 				BF91BD89283C7D7000FAE131 /* DanhSach.plist in Resources */,
 				BF91BD71283C7B7B00FAE131 /* Assets.xcassets in Resources */,
 				BF91BD98283C7EF600FAE131 /* Listds.plist in Resources */,
+				BF9BC8F12845BF2E00546901 /* HomeViewController.xib in Resources */,
+				BF9BC8ED2845BF2E00546901 /* ContactPhoneViewController.xib in Resources */,
+				BF9BC8F42845BF2E00546901 /* HomeCell.xib in Resources */,
+				BF9BC8EC2845BF2E00546901 /* Ex5ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,10 +259,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF91BD68283C7B7700FAE131 /* AppDelegate.swift in Sources */,
+				BF9BC8F52845BF2E00546901 /* Ex11ViewController.swift in Sources */,
+				BF9BC8EA2845BF2E00546901 /* Ex5ViewController.swift in Sources */,
 				BF91BD8E283C7D8400FAE131 /* Ex1TableViewController.swift in Sources */,
 				BF91BD91283C7D8400FAE131 /* Table2ViewController.swift in Sources */,
 				BF91BD95283C7E6000FAE131 /* Ex4ViewController.swift in Sources */,
+				BF9BC8F22845BF2E00546901 /* HomeViewController.swift in Sources */,
 				BF91BD6A283C7B7700FAE131 /* SceneDelegate.swift in Sources */,
+				BF9BC8EF2845BF2E00546901 /* FetchedContact.swift in Sources */,
+				BF9BC8F02845BF2E00546901 /* HomeCell.swift in Sources */,
+				BF9BC8EE2845BF2E00546901 /* ContactPhoneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
