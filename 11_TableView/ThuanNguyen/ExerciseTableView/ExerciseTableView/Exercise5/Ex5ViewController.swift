@@ -77,11 +77,6 @@ extension Ex5ViewController: UITableViewDataSource {
 extension Ex5ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//        var currentText = ""
-//        if let searchBarText = searchBar.text {
-//            currentText = searchBarText
-//        }
-//        let keyword = (currentText as NSString).replacingCharacters(in: range, with: text)
         search(keyword: text)
         return true
     }
