@@ -7,18 +7,22 @@
 
 import UIKit
 
-class Bai4ViewController: UIViewController {
-
-    @IBOutlet weak var dayTextField: UITextField!
+final class Bai4ViewController: UIViewController {
     
+    // MARK: - IBOutlet
+    @IBOutlet private weak var dayTextField: UITextField!
+    
+    // MARK: - property
     let datePicker = UIDatePicker()
     
+    // MARK:- life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         creteDatepicker()
     }
     
-    func createToolbar() -> UIToolbar {
+    // MARK:- Private function
+    private func createToolbar() -> UIToolbar {
         //toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -30,16 +34,15 @@ class Bai4ViewController: UIViewController {
         return toolbar
     }
     
-    func creteDatepicker() {
+    private func creteDatepicker() {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
-        
         dayTextField.textAlignment = .center
         dayTextField.inputView = datePicker
         dayTextField.inputAccessoryView = createToolbar()
     }
     
-    @objc func donePressed() {
+    @objc private func donePressed() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none

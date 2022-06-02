@@ -5,13 +5,15 @@ protocol MyAvatarDelegate: class {
     func myAvatar(_ myAvatar: MyAvatar, didSelect index: Int)
 }
 
-class MyAvatar: UIView {
+final class MyAvatar: UIView {
     
+    // MARK: Property
     var userAvatar: UIImageView?
     var userName: UILabel?
     weak var delegate: MyAvatarDelegate?
     var button: UIButton?
     
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -37,6 +39,7 @@ class MyAvatar: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     @objc func buttonDidClick() {
         print("button is clicked!")
         delegate?.myAvatar(self, didSelect: 10)

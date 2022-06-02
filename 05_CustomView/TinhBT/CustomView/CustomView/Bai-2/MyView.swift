@@ -5,16 +5,19 @@ protocol MyViewDelegate: class {
     func view(view: MyView , needPerform action: MyView.Action )
 }
 
-class MyView: UIView {
-
+final class MyView: UIView {
+    
+    // MARK: IBOutlet
     @IBOutlet private weak var orangeView: UIView!
     @IBOutlet private weak var blueView: UIView!
     @IBOutlet private weak var redView: UIView!
     @IBOutlet private weak var valueLabel: UILabel!
     
+    // MARK: property
     weak var delegate: MyViewDelegate?
     var value: Int?
-
+    
+    // MARK: - Override functions
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             if touch.view == redView {
@@ -39,7 +42,8 @@ class MyView: UIView {
         }
     }
     
-    func updateView() {
+    // MARK: -  function
+     func updateView() {
         guard  let value = value else {
             return
         }
@@ -54,6 +58,7 @@ class MyView: UIView {
     }
 }
 
+// MARK: - Action
 extension MyView {
     enum Action {
         case sendData(value: String)

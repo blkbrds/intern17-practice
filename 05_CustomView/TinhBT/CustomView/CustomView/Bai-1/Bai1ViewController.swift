@@ -1,8 +1,9 @@
 
 import UIKit
 
-class Bai1ViewController: UIViewController {
+final class Bai1ViewController: UIViewController {
     
+    // MARK: - Property
     private let screenSize = UIScreen.main.bounds
     var xo: CGFloat = (UIScreen.main.bounds.width - 300)/4
     var yo: CGFloat = 100
@@ -19,13 +20,15 @@ class Bai1ViewController: UIViewController {
             return v
         }()
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
         self.view.addSubview(scrollView)
         setupUI()
-    
     }
+    
+    // MARK: - Private fuction
     private func setupUI() {
         
         for i in 0..<numberItem {
@@ -45,12 +48,11 @@ class Bai1ViewController: UIViewController {
         let h1 = imageHeight * CGFloat(a)
         let h2 = space * (CGFloat(a) - 1) + 100
         let h3 = h1 + h2
-        
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: h3)
-        
     }
 }
 
+// MARK: - MyAvatarDelegate
 extension Bai1ViewController: MyAvatarDelegate {
     func myAvatar(_ myAvatar: MyAvatar, didSelect index: Int) {
         print("select user view ")

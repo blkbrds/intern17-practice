@@ -1,7 +1,7 @@
 
 import UIKit
 
-class BadButtonView: UIButton {
+final class BadButtonView: UIButton {
     
     enum BadgeNumberPosition {
         case topLeft
@@ -35,6 +35,7 @@ class BadButtonView: UIButton {
         }
     }
     
+    // MARK: Property
     var badgeNumber: Int = 0 {
         didSet	{
             updateBadgeNumber()
@@ -53,7 +54,6 @@ class BadButtonView: UIButton {
         }
     }
     
-    
      private lazy var badgeNumberLabel: UILabel = {
         let label = UILabel()
         label.frame.size = CGSize(width: 44, height: 22)
@@ -67,6 +67,7 @@ class BadButtonView: UIButton {
         return label
     }()
     
+    // MARK: - function
     func updateBadgeNumber() {
         if badgeNumber == 0 {
             badgeNumberLabel.isHidden = true

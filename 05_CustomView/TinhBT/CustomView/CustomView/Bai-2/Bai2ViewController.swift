@@ -2,12 +2,15 @@
 
 import UIKit
 
-class Bai2ViewController: UIViewController {
+final class Bai2ViewController: UIViewController {
     
-    @IBOutlet weak var inputTextField: UITextField!
+    // MARK: - IBOutlet
+    @IBOutlet private weak var inputTextField: UITextField!
     
+    // MARK: - Property
     var mySliderView = MyView()
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         inputTextField.delegate = self
@@ -19,6 +22,7 @@ class Bai2ViewController: UIViewController {
     }
 }
 
+// MARK: - MyViewDelegate
 extension Bai2ViewController: MyViewDelegate {
     func view(view: MyView, needPerform action: MyView.Action) {
         switch action {
@@ -28,6 +32,7 @@ extension Bai2ViewController: MyViewDelegate {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension Bai2ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let value = textField.text else {
