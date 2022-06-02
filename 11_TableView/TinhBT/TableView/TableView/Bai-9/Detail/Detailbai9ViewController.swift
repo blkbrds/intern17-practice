@@ -9,10 +9,13 @@ import UIKit
 
 final class Detailbai9ViewController: UIViewController {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    // MARK: - IBOutlet
+    @IBOutlet private weak var nameLabel: UILabel!
     
+    // MARK: - Property
     var name: String = ""
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Detail"

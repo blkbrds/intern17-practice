@@ -9,6 +9,7 @@ import UIKit
 
 final class Bai12ViewController: UIViewController {
     
+    // MARK: - Property
     var contacts: [String] = ["Tí",
                               "Tèo",
                               "Hùng",
@@ -21,30 +22,32 @@ final class Bai12ViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARk: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
         configTableView()
     }
     
-    func configTableView()  {
+    // MARK: - Private funtion
+   private func configTableView()  {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-    func configNavigationBar() {
+    private func configNavigationBar() {
         title = "haizz"
         turnOffEditingMode()
     }
     
-    @objc func turnOnEditingMode() {
+    @objc private func turnOnEditingMode() {
         tableView.isEditing = true
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(turnOffEditingMode))
         navigationItem.rightBarButtonItem = doneButton
     }
     
-    @objc func turnOffEditingMode() {
+    @objc private func turnOffEditingMode() {
         tableView.isEditing = false
         let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(turnOnEditingMode))
         navigationItem.rightBarButtonItem = editButton
@@ -95,7 +98,6 @@ extension Bai12ViewController: UITableViewDelegate {
                 contacts.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }
-            
         case .insert: print("insert at row\(indexPath.row)")
             if editingStyle == UITableViewCell.EditingStyle.insert {
                 contacts.insert("aloooooo", at: indexPath.row)

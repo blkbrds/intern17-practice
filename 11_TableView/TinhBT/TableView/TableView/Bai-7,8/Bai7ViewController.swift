@@ -25,7 +25,8 @@ final class Bai7ViewController: UIViewController {
         configTableView()
     }
     
-    func loadData() {
+    // MARK: - Private function
+    private func loadData() {
         let thucPham: [String] = ["Cam", "Gao", "Muoi", "Rau", "Cu qua", "Cam", "Gao", "Muoi", "Rau", "Cu qua"]
         let giaSuc: [String] = ["Ga", "Vit", "trau", "bo", "heo", "Ga", "Vit", "trau", "bo", "heo"]
         let doVat: [String] = ["tivi", "quat", "tu lanh", "dao", "keo", "xe", "tivi", "quat", "tu lanh", "dao", "keo", "xe"]
@@ -34,7 +35,7 @@ final class Bai7ViewController: UIViewController {
         listIndex = ["T", "G", "D"]
     }
     
-    func configTableView() {
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
     }

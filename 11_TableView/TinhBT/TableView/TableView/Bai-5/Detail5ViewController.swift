@@ -9,13 +9,15 @@ import UIKit
 
 final class Detail5ViewController: UIViewController {
 
+    // MARK: Property
     var name: String = ""
     
+     // MARK: - IBOutlet
     @IBOutlet private weak var nameLabel: UILabel!
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Detail"
         nameLabel.text = name
     }

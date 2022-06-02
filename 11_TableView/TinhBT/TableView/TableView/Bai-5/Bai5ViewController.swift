@@ -12,7 +12,7 @@ final class Bai5ViewController: UIViewController {
     // MARK: - Property
     var namesData: [String] = ["Bình", "Khánh", "Toàn", "Tâm", "An", "Hương", "Huy", "Quang", "Vân", "Đài", "Tiến"]
     var namesNew: [String] = []
- 
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
@@ -27,26 +27,27 @@ final class Bai5ViewController: UIViewController {
         searchBar.showsCancelButton = true
     }
     
-     func configTableView() {
+    // MARK: - Private function
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-     func configSearchBar() {
+    private func configSearchBar() {
         searchBar.delegate = self
     }
     
-     func search(keywork: String) {
+    private func search(keywork: String) {
         namesNew = getData(keywork: keywork)
-       tableView.reloadData()
+        tableView.reloadData()
     }
     
-     func getData(keywork: String) -> [String] {
+    private func getData(keywork: String) -> [String] {
         if keywork.trimmingCharacters(in: CharacterSet(charactersIn: " ")) == "" {
             return namesData
         } else {
-	            var data: [String] = []
+            var data: [String] = []
             for name in namesData {
                 if let _ = name.range(of: keywork) {
                     data.append(name)
@@ -57,7 +58,7 @@ final class Bai5ViewController: UIViewController {
     }
 }
 
-  //MARK: - UITableViewDelegate & UITableViewDataSource
+//MARK: - UITableViewDelegate & UITableViewDataSource
 extension Bai5ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,10 +76,10 @@ extension Bai5ViewController : UITableViewDelegate, UITableViewDataSource {
         let vc = Detail5ViewController()
         vc.name = namesNew[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
-     }
+    }
 }
 
- //MARK: - UISearchBarDelegate
+//MARK: - UISearchBarDelegate
 extension Bai5ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

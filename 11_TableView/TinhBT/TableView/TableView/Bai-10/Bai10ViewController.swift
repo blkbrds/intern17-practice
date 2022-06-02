@@ -23,7 +23,6 @@ final class Bai10ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Danh Ba"
-        
         configTableView()
         configSearchBar()
         getContact()
@@ -31,7 +30,8 @@ final class Bai10ViewController: UIViewController {
         searchBar.showsCancelButton = true
     }
     
-    func getContact() {
+    // MARK: - Private function
+    private func getContact() {
         baseData.removeAll()
         var contacts = [CNContact]()
         let keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName)]
@@ -52,7 +52,7 @@ final class Bai10ViewController: UIViewController {
         }
     }
     
-    func getKey() {
+    private func getKey() {
         valueDictionary = [:]
         for data in baseData {
             let key  = String(data.prefix(1))
@@ -67,22 +67,22 @@ final class Bai10ViewController: UIViewController {
         titles = titles.sorted(by:{$0 < $1})
     }
     
-    func configTableView() {
+    private  func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
     }
     
-    func configSearchBar() {
+    private func configSearchBar() {
         searchBar.delegate = self
     }
     
-    func search(keyword: String) {
+    private func search(keyword: String) {
         baseData = getContacts(keyword: keyword)
         getKey()
         tableView.reloadData()
     }
     
-    func getContacts(keyword: String) -> [String] {
+    private func getContacts(keyword: String) -> [String] {
         if keyword.trimmingCharacters(in: CharacterSet(charactersIn: " ")) == "" {
             getContact()
             return baseData

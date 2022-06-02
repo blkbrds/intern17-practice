@@ -8,11 +8,14 @@
 import UIKit
 
 final class DetailViewController: UIViewController {
-    
+      
+    // MARK: - IBOutlet
     @IBOutlet weak var nameLabel: UILabel!
     
+    // MARK: - Property
     var name: String = ""
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Detail"

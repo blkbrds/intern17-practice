@@ -20,14 +20,14 @@ final class Bai9ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let nib = UINib(nibName: "Bai9TableViewCell", bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: "cell")
         configTableView()
         loadData()
     }
     
-    func loadData() {
+    // MARK: - Private function
+    private func loadData() {
         let thucPham: [String] = ["Cam", "Gao", "Muoi", "Rau", "Cu qua", "Cam", "Gao", "Muoi", "Rau", "Cu qua"]
         let giaSuc: [String] = ["Ga", "Vit", "trau", "bo", "heo", "Ga", "Vit", "trau", "bo", "heo"]
         let doVat: [String] = ["tivi", "quat", "tu lanh", "dao", "keo", "xe", "tivi", "quat", "tu lanh", "dao", "keo", "xe"]
@@ -36,7 +36,8 @@ final class Bai9ViewController: UIViewController {
         listIndex = ["T", "G", "D"]
     }
     
-    func configTableView() {
+    // MARK: - Private funcion
+    private func configTableView() {
         tableView.dataSource = self
         tableView.delegate = self
     }

@@ -9,6 +9,7 @@ import UIKit
 
 final class Bai4ViewController: UIViewController {
     
+    // MARK: Property
     var sections: [[String]]  = []
     var titles: [String] = ["section1", "sections2", "sections3"]
     
@@ -23,14 +24,15 @@ final class Bai4ViewController: UIViewController {
         configTableView()
     }
     
-    func loadData() {
+    // MARK: - Private function
+    private func loadData() {
         guard let path = Bundle.main.url(forResource: "NameList", withExtension: "plist")
         else { return }
         guard let sectionsData = NSArray(contentsOf: path) as? [[String]] else { return }
         sections = sectionsData
     }
     
-    func configTableView() {
+    private  func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
     }

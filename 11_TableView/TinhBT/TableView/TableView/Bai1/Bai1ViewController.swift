@@ -8,7 +8,7 @@
 import UIKit
 
 final class Bai1ViewController: UIViewController {
-
+    
     // MARK: - IBOutlet
     @IBOutlet private weak var tableView: UITableView!
     
@@ -18,13 +18,14 @@ final class Bai1ViewController: UIViewController {
         configTableView()
     }
     
-    func configTableView() {
+    // MARK:- Private function
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
     }
 }
 
- //MARK: - UITableViewDataSource
+//MARK: - UITableViewDataSource
 extension Bai1ViewController :  UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

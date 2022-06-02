@@ -9,6 +9,7 @@ import UIKit
 
 final class Bai2ViewController: UIViewController {
     
+    // MARK: - Property
     var names: [String] = []
     
     // MARK: - IBOutlet
@@ -22,7 +23,8 @@ final class Bai2ViewController: UIViewController {
         configTableView()
     }
     
-    func loadData() {
+    // MARK: - Private function
+    private func loadData() {
         guard let path = Bundle.main.url(forResource: "NamesList", withExtension: "plist")
         else { return }
         guard let namesData = NSArray(contentsOf: path) as? [String]
@@ -30,14 +32,14 @@ final class Bai2ViewController: UIViewController {
         names = namesData
     }
     
-    func configTableView() {
+     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
     }
 }
 
-//MARK: - UITableViewDataSource
+//MARK: - UITableViewDataSource, UITableViewDelegate
 extension Bai2ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count

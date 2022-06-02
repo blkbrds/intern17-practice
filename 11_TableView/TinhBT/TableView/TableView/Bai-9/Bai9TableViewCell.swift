@@ -7,8 +7,8 @@
 
 import UIKit
 
+// MARK: - Bai9TableViewCellDelegate
 protocol Bai9TableViewCellDelegate: class {
-    
     func tapMe(_ bai9TableViewCell: Bai9TableViewCell, needsPerfom actions: Bai9TableViewCell.Action)
 }
 
@@ -17,23 +17,22 @@ final class Bai9TableViewCell: UITableViewCell {
     enum Action {
         case tap
     }
-
+    
     // MARK: - IBOutlet
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var tapMeButton: UIButton!
     
+    // MARK: Porperty
     weak var delegate: Bai9TableViewCellDelegate?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
+    // MARK: - override function
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: Function
     func updateTableCell(avatar: String, name: String = "", subTitle: String = "") {
         avatarImageView.image  = UIImage(named: avatar)
         nameLabel.text  = name
