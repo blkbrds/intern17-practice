@@ -36,26 +36,23 @@ final class DetailViewModel {
         return id
     }
 
-    func checkVideo() -> Bool {
-        do {
-            let realm = try Realm()
-            let data = RealmVideo()
-            data.title = video?.title ?? ""
-            data.image = video?.imageURL ?? ""
-            data.id = video?.id ?? ""
-            if let dataFilters = realm.objects(RealmVideo.self).filter("id = %@ ", video?.id).toArray(ofType: RealmVideo.self).first {
-                try realm.write {
-                    realm.delete(dataFilters)
-                }
-            } else {
-                try realm.write {
-                    realm.add(data)
-                }
+    func checkAddVideoFavorite() -> Bool {
+        let realm = try? Realm()
+        let data = RealmVideo()
+        data.title = video?.title ?? ""
+        data.image = video?.imageURL ?? ""
+        data.id = video?.id ?? ""
+        if let dataFilters = realm?.objects(RealmVideo.self).filter("id = %@ ", video?.id).toArray(ofType: RealmVideo.self).first {
+            try? realm?.write {
+                realm?.delete(dataFilters)
             }
-        } catch {
-            print("Fatal Error Realm")
+            return true
+        } else {
+            try? realm?.write {
+                realm?.add(data)
+            }
+            return false
         }
-        return false
     }
 
     func loadAPIDetail(id: String? = nil, completion: @escaping APICompletion) {

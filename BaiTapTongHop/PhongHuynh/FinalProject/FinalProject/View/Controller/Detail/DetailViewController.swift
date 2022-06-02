@@ -39,16 +39,7 @@ final class DetailViewController: UIViewController {
     private func updateView() {
         player.load(withVideoId: viewModel?.video?.id ?? "")
         titleYoutubeLabel.text = viewModel?.video?.title
-        do {
-            let realm = try Realm()
-            guard let id = viewModel?.video?.id else { return }
-            if realm.objects(RealmVideo.self).filter("id = %@ ", id).toArray(ofType: RealmVideo.self).first != nil {
-                favoriteButton.setImage(#imageLiteral(resourceName: "iconsfavorite-24"), for: .normal)
-            } else {
-                favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite-24"), for: .normal)
-            }
-        } catch {
-        }
+        checkVideoFavorite()
     }
 
     private func loadSimilarVideoData(id: String? = nil) {
@@ -65,27 +56,25 @@ final class DetailViewController: UIViewController {
         }
     }
 
-    // MARK: - IBActions
-    @IBAction private func favoriteButtonTouchUpInside(_ sender: Any) {
+    private func checkVideoFavorite() {
         do {
             let realm = try Realm()
-            let data = RealmVideo()
-            data.title = viewModel?.video?.title ?? ""
-            data.image = viewModel?.video?.imageURL ?? ""
-            data.id = viewModel?.video?.id ?? ""
             guard let id = viewModel?.video?.id else { return }
-            if let dataFilters = realm.objects(RealmVideo.self).filter("id = %@ ", id).toArray(ofType: RealmVideo.self).first {
-                favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite-24"), for: .normal)
-                try realm.write {
-                    realm.delete(dataFilters)
-                }
-            } else {
+            if realm.objects(RealmVideo.self).filter("id = %@ ", id).toArray(ofType: RealmVideo.self).first != nil {
                 favoriteButton.setImage(#imageLiteral(resourceName: "iconsfavorite-24"), for: .normal)
-                try realm.write {
-                    realm.add(data)
-                }
+            } else {
+                favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite-24"), for: .normal)
             }
         } catch {
+        }
+    }
+
+    // MARK: - IBActions
+    @IBAction private func favoriteButtonTouchUpInside(_ sender: Any) {
+        if viewModel?.checkAddVideoFavorite() == true {
+            favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite-24"), for: .normal)
+        } else {
+            favoriteButton.setImage(#imageLiteral(resourceName: "iconsfavorite-24"), for: .normal)
         }
     }
 }
