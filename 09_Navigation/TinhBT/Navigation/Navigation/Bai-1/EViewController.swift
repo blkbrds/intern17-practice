@@ -9,11 +9,13 @@ import UIKit
 
 final class EViewController: UIViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "VC e"
     }
 
+    // MARK: - IBAction
     @IBAction private func BButtonTouchUpInside(_ sender: Any) {
         let vc = (self.navigationController?.viewControllers[1])!
         self.navigationController?.popToViewController(vc, animated: true)

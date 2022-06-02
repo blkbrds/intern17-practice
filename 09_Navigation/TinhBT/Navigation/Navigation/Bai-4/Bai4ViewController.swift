@@ -3,16 +3,17 @@ import UIKit
 
 final class Bai4ViewController: UIViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "New Feed"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor.brown
         creteButton()
     }
     
-    func creteButton() {
+    // MARK: - Private function
+    private func creteButton() {
         let leftBarButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
         navigationItem.leftBarButtonItem = leftBarButton
         
@@ -23,11 +24,11 @@ final class Bai4ViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightBarButton
     }
 
-    @objc func search() {
+    @objc private func search() {
         print("timmmmm kim")
     }
-    @objc func person() {
+    
+    @objc private func person() {
         print("ta ra")
     }
-
 }

@@ -9,6 +9,7 @@ import UIKit
 
 final class Bai3ViewController: UIViewController {
     
+    // MARK: - Property
     private let screenSize = UIScreen.main.bounds
     var xo: CGFloat = (UIScreen.main.bounds.width - 300)/4
     var yo: CGFloat = 30
@@ -18,8 +19,6 @@ final class Bai3ViewController: UIViewController {
     let numberItem: Int = 30
     var views: [MyAvatar] = []
     var id: Int = 0
-
-    
     let scrollView: UIScrollView = {
         let v = UIScrollView()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -27,6 +26,7 @@ final class Bai3ViewController: UIViewController {
         return v
     }()
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
@@ -35,6 +35,7 @@ final class Bai3ViewController: UIViewController {
         title = "Home"
     }
     
+    // MARK: - Private function
     private func setupUI() {
         for i in 0..<numberItem {
             let viewInHome = MyAvatar(frame: CGRect(x: xo, y: yo, width: imageWidth, height: imageHeight))
@@ -60,6 +61,7 @@ final class Bai3ViewController: UIViewController {
     }
 }
 
+// MARK: - MyAvatarDelegate
 extension Bai3ViewController: MyAvatarDelegate {
     func myAvatar(_ myAvatar: MyAvatar, didSelect index: Int) {
         id = index
@@ -70,6 +72,7 @@ extension Bai3ViewController: MyAvatarDelegate {
     }
 }
 
+// MARK: - ProfileViewDelegate
 extension Bai3ViewController: ProfileViewDelegate {
     func view(view: ProfileViewController, needPerform action: ProfileViewController.Action) {
         switch action {

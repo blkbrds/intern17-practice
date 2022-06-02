@@ -7,30 +7,32 @@
 
 import UIKit
 
+// MARK: - HomeViewDelegate
 protocol HomeViewDelegate: class {
     func view(view: HomeViewController, needPerform action: HomeViewController.Action )
 }
 
 final class HomeViewController: UIViewController {
 
+    // MARK: - IBOutlet
     @IBOutlet private weak var nameLabel: UILabel!
     
+    // MARK: - property
     var vc = EditViewController()
-    
     var username = ""
     weak var delegate: HomeViewDelegate?
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
- 
         title = "home"
-    
         createButton()
         nameLabel.text = "\(username)!"
         vc.delegate = self
     }
     
-    func createButton() {
+    // MARK: - Private function
+    private func createButton() {
         let editButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 44))
         editButton.addTarget(self, action: #selector(edit), for: .touchUpInside)
         editButton.setTitle("Edit", for: .normal)
@@ -46,28 +48,28 @@ final class HomeViewController: UIViewController {
         navigationItem.leftBarButtonItem = leftBarButton
     }
 
-    @objc func edit() {
+    @objc private func edit() {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc func logout() {
+    @objc private func logout() {
         delegate?.view(view: self, needPerform: .logout)
         navigationController?.popToRootViewController(animated: true)
     }
 }
 
+// MARK: - HomeViewController
 extension HomeViewController {
-    
     enum Action {
         case logout
     }
 }
 
+// MARK: - EditViewDelegate
 extension HomeViewController: EditViewDelegate {
     
     func view(view: EditViewController, needPerform action: EditViewController.Action) {
         switch action {
-        
         case .sendData(value: let value):
             nameLabel.text = value
         }

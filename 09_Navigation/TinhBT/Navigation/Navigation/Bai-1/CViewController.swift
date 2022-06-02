@@ -3,12 +3,13 @@ import UIKit
 
 final class CViewController: UIViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "VC c"
     }
 
+    // MARK: - IBAction
     @IBAction private func NextButtonTouchUpInside(_ sender: Any) {
         let vc = DViewController()
         self.navigationController?.pushViewController(vc, animated: true)

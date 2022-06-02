@@ -7,26 +7,30 @@
 
 import UIKit
 
+// MARK: - ProfileViewDelegate
 protocol ProfileViewDelegate: class {
     func view(view: ProfileViewController, needPerform action: ProfileViewController.Action)
 }
 
 final class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var nameAvatarUITextField: UITextField!
+    // MARK: - Property
     weak var delegate: ProfileViewDelegate?
     var nameAvatar = ""
     
+    // MARK: - IBOutlet
+    @IBOutlet weak var nameAvatarUITextField: UITextField!
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Profile"
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(done))
         navigationItem.rightBarButtonItem = doneButton
-        
         nameAvatarUITextField.text = nameAvatar
     }
     
+    // MARK: - Initialize
     init(with name: String) {
         self.nameAvatar = name
         super.init(nibName: nil, bundle: nil)
@@ -36,13 +40,15 @@ final class ProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func done() {
+    // MARK: - Private function
+    @objc private func done() {
         guard let newNameAvatar = nameAvatarUITextField.text else { return }
         delegate?.view(view: self, needPerform: .sendData(value: newNameAvatar))
         self.navigationController?.popViewController(animated: true)
     }
 }
 
+// MARK: - Action
 extension ProfileViewController {
     enum Action {
         case sendData(value: String)

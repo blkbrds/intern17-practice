@@ -7,12 +7,14 @@
 import UIKit
 import Foundation
 
+// MARK: - MyAvatarDelegate
 protocol MyAvatarDelegate: class {
     func myAvatar(_ myAvatar: MyAvatar, didSelect index: Int)
 }
 
 final class MyAvatar: UIView {
     
+    // MARK: - Property
     var userAvatar: String = ""
     var userName: String = "" {
         didSet {
@@ -24,6 +26,7 @@ final class MyAvatar: UIView {
     var button: UIButton?
     var userNameLabel = UILabel()
     
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -49,7 +52,8 @@ final class MyAvatar: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func buttonDidClick() {
+    // MARK: - Private function
+    @objc private func buttonDidClick() {
         delegate?.myAvatar(self, didSelect: id)
     }
     
@@ -57,7 +61,7 @@ final class MyAvatar: UIView {
         userNameLabel.text = name
     }
     
-    func setData() {
+    private func setData() {
         userNameLabel.text = userName
     }
 }
