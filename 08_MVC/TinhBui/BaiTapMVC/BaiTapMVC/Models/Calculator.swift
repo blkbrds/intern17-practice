@@ -9,6 +9,7 @@ import Foundation
 
 final class Calculator {
     
+    //MARK: - function
     func cong(a: Int, b: Int) -> Int {
         return a + b
     }

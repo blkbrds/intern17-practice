@@ -3,18 +3,21 @@ import UIKit
 
 final class ViewController: UIViewController {
     
+    // MARK: property
     var so1: Int!
     var so2: Int!
     var dau: String!
-
-    @IBOutlet private weak var ketquaTextField: UITextField!
-    
     var caculator = Calculator()
     
+    // MARK: - IBOutlet
+    @IBOutlet private weak var ketquaTextField: UITextField!
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // MARK: - IBAction
     @IBAction private func nutBang(_ sender: Any) {
         let so2String = ketquaTextField.text ?? "0"
         so2 = Int(so2String)
@@ -33,7 +36,6 @@ final class ViewController: UIViewController {
         if dau == "/" {
             ketqua = caculator.chia(a: so1, b: so2)
         }
-        
         ketquaTextField.text = "\(ketqua)"
     }
     
