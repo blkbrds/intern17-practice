@@ -1,5 +1,6 @@
 import UIKit
 
+@available(iOS 13.0, *)
 final class HomeViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -130,6 +131,7 @@ final class HomeViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
+@available(iOS 13.0, *)
 extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -164,10 +166,12 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
+@available(iOS 13.0, *)
 extension HomeViewController: UITableViewDelegate {
 }
 
 // MARK: - NominationVideoCellDelegate
+@available(iOS 13.0, *)
 extension HomeViewController: NominationVideoCellDelegate {
 
     func controller(controller: NominationVideoCell, needsPerfom actions: NominationVideoCell.Action) {
@@ -181,6 +185,7 @@ extension HomeViewController: NominationVideoCellDelegate {
 }
 
 // MARK: - FeaturedVideoHomeCellDelegate
+@available(iOS 13.0, *)
 extension HomeViewController: FeaturedVideoHomeCellDelegate {
     func controller(controller: FeaturedVideoHomeCell, needsPerfom actions: FeaturedVideoHomeCell.Action) {
         switch actions {

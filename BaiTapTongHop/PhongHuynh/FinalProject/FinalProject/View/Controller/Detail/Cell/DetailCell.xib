@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dh0-xc-kfC">
-                        <rect key="frame" x="0.0" y="0.0" width="229" height="110.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="229" height="119"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4b-0H-JVo">
-                        <rect key="frame" x="0.0" y="110.5" width="229" height="59.5"/>
+                        <rect key="frame" x="0.0" y="119" width="229" height="51"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cII-4g-h9f">
-                                <rect key="frame" x="15" y="0.0" width="209" height="54.5"/>
+                                <rect key="frame" x="15" y="0.0" width="209" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -43,7 +43,7 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Dh0-xc-kfC" secondAttribute="trailing" id="DKk-Af-BdZ"/>
                     <constraint firstItem="t4b-0H-JVo" firstAttribute="top" secondItem="Dh0-xc-kfC" secondAttribute="bottom" id="E6x-5s-fgt"/>
-                    <constraint firstItem="Dh0-xc-kfC" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.65" id="Ill-St-rnU"/>
+                    <constraint firstItem="Dh0-xc-kfC" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="Ill-St-rnU"/>
                     <constraint firstItem="Dh0-xc-kfC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Lsy-Oc-VMy"/>
                     <constraint firstItem="Dh0-xc-kfC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b27-fM-kiC"/>
                     <constraint firstAttribute="trailing" secondItem="t4b-0H-JVo" secondAttribute="trailing" id="kkq-SS-VWF"/>

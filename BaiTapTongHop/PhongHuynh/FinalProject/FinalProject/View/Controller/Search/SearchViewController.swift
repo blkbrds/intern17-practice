@@ -8,14 +8,15 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class SearchViewController: UIViewController {
 
     // MARK: - IBOutlets
-    @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
 
     // MARK: - Properties
     var viewModel: SearchViewModel = SearchViewModel()
+    let searchBar: UISearchBar = UISearchBar(frame: CGRect(x: 60, y: 0, width: 300, height: 20))
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -51,14 +52,25 @@ final class SearchViewController: UIViewController {
     }
 
     private func configNavigation() {
-        title = "Search"
-        navigationController?.navigationBar.tintColor = UIColor.white
+        let leftNavBarButton = UIBarButtonItem(customView: searchBar)
+        searchBar.placeholder = "Tìm kiếm"
+        searchBar.searchTextField.backgroundColor = .white
+        searchBar.tintColor = UIColor.black
+        searchBar.searchBarStyle = .minimal
+        navigationItem.leftBarButtonItem = leftNavBarButton
+        let rightNavBarButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAction))
+        navigationItem.rightBarButtonItem = rightNavBarButton
         navigationController?.navigationBar.barTintColor = UIColor.black
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
+    }
+
+    @objc private func cancelAction() {
+        navigationController?.popViewController(animated: true)
     }
 }
 
 // MARK: - UITableViewDataSource
+@available(iOS 13.0, *)
 extension SearchViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,10 +95,12 @@ extension SearchViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
+@available(iOS 13.0, *)
 extension SearchViewController: UITableViewDelegate {
 }
 
 // MARK: - UISearchBarDelegate
+@available(iOS 13.0, *)
 extension SearchViewController: UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
