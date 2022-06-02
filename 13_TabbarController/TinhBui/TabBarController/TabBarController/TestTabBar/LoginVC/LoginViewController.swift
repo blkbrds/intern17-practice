@@ -13,9 +13,12 @@ final class LoginViewController: BaseViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     
+    let loginModel = LoginviewModel()
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         title = "Login"
         loginButton()
     }
@@ -26,7 +29,7 @@ final class LoginViewController: BaseViewController {
     }
 
     @objc func loginAction() {
-        if userNameTextField.text == "tinh123" && passWordTextField.text == "123" {
+        if loginModel.login(username: userNameTextField.text ?? "", passwork: passWordTextField.text ?? "" ) == true {
             
             // thay doi root
             let scene = UIApplication.shared.connectedScenes.first

@@ -19,6 +19,7 @@
 		130966F02845C30200A58B91 /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130966EE2845C30200A58B91 /* MessagesViewController.xib */; };
 		130966F42845C32C00A58B91 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130966F22845C32C00A58B91 /* ProfileViewController.swift */; };
 		130966F52845C32C00A58B91 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130966F32845C32C00A58B91 /* ProfileViewController.xib */; };
+		13622F2C284766A8000415EF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13622F2B284766A8000415EF /* LoginViewModel.swift */; };
 		1383F2192846113200996DC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383F2172846113200996DC9 /* LoginViewController.swift */; };
 		1383F21A2846113200996DC9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1383F2182846113200996DC9 /* LoginViewController.xib */; };
 		139F75A72846F56A00CB8430 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139F75A62846F56A00CB8430 /* BaseTabBarController.swift */; };
@@ -41,6 +42,7 @@
 		130966EE2845C30200A58B91 /* MessagesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagesViewController.xib; sourceTree = "<group>"; };
 		130966F22845C32C00A58B91 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		130966F32845C32C00A58B91 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		13622F2B284766A8000415EF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1383F2172846113200996DC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1383F2182846113200996DC9 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		139F75A62846F56A00CB8430 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				1383F2172846113200996DC9 /* LoginViewController.swift */,
 				1383F2182846113200996DC9 /* LoginViewController.xib */,
+				13622F2B284766A8000415EF /* LoginViewModel.swift */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				139F75A72846F56A00CB8430 /* BaseTabBarController.swift in Sources */,
 				1383F2192846113200996DC9 /* LoginViewController.swift in Sources */,
+				13622F2C284766A8000415EF /* LoginViewModel.swift in Sources */,
 				130966EF2845C30200A58B91 /* MessagesViewController.swift in Sources */,
 				130966C72845A1CD00A58B91 /* AppDelegate.swift in Sources */,
 				130966C92845A1CD00A58B91 /* SceneDelegate.swift in Sources */,

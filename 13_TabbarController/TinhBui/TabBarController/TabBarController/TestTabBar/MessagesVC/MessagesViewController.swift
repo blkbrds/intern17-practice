@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MessagesViewController: UIViewController {
+final class MessagesViewController: UIViewController {
 
     // MARK: - Life cycle
     override func viewDidLoad() {
