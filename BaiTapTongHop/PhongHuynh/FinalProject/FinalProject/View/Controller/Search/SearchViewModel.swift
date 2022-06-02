@@ -32,9 +32,11 @@ final class SearchViewModel {
             case .success(let json):
                 guard let json = json as? JSON else { return }
                 if let items = json["items"] as? [JSON] {
+                    var videos: [Video] = []
                     for item in items {
-                        self.searchsVideo.append(Video(json: item))
+                        videos.append(Video(json: item))
                     }
+                    self.searchsVideo = videos
                     completion(.success)
                 }
             case .failure(let error):

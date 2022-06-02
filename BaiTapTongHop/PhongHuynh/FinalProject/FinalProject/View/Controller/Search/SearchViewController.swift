@@ -106,6 +106,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let keyWord = searchBar.text else { return }
         loadSearchVideoData(keyword: keyWord.replacingOccurrences(of: " ", with: ""))
+        tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
