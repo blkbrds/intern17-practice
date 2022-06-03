@@ -9,6 +9,6 @@ import UIKit
 
 final class TableViewCell: UITableViewCell {
 
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet weak var testlabel: UILabel!
 }

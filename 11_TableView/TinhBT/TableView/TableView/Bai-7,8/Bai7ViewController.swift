@@ -9,7 +9,7 @@ import UIKit
 
 final class Bai7ViewController: UIViewController {
     
-    // MARK: - Property
+    // MARK: - Properties
     var list: [[String]] = []
     var listIndex: [String] = []
     var titles: [String] = ["thucpham", "giasuc", "dovat"]
@@ -25,7 +25,7 @@ final class Bai7ViewController: UIViewController {
         configTableView()
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func loadData() {
         let thucPham: [String] = ["Cam", "Gao", "Muoi", "Rau", "Cu qua", "Cam", "Gao", "Muoi", "Rau", "Cu qua"]
         let giaSuc: [String] = ["Ga", "Vit", "trau", "bo", "heo", "Ga", "Vit", "trau", "bo", "heo"]

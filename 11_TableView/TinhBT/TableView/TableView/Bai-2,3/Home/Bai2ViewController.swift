@@ -9,10 +9,10 @@ import UIKit
 
 final class Bai2ViewController: UIViewController {
     
-    // MARK: - Property
+    // MARK: - Properties
     var names: [String] = []
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Life cycle
@@ -23,7 +23,7 @@ final class Bai2ViewController: UIViewController {
         configTableView()
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func loadData() {
         guard let path = Bundle.main.url(forResource: "NamesList", withExtension: "plist")
         else { return }
@@ -32,14 +32,14 @@ final class Bai2ViewController: UIViewController {
         names = namesData
     }
     
-     private func configTableView() {
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
     }
 }
 
-//MARK: - UITableViewDataSource, UITableViewDelegate
+// MARK: - UITableViewDataSource & UITableViewDelegate
 extension Bai2ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count

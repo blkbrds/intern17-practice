@@ -8,11 +8,11 @@
 import UIKit
 
 final class Detail5ViewController: UIViewController {
-
-    // MARK: Property
+    
+    // MARK: - Properties
     var name: String = ""
     
-     // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var nameLabel: UILabel!
     
     // MARK: - Life cycle

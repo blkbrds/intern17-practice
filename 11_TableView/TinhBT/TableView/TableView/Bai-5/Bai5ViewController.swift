@@ -9,7 +9,7 @@ import UIKit
 
 final class Bai5ViewController: UIViewController {
     
-    // MARK: - Property
+    // MARK: - Properties
     var namesData: [String] = ["Bình", "Khánh", "Toàn", "Tâm", "An", "Hương", "Huy", "Quang", "Vân", "Đài", "Tiến"]
     var namesNew: [String] = []
     
@@ -27,7 +27,7 @@ final class Bai5ViewController: UIViewController {
         searchBar.showsCancelButton = true
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
@@ -104,7 +104,7 @@ extension Bai5ViewController: UISearchBarDelegate {
         searchBar.text = ""
         search(keywork: "")
     }
-    // bat su kien cho x trong search bar
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
             namesNew = namesData

@@ -9,7 +9,7 @@ import UIKit
 
 final class Bai9ViewController: UIViewController {
     
-    // MARK: - Property
+    // MARK: - Properties
     var list: [[String]] = []
     var listIndex: [String] = []
     var titles: [String] = ["thucpham", "giasuc", "dovat"]
@@ -26,7 +26,7 @@ final class Bai9ViewController: UIViewController {
         loadData()
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func loadData() {
         let thucPham: [String] = ["Cam", "Gao", "Muoi", "Rau", "Cu qua", "Cam", "Gao", "Muoi", "Rau", "Cu qua"]
         let giaSuc: [String] = ["Ga", "Vit", "trau", "bo", "heo", "Ga", "Vit", "trau", "bo", "heo"]
@@ -36,7 +36,6 @@ final class Bai9ViewController: UIViewController {
         listIndex = ["T", "G", "D"]
     }
     
-    // MARK: - Private funcion
     private func configTableView() {
         tableView.dataSource = self
         tableView.delegate = self

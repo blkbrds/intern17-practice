@@ -9,11 +9,11 @@ import UIKit
 
 final class Bai4ViewController: UIViewController {
     
-    // MARK: Property
+    // MARK: - Properties
     var sections: [[String]]  = []
     var titles: [String] = ["section1", "sections2", "sections3"]
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Life cycle
@@ -24,7 +24,7 @@ final class Bai4ViewController: UIViewController {
         configTableView()
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func loadData() {
         guard let path = Bundle.main.url(forResource: "NameList", withExtension: "plist")
         else { return }

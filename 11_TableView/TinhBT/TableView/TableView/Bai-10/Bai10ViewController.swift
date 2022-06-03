@@ -10,12 +10,12 @@ import ContactsUI
 
 final class Bai10ViewController: UIViewController {
     
-    // MARK: - Property
+    // MARK: - Properties
     var baseData: [String] = []
     var titles = [String]()
     var valueDictionary = [String: [String]]()
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -30,7 +30,7 @@ final class Bai10ViewController: UIViewController {
         searchBar.showsCancelButton = true
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func getContact() {
         baseData.removeAll()
         var contacts = [CNContact]()

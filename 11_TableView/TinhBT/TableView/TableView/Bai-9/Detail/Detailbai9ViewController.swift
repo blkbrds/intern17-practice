@@ -9,10 +9,10 @@ import UIKit
 
 final class Detailbai9ViewController: UIViewController {
 
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var nameLabel: UILabel!
     
-    // MARK: - Property
+    // MARK: - Properties
     var name: String = ""
     
     // MARK: - Life cycle

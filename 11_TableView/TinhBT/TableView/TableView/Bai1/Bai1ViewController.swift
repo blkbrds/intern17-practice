@@ -9,7 +9,7 @@ import UIKit
 
 final class Bai1ViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Life cycle
@@ -18,14 +18,14 @@ final class Bai1ViewController: UIViewController {
         configTableView()
     }
     
-    // MARK:- Private function
+    // MARK: - Private functions
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
     }
 }
 
-//MARK: - UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension Bai1ViewController :  UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

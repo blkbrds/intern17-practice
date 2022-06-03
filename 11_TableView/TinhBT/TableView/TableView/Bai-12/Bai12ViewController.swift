@@ -9,7 +9,7 @@ import UIKit
 
 final class Bai12ViewController: UIViewController {
     
-    // MARK: - Property
+    // MARK: - Properties
     var contacts: [String] = ["Tí",
                               "Tèo",
                               "Hùng",
@@ -19,18 +19,18 @@ final class Bai12ViewController: UIViewController {
                               "Trung",
                               "Hạnh"]
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
-    // MARk: - Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
         configTableView()
     }
     
-    // MARK: - Private funtion
-   private func configTableView()  {
+    // MARK: - Private funtions
+    private func configTableView()  {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,6 +41,7 @@ final class Bai12ViewController: UIViewController {
         turnOffEditingMode()
     }
     
+    // MARK: - Objc funcions
     @objc private func turnOnEditingMode() {
         tableView.isEditing = true
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(turnOffEditingMode))
@@ -54,7 +55,7 @@ final class Bai12ViewController: UIViewController {
     }
 }
 
-//MARK: - UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension Bai12ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -103,6 +104,8 @@ extension Bai12ViewController: UITableViewDelegate {
                 contacts.insert("aloooooo", at: indexPath.row)
                 tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }
+        @unknown default:
+            return
         }
     }
 }
