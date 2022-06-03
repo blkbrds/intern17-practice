@@ -94,8 +94,8 @@ extension DetailViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        player.load(withVideoId: viewModel?.videos[indexPath.row].id ?? "")
-        titleYoutubeLabel.text = viewModel?.videos[indexPath.row].title ?? ""
+        viewModel?.video = viewModel?.videos[indexPath.row]
+        updateView()
         loadSimilarVideoData(id: viewModel?.videos[indexPath.row].id)
         tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }

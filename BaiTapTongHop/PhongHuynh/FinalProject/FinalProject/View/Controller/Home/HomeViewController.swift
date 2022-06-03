@@ -187,6 +187,7 @@ extension HomeViewController: NominationVideoCellDelegate {
 // MARK: - FeaturedVideoHomeCellDelegate
 @available(iOS 13.0, *)
 extension HomeViewController: FeaturedVideoHomeCellDelegate {
+
     func controller(controller: FeaturedVideoHomeCell, needsPerfom actions: FeaturedVideoHomeCell.Action) {
         switch actions {
         case .moveToDetail(let indexPath):
