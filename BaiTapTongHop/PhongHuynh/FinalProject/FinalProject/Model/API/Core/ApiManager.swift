@@ -14,7 +14,7 @@ typealias JSArray = [JSObject]
 
 typealias Completion<Value> = (Result<Value>) -> Void
 typealias APICompletion = (APIResult) -> Void
-typealias CompletionAny = (_ result: Result<Any>) -> Void
+typealias CompletionAny = (_ items: Any?, _ error: Error?) -> Void
 
 enum APIResult {
     case success

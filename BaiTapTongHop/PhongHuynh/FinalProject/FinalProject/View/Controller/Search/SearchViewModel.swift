@@ -27,20 +27,11 @@ final class SearchViewModel {
     }
 
     func loadSearchVideoAPI(keyword: String, completion: @escaping APICompletion) {
-        VideoService.loadSearchVideoAPI(keyword: keyword, completion: { (result) in
-            switch result {
-            case .success(let json):
-                guard let json = json as? JSON else { return }
-                if let items = json["items"] as? [JSON] {
-                    var videos: [Video] = []
-                    for item in items {
-                        videos.append(Video(json: item))
-                    }
-                    self.searchsVideo = videos
-                    completion(.success)
-                }
-            case .failure(let error):
+        VideoService.loadSearchVideoAPI(keyword: keyword, completion: { items, error in
+            if let error = error {
                 completion(.failure(error))
+            } else if let items = items as? [Video] {
+                self.searchsVideo = items
             }
         })
     }

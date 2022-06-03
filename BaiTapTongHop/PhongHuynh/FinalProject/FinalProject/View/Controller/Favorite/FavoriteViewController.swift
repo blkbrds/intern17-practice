@@ -28,7 +28,7 @@ final class FavoriteViewController: UIViewController {
         super.viewWillAppear(animated)
         do {
         let realm = try Realm()
-            viewModel.videos = realm.objects(RealmVideo.self).toArray(ofType: RealmVideo.self)
+            viewModel.videos = realm.objects(Video.self).toArray(ofType: Video.self)
             tableView.reloadData()
         } catch {
 
