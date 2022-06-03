@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BT4ViewController" customModule="BTProtocol" customModuleProvider="target">
+            <connections>
+                <outlet property="listTextView" destination="4Fs-pi-KQv" id="FOq-Xk-dfJ"/>
+                <outlet property="searchBar" destination="6Su-cX-lpu" id="wda-CF-E5W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="6Su-cX-lpu">
+                    <rect key="frame" x="10" y="64" width="284" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3ue-2E-kK1"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTe-hS-v8F">
+                    <rect key="frame" x="304" y="64" width="100" height="40"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="096-Sb-yBE"/>
+                        <constraint firstAttribute="width" constant="100" id="Fdw-Tg-NBc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="pfW-Dr-iRR"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Fs-pi-KQv">
+                    <rect key="frame" x="10" y="114" width="394" height="738"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <string key="text">Hòa Bình
+Sơn La
+Điện Biên
+Lai Châu
+Lào Cai
+Yên Bái
+Phú Thọ
+Hà Giang
+Tuyên Quang
+Cao Bằng
+Bắc Cạn
+Thái Nguyên
+Lạng Sơn
+Bắc Giang
+Quảng Ninh
+Hà Nội
+Bắc Ninh
+Hà Nam
+Hải Dương
+Hải Phòng
+Hưng Yên
+Nam Định
+Thái Bình
+Vĩnh Phúc
+Ninh Bình
+Thanh Hóa
+</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YTe-hS-v8F" secondAttribute="trailing" constant="10" id="LEV-8F-xxW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Fs-pi-KQv" secondAttribute="trailing" constant="10" id="LM8-uN-d8t"/>
+                <constraint firstItem="YTe-hS-v8F" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Tkf-fC-mLZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4Fs-pi-KQv" secondAttribute="bottom" constant="10" id="Vzb-0e-eqD"/>
+                <constraint firstItem="4Fs-pi-KQv" firstAttribute="top" secondItem="6Su-cX-lpu" secondAttribute="bottom" constant="10" id="Z8I-f2-QhN"/>
+                <constraint firstItem="4Fs-pi-KQv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="d0t-2H-qr5"/>
+                <constraint firstItem="YTe-hS-v8F" firstAttribute="leading" secondItem="6Su-cX-lpu" secondAttribute="trailing" constant="10" id="fiR-gy-kSw"/>
+                <constraint firstItem="6Su-cX-lpu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="sur-nk-sIl"/>
+                <constraint firstItem="6Su-cX-lpu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="uFa-F8-LCg"/>
+            </constraints>
+            <point key="canvasLocation" x="11.594202898550726" y="103.79464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
