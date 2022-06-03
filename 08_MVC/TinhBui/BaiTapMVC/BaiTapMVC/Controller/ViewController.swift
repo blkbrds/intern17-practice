@@ -3,13 +3,13 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    // MARK: property
+    // MARK: - Properties
     var so1: Int!
     var so2: Int!
     var dau: String!
     var caculator = Calculator()
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var ketquaTextField: UITextField!
     
     // MARK: - Life cycle
@@ -17,13 +17,13 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func nutBang(_ sender: Any) {
         let so2String = ketquaTextField.text ?? "0"
         so2 = Int(so2String)
         
         var ketqua = 0
-            
+        
         if dau == "+" {
             ketqua = caculator.cong(a: so1, b: so2)
         }
@@ -46,7 +46,7 @@ final class ViewController: UIViewController {
         ketquaTextField.text = ""
         dau = "+"
     }
-
+    
     @IBAction private func nutTru(_ sender: Any) {
         let so1String = ketquaTextField.text ?? "0"
         so1 = Int(so1String)
