@@ -7,8 +7,7 @@
 
 import UIKit
 
-
-class Ex5ViewController: UIViewController {
+final class Ex5ViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
@@ -21,30 +20,29 @@ class Ex5ViewController: UIViewController {
         loadData()
         configTableView()
         configSearchBar()
-        
-    }
-    func loadData() {
-        guard let path = Bundle.main.url(forResource: "ListName", withExtension: "plist"),
-              let contactsData = NSArray(contentsOf: path) as? [String]
-        else { return }
-        listName = contactsData
-        name = contactsData
     }
     
-    func configTableView() {
+    private func loadData() {
+        name = DataManager.shared.configData()
+        listName = DataManager.shared.configData()
+    }
+    
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
-        
     }
-    func configSearchBar() {
+    
+    private func configSearchBar() {
         searchBar.delegate = self
         searchBar.showsCancelButton = true
     }
-    func search(keyword: String) {
+    
+    private func search(keyword: String) {
         name = getList(keyword: keyword)
         tableView.reloadData()
     }
-    func getList(keyword: String) -> [String] {
+    
+    private func getList(keyword: String) -> [String] {
         if keyword.trimmingCharacters(in: CharacterSet(charactersIn: "")) == "" {
             return listName
         }else {

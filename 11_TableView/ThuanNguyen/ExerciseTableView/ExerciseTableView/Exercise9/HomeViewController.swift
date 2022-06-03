@@ -7,12 +7,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
     private var list: [[String]] = []
     private var listIndex: [String] = ["F", "A", "D"]
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +20,9 @@ class HomeViewController: UIViewController {
         setupNavigitionBar()
         configTableView()
         loadData()
-        // Do any additional setup after loading the view.
     }
     
-    func setupNavigitionBar() {
+    private func setupNavigitionBar() {
         let rightButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(rightAction))
         navigationItem.rightBarButtonItem = rightButton
     }
@@ -32,14 +31,14 @@ class HomeViewController: UIViewController {
         tableView.isEditing = !tableView.isEditing
     }
     
-    func configTableView() {
+    private func configTableView() {
         let nib = UINib(nibName: "HomeCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
         tableView.delegate = self
     }
     
-    func loadData() {
+    private func loadData() {
         guard let path = Bundle.main.url(forResource: "ListTH", withExtension: "plist"),
               let contactsData = NSArray(contentsOf: path) as? [[String]]
         else { return }
@@ -57,7 +56,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        //return section.description
         switch section {
         case 0: return "Food"
         case 1: return "Animal"
@@ -105,7 +103,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         // swipe
         let swipe = UISwipeActionsConfiguration(actions: [delete])
         return swipe
-
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -117,6 +114,5 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let itemsMove = list[section][sourceIndexPath.row]
         list[section].remove(at: sourceIndexPath.row)
         list[destinationIndexPath.section].insert(itemsMove, at: destinationIndexPath.row)
-        
     }
 }

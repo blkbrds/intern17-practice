@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Ex11ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+final class Ex11ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet private weak var tableView: UITableView!
     

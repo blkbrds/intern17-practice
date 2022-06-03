@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Ex4ViewController: UIViewController {
+final class Ex4ViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
@@ -31,9 +31,10 @@ class Ex4ViewController: UIViewController {
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
-extension Ex4ViewController: UITableViewDataSource {
+extension Ex4ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return list.count
@@ -49,7 +50,6 @@ extension Ex4ViewController: UITableViewDataSource {
         case 1: return "Animal"
         default:    return "Device"    //return "Section \(section)"
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,11 +60,12 @@ extension Ex4ViewController: UITableViewDataSource {
         label.textColor = .red
         cell.addSubview(label)
         return cell
-        
     }
+    
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return listIndex
     }
+    
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return index
     }

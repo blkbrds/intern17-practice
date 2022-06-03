@@ -22,14 +22,14 @@ class Ex1TableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func loadData() {
+    private func loadData() {
         guard let path = Bundle.main.url(forResource: "DanhSach", withExtension: "plist"),
               let contactsData = NSArray(contentsOf: path) as? [String]
         else { return }
         userList = contactsData
     }
     
-    func configTableView() {
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
         tableView.delegate = self

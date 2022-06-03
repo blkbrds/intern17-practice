@@ -31,6 +31,7 @@
 		BF9BC8F42845BF2E00546901 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC8E62845BF2E00546901 /* HomeCell.xib */; };
 		BF9BC8F52845BF2E00546901 /* Ex11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC8E82845BF2E00546901 /* Ex11ViewController.swift */; };
 		BF9BC8F62845BF2E00546901 /* Ex11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC8E92845BF2E00546901 /* Ex11ViewController.xib */; };
+		BF9BC970284996F700546901 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC96F284996F700546901 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		BF9BC8E62845BF2E00546901 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		BF9BC8E82845BF2E00546901 /* Ex11ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex11ViewController.swift; sourceTree = "<group>"; };
 		BF9BC8E92845BF2E00546901 /* Ex11ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ex11ViewController.xib; sourceTree = "<group>"; };
+		BF9BC96F284996F700546901 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +141,8 @@
 		BF9BC8D92845BF2E00546901 /* Exercise5 */ = {
 			isa = PBXGroup;
 			children = (
+				BF9BC96E284996CE00546901 /* Data */,
 				BF9BC8DA2845BF2E00546901 /* Ex5ViewController.swift */,
-				BF9BC8DB2845BF2E00546901 /* ListName.plist */,
 				BF9BC8DC2845BF2E00546901 /* Ex5ViewController.xib */,
 			);
 			path = Exercise5;
@@ -175,6 +177,15 @@
 				BF9BC8E92845BF2E00546901 /* Ex11ViewController.xib */,
 			);
 			path = Exercise11;
+			sourceTree = "<group>";
+		};
+		BF9BC96E284996CE00546901 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC8DB2845BF2E00546901 /* ListName.plist */,
+				BF9BC96F284996F700546901 /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF91BD68283C7B7700FAE131 /* AppDelegate.swift in Sources */,
+				BF9BC970284996F700546901 /* DataManager.swift in Sources */,
 				BF9BC8F52845BF2E00546901 /* Ex11ViewController.swift in Sources */,
 				BF9BC8EA2845BF2E00546901 /* Ex5ViewController.swift in Sources */,
 				BF91BD8E283C7D8400FAE131 /* Ex1TableViewController.swift in Sources */,
