@@ -9,39 +9,39 @@ import UIKit
 
 final class CollectionTableViewCell: UITableViewCell {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         configCollectionView()
         collectionView.isScrollEnabled = false
     }
     
-    func configCollectionView() {
+    // MARK: - Private functions
+    private func configCollectionView() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
         collectionView.delegate = self
     }
     
-    // MARK: - IBAction
-    @IBAction func buttonLeftTouchUpInside(_ sender: UIButton) {
+    private func moveCollectionToFrame(contentOffset : CGFloat) {
+        let frame: CGRect = CGRect(x : contentOffset, y : self.collectionView.contentOffset.y ,width : self.collectionView.frame.width,height : self.collectionView.frame.height)
+        self.collectionView.scrollRectToVisible(frame, animated: true)
+    }
+    
+    // MARK: - IBActions
+    @IBAction private func buttonLeftTouchUpInside(_ sender: UIButton) {
         let collectionBounds = self.collectionView.bounds
         let contentOffset = CGFloat(floor(self.collectionView.contentOffset.x - collectionBounds.size.width - 10))
         self.moveCollectionToFrame(contentOffset: contentOffset)
     }
     
-    @IBAction func buttonRighttouchUpInside(_ sender: UIButton) {
+    @IBAction private func buttonRighttouchUpInside(_ sender: UIButton) {
         let collectionBounds = self.collectionView.bounds
         let contentOffset = CGFloat(floor(self.collectionView.contentOffset.x + collectionBounds.size.width + 10))
         self.moveCollectionToFrame(contentOffset: contentOffset)
-    }
-    
-    func moveCollectionToFrame(contentOffset : CGFloat) {
-        
-        let frame: CGRect = CGRect(x : contentOffset, y : self.collectionView.contentOffset.y ,width : self.collectionView.frame.width,height : self.collectionView.frame.height)
-        self.collectionView.scrollRectToVisible(frame, animated: true)
     }
 }
 

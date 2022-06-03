@@ -8,16 +8,18 @@
 import UIKit
 
 final class Collection2TableViewCell: UITableViewCell {
-
-    // MARK: - IBOutlet
+    
+    // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    // MARK: Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-       configCollectionView()
+        configCollectionView()
     }
-
-    func configCollectionView() {
+    
+    // MARK: - Private functions
+    private func configCollectionView() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell2")
         collectionView.dataSource = self
         collectionView.delegate = self

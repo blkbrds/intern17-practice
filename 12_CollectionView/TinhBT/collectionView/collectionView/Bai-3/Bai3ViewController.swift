@@ -88,7 +88,7 @@ final class Bai3ViewController: UIViewController {
     // MARK: - Properties
     var status = Status.standard
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Life cycle
@@ -111,27 +111,14 @@ final class Bai3ViewController: UIViewController {
         collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "TeamFooterReusableView")
         
         collectionView.dataSource = self
-        //       collectionView.delegate = self
     }
     
-    func configNavigationBar() {
+    private func configNavigationBar() {
         title = "MArVEL"
         turnOnStandardMode()
     }
     
-    @objc func turnOnStandardMode() {
-        changeFlowLayou(status: .standard)
-        let smallButton = UIBarButtonItem(title: "small", style: .plain, target: self, action: #selector(turnOnSmallModel))
-        navigationItem.rightBarButtonItem = smallButton
-    }
-    
-    @objc func turnOnSmallModel() {
-        changeFlowLayou(status: .small)
-        let standardButton = UIBarButtonItem(title: "Standard", style: .plain, target: self, action: #selector(turnOnStandardMode))
-        navigationItem.rightBarButtonItem = standardButton
-    }
-    
-    func changeFlowLayou(status: Status) {
+    private func changeFlowLayou(status: Status) {
         self.status = status
         if let headerView = self.collectionView.visibleSupplementaryViews(ofKind: UICollectionView.elementKindSectionHeader) as? [TeamHeaderReusableView] {
             for headerVie in headerView {
@@ -152,6 +139,20 @@ final class Bai3ViewController: UIViewController {
         flowLayout.footerReferenceSize = status.footerReferenceSize
         collectionView.setCollectionViewLayout(flowLayout, animated: true)
     }
+    
+    // MARK: - Objc functions
+    @objc private func turnOnStandardMode() {
+        changeFlowLayou(status: .standard)
+        let smallButton = UIBarButtonItem(title: "small", style: .plain, target: self, action: #selector(turnOnSmallModel))
+        navigationItem.rightBarButtonItem = smallButton
+    }
+    
+    @objc private func turnOnSmallModel() {
+        changeFlowLayou(status: .small)
+        let standardButton = UIBarButtonItem(title: "Standard", style: .plain, target: self, action: #selector(turnOnStandardMode))
+        navigationItem.rightBarButtonItem = standardButton
+    }
+    
 }
 
 //MARK: - UICollectionViewDataSource
@@ -196,19 +197,19 @@ extension Bai3ViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension Bai3ViewController: UICollectionViewDelegateFlowLayout {
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 130, height: 150)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 40, bottom: 20, right: 40)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: 400, height: 80)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: 400, height: 40)
     }

@@ -8,8 +8,8 @@
 import UIKit
 
 final class TeamHeaderReusableView: UICollectionReusableView {
-
-    // MARK: - IBOutlet
+    
+    // MARK: - IBOutlets
     @IBOutlet private weak var teamAvatarImageView: UIImageView!
     @IBOutlet private weak var teamNameLabel: UILabel!
     @IBOutlet private weak var teamNameLabelLeadingConstraint: NSLayoutConstraint!
@@ -21,6 +21,7 @@ final class TeamHeaderReusableView: UICollectionReusableView {
         teamAvatarImageView.clipsToBounds = true
     }
     
+    // MARK: - Functions
     func updateHeaderView(avatar: UIImage, name: String, status: Status) {
         teamAvatarImageView.image = avatar
         teamNameLabel.text = name

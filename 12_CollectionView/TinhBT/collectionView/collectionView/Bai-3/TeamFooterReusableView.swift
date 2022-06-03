@@ -9,8 +9,4 @@ import UIKit
 
 final class TeamFooterReusableView: UICollectionReusableView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 }

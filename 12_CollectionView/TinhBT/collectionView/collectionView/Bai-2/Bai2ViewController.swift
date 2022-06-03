@@ -9,6 +9,7 @@ import UIKit
 
 final class Bai2ViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Life cycle
@@ -17,7 +18,8 @@ final class Bai2ViewController: UIViewController {
         configCollectionView()
     }
     
-    func configCollectionView() {
+    // MARK: - Private functions
+    private func configCollectionView() {
         let nib = UINib(nibName: "Bai2CollectionViewCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "Bai2CollectionViewCell")
         collectionView.delegate = self
@@ -25,7 +27,7 @@ final class Bai2ViewController: UIViewController {
     }
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
+// MARK: - UICollectionViewDelegateFlowLayout & UICollectionViewDataSource
 extension Bai2ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

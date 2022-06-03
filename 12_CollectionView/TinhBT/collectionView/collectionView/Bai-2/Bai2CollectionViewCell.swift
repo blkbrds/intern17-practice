@@ -9,7 +9,4 @@ import UIKit
 
 final class Bai2CollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }

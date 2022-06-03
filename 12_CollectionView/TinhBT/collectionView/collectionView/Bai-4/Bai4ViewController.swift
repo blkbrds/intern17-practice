@@ -8,17 +8,18 @@
 import UIKit
 
 final class Bai4ViewController: UIViewController {
-
-    // MARK: - IBOutlet
-    @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: - IBOutlets
+    @IBOutlet private weak var tableView: UITableView!
+
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configTableViewCell()
     }
-
-    func configTableViewCell() {
+    
+    // MARK: - Private functions
+    private func configTableViewCell() {
         let nib = UINib(nibName: "CollectionTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "CollectionTableViewCell")
         
@@ -30,7 +31,7 @@ final class Bai4ViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource, UITableViewDelegate
+// MARK: - UITableViewDataSource & UITableViewDelegate
 extension Bai4ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

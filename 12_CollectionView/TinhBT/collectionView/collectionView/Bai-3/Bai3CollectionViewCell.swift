@@ -9,7 +9,7 @@ import UIKit
 
 final class Bai3CollectionViewCell: UICollectionViewCell {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -18,10 +18,10 @@ final class Bai3CollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         layer.cornerRadius = 10
         clipsToBounds = true
-  //      avatarImageView.layer.cornerRadius = 65
         avatarImageView.clipsToBounds = true
     }
 
+    // MARK: - Functions
     func updateCell(avatar: UIImage, name: String, status: Status) {
         avatarImageView.image = avatar
         nameLabel.text = name
