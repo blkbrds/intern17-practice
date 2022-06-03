@@ -60,7 +60,7 @@ final class DetailViewController: UIViewController {
         do {
             let realm = try Realm()
             guard let id = viewModel?.video?.id else { return }
-            if realm.objects(RealmVideo.self).filter("id = %@ ", id).toArray(ofType: RealmVideo.self).first != nil {
+            if realm.objects(Video.self).filter("id = %@ ", id).toArray(ofType: Video.self).first != nil {
                 favoriteButton.setImage(#imageLiteral(resourceName: "iconsfavorite-24"), for: .normal)
             } else {
                 favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite-24"), for: .normal)

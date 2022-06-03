@@ -84,7 +84,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         libraryNavi.tabBarItem = UITabBarItem(title: "Thư viện", image: #imageLiteral(resourceName: "icons8-video-playlist-24"), tag: 3)
         tabbarController.setViewControllers([homeNavi, shortNavi, chanelNavi, libraryNavi], animated: true)
         tabbarController.tabBar.tintColor = .white
-        UITabBar.appearance().barTintColor = UIColor.black
+//        UITabBar.appearance().barTintColor = UIColor.black
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithTransparentBackground()
+            appearance.backgroundColor = UIColor.black
+//            navigationController?.navigationBar.standardAppearance = appearance
+            tabbarController.tabBar.standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+//            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+        } else {
+            UITabBar.appearance().barTintColor = UIColor.black
+        }
     }
 
     func setroot(with set: Check) {

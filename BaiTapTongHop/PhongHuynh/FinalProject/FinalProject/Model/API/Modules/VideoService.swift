@@ -20,7 +20,9 @@ final class VideoService {
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/videos"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
-            completion(result)
+            Mapper<Video>().mapArray(result) { (items: [Video]?, error: Error?) in
+                completion(items, error)
+            }
         }
     }
 
@@ -33,7 +35,9 @@ final class VideoService {
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/search"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
-            completion(result)
+            Mapper<Video>().mapArray(result) { (items: [Video]?, error: Error?) in
+                completion(items, error)
+            }
         }
     }
 
@@ -46,7 +50,9 @@ final class VideoService {
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/search"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
-            completion(result)
+            Mapper<Video>().mapArray(result) { (items: [Video]?, error: Error?) in
+                completion(items, error)
+            }
         }
     }
 
@@ -59,7 +65,9 @@ final class VideoService {
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/search"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
-            completion(result)
+            Mapper<Video>().mapArray(result) { (items: [Video]?, error: Error?) in
+                completion(items, error)
+            }
         }
     }
 
@@ -72,7 +80,9 @@ final class VideoService {
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/search"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
-            completion(result)
+            Mapper<Video>().mapArray(result) { (items: [Video]?, error: Error?) in
+                completion(items, error)
+            }
         }
     }
 }

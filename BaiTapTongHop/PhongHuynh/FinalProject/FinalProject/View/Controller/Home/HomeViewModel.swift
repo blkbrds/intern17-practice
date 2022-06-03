@@ -56,58 +56,34 @@ final class HomeViewModel {
     }
 
     func loadVideoTrendingAPI(completion: @escaping APICompletion) {
-        VideoService.loadVideoTrendingAPI { (result) in
-            switch result {
-            case .success(let json):
-                guard let json = json as? JSON else { return }
-                if let items = json["items"] as? [JSON] {
-                    var videos: [Video] = []
-                    for item in items {
-                        videos.append(Video(json: item))
-                    }
-                    self.datas[.featured] = videos
-                    completion(.success)
-                }
-            case .failure(let error):
+        VideoService.loadVideoTrendingAPI { items, error  in
+            if let error = error {
                 completion(.failure(error))
+            } else if let items = items as? [Video] {
+                self.datas[.featured] = items
+                completion(.success)
             }
         }
     }
 
     func loadNominationVideoAPI(completion: @escaping APICompletion) {
-        VideoService.loadVideoNominationAPI { (result) in
-            switch result {
-            case .success(let json):
-                guard let json = json as? JSON else { return }
-                if let items = json["items"] as? [JSON] {
-                    var videos: [Video] = []
-                    for item in items {
-                        videos.append(Video(json: item))
-                    }
-                    self.datas[.nomination] = videos
-                    completion(.success)
-                }
-            case .failure(let error):
+        VideoService.loadVideoNominationAPI { items, error in
+            if let error = error {
                 completion(.failure(error))
+            } else if let items = items as? [Video] {
+                self.datas[.nomination] = items
+                completion(.success)
             }
         }
     }
 
     func loadNewVideoAPI(completion: @escaping APICompletion) {
-        VideoService.loadVideoNewAPI { (result) in
-            switch result {
-            case .success(let json):
-                guard let json = json as? JSON else { return }
-                if let items = json["items"] as? [JSON] {
-                    var videos: [Video] = []
-                    for item in items {
-                        videos.append(Video(json: item))
-                    }
-                    self.datas[.new] = videos
-                    completion(.success)
-                }
-            case .failure(let error):
+        VideoService.loadVideoNewAPI { items, error in
+            if let error = error {
                 completion(.failure(error))
+            } else if let items = items as? [Video] {
+                self.datas[.new] = items
+                completion(.success)
             }
         }
     }

@@ -13,16 +13,16 @@ import RealmSwift
 final class FavoriteCellViewModel {
 
     // MARK: Properties
-    var video: RealmVideo
+    var video: Video
 
     // MARK: - init
-    init(video: RealmVideo) {
+    init(video: Video) {
         self.video = video
     }
 
     // MARK: - Methods
     func updateImageView(completion: @escaping (UIImage?) -> Void) {
-        NetWorking.shared().downloadImage(url: video.image) { (image) in
+        NetWorking.shared().downloadImage(url: video.imageURL ?? "") { (image) in
             completion(image)
         }
     }

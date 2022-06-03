@@ -12,7 +12,7 @@ import RealmSwift
 final class FavoriteViewModel {
 
     // MARK: - Properties
-    var videos: [RealmVideo] = []
+    var videos: [Video] = []
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {

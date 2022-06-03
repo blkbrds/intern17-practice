@@ -10,7 +10,7 @@ import UIKit
 import MVVM
 import SwiftUtils
 
-class ViewController: UIViewController, MVVM.View {
+class BaseViewController: UIViewController, MVVM.View {
 
     // Conformance for ViewEmptyProtocol
     var isViewEmpty: Bool = false
@@ -20,5 +20,19 @@ class ViewController: UIViewController, MVVM.View {
         view.backgroundColor = .white
         view.accessibilityIdentifier = String(describing: type(of: self))
         view.removeMultiTouch()
+    }
+
+    var navigationBarColor: UIColor? {
+        didSet {
+            if #available(iOS 15.0, *) {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithTransparentBackground()
+                appearance.backgroundColor = UIColor.black
+                navigationController?.navigationBar.standardAppearance = appearance
+                navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+            } else {
+                navigationController?.navigationBar.barTintColor = UIColor.black
+            }
+        }
     }
 }

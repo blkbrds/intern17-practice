@@ -1,7 +1,7 @@
 import UIKit
 
 @available(iOS 13.0, *)
-final class HomeViewController: UIViewController {
+final class HomeViewController: BaseViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
         configNavigation()
         configTableView()
         loadData()
+        super.navigationBarColor = UIColor.black
     }
 
     // MARK: - Private functions
@@ -34,8 +35,6 @@ final class HomeViewController: UIViewController {
         let rightSetting = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-setting-24"), style: .plain, target: self, action: #selector(rightSettingAction))
         let rightSearch = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-search-30"), style: .plain, target: self, action: #selector(rightSearchAction))
         navigationItem.rightBarButtonItems = [rightSetting, rightSearch]
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.barTintColor = UIColor.black
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.red]
     }
 

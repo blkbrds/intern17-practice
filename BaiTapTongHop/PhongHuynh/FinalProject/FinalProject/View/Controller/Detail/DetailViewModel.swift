@@ -38,18 +38,17 @@ final class DetailViewModel {
 
     func checkAddVideoFavorite() -> Bool {
         let realm = try? Realm()
-        let data = RealmVideo()
-        data.title = video?.title ?? ""
-        data.image = video?.imageURL ?? ""
-        data.id = video?.id ?? ""
-        if let dataFilters = realm?.objects(RealmVideo.self).filter("id = %@ ", video?.id).toArray(ofType: RealmVideo.self).first {
+        if let dataFilters = realm?.objects(Video.self).filter("id = %@ ", video?.id).toArray(ofType: Video.self).first {
             try? realm?.write {
                 realm?.delete(dataFilters)
             }
             return true
         } else {
             try? realm?.write {
-                realm?.add(data)
+                guard let video = video else {
+                    return
+                }
+                realm?.add(video)
             }
             return false
         }
@@ -62,20 +61,12 @@ final class DetailViewModel {
         } else {
             videoID = getId()
         }
-        VideoService.loadDetailAPI(id: videoID) { (result) in
-            switch result {
-            case .success(let json):
-                guard let json = json as? JSON else { return }
-                if let items = json["items"] as? [JSON] {
-                    var videos: [Video] = []
-                    for item in items {
-                        videos.append(Video(json: item))
-                    }
-                    self.videos = videos
-                    completion(.success)
-                }
-            case .failure(let error):
+        VideoService.loadDetailAPI(id: videoID) { items, error in
+            if let error = error {
                 completion(.failure(error))
+            } else if let items = items as? [Video] {
+                self.videos = items
+                completion(.success)
             }
         }
     }

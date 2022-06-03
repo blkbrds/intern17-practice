@@ -10,37 +10,33 @@ import Foundation
 import UIKit
 import SVProgressHUD
 import ObjectMapper
+import RealmSwift
 
 typealias JSON = [String: Any]
 typealias HUD = SVProgressHUD
 
-final class Video {
+final class Video: Object, Mappable {
 
     // MARK: - Properties
-    var id: String?
-    var imageURL: String?
-    var title: String?
-    var description: String?
+    @objc dynamic var id: String?
+    @objc dynamic var imageURL: String?
+    @objc dynamic var title: String?
+    @objc dynamic var descriptionn: String?
 
-    init() {
+    required convenience init?(map: ObjectMapper.Map) {
+        self.init()
     }
 
-    // MARK: - Init
-    init(json: JSON) {
-        if let id = json["id"] as? String {
-            self.id = id
-        } else if let id = json["id"] as? JSON, let videoId = id["videoId"] as? String {
-            self.id = videoId
+    func mapping(map: ObjectMapper.Map) {
+        var idTemp: String?
+        idTemp <- map["id"]
+        if idTemp != nil {
+            id = idTemp
+        } else {
+            id <- map["id.videoId"]
         }
-        if let snippet = json["snippet"] as? JSON,
-           let title = snippet["title"] as? String,
-           let description = snippet["description"] as? String,
-           let thumbnails = snippet["thumbnails"] as? JSON,
-           let medium = thumbnails["medium"] as? JSON,
-           let imageURL = medium["url"] as? String {
-            self.title = title
-            self.description = description
-            self.imageURL = imageURL
-        }
+        title <- map["snippet.title"]
+        descriptionn <- map["snippet.description"]
+        imageURL <- map["snippet.thumbnails.medium.url"]
     }
 }
