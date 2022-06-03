@@ -9,25 +9,23 @@ import UIKit
 
 final class Bai4ViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var dayTextField: UITextField!
     
-    // MARK: - property
+    // MARK: - Properties
     let datePicker = UIDatePicker()
     
-    // MARK:- life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         creteDatepicker()
     }
     
-    // MARK:- Private function
+    // MARK: - Private functions
     private func createToolbar() -> UIToolbar {
-        //toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
-        //done button
         let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         toolbar.setItems([doneBtn], animated: true)
         
@@ -42,6 +40,7 @@ final class Bai4ViewController: UIViewController {
         dayTextField.inputAccessoryView = createToolbar()
     }
     
+    // MARK: - Objc functions
     @objc private func donePressed() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium

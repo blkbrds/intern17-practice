@@ -35,7 +35,7 @@ final class BadButtonView: UIButton {
         }
     }
     
-    // MARK: Property
+    // MARK: - Properties
     var badgeNumber: Int = 0 {
         didSet	{
             updateBadgeNumber()
@@ -67,7 +67,7 @@ final class BadButtonView: UIButton {
         return label
     }()
     
-    // MARK: - function
+    // MARK: - Functions
     func updateBadgeNumber() {
         if badgeNumber == 0 {
             badgeNumberLabel.isHidden = true

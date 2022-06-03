@@ -4,10 +4,10 @@ import UIKit
 
 final class Bai2ViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var inputTextField: UITextField!
     
-    // MARK: - Property
+    // MARK: - Properties
     var mySliderView = MyView()
     
     // MARK: - Life cycle

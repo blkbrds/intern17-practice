@@ -3,7 +3,7 @@ import UIKit
 
 final class Bai3ViewController: UIViewController {
     
-    //MARK: - Property
+    // MARK: - Properties
     let email = BadButtonView()
     let friends = BadButtonView()
     let photos = BadButtonView()
@@ -14,7 +14,7 @@ final class Bai3ViewController: UIViewController {
         createView()
     }
     
-    // MARK: - Private Function
+    // MARK: - Private functions
     private func createView() {
         title = "bt3"
         email.frame = CGRect(x: 130, y: 100, width: 150, height: 100)

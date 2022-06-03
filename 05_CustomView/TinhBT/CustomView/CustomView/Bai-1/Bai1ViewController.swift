@@ -3,16 +3,15 @@ import UIKit
 
 final class Bai1ViewController: UIViewController {
     
-    // MARK: - Property
+    // MARK: - Properties
     private let screenSize = UIScreen.main.bounds
-    var xo: CGFloat = (UIScreen.main.bounds.width - 300)/4
-    var yo: CGFloat = 100
+    var positionX: CGFloat = (UIScreen.main.bounds.width - 300)/4
+    var positionY: CGFloat = 100
     let imageWidth: CGFloat = 100
     let imageHeight: CGFloat = 125
     var space: CGFloat = (UIScreen.main.bounds.width - 300)/4
     var name: String?
     let numberItem: Int = 31
-
     let scrollView: UIScrollView = {
             let v = UIScrollView()
             v.translatesAutoresizingMaskIntoConstraints = false
@@ -28,27 +27,26 @@ final class Bai1ViewController: UIViewController {
         setupUI()
     }
     
-    // MARK: - Private fuction
+    // MARK: - Private fuctions
     private func setupUI() {
-        
         for i in 0..<numberItem {
-            let name1 = MyAvatar(frame: CGRect(x: xo, y: yo, width: imageWidth, height: imageHeight))
-            name1.delegate = self
-            name1.userName?.text = "name\(i)"
-            name1.userAvatar?.image = UIImage(named: "avt")
-            scrollView.addSubview(name1)
-            if xo + imageWidth > screenSize.width - xo {
-                xo = (UIScreen.main.bounds.width - 300)/4
-                yo += imageHeight
+            let myAvatar = MyAvatar(frame: CGRect(x: positionX, y: positionY, width: imageWidth, height: imageHeight))
+            myAvatar.delegate = self
+            myAvatar.userName?.text = "name\(i)"
+            myAvatar.userAvatar?.image = UIImage(named: "avt")
+            scrollView.addSubview(myAvatar)
+            if positionX + imageWidth > screenSize.width - positionX {
+                positionX = (UIScreen.main.bounds.width - 300)/4
+                positionY += imageHeight
             } else {
-                xo += CGFloat(space) + imageWidth
+                positionX += CGFloat(space) + imageWidth
             }
         }
-        let a = numberItem / 3 + numberItem % 3
-        let h1 = imageHeight * CGFloat(a)
-        let h2 = space * (CGFloat(a) - 1) + 100
-        let h3 = h1 + h2
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: h3)
+        let numberItemInScreenVertical = numberItem / 3 + numberItem % 3
+        let totalImageHeaight = imageHeight * CGFloat(numberItemInScreenVertical)
+        let totalSpaceInScreenVertical = space * (CGFloat(numberItemInScreenVertical) - 1) + 100
+        let totalHeight = totalImageHeaight + totalSpaceInScreenVertical
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: totalHeight)
     }
 }
 

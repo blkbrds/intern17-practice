@@ -1,19 +1,20 @@
 
 import UIKit
 
+// MARK: - MyViewDelegate
 protocol MyViewDelegate: class {
     func view(view: MyView , needPerform action: MyView.Action )
 }
 
 final class MyView: UIView {
     
-    // MARK: IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var orangeView: UIView!
     @IBOutlet private weak var blueView: UIView!
     @IBOutlet private weak var redView: UIView!
     @IBOutlet private weak var valueLabel: UILabel!
     
-    // MARK: property
+    // MARK: - Properties
     weak var delegate: MyViewDelegate?
     var value: Int?
     
@@ -30,20 +31,20 @@ final class MyView: UIView {
                     redView.center.y = location.y
                 }
                 
-                let heightBlueNew = orangeView.frame.size.height + (orangeView.frame.origin.y - redView.center.y)
+                let newBlueHeight = orangeView.frame.size.height + (orangeView.frame.origin.y - redView.center.y)
                 blueView.frame = CGRect(x: blueView.bounds.origin.x,
                                         y: redView.center.y,
                                         width: blueView.bounds.size.width,
-                                        height: heightBlueNew)
-                let percent = (heightBlueNew / orangeView.bounds.height) * 100
+                                        height: newBlueHeight)
+                let percent = (newBlueHeight / orangeView.bounds.height) * 100
                 valueLabel.text = String(Int(percent))
                 delegate?.view(view: self, needPerform: .sendData(value: String(Int(percent))))
             }
         }
     }
     
-    // MARK: -  function
-     func updateView() {
+    // MARK: - Functions
+    func updateView() {
         guard  let value = value else {
             return
         }
@@ -64,6 +65,3 @@ extension MyView {
         case sendData(value: String)
     }
 }
-
-//b1: tao action -> action lam -> kiu du lieu can truyen
-//b1: tao protocol

@@ -1,19 +1,20 @@
 
 import UIKit
 
+// MARK: - MyAvatarDelegate
 protocol MyAvatarDelegate: class {
     func myAvatar(_ myAvatar: MyAvatar, didSelect index: Int)
 }
 
 final class MyAvatar: UIView {
     
-    // MARK: Property
+    // MARK: - Properties
     var userAvatar: UIImageView?
     var userName: UILabel?
     weak var delegate: MyAvatarDelegate?
     var button: UIButton?
     
-    // MARK: - Initialize
+    // MARK: - Override functions
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -40,7 +41,8 @@ final class MyAvatar: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func buttonDidClick() {
+    // MARK: - Objc functions
+    @objc private func buttonDidClick() {
         print("button is clicked!")
         delegate?.myAvatar(self, didSelect: 10)
     }
