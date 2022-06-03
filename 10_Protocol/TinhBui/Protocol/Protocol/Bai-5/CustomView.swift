@@ -19,13 +19,13 @@ protocol CustomViewDatasource: class {
 
 final class CustomView: UIView {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var xLabel: UILabel!
     @IBOutlet private weak var yLabel: UILabel!
     @IBOutlet private weak var resultLabel: UILabel!
     @IBOutlet private var calculaButton: [UIButton]!
     
-    // MARK: - Property
+    // MARK: - Properties
     var number1: Double = 0
     var number2: Double = 0
     weak var delegate: CustomViewDelegate?
@@ -38,7 +38,7 @@ final class CustomView: UIView {
         case clear(x: String, y: String)
     }
     
-    // MARK: - Function
+    // MARK: - Functions
     func getDatas() {
         let data = datasource?.getData()
         xLabel.text = (data?.x)
@@ -50,7 +50,7 @@ final class CustomView: UIView {
         }
     }
     
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func cancelButtonTouchUpInside(_ sender: UIButton) {
         delegate?.view(view: self, needsPerfom: .cancel)
     }

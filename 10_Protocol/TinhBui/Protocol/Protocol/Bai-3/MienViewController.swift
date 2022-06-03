@@ -9,10 +9,10 @@ import UIKit
 
 final class MienViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private var mienButton: [UIButton]!
     
-    // MARK: - Property
+    // MARK: - Properties
     var diaDiem: DiaDiem?
     
     // MARK: - Life cycle
@@ -21,7 +21,7 @@ final class MienViewController: UIViewController {
         createNavigation()
     }
     
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func mienButtonTouchUpInside(_ sender: UIButton) {
         for button in mienButton {
             button.isSelected = button.tag == sender.tag
@@ -29,13 +29,14 @@ final class MienViewController: UIViewController {
         diaDiem?.mien = sender.tag + 1
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func createNavigation() {
         title = "Miền"
          let tinhButton  = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(moveToTinh))
          navigationItem.rightBarButtonItem = tinhButton
     }
     
+    // MARK: - Objc functions
     @objc private func moveToTinh() {
         let vc = TinhViewController()
         vc.diaDiem = diaDiem

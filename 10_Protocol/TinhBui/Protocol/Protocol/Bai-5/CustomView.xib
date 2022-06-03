@@ -22,6 +22,11 @@
                             <rect key="frame" x="0.0" y="0.0" width="91.5" height="31.5"/>
                             <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             <state key="normal" title="Cancel"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="cancelButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="opq-so-WYm"/>
                             </connections>
@@ -36,6 +41,11 @@
                             <rect key="frame" x="282.5" y="0.0" width="91.5" height="31.5"/>
                             <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             <state key="normal" title="Done"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="doneButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="DVm-GM-hCH"/>
                             </connections>
@@ -88,6 +98,11 @@
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="+"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="calcuButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="pQR-x9-8PO"/>
                                     </connections>
@@ -99,6 +114,11 @@
                                     <state key="normal" title="-">
                                         <color key="titleColor" name="AccentColor"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="calcuButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="UtE-rv-1It"/>
                                     </connections>
@@ -108,6 +128,12 @@
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="x"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="calcuButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Buf-eG-yi5"/>
                                     </connections>
@@ -117,6 +143,11 @@
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="/"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="calcuButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="mBH-dE-Nrj"/>
                                     </connections>
@@ -134,6 +165,11 @@
                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <state key="normal" title="%"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="calcuButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="E3a-Gc-PLT"/>
                                             </connections>
@@ -143,6 +179,11 @@
                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <state key="normal" title="x^y"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="calcuButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="5rN-U9-eLE"/>
                                             </connections>
@@ -156,6 +197,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="172" height="36"/>
                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                             <state key="normal" title="Clear"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="clearButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="BXX-Gv-hPg"/>
                                             </connections>

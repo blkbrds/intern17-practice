@@ -9,11 +9,11 @@ import UIKit
 
 final class Bai4ViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var listTextView: UITextView!
     
-    // MARK: - Property
+    // MARK: - Properties
     var contacts: [String] = [] {
         didSet {
             updateData()
@@ -29,7 +29,7 @@ final class Bai4ViewController: UIViewController {
         searchBar.showsCancelButton = true
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func showTextView() {
         var text: String = ""
         for i in data {

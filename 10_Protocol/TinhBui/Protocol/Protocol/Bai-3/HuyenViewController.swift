@@ -9,10 +9,10 @@ import UIKit
 
 final class HuyenViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private var huyenButtons: [UIButton]!
     
-    // MARK: - Property
+    // MARK: - Properties
     var diaDiem: DiaDiem?
     
     // MARK: - Life cycle
@@ -21,7 +21,7 @@ final class HuyenViewController: UIViewController {
         createNavigation()
     }
 
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func huyenButtonTouchUpInside(_ sender: UIButton) {
         for button in huyenButtons {
             button.isSelected = button.tag == sender.tag
@@ -29,13 +29,14 @@ final class HuyenViewController: UIViewController {
         diaDiem?.huyen = sender.tag + 1
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func createNavigation() {
         title = "Huyện"
         let doneButton  = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(done))
         navigationItem.rightBarButtonItem = doneButton
     }
     
+    // MARK: - Objc funtions
     @objc private func done() {
         guard let navi = navigationController else {return}
         if let homevc = navi.viewControllers[0] as? DiaDiemViewController {

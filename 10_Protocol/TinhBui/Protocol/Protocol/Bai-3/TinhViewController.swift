@@ -9,10 +9,10 @@ import UIKit
 
 final class TinhViewController: UIViewController {
 
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private var tinhButtons: [UIButton]!
     
-    // MARK: - Property
+    // MARK: - Properties
     var diaDiem: DiaDiem?
     
     // MARK: - Life cycle
@@ -20,7 +20,7 @@ final class TinhViewController: UIViewController {
         super.viewDidLoad()
         createNavigation()
     }
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func tinhButtonTouchUpInside(_ sender: UIButton) {
         for button in tinhButtons {
             button.isSelected = button.tag == sender.tag
@@ -28,13 +28,14 @@ final class TinhViewController: UIViewController {
         diaDiem?.tinh = sender.tag + 1 
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func createNavigation() {
         title = "Tỉnh"
         let huyenButton  = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(moveToHuyen))
         navigationItem.rightBarButtonItem = huyenButton
     }
     
+    // MARK: - Objc fuctions
     @objc private func moveToHuyen() {
         let vc = HuyenViewController()
         vc.diaDiem = diaDiem

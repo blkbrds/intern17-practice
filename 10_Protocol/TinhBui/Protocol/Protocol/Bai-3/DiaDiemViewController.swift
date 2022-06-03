@@ -8,6 +8,7 @@
 import UIKit
 
 class DiaDiem {
+
     var mien: Int
     var tinh: Int
     var huyen: Int
@@ -26,12 +27,12 @@ protocol DiaDiemDataSouce: class {
 
 final class DiaDiemViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var mienLabel: UILabel!
     @IBOutlet private weak var tinhLabel: UILabel!
     @IBOutlet private weak var huyenLabel: UILabel!
     
-    // MARK: - Property
+    // MARK: - Properties
     weak var datasouce: DiaDiemDataSouce?
     var diadiem: DiaDiem = DiaDiem(mien: 0, tinh: 0, huyen: 0)
     
@@ -48,7 +49,7 @@ final class DiaDiemViewController: UIViewController {
         navigationItem.rightBarButtonItem = editButton
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func configUI() {
         guard let diadiem = datasouce?.getDiaDiem() else { return }
         mienLabel.text = "Mien \(diadiem.mien)"
@@ -59,6 +60,7 @@ final class DiaDiemViewController: UIViewController {
         huyenLabel.textColor = .orange
     }
 
+    // MARK: - Objc functions
     @objc private func edit() {
         let vc = MienViewController()
         vc.diaDiem = diadiem

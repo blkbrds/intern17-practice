@@ -9,13 +9,13 @@ import UIKit
 
 final class Bai5ViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var number1TextField: UITextField!
     @IBOutlet private weak var number2TextField: UITextField!
     @IBOutlet private weak var hoiButton: UIButton!
     @IBOutlet private weak var resultLabel: UILabel!
     
-    // MARK: - Property
+    // MARK: - Properties
     var customView = CustomView()
     
     // MARK: - Life cycle
@@ -27,12 +27,14 @@ final class Bai5ViewController: UIViewController {
         customView.datasource = self
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func addCustomView() {
         guard let customView = Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)?.first as? CustomView else { return }
         self.customView = customView
         customView.frame = CGRect(x: 0, y: view.bounds.maxY / 3, width: view.bounds.width, height: view.bounds.height - customView.bounds.height)
         view.addSubview(customView)
+        customView.layer.borderWidth = 2
+        customView.layer.borderColor = UIColor.black.cgColor
         customView.isHidden = true
     }
     
@@ -43,7 +45,7 @@ final class Bai5ViewController: UIViewController {
         number2TextField.layer.borderColor = UIColor.blue.cgColor
     }
     
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction func hoiButtonTouchUpInside(_ sender: UIButton) {
         UIView.animate(withDuration: 0.2) {
             self.customView.isHidden = false
