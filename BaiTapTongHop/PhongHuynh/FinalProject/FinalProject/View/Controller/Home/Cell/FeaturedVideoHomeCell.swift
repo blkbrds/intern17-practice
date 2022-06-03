@@ -63,16 +63,16 @@ extension FeaturedVideoHomeCell: UICollectionViewDataSource {
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }
+}
+
+// MARK: - UICollectionViewDelegate
+extension FeaturedVideoHomeCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let delegate = delegate {
             delegate.controller(controller: self, needsPerfom: .moveToDetail(indexPath: indexPath))
         }
     }
-}
-
-// MARK: - UICollectionViewDelegate
-extension FeaturedVideoHomeCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 250)

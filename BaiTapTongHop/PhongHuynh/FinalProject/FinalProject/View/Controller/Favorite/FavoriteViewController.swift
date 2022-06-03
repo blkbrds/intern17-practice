@@ -66,6 +66,10 @@ extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        return 150
     }
+}
+
+// MARK: - UITableViewDelegate
+extension FavoriteViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
@@ -87,8 +91,4 @@ extension FavoriteViewController: UITableViewDataSource {
             }
         }
     }
-}
-
-// MARK: - UITableViewDelegate
-extension FavoriteViewController: UITableViewDelegate {
 }

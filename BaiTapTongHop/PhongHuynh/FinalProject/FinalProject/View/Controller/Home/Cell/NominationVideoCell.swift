@@ -61,18 +61,18 @@ extension NominationVideoCell: UICollectionViewDataSource {
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }
+}
+
+// MARK: - UICollectionViewDelegate
+extension NominationVideoCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let delegate = delegate, let type = viewModel?.type {
             delegate.controller(controller: self, needsPerfom: .moveToDetail(indexPath: indexPath, type: type))
         }
     }
-}
-
-// MARK: - UICollectionViewDelegate
-extension NominationVideoCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (UIScreen.main.bounds.width - (1 * 4)) / 2.2, height: 250)
-        }
+    }
 }

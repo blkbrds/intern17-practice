@@ -9,7 +9,6 @@
 import Foundation
 
 let apiKeyYoutube = "apiKeyYoutube"
-let loginGmail = "loginGmail"
 let userName = "userName"
 
 final class Session {

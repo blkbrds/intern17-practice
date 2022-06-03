@@ -93,13 +93,6 @@ extension DetailViewController: UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.video = viewModel?.videos[indexPath.row]
-        updateView()
-        loadSimilarVideoData(id: viewModel?.videos[indexPath.row].id)
-        tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
-    }
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
@@ -107,4 +100,11 @@ extension DetailViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension DetailViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.video = viewModel?.videos[indexPath.row]
+        updateView()
+        loadSimilarVideoData(id: viewModel?.videos[indexPath.row].id)
+        tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
 }

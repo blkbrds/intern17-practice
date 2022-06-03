@@ -64,6 +64,7 @@ final class SearchViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.white
     }
 
+    // MARK: - Objc functions
     @objc private func cancelAction() {
         navigationController?.popViewController(animated: true)
     }
@@ -83,12 +84,6 @@ extension SearchViewController: UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailViewController()
-        vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
-        navigationController?.pushViewController(vc, animated: true)
-    }
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
@@ -97,6 +92,12 @@ extension SearchViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 @available(iOS 13.0, *)
 extension SearchViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 // MARK: - UISearchBarDelegate
