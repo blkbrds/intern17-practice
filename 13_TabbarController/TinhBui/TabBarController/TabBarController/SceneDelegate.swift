@@ -9,6 +9,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
+    // MARK: - Define
     enum TypeScreen {
         case login
         case tabbar
@@ -27,35 +28,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func createTabar() {
-        // home
+        
         let homeVC = HomeViewController()
         let homeNaVi = UINavigationController(rootViewController: homeVC)
         homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
-        // messages
         let messagesVC = MessagesViewController()
         let messNaVi = UINavigationController(rootViewController: messagesVC)
         messNaVi.tabBarItem = UITabBarItem(title: "mes", image: UIImage(named: "mes"), selectedImage: UIImage(named: "mess") )
         messNaVi.tabBarItem.badgeValue = "99"
         messNaVi.tabBarItem.badgeColor = .blue
         
-        // FriendsVc
         let friendVC = FrendsViewController()
         let freNaVi = UINavigationController(rootViewController: friendVC)
         friendVC.tabBarItem = UITabBarItem(title: "Friend", image: UIImage(named: "frie"), tag: 2)
         
-        //profile
         let profileVC = ProfileViewController()
         let proNaVi = UINavigationController(rootViewController: profileVC)
         profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "pro"), tag: 3)
         
-        // tabbarcontroller
         let tabbars = UITabBarController()
         tabbars.viewControllers = [homeNaVi, messNaVi, freNaVi, proNaVi]
         tabbars.tabBar.tintColor = .red
         window!.rootViewController = tabbars
     }
     
+    // MARK: - Private functions
     private func createLogin() {
         let loginVc = LoginViewController()
         
@@ -63,7 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = loginNavi
     }
     
-    func chaneScreen(type: TypeScreen	) {
+    func chaneScreen(type: TypeScreen) {
         switch type {
         case .login:
             createLogin()

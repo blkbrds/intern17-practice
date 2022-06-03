@@ -9,11 +9,11 @@ import Foundation
 
 final class LoginviewModel {
     
-    // MARK: - Property
+    // MARK: - Properties
     var passwork: String = ""
     var username: String = ""
     
-    // MARK: - Function
+    // MARK: - Functions
     func login(username: String, passwork: String) -> Bool {
         if username == "tinh123" && passwork == "123" {
             return true
