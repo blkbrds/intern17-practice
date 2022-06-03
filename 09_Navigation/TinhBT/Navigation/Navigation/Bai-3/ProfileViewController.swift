@@ -14,11 +14,11 @@ protocol ProfileViewDelegate: class {
 
 final class ProfileViewController: UIViewController {
     
-    // MARK: - Property
+    // MARK: - Properties
     weak var delegate: ProfileViewDelegate?
     var nameAvatar = ""
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet weak var nameAvatarUITextField: UITextField!
     
     // MARK: - Life cycle
@@ -40,7 +40,7 @@ final class ProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Private function
+    // MARK: - Objc functions
     @objc private func done() {
         guard let newNameAvatar = nameAvatarUITextField.text else { return }
         delegate?.view(view: self, needPerform: .sendData(value: newNameAvatar))

@@ -8,12 +8,12 @@ protocol EditViewDelegate: class {
 
 final class EditViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var newPassTextField: UITextField!
     @IBOutlet private weak var comfirmPassTextFiled: UITextField!
     
-    // MARK: - Property
+    // MARK: - Properties
     weak var delegate: EditViewDelegate?
     
     // MARK: - Life cycle
@@ -23,7 +23,7 @@ final class EditViewController: UIViewController {
         createButton()
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func createButton() {
         let donButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 44))
         donButton.addTarget(self, action: #selector(done), for: .touchUpInside)
@@ -40,6 +40,7 @@ final class EditViewController: UIViewController {
         navigationItem.leftBarButtonItem = leftBarButton
     }
     
+    // MARK: - Objc functions
     @objc private func done() {
         let vc = (self.navigationController?.viewControllers[1])!
         self.navigationController?.popToViewController(vc, animated: true)

@@ -9,7 +9,7 @@ final class CViewController: UIViewController {
         title = "VC c"
     }
 
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func NextButtonTouchUpInside(_ sender: Any) {
         let vc = DViewController()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -22,5 +22,4 @@ final class CViewController: UIViewController {
     @IBAction private func RootButtonTouchUpInside(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
 }

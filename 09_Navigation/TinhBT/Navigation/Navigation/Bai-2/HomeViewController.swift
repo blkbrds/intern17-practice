@@ -14,10 +14,10 @@ protocol HomeViewDelegate: class {
 
 final class HomeViewController: UIViewController {
 
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var nameLabel: UILabel!
     
-    // MARK: - property
+    // MARK: - Properties
     var vc = EditViewController()
     var username = ""
     weak var delegate: HomeViewDelegate?
@@ -31,7 +31,7 @@ final class HomeViewController: UIViewController {
         vc.delegate = self
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func createButton() {
         let editButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 44))
         editButton.addTarget(self, action: #selector(edit), for: .touchUpInside)
@@ -48,6 +48,7 @@ final class HomeViewController: UIViewController {
         navigationItem.leftBarButtonItem = leftBarButton
     }
 
+    // MARK: - Objc functions
     @objc private func edit() {
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -67,8 +68,7 @@ extension HomeViewController {
 
 // MARK: - EditViewDelegate
 extension HomeViewController: EditViewDelegate {
-    
-    func view(view: EditViewController, needPerform action: EditViewController.Action) {
+        func view(view: EditViewController, needPerform action: EditViewController.Action) {
         switch action {
         case .sendData(value: let value):
             nameLabel.text = value

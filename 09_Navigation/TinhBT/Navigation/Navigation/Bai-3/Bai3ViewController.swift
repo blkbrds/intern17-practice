@@ -9,10 +9,10 @@ import UIKit
 
 final class Bai3ViewController: UIViewController {
     
-    // MARK: - Property
+    // MARK: - Properties
     private let screenSize = UIScreen.main.bounds
-    var xo: CGFloat = (UIScreen.main.bounds.width - 300)/4
-    var yo: CGFloat = 30
+    var positionX: CGFloat = (UIScreen.main.bounds.width - 300)/4
+    var positionY: CGFloat = 30
     let imageWidth: CGFloat = 100
     let imageHeight: CGFloat = 125
     var space: CGFloat = (UIScreen.main.bounds.width - 300)/4
@@ -20,10 +20,10 @@ final class Bai3ViewController: UIViewController {
     var views: [MyAvatar] = []
     var id: Int = 0
     let scrollView: UIScrollView = {
-        let v = UIScrollView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .clear
-        return v
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.backgroundColor = .clear
+        return scrollView
     }()
     
     // MARK: - Life cycle
@@ -35,23 +35,22 @@ final class Bai3ViewController: UIViewController {
         title = "Home"
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func setupUI() {
         for i in 0..<numberItem {
-            let viewInHome = MyAvatar(frame: CGRect(x: xo, y: yo, width: imageWidth, height: imageHeight))
+            let viewInHome = MyAvatar(frame: CGRect(x: positionX, y: positionY, width: imageWidth, height: imageHeight))
             viewInHome.userName = "name \(i + 1)"
             viewInHome.delegate = self
             viewInHome.id = i
             scrollView.addSubview(viewInHome)
-            if xo + imageWidth > screenSize.width - xo {
-                xo = (UIScreen.main.bounds.width - 300)/4
-                yo += imageHeight
+            if positionX + imageWidth > screenSize.width - positionX {
+                positionX = (UIScreen.main.bounds.width - 300)/4
+                positionY += imageHeight
             } else {
-                xo += CGFloat(space) + imageWidth
+                positionX += CGFloat(space) + imageWidth
             }
             views.append(viewInHome)
         }
-        
         let numberItemInScreenVertical = numberItem / 3 + numberItem % 3
         let totalImageHeaight = imageHeight * CGFloat(numberItemInScreenVertical)
         let totalSpaceInScreenVertical = space * (CGFloat(numberItemInScreenVertical) - 1)

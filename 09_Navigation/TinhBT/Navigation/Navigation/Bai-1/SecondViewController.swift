@@ -9,7 +9,7 @@ final class SecondViewController: UIViewController {
         title = "VC B"
     }
 
-    // MARK: - IBACtion
+    // MARK: - IBActions
     @IBAction private func NextButtonTouchUpInside(_ sender: Any) {
         let vc = CViewController()
         self.navigationController?.pushViewController(vc, animated: true)

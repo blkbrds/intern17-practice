@@ -16,7 +16,7 @@ final class Bai4p3ViewController: UIViewController {
         createItem()
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func createItem() {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         let gradientLayer = CAGradientLayer()

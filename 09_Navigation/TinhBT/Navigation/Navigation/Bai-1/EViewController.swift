@@ -15,7 +15,7 @@ final class EViewController: UIViewController {
         title = "VC e"
     }
 
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func BButtonTouchUpInside(_ sender: Any) {
         let vc = (self.navigationController?.viewControllers[1])!
         self.navigationController?.popToViewController(vc, animated: true)

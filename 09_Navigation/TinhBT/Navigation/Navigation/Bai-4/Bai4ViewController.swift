@@ -12,7 +12,7 @@ final class Bai4ViewController: UIViewController {
         creteButton()
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func creteButton() {
         let leftBarButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
         navigationItem.leftBarButtonItem = leftBarButton
@@ -24,6 +24,7 @@ final class Bai4ViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightBarButton
     }
 
+    // MARK: - Objc functions
     @objc private func search() {
         print("timmmmm kim")
     }

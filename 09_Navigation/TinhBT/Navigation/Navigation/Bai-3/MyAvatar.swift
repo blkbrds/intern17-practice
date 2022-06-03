@@ -14,7 +14,7 @@ protocol MyAvatarDelegate: class {
 
 final class MyAvatar: UIView {
     
-    // MARK: - Property
+    // MARK: - Properties
     var userAvatar: String = ""
     var userName: String = "" {
         didSet {
@@ -52,11 +52,12 @@ final class MyAvatar: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Private function
+    // MARK: - Objc functions
     @objc private func buttonDidClick() {
         delegate?.myAvatar(self, didSelect: id)
     }
     
+    // MARK: - Private functions
     func updateData(name: String) {
         userNameLabel.text = name
     }

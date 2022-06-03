@@ -9,7 +9,7 @@ final class Bai1ViewController: UIViewController {
         title = "VC A"
     }
 
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func pushTouchUpInside(_ sender: Any) {
         let vc = SecondViewController()
         self.navigationController?.pushViewController(vc, animated: true)

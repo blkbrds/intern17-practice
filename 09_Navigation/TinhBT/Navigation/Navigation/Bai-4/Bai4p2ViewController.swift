@@ -10,7 +10,7 @@ final class Bai4p2ViewController: UIViewController {
         createButton()
     }
     
-    // MARK: - Private function
+    // MARK: - Private functions
     private func createButton() {
         let rightButton = UIBarButtonItem(title: "Right", style: .plain, target: self, action: nil)
         navigationItem.rightBarButtonItem = rightButton

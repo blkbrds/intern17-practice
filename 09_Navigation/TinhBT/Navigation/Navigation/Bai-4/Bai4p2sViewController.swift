@@ -15,7 +15,7 @@ final class Bai4p2sViewController: UIViewController {
         title = "Back"
     }
     
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         let vc = Bai4p2ViewController()
         self.navigationController?.pushViewController(vc, animated: true)
