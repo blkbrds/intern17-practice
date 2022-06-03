@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Section 0</key>
+	<array>
+		<string>Mì</string>
+		<string>Bí</string>
+	</array>
+	<key>Section 1</key>
+	<array>
+		<string>Heo</string>
+		<string>Bò</string>
+		<string>Trâu</string>
+		<string>Ngựa</string>
+		<string>Gà</string>
+	</array>
+	<key>Section 2</key>
+	<array>
+		<string>Tivi</string>
+		<string>Dao</string>
+		<string>Kéo</string>
+	</array>
+</dict>
+</plist>
