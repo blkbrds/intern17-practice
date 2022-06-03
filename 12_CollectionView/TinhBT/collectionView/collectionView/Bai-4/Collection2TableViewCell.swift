@@ -12,7 +12,7 @@ final class Collection2TableViewCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    // MARK: Life cycle
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configCollectionView()
