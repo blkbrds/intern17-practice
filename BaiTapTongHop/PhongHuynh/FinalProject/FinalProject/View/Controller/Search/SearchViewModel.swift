@@ -36,4 +36,15 @@ final class SearchViewModel {
             }
         })
     }
+
+    func loadMoreSearchVideoAPI(nextPageToken: String, completion: @escaping APICompletion) {
+        VideoService.loadMoreSearchAPI(nextPageToken: nextPageToken, completion: { items, error in
+            if let error = error {
+                completion(.failure(error))
+            } else if let items = items as? [Video] {
+                self.searchsVideo = items
+                completion(.success)
+            }
+        })
+    }
 }

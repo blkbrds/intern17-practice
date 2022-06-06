@@ -22,6 +22,11 @@ final class Video: Object, Mappable {
     @objc dynamic var imageURL: String?
     @objc dynamic var title: String?
     @objc dynamic var descriptionn: String?
+    @objc dynamic var pagetoken: String?
+
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 
     required convenience init?(map: ObjectMapper.Map) {
         self.init()
@@ -29,11 +34,17 @@ final class Video: Object, Mappable {
 
     func mapping(map: ObjectMapper.Map) {
         var idTemp: String?
+        var pagetokenTemp: String?
         idTemp <- map["id"]
         if idTemp != nil {
             id = idTemp
         } else {
             id <- map["id.videoId"]
+        }
+        if pagetokenTemp != nil {
+            pagetoken = pagetokenTemp
+        } else {
+            pagetoken <- map["nextPageToken"]
         }
         title <- map["snippet.title"]
         descriptionn <- map["snippet.description"]

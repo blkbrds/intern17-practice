@@ -64,11 +64,6 @@ final class SearchViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.white
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        searchBar.resignFirstResponder()
-        self.view.endEditing(true)
-    }
-
     // MARK: - Objc functions
     @objc private func cancelAction() {
         navigationController?.popViewController(animated: true)
@@ -113,6 +108,7 @@ extension SearchViewController: UISearchBarDelegate {
         guard let keyWord = searchBar.text else { return }
         loadSearchVideoData(keyword: keyWord.replacingOccurrences(of: " ", with: ""))
         tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        searchBar.endEditing(true)
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

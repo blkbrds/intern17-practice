@@ -46,7 +46,7 @@ final class DetailViewModel {
         } else {
             try? realm?.write {
                 guard let video = video else { return }
-                realm?.add(video)
+                realm?.create(Video.self, value: video, update: .all)
             }
             return false
         }
