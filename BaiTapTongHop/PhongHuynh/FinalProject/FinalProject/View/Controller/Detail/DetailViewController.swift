@@ -10,6 +10,7 @@ import UIKit
 import YoutubePlayer_in_WKWebView
 import RealmSwift
 
+@available(iOS 13.0, *)
 final class DetailViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -34,6 +35,10 @@ final class DetailViewController: UIViewController {
         tableView.register(DetailCell.self)
         tableView.delegate = self
         tableView.dataSource = self
+    }
+
+    private func configNavigation() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector(backAction))
     }
 
     private func updateView() {
@@ -69,6 +74,10 @@ final class DetailViewController: UIViewController {
         }
     }
 
+    @objc private func backAction() {
+        navigationController?.popViewController(animated: true)
+    }
+
     // MARK: - IBActions
     @IBAction private func favoriteButtonTouchUpInside(_ sender: Any) {
         if viewModel?.checkAddVideoFavorite() == true {
@@ -80,6 +89,7 @@ final class DetailViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
+@available(iOS 13.0, *)
 extension DetailViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,6 +109,7 @@ extension DetailViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
+@available(iOS 13.0, *)
 extension DetailViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

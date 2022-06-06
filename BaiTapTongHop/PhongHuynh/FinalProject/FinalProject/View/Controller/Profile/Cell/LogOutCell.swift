@@ -14,5 +14,6 @@ final class LogOutCell: UITableViewCell {
     // MARK: - IBActions
     @IBAction private func logoutButtonTouchUpInside(_ sender: Any) {
         AppDelegate.shared.setroot(with: .login)
+        UserDefaults.standard.removeObject(forKey: "userName")
     }
 }

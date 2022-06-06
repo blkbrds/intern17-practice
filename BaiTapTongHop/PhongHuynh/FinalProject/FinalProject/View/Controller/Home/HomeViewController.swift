@@ -16,6 +16,11 @@ final class HomeViewController: UIViewController {
         configTableView()
         loadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
 
     // MARK: - Private functions
     private func configTableView() {
@@ -180,6 +185,7 @@ extension HomeViewController: NominationVideoCellDelegate {
             let vc = DetailViewController()
             vc.viewModel = viewModel.viewModelForDetail(cellType: type, indexPath: indexPath)
             navigationController?.pushViewController(vc, animated: true)
+            self.tabBarController?.tabBar.isHidden = true
         }
     }
 }
@@ -194,6 +200,7 @@ extension HomeViewController: FeaturedVideoHomeCellDelegate {
             let vc = DetailViewController()
             vc.viewModel = viewModel.viewModelForDetail(cellType: .featured, indexPath: indexPath)
             navigationController?.pushViewController(vc, animated: true)
+            self.tabBarController?.tabBar.isHidden = true
         }
     }
 }

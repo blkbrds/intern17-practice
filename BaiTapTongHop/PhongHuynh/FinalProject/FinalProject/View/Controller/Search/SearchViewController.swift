@@ -64,6 +64,11 @@ final class SearchViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.white
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        searchBar.resignFirstResponder()
+        self.view.endEditing(true)
+    }
+
     // MARK: - Objc functions
     @objc private func cancelAction() {
         navigationController?.popViewController(animated: true)
