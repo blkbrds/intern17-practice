@@ -29,6 +29,8 @@
 		BF9BC99E284DA11200546901 /* MyAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC999284DA11100546901 /* MyAvatar.swift */; };
 		BF9BC99F284DA11200546901 /* AvatarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC99A284DA11100546901 /* AvatarViewController.xib */; };
 		BF9BC9A0284DA11200546901 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC99B284DA11100546901 /* ProfileViewController.swift */; };
+		BF9BC9A4284DA2C100546901 /* NavigationBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC9A2284DA2C000546901 /* NavigationBarViewController.xib */; };
+		BF9BC9A5284DA2C100546901 /* NavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC9A3284DA2C000546901 /* NavigationBarViewController.swift */; };
 		BFC77B812834F95C00D5A214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC77B802834F95C00D5A214 /* AppDelegate.swift */; };
 		BFC77B832834F95C00D5A214 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC77B822834F95C00D5A214 /* SceneDelegate.swift */; };
 		BFC77B8A2834F96400D5A214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC77B892834F96400D5A214 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		BF9BC999284DA11100546901 /* MyAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAvatar.swift; sourceTree = "<group>"; };
 		BF9BC99A284DA11100546901 /* AvatarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AvatarViewController.xib; sourceTree = "<group>"; };
 		BF9BC99B284DA11100546901 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BF9BC9A2284DA2C000546901 /* NavigationBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBarViewController.xib; sourceTree = "<group>"; };
+		BF9BC9A3284DA2C000546901 /* NavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarViewController.swift; sourceTree = "<group>"; };
 		BFC77B7D2834F95C00D5A214 /* ExerciseNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExerciseNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC77B802834F95C00D5A214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC77B822834F95C00D5A214 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,15 @@
 			path = Exercise3;
 			sourceTree = "<group>";
 		};
+		BF9BC9A1284DA2C000546901 /* Exercise4 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC9A2284DA2C000546901 /* NavigationBarViewController.xib */,
+				BF9BC9A3284DA2C000546901 /* NavigationBarViewController.swift */,
+			);
+			path = Exercise4;
+			sourceTree = "<group>";
+		};
 		BFC77B742834F95C00D5A214 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +159,7 @@
 		BFC77B7F2834F95C00D5A214 /* ExerciseNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				BF9BC9A1284DA2C000546901 /* Exercise4 */,
 				BF9BC996284DA11100546901 /* Exercise3 */,
 				BF9BC987284D9E5000546901 /* Exercise2 */,
 				BF9BC972284D96D700546901 /* Exercise1 */,
@@ -215,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9BC994284D9E5100546901 /* LoginViewController.xib in Resources */,
+				BF9BC9A4284DA2C100546901 /* NavigationBarViewController.xib in Resources */,
 				BF9BC97F284D96D700546901 /* FourViewController.xib in Resources */,
 				BF9BC981284D96D700546901 /* FirstViewController.xib in Resources */,
 				BF9BC99F284DA11200546901 /* AvatarViewController.xib in Resources */,
@@ -248,6 +263,7 @@
 				BFC77B832834F95C00D5A214 /* SceneDelegate.swift in Sources */,
 				BF9BC9A0284DA11200546901 /* ProfileViewController.swift in Sources */,
 				BF9BC995284D9E5100546901 /* LoginViewController.swift in Sources */,
+				BF9BC9A5284DA2C100546901 /* NavigationBarViewController.swift in Sources */,
 				BF9BC993284D9E5100546901 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
