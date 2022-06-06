@@ -24,6 +24,11 @@
 		BF9BC993284D9E5100546901 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC98C284D9E5000546901 /* EditViewController.swift */; };
 		BF9BC994284D9E5100546901 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC98D284D9E5000546901 /* LoginViewController.xib */; };
 		BF9BC995284D9E5100546901 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC98E284D9E5000546901 /* LoginViewController.swift */; };
+		BF9BC99C284DA11200546901 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC997284DA11100546901 /* ProfileViewController.xib */; };
+		BF9BC99D284DA11200546901 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC998284DA11100546901 /* AvatarViewController.swift */; };
+		BF9BC99E284DA11200546901 /* MyAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC999284DA11100546901 /* MyAvatar.swift */; };
+		BF9BC99F284DA11200546901 /* AvatarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC99A284DA11100546901 /* AvatarViewController.xib */; };
+		BF9BC9A0284DA11200546901 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC99B284DA11100546901 /* ProfileViewController.swift */; };
 		BFC77B812834F95C00D5A214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC77B802834F95C00D5A214 /* AppDelegate.swift */; };
 		BFC77B832834F95C00D5A214 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC77B822834F95C00D5A214 /* SceneDelegate.swift */; };
 		BFC77B8A2834F96400D5A214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC77B892834F96400D5A214 /* Assets.xcassets */; };
@@ -47,6 +52,11 @@
 		BF9BC98C284D9E5000546901 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		BF9BC98D284D9E5000546901 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		BF9BC98E284D9E5000546901 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF9BC997284DA11100546901 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		BF9BC998284DA11100546901 /* AvatarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
+		BF9BC999284DA11100546901 /* MyAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAvatar.swift; sourceTree = "<group>"; };
+		BF9BC99A284DA11100546901 /* AvatarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AvatarViewController.xib; sourceTree = "<group>"; };
+		BF9BC99B284DA11100546901 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BFC77B7D2834F95C00D5A214 /* ExerciseNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExerciseNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC77B802834F95C00D5A214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC77B822834F95C00D5A214 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +115,18 @@
 			path = Exercise2;
 			sourceTree = "<group>";
 		};
+		BF9BC996284DA11100546901 /* Exercise3 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC997284DA11100546901 /* ProfileViewController.xib */,
+				BF9BC998284DA11100546901 /* AvatarViewController.swift */,
+				BF9BC999284DA11100546901 /* MyAvatar.swift */,
+				BF9BC99A284DA11100546901 /* AvatarViewController.xib */,
+				BF9BC99B284DA11100546901 /* ProfileViewController.swift */,
+			);
+			path = Exercise3;
+			sourceTree = "<group>";
+		};
 		BFC77B742834F95C00D5A214 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +146,7 @@
 		BFC77B7F2834F95C00D5A214 /* ExerciseNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				BF9BC996284DA11100546901 /* Exercise3 */,
 				BF9BC987284D9E5000546901 /* Exercise2 */,
 				BF9BC972284D96D700546901 /* Exercise1 */,
 				BF9BC971284D967F00546901 /* AppDelegate */,
@@ -194,8 +217,10 @@
 				BF9BC994284D9E5100546901 /* LoginViewController.xib in Resources */,
 				BF9BC97F284D96D700546901 /* FourViewController.xib in Resources */,
 				BF9BC981284D96D700546901 /* FirstViewController.xib in Resources */,
+				BF9BC99F284DA11200546901 /* AvatarViewController.xib in Resources */,
 				BF9BC982284D96D700546901 /* ThirdViewController.xib in Resources */,
 				BF9BC991284D9E5100546901 /* UserList.plist in Resources */,
+				BF9BC99C284DA11200546901 /* ProfileViewController.xib in Resources */,
 				BFC77B8A2834F96400D5A214 /* Assets.xcassets in Resources */,
 				BF9BC985284D96D700546901 /* FiveViewController.xib in Resources */,
 				BF9BC992284D9E5100546901 /* EditViewController.xib in Resources */,
@@ -212,6 +237,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9BC980284D96D700546901 /* FirstViewController.swift in Sources */,
+				BF9BC99D284DA11200546901 /* AvatarViewController.swift in Sources */,
+				BF9BC99E284DA11200546901 /* MyAvatar.swift in Sources */,
 				BFC77B812834F95C00D5A214 /* AppDelegate.swift in Sources */,
 				BF9BC984284D96D700546901 /* FourViewController.swift in Sources */,
 				BF9BC990284D9E5100546901 /* HomeViewController.swift in Sources */,
@@ -219,6 +246,7 @@
 				BF9BC986284D96D700546901 /* SecondViewController.swift in Sources */,
 				BF9BC97E284D96D700546901 /* ThirdViewController.swift in Sources */,
 				BFC77B832834F95C00D5A214 /* SceneDelegate.swift in Sources */,
+				BF9BC9A0284DA11200546901 /* ProfileViewController.swift in Sources */,
 				BF9BC995284D9E5100546901 /* LoginViewController.swift in Sources */,
 				BF9BC993284D9E5100546901 /* EditViewController.swift in Sources */,
 			);
