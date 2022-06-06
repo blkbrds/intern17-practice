@@ -18,6 +18,12 @@
 		BF9BC9D7284DA8BB00546901 /* DiaDiemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC9CF284DA8BB00546901 /* DiaDiemViewController.xib */; };
 		BF9BC9D8284DA8BB00546901 /* MienViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC9D0284DA8BB00546901 /* MienViewController.xib */; };
 		BF9BC9D9284DA8BB00546901 /* MienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC9D1284DA8BB00546901 /* MienViewController.swift */; };
+		BF9BC9E2284DAE5D00546901 /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC9DB284DAE5C00546901 /* MyView.xib */; };
+		BF9BC9E3284DAE5D00546901 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC9DC284DAE5C00546901 /* MyView.swift */; };
+		BF9BC9E4284DAE5D00546901 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC9DD284DAE5C00546901 /* HomeViewController.xib */; };
+		BF9BC9E5284DAE5D00546901 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC9DE284DAE5C00546901 /* HomeViewController.swift */; };
+		BF9BC9E6284DAE5D00546901 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC9E0284DAE5D00546901 /* SearchViewController.swift */; };
+		BF9BC9E7284DAE5D00546901 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC9E1284DAE5D00546901 /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		BF9BC9CF284DA8BB00546901 /* DiaDiemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaDiemViewController.xib; sourceTree = "<group>"; };
 		BF9BC9D0284DA8BB00546901 /* MienViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MienViewController.xib; sourceTree = "<group>"; };
 		BF9BC9D1284DA8BB00546901 /* MienViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MienViewController.swift; sourceTree = "<group>"; };
+		BF9BC9DB284DAE5C00546901 /* MyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyView.xib; sourceTree = "<group>"; };
+		BF9BC9DC284DAE5C00546901 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		BF9BC9DD284DAE5C00546901 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BF9BC9DE284DAE5C00546901 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BF9BC9E0284DAE5D00546901 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BF9BC9E1284DAE5D00546901 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,8 @@
 		BF9BC9B1284DA72D00546901 /* ExerciseProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				BF9BC9DF284DAE5D00546901 /* Exercise4 */,
+				BF9BC9DA284DAE5C00546901 /* Exercise5 */,
 				BF9BC9C9284DA8BB00546901 /* Exercise3 */,
 				BF9BC9C7284DA80F00546901 /* Exercise1 */,
 				BF9BC9C6284DA78E00546901 /* AppDelegate */,
@@ -106,6 +120,26 @@
 				BF9BC9D1284DA8BB00546901 /* MienViewController.swift */,
 			);
 			path = Exercise3;
+			sourceTree = "<group>";
+		};
+		BF9BC9DA284DAE5C00546901 /* Exercise5 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC9DB284DAE5C00546901 /* MyView.xib */,
+				BF9BC9DC284DAE5C00546901 /* MyView.swift */,
+				BF9BC9DD284DAE5C00546901 /* HomeViewController.xib */,
+				BF9BC9DE284DAE5C00546901 /* HomeViewController.swift */,
+			);
+			path = Exercise5;
+			sourceTree = "<group>";
+		};
+		BF9BC9DF284DAE5D00546901 /* Exercise4 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC9E0284DAE5D00546901 /* SearchViewController.swift */,
+				BF9BC9E1284DAE5D00546901 /* SearchViewController.xib */,
+			);
+			path = Exercise4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,10 +200,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9BC9E2284DAE5D00546901 /* MyView.xib in Resources */,
 				BF9BC9D3284DA8BB00546901 /* HuyenViewController.xib in Resources */,
 				BF9BC9D8284DA8BB00546901 /* MienViewController.xib in Resources */,
 				BF9BC9BC284DA73100546901 /* Assets.xcassets in Resources */,
 				BF9BC9D7284DA8BB00546901 /* DiaDiemViewController.xib in Resources */,
+				BF9BC9E4284DAE5D00546901 /* HomeViewController.xib in Resources */,
+				BF9BC9E7284DAE5D00546901 /* SearchViewController.xib in Resources */,
 				BF9BC9D2284DA8BB00546901 /* TinhViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,8 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9BC9E3284DAE5D00546901 /* MyView.swift in Sources */,
 				BF9BC9D5284DA8BB00546901 /* HuyenViewController.swift in Sources */,
 				BF9BC9D4284DA8BB00546901 /* DiaDiemViewController.swift in Sources */,
+				BF9BC9E6284DAE5D00546901 /* SearchViewController.swift in Sources */,
+				BF9BC9E5284DAE5D00546901 /* HomeViewController.swift in Sources */,
 				BF9BC9D6284DA8BB00546901 /* TinhViewController.swift in Sources */,
 				BF9BC9B3284DA72D00546901 /* AppDelegate.swift in Sources */,
 				BF9BC9B5284DA72D00546901 /* SceneDelegate.swift in Sources */,
