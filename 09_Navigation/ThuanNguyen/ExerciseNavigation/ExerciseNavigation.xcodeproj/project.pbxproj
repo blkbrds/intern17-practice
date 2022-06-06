@@ -17,6 +17,13 @@
 		BF9BC984284D96D700546901 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC97A284D96D700546901 /* FourViewController.swift */; };
 		BF9BC985284D96D700546901 /* FiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC97B284D96D700546901 /* FiveViewController.xib */; };
 		BF9BC986284D96D700546901 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC97C284D96D700546901 /* SecondViewController.swift */; };
+		BF9BC98F284D9E5100546901 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC988284D9E5000546901 /* HomeViewController.xib */; };
+		BF9BC990284D9E5100546901 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC989284D9E5000546901 /* HomeViewController.swift */; };
+		BF9BC991284D9E5100546901 /* UserList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC98A284D9E5000546901 /* UserList.plist */; };
+		BF9BC992284D9E5100546901 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC98B284D9E5000546901 /* EditViewController.xib */; };
+		BF9BC993284D9E5100546901 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC98C284D9E5000546901 /* EditViewController.swift */; };
+		BF9BC994284D9E5100546901 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9BC98D284D9E5000546901 /* LoginViewController.xib */; };
+		BF9BC995284D9E5100546901 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BC98E284D9E5000546901 /* LoginViewController.swift */; };
 		BFC77B812834F95C00D5A214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC77B802834F95C00D5A214 /* AppDelegate.swift */; };
 		BFC77B832834F95C00D5A214 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC77B822834F95C00D5A214 /* SceneDelegate.swift */; };
 		BFC77B8A2834F96400D5A214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC77B892834F96400D5A214 /* Assets.xcassets */; };
@@ -33,6 +40,13 @@
 		BF9BC97A284D96D700546901 /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		BF9BC97B284D96D700546901 /* FiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveViewController.xib; sourceTree = "<group>"; };
 		BF9BC97C284D96D700546901 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BF9BC988284D9E5000546901 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BF9BC989284D9E5000546901 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BF9BC98A284D9E5000546901 /* UserList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserList.plist; sourceTree = "<group>"; };
+		BF9BC98B284D9E5000546901 /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		BF9BC98C284D9E5000546901 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		BF9BC98D284D9E5000546901 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		BF9BC98E284D9E5000546901 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BFC77B7D2834F95C00D5A214 /* ExerciseNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExerciseNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC77B802834F95C00D5A214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC77B822834F95C00D5A214 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +91,20 @@
 			path = Exercise1;
 			sourceTree = "<group>";
 		};
+		BF9BC987284D9E5000546901 /* Exercise2 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BC988284D9E5000546901 /* HomeViewController.xib */,
+				BF9BC989284D9E5000546901 /* HomeViewController.swift */,
+				BF9BC98A284D9E5000546901 /* UserList.plist */,
+				BF9BC98B284D9E5000546901 /* EditViewController.xib */,
+				BF9BC98C284D9E5000546901 /* EditViewController.swift */,
+				BF9BC98D284D9E5000546901 /* LoginViewController.xib */,
+				BF9BC98E284D9E5000546901 /* LoginViewController.swift */,
+			);
+			path = Exercise2;
+			sourceTree = "<group>";
+		};
 		BFC77B742834F95C00D5A214 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +124,7 @@
 		BFC77B7F2834F95C00D5A214 /* ExerciseNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				BF9BC987284D9E5000546901 /* Exercise2 */,
 				BF9BC972284D96D700546901 /* Exercise1 */,
 				BF9BC971284D967F00546901 /* AppDelegate */,
 				BFC77B892834F96400D5A214 /* Assets.xcassets */,
@@ -162,11 +191,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9BC994284D9E5100546901 /* LoginViewController.xib in Resources */,
 				BF9BC97F284D96D700546901 /* FourViewController.xib in Resources */,
 				BF9BC981284D96D700546901 /* FirstViewController.xib in Resources */,
 				BF9BC982284D96D700546901 /* ThirdViewController.xib in Resources */,
+				BF9BC991284D9E5100546901 /* UserList.plist in Resources */,
 				BFC77B8A2834F96400D5A214 /* Assets.xcassets in Resources */,
 				BF9BC985284D96D700546901 /* FiveViewController.xib in Resources */,
+				BF9BC992284D9E5100546901 /* EditViewController.xib in Resources */,
+				BF9BC98F284D9E5100546901 /* HomeViewController.xib in Resources */,
 				BF9BC983284D96D700546901 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,10 +214,13 @@
 				BF9BC980284D96D700546901 /* FirstViewController.swift in Sources */,
 				BFC77B812834F95C00D5A214 /* AppDelegate.swift in Sources */,
 				BF9BC984284D96D700546901 /* FourViewController.swift in Sources */,
+				BF9BC990284D9E5100546901 /* HomeViewController.swift in Sources */,
 				BF9BC97D284D96D700546901 /* FiveViewController.swift in Sources */,
 				BF9BC986284D96D700546901 /* SecondViewController.swift in Sources */,
 				BF9BC97E284D96D700546901 /* ThirdViewController.swift in Sources */,
 				BFC77B832834F95C00D5A214 /* SceneDelegate.swift in Sources */,
+				BF9BC995284D9E5100546901 /* LoginViewController.swift in Sources */,
+				BF9BC993284D9E5100546901 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
