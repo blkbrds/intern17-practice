@@ -8,5 +8,11 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class LogOutCell: UITableViewCell {
+
+    // MARK: - IBActions
+    @IBAction private func logoutButtonTouchUpInside(_ sender: Any) {
+        AppDelegate.shared.setroot(with: .login)
+    }
 }

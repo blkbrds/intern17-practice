@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class ProfileViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -32,6 +33,7 @@ final class ProfileViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
+@available(iOS 13.0, *)
 extension ProfileViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,10 +65,12 @@ extension ProfileViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
+@available(iOS 13.0, *)
 extension ProfileViewController: UITableViewDelegate {
 }
 
 // MARK: - ProfileCellDelegate
+@available(iOS 13.0, *)
 extension ProfileViewController: ProfileCellDelegate {
 
     func cell(cell: ProfileCell, needsPerfom actions: ProfileCell.Action) {

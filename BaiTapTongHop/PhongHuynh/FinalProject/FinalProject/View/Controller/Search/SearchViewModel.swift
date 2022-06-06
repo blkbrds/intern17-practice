@@ -32,6 +32,7 @@ final class SearchViewModel {
                 completion(.failure(error))
             } else if let items = items as? [Video] {
                 self.searchsVideo = items
+                completion(.success)
             }
         })
     }
