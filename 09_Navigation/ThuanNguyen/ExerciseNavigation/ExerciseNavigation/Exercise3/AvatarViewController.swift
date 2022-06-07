@@ -32,10 +32,9 @@ class AvatarViewController: UIViewController {
             avatarViews[index].addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tap(_:))))
             avatarViews[index].nameLabel?.text = name
             contentView.addSubview(avatarViews[index])
-            
             if Config.x + (Config.imgW + Config.space) * 2 > Config.screenSize.width {
                 Config.x = 50
-                Config.y += Config.imgh + Config.space //+ (navigationController?.navigationBar.frame.height)! // a += b ~ a = a + b
+                Config.y += Config.imgh + Config.space
             } else {
                 Config.x += Config.space + Config.imgW
             }
@@ -69,10 +68,12 @@ extension AvatarViewController {
 }
 
 extension AvatarViewController: ProfileControllerDelegate {
-    func updateController(view: ProfileViewController, needsPerform actions: ProfileViewController.Action) {
+    func updateController(viewController: ProfileViewController, needsPerform actions: ProfileViewController.Action) {
         switch actions {
         case.tap(let userName, let userIndex):
-            avatarViews[userIndex].nameLabel?.text = userName
-        }
+            if userIndex < avatarViews.count {
+                avatarViews[userIndex].nameLabel?.text = userName
+            }
         }
     }
+}

@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         title = "Login"
         setupUI()
-        checkData()
+        getData()
     }
     
     private func setupUI() {
@@ -35,15 +35,15 @@ class LoginViewController: UIViewController {
         for i in 0..<users.count {
             if usernameTextField.text == users[i].first && passwordTextField.text == users[i].last {
                 let vc = HomeViewController()
-                if let un = users[i].first {
-                    vc.username = un
+                if let user = users[i].first {
+                    vc.username = user
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }
         }
     }
     
-    private func checkData() {
+    private func getData() {
         guard let path = Bundle.main.path(forResource: "UserList", ofType: "plist") else {return}
         let url = URL(fileURLWithPath: path)
         let data = try! Data(contentsOf: url)

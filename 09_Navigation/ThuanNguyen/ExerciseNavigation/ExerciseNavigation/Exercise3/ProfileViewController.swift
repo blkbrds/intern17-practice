@@ -7,10 +7,10 @@
 
 import UIKit
 protocol ProfileControllerDelegate: class {
-    func updateController(view: ProfileViewController, needsPerform action: ProfileViewController.Action)
+    func updateController(viewController: ProfileViewController, needsPerform action: ProfileViewController.Action)
 }
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
     enum Action {
         case tap(user: String, index: Int)
     }
@@ -34,7 +34,7 @@ class ProfileViewController: UIViewController {
     
     @objc private func rightAction() {
         if let us = nameTextField.text, let delegate = delegate {
-            delegate.updateController(view: self, needsPerform: .tap(user: us, index: userIndex))
+            delegate.updateController(viewController: self, needsPerform: .tap(user: us, index: userIndex))
         }
         self.navigationController?.popViewController(animated: true)
     }

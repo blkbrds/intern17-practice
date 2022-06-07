@@ -27,6 +27,7 @@ final class NavigationBarViewController: UIViewController {
     }
      
     private var naviStatus: NaviStatus = .changeImageBarButtonItem
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         switch naviStatus {

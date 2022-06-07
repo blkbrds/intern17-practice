@@ -7,7 +7,7 @@
 
 import UIKit
 protocol EditControllerDelegate: class {
-    func updateController(view: EditViewController, needsPerform action: EditViewController.Action)
+    func updateController(viewController: EditViewController, needsPerform action: EditViewController.Action)
 }
 
 final class EditViewController: UIViewController {
@@ -21,13 +21,13 @@ final class EditViewController: UIViewController {
     @IBOutlet private weak var confirmTextField: UITextField!
     
     weak var delegate: EditControllerDelegate?
-    var us: String = " "
+    var nameuser: String = " "
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Edit"
         setupUI()
-        usernamelTextField.text = us
+        usernamelTextField.text = nameuser
     }
     
     private func setupUI() {
@@ -44,7 +44,7 @@ final class EditViewController: UIViewController {
     
     @objc private func rightAction() {
         if let us = usernamelTextField.text, let delegate = delegate {
-            delegate.updateController(view: self, needsPerform: .tap(username: us))
+            delegate.updateController(viewController: self, needsPerform: .tap(username: us))
         }
         self.navigationController?.popViewController(animated: true)
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 protocol HomViewControllerDelegate: class {
-    func controller(view: HomeViewController, needsPerform action: HomeViewController.Action)
+    func controller(viewController: HomeViewController, needsPerform action: HomeViewController.Action)
 }
 
 final class HomeViewController: UIViewController {
@@ -39,17 +39,17 @@ final class HomeViewController: UIViewController {
     @objc private func rightAction() {
         let vc = EditViewController()
         vc.delegate = self
-        vc.us = username
+        vc.nameuser = username
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension HomeViewController: EditControllerDelegate {
-    func updateController(view: EditViewController, needsPerform actions: EditViewController.Action) {
+    func updateController(viewController: EditViewController, needsPerform actions: EditViewController.Action) {
         switch actions {
         case.tap(let userName):
             usernameLabel.text = userName
         }
-        }
     }
+}
 

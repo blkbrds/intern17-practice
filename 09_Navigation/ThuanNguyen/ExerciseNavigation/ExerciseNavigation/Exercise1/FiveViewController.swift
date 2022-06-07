@@ -15,13 +15,15 @@ final class FiveViewController: UIViewController {
     }
     
     @IBAction private func popControllerC(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[2])!
-        self.navigationController?.popToViewController(vc, animated: true)
+        guard let navi = navigationController else { return }
+        let vc = navi.viewControllers[2]
+        navi.popToViewController(vc, animated: true)
     }
     
     @IBAction private func popControllerB(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[1])!
-        self.navigationController?.popToViewController(vc, animated: true)
+        guard let navi = navigationController else { return }
+        let vc = navi.viewControllers[1]
+        navi.popToViewController(vc, animated: true)
     }
     
     @IBAction private func popControllerD(_ sender: Any) {

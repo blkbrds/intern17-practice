@@ -7,23 +7,22 @@
 
 import UIKit
 
-class MyAvatar: UIView {
+final class MyAvatar: UIView {
 
     var avatarImageView: UIImageView?
     var nameLabel: UILabel?
-    var count = 0
+    var count: Int = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .blue
-        
+       
         //add user avatar
         avatarImageView = UIImageView(image: UIImage(named: "avatar1"))
         avatarImageView!.frame = CGRect(x: 0, y: 0, width: frame.size.width , height: frame.size.height * 4/5)
         avatarImageView!.contentMode = .scaleAspectFill
         self.addSubview(avatarImageView!)
         //add user nae
-        nameLabel = UILabel(frame: CGRect(x: 0, y: frame.size.height*4/5, width: frame.size.width, height: frame.size.height/5))
+        nameLabel = UILabel(frame: CGRect(x: 0, y: frame.size.height * 4/5, width: frame.size.width, height: frame.size.height/5))
         nameLabel!.text = "Username"
         nameLabel!.backgroundColor = .lightGray
         nameLabel!.textAlignment = .center
