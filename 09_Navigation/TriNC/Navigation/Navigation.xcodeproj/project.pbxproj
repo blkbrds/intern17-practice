@@ -7,55 +7,97 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22AA10D7280E964300109357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D6280E964300109357 /* AppDelegate.swift */; };
-		22AA10D9280E964300109357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D8280E964300109357 /* SceneDelegate.swift */; };
-		22AA10E0280E964400109357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22AA10DF280E964400109357 /* Assets.xcassets */; };
-		22AA10E3280E964400109357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AA10E1280E964400109357 /* LaunchScreen.storyboard */; };
-		22AA10F3280E981600109357 /* ExerciseAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10F1280E981600109357 /* ExerciseAViewController.swift */; };
-		22AA10F4280E981600109357 /* ExerciseAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AA10F2280E981600109357 /* ExerciseAViewController.xib */; };
-		22AA10F9280E983800109357 /* ExBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10F7280E983800109357 /* ExBViewController.swift */; };
-		22AA10FA280E983800109357 /* ExBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AA10F8280E983800109357 /* ExBViewController.xib */; };
-		22AA10FE280E984800109357 /* ExCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10FC280E984800109357 /* ExCViewController.swift */; };
-		22AA10FF280E984800109357 /* ExCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AA10FD280E984800109357 /* ExCViewController.xib */; };
-		22AA1102280E985200109357 /* ExDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA1100280E985200109357 /* ExDViewController.swift */; };
-		22AA1103280E985200109357 /* ExDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AA1101280E985200109357 /* ExDViewController.xib */; };
-		22AA1108280E988E00109357 /* ExEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA1106280E988E00109357 /* ExEViewController.swift */; };
-		22AA1109280E988E00109357 /* ExEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AA1107280E988E00109357 /* ExEViewController.xib */; };
-		22AA1110280EA72300109357 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA110E280EA72300109357 /* LoginViewController.swift */; };
-		22AA1111280EA72300109357 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AA110F280EA72300109357 /* LoginViewController.xib */; };
-		22AA1114280EA74100109357 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA1112280EA74100109357 /* HomeViewController.swift */; };
-		22AA1115280EA74100109357 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AA1113280EA74100109357 /* HomeViewController.xib */; };
-		22AA1118280EA77500109357 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA1116280EA77500109357 /* EditViewController.swift */; };
-		22AA1119280EA77500109357 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AA1117280EA77500109357 /* EditViewController.xib */; };
-		22AA111C280EBFD900109357 /* User.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22AA111B280EBFD900109357 /* User.plist */; };
-		22AA111E280EC79700109357 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA111D280EC79700109357 /* DataManager.swift */; };
+		22371EDF282521CE0046286D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371EDD282521CE0046286D /* DetailViewController.swift */; };
+		22371EE0282521CE0046286D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22371EDE282521CE0046286D /* DetailViewController.xib */; };
+		22A6D82A2824E39000518B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D6280E964300109357 /* AppDelegate.swift */; };
+		22A6D82B2824E39300518B7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AA10D8280E964300109357 /* SceneDelegate.swift */; };
+		22D106A3282E8787009271ED /* HomieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D106A2282E8787009271ED /* HomieViewModel.swift */; };
+		22DDC2B52824E27B0017A711 /* SeachBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC29B2824E27A0017A711 /* SeachBarViewController.xib */; };
+		22DDC2B62824E27B0017A711 /* SeachBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC29C2824E27A0017A711 /* SeachBarViewController.swift */; };
+		22DDC2B72824E27B0017A711 /* TintColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC29E2824E27A0017A711 /* TintColorViewController.xib */; };
+		22DDC2B82824E27B0017A711 /* TintColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC29F2824E27A0017A711 /* TintColorViewController.swift */; };
+		22DDC2B92824E27B0017A711 /* MoreBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2A12824E27B0017A711 /* MoreBarViewController.swift */; };
+		22DDC2BA2824E27B0017A711 /* MoreBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2A22824E27B0017A711 /* MoreBarViewController.xib */; };
+		22DDC2BB2824E27B0017A711 /* ImageBackGroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2A42824E27B0017A711 /* ImageBackGroundViewController.xib */; };
+		22DDC2BC2824E27B0017A711 /* ImageBackGroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2A52824E27B0017A711 /* ImageBackGroundViewController.swift */; };
+		22DDC2BD2824E27B0017A711 /* BarButtonTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2A72824E27B0017A711 /* BarButtonTestViewController.xib */; };
+		22DDC2BE2824E27B0017A711 /* BarButtonTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2A82824E27B0017A711 /* BarButtonTestViewController.swift */; };
+		22DDC2BF2824E27B0017A711 /* HomieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2AB2824E27B0017A711 /* HomieViewController.xib */; };
+		22DDC2C02824E27B0017A711 /* HomieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2AC2824E27B0017A711 /* HomieViewController.swift */; };
+		22DDC2C12824E27B0017A711 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2AE2824E27B0017A711 /* ProfileViewController.xib */; };
+		22DDC2C22824E27B0017A711 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2AF2824E27B0017A711 /* ProfileViewController.swift */; };
+		22DDC2C32824E27B0017A711 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2B12824E27B0017A711 /* User.swift */; };
+		22DDC2C42824E27B0017A711 /* AvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2B32824E27B0017A711 /* AvatarView.xib */; };
+		22DDC2C52824E27B0017A711 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2B42824E27B0017A711 /* AvatarView.swift */; };
+		22DDC2E62824E2E30017A711 /* ExerciseAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2C82824E2E30017A711 /* ExerciseAViewController.xib */; };
+		22DDC2E72824E2E30017A711 /* ExerciseAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2C92824E2E30017A711 /* ExerciseAViewController.swift */; };
+		22DDC2E82824E2E30017A711 /* ExCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2CB2824E2E30017A711 /* ExCViewController.xib */; };
+		22DDC2E92824E2E30017A711 /* ExCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2CC2824E2E30017A711 /* ExCViewController.swift */; };
+		22DDC2EA2824E2E30017A711 /* ExDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2CE2824E2E30017A711 /* ExDViewController.xib */; };
+		22DDC2EB2824E2E30017A711 /* ExDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2CF2824E2E30017A711 /* ExDViewController.swift */; };
+		22DDC2EC2824E2E30017A711 /* ExEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2D12824E2E30017A711 /* ExEViewController.xib */; };
+		22DDC2ED2824E2E30017A711 /* ExEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2D22824E2E30017A711 /* ExEViewController.swift */; };
+		22DDC2EE2824E2E30017A711 /* ExBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2D42824E2E30017A711 /* ExBViewController.xib */; };
+		22DDC2EF2824E2E30017A711 /* ExBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2D52824E2E30017A711 /* ExBViewController.swift */; };
+		22DDC2F02824E2E30017A711 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2D82824E2E30017A711 /* HomeViewController.xib */; };
+		22DDC2F12824E2E30017A711 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2D92824E2E30017A711 /* HomeViewController.swift */; };
+		22DDC2F22824E2E30017A711 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2DB2824E2E30017A711 /* DataManager.swift */; };
+		22DDC2F32824E2E30017A711 /* DataManager.swift~Stashed changes in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2DC2824E2E30017A711 /* DataManager.swift~Stashed changes */; };
+		22DDC2F42824E2E30017A711 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2DE2824E2E30017A711 /* EditViewController.xib */; };
+		22DDC2F52824E2E30017A711 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2DF2824E2E30017A711 /* EditViewController.swift */; };
+		22DDC2F62824E2E30017A711 /* User.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2E12824E2E30017A711 /* User.plist */; };
+		22DDC2F72824E2E30017A711 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2E32824E2E30017A711 /* LoginViewController.xib */; };
+		22DDC2F82824E2E30017A711 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC2E42824E2E30017A711 /* LoginViewController.swift */; };
+		22DDC2F92824E2E30017A711 /* LoginViewController.swift~Stashed changes in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC2E52824E2E30017A711 /* LoginViewController.swift~Stashed changes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22371EDD282521CE0046286D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		22371EDE282521CE0046286D /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		22AA10D3280E964300109357 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AA10D6280E964300109357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22AA10D8280E964300109357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		22AA10DF280E964400109357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22AA10E2280E964400109357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22AA10E4280E964400109357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22AA10F1280E981600109357 /* ExerciseAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAViewController.swift; sourceTree = "<group>"; };
-		22AA10F2280E981600109357 /* ExerciseAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseAViewController.xib; sourceTree = "<group>"; };
-		22AA10F7280E983800109357 /* ExBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExBViewController.swift; sourceTree = "<group>"; };
-		22AA10F8280E983800109357 /* ExBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExBViewController.xib; sourceTree = "<group>"; };
-		22AA10FC280E984800109357 /* ExCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCViewController.swift; sourceTree = "<group>"; };
-		22AA10FD280E984800109357 /* ExCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExCViewController.xib; sourceTree = "<group>"; };
-		22AA1100280E985200109357 /* ExDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExDViewController.swift; sourceTree = "<group>"; };
-		22AA1101280E985200109357 /* ExDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExDViewController.xib; sourceTree = "<group>"; };
-		22AA1106280E988E00109357 /* ExEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExEViewController.swift; sourceTree = "<group>"; };
-		22AA1107280E988E00109357 /* ExEViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExEViewController.xib; sourceTree = "<group>"; };
-		22AA110E280EA72300109357 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		22AA110F280EA72300109357 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		22AA1112280EA74100109357 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		22AA1113280EA74100109357 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		22AA1116280EA77500109357 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		22AA1117280EA77500109357 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
-		22AA111B280EBFD900109357 /* User.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = User.plist; sourceTree = "<group>"; };
-		22AA111D280EC79700109357 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		22D106A2282E8787009271ED /* HomieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomieViewModel.swift; sourceTree = "<group>"; };
+		22DDC29B2824E27A0017A711 /* SeachBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeachBarViewController.xib; sourceTree = "<group>"; };
+		22DDC29C2824E27A0017A711 /* SeachBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachBarViewController.swift; sourceTree = "<group>"; };
+		22DDC29E2824E27A0017A711 /* TintColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TintColorViewController.xib; sourceTree = "<group>"; };
+		22DDC29F2824E27A0017A711 /* TintColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintColorViewController.swift; sourceTree = "<group>"; };
+		22DDC2A12824E27B0017A711 /* MoreBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreBarViewController.swift; sourceTree = "<group>"; };
+		22DDC2A22824E27B0017A711 /* MoreBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreBarViewController.xib; sourceTree = "<group>"; };
+		22DDC2A42824E27B0017A711 /* ImageBackGroundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageBackGroundViewController.xib; sourceTree = "<group>"; };
+		22DDC2A52824E27B0017A711 /* ImageBackGroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBackGroundViewController.swift; sourceTree = "<group>"; };
+		22DDC2A72824E27B0017A711 /* BarButtonTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarButtonTestViewController.xib; sourceTree = "<group>"; };
+		22DDC2A82824E27B0017A711 /* BarButtonTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarButtonTestViewController.swift; sourceTree = "<group>"; };
+		22DDC2AB2824E27B0017A711 /* HomieViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomieViewController.xib; sourceTree = "<group>"; };
+		22DDC2AC2824E27B0017A711 /* HomieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomieViewController.swift; sourceTree = "<group>"; };
+		22DDC2AE2824E27B0017A711 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		22DDC2AF2824E27B0017A711 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		22DDC2B12824E27B0017A711 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		22DDC2B32824E27B0017A711 /* AvatarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AvatarView.xib; sourceTree = "<group>"; };
+		22DDC2B42824E27B0017A711 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		22DDC2C82824E2E30017A711 /* ExerciseAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseAViewController.xib; sourceTree = "<group>"; };
+		22DDC2C92824E2E30017A711 /* ExerciseAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseAViewController.swift; sourceTree = "<group>"; };
+		22DDC2CB2824E2E30017A711 /* ExCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExCViewController.xib; sourceTree = "<group>"; };
+		22DDC2CC2824E2E30017A711 /* ExCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExCViewController.swift; sourceTree = "<group>"; };
+		22DDC2CE2824E2E30017A711 /* ExDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExDViewController.xib; sourceTree = "<group>"; };
+		22DDC2CF2824E2E30017A711 /* ExDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExDViewController.swift; sourceTree = "<group>"; };
+		22DDC2D12824E2E30017A711 /* ExEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExEViewController.xib; sourceTree = "<group>"; };
+		22DDC2D22824E2E30017A711 /* ExEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExEViewController.swift; sourceTree = "<group>"; };
+		22DDC2D42824E2E30017A711 /* ExBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExBViewController.xib; sourceTree = "<group>"; };
+		22DDC2D52824E2E30017A711 /* ExBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExBViewController.swift; sourceTree = "<group>"; };
+		22DDC2D82824E2E30017A711 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		22DDC2D92824E2E30017A711 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		22DDC2DB2824E2E30017A711 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		22DDC2DC2824E2E30017A711 /* DataManager.swift~Stashed changes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "DataManager.swift~Stashed changes"; sourceTree = "<group>"; };
+		22DDC2DE2824E2E30017A711 /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		22DDC2DF2824E2E30017A711 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		22DDC2E12824E2E30017A711 /* User.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = User.plist; sourceTree = "<group>"; };
+		22DDC2E32824E2E30017A711 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		22DDC2E42824E2E30017A711 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		22DDC2E52824E2E30017A711 /* LoginViewController.swift~Stashed changes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LoginViewController.swift~Stashed changes"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +111,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2278FC6C280EFE92007A8E27 /* DataManager */ = {
+		22371EDC282521B30046286D /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				22AA111D280EC79700109357 /* DataManager.swift */,
+				22371EDD282521CE0046286D /* DetailViewController.swift */,
+				22371EDE282521CE0046286D /* DetailViewController.xib */,
 			);
-			path = DataManager;
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		22AA10CA280E964300109357 = {
@@ -97,10 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				22AA10EB280E970100109357 /* AppDelegate */,
-				22AA10EC280E972700109357 /* EX1 */,
-				22AA110A280EA69F00109357 /* EX2 */,
-				22AA10EA280E96F500109357 /* Resource */,
+				22DDC2C62824E2E30017A711 /* EX1 */,
+				22DDC2D62824E2E30017A711 /* EX2 */,
+				22DDC2A92824E27B0017A711 /* EX3 */,
+				22DDC2992824E27A0017A711 /* EX4 */,
 				22AA10E4280E964400109357 /* Info.plist */,
+				22AA10EA280E96F500109357 /* Resource */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -123,108 +168,223 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		22AA10EC280E972700109357 /* EX1 */ = {
+		22DDC2992824E27A0017A711 /* EX4 */ = {
 			isa = PBXGroup;
 			children = (
-				22AA1105280E987900109357 /* EXE */,
-				22AA1104280E985700109357 /* EXD */,
-				22AA10FB280E983C00109357 /* EXC */,
-				22AA10F6280E982C00109357 /* EXB */,
-				22AA10F5280E981E00109357 /* EXA */,
+				22DDC29A2824E27A0017A711 /* SeachBar3 */,
+				22DDC29D2824E27A0017A711 /* TintColor2 */,
+				22DDC2A02824E27A0017A711 /* MoreBar5 */,
+				22DDC2A32824E27B0017A711 /* Background1 */,
+				22DDC2A62824E27B0017A711 /* BarButtonTest4 */,
+			);
+			path = EX4;
+			sourceTree = "<group>";
+		};
+		22DDC29A2824E27A0017A711 /* SeachBar3 */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC29B2824E27A0017A711 /* SeachBarViewController.xib */,
+				22DDC29C2824E27A0017A711 /* SeachBarViewController.swift */,
+			);
+			path = SeachBar3;
+			sourceTree = "<group>";
+		};
+		22DDC29D2824E27A0017A711 /* TintColor2 */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC29E2824E27A0017A711 /* TintColorViewController.xib */,
+				22DDC29F2824E27A0017A711 /* TintColorViewController.swift */,
+			);
+			path = TintColor2;
+			sourceTree = "<group>";
+		};
+		22DDC2A02824E27A0017A711 /* MoreBar5 */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2A12824E27B0017A711 /* MoreBarViewController.swift */,
+				22DDC2A22824E27B0017A711 /* MoreBarViewController.xib */,
+			);
+			path = MoreBar5;
+			sourceTree = "<group>";
+		};
+		22DDC2A32824E27B0017A711 /* Background1 */ = {
+			isa = PBXGroup;
+			children = (
+				22371EDC282521B30046286D /* Detail */,
+				22DDC2A42824E27B0017A711 /* ImageBackGroundViewController.xib */,
+				22DDC2A52824E27B0017A711 /* ImageBackGroundViewController.swift */,
+			);
+			path = Background1;
+			sourceTree = "<group>";
+		};
+		22DDC2A62824E27B0017A711 /* BarButtonTest4 */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2A72824E27B0017A711 /* BarButtonTestViewController.xib */,
+				22DDC2A82824E27B0017A711 /* BarButtonTestViewController.swift */,
+			);
+			path = BarButtonTest4;
+			sourceTree = "<group>";
+		};
+		22DDC2A92824E27B0017A711 /* EX3 */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2B02824E27B0017A711 /* Model */,
+				22DDC2AA2824E27B0017A711 /* Homie */,
+				22DDC2AD2824E27B0017A711 /* Profile */,
+				22DDC2B22824E27B0017A711 /* Avatar */,
+			);
+			path = EX3;
+			sourceTree = "<group>";
+		};
+		22DDC2AA2824E27B0017A711 /* Homie */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2AC2824E27B0017A711 /* HomieViewController.swift */,
+				22DDC2AB2824E27B0017A711 /* HomieViewController.xib */,
+				22D106A2282E8787009271ED /* HomieViewModel.swift */,
+			);
+			path = Homie;
+			sourceTree = "<group>";
+		};
+		22DDC2AD2824E27B0017A711 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2AF2824E27B0017A711 /* ProfileViewController.swift */,
+				22DDC2AE2824E27B0017A711 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		22DDC2B02824E27B0017A711 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2B12824E27B0017A711 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22DDC2B22824E27B0017A711 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2B42824E27B0017A711 /* AvatarView.swift */,
+				22DDC2B32824E27B0017A711 /* AvatarView.xib */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		22DDC2C62824E2E30017A711 /* EX1 */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2C72824E2E30017A711 /* EXA */,
+				22DDC2D32824E2E30017A711 /* EXB */,
+				22DDC2CA2824E2E30017A711 /* EXC */,
+				22DDC2CD2824E2E30017A711 /* EXD */,
+				22DDC2D02824E2E30017A711 /* EXE */,
 			);
 			path = EX1;
 			sourceTree = "<group>";
 		};
-		22AA10F5280E981E00109357 /* EXA */ = {
+		22DDC2C72824E2E30017A711 /* EXA */ = {
 			isa = PBXGroup;
 			children = (
-				22AA10F1280E981600109357 /* ExerciseAViewController.swift */,
-				22AA10F2280E981600109357 /* ExerciseAViewController.xib */,
+				22DDC2C82824E2E30017A711 /* ExerciseAViewController.xib */,
+				22DDC2C92824E2E30017A711 /* ExerciseAViewController.swift */,
 			);
 			path = EXA;
 			sourceTree = "<group>";
 		};
-		22AA10F6280E982C00109357 /* EXB */ = {
+		22DDC2CA2824E2E30017A711 /* EXC */ = {
 			isa = PBXGroup;
 			children = (
-				22AA10F7280E983800109357 /* ExBViewController.swift */,
-				22AA10F8280E983800109357 /* ExBViewController.xib */,
-			);
-			path = EXB;
-			sourceTree = "<group>";
-		};
-		22AA10FB280E983C00109357 /* EXC */ = {
-			isa = PBXGroup;
-			children = (
-				22AA10FC280E984800109357 /* ExCViewController.swift */,
-				22AA10FD280E984800109357 /* ExCViewController.xib */,
+				22DDC2CB2824E2E30017A711 /* ExCViewController.xib */,
+				22DDC2CC2824E2E30017A711 /* ExCViewController.swift */,
 			);
 			path = EXC;
 			sourceTree = "<group>";
 		};
-		22AA1104280E985700109357 /* EXD */ = {
+		22DDC2CD2824E2E30017A711 /* EXD */ = {
 			isa = PBXGroup;
 			children = (
-				22AA1100280E985200109357 /* ExDViewController.swift */,
-				22AA1101280E985200109357 /* ExDViewController.xib */,
+				22DDC2CE2824E2E30017A711 /* ExDViewController.xib */,
+				22DDC2CF2824E2E30017A711 /* ExDViewController.swift */,
 			);
 			path = EXD;
 			sourceTree = "<group>";
 		};
-		22AA1105280E987900109357 /* EXE */ = {
+		22DDC2D02824E2E30017A711 /* EXE */ = {
 			isa = PBXGroup;
 			children = (
-				22AA1106280E988E00109357 /* ExEViewController.swift */,
-				22AA1107280E988E00109357 /* ExEViewController.xib */,
+				22DDC2D12824E2E30017A711 /* ExEViewController.xib */,
+				22DDC2D22824E2E30017A711 /* ExEViewController.swift */,
 			);
 			path = EXE;
 			sourceTree = "<group>";
 		};
-		22AA110A280EA69F00109357 /* EX2 */ = {
+		22DDC2D32824E2E30017A711 /* EXB */ = {
 			isa = PBXGroup;
 			children = (
-				22AA111A280EBC2300109357 /* PlistData */,
-				2278FC6C280EFE92007A8E27 /* DataManager */,
-				22AA110D280EA71300109357 /* Edit */,
-				22AA110C280EA70900109357 /* Home */,
-				22AA110B280EA70300109357 /* Login */,
+				22DDC2D42824E2E30017A711 /* ExBViewController.xib */,
+				22DDC2D52824E2E30017A711 /* ExBViewController.swift */,
+			);
+			path = EXB;
+			sourceTree = "<group>";
+		};
+		22DDC2D62824E2E30017A711 /* EX2 */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2E02824E2E30017A711 /* PlistData */,
+				22DDC2DA2824E2E30017A711 /* DataManager */,
+				22DDC2DD2824E2E30017A711 /* Edit */,
+				22DDC2D72824E2E30017A711 /* Home */,
+				22DDC2E22824E2E30017A711 /* Login */,
 			);
 			path = EX2;
 			sourceTree = "<group>";
 		};
-		22AA110B280EA70300109357 /* Login */ = {
+		22DDC2D72824E2E30017A711 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				22AA110E280EA72300109357 /* LoginViewController.swift */,
-				22AA110F280EA72300109357 /* LoginViewController.xib */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		22AA110C280EA70900109357 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				22AA1112280EA74100109357 /* HomeViewController.swift */,
-				22AA1113280EA74100109357 /* HomeViewController.xib */,
+				22DDC2D82824E2E30017A711 /* HomeViewController.xib */,
+				22DDC2D92824E2E30017A711 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		22AA110D280EA71300109357 /* Edit */ = {
+		22DDC2DA2824E2E30017A711 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				22AA1116280EA77500109357 /* EditViewController.swift */,
-				22AA1117280EA77500109357 /* EditViewController.xib */,
+				22DDC2DB2824E2E30017A711 /* DataManager.swift */,
+				22DDC2DC2824E2E30017A711 /* DataManager.swift~Stashed changes */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		22DDC2DD2824E2E30017A711 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2DE2824E2E30017A711 /* EditViewController.xib */,
+				22DDC2DF2824E2E30017A711 /* EditViewController.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
 		};
-		22AA111A280EBC2300109357 /* PlistData */ = {
+		22DDC2E02824E2E30017A711 /* PlistData */ = {
 			isa = PBXGroup;
 			children = (
-				22AA111B280EBFD900109357 /* User.plist */,
+				22DDC2E12824E2E30017A711 /* User.plist */,
 			);
 			path = PlistData;
+			sourceTree = "<group>";
+		};
+		22DDC2E22824E2E30017A711 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				22DDC2E32824E2E30017A711 /* LoginViewController.xib */,
+				22DDC2E42824E2E30017A711 /* LoginViewController.swift */,
+				22DDC2E52824E2E30017A711 /* LoginViewController.swift~Stashed changes */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,17 +445,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22AA1111280EA72300109357 /* LoginViewController.xib in Resources */,
-				22AA10FA280E983800109357 /* ExBViewController.xib in Resources */,
-				22AA1119280EA77500109357 /* EditViewController.xib in Resources */,
-				22AA10E3280E964400109357 /* LaunchScreen.storyboard in Resources */,
-				22AA10E0280E964400109357 /* Assets.xcassets in Resources */,
-				22AA10F4280E981600109357 /* ExerciseAViewController.xib in Resources */,
-				22AA1109280E988E00109357 /* ExEViewController.xib in Resources */,
-				22AA1103280E985200109357 /* ExDViewController.xib in Resources */,
-				22AA111C280EBFD900109357 /* User.plist in Resources */,
-				22AA10FF280E984800109357 /* ExCViewController.xib in Resources */,
-				22AA1115280EA74100109357 /* HomeViewController.xib in Resources */,
+				22DDC2C12824E27B0017A711 /* ProfileViewController.xib in Resources */,
+				22DDC2F62824E2E30017A711 /* User.plist in Resources */,
+				22DDC2C42824E27B0017A711 /* AvatarView.xib in Resources */,
+				22DDC2E62824E2E30017A711 /* ExerciseAViewController.xib in Resources */,
+				22DDC2EC2824E2E30017A711 /* ExEViewController.xib in Resources */,
+				22DDC2BB2824E27B0017A711 /* ImageBackGroundViewController.xib in Resources */,
+				22DDC2F32824E2E30017A711 /* DataManager.swift~Stashed changes in Resources */,
+				22371EE0282521CE0046286D /* DetailViewController.xib in Resources */,
+				22DDC2F02824E2E30017A711 /* HomeViewController.xib in Resources */,
+				22DDC2F72824E2E30017A711 /* LoginViewController.xib in Resources */,
+				22DDC2EA2824E2E30017A711 /* ExDViewController.xib in Resources */,
+				22DDC2B52824E27B0017A711 /* SeachBarViewController.xib in Resources */,
+				22DDC2BD2824E27B0017A711 /* BarButtonTestViewController.xib in Resources */,
+				22DDC2BF2824E27B0017A711 /* HomieViewController.xib in Resources */,
+				22DDC2B72824E27B0017A711 /* TintColorViewController.xib in Resources */,
+				22DDC2F42824E2E30017A711 /* EditViewController.xib in Resources */,
+				22DDC2F92824E2E30017A711 /* LoginViewController.swift~Stashed changes in Resources */,
+				22DDC2BA2824E27B0017A711 /* MoreBarViewController.xib in Resources */,
+				22DDC2EE2824E2E30017A711 /* ExBViewController.xib in Resources */,
+				22DDC2E82824E2E30017A711 /* ExCViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,17 +475,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22AA1118280EA77500109357 /* EditViewController.swift in Sources */,
-				22AA1108280E988E00109357 /* ExEViewController.swift in Sources */,
-				22AA10F9280E983800109357 /* ExBViewController.swift in Sources */,
-				22AA10FE280E984800109357 /* ExCViewController.swift in Sources */,
-				22AA1102280E985200109357 /* ExDViewController.swift in Sources */,
-				22AA1110280EA72300109357 /* LoginViewController.swift in Sources */,
-				22AA1114280EA74100109357 /* HomeViewController.swift in Sources */,
-				22AA10F3280E981600109357 /* ExerciseAViewController.swift in Sources */,
-				22AA111E280EC79700109357 /* DataManager.swift in Sources */,
-				22AA10D7280E964300109357 /* AppDelegate.swift in Sources */,
-				22AA10D9280E964300109357 /* SceneDelegate.swift in Sources */,
+				22DDC2F82824E2E30017A711 /* LoginViewController.swift in Sources */,
+				22DDC2E72824E2E30017A711 /* ExerciseAViewController.swift in Sources */,
+				22A6D82A2824E39000518B7F /* AppDelegate.swift in Sources */,
+				22DDC2F22824E2E30017A711 /* DataManager.swift in Sources */,
+				22DDC2BC2824E27B0017A711 /* ImageBackGroundViewController.swift in Sources */,
+				22DDC2EB2824E2E30017A711 /* ExDViewController.swift in Sources */,
+				22371EDF282521CE0046286D /* DetailViewController.swift in Sources */,
+				22DDC2B62824E27B0017A711 /* SeachBarViewController.swift in Sources */,
+				22DDC2C52824E27B0017A711 /* AvatarView.swift in Sources */,
+				22DDC2F12824E2E30017A711 /* HomeViewController.swift in Sources */,
+				22DDC2F52824E2E30017A711 /* EditViewController.swift in Sources */,
+				22DDC2B82824E27B0017A711 /* TintColorViewController.swift in Sources */,
+				22DDC2C02824E27B0017A711 /* HomieViewController.swift in Sources */,
+				22DDC2C22824E27B0017A711 /* ProfileViewController.swift in Sources */,
+				22DDC2EF2824E2E30017A711 /* ExBViewController.swift in Sources */,
+				22DDC2C32824E27B0017A711 /* User.swift in Sources */,
+				22A6D82B2824E39300518B7F /* SceneDelegate.swift in Sources */,
+				22D106A3282E8787009271ED /* HomieViewModel.swift in Sources */,
+				22DDC2BE2824E27B0017A711 /* BarButtonTestViewController.swift in Sources */,
+				22DDC2ED2824E2E30017A711 /* ExEViewController.swift in Sources */,
+				22DDC2B92824E27B0017A711 /* MoreBarViewController.swift in Sources */,
+				22DDC2E92824E2E30017A711 /* ExCViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

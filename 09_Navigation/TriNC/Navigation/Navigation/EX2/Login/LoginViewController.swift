@@ -19,12 +19,7 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
+  
     // MARK: - Private Functions
     private func setupUI() {
         title = "Login"
@@ -37,12 +32,14 @@ final class LoginViewController: UIViewController {
         navigationItem.rightBarButtonItem = doneBarButtonItem
     }
         
+
+    // MARK: - Objc
     @objc private func doneAction() {
         guard let username = usernameTextField.text, let password = passwordTextField.text, !username.isEmpty, !password.isEmpty else {
             notificationLabel.text = "Please enter data"
             return
         }
-        
+    
         if DataManager.checkData(username: username, password: password) {
             let vc = HomeViewController()
             vc.delegate = self
@@ -51,6 +48,12 @@ final class LoginViewController: UIViewController {
         } else {
             notificationLabel.text = "Wrong username or password"
         }
+    }
+
+    // MARK: - Touch Event
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 }
 
@@ -74,3 +77,4 @@ extension LoginViewController: HomeViewControllerDelegate {
         }
     }
 }
+
