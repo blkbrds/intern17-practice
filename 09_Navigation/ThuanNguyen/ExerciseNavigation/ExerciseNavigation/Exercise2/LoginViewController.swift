@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
             if usernameTextField.text == users[i].first && passwordTextField.text == users[i].last {
                 let vc = HomeViewController()
                 if let user = users[i].first {
-                    vc.username = user
+                    vc.userName = user
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }

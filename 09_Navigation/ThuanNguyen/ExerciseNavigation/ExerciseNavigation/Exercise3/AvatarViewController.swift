@@ -47,7 +47,7 @@ class AvatarViewController: UIViewController {
     @objc private func tap(_ gestureRecognizer: UITapGestureRecognizer) {
         let vc = ProfileViewController()
         guard let tag = gestureRecognizer.view?.tag else { return }
-        vc.nameuser = Config.names[tag]
+        vc.nameUser = Config.names[tag]
         vc.userIndex = tag
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)

@@ -17,14 +17,14 @@ final class ProfileViewController: UIViewController {
     
     @IBOutlet private weak var nameTextField: UITextField!
     weak var delegate: ProfileControllerDelegate?
-    var nameuser: String = " "
+    var nameUser: String = " "
     var userIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         title = "Profile"
-        nameTextField.text = nameuser
+        nameTextField.text = nameUser
     }
     
     private func setupUI() {
@@ -33,8 +33,8 @@ final class ProfileViewController: UIViewController {
     }
     
     @objc private func rightAction() {
-        if let us = nameTextField.text, let delegate = delegate {
-            delegate.updateController(viewController: self, needsPerform: .tap(user: us, index: userIndex))
+        if let user = nameTextField.text, let delegate = delegate {
+            delegate.updateController(viewController: self, needsPerform: .tap(user: user, index: userIndex))
         }
         self.navigationController?.popViewController(animated: true)
     }

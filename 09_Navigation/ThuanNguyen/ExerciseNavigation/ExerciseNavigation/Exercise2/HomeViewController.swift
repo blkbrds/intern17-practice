@@ -16,13 +16,13 @@ final class HomeViewController: UIViewController {
     }
     
     @IBOutlet private weak var usernameLabel: UILabel!
-    var username: String = ""
+    var userName: String = ""
     weak var delegate: HomViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
         setupUI()
-        usernameLabel.text = username
+        usernameLabel.text = userName
     }
     
     private func setupUI() {
@@ -39,7 +39,7 @@ final class HomeViewController: UIViewController {
     @objc private func rightAction() {
         let vc = EditViewController()
         vc.delegate = self
-        vc.nameuser = username
+        vc.nameUser = userName
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

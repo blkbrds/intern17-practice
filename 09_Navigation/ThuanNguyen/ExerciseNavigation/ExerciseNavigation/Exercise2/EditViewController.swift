@@ -13,7 +13,7 @@ protocol EditControllerDelegate: class {
 final class EditViewController: UIViewController {
     
     enum Action {
-        case tap(username: String)
+        case tap(userName: String)
     }
     
     @IBOutlet private weak var usernamelTextField: UITextField!
@@ -21,13 +21,13 @@ final class EditViewController: UIViewController {
     @IBOutlet private weak var confirmTextField: UITextField!
     
     weak var delegate: EditControllerDelegate?
-    var nameuser: String = " "
+    var nameUser: String = " "
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Edit"
         setupUI()
-        usernamelTextField.text = nameuser
+        usernamelTextField.text = nameUser
     }
     
     private func setupUI() {
@@ -44,7 +44,7 @@ final class EditViewController: UIViewController {
     
     @objc private func rightAction() {
         if let us = usernamelTextField.text, let delegate = delegate {
-            delegate.updateController(viewController: self, needsPerform: .tap(username: us))
+            delegate.updateController(viewController: self, needsPerform: .tap(userName: us))
         }
         self.navigationController?.popViewController(animated: true)
     }

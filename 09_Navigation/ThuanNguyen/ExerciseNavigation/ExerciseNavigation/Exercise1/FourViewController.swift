@@ -24,9 +24,9 @@ final class FourViewController: UIViewController {
     }
     
     @IBAction private func preControllerB(_ sender: Any) {
-        guard let navi = navigationController else { return }
-        let vc = navi.viewControllers[1]
-        navi.popToViewController(vc, animated: true)
+        guard let vc = navigationController?.viewControllers
+            .filter({ $0 is SecondViewController }).first else { return }
+        navigationController?.popToViewController(vc, animated: true)
     }
     
     @IBAction private func preRoot(_ sender: Any) {
