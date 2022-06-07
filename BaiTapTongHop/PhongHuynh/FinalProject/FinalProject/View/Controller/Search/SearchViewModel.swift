@@ -28,22 +28,23 @@ final class SearchViewModel {
     }
 
     func loadSearchVideoAPI(keyword: String, completion: @escaping APICompletion) {
-        VideoService.loadSearchVideoAPI(keyword: keyword, completion: { items, error in
+        VideoService.loadSearchVideoAPI(keyword: keyword, completion: { items, nextPageToken, error in
             if let error = error {
                 completion(.failure(error))
             } else if let items = items as? [Video] {
                 self.searchsVideo = items
+                self.nextPageToken = nextPageToken
                 completion(.success)
             }
         })
     }
 
-    func loadMoreSearchVideoAPI(nextPageToken: String, completion: @escaping APICompletion) {
-        VideoService.loadMoreSearchAPI(nextPageToken: nextPageToken, completion: { items, nextPageToken, error in
+    func loadMoreSearchVideoAPI(keyword: String, completion: @escaping APICompletion) {
+        VideoService.loadMoreSearchAPI(keyword: keyword, nextPageToken: nextPageToken ?? "", completion: { items, nextPageToken, error in
             if let error = error {
                 completion(.failure(error))
             } else if let items = items as? [Video] {
-                self.searchsVideo = items
+                self.searchsVideo.append(contentsOf: items)
                 self.nextPageToken = nextPageToken
                 completion(.success)
             }

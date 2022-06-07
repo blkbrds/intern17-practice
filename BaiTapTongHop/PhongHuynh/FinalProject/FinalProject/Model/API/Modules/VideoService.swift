@@ -20,7 +20,7 @@ final class VideoService {
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/videos"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
-            Mapper<Video>().mapArray(result) { (items: [Video]?, nextPageToken: String?, error: Error?) in
+            Mapper<Video>().mapArray(result) { (items: [Video]?, _, error: Error?) in
                 completion(items, error)
             }
         }
@@ -35,7 +35,7 @@ final class VideoService {
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/search"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
-            Mapper<Video>().mapArray(result) { (items: [Video]?, nextPageToken: String?, error: Error?) in
+            Mapper<Video>().mapArray(result) { (items: [Video]?, _, error: Error?) in
                 completion(items, error)
             }
         }
@@ -50,7 +50,7 @@ final class VideoService {
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/search"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
-            Mapper<Video>().mapArray(result) { (items: [Video]?, nextPageToken: String?, error: Error?) in
+            Mapper<Video>().mapArray(result) { (items: [Video]?, _, error: Error?) in
                 completion(items, error)
             }
         }
@@ -65,33 +65,33 @@ final class VideoService {
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/search"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
-            Mapper<Video>().mapArray(result) { (items: [Video]?, nextPageToken: String?, error: Error?) in
+            Mapper<Video>().mapArray(result) { (items: [Video]?, _, error: Error?) in
                 completion(items, error)
             }
         }
     }
 
-    class func loadSearchVideoAPI(keyword: String, completion: @escaping CompletionAny) {
+    class func loadSearchVideoAPI(keyword: String, completion: @escaping CompletionAnyNextPageToken) {
         var params: [String: Any] = [:]
         params["part"] = "snippet"
-        params["maxResults"] = 20
+        params["maxResults"] = 5
         params["q"] = keyword
         params["type"] = "video"
         params["key"] = Session.shared.apiKey
-        params["pageToken"] = ""
         let url = "https://youtube.googleapis.com/youtube/v3/search"
         api.request(method: .get, urlString: url, parameters: params) { (result) in
             Mapper<Video>().mapArray(result) { (items: [Video]?, nextPageToken: String?, error: Error?) in
-                completion(items, error)
+                completion(items, nextPageToken, error)
             }
         }
     }
 
-    class func loadMoreSearchAPI(nextPageToken: String, completion: @escaping CompletionAnyNextPageToken) {
+    class func loadMoreSearchAPI(keyword: String, nextPageToken: String, completion: @escaping CompletionAnyNextPageToken) {
         var params: [String: Any] = [:]
         params["part"] = "snippet"
-        params["maxResults"] = 20
-        params["nextPageToken"] = nextPageToken
+        params["maxResults"] = 5
+        params["q"] = keyword
+        params["pageToken"] = nextPageToken
         params["type"] = "video"
         params["key"] = Session.shared.apiKey
         let url = "https://youtube.googleapis.com/youtube/v3/search"

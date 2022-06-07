@@ -41,8 +41,8 @@ final class SearchViewController: UIViewController {
         }
     }
 
-    private func loadMoreVideoData(nextPageToken: String) {
-        viewModel.loadMoreSearchVideoAPI(nextPageToken: nextPageToken) { [weak self] (result) in
+    private func loadMoreVideoData() {
+        viewModel.loadMoreSearchVideoAPI(keyword: searchBar.text ?? "") { [weak self] (result) in
             guard let this = self else { return }
             DispatchQueue.main.async {
                 switch result {
@@ -117,7 +117,7 @@ extension SearchViewController: UITableViewDelegate {
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         if maximumOffset - currentOffset <= 10.0 {
-            loadMoreVideoData(nextPageToken: viewModel.nextPageToken ?? "")
+            loadMoreVideoData()
         }
     }
 }

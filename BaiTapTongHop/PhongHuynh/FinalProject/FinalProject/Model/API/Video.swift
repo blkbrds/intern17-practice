@@ -22,7 +22,6 @@ final class Video: Object, Mappable {
     @objc dynamic var imageURL: String?
     @objc dynamic var title: String?
     @objc dynamic var descriptionn: String?
-    @objc dynamic var pagetoken: String?
 
     override class func primaryKey() -> String? {
         return "id"
