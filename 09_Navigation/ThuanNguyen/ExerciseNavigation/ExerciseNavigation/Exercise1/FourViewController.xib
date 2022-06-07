@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FourViewController" customModule="DemoNavigition" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsk-Dr-vAN">
+                    <rect key="frame" x="157" y="244" width="100" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="oOZ-Jc-9Qn"/>
+                        <constraint firstAttribute="height" constant="60" id="rHD-Hf-l4k"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Next">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="next:" destination="-1" eventType="touchUpInside" id="qOC-Ax-oi2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKm-UI-jdE">
+                    <rect key="frame" x="157" y="354" width="100" height="60"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="C">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="preControllerC:" destination="-1" eventType="touchUpInside" id="jAT-Dt-Q6F"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFG-dG-X03">
+                    <rect key="frame" x="157" y="464" width="100" height="60"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="B">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="preControllerB:" destination="-1" eventType="touchUpInside" id="qTb-Lh-8Pd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNj-fS-IdQ">
+                    <rect key="frame" x="157" y="574" width="100" height="60"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Root">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="preRoot:" destination="-1" eventType="touchUpInside" id="aIG-GS-Ec8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hFG-dG-X03" firstAttribute="width" secondItem="vsk-Dr-vAN" secondAttribute="width" id="04O-mf-IMH"/>
+                <constraint firstItem="SNj-fS-IdQ" firstAttribute="height" secondItem="vsk-Dr-vAN" secondAttribute="height" id="2aD-ip-tjD"/>
+                <constraint firstItem="SNj-fS-IdQ" firstAttribute="leading" secondItem="cKm-UI-jdE" secondAttribute="leading" id="3YJ-NR-TxI"/>
+                <constraint firstItem="hFG-dG-X03" firstAttribute="top" secondItem="cKm-UI-jdE" secondAttribute="bottom" constant="50" id="7Em-rD-4Pd"/>
+                <constraint firstItem="cKm-UI-jdE" firstAttribute="top" secondItem="vsk-Dr-vAN" secondAttribute="bottom" constant="50" id="8Fm-Ks-qZe"/>
+                <constraint firstItem="cKm-UI-jdE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ABW-mk-gyu"/>
+                <constraint firstItem="cKm-UI-jdE" firstAttribute="height" secondItem="vsk-Dr-vAN" secondAttribute="height" id="BYh-Th-2sv"/>
+                <constraint firstItem="SNj-fS-IdQ" firstAttribute="top" secondItem="hFG-dG-X03" secondAttribute="bottom" constant="50" id="EqR-bL-LLw"/>
+                <constraint firstItem="vsk-Dr-vAN" firstAttribute="leading" secondItem="cKm-UI-jdE" secondAttribute="leading" id="SDX-8e-rUX"/>
+                <constraint firstItem="cKm-UI-jdE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YvY-2q-JVW"/>
+                <constraint firstItem="vsk-Dr-vAN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="ZGS-IH-vw3"/>
+                <constraint firstItem="SNj-fS-IdQ" firstAttribute="width" secondItem="vsk-Dr-vAN" secondAttribute="width" id="dWG-ip-yhx"/>
+                <constraint firstItem="cKm-UI-jdE" firstAttribute="width" secondItem="vsk-Dr-vAN" secondAttribute="width" id="h7t-xM-Pef"/>
+                <constraint firstItem="hFG-dG-X03" firstAttribute="height" secondItem="vsk-Dr-vAN" secondAttribute="height" id="jNa-I8-axq"/>
+                <constraint firstItem="hFG-dG-X03" firstAttribute="leading" secondItem="cKm-UI-jdE" secondAttribute="leading" id="zJv-cC-QLS"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="79"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
