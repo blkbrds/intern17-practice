@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="TabbarController" customModuleProvider="target">
+            <connections>
+                <outlet property="createAccountButton" destination="F8q-kQ-m1K" id="U7h-PA-QBO"/>
+                <outlet property="emailTextField" destination="l1F-wX-IXT" id="5pq-3d-Bru"/>
+                <outlet property="passwordTextField" destination="XgI-oi-8WW" id="yW7-bY-Dcv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1F-wX-IXT">
+                    <rect key="frame" x="20" y="69" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="6nN-W4-nOd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XgI-oi-8WW">
+                    <rect key="frame" x="20" y="124" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8q-kQ-m1K">
+                    <rect key="frame" x="20" y="178" width="374" height="30"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="H7a-8w-6BL"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Create Account">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="createAccountButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Pyy-rG-Zf7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="l1F-wX-IXT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="AD4-Ib-76R"/>
+                <constraint firstItem="F8q-kQ-m1K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="GfO-Vk-4TN"/>
+                <constraint firstItem="F8q-kQ-m1K" firstAttribute="top" secondItem="XgI-oi-8WW" secondAttribute="bottom" constant="20" id="QDG-AT-g5p"/>
+                <constraint firstItem="l1F-wX-IXT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SCY-S0-yEz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F8q-kQ-m1K" secondAttribute="trailing" constant="20" id="XdE-tL-2ci"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XgI-oi-8WW" secondAttribute="trailing" constant="20" id="qcu-uW-mWU"/>
+                <constraint firstItem="XgI-oi-8WW" firstAttribute="height" secondItem="l1F-wX-IXT" secondAttribute="height" multiplier="0.971429" id="rHC-Bo-vZX"/>
+                <constraint firstItem="XgI-oi-8WW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rkT-Yd-8et"/>
+                <constraint firstItem="XgI-oi-8WW" firstAttribute="top" secondItem="l1F-wX-IXT" secondAttribute="bottom" constant="20" id="uCr-9v-pIL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="l1F-wX-IXT" secondAttribute="trailing" constant="20" id="uFc-7Z-ygs"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
