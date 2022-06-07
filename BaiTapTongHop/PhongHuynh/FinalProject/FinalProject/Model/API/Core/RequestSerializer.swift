@@ -53,7 +53,7 @@ extension ApiManager {
 }
 
 extension Mapper {
-    
+
     func mapObject<T: NSObject>(_ result: Result<Any>, completion: @escaping (_ item: T?, _ error: Error?) -> Void) where T: Mappable {
         switch result {
         case .success(let json):
@@ -78,9 +78,8 @@ extension Mapper {
             }
         }
     }
-    
+
     func mapArray<T>(_ result: Result<Any>, completion: @escaping (_ items: [T]?, _ error: Error?) -> Void) where T: Mappable {
-        
         switch result {
         case .success(let json):
             guard let json = json as? JSObject else {
@@ -92,7 +91,6 @@ extension Mapper {
             guard let data = json["items"] as? JSArray else {
                 return
             }
-            
             let items: [T] = Mapper<T>().mapArray(JSONArray: data)
             DispatchQueue.main.async {
                 completion(items, nil)

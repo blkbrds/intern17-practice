@@ -34,18 +34,13 @@ final class Video: Object, Mappable {
 
     func mapping(map: ObjectMapper.Map) {
         var idTemp: String?
-        var pagetokenTemp: String?
         idTemp <- map["id"]
         if idTemp != nil {
             id = idTemp
         } else {
             id <- map["id.videoId"]
         }
-        if pagetokenTemp != nil {
-            pagetoken = pagetokenTemp
-        } else {
-            pagetoken <- map["nextPageToken"]
-        }
+        pagetoken <- map["nextPageToken"]
         title <- map["snippet.title"]
         descriptionn <- map["snippet.description"]
         imageURL <- map["snippet.thumbnails.medium.url"]

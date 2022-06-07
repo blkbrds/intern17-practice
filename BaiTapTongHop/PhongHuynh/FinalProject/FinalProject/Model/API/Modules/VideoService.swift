@@ -86,11 +86,12 @@ final class VideoService {
             }
         }
     }
-    
-    class func loadMoreSearchAPI(nextPageToken: String, completion: @escaping CompletionAny) {
+
+    class func loadMoreSearchAPI(nextPageToken: String, keyword: String, completion: @escaping CompletionAny) {
         var params: [String: Any] = [:]
         params["part"] = "snippet"
         params["maxResults"] = 20
+        params["q"] = keyword
         params["nextPageToken"] = nextPageToken
         params["type"] = "video"
         params["key"] = Session.shared.apiKey

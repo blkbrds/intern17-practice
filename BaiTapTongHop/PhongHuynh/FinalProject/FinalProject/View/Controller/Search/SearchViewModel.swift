@@ -12,6 +12,13 @@ final class SearchViewModel {
 
     // MARK: Properties
     var searchsVideo: [Video] = []
+    var video: Video?
+
+    init() {}
+
+    init(video: Video) {
+        self.video = video
+    }
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
@@ -37,8 +44,19 @@ final class SearchViewModel {
         })
     }
 
-    func loadMoreSearchVideoAPI(nextPageToken: String, completion: @escaping APICompletion) {
-        VideoService.loadMoreSearchAPI(nextPageToken: nextPageToken, completion: { items, error in
+    func getNextPageToken() -> String {
+        guard let pagetoken = video?.pagetoken else { return "" }
+        return pagetoken
+    }
+
+    func loadMoreSearchVideoAPI(nextPageToken: String? = nil, keyword: String, completion: @escaping APICompletion) {
+        var pagetoken = ""
+        if let nextPageToken = nextPageToken {
+            pagetoken = nextPageToken
+        } else {
+            pagetoken = getNextPageToken()
+        }
+        VideoService.loadMoreSearchAPI(nextPageToken: pagetoken, keyword: keyword, completion: { items, error in
             if let error = error {
                 completion(.failure(error))
             } else if let items = items as? [Video] {
