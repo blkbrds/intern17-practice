@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Session.shared.apiKey = "AIzaSyDT93mvJqcfTjvqrRW_b5eEbVJX2gW2h_8"
+        Session.shared.apiKey = "AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
             } else {
@@ -64,9 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         config.deleteRealmIfMigrationNeeded = true
-            // Set this as the configuration used for the default Realm
             Realm.Configuration.defaultConfiguration = config
-        //    print (Realm.Configuration.defaultConfiguration.fileURL ?? "")
     }
 
     func setTabbar() {

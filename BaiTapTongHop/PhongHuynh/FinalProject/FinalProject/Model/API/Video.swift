@@ -40,7 +40,6 @@ final class Video: Object, Mappable {
         } else {
             id <- map["id.videoId"]
         }
-        pagetoken <- map["nextPageToken"]
         title <- map["snippet.title"]
         descriptionn <- map["snippet.description"]
         imageURL <- map["snippet.thumbnails.medium.url"]
