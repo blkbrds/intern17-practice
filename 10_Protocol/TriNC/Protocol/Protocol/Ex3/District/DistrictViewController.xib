@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DistrictViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="districtsButtons" destination="ru3-qm-Cvv" collectionClass="NSMutableArray" id="pwa-or-GvZ"/>
+                <outletCollection property="districtsButtons" destination="96I-De-pAW" collectionClass="NSMutableArray" id="XSc-Na-beU"/>
+                <outletCollection property="districtsButtons" destination="Alz-pB-p3K" collectionClass="NSMutableArray" id="9tc-cX-MDn"/>
+                <outletCollection property="districtsButtons" destination="iTq-IS-wnf" collectionClass="NSMutableArray" id="qfM-1o-AfP"/>
+                <outletCollection property="districtsButtons" destination="6NP-dc-Wko" collectionClass="NSMutableArray" id="Riu-WF-ifw"/>
+                <outletCollection property="districtsButtons" destination="Rjw-Ot-lAg" collectionClass="NSMutableArray" id="oJW-qP-QcS"/>
+                <outletCollection property="districtsButtons" destination="Ruo-Ff-6Ty" collectionClass="NSMutableArray" id="nt7-eH-V6W"/>
+                <outletCollection property="districtsButtons" destination="BUD-89-JZm" collectionClass="NSMutableArray" id="KHP-Ne-buo"/>
+                <outletCollection property="districtsButtons" destination="eel-5e-Kmd" collectionClass="NSMutableArray" id="T0b-tm-avq"/>
+                <outletCollection property="districtsButtons" destination="lzw-Nh-eAQ" collectionClass="NSMutableArray" id="tvC-G4-K7l"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ihO-Eq-H4h">
+                    <rect key="frame" x="20" y="144" width="374" height="490"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru3-qm-Cvv">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District1"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="touchUpInside" id="mjc-qQ-lmr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96I-De-pAW">
+                            <rect key="frame" x="0.0" y="51" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District2"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="touchUpInside" id="CxM-LT-2NP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alz-pB-p3K">
+                            <rect key="frame" x="0.0" y="102" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District3"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="touchUpInside" id="nhU-Ur-DGg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTq-IS-wnf">
+                            <rect key="frame" x="0.0" y="153" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District4"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="editingChanged" id="j6h-66-5Yq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NP-dc-Wko">
+                            <rect key="frame" x="0.0" y="204" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District5"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="touchUpInside" id="6Sh-su-FzX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjw-Ot-lAg">
+                            <rect key="frame" x="0.0" y="255" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District6"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="touchUpInside" id="imG-bf-LSD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruo-Ff-6Ty">
+                            <rect key="frame" x="0.0" y="306" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District7"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="touchUpInside" id="whO-dP-E2b"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUD-89-JZm">
+                            <rect key="frame" x="0.0" y="357" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District8"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="touchUpInside" id="dkX-8s-rdv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eel-5e-Kmd">
+                            <rect key="frame" x="0.0" y="408" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District9"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="touchUpInside" id="hQ8-2k-wjy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzw-Nh-eAQ">
+                            <rect key="frame" x="0.0" y="459" width="374" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="District10"/>
+                            <connections>
+                                <action selector="changweColor:" destination="-1" eventType="touchUpInside" id="cau-EZ-vGF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ihO-Eq-H4h" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="87b-MV-kqN"/>
+                <constraint firstItem="ihO-Eq-H4h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="G3H-ea-DYJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ihO-Eq-H4h" secondAttribute="trailing" constant="20" id="gTa-0o-PNd"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

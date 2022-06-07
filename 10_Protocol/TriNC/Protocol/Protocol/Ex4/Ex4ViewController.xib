@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Ex4ViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="uNg-oJ-gL9" id="rxa-33-Pjo"/>
+                <outlet property="searchBar" destination="Hdh-rO-L1O" id="WC9-Vy-5jp"/>
+                <outlet property="textView" destination="jNG-Hb-pTb" id="IrG-2G-MSK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Hdh-rO-L1O">
+                    <rect key="frame" x="0.0" y="54" width="318" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNg-oJ-gL9">
+                    <rect key="frame" x="328" y="63" width="76" height="33.5"/>
+                    <color key="backgroundColor" systemColor="tintColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="cancelTouchUpInside:" destination="-1" eventType="touchUpInside" id="X5n-6r-Id7"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-Hb-pTb">
+                    <rect key="frame" x="0.0" y="105" width="414" height="757"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="uNg-oJ-gL9" firstAttribute="centerY" secondItem="Hdh-rO-L1O" secondAttribute="centerY" id="5tD-FI-Fam"/>
+                <constraint firstItem="Hdh-rO-L1O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6EM-Qw-EEe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jNG-Hb-pTb" secondAttribute="bottom" id="92n-1x-kVI"/>
+                <constraint firstItem="Hdh-rO-L1O" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="KP8-hv-6zq"/>
+                <constraint firstItem="uNg-oJ-gL9" firstAttribute="leading" secondItem="Hdh-rO-L1O" secondAttribute="trailing" constant="10" id="Kgv-xC-aJc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uNg-oJ-gL9" secondAttribute="trailing" constant="10" id="S3j-dZ-rZK"/>
+                <constraint firstItem="jNG-Hb-pTb" firstAttribute="top" secondItem="Hdh-rO-L1O" secondAttribute="bottom" id="XgI-Jd-6Pt"/>
+                <constraint firstItem="jNG-Hb-pTb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="oaP-1r-F5K"/>
+                <constraint firstItem="jNG-Hb-pTb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="w7G-W2-NQH"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
