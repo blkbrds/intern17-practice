@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>Zoe</string>
+		<string>Shaw</string>
+		<string>Kirean</string>
+		<string>Bukazo</string>
+		<string>Tyrone</string>
+	</array>
+	<array>
+		<string>Tri</string>
+		<string>Nhi</string>
+		<string>Quynh</string>
+		<string>Tuan</string>
+		<string>Huong</string>
+	</array>
+	<array>
+		<string>Dinh</string>
+		<string>Van</string>
+		<string>Ha</string>
+	</array>
+</array>
+</plist>
