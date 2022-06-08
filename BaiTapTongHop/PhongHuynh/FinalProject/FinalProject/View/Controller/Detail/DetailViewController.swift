@@ -66,9 +66,9 @@ final class DetailViewController: UIViewController {
             let realm = try Realm()
             guard let id = viewModel?.video?.id else { return }
             if realm.objects(Video.self).filter("id = %@ ", id).toArray(ofType: Video.self).first != nil {
-                favoriteButton.setImage(#imageLiteral(resourceName: "iconsfavorite-24"), for: .normal)
+                favoriteButton.setImage(#imageLiteral(resourceName: "icon"), for: .normal)
             } else {
-                favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite-24"), for: .normal)
+                favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite"), for: .normal)
             }
         } catch {
         }
@@ -81,9 +81,9 @@ final class DetailViewController: UIViewController {
     // MARK: - IBActions
     @IBAction private func favoriteButtonTouchUpInside(_ sender: Any) {
         if viewModel?.checkAddVideoFavorite() == true {
-            favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite-24"), for: .normal)
+            favoriteButton.setImage(#imageLiteral(resourceName: "icons8-favorite"), for: .normal)
         } else {
-            favoriteButton.setImage(#imageLiteral(resourceName: "iconsfavorite-24"), for: .normal)
+            favoriteButton.setImage(#imageLiteral(resourceName: "icon"), for: .normal)
         }
     }
 }

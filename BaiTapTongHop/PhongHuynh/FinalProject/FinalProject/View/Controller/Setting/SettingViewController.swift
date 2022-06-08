@@ -29,6 +29,7 @@ final class SettingViewController: UIViewController {
         tableView.delegate = self
     }
 
+    // MARK: - IBActions
     @IBAction private func exitButtonTouchUpInside(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

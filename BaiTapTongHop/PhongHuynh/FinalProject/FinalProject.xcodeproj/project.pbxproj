@@ -409,10 +409,10 @@
 				CB5447A92831F7A700085BDC /* ProfileCell.swift */,
 				CB5447AA2831F7A700085BDC /* ProfileCell.xib */,
 				CB7AF6392835DC2500138BB2 /* ProfileCellViewModel.swift */,
-				CBA09C8828447AED005D6BEF /* LogOutCell.swift */,
-				CBA09C8928447AED005D6BEF /* LogOutCell.xib */,
 				CBB7C73628506005008E9449 /* InformationProfileCell.swift */,
 				CBB7C73728506005008E9449 /* InformationProfileCell.xib */,
+				CBA09C8828447AED005D6BEF /* LogOutCell.swift */,
+				CBA09C8928447AED005D6BEF /* LogOutCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";

@@ -25,32 +25,25 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNc-ZG-AZG">
-                        <rect key="frame" x="5" y="41" width="40" height="30"/>
+                        <rect key="frame" x="10" y="51.5" width="197" height="41"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="2p8-bQ-VMz"/>
-                            <constraint firstAttribute="height" constant="30" id="bPd-qf-qwa"/>
+                            <constraint firstAttribute="width" constant="197" id="gXl-We-Ouq"/>
+                            <constraint firstAttribute="height" constant="41" id="y5w-4d-hYN"/>
                         </constraints>
-                        <state key="normal" image="icons8-shutdown-16"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                        <state key="normal" title="Đăng xuất tài khoản" image="icons8-shutdown-16"/>
                         <connections>
                             <action selector="logoutButtonTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="h7c-NN-hfF"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng xuất tài khoản" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYl-0l-cOK">
-                        <rect key="frame" x="55" y="45.5" width="151.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="NYl-0l-cOK" firstAttribute="centerY" secondItem="DNc-ZG-AZG" secondAttribute="centerY" id="4qf-37-i9O"/>
                     <constraint firstItem="bAZ-kG-2Mb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4ue-x4-bju"/>
                     <constraint firstItem="bAZ-kG-2Mb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6Ch-ra-QJo"/>
+                    <constraint firstItem="DNc-ZG-AZG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7A2-cf-TIn"/>
                     <constraint firstAttribute="trailing" secondItem="bAZ-kG-2Mb" secondAttribute="trailing" id="PSz-WD-RNu"/>
-                    <constraint firstItem="DNc-ZG-AZG" firstAttribute="top" secondItem="bAZ-kG-2Mb" secondAttribute="bottom" constant="40" id="eaB-aI-NzF"/>
-                    <constraint firstItem="DNc-ZG-AZG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="hDw-co-OtG"/>
-                    <constraint firstItem="NYl-0l-cOK" firstAttribute="leading" secondItem="DNc-ZG-AZG" secondAttribute="trailing" constant="10" id="r3W-ob-LyZ"/>
+                    <constraint firstItem="DNc-ZG-AZG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vRP-K9-hY4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -28,6 +28,7 @@ final class ProfileViewController: UIViewController {
     private func configTableView() {
         tableView.register(ProfileCell.self)
         tableView.register(LogOutCell.self)
+        tableView.register(InformationProfileCell.self)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -69,7 +70,7 @@ extension ProfileViewController: UITableViewDataSource {
         case .profile:
             return 150
         case .information:
-            return 600
+            return 400
         case .logout:
             return 200
         }
