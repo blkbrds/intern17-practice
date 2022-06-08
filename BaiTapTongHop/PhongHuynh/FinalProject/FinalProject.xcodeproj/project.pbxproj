@@ -76,6 +76,8 @@
 		CBB7C72428504985008E9449 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7C72228504985008E9449 /* SettingViewController.swift */; };
 		CBB7C72528504985008E9449 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB7C72328504985008E9449 /* SettingViewController.xib */; };
 		CBB7C72B2850499D008E9449 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7C72A2850499D008E9449 /* SettingViewModel.swift */; };
+		CBB7C73828506005008E9449 /* InformationProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7C73628506005008E9449 /* InformationProfileCell.swift */; };
+		CBB7C73928506005008E9449 /* InformationProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB7C73728506005008E9449 /* InformationProfileCell.xib */; };
 		CBB83429283B14A9003C50E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB83427283B14A9003C50E4 /* SearchViewController.swift */; };
 		CBB8342A283B14A9003C50E4 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB83428283B14A9003C50E4 /* SearchViewController.xib */; };
 		CBB8342E283B1863003C50E4 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8342D283B1863003C50E4 /* SearchViewModel.swift */; };
@@ -84,8 +86,6 @@
 		CBB83439283B28CD003C50E4 /* SearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB83438283B28CD003C50E4 /* SearchCellViewModel.swift */; };
 		CBCC7E78282A588100DBD668 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC7E76282A588100DBD668 /* HomeViewController.swift */; };
 		CBCC7E79282A588100DBD668 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCC7E77282A588100DBD668 /* HomeViewController.xib */; };
-		CBCC7E8A282A598000DBD668 /* ShortsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC7E88282A598000DBD668 /* ShortsViewController.swift */; };
-		CBCC7E8B282A598000DBD668 /* ShortsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCC7E89282A598000DBD668 /* ShortsViewController.xib */; };
 		CBCC7E92282A59E000DBD668 /* ChanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC7E90282A59E000DBD668 /* ChanelViewController.swift */; };
 		CBCC7E93282A59E000DBD668 /* ChanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCC7E91282A59E000DBD668 /* ChanelViewController.xib */; };
 		CBE179CD2837797E0018DA73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBE179CC2837797E0018DA73 /* GoogleService-Info.plist */; };
@@ -179,6 +179,8 @@
 		CBB7C72228504985008E9449 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CBB7C72328504985008E9449 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		CBB7C72A2850499D008E9449 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		CBB7C73628506005008E9449 /* InformationProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationProfileCell.swift; sourceTree = "<group>"; };
+		CBB7C73728506005008E9449 /* InformationProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationProfileCell.xib; sourceTree = "<group>"; };
 		CBB83427283B14A9003C50E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CBB83428283B14A9003C50E4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		CBB8342D283B1863003C50E4 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -187,8 +189,6 @@
 		CBB83438283B28CD003C50E4 /* SearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModel.swift; sourceTree = "<group>"; };
 		CBCC7E76282A588100DBD668 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CBCC7E77282A588100DBD668 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		CBCC7E88282A598000DBD668 /* ShortsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsViewController.swift; sourceTree = "<group>"; };
-		CBCC7E89282A598000DBD668 /* ShortsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortsViewController.xib; sourceTree = "<group>"; };
 		CBCC7E90282A59E000DBD668 /* ChanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanelViewController.swift; sourceTree = "<group>"; };
 		CBCC7E91282A59E000DBD668 /* ChanelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChanelViewController.xib; sourceTree = "<group>"; };
 		CBE179CC2837797E0018DA73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -317,7 +317,6 @@
 				CB5447A12831F65100085BDC /* Profile */,
 				CB5447B12831FD5600085BDC /* Favorite */,
 				CBCC7E8E282A59B600DBD668 /* Chanel */,
-				CBCC7E87282A591400DBD668 /* Shorts */,
 				CB9BFCD82828F43B00F08166 /* Detail */,
 				CB9BFCD72828F34700F08166 /* Home */,
 				CB9BFCD62828F34100F08166 /* Login */,
@@ -412,6 +411,8 @@
 				CB7AF6392835DC2500138BB2 /* ProfileCellViewModel.swift */,
 				CBA09C8828447AED005D6BEF /* LogOutCell.swift */,
 				CBA09C8928447AED005D6BEF /* LogOutCell.xib */,
+				CBB7C73628506005008E9449 /* InformationProfileCell.swift */,
+				CBB7C73728506005008E9449 /* InformationProfileCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -553,15 +554,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		CBCC7E87282A591400DBD668 /* Shorts */ = {
-			isa = PBXGroup;
-			children = (
-				CBCC7E88282A598000DBD668 /* ShortsViewController.swift */,
-				CBCC7E89282A598000DBD668 /* ShortsViewController.xib */,
-			);
-			path = Shorts;
-			sourceTree = "<group>";
-		};
 		CBCC7E8E282A59B600DBD668 /* Chanel */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,13 +657,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBCC7E8B282A598000DBD668 /* ShortsViewController.xib in Resources */,
 				CBA09C8B28447AED005D6BEF /* LogOutCell.xib in Resources */,
 				CBCC7E93282A59E000DBD668 /* ChanelViewController.xib in Resources */,
 				CB5447B52831FD8D00085BDC /* FavoriteViewController.xib in Resources */,
 				CBB5C13A282CA71C00599DBD /* DetailViewController.xib in Resources */,
 				CB80E381283361D50051FA29 /* FeaturedCell.xib in Resources */,
 				CB77C5332832029900CA4C58 /* DetailCell.xib in Resources */,
+				CBB7C73928506005008E9449 /* InformationProfileCell.xib in Resources */,
 				CBB5C133282CA56100599DBD /* LoginViewController.xib in Resources */,
 				CB5447AC2831F7A700085BDC /* ProfileCell.xib in Resources */,
 				CBF4E32D283349E500E7EECC /* FeaturedVideoHomeCell.xib in Resources */,
@@ -811,6 +803,7 @@
 				CB5447AB2831F7A700085BDC /* ProfileCell.swift in Sources */,
 				6AF60D082313B31200F5CBA2 /* App.swift in Sources */,
 				6AF60D802313B56B00F5CBA2 /* Session.swift in Sources */,
+				CBB7C73828506005008E9449 /* InformationProfileCell.swift in Sources */,
 				CB2EAA012833A07200E017E4 /* NominationCellViewModel.swift in Sources */,
 				CBF4E32C283349E500E7EECC /* FeaturedVideoHomeCell.swift in Sources */,
 				CB7AF63E2835DC4100138BB2 /* ProfileViewModel.swift in Sources */,
@@ -825,7 +818,6 @@
 				CB77C5322832029900CA4C58 /* DetailCell.swift in Sources */,
 				6AF613BF2313C13A00F5CBA2 /* ScrollView.swift in Sources */,
 				CBAF0B69283494AC006B59A7 /* DetailViewModel.swift in Sources */,
-				CBCC7E8A282A598000DBD668 /* ShortsViewController.swift in Sources */,
 				CB5447B42831FD8D00085BDC /* FavoriteViewController.swift in Sources */,
 				CB2EA9DB283396A900E017E4 /* NetWorking.swift in Sources */,
 				CB8A4B55283DC2F900F97D77 /* FavoriteCellViewModel.swift in Sources */,

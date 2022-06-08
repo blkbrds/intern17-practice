@@ -21,6 +21,7 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        configNavigation()
     }
 
     // MARK: - Private functions
@@ -29,6 +30,13 @@ final class ProfileViewController: UIViewController {
         tableView.register(LogOutCell.self)
         tableView.delegate = self
         tableView.dataSource = self
+    }
+
+    private func configNavigation() {
+        title = "Profile"
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }
 
@@ -45,7 +53,9 @@ extension ProfileViewController: UITableViewDataSource {
         switch cellType {
         case .profile:
             let cell = tableView.dequeue(ProfileCell.self)
-            cell.delegate = self
+            return cell
+        case .information:
+            let cell = tableView.dequeue(InformationProfileCell.self)
             return cell
         case .logout:
             let cell = tableView.dequeue(LogOutCell.self)
@@ -58,8 +68,10 @@ extension ProfileViewController: UITableViewDataSource {
         switch cellType {
         case .profile:
             return 150
+        case .information:
+            return 600
         case .logout:
-            return 350
+            return 200
         }
     }
 }
@@ -67,16 +79,4 @@ extension ProfileViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 @available(iOS 13.0, *)
 extension ProfileViewController: UITableViewDelegate {
-}
-
-// MARK: - ProfileCellDelegate
-@available(iOS 13.0, *)
-extension ProfileViewController: ProfileCellDelegate {
-
-    func cell(cell: ProfileCell, needsPerfom actions: ProfileCell.Action) {
-        switch actions {
-        case .cancel:
-            dismiss(animated: true, completion: nil)
-        }
-    }
 }

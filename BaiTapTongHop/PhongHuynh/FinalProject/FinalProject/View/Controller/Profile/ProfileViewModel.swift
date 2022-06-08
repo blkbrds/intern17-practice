@@ -13,6 +13,7 @@ final class ProfileViewModel {
     // MARK: - Define
     enum CellType: Int {
         case profile = 0
+        case information
         case logout
     }
 

@@ -71,16 +71,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let homeVC = HomeViewController()
         let homeNavi = UINavigationController(rootViewController: homeVC)
         homeVC.tabBarItem = UITabBarItem(title: "Trang chủ", image: #imageLiteral(resourceName: "icons8-home-24"), tag: 0)
-        let shortVC = ShortsViewController()
-        let shortNavi = UINavigationController(rootViewController: shortVC)
-        shortNavi.tabBarItem = UITabBarItem(title: "Shorts", image: #imageLiteral(resourceName: "icons8-short-film-24"), tag: 1)
         let chanelVC = ChanelViewController()
         let chanelNavi = UINavigationController(rootViewController: chanelVC)
-        chanelNavi.tabBarItem = UITabBarItem(title: "Kênh đăng ký", image: #imageLiteral(resourceName: "icons8-video-playlist-16"), tag: 2)
+        chanelNavi.tabBarItem = UITabBarItem(title: "Kênh đăng ký", image: #imageLiteral(resourceName: "icons8-video-playlist-16"), tag: 1)
         let libraryVC = FavoriteViewController()
         let libraryNavi = UINavigationController(rootViewController: libraryVC)
-        libraryNavi.tabBarItem = UITabBarItem(title: "Thư viện", image: #imageLiteral(resourceName: "icons8-video-playlist-24"), tag: 3)
-        tabbarController.setViewControllers([homeNavi, shortNavi, chanelNavi, libraryNavi], animated: true)
+        libraryNavi.tabBarItem = UITabBarItem(title: "Thư viện", image: #imageLiteral(resourceName: "icons8-video-playlist-24"), tag: 2)
+        let profileVC = ProfileViewController()
+        let profileNavi = UINavigationController(rootViewController: profileVC)
+        profileNavi.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "icons8-person-30"), tag: 3)
+        tabbarController.setViewControllers([homeNavi, chanelNavi, libraryNavi, profileNavi], animated: true)
         tabbarController.tabBar.tintColor = .white
         UITabBar.appearance().barTintColor = UIColor.black
     }

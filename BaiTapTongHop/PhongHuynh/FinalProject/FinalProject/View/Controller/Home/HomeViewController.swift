@@ -122,7 +122,6 @@ final class HomeViewController: UIViewController {
     // MARK: - Objc functions
     @objc private func leftProfileAction() {
         let vc = ProfileViewController()
-        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
 
