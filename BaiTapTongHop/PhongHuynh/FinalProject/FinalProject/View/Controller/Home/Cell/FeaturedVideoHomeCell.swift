@@ -28,6 +28,7 @@ final class FeaturedVideoHomeCell: UITableViewCell {
     var viewModel: FeaturedVideoHomeCellViewModel? {
         didSet {
             collectionView.reloadData()
+            startTimer()
         }
     }
     weak var delegate: FeaturedVideoHomeCellDelegate?
@@ -47,6 +48,21 @@ final class FeaturedVideoHomeCell: UITableViewCell {
         collectionView.register(FeaturedCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+
+    private func startTimer() {
+        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true)
+    }
+
+    // MARK: - Objc funtions
+    @objc private func scrollToNextCell() {
+        let cellSize = CGSize(width: UIScreen.main.bounds.width, height: 250)
+        let contentOffset = collectionView.contentOffset
+        if collectionView.contentSize.width <= collectionView.contentOffset.x + cellSize.width {
+            collectionView.scrollRectToVisible(CGRect(x: 0, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
+        } else {
+            collectionView.scrollRectToVisible(CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
+        }
     }
 }
 
