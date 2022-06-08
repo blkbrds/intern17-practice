@@ -127,6 +127,9 @@ final class HomeViewController: UIViewController {
     }
 
     @objc private func rightSettingAction() {
+        let vc = SettingViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
 
     @objc private func rightSearchAction() {

@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Session.shared.apiKey = "AIzaSyAyq-43C82gfhfPg7q3I3QrOSLR152V_40"
+        Session.shared.apiKey = "AIzaSyBZUApeMD5NKoO1MTLgT6ns83f_r2gwBjs"
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
             } else {

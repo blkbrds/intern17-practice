@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="FinalProject" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="odt-tX-ufS" id="JXb-K2-ql7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUB-CO-KHh">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="71.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Via-IN-J4I">
+                            <rect key="frame" x="10" y="30" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="vDL-PD-yaF"/>
+                                <constraint firstAttribute="width" constant="35" id="zia-ut-7WN"/>
+                            </constraints>
+                            <state key="normal" image="icons8-close-window-48"/>
+                            <connections>
+                                <action selector="exitButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="61m-kJ-lVB"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cài đặt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nst-is-d3c">
+                            <rect key="frame" x="65" y="31" width="86" height="33.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Via-IN-J4I" firstAttribute="leading" secondItem="nUB-CO-KHh" secondAttribute="leading" constant="10" id="8kD-K6-OpS"/>
+                        <constraint firstItem="nst-is-d3c" firstAttribute="centerY" secondItem="Via-IN-J4I" secondAttribute="centerY" id="HKH-il-i7f"/>
+                        <constraint firstItem="Via-IN-J4I" firstAttribute="top" secondItem="nUB-CO-KHh" secondAttribute="top" constant="30" id="Sc0-VL-Q8M"/>
+                        <constraint firstItem="nst-is-d3c" firstAttribute="leading" secondItem="Via-IN-J4I" secondAttribute="trailing" constant="20" id="cuP-Ex-rsd"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="odt-tX-ufS">
+                    <rect key="frame" x="0.0" y="71.5" width="414" height="824.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nUB-CO-KHh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="98N-Iu-KwB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nUB-CO-KHh" secondAttribute="trailing" id="BDI-OM-b2L"/>
+                <constraint firstItem="nUB-CO-KHh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lbu-nf-GPT"/>
+                <constraint firstItem="odt-tX-ufS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LpO-dS-Mu7"/>
+                <constraint firstItem="odt-tX-ufS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NOl-bH-4d1"/>
+                <constraint firstItem="nUB-CO-KHh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YhV-bJ-XyO"/>
+                <constraint firstItem="odt-tX-ufS" firstAttribute="top" secondItem="nUB-CO-KHh" secondAttribute="bottom" id="oLt-9S-n7h"/>
+                <constraint firstItem="odt-tX-ufS" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="yl9-p7-jgi"/>
+            </constraints>
+            <point key="canvasLocation" x="-168.11594202898553" y="55.580357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icons8-close-window-48" width="48" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
