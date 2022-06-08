@@ -78,7 +78,7 @@ print("Nghiệm của pt (x,y): (\(ptbn2An.x),\(ptbn2An.y))")
 
 // bài tập 4.1 và 4.2
 
-func Fibonacci(_ n: Int) -> Int {
+func fibonacci(_ n: Int) -> Int {
     var a: Int = 0
     var b: Int = 1
     var next: Int = 0
@@ -93,22 +93,22 @@ func Fibonacci(_ n: Int) -> Int {
     }
     return next
 }
-func Sum(_ n: Int) -> Int {
+func sum(_ n: Int) -> Int {
     var sum: Int = 0
     for i in 1...n {
-        sum += Fibonacci(i)
-        print("số thứ \(i) là: \(Fibonacci(i))")
+        sum += fibonacci(i)
+        print("số thứ \(i) là: \(fibonacci(i))")
     }
     return sum
 }
 
-let tong: Int = Sum(10)
+let tong: Int = sum(10)
 print("tổng 10 số là \(tong)")
 
 
 // bài tập 4.3
 
-func f(x: Float, n: Int) -> Float{
+func tinhSinCos(x: Float, n: Int) -> Float{
     var a: Int = 0
     if n%2 == 0{
         a = 1
@@ -126,8 +126,8 @@ func f(x: Float, n: Int) -> Float{
 var x: Float = 0
 var sin: Float = 0
 var n: Int = 0
-while abs(f(x: x, n: n)) >  0.00001{
-    sin += f(x: x, n: n)
+while abs(tinhSinCos(x: x, n: n)) >  0.00001{
+    sin += tinhSinCos(x: x, n: n)
     n += 1
 }
 print("Gia tri sin can tinh: \(sin)")
@@ -135,40 +135,44 @@ print("Gia tri cos can tinh: \((1-sin*sin).squareRoot())")
 
 // Bài tập 4.4
 
-func soHanhPhuc(_ a: Int, _ b: Int) {
-    var sum: Int = 0
-    var check: Bool = false
-    switch a{
-    case 10..<100:
-        sum += a/10 * a/10 + a%10 * a % 10
-    case 100..<1000:
-        sum += a/100 * a/100 + (a%100)/10 * (a%100)/10 + a%10 * a%10
-    case 1000..<10000:
-        sum += a/1000 * a/1000 + (a%1000)/100 * (a%1000)/100 + (a%100)/10 * (a%100)/10 + a%10 * a%10
-    default:
-        print("")
+func soHanhPhuc(_ num: Int) -> Bool {
+    var number = num
+    var arr: [Int] = []
+    while number > 0 {
+        var surplus: Int = 0
+        surplus = number % 10
+        arr.append(surplus)
+        number = number / 10
     }
-    if sum>9 {
-        soHanhPhuc(sum, b)
-    } else if sum > 1 && sum < 10 {
+    if arr.count % 2 == 0 {
+        var presum: Int = 0
+        var tailsum: Int = 0
+        for i in 0..<arr.count  {
+            if i < arr.count / 2 {
+                presum += arr[i]
+            } else {
+                tailsum += arr[i]
+            }
+        }
+        return presum == tailsum
     } else {
-        print("\(b) là số hạnh phúc")
+        return false
     }
 }
-
-var happyNumber: Int = 44
-for i in 10..<10000{
-    soHanhPhuc(i, i)
+for i in 1..<10000 {
+    if soHanhPhuc(i) {
+        print(i)
+    }
 }
 
 // bài tập 5
 
 
-func timChuoi(_ str: String) -> Int{
+func timChuoi(_ str: String) -> Int {
     let character = Array(str)
     var count: Int = 0
-    for i in 0..<character.count{
-        if character[i] == "a" && character[i+1] == "b"{
+    for i in 0..<character.count {
+        if character[i] == "a" && character[i+1] == "b" {
             count += 1
         }
     }
@@ -177,10 +181,9 @@ func timChuoi(_ str: String) -> Int{
 let str1: String = "abaaaabbbabab"
 print("Số lần xuất hiện của ab là: \(timChuoi(str1))")
 
-
 // bài tập 6
 
-let arr: [Int] = [0,1,2,3,4,5,6,7,8,9]
+let arr: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 let arr1: [Int] = arr.shuffled()
 for c in arr1{
     print(c)
@@ -188,26 +191,20 @@ for c in arr1{
 
 //bài tập 7
 
-func arrayReplace(inputArray: [Int], elemToReplace: Int, substitutionElem:Int) -> [Int]{
+func arrayReplace(inputArray: [Int], elemToReplace: Int, substitutionElem:Int) -> [Int] {
     var outputArray: [Int] = []
     for i in inputArray{
         if i != elemToReplace{
             outputArray.append(i)
-        }else{
+        } else {
             outputArray.append(substitutionElem)
         }
     }
     return outputArray
 }
 
-let inputArr: [Int] = [1,4,7,8,1]
+let inputArr: [Int] = [1, 4, 7, 8, 1]
 let elemToReplace: Int = 1
 let substitutionElem: Int = 3
 arrayReplace(inputArray: inputArr, elemToReplace: elemToReplace, substitutionElem: substitutionElem)
-print("replace all the occurrences of elemToReplace with substitutionElem. \(arrayReplace(inputArray: inputArr, elemToReplace: elemToReplace, substitutionElem: substitutionElem))")
-
-
-
-
-
-
+print("Mảng mới là: \(arrayReplace(inputArray: inputArr, elemToReplace: elemToReplace, substitutionElem: substitutionElem))")
