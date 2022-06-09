@@ -14,12 +14,19 @@ final class DetailCell: UITableViewCell {
     @IBOutlet private weak var youtubeVideoImageView: UIImageView!
     @IBOutlet private weak var youtubeVideoLabel: UILabel!
 
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    // MARK: - Properties
+    var viewModel: DetailCellViewModel? {
+        didSet {
+            updateView()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    // MARK: - Private functions
+    private func updateView() {
+        viewModel?.updateImageView(completion: { [weak self] (image) in
+            guard let this = self else { return }
+            this.youtubeVideoImageView.image = image
+        })
+        youtubeVideoLabel.text = viewModel?.video.title
     }
 }

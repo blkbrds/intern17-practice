@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
 final class FavoriteCell: UITableViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet private weak var deleteButton: UIButton!
     @IBOutlet private weak var favoriteVideoImageView: UIImageView!
     @IBOutlet private weak var titleFavoriteVideoLabel: UILabel!
 
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    // MARK: - Properties
+    var viewModel: FavoriteCellViewModel? {
+        didSet {
+            updateView()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    // MARK: - Private functions
+    private func updateView() {
+        viewModel?.updateImageView(completion: { [weak self] (image) in
+            guard let this = self else { return }
+            this.favoriteVideoImageView.image = image
+        })
+        titleFavoriteVideoLabel.text = viewModel?.video.title
     }
-    
 }

@@ -1,5 +1,8 @@
 import UIKit
+import GoogleSignIn
+import SwiftUtils
 
+@available(iOS 13.0, *)
 final class LoginViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -9,7 +12,6 @@ final class LoginViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configUI()
     }
 
@@ -21,5 +23,18 @@ final class LoginViewController: UIViewController {
         loginGmailButton.layer.cornerRadius = 8
         loginGmailButton.layer.borderWidth = 0.5
         loginGmailButton.layer.borderColor = UIColor.white.cgColor
+    }
+
+    // MARK: - IBActions
+    @IBAction private func loginWithGmailButtonTouchUpInside(_ sender: Any) {
+        LoginService.login(controller: self) { [weak self] (result) in
+            guard let this = self else { return }
+            switch result {
+            case .success:
+                AppDelegate.shared.setroot(with: .tabbar)
+            case .failure(let error):
+                this.alert(title: "Error", msg: error.localizedDescription, handler: nil)
+            }
+        }
     }
 }

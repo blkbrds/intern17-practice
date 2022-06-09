@@ -21,8 +21,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Htp-0r-qZn">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -30,7 +30,7 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Htp-0r-qZn" secondAttribute="trailing" id="6dE-Mo-z3Y"/>
                 <constraint firstItem="Htp-0r-qZn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RV2-RF-eF2"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Htp-0r-qZn" secondAttribute="bottom" id="UfP-sR-Oqq"/>
+                <constraint firstAttribute="bottom" secondItem="Htp-0r-qZn" secondAttribute="bottom" id="UfP-sR-Oqq"/>
                 <constraint firstItem="Htp-0r-qZn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fQT-9T-bzN"/>
             </constraints>
             <point key="canvasLocation" x="142" y="131"/>

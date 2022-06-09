@@ -8,10 +8,31 @@
 
 import UIKit
 
+// MARK: - NominationVideoCellDelegate
+protocol NominationVideoCellDelegate: class {
+
+    func controller(controller: NominationVideoCell, needsPerfom actions: NominationVideoCell.Action)
+}
+
 final class NominationVideoCell: UITableViewCell {
 
+    // MARK: - Define
+    enum Action {
+        case moveToDetail(indexPath: IndexPath, type: HomeViewModel.CellType)
+    }
+
     // MARK: - IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var sectionLabel: UILabel!
+
+    // MARK: - Properties
+    var viewModel: NominationVideoCellViewModel? {
+        didSet {
+            collectionView.reloadData()
+            sectionLabel.text = viewModel?.type.title
+        }
+    }
+    weak var delegate: NominationVideoCellDelegate?
 
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -19,14 +40,9 @@ final class NominationVideoCell: UITableViewCell {
         configCollectionView()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
     // MARK: - Private functions
     private func configCollectionView() {
-        let nib = UINib(nibName: "NominationCell", bundle: Bundle.main)
-        collectionView.register(nib, forCellWithReuseIdentifier: "NominationCell")
+        collectionView.register(NominationCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -36,11 +52,13 @@ final class NominationVideoCell: UITableViewCell {
 extension NominationVideoCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.numberOfItems(section: section)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NominationCell", for: indexPath) as? NominationCell else { return UICollectionViewCell() }
+        let cell = collectionView.dequeue(NominationCell.self, forIndexPath: indexPath)
+        cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }
 }
@@ -48,7 +66,13 @@ extension NominationVideoCell: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension NominationVideoCell: UICollectionViewDelegateFlowLayout {
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width - (10 * 4)) / 3, height: 200)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate, let type = viewModel?.type {
+            delegate.controller(controller: self, needsPerfom: .moveToDetail(indexPath: indexPath, type: type))
         }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (UIScreen.main.bounds.width - (1 * 4)) / 2.2, height: 250)
+    }
 }

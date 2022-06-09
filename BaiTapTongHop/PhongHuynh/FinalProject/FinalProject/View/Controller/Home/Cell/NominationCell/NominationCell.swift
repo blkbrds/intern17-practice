@@ -14,8 +14,19 @@ final class NominationCell: UICollectionViewCell {
     @IBOutlet private weak var nominationVideoImageView: UIImageView!
     @IBOutlet private weak var nominationVideoLabel: UILabel!
 
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    // MARK: - Properties
+    var viewModel: NominationCellViewModel? {
+        didSet {
+            updateView()
+        }
+    }
+
+    // MARK: - Private funcitons
+    private func updateView() {
+        viewModel?.updateImageView(completion: { [weak self] (image) in
+            guard let this = self else { return }
+            this.nominationVideoImageView.image = image
+        })
+        nominationVideoLabel.text = viewModel?.video.title
     }
 }

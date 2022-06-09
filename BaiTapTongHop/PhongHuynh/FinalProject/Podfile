@@ -7,6 +7,7 @@ target 'FinalProject' do
   pod "GoogleSignIn"
   pod "AppAuth"
   pod "GTMAppAuth"
+  pod 'YoutubePlayer-in-WKWebView'
   
   # Architect
   pod 'MVVM-Swift', '1.1.0' # MVVM Architect for iOS Application.
@@ -24,8 +25,9 @@ target 'FinalProject' do
   pod 'SwiftUtils', '4.2', :inhibit_warnings => true
 
   # UI
-  pod 'SVProgressHUD', '2.2.5'
-
+  pod 'SVProgressHUD'
+#  , '2.2.5'
+  
   # Tool to enforce Swift style and conventions
   pod 'SwiftLint', '0.27.0'
 
