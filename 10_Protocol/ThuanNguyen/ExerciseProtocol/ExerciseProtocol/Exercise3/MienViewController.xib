@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MienViewController" customModule="DemoProtocol" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MienViewController" customModule="ExerciseProtocol" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="mienButton" destination="mmb-SB-IWK" collectionClass="NSMutableArray" id="HmE-50-E3g"/>
@@ -40,7 +40,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="gIs-pi-32c"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="yqq-tT-Z8t"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SO-lc-cas">
@@ -52,7 +52,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="x1G-fg-RPX"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="xP7-r0-PFl"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRE-Op-F5h">
@@ -64,7 +64,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="OfP-tt-P9p"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="8gs-EV-rmP"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Id5-fM-0eR">
@@ -76,7 +76,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="jdE-e8-ggD"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="7P4-Zz-S2W"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBa-XB-q2T">
@@ -88,7 +88,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="zH6-em-A0t"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="SD6-np-1l9"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hq-s5-mdi">
@@ -100,7 +100,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="VZs-4p-Yhb"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="ohe-BC-7dM"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eR4-lk-DSh">
@@ -112,7 +112,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="wgw-kj-EUY"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="CDS-rO-NX6"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpL-f4-rHp">
@@ -124,7 +124,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="Cgf-Pm-xM3"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="9an-If-5aD"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C0-FK-UVK">
@@ -136,7 +136,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="p5g-AU-nmf"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="AKN-50-w3q"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wY-7b-oPE">
@@ -148,7 +148,7 @@
                                 <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="8u6-mY-Yz0"/>
+                                <action selector="changeColor:" destination="-1" eventType="touchUpInside" id="hDx-Ld-j78"/>
                             </connections>
                         </button>
                     </subviews>

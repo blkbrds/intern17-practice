@@ -17,15 +17,12 @@ final class Location {
     }
 }
 protocol loacationDatasouce: class {
-    
     func getLocation() -> Location
 }
-
 final class DiaDiemViewController: UIViewController {
-
-    @IBOutlet weak var huyenLabel: UILabel!
-    @IBOutlet weak var tinhLabel: UILabel!
-    @IBOutlet weak var mienLabel: UILabel!
+    @IBOutlet private weak var huyenLabel: UILabel!
+    @IBOutlet private weak var tinhLabel: UILabel!
+    @IBOutlet private weak var mienLabel: UILabel!
     
     weak var datasource: loacationDatasouce?
     var location: Location = Location(mien: 0, tinh: 0, huyen: 0)
@@ -47,7 +44,7 @@ final class DiaDiemViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightButton
     }
     
-    @objc func rightAction() {
+    @objc private func rightAction() {
         let vc = MienViewController()
         vc.loacation = location
         self.navigationController?.pushViewController(vc, animated: true)

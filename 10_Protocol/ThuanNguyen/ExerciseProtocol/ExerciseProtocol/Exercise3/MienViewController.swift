@@ -52,7 +52,7 @@ final class MienViewController: UIViewController {
         }
     }
     
-    @IBAction private func changeColorButton(_ sender: UIButton) {
+    @IBAction private func changeColor(_ sender: UIButton) {
         changeColer(tag: sender.tag)
         loacation?.mien = sender.tag
     }
