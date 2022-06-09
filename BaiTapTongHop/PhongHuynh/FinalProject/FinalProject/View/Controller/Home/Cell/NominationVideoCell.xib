@@ -35,6 +35,9 @@
                                 <state key="normal" title="more" image="icons8-more-than-24">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8Su-2O-pbn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

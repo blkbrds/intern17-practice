@@ -55,6 +55,10 @@ final class HomeViewModel {
         return DetailViewModel(video: videos[indexPath.row])
     }
 
+    func viewModelForAllVideo(type: CellType) -> AllVideoViewModel {
+        return AllVideoViewModel(type: type)
+    }
+
     func loadVideoTrendingAPI(completion: @escaping APICompletion) {
         VideoService.loadVideoTrendingAPI { items, error  in
             if let error = error {

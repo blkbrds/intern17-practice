@@ -78,6 +78,9 @@
 		CBB7C72B2850499D008E9449 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7C72A2850499D008E9449 /* SettingViewModel.swift */; };
 		CBB7C73828506005008E9449 /* InformationProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7C73628506005008E9449 /* InformationProfileCell.swift */; };
 		CBB7C73928506005008E9449 /* InformationProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB7C73728506005008E9449 /* InformationProfileCell.xib */; };
+		CBB7DDBC2851DECC00D53E61 /* AllVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7DDBA2851DECC00D53E61 /* AllVideoViewController.swift */; };
+		CBB7DDBD2851DECC00D53E61 /* AllVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB7DDBB2851DECC00D53E61 /* AllVideoViewController.xib */; };
+		CBB7DDC52851E07E00D53E61 /* AllVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7DDC42851E07E00D53E61 /* AllVideoViewModel.swift */; };
 		CBB83429283B14A9003C50E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB83427283B14A9003C50E4 /* SearchViewController.swift */; };
 		CBB8342A283B14A9003C50E4 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB83428283B14A9003C50E4 /* SearchViewController.xib */; };
 		CBB8342E283B1863003C50E4 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8342D283B1863003C50E4 /* SearchViewModel.swift */; };
@@ -181,6 +184,9 @@
 		CBB7C72A2850499D008E9449 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		CBB7C73628506005008E9449 /* InformationProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationProfileCell.swift; sourceTree = "<group>"; };
 		CBB7C73728506005008E9449 /* InformationProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationProfileCell.xib; sourceTree = "<group>"; };
+		CBB7DDBA2851DECC00D53E61 /* AllVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVideoViewController.swift; sourceTree = "<group>"; };
+		CBB7DDBB2851DECC00D53E61 /* AllVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllVideoViewController.xib; sourceTree = "<group>"; };
+		CBB7DDC42851E07E00D53E61 /* AllVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVideoViewModel.swift; sourceTree = "<group>"; };
 		CBB83427283B14A9003C50E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CBB83428283B14A9003C50E4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		CBB8342D283B1863003C50E4 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -312,6 +318,7 @@
 		6AF60E252313C13600F5CBA2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CBB7DD962851CEA200D53E61 /* AllVideo */,
 				CBB7C72128504970008E9449 /* Setting */,
 				CBB83426283B147C003C50E4 /* Search */,
 				CB5447A12831F65100085BDC /* Profile */,
@@ -533,6 +540,16 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		CBB7DD962851CEA200D53E61 /* AllVideo */ = {
+			isa = PBXGroup;
+			children = (
+				CBB7DDBA2851DECC00D53E61 /* AllVideoViewController.swift */,
+				CBB7DDBB2851DECC00D53E61 /* AllVideoViewController.xib */,
+				CBB7DDC42851E07E00D53E61 /* AllVideoViewModel.swift */,
+			);
+			path = AllVideo;
+			sourceTree = "<group>";
+		};
 		CBB83426283B147C003C50E4 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +677,7 @@
 				CBA09C8B28447AED005D6BEF /* LogOutCell.xib in Resources */,
 				CBCC7E93282A59E000DBD668 /* ChanelViewController.xib in Resources */,
 				CB5447B52831FD8D00085BDC /* FavoriteViewController.xib in Resources */,
+				CBB7DDBD2851DECC00D53E61 /* AllVideoViewController.xib in Resources */,
 				CBB5C13A282CA71C00599DBD /* DetailViewController.xib in Resources */,
 				CB80E381283361D50051FA29 /* FeaturedCell.xib in Resources */,
 				CB77C5332832029900CA4C58 /* DetailCell.xib in Resources */,
@@ -801,6 +819,7 @@
 				6AF613B12313C13A00F5CBA2 /* CollectionViewHeaderView.swift in Sources */,
 				6AF60E1E2313B9C000F5CBA2 /* UIViewControllerExt.swift in Sources */,
 				CB5447AB2831F7A700085BDC /* ProfileCell.swift in Sources */,
+				CBB7DDC52851E07E00D53E61 /* AllVideoViewModel.swift in Sources */,
 				6AF60D082313B31200F5CBA2 /* App.swift in Sources */,
 				6AF60D802313B56B00F5CBA2 /* Session.swift in Sources */,
 				CBB7C73828506005008E9449 /* InformationProfileCell.swift in Sources */,
@@ -829,6 +848,7 @@
 				6AF613C12313C13A00F5CBA2 /* TableView.swift in Sources */,
 				6AF613C42313C13A00F5CBA2 /* TableCell.swift in Sources */,
 				CB2EA9EF28339C8A00E017E4 /* Video.swift in Sources */,
+				CBB7DDBC2851DECC00D53E61 /* AllVideoViewController.swift in Sources */,
 				CB7AF63A2835DC2500138BB2 /* ProfileCellViewModel.swift in Sources */,
 				CB80E3872833634B0051FA29 /* NominationCell.swift in Sources */,
 				CB2EA9EB28339BD600E017E4 /* HomeViewModel.swift in Sources */,
