@@ -2,8 +2,8 @@ import UIKit
 
 // Bai tap 1
 // Tinh dien tich va the tich hinh cau
-func baiTap1(r: Float) -> (s: Float,v: Float)  {
-    let pi : Float = 3.14
+func baiTap1(r: Float) -> (s: Float, v: Float) {
+    let pi: Float = 3.14
     let s = 4 * pi * r * r
     let v = 4/3 * pi * r * r * r
     return (s, v)
@@ -37,7 +37,7 @@ func baiTap2(a: Float, b: Float, c: Float) -> KetquaPTB2 {
         }
     } else {
         let delta = b * b - 4 * a * c
-        if delta < 0{
+        if delta < 0 {
             return .voNghiem
         } else if delta == 0 {
             return .motNghiem(-b/2*a)
@@ -49,7 +49,7 @@ func baiTap2(a: Float, b: Float, c: Float) -> KetquaPTB2 {
     }
 }
 
-let result = baiTap2(a: 2 , b: 5, c: 3)
+let result = baiTap2(a: 2, b: 5, c: 3)
 
 switch result {
 case .voNghiem:
@@ -71,7 +71,7 @@ enum KetquaHPTB1 {
     case coNghiem(Float, Float)
 }
 
-func hptBac1(a1: Float, b1: Float, c1:Float, a2: Float, b2:Float, c2: Float) -> KetquaHPTB1{
+func hptBac1(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) -> KetquaHPTB1 {
     let d = a1 * b2 - a2 * b1
     let dx = c1 * b2 - c2 * b1
     let dy = a1 * c2 - a2 * c1
@@ -130,17 +130,17 @@ func lkFibonacy() {
 //lkFibonacy()
 
 // Tinh sin(x), cos(x) bang cong thuc chuoi Taylor
-let epsilon:Float = 0.00001
+let epsilon: Float = 0.00001
 // Tinh sin
 func sin(x: Float) -> Float {
     var S: Float = 0
-    let X: Float = x*Float.pi/180
+    let X: Float = x * Float.pi / 180
     var a: Float = X
     var i: Float = 3
     
     while abs(a) >= epsilon {
         S += a
-        a = a*(-(X*X/(i*(i-1))))
+        a = a * (-(X * X / ( i * (i - 1))))
         i = i + 2
     }
     return S
@@ -152,15 +152,15 @@ func sin(x: Float) -> Float {
 //print("Sin(45) = \(sin(x: 45))")
 
 // Tinh Cos
-func cos(x: Float) -> Float{
+func cos(x: Float) -> Float {
     var S: Float = 0
-    let X: Float = x*Float.pi/180
+    let X: Float = x * Float.pi / 180
     var a: Float = 1
     var i: Float = 2
     
     while abs(a) >= epsilon {
         S += a
-        a = a*(-(X*X/(i*(i-1))))
+        a = a * (-(X * X / ( i * (i - 1))))
         i = i + 2
     }
     return S
@@ -171,34 +171,33 @@ func cos(x: Float) -> Float{
 
 // Liet ke cac so hanh phuc bes hon 10000
 func soHanhPhuc(num: Int) -> Bool {
-    if (num == 1 || num == 7){
+    if num == 1 || num == 7 {
         return true
     }
     var sum = num
     var x = num
     
-    while(sum > 9)
-    {
-        sum = 0;
-        
-        while (x > 0)
-        {
-            let d = x % 10;
-            sum += d * d;
-            x /= 10;
+    while sum > 9 {
+        sum = 0
+
+        while x > 0 {
+            let d = x % 10
+            sum += d * d
+            x /= 10
         }
-        if (sum == 1) {
-            return true;
+        if sum == 1 {
+            return true
         }
-        x = sum;
+        x = sum
     }
-    if (sum == 7){
-        return true;
+    if sum == 7 {
+        return true
     }
-    return false;
+    return false
 }
  
 private func lietKe() {
+
     for number in 11...10000 {
         if soHanhPhuc(num: number) {
             print(number)
@@ -228,7 +227,7 @@ hoanVi(array: [1, 2, 3])
 //Given an array of integers, replace all the occurrences of elemToReplace with substitutionElem.
 func arrayReplace(inputArray: [Int], elementReplace: Int, subsitutionElement: Int) -> [Int] {
     var result = inputArray
-    for i in 0..<result.count{
+    for i in 0..<result.count {
         if result[i] == elementReplace {
             result[i] = subsitutionElement
         }
