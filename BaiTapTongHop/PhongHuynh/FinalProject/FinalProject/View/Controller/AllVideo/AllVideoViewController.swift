@@ -21,10 +21,8 @@ final class AllVideoViewController: UIViewController {
                 loadNominationVideoData()
             case .new:
                 loadNewVideoData()
-            case .featured:
-                print("aa")
-            case .none:
-                print("")
+            default:
+                break
             }
         }
     }
@@ -34,7 +32,6 @@ final class AllVideoViewController: UIViewController {
         super.viewDidLoad()
         configCollectionView()
         configNavigation()
-        loadNominationVideoData()
     }
 
     // MARK: - Private functions
@@ -48,9 +45,11 @@ final class AllVideoViewController: UIViewController {
         title = "All video"
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 
     private func loadNominationVideoData() {
+        HUD.show()
         viewModel?.loadNominationVideoAPI { [weak self] (result) in
             guard let this = self else { return }
             DispatchQueue.main.async {
@@ -62,9 +61,11 @@ final class AllVideoViewController: UIViewController {
                 }
             }
         }
+        HUD.dismiss()
     }
 
     private func loadNewVideoData() {
+        HUD.show()
         viewModel?.loadNewVideoAPI { [weak self] (result) in
             guard let this = self else { return }
             DispatchQueue.main.async {
@@ -76,6 +77,7 @@ final class AllVideoViewController: UIViewController {
                 }
             }
         }
+        HUD.dismiss()
     }
 }
 
