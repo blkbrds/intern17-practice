@@ -62,7 +62,7 @@ func giaiPTB1(a1: Int, b1 : Int, c1: Int, a2 : Int, b2: Int, c2: Int) -> KetquaP
     let D: Int = a1 * b2 - a2 * b1
     let Dx: Int = c1 * b2 - c2 * b1
     let Dy: Int = a1 * c2 - a2 * c1
-
+    
     if D == 0 {
         if Dx + Dy == 0 {
             return .voSoNghiem
@@ -164,36 +164,36 @@ print("Cos(45) = \(cos(x:45))")
 func isHappy(n: Int) -> Bool {
     var result: Bool = false
     var prevSums: [Int] = []
-    var _number = n
-    while !result && !prevSums.contains(_number) {
-        prevSums += [_number]
+    var number = n
+    while !result && !prevSums.contains(number) {
+        prevSums += [number]
         var sum:Double = 0
-        while _number>0 {
-            sum += pow(Double(_number%10), 2.0)
-            _number = _number / 10
+        while number>0 {
+            sum += pow(Double(number%10), 2.0)
+            number = number / 10
         }
         if sum == 1 {
             result = true
         } else {
-            _number = Int(sum)
+            number = Int(sum)
         }
     }
     return result
 }
-for i in 0..<100
+for i in 0..<10000
 {
-    if isHappy(n: i) == true {
+    if isHappy(n: i) {
         print(i)
     }
 }
 
 // Bài tập 5
 
-func Count(a:String,b:String) -> Int{
+func baiTap5(a: String,b: String) -> Int{
     let tok = a.components(separatedBy: b)
     return tok.count-1
 }
-let dem = Count(a: "abaaaabbbabababbaaabababa", b: "ab")
+let dem = baiTap5(a: "abaaaabbbabababbaaabababa", b: "ab")
 
 // Bài tập 6
 
