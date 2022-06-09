@@ -160,6 +160,11 @@ extension HomeViewController: UITableViewDataSource {
             return cell
         }
     }
+}
+
+// MARK: - UITableViewDelegate
+@available(iOS 13.0, *)
+extension HomeViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let cellType = HomeViewModel.CellType(rawValue: indexPath.row) else { return 0 }
@@ -170,11 +175,6 @@ extension HomeViewController: UITableViewDataSource {
             return 255
         }
     }
-}
-
-// MARK: - UITableViewDelegate
-@available(iOS 13.0, *)
-extension HomeViewController: UITableViewDelegate {
 }
 
 // MARK: - NominationVideoCellDelegate

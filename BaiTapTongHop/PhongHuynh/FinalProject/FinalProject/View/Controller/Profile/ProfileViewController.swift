@@ -63,6 +63,11 @@ extension ProfileViewController: UITableViewDataSource {
             return cell
         }
     }
+}
+
+// MARK: - UITableViewDelegate
+@available(iOS 13.0, *)
+extension ProfileViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let cellType = ProfileViewModel.CellType(rawValue: indexPath.row) else { return 0 }
@@ -75,9 +80,4 @@ extension ProfileViewController: UITableViewDataSource {
             return 200
         }
     }
-}
-
-// MARK: - UITableViewDelegate
-@available(iOS 13.0, *)
-extension ProfileViewController: UITableViewDelegate {
 }

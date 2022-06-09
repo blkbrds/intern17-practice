@@ -14,14 +14,14 @@ final class DetailCell: UITableViewCell {
     @IBOutlet private weak var youtubeVideoImageView: UIImageView!
     @IBOutlet private weak var youtubeVideoLabel: UILabel!
 
-    // MARK: - Life cycle
+    // MARK: - Properties
     var viewModel: DetailCellViewModel? {
         didSet {
             updateView()
         }
     }
 
-    // MARK: - Private funcitons
+    // MARK: - Private functions
     private func updateView() {
         viewModel?.updateImageView(completion: { [weak self] (image) in
             guard let this = self else { return }

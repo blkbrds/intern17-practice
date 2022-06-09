@@ -31,7 +31,6 @@ final class FavoriteViewController: UIViewController {
             viewModel.videos = realm.objects(Video.self).toArray(ofType: Video.self)
             tableView.reloadData()
         } catch {
-
         }
     }
 
@@ -62,14 +61,14 @@ extension FavoriteViewController: UITableViewDataSource {
         cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
         return cell
     }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return 150
-    }
 }
 
 // MARK: - UITableViewDelegate
 extension FavoriteViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       return 150
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()

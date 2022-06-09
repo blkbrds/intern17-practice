@@ -15,13 +15,13 @@ final class NominationVideoCellViewModel {
     var videos: [Video] = []
     var type: HomeViewModel.CellType = .nomination
 
-    init() {}
-
     // MARK: - init
     init(videos: [Video], type: HomeViewModel.CellType = .nomination) {
         self.videos = videos
         self.type = type
     }
+
+    init() {}
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {

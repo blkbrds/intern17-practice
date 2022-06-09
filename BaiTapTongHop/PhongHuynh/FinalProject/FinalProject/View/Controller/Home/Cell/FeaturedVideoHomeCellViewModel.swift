@@ -14,11 +14,12 @@ final class FeaturedVideoHomeCellViewModel {
     // MARK: Properties
     var videos: [Video] = []
 
-    init() {}
     // MARK: - init
     init(videos: [Video]) {
         self.videos = videos
     }
+
+    init() {}
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {

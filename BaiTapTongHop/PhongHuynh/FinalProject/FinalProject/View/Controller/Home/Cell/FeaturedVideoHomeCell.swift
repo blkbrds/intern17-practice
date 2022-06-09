@@ -39,10 +39,6 @@ final class FeaturedVideoHomeCell: UITableViewCell {
         configCollectionView()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
     // MARK: - Private functions
     private func configCollectionView() {
         collectionView.register(FeaturedCell.self)

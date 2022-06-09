@@ -97,15 +97,15 @@ extension SearchViewController: UITableViewDataSource {
         cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
         return cell
     }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
-    }
 }
 
 // MARK: - UITableViewDelegate
 @available(iOS 13.0, *)
 extension SearchViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()

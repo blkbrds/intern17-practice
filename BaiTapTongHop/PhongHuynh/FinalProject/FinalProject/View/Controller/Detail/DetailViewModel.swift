@@ -15,12 +15,12 @@ final class DetailViewModel {
     var videos: [Video] = []
     var video: Video?
 
-    init() { }
-
     // MARK: - init
     init(video: Video) {
         self.video = video
     }
+
+    init() { }
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
@@ -38,7 +38,7 @@ final class DetailViewModel {
 
     func checkAddVideoFavorite() -> Bool {
         let realm = try? Realm()
-        if let dataFilters = realm?.objects(Video.self).filter("id = %@ ", video?.id).toArray(ofType: Video.self).first {
+        if let dataFilters = realm?.objects(Video.self).filter("id = %@ ", video?.id ?? "").toArray(ofType: Video.self).first {
             try? realm?.write {
                 realm?.delete(dataFilters)
             }

@@ -74,6 +74,7 @@ final class DetailViewController: UIViewController {
         }
     }
 
+    // MARK: - Objc functions
     @objc private func backAction() {
         navigationController?.popViewController(animated: true)
     }
@@ -102,15 +103,15 @@ extension DetailViewController: UITableViewDataSource {
         cell.viewModel = viewModel?.viewModelForItem(indexPath: indexPath)
         return cell
     }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
-    }
 }
 
 // MARK: - UITableViewDelegate
 @available(iOS 13.0, *)
 extension DetailViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.video = viewModel?.videos[indexPath.row]

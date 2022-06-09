@@ -10,5 +10,6 @@ import Foundation
 
 final class SettingViewModel {
 
+    // MARK: - Properties
     var titles: [String] = ["Chung", "Lựa chọn chất lượng video", "Ngoại tuyến", "Video tải lên", "Giới thiệu"]
 }
