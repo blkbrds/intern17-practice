@@ -2,7 +2,7 @@ import UIKit
 
 var greeting = "Hello, playground"
 
-class phanSo{
+class PhanSo{
     var tuSo: Int
     var mauSo: Int
     
@@ -11,34 +11,34 @@ class phanSo{
         self.mauSo = mauSo
     }
     
-    func congPhanSo(ps: phanSo) -> (a: Int, b: Int) {
-        let tuSo1 = self.tuSo * ps.mauSo + self.mauSo * ps.tuSo
-        let mauSo1 = self.mauSo * ps.mauSo
+    func congPhanSo(ps: PhanSo) -> (a: Int, b: Int) {
+        let tuSo1 = tuSo * ps.mauSo + mauSo * ps.tuSo
+        let mauSo1 = mauSo * ps.mauSo
         
         return (tuSo1,mauSo1)
     }
-    func truPhanSo(ps: phanSo) -> (a: Int, b: Int) {
-        let tuSo1 = self.tuSo * ps.mauSo - self.mauSo * ps.tuSo
-        let mauSo1 = self.mauSo * ps.mauSo
+    func truPhanSo(ps: PhanSo) -> (a: Int, b: Int) {
+        let tuSo1 = tuSo * ps.mauSo - mauSo * ps.tuSo
+        let mauSo1 = mauSo * ps.mauSo
         
         return (tuSo1,mauSo1)
     }
-    func nhanPhanSo(ps: phanSo) -> (a: Int, b: Int) {
-        let tuSo1 = self.tuSo * ps.tuSo
-        let mauSo1 = self.mauSo * ps.mauSo
+    func nhanPhanSo(ps: PhanSo) -> (a: Int, b: Int) {
+        let tuSo1 = tuSo * ps.tuSo
+        let mauSo1 = mauSo * ps.mauSo
         
         return (tuSo1,mauSo1)
     }
-    func chiaPhanSo(ps: phanSo) -> (a: Int, b: Int) {
-        let tuSo1 = self.tuSo * ps.mauSo
-        let mauSo1 = self.mauSo * ps.tuSo
+    func chiaPhanSo(ps: PhanSo) -> (a: Int, b: Int) {
+        let tuSo1 = tuSo * ps.mauSo
+        let mauSo1 = mauSo * ps.tuSo
         
         return (tuSo1,mauSo1)
     }
 }
 
-let ps1 = phanSo(tuSo: 5, mauSo: 3)
-let ps2 = phanSo(tuSo: 3, mauSo: 9)
+let ps1 = PhanSo(tuSo: 5, mauSo: 3)
+let ps2 = PhanSo(tuSo: 3, mauSo: 9)
 print("Cộng phân số: \(ps1.congPhanSo(ps: ps2).a)/\(ps1.congPhanSo(ps: ps2).b)")
 print("Trừ phân số: \(ps1.truPhanSo(ps: ps2).a)/\(ps1.truPhanSo(ps: ps2).b)")
 print("Nhân phân số: \(ps1.nhanPhanSo(ps: ps2).a)/\(ps1.nhanPhanSo(ps: ps2).b)")
@@ -46,7 +46,7 @@ print("Chia phân số: \(ps1.chiaPhanSo(ps: ps2).a)/\(ps1.chiaPhanSo(ps: ps2).b
 
 // bài tập 2
 
-class daGiac{
+class DaGiac{
     var soCanh: Int
     var intArr: [Int]
     
@@ -70,13 +70,13 @@ class daGiac{
     }
 }
 
-let daGiac1 = daGiac(soCanh: 4, intArr: [1,2,3,6])
+let daGiac1 = DaGiac(soCanh: 4, intArr: [1,2,3,6])
 print("Chu vi của Đa giác là: \(daGiac1.chuVi())")
 daGiac1.inGiaTri()
 
 // bài tập 3 và bài tập 4
 
-class tamGiac: daGiac {
+class TamGiac: DaGiac {
     
     override func chuVi() -> Int {
         var cv: Int = 0
@@ -89,9 +89,8 @@ class tamGiac: daGiac {
     
     func dienTich() -> Float {
         var dt: Float = 0.0
-        var p: Float = (Float(intArr[0]) + Float(intArr[1]) + Float(intArr[2])) / 2
+        let p: Float = (Float(intArr[0]) + Float(intArr[1]) + Float(intArr[2])) / 2
         dt = (p * (p - Float(intArr[0])) * (p - Float(intArr[1])) * (p - Float(intArr[2]))).squareRoot()
-        //6 * 1 *
         return dt
     }
     
@@ -145,7 +144,7 @@ class tamGiac: daGiac {
     }
 }
 
-let tamGiac1 = tamGiac(soCanh: 3, intArr: [3,4,6])
+let tamGiac1 = TamGiac(soCanh: 3, intArr: [3,4,6])
 print("Chu vi tam giac: \(tamGiac1.chuVi())")
 print("Dien tich tam giac: \(tamGiac1.dienTich())")
 if tamGiac1.checkTamGiacVuong() {
@@ -208,7 +207,7 @@ testStack.push(value: 3)
 
 // Bài tập 6
 
-class hinhVe {
+class HinhVe {
     var soChieu: Int?
     
     init(soChieu: Int) {
@@ -217,7 +216,7 @@ class hinhVe {
     }
 }
 
-class haiChieu: hinhVe {
+class HaiChieu: HinhVe {
     
     var type: String?
     
@@ -235,7 +234,7 @@ class haiChieu: hinhVe {
     }
 }
 
-class baChieu: hinhVe {
+class BaChieu: HinhVe {
     var type: String?
     init(soChieu: Int, type: String) {
         super.init(soChieu: soChieu)
@@ -254,7 +253,7 @@ class baChieu: hinhVe {
         return 0
     }
 }
-class hinhTron: haiChieu {
+class HinhTron: HaiChieu {
     var banKinh: Int?
     init(soChieu: Int, type: String, banKinh: Int) {
         super.init(soChieu: soChieu, type: type)
@@ -269,7 +268,7 @@ class hinhTron: haiChieu {
         return (Double.pi * Double(banKinh!) * Double(banKinh!))
     }
 }
-class hinhVuong: haiChieu {
+class HinhVuong: HaiChieu {
     
     var value: Int?
     var cv: Int = 0
@@ -289,7 +288,7 @@ class hinhVuong: haiChieu {
     
 }
 
-class HinhLapPhuong: baChieu{
+class HinhLapPhuong: BaChieu{
     
     var value: Int?
     
@@ -311,8 +310,8 @@ class HinhLapPhuong: baChieu{
     }
 }
 
-let hinhTron1 = hinhTron(soChieu: 2, type: "Tròn", banKinh: 2)
-let hinhVuong1 = hinhVuong(soChieu: 2, type: "Vuông", value: 4)
+let hinhTron1 = HinhTron(soChieu: 2, type: "Tròn", banKinh: 2)
+let hinhVuong1 = HinhVuong(soChieu: 2, type: "Vuông", value: 4)
 let hinhLapPhuong = HinhLapPhuong(soChieu: 3, type: "Hình Lập Phương", value: 5)
 print("Chu vi hình tròn là: \(hinhTron1.chuVi())")
 print("Diện tích hình tròn là: \(hinhTron1.dienTich())")
@@ -325,17 +324,17 @@ print("Thể tích hình lập phương là: \(hinhLapPhuong.theTich())")
 
 // bài tập 7
 
-struct hocSinh{
+struct HocSinh{
     var hoTen: String?
     var namSinh: Int?
     var tongDiem: Float?
     
 }
 
-struct arr{
-    var arrHocSinh: [hocSinh] = []
+struct MangagerHocSinh{
+    var arrHocSinh: [HocSinh] = []
     
-    init(arrHocSinh: [hocSinh]){
+    init(arrHocSinh: [HocSinh]){
         self.arrHocSinh = arrHocSinh
     }
     
@@ -366,11 +365,11 @@ struct arr{
 }
 
 
-let hocSinh1 = hocSinh(hoTen: "Lê Công Tú", namSinh: 2001, tongDiem: 7.3)
-let hocSinh2 = hocSinh(hoTen: "Đoàn Trần Hiếu My", namSinh: 2002, tongDiem: 7.9)
-let hocSinh3 = hocSinh(hoTen: "Đặng Thị Như Quỳnh", namSinh: 2005, tongDiem: 8)
-let hocSinh4 = hocSinh(hoTen: "Đặng Ngọc Thanh Thuận", namSinh: 2000, tongDiem: 7.9)
-var arr1 = arr(arrHocSinh: [hocSinh1, hocSinh2, hocSinh3, hocSinh4])
+let hocSinh1 = HocSinh(hoTen: "Lê Công Tú", namSinh: 2001, tongDiem: 7.3)
+let hocSinh2 = HocSinh(hoTen: "Đoàn Trần Hiếu My", namSinh: 2002, tongDiem: 7.9)
+let hocSinh3 = HocSinh(hoTen: "Đặng Thị Như Quỳnh", namSinh: 2005, tongDiem: 8)
+let hocSinh4 = HocSinh(hoTen: "Đặng Ngọc Thanh Thuận", namSinh: 2000, tongDiem: 7.9)
+var arr1 = MangagerHocSinh(arrHocSinh: [hocSinh1, hocSinh2, hocSinh3, hocSinh4])
 arr1.sapXep()
 arr1.inHocSinh()
 
@@ -435,7 +434,7 @@ if date.check(){
 
 //bài tập 9
 
-struct mang1C{
+struct Mang1C{
     var intArr: [Int]
     
     func printArr(){
@@ -457,13 +456,13 @@ struct mang1C{
     }
 }
 
-let inMang = mang1C(intArr: [1,2,7,3,9,5])
+let inMang = Mang1C(intArr: [1,2,7,3,9,5])
 inMang.printArr()
 print("Phần tử lớn nhất là: \(inMang.minMax().max), phần tử nhỏ nhất là: \(inMang.minMax().min)")
 
 // bài tập 10
 
-struct tinhTong{
+struct TinhTong{
     var n: Int
     
     func sumN() -> Int{
@@ -475,6 +474,6 @@ struct tinhTong{
     }
 }
 
-let tinhTong1 = tinhTong(n: 100)
+let tinhTong1 = TinhTong(n: 100)
 print("Tổng \(tinhTong1.n) phần tử là: \(tinhTong1.sumN())")
 
