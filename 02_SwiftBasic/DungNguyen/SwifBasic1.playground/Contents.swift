@@ -2,15 +2,15 @@ import UIKit
 
 // Bai tap 1
 // Tinh dien tich va the tich hinh cau
-func baiTap1(r: Float) -> (s: Float, v: Float) {
+func tinhDienTichVaTheTich(r: Float) -> (s: Float, v: Float) {
     let pi: Float = 3.14
     let s = 4 * pi * r * r
     let v = 4/3 * pi * r * r * r
     return (s, v)
 }
 
-let baiTap01 = baiTap1(r: 3)
-//print(baiTap01)
+let ketQua = tinhDienTichVaTheTich(r: 3)
+//print(tinhDienTichVaTheTich)
 
 // Bai tap 2
 // Giai phuong trinh bac 2
@@ -24,7 +24,7 @@ enum KetquaPTB2 {
 //func btb2(a: Float, b: Float, c: Float) -> KetquaPTB2 {
 //    return .haiNghiem(1.0, 2.0)
 //}
-func baiTap2(a: Float, b: Float, c: Float) -> KetquaPTB2 {
+func giaiPhuongTrinhBac2(a: Float, b: Float, c: Float) -> KetquaPTB2 {
     if a == 0 {
         if b == 0 {
             if c == 0 {
@@ -49,9 +49,9 @@ func baiTap2(a: Float, b: Float, c: Float) -> KetquaPTB2 {
     }
 }
 
-let result = baiTap2(a: 2, b: 5, c: 3)
+let ketQuaGiaiPhuongTrinh = giaiPhuongTrinhBac2(a: 2, b: 5, c: 3)
 
-switch result {
+switch ketQuaGiaiPhuongTrinh {
 case .voNghiem:
     print("PT vo nghiem")
 case .voSoNghiem:
@@ -71,7 +71,7 @@ enum KetquaHPTB1 {
     case coNghiem(Float, Float)
 }
 
-func hptBac1(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) -> KetquaHPTB1 {
+func hePhuongTrinhBac1(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) -> KetquaHPTB1 {
     let d = a1 * b2 - a2 * b1
     let dx = c1 * b2 - c2 * b1
     let dy = a1 * c2 - a2 * c1
@@ -88,8 +88,8 @@ func hptBac1(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) -
     }
 }
 
-let result1 = hptBac1(a1: 2, b1: 1, c1: 4, a2: 2, b2: -1, c2: 0)
-switch result1 {
+let ketQuaHePhuongTrinh = hePhuongTrinhBac1(a1: 2, b1: 1, c1: 4, a2: 2, b2: -1, c2: 0)
+switch ketQuaHePhuongTrinh {
 case .voNghiem:
     print("HPT vo nghiem")
 case .voSoNghiem:
@@ -99,7 +99,7 @@ case .coNghiem(let x, let y):
 }
 
 // Bai tap 4
-//
+
 func fibonacy(n: Int) -> Int {
     if n == 0 {
         return 0
@@ -110,7 +110,7 @@ func fibonacy(n: Int) -> Int {
 }
 
 //  Tong cua 10 so Fibonacy dau tien
-func tongFibonacy() -> Int {
+func sumFibonacy() -> Int {
     var sum = 0
     for i in 0..<20 {
         sum += fibonacy(n: i)
@@ -118,16 +118,16 @@ func tongFibonacy() -> Int {
     return sum
 }
 
-//tongFibonacy(n: 10)
+//sumFibonacy(n: 10)
 
 // Liet ke 10 so Fibonacy dau tien
-func lkFibonacy() {
+func listFibonacy() {
     for i in 0..<100 {
         print(fibonacy(n: i))
     }
 }
 
-//lkFibonacy()
+//listFibonacy()
 
 // Tinh sin(x), cos(x) bang cong thuc chuoi Taylor
 let epsilon: Float = 0.00001
@@ -170,7 +170,7 @@ func cos(x: Float) -> Float {
 //print("Cos(60) = \(cos(x: 60))")
 
 // Liet ke cac so hanh phuc bes hon 10000
-func soHanhPhuc(num: Int) -> Bool {
+func checkHappyNumber(num: Int) -> Bool {
     if num == 1 || num == 7 {
         return true
     }
@@ -196,16 +196,16 @@ func soHanhPhuc(num: Int) -> Bool {
     return false
 }
  
-private func lietKe() {
+private func listHappyNumber() {
 
     for number in 11...10000 {
-        if soHanhPhuc(num: number) {
+        if checkHappyNumber(num: number) {
             print(number)
         }
     }
 }
 
-//lietKe()
+//listHappyNumber()
 
 // Bai tap 5
 // Tim chuoi con trong chuoi me
