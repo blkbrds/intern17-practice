@@ -80,8 +80,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let profileVC = ProfileViewController()
         let profileNavi = UINavigationController(rootViewController: profileVC)
         profileNavi.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "icons8-person-30"), tag: 3)
-//        let videoVC = AllVideoViewController()
-//        let videoNavi = UINavigationController(rootViewController: videoVC)
         tabbarController.setViewControllers([homeNavi, chanelNavi, libraryNavi, profileNavi], animated: true)
         tabbarController.tabBar.tintColor = .white
         UITabBar.appearance().barTintColor = UIColor.black

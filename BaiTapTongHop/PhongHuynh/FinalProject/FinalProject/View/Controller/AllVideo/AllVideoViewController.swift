@@ -51,6 +51,7 @@ final class AllVideoViewController: UIViewController {
     private func loadNominationVideoData() {
         HUD.show()
         viewModel?.loadNominationVideoAPI { [weak self] (result) in
+            HUD.dismiss()
             guard let this = self else { return }
             DispatchQueue.main.async {
                 switch result {
@@ -61,12 +62,12 @@ final class AllVideoViewController: UIViewController {
                 }
             }
         }
-        HUD.dismiss()
     }
 
     private func loadNewVideoData() {
         HUD.show()
         viewModel?.loadNewVideoAPI { [weak self] (result) in
+            HUD.dismiss()
             guard let this = self else { return }
             DispatchQueue.main.async {
                 switch result {
@@ -77,7 +78,6 @@ final class AllVideoViewController: UIViewController {
                 }
             }
         }
-        HUD.dismiss()
     }
 }
 
