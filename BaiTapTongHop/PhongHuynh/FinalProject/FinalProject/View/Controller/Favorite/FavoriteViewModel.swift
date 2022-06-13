@@ -25,10 +25,6 @@ final class FavoriteViewModel {
         return FavoriteCellViewModel(video: videos[indexPath.row])
     }
 
-    func removeVideo(indexPath: IndexPath) {
-        videos.remove(at: indexPath.row)
-    }
-
     func viewModelForDetail(indexPath: IndexPath) -> DetailViewModel {
         let videoFavorite: Video = Video()
         videoFavorite.id = videos[indexPath.row].id
@@ -46,6 +42,18 @@ final class FavoriteViewModel {
             })
         } catch {
             print("error")
+        }
+    }
+
+    func removeVideo(indexPath: IndexPath) {
+        do {
+            let realm = try Realm()
+            let item = videos[indexPath.row]
+            try realm.write {
+                realm.delete(item)
+                videos.remove(at: indexPath.row)
+            }
+        } catch {
         }
     }
 }

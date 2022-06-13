@@ -83,16 +83,8 @@ extension FavoriteViewController: FavoriteCellDelegate {
         switch actions {
         case .delete:
             guard let indexPath = tableView.indexPath(for: cell) else { return }
-            do {
-                let realm = try Realm()
-                let item = viewModel.videos[indexPath.row]
-                try realm.write {
-                    realm.delete(item)
-                    viewModel.removeVideo(indexPath: indexPath)
-                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-                }
-            } catch {
-            }
+            viewModel.removeVideo(indexPath: indexPath)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }
 }
