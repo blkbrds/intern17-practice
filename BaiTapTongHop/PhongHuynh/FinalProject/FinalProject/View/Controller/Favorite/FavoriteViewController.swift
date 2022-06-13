@@ -22,16 +22,7 @@ final class FavoriteViewController: UIViewController {
         super.viewDidLoad()
         configTableView()
         configNavigation()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        do {
-        let realm = try Realm()
-            viewModel.videos = realm.objects(Video.self).toArray(ofType: Video.self)
-            tableView.reloadData()
-        } catch {
-        }
+        configData()
     }
 
     // MARK: - Private functions
@@ -47,6 +38,13 @@ final class FavoriteViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.black
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
+
+    private func configData() {
+        viewModel.addObserve()
+        viewModel.completion = { () in
+            self.tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -59,6 +57,7 @@ extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(FavoriteCell.self)
         cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
+        cell.delegate = self
         return cell
     }
 }
@@ -78,6 +77,26 @@ extension FavoriteViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
+            do {
+                let realm = try Realm()
+                let item = viewModel.videos[indexPath.row]
+                try realm.write {
+                    realm.delete(item)
+                    viewModel.removeVideo(indexPath: indexPath)
+                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                }
+            } catch {
+            }
+        }
+    }
+}
+
+// MARK: - FavoriteCellDelegate
+extension FavoriteViewController: FavoriteCellDelegate {
+
+    func cell(cell: FavoriteCell, needPerfom actions: FavoriteCell.Action) {
+        switch actions {
+        case .delete(let indexPath):
             do {
                 let realm = try Realm()
                 let item = viewModel.videos[indexPath.row]

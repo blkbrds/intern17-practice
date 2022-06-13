@@ -13,6 +13,8 @@ final class FavoriteViewModel {
 
     // MARK: - Properties
     var videos: [Video] = []
+    var objectNotificationToken: NotificationToken?
+    var completion: (() -> Void)?
 
     // MARK: - Methods
     func numberOfItems(section: Int) -> Int {
@@ -32,6 +34,19 @@ final class FavoriteViewModel {
         videoFavorite.id = videos[indexPath.row].id
         videoFavorite.title = videos[indexPath.row].title
         return DetailViewModel(video: videoFavorite)
+    }
+
+    func addObserve() {
+        do {
+            let realm = try Realm()
+            objectNotificationToken = realm.objects(Video.self).observe({ [weak self] change in
+                guard let this = self else { return }
+                this.videos = realm.objects(Video.self).toArray(ofType: Video.self)
+                this.completion?()
+            })
+        } catch {
+            print("error")
+        }
     }
 }
 
