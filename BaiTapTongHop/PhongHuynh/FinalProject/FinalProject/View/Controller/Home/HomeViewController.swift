@@ -187,7 +187,12 @@ extension HomeViewController: NominationVideoCellDelegate {
             let vc = DetailViewController()
             vc.viewModel = viewModel.viewModelForDetail(cellType: type, indexPath: indexPath)
             navigationController?.pushViewController(vc, animated: true)
-            self.tabBarController?.tabBar.isHidden = true
+            tabBarController?.tabBar.isHidden = true
+        case .moveToAllVideo(let type):
+            let vc = AllVideoViewController()
+            vc.viewModel = viewModel.viewModelForAllVideo(type: type)
+            navigationController?.pushViewController(vc, animated: true)
+            tabBarController?.tabBar.isHidden = true
         }
     }
 }
@@ -202,7 +207,7 @@ extension HomeViewController: FeaturedVideoHomeCellDelegate {
             let vc = DetailViewController()
             vc.viewModel = viewModel.viewModelForDetail(cellType: .featured, indexPath: indexPath)
             navigationController?.pushViewController(vc, animated: true)
-            self.tabBarController?.tabBar.isHidden = true
+            tabBarController?.tabBar.isHidden = true
         }
     }
 }

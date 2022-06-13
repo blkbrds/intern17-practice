@@ -26,10 +26,10 @@ final class VideoService {
         }
     }
 
-    class func loadVideoNominationAPI(completion: @escaping CompletionAny) {
+    class func loadVideoNominationAPI(maxResults: Int = 10, completion: @escaping CompletionAny) {
         var params: [String: Any] = [:]
         params["part"] = "snippet"
-        params["maxResults"] = 20
+        params["maxResults"] = maxResults
         params["relatedToVideoId"] = "XtHh0uNscnk"
         params["type"] = "video"
         params["key"] = Session.shared.apiKey
@@ -41,10 +41,10 @@ final class VideoService {
         }
     }
 
-    class func loadVideoNewAPI(completion: @escaping CompletionAny) {
+    class func loadVideoNewAPI(maxResults: Int = 10, completion: @escaping CompletionAny) {
         var params: [String: Any] = [:]
         params["part"] = "snippet"
-        params["maxResults"] = 20
+        params["maxResults"] = maxResults
         params["relatedToVideoId"] = "jXKR9kl5tR8"
         params["type"] = "video"
         params["key"] = Session.shared.apiKey

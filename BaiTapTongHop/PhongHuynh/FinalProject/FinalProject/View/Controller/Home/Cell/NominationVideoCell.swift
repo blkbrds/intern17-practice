@@ -19,6 +19,7 @@ final class NominationVideoCell: UITableViewCell {
     // MARK: - Define
     enum Action {
         case moveToDetail(indexPath: IndexPath, type: HomeViewModel.CellType)
+        case moveToAllVideo(type: HomeViewModel.CellType)
     }
 
     // MARK: - IBOutlets
@@ -45,6 +46,12 @@ final class NominationVideoCell: UITableViewCell {
         collectionView.register(NominationCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+
+    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
+        if let delegate = delegate, let type = viewModel?.type {
+            delegate.controller(controller: self, needsPerfom: .moveToAllVideo(type: type))
+        }
     }
 }
 
