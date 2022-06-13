@@ -19,7 +19,7 @@ final class FavoriteCell: UITableViewCell {
 
     // MARK: - Define
     enum Action {
-        case delete(indexPath: IndexPath)
+        case delete
     }
 
     // MARK: - IBOutlets
@@ -33,7 +33,6 @@ final class FavoriteCell: UITableViewCell {
         }
     }
     weak var delegate: FavoriteCellDelegate?
-    var indexPathForCell: IndexPath?
 
     // MARK: - Private functions
     private func updateView() {
@@ -46,8 +45,8 @@ final class FavoriteCell: UITableViewCell {
 
     // MARK: - Private functions
     @IBAction private func deleteButtonTouchUpInside(_ sender: Any) {
-        if let delegate = delegate, let indexPathForCell = indexPathForCell {
-            delegate.cell(cell: self, needPerfom: .delete(indexPath: indexPathForCell))
+        if let delegate = delegate {
+            delegate.cell(cell: self, needPerfom: .delete)
         }
     }
 }

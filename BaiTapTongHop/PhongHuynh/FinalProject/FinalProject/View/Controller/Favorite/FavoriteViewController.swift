@@ -74,21 +74,6 @@ extension FavoriteViewController: UITableViewDelegate {
         vc.viewModel = viewModel.viewModelForDetail(indexPath: indexPath)
         navigationController?.pushViewController(vc, animated: true)
     }
-
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete {
-            do {
-                let realm = try Realm()
-                let item = viewModel.videos[indexPath.row]
-                try realm.write {
-                    realm.delete(item)
-                    viewModel.removeVideo(indexPath: indexPath)
-                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-                }
-            } catch {
-            }
-        }
-    }
 }
 
 // MARK: - FavoriteCellDelegate
@@ -96,7 +81,8 @@ extension FavoriteViewController: FavoriteCellDelegate {
 
     func cell(cell: FavoriteCell, needPerfom actions: FavoriteCell.Action) {
         switch actions {
-        case .delete(let indexPath):
+        case .delete:
+            guard let indexPath = tableView.indexPath(for: cell) else { return }
             do {
                 let realm = try Realm()
                 let item = viewModel.videos[indexPath.row]

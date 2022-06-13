@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sy4-H6-L5h">
-                                <rect key="frame" x="155.5" y="10" width="20" height="20"/>
+                                <rect key="frame" x="155.5" y="20" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="0an-x0-jAJ"/>
                                     <constraint firstAttribute="height" constant="20" id="idZ-m8-PJV"/>
@@ -48,7 +48,7 @@
                             <constraint firstAttribute="bottom" secondItem="DGc-uI-fXC" secondAttribute="bottom" id="6bh-hc-baY"/>
                             <constraint firstItem="Sy4-H6-L5h" firstAttribute="leading" secondItem="DGc-uI-fXC" secondAttribute="trailing" id="9fe-qn-hwM"/>
                             <constraint firstAttribute="trailing" secondItem="Sy4-H6-L5h" secondAttribute="trailing" constant="5" id="KyU-xL-EwE"/>
-                            <constraint firstItem="Sy4-H6-L5h" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" constant="10" id="m7U-6l-Tkt"/>
+                            <constraint firstItem="Sy4-H6-L5h" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" constant="20" id="m7U-6l-Tkt"/>
                             <constraint firstItem="DGc-uI-fXC" firstAttribute="leading" secondItem="PMd-GF-Nfp" secondAttribute="leading" constant="5" id="msK-SF-THb"/>
                             <constraint firstItem="DGc-uI-fXC" firstAttribute="top" secondItem="PMd-GF-Nfp" secondAttribute="top" id="xKJ-kp-pnh"/>
                         </constraints>
