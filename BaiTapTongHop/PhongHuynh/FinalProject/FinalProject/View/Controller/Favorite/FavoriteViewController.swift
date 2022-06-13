@@ -84,7 +84,6 @@ extension FavoriteViewController: FavoriteCellDelegate {
         case .delete:
             guard let indexPath = tableView.indexPath(for: cell) else { return }
             viewModel.removeVideo(indexPath: indexPath)
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }
 }
