@@ -97,11 +97,6 @@ class TamGiac: DaGiac {
         let C: Int = a[2]
 
         return A * A == B * B + C * C || B * B == A * A + C * C || C * C == B * B + A * A
-//        if A * A == B * B + C * C || B * B == A * A + C * C || C * C == B * B + A * A {
-//            return "Tam giác thoả mãn định lý Pitago"
-//        } else {
-//            return "Tam giác không thoả mãn định lý Pitago"
-//        }
     }
 }
 var tamgiac: TamGiac = TamGiac(a: [3,4,6])
