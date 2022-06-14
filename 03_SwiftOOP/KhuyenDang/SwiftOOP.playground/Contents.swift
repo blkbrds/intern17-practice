@@ -91,22 +91,24 @@ class TamGiac: DaGiac {
         return Float(sqrt(P * (P - Float(A)) * (P - Float(B)) * (P - Float(C))))
     }
     //Bài tập 4
-    func isPitago() -> String {
+    func isPitago() -> Bool {
         let A: Int = a[0]
         let B: Int = a[1]
         let C: Int = a[2]
 
-        if A * A == B * B + C * C || B * B == A * A + C * C || C * C == B * B + A * A {
-            return "Tam giác thoả mãn định lý Pitago"
-        } else {
-            return "Tam giác không thoả mãn định lý Pitago"
-        }
+        return A * A == B * B + C * C || B * B == A * A + C * C || C * C == B * B + A * A
+//        if A * A == B * B + C * C || B * B == A * A + C * C || C * C == B * B + A * A {
+//            return "Tam giác thoả mãn định lý Pitago"
+//        } else {
+//            return "Tam giác không thoả mãn định lý Pitago"
+//        }
     }
 }
 var tamgiac: TamGiac = TamGiac(a: [3,4,6])
 tamgiac.tinhCV()
 tamgiac.tinhDienTich()
 print("\(tamgiac.isPitago())")
+
 
 //Bài tập 5
 class CStack {
@@ -121,34 +123,32 @@ class CStack {
     }
 
     func push(element: Int) {
-        if checkFull() {
+        if isFull() {
             print("Ngăn xếp đầy")
-            return
         } else {
             stack.append(element)
          }
     }
 
     func pop() {
-        if checkEmpty() {
+        if isEmpty() {
             print("Ngăn xếp rỗng")
-            return
         } else {
             stack.popLast()
          }
     }
 
-    func checkEmpty() -> Bool {
-        return index == 0 ? true : false
+    func isEmpty() -> Bool {
+        return index == 0
     }
 
-    func checkFull() -> Bool {
-        return index == size ? true : false
+    func isFull() -> Bool {
+        return index == size
     }
 }
 let arr = CStack(stack: [1, 2, 3])
-arr.checkEmpty()
-arr.checkFull()
+arr.isEmpty()
+arr.isFull()
 arr.push(element: 4)
 arr.pop()
 
@@ -271,6 +271,7 @@ class Student {
     var name: String
     var yearOfBirth: Int
     var score: Float
+    
     init(name: String, yearOfBirth: Int, score: Float) {
         self.name = name
         self.yearOfBirth = yearOfBirth
