@@ -9,17 +9,17 @@ final class SliderViewController: UIViewController {
     
     var redValue: Float = 127 {
         didSet {
-            setupUI()
+            updateUI()
         }
     }
     var blueValue: Float = 127 {
         didSet {
-            setupUI()
+            updateUI()
         }
     }
     var greenValue: Float = 127 {
         didSet {
-            setupUI()
+            updateUI()
         }
     }
     
@@ -48,7 +48,7 @@ final class SliderViewController: UIViewController {
         blueValue = Float(Int(sender.value))
     }
     
-    private func setupUI() {
+    private func updateUI() {
         titleLabel.text = "Color(R: \(redValue), \(greenValue), \(blueValue))"
         colorView.backgroundColor = UIColor(red: CGFloat(redValue/255), green: CGFloat(greenValue/255), blue: CGFloat(blueValue/255), alpha: 1)
     }

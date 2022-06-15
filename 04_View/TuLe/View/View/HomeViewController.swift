@@ -49,17 +49,14 @@ final class HomeViewController: UIViewController {
         userNameLabel!.textAlignment = .center
         view.addSubview(userNameLabel!)
         
-        let button = UIButton(frame: CGRect(x: x, y: y, width: Int(widthFrame), height: 250))
+        let button = UIButton(frame: CGRect(x: x, y: y, width: Int(widthFrame), height: 145))
         button.backgroundColor = .clear
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(buttonUserDidClick))
-        gesture.name = name[i]
-        button.addGestureRecognizer(gesture)
+        button.tag = i
+        button.addTarget(self, action: #selector(buttonUserDidClick(sender:)), for: .touchUpInside)
         view.addSubview(button)
     }
     
-    @objc private func buttonUserDidClick(sender: UIGestureRecognizer) {
-        if let name = sender.name {
-            print(name)
-        }
+    @objc private func buttonUserDidClick(sender: UIButton) {
+        print("\(name[sender.tag])")
     }
 }
