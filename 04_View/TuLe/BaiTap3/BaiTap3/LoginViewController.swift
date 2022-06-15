@@ -27,7 +27,7 @@ final class LoginViewController: UIViewController {
     
     @IBAction private func loginButtonTouchUpInside(_ sender: Any?) {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        self.view.addGestureRecognizer(tap)
+        view.addGestureRecognizer(tap)
         if userNameTextField.text != "Admin" || passWordTextField.text != "Admin123" {
             errorLabel.isHidden = false
         } else {
@@ -41,12 +41,12 @@ final class LoginViewController: UIViewController {
     }
     private func switchBasedNextTextField(_ textField: UITextField) {
         switch textField {
-        case self.userNameTextField:
-            self.passWordTextField.becomeFirstResponder()
-        case self.passWordTextField:
-            self.loginButtonTouchUpInside(nil)
+        case userNameTextField:
+            passWordTextField.becomeFirstResponder()
+        case passWordTextField:
+            loginButtonTouchUpInside(nil)
         default:
-            self.passWordTextField.resignFirstResponder()
+            passWordTextField.resignFirstResponder()
         }
     }
     @objc private func dismissKeyboard() {
@@ -55,7 +55,7 @@ final class LoginViewController: UIViewController {
 }
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.switchBasedNextTextField(textField)
+        switchBasedNextTextField(textField)
         return true
     }
 }
