@@ -10,12 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderViewController" customModule="BaiTap4" customModuleProvider="target">
             <connections>
-                <outlet property="txtBlue" destination="NqX-mq-dfQ" id="eNX-Ts-GhM"/>
-                <outlet property="txtGreen" destination="xwL-j8-Uq6" id="1WW-yC-uJj"/>
-                <outlet property="txtRed" destination="sZt-CQ-VFZ" id="bVs-fv-sm6"/>
-                <outlet property="txtTitle" destination="Xc7-2x-NgI" id="hcp-O7-na4"/>
+                <outlet property="blueLabel" destination="NqX-mq-dfQ" id="azT-Zm-qTh"/>
+                <outlet property="colorView" destination="mAO-cI-H5F" id="qZs-Wd-6u9"/>
+                <outlet property="greenLabel" destination="xwL-j8-Uq6" id="xfK-d9-KI5"/>
+                <outlet property="redLabel" destination="sZt-CQ-VFZ" id="lmW-YL-VGh"/>
+                <outlet property="titleLabel" destination="Xc7-2x-NgI" id="smn-VQ-rMK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="viewColor" destination="mAO-cI-H5F" id="hwV-hD-Ndo"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

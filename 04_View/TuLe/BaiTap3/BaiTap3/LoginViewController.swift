@@ -7,57 +7,56 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-    @IBOutlet weak var txtUserName: UITextField!
-    @IBOutlet weak var txtPassWord: UITextField!
-    @IBOutlet weak var txtError: UILabel!
-    @IBOutlet weak var outletLogin: UIButton!
-    @IBOutlet weak var outletClear: UIButton!
+final class LoginViewController: UIViewController {
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var passWordTextField: UITextField!
+    @IBOutlet private weak var errorLabel: UILabel!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var clearButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtError.text = "Nhập sai username và password"
-        txtError.isHidden = true
-        outletLogin.layer.cornerRadius = 5
-        outletClear.layer.cornerRadius = 5
-        txtUserName.delegate = self
-        txtUserName.returnKeyType = .next
-        txtPassWord.delegate = self
-        txtPassWord.returnKeyType = .done
+        errorLabel.text = "Nhập sai username và password"
+        errorLabel.isHidden = true
+        loginButton.layer.cornerRadius = 5
+        clearButton.layer.cornerRadius = 5
+        userNameTextField.delegate = self
+        userNameTextField.returnKeyType = .next
+        passWordTextField.delegate = self
+        passWordTextField.returnKeyType = .done
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
-    @IBAction func Login(_ sender: Any?) {
+    @IBAction private func Login(_ sender: Any?) {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
-        if txtUserName.text == "" || txtPassWord.text == "" || txtUserName.text != "Admin" || txtPassWord.text != "Admin123" {
-            txtError.isHidden = false
+        if userNameTextField.text != "Admin" || passWordTextField.text != "Admin123" {
+            errorLabel.isHidden = false
         } else {
-            txtError.isHidden = true
+            errorLabel.isHidden = true
         }
     }
     
-    @IBAction func Clear(_ sender: Any) {
-        txtUserName.text = ""
-        txtPassWord.text = ""
+    @IBAction private func Clear(_ sender: Any) {
+        userNameTextField.text = ""
+        passWordTextField.text = ""
     }
     private func switchBasedNextTextField(_ textField: UITextField) {
         switch textField {
-        case self.txtUserName:
-            self.txtPassWord.becomeFirstResponder()
-        case self.txtPassWord:
+        case self.userNameTextField:
+            self.passWordTextField.becomeFirstResponder()
+        case self.passWordTextField:
             self.Login(nil)
         default:
-            self.txtUserName.resignFirstResponder()
+            self.passWordTextField.resignFirstResponder()
         }
     }
-    @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+    @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
 }
-extension LoginViewController: UITextFieldDelegate{
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.switchBasedNextTextField(textField)
         return true

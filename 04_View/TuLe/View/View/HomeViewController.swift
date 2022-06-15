@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     var widthFrame: CGFloat = (UIScreen.main.bounds.width - 40)/3
     var heightFrame: Int = 100
     var count: Int = 1
-    var userName: UILabel?
+    var userNameLabel: UILabel?
     var name: [String] = ["name1", "name2", "name3", "name4" ,"name5", "name6", "name7", "name8", "name9"]
     
     override func viewDidLoad() {
@@ -33,12 +33,12 @@ class HomeViewController: UIViewController {
                 userAvatar.contentMode = .scaleToFill
                 view.addSubview(userAvatar)
                 
-                userName = UILabel(frame: CGRect(x: xFrame, y: yUser, width: Int(widthFrame), height: 45))
-                userName?.text = name[i]
-                userName!.backgroundColor = .blue
-                userName!.textColor = .white
-                userName!.textAlignment = .center
-                view.addSubview(userName!)
+                userNameLabel = UILabel(frame: CGRect(x: xFrame, y: yUser, width: Int(widthFrame), height: 45))
+                userNameLabel?.text = name[i]
+                userNameLabel!.backgroundColor = .blue
+                userNameLabel!.textColor = .white
+                userNameLabel!.textAlignment = .center
+                view.addSubview(userNameLabel!)
                 
                 let button = UIButton(frame: CGRect(x: xFrame, y: yFrame, width: Int(widthFrame), height: 250))
                 button.backgroundColor = .clear

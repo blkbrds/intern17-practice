@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="BaiTap3" customModuleProvider="target">
             <connections>
-                <outlet property="outletClear" destination="nBu-o1-KSX" id="pLG-Oy-rUS"/>
-                <outlet property="outletLogin" destination="hB9-eO-K28" id="PJX-hn-Fle"/>
-                <outlet property="txtError" destination="23k-qJ-5qD" id="keg-1A-zyt"/>
-                <outlet property="txtPassWord" destination="vpU-ZN-XnK" id="ylz-Al-ffh"/>
-                <outlet property="txtUserName" destination="E75-gg-y3S" id="wfT-UH-yL4"/>
+                <outlet property="clearButton" destination="nBu-o1-KSX" id="d0J-mz-D3e"/>
+                <outlet property="errorLabel" destination="23k-qJ-5qD" id="f4E-0F-gwG"/>
+                <outlet property="loginButton" destination="hB9-eO-K28" id="BdM-nL-kcx"/>
+                <outlet property="passWordTextField" destination="vpU-ZN-XnK" id="G0H-lS-uKH"/>
+                <outlet property="userNameTextField" destination="E75-gg-y3S" id="hyU-fk-5nI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

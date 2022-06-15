@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomSliderViewController" customModule="BaiTap5" customModuleProvider="target">
             <connections>
-                <outlet property="blueSlider" destination="T1n-LF-vpr" id="sn2-4f-lDk"/>
-                <outlet property="buttonSlider" destination="5qM-ah-iBW" id="aOM-WN-u3l"/>
+                <outlet property="blueView" destination="T1n-LF-vpr" id="EKC-lA-Ujn"/>
+                <outlet property="buttonSliderView" destination="5qM-ah-iBW" id="vXE-g7-W86"/>
                 <outlet property="parentView" destination="juz-EH-dO5" id="I8K-jK-AHQ"/>
                 <outlet property="redView" destination="cLP-Qj-DVK" id="ky1-se-bYU"/>
-                <outlet property="valuePoint" destination="c9S-a0-S6N" id="Hkh-dc-UoT"/>
+                <outlet property="valueLabel" destination="c9S-a0-S6N" id="nVK-dh-1hd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

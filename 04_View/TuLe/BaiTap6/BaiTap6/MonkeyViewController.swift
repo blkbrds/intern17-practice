@@ -7,17 +7,15 @@
 
 import UIKit
 
-class MonkeyViewController: UIViewController {
-    @IBOutlet weak var viewLabel: UIView!
-    @IBOutlet weak var txtSay: UILabel!
-    @IBOutlet weak var monkeyImage: UIImageView!
-    let start = CFAbsoluteTimeGetCurrent()/1000
-    let tap = UITapGestureRecognizer()
+final class MonkeyViewController: UIViewController {
+    @IBOutlet private weak var sayView: UIView!
+    @IBOutlet private weak var sayLabel: UILabel!
+    @IBOutlet private weak var monkeyImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewLabel.layer.isHidden = true
-        viewLabel.layer.cornerRadius = 30
+        sayView.layer.isHidden = true
+        sayView.layer.cornerRadius = 30
         let singleTap: UITapGestureRecognizer =  UITapGestureRecognizer(target: self, action: #selector(handleSingleTap))
         singleTap.numberOfTapsRequired = 1
         monkeyImage.addGestureRecognizer(singleTap)
@@ -25,7 +23,7 @@ class MonkeyViewController: UIViewController {
         doubleTap.numberOfTapsRequired = 2
         monkeyImage.addGestureRecognizer(doubleTap)
     }
-    @IBAction func handlePan(_ gesture: UIPanGestureRecognizer) {
+    @IBAction private func handlePan(_ gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: view)
         
         guard let gestureView = gesture.view else {
@@ -66,7 +64,7 @@ class MonkeyViewController: UIViewController {
         let start = CFAbsoluteTimeGetCurrent()
         print(start)
     }
-    @IBAction func handlePinch(_ gesture: UIPinchGestureRecognizer) {
+    @IBAction private func handlePinch(_ gesture: UIPinchGestureRecognizer) {
         guard let gestureView = gesture.view else {
             return
         }
@@ -78,7 +76,7 @@ class MonkeyViewController: UIViewController {
         gesture.scale = 1
     }
     
-    @IBAction func handleRotate(_ gesture: UIRotationGestureRecognizer) {
+    @IBAction private func handleRotate(_ gesture: UIRotationGestureRecognizer) {
         guard let gestureView = gesture.view else {
             return
         }
@@ -88,7 +86,7 @@ class MonkeyViewController: UIViewController {
         )
         gesture.rotation = 0
     }
-    @IBAction func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
+    @IBAction private func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
         guard let view = gesture.view else {
             return
         }
@@ -98,18 +96,18 @@ class MonkeyViewController: UIViewController {
         }
     }
     
-    @objc func handleSingleTap() {
-        viewLabel.layer.isHidden = false
-        txtSay.text = "Tôi là khỉ"
+    @objc private func handleSingleTap() {
+        sayView.layer.isHidden = false
+        sayLabel.text = "Tôi là khỉ"
         _ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
     }
-    @objc func handleDoubleTap() {
-        viewLabel.layer.isHidden = false
-        txtSay.text = "Khỉ là tôi"
+    @objc private func handleDoubleTap() {
+        sayView.layer.isHidden = false
+        sayLabel.text = "Khỉ là tôi"
         _ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
     }
     
-    @objc func fireTimer() {
-        viewLabel.layer.isHidden = true
+    @objc private func fireTimer() {
+        sayView.layer.isHidden = true
     }
 }

@@ -11,9 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonkeyViewController" customModule="BaiTap6" customModuleProvider="target">
             <connections>
                 <outlet property="monkeyImage" destination="duR-kO-QmG" id="Gfa-js-Shl"/>
-                <outlet property="txtSay" destination="jR6-1A-O6z" id="Jcr-fe-Wlu"/>
+                <outlet property="sayLabel" destination="jR6-1A-O6z" id="uzV-Dq-Qr4"/>
+                <outlet property="sayView" destination="Geu-ss-SbL" id="69T-bL-2lb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="viewLabel" destination="Geu-ss-SbL" id="eIW-jX-ZeS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
