@@ -95,14 +95,7 @@ class TamGiac: DaGiac {
     }
     
     func checkTamGiac(a: Int, b: Int, c: Int) -> Bool {
-        
-        if a + b > c || a + c > b || b + c > a {
-            return true
-        }else{
-            return false
-        }
-        
-        return false
+        return a + b > c || a + c > b || b + c > a
     }
     func checkTamGiacVuong() -> Bool{
         let a: Int = intArr[0]
@@ -113,32 +106,21 @@ class TamGiac: DaGiac {
             if a > b {
                 if a > c {
                     canhHuyen = a
-                    if (canhHuyen * canhHuyen) == (b * b + c * c) {
-                        return true
-                    }
+                    return (canhHuyen * canhHuyen) == (b * b + c * c)
                 }else{
                     canhHuyen = c
-                    if (canhHuyen * canhHuyen) == (a * a + b * b) {
-                        return true
-                    }
+                    return (canhHuyen * canhHuyen) == (a * a + b * b)
                 }
             }else{
                 if b > c {
                     canhHuyen = b
-                    if (canhHuyen * canhHuyen) == (a * a + c * c) {
-                        return true
-                    }
+                    return (canhHuyen * canhHuyen) == (a * a + c * c)
                 }else{
                     canhHuyen = c
-                    if (canhHuyen * canhHuyen) == (a * a + b * b) {
-                        return true
-                    }
+                    return (canhHuyen * canhHuyen) == (a * a + b * b)
                 }
             }
-        } else {
-            return false
         }
-        
         return false
         
     }
@@ -285,7 +267,6 @@ class HinhVuong: HaiChieu {
     override func dienTich() -> Double {
         return Double(value!) * Double(value!)
     }
-    
 }
 
 class HinhLapPhuong: BaChieu{
@@ -426,10 +407,12 @@ struct Date {
     }
 }
 
-var date = Date(ngay: 25, thang: 2, nam: 2019)
+var date = Date(ngay: 3, thang: 2, nam: 2019)
 if date.check(){
     date.printDate()
     date.advance()
+} else {
+    print("Ngày không hợp lệ")
 }
 
 //bài tập 9
