@@ -7,10 +7,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
-    let kc: Int = 10
-    var kcY : Int = 100
+    let spaceX: Int = 10
     var widthFrame: CGFloat = (UIScreen.main.bounds.width - 40)/3
     var heightFrame: Int = 100
     var count: Int = 1
@@ -19,33 +18,16 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUpUser()
+    }
+    
+    private func setUpUser() {
         for i in 0..<name.count {
-            let xFrame = (kc * (i % 3 + 1) + ((i % 3 + 1) - 1) * Int(widthFrame))
-            print(count)
-            let yFrame = 100 + 150 * (count - 1) + kc * (count - 1)
-            let yUser = 200 + 150 * (count - 1) + kc * (count - 1)
-            print(yFrame)
+            let xFrame = (spaceX * (i % 3 + 1) + ((i % 3 + 1) - 1) * Int(widthFrame))
+            let yFrame = 100 + 150 * (count - 1) + spaceX * (count - 1)
+            let yUser = 200 + 150 * (count - 1) + spaceX * (count - 1)
             if xFrame < Int(UIScreen.main.bounds.width) {
-                let frame = CGRect(x: xFrame, y: yFrame, width: Int(widthFrame), height: 100)
-                let userAvatar = UIImageView(image: UIImage(named: "avatar1"))
-                userAvatar.frame = frame
-                userAvatar.contentMode = .scaleToFill
-                view.addSubview(userAvatar)
-                
-                userNameLabel = UILabel(frame: CGRect(x: xFrame, y: yUser, width: Int(widthFrame), height: 45))
-                userNameLabel?.text = name[i]
-                userNameLabel!.backgroundColor = .blue
-                userNameLabel!.textColor = .white
-                userNameLabel!.textAlignment = .center
-                view.addSubview(userNameLabel!)
-                
-                let button = UIButton(frame: CGRect(x: xFrame, y: yFrame, width: Int(widthFrame), height: 250))
-                button.backgroundColor = .clear
-                let gesture = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
-                gesture.name = name[i]
-                button.addGestureRecognizer(gesture)
-                view.addSubview(button)
+                createUser(x: xFrame, y: yFrame, yUser: yUser, i: i)
             }
             if i % 3 == 2 {
                 count += 1
@@ -53,7 +35,29 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @objc func buttonDidClick(sender: UIGestureRecognizer) {
+    private func createUser(x: Int, y: Int, yUser: Int, i: Int) {
+        let frame = CGRect(x: x, y: y, width: Int(widthFrame), height: 100)
+        let userAvatar = UIImageView(image: UIImage(named: "avatar1"))
+        userAvatar.frame = frame
+        userAvatar.contentMode = .scaleToFill
+        view.addSubview(userAvatar)
+        
+        userNameLabel = UILabel(frame: CGRect(x: x, y: yUser, width: Int(widthFrame), height: 45))
+        userNameLabel?.text = name[i]
+        userNameLabel!.backgroundColor = .blue
+        userNameLabel!.textColor = .white
+        userNameLabel!.textAlignment = .center
+        view.addSubview(userNameLabel!)
+        
+        let button = UIButton(frame: CGRect(x: x, y: y, width: Int(widthFrame), height: 250))
+        button.backgroundColor = .clear
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(buttonUserDidClick))
+        gesture.name = name[i]
+        button.addGestureRecognizer(gesture)
+        view.addSubview(button)
+    }
+    
+    @objc private func buttonUserDidClick(sender: UIGestureRecognizer) {
         if let name = sender.name {
             print(name)
         }

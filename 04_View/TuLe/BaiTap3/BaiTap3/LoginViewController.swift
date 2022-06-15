@@ -1,10 +1,3 @@
-//
-//  LoginViewController.swift
-//  BaiTap3
-//
-//  Created by tu.le2 on 12/06/2022.
-//
-
 import UIKit
 
 final class LoginViewController: UIViewController {
@@ -16,6 +9,10 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
+    }
+    
+    private func configUI() {
         errorLabel.text = "Nhập sai username và password"
         errorLabel.isHidden = true
         loginButton.layer.cornerRadius = 5
@@ -28,7 +25,7 @@ final class LoginViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    @IBAction private func Login(_ sender: Any?) {
+    @IBAction private func loginButtonTouchUpInside(_ sender: Any?) {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         if userNameTextField.text != "Admin" || passWordTextField.text != "Admin123" {
@@ -38,7 +35,7 @@ final class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction private func Clear(_ sender: Any) {
+    @IBAction private func clearButtonTouchUpInside(_ sender: Any) {
         userNameTextField.text = ""
         passWordTextField.text = ""
     }
@@ -47,7 +44,7 @@ final class LoginViewController: UIViewController {
         case self.userNameTextField:
             self.passWordTextField.becomeFirstResponder()
         case self.passWordTextField:
-            self.Login(nil)
+            self.loginButtonTouchUpInside(nil)
         default:
             self.passWordTextField.resignFirstResponder()
         }

@@ -9,6 +9,10 @@ final class CustomSliderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
+    }
+    
+    private func configUI() {
         valueLabel.text = "\(50)"
         buttonSliderView.layer.cornerRadius = 30
     }
@@ -24,15 +28,17 @@ final class CustomSliderViewController: UIViewController {
                 } else {
                     buttonSliderView.center.y = location.y
                 }
+                
                 var newHeightBlueSlider: CGFloat {
                     return blueView.frame.size.height + (blueView.frame.origin.y - buttonSliderView.center.y)
                 }
-                var value: CGFloat {
+                
+                var valueNow: CGFloat {
                     return (newHeightBlueSlider / redView.frame.size.height) * 100
                 }
                
                 blueView.frame = CGRect(x: blueView.frame.origin.x, y: buttonSliderView.center.y, width: blueView.frame.size.width, height: newHeightBlueSlider)
-                valueLabel.text = "\(Int(value))"
+                valueLabel.text = "\(Int(valueNow))"
             }
         }
     }

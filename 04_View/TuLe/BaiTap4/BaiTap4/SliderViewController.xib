@@ -48,7 +48,7 @@
                         <constraint firstAttribute="width" constant="264" id="yIY-XT-TFn"/>
                     </constraints>
                     <connections>
-                        <action selector="redValueChange:" destination="-1" eventType="valueChanged" id="j4k-gR-JDM"/>
+                        <action selector="redSliderValueChanged:" destination="-1" eventType="valueChanged" id="z6M-EM-VGN"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olF-da-wS4">
@@ -75,7 +75,7 @@
                         <constraint firstAttribute="width" constant="264" id="F6f-k5-DgE"/>
                     </constraints>
                     <connections>
-                        <action selector="greenValueChange:" destination="-1" eventType="valueChanged" id="DjA-89-vhp"/>
+                        <action selector="greenSliderValueChanged:" destination="-1" eventType="valueChanged" id="IFK-3D-FUZ"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4b-qt-AKq">
@@ -102,7 +102,7 @@
                         <constraint firstAttribute="width" constant="264" id="7hF-cg-hSo"/>
                     </constraints>
                     <connections>
-                        <action selector="blueValueChange:" destination="-1" eventType="valueChanged" id="Pcq-Ph-hrc"/>
+                        <action selector="blueSliderValueChanged:" destination="-1" eventType="valueChanged" id="XdY-f8-9xQ"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlP-SL-xCc">

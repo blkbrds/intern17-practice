@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="clearButton" destination="nBu-o1-KSX" id="d0J-mz-D3e"/>
                 <outlet property="errorLabel" destination="23k-qJ-5qD" id="f4E-0F-gwG"/>
-                <outlet property="loginButton" destination="hB9-eO-K28" id="BdM-nL-kcx"/>
+                <outlet property="loginButton" destination="hB9-eO-K28" id="R2h-Ot-mt5"/>
                 <outlet property="passWordTextField" destination="vpU-ZN-XnK" id="G0H-lS-uKH"/>
                 <outlet property="userNameTextField" destination="E75-gg-y3S" id="hyU-fk-5nI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -52,7 +52,7 @@
                         <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="Login:" destination="-1" eventType="touchUpInside" id="qRk-pL-nkW"/>
+                        <action selector="loginButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="INq-J3-2do"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBu-o1-KSX">
@@ -67,7 +67,7 @@
                         <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="Clear:" destination="-1" eventType="touchUpInside" id="suU-gX-fei"/>
+                        <action selector="clearButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="ibP-al-Fqq"/>
                     </connections>
                 </button>
             </subviews>

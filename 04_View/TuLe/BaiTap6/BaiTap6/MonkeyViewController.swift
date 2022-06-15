@@ -14,6 +14,10 @@ final class MonkeyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
+    }
+    
+    private func configUI() {
         sayView.layer.isHidden = true
         sayView.layer.cornerRadius = 30
         let singleTap: UITapGestureRecognizer =  UITapGestureRecognizer(target: self, action: #selector(handleSingleTap))
@@ -23,6 +27,7 @@ final class MonkeyViewController: UIViewController {
         doubleTap.numberOfTapsRequired = 2
         monkeyImage.addGestureRecognizer(doubleTap)
     }
+    
     @IBAction private func handlePan(_ gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: view)
         
@@ -61,8 +66,6 @@ final class MonkeyViewController: UIViewController {
                 gestureView.center = finalPoint
             }
         )
-        let start = CFAbsoluteTimeGetCurrent()
-        print(start)
     }
     @IBAction private func handlePinch(_ gesture: UIPinchGestureRecognizer) {
         guard let gestureView = gesture.view else {
