@@ -26,8 +26,6 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction private func loginButtonTouchUpInside(_ sender: Any?) {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
         view.endEditing(true)
         if userNameTextField.text != "Admin" || passWordTextField.text != "Admin123" {
             errorLabel.isHidden = false
