@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100AFA37285ADE3A001E9E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100AFA36285ADE3A001E9E66 /* AppDelegate.swift */; };
+		100AFA39285ADE3A001E9E66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100AFA38285ADE3A001E9E66 /* SceneDelegate.swift */; };
+		100AFA40285ADE3C001E9E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100AFA3F285ADE3C001E9E66 /* Assets.xcassets */; };
+		100AFA43285ADE3C001E9E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100AFA41285ADE3C001E9E66 /* LaunchScreen.storyboard */; };
+		100AFA4E285ADE3C001E9E66 /* BaiTap2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100AFA4D285ADE3C001E9E66 /* BaiTap2Tests.swift */; };
+		100AFA58285ADE3C001E9E66 /* BaiTap2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100AFA57285ADE3C001E9E66 /* BaiTap2UITests.swift */; };
+		100AFA5A285ADE3C001E9E66 /* BaiTap2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100AFA59285ADE3C001E9E66 /* BaiTap2UITestsLaunchTests.swift */; };
+		100AFA68285AE05E001E9E66 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100AFA66285AE05E001E9E66 /* SliderViewController.swift */; };
+		100AFA69285AE05E001E9E66 /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 100AFA67285AE05E001E9E66 /* SliderViewController.xib */; };
+		100AFA6B285AE094001E9E66 /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100AFA6A285AE094001E9E66 /* MySliderView.swift */; };
+		100AFA6D285AE0AE001E9E66 /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 100AFA6C285AE0AE001E9E66 /* MySliderView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		100AFA4A285ADE3C001E9E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100AFA2B285ADE3A001E9E66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100AFA32285ADE3A001E9E66;
+			remoteInfo = BaiTap2;
+		};
+		100AFA54285ADE3C001E9E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100AFA2B285ADE3A001E9E66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100AFA32285ADE3A001E9E66;
+			remoteInfo = BaiTap2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		100AFA33285ADE3A001E9E66 /* BaiTap2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		100AFA36285ADE3A001E9E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		100AFA38285ADE3A001E9E66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		100AFA3F285ADE3C001E9E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		100AFA42285ADE3C001E9E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		100AFA44285ADE3C001E9E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100AFA49285ADE3C001E9E66 /* BaiTap2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		100AFA4D285ADE3C001E9E66 /* BaiTap2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap2Tests.swift; sourceTree = "<group>"; };
+		100AFA53285ADE3C001E9E66 /* BaiTap2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		100AFA57285ADE3C001E9E66 /* BaiTap2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap2UITests.swift; sourceTree = "<group>"; };
+		100AFA59285ADE3C001E9E66 /* BaiTap2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		100AFA66285AE05E001E9E66 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
+		100AFA67285AE05E001E9E66 /* SliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
+		100AFA6A285AE094001E9E66 /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
+		100AFA6C285AE0AE001E9E66 /* MySliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		100AFA30285ADE3A001E9E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100AFA46285ADE3C001E9E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100AFA50285ADE3C001E9E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100AFA2A285ADE3A001E9E66 = {
+			isa = PBXGroup;
+			children = (
+				100AFA35285ADE3A001E9E66 /* BaiTap2 */,
+				100AFA4C285ADE3C001E9E66 /* BaiTap2Tests */,
+				100AFA56285ADE3C001E9E66 /* BaiTap2UITests */,
+				100AFA34285ADE3A001E9E66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		100AFA34285ADE3A001E9E66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				100AFA33285ADE3A001E9E66 /* BaiTap2.app */,
+				100AFA49285ADE3C001E9E66 /* BaiTap2Tests.xctest */,
+				100AFA53285ADE3C001E9E66 /* BaiTap2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		100AFA35285ADE3A001E9E66 /* BaiTap2 */ = {
+			isa = PBXGroup;
+			children = (
+				100AFA36285ADE3A001E9E66 /* AppDelegate.swift */,
+				100AFA38285ADE3A001E9E66 /* SceneDelegate.swift */,
+				100AFA3F285ADE3C001E9E66 /* Assets.xcassets */,
+				100AFA41285ADE3C001E9E66 /* LaunchScreen.storyboard */,
+				100AFA44285ADE3C001E9E66 /* Info.plist */,
+				100AFA66285AE05E001E9E66 /* SliderViewController.swift */,
+				100AFA67285AE05E001E9E66 /* SliderViewController.xib */,
+				100AFA6A285AE094001E9E66 /* MySliderView.swift */,
+				100AFA6C285AE0AE001E9E66 /* MySliderView.xib */,
+			);
+			path = BaiTap2;
+			sourceTree = "<group>";
+		};
+		100AFA4C285ADE3C001E9E66 /* BaiTap2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				100AFA4D285ADE3C001E9E66 /* BaiTap2Tests.swift */,
+			);
+			path = BaiTap2Tests;
+			sourceTree = "<group>";
+		};
+		100AFA56285ADE3C001E9E66 /* BaiTap2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				100AFA57285ADE3C001E9E66 /* BaiTap2UITests.swift */,
+				100AFA59285ADE3C001E9E66 /* BaiTap2UITestsLaunchTests.swift */,
+			);
+			path = BaiTap2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		100AFA32285ADE3A001E9E66 /* BaiTap2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100AFA5D285ADE3C001E9E66 /* Build configuration list for PBXNativeTarget "BaiTap2" */;
+			buildPhases = (
+				100AFA2F285ADE3A001E9E66 /* Sources */,
+				100AFA30285ADE3A001E9E66 /* Frameworks */,
+				100AFA31285ADE3A001E9E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaiTap2;
+			productName = BaiTap2;
+			productReference = 100AFA33285ADE3A001E9E66 /* BaiTap2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		100AFA48285ADE3C001E9E66 /* BaiTap2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100AFA60285ADE3C001E9E66 /* Build configuration list for PBXNativeTarget "BaiTap2Tests" */;
+			buildPhases = (
+				100AFA45285ADE3C001E9E66 /* Sources */,
+				100AFA46285ADE3C001E9E66 /* Frameworks */,
+				100AFA47285ADE3C001E9E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100AFA4B285ADE3C001E9E66 /* PBXTargetDependency */,
+			);
+			name = BaiTap2Tests;
+			productName = BaiTap2Tests;
+			productReference = 100AFA49285ADE3C001E9E66 /* BaiTap2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		100AFA52285ADE3C001E9E66 /* BaiTap2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100AFA63285ADE3C001E9E66 /* Build configuration list for PBXNativeTarget "BaiTap2UITests" */;
+			buildPhases = (
+				100AFA4F285ADE3C001E9E66 /* Sources */,
+				100AFA50285ADE3C001E9E66 /* Frameworks */,
+				100AFA51285ADE3C001E9E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100AFA55285ADE3C001E9E66 /* PBXTargetDependency */,
+			);
+			name = BaiTap2UITests;
+			productName = BaiTap2UITests;
+			productReference = 100AFA53285ADE3C001E9E66 /* BaiTap2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		100AFA2B285ADE3A001E9E66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					100AFA32285ADE3A001E9E66 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					100AFA48285ADE3C001E9E66 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 100AFA32285ADE3A001E9E66;
+					};
+					100AFA52285ADE3C001E9E66 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 100AFA32285ADE3A001E9E66;
+					};
+				};
+			};
+			buildConfigurationList = 100AFA2E285ADE3A001E9E66 /* Build configuration list for PBXProject "BaiTap2" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 100AFA2A285ADE3A001E9E66;
+			productRefGroup = 100AFA34285ADE3A001E9E66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				100AFA32285ADE3A001E9E66 /* BaiTap2 */,
+				100AFA48285ADE3C001E9E66 /* BaiTap2Tests */,
+				100AFA52285ADE3C001E9E66 /* BaiTap2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		100AFA31285ADE3A001E9E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100AFA43285ADE3C001E9E66 /* LaunchScreen.storyboard in Resources */,
+				100AFA6D285AE0AE001E9E66 /* MySliderView.xib in Resources */,
+				100AFA40285ADE3C001E9E66 /* Assets.xcassets in Resources */,
+				100AFA69285AE05E001E9E66 /* SliderViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100AFA47285ADE3C001E9E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100AFA51285ADE3C001E9E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100AFA2F285ADE3A001E9E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100AFA68285AE05E001E9E66 /* SliderViewController.swift in Sources */,
+				100AFA6B285AE094001E9E66 /* MySliderView.swift in Sources */,
+				100AFA37285ADE3A001E9E66 /* AppDelegate.swift in Sources */,
+				100AFA39285ADE3A001E9E66 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100AFA45285ADE3C001E9E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100AFA4E285ADE3C001E9E66 /* BaiTap2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100AFA4F285ADE3C001E9E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100AFA5A285ADE3C001E9E66 /* BaiTap2UITestsLaunchTests.swift in Sources */,
+				100AFA58285ADE3C001E9E66 /* BaiTap2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		100AFA4B285ADE3C001E9E66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100AFA32285ADE3A001E9E66 /* BaiTap2 */;
+			targetProxy = 100AFA4A285ADE3C001E9E66 /* PBXContainerItemProxy */;
+		};
+		100AFA55285ADE3C001E9E66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100AFA32285ADE3A001E9E66 /* BaiTap2 */;
+			targetProxy = 100AFA54285ADE3C001E9E66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		100AFA41285ADE3C001E9E66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				100AFA42285ADE3C001E9E66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		100AFA5B285ADE3C001E9E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		100AFA5C285ADE3C001E9E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		100AFA5E285ADE3C001E9E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BaiTap2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaiTap2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		100AFA5F285ADE3C001E9E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BaiTap2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaiTap2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		100AFA61285ADE3C001E9E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaiTap2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaiTap2.app/BaiTap2";
+			};
+			name = Debug;
+		};
+		100AFA62285ADE3C001E9E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaiTap2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaiTap2.app/BaiTap2";
+			};
+			name = Release;
+		};
+		100AFA64285ADE3C001E9E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaiTap2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BaiTap2;
+			};
+			name = Debug;
+		};
+		100AFA65285ADE3C001E9E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaiTap2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BaiTap2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100AFA2E285ADE3A001E9E66 /* Build configuration list for PBXProject "BaiTap2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100AFA5B285ADE3C001E9E66 /* Debug */,
+				100AFA5C285ADE3C001E9E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100AFA5D285ADE3C001E9E66 /* Build configuration list for PBXNativeTarget "BaiTap2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100AFA5E285ADE3C001E9E66 /* Debug */,
+				100AFA5F285ADE3C001E9E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100AFA60285ADE3C001E9E66 /* Build configuration list for PBXNativeTarget "BaiTap2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100AFA61285ADE3C001E9E66 /* Debug */,
+				100AFA62285ADE3C001E9E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100AFA63285ADE3C001E9E66 /* Build configuration list for PBXNativeTarget "BaiTap2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100AFA64285ADE3C001E9E66 /* Debug */,
+				100AFA65285ADE3C001E9E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 100AFA2B285ADE3A001E9E66 /* Project object */;
+}
