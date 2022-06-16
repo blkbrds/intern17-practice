@@ -4,7 +4,7 @@ protocol UserViewDelegate {
     func didTap(view: MyAvatar, count: Int)
 }
 
-class MyAvatar: UIView {
+final class MyAvatar: UIView {
     
     var avatarImageView: UIImageView?
     var nameLabel: UILabel?
@@ -43,7 +43,7 @@ class MyAvatar: UIView {
         self.addSubview(markButton!)
     }
     
-    @objc func tap() {
+    @objc private func tap() {
         count += 1
         nameLabel?.text = "\(count)"
         

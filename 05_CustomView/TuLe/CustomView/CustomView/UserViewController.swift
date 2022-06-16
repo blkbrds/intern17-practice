@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+final class UserViewController: UIViewController {
     
     private let screenSize = UIScreen.main.bounds
     let spaceX: Int = 10
