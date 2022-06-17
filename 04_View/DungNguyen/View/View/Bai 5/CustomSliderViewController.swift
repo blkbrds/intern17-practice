@@ -7,22 +7,22 @@
 
 import UIKit
 
-class CustomSliderViewController: UIViewController {
+final class CustomSliderViewController: UIViewController {
     
     var number: Int = 50 {
         didSet {
             // tinh frame mau do hoac xanh
-            let newBlueHeight = blueView.frame.size.height + (blueView.frame.origin.y - orangeView.center.y)
+            blueView.frame = CGRect(x: blueView.frame.origin.x, y: orangeView.center.y, width: whiteView.frame.width, height: whiteView.frame.height - orangeView.center.y)
             // cap nhat lai title
             numberLabel.text = "\(number)"
         }
     }
 
-    @IBOutlet weak var whiteView: UIView!
-    @IBOutlet weak var blueView: UIView!
-    @IBOutlet weak var orangeView: UIView!
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var parentView: UIView!
+    @IBOutlet private weak var whiteView: UIView!
+    @IBOutlet private weak var blueView: UIView!
+    @IBOutlet private weak var orangeView: UIView!
+    @IBOutlet private weak var numberLabel: UILabel!
+    @IBOutlet private weak var parentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +40,11 @@ class CustomSliderViewController: UIViewController {
                         orangeView.center.y = parentView.bounds.maxY
                     } else {
                         orangeView.center.y = location.y
-                        // tinh dc %
-                        blueView.frame = CGRect(x: blueView.frame.origin.x, y: orangeView.center.y, width: whiteView.frame.width, height: whiteView.frame.height - orangeView.center.y)
-                        let percent = Int((blueView.frame.height / parentView.frame.height) * 100)
-                        // number = %
-                        number = percent
                     }
+                    // tinh %
+                    let percent = Int((blueView.frame.height / parentView.frame.height) * 100)
+                    // number = %
+                    number = percent
                 }
             }
         }

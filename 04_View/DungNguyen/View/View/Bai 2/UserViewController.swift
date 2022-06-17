@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+final class UserViewController: UIViewController {
     
     let names: [String] = ["Name1", "Name2", "Name3", "Name4", "Name5", "Name6", "Name7", "Name8", "Name9"]
 
@@ -40,25 +40,25 @@ class UserViewController: UIViewController {
         let userView = UIView(frame: frame)
         let frame = CGRect(x: 0, y: 50, width: userView.bounds.width, height: userView.bounds.height)
         
-        let userAvatar = UIImageView(image: UIImage(named: "avatar.png"))
-        userAvatar.frame = frame
-        userAvatar.contentMode = .scaleToFill
-        userView.addSubview(userAvatar)
+        let avatarImagaView = UIImageView(image: UIImage(named: "avatar.png"))
+        avatarImagaView.frame = frame
+        avatarImagaView.contentMode = .scaleToFill
+        userView.addSubview(avatarImagaView)
         
         // Add user name
-        let userName = UILabel(frame: CGRect(x: 0, y: userView.bounds.height + 20, width: userView.bounds.width, height: 30))
-        userName.text = name
-        userName.backgroundColor = .systemBlue
-        userName.textColor = .white
-        userName.textAlignment = .center
-        userView.addSubview(userName)
+        let userNameLabel = UILabel(frame: CGRect(x: 0, y: userView.bounds.height + 20, width: userView.bounds.width, height: 30))
+        userNameLabel.text = name
+        userNameLabel.backgroundColor = .systemBlue
+        userNameLabel.textColor = .white
+        userNameLabel.textAlignment = .center
+        userView.addSubview(userNameLabel)
         
         // Add button
-        let button = UIButton(frame: frame)
-        button.backgroundColor = .clear
-        button.tag = index
-        button.addTarget(self, action: #selector(buttonDidClick(sender:)), for: .touchUpInside)
-        userView.addSubview(button)
+        let userViewButton = UIButton(frame: frame)
+        userViewButton.backgroundColor = .clear
+        userViewButton.tag = index
+        userViewButton.addTarget(self, action: #selector(buttonDidClick(sender:)), for: .touchUpInside)
+        userView.addSubview(userViewButton)
         
         return userView
     }

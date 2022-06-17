@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MonkeyViewController: UIViewController{
+final class MonkeyViewController: UIViewController{
 
     let minScale: CGFloat = 0.5
     let maxScale: CGFloat = 2.0
@@ -15,9 +15,9 @@ class MonkeyViewController: UIViewController{
     var height: CGFloat = 0.0
     var timer = Timer()
     
-    @IBOutlet weak var monkeyImage: UIImageView!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var monkeyImage: UIImageView!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
         width = (self.monkeyImage.frame.size.width)
