@@ -17,6 +17,10 @@
 		10191F702859909800C610A0 /* CustomViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10191F6F2859909800C610A0 /* CustomViewUITestsLaunchTests.swift */; };
 		10191F7F2859B88E00C610A0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10191F7D2859B88E00C610A0 /* UserViewController.swift */; };
 		10191F802859B88E00C610A0 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10191F7E2859B88E00C610A0 /* UserViewController.xib */; };
+		10B752C5285C14D300ACF7BF /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B752C1285C14D300ACF7BF /* MySliderView.xib */; };
+		10B752C6285C14D300ACF7BF /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752C2285C14D300ACF7BF /* MySliderView.swift */; };
+		10B752C7285C14D300ACF7BF /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752C3285C14D300ACF7BF /* SliderViewController.swift */; };
+		10B752C8285C14D300ACF7BF /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B752C4285C14D300ACF7BF /* SliderViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		10191F6F2859909800C610A0 /* CustomViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		10191F7D2859B88E00C610A0 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		10191F7E2859B88E00C610A0 /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		10B752C1285C14D300ACF7BF /* MySliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
+		10B752C2285C14D300ACF7BF /* MySliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
+		10B752C3285C14D300ACF7BF /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
+		10B752C4285C14D300ACF7BF /* SliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		10191F4B2859909600C610A0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				10B752C0285C14BF00ACF7BF /* Bai2 */,
 				10B752B5285C115A00ACF7BF /* Bai1 */,
 				10191F4C2859909600C610A0 /* AppDelegate.swift */,
 				10191F4E2859909600C610A0 /* SceneDelegate.swift */,
@@ -136,6 +145,17 @@
 				100AF9EC285AC9AE001E9E66 /* MyAvatar.swift */,
 			);
 			path = Bai1;
+			sourceTree = "<group>";
+		};
+		10B752C0285C14BF00ACF7BF /* Bai2 */ = {
+			isa = PBXGroup;
+			children = (
+				10B752C2285C14D300ACF7BF /* MySliderView.swift */,
+				10B752C1285C14D300ACF7BF /* MySliderView.xib */,
+				10B752C3285C14D300ACF7BF /* SliderViewController.swift */,
+				10B752C4285C14D300ACF7BF /* SliderViewController.xib */,
+			);
+			path = Bai2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				10191F592859909800C610A0 /* LaunchScreen.storyboard in Resources */,
+				10B752C5285C14D300ACF7BF /* MySliderView.xib in Resources */,
+				10B752C8285C14D300ACF7BF /* SliderViewController.xib in Resources */,
 				10191F802859B88E00C610A0 /* UserViewController.xib in Resources */,
 				10191F562859909800C610A0 /* Assets.xcassets in Resources */,
 			);
@@ -270,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				10191F4D2859909600C610A0 /* AppDelegate.swift in Sources */,
+				10B752C6285C14D300ACF7BF /* MySliderView.swift in Sources */,
 				10191F7F2859B88E00C610A0 /* UserViewController.swift in Sources */,
+				10B752C7285C14D300ACF7BF /* SliderViewController.swift in Sources */,
 				100AF9ED285AC9AE001E9E66 /* MyAvatar.swift in Sources */,
 				10191F4F2859909600C610A0 /* SceneDelegate.swift in Sources */,
 			);
