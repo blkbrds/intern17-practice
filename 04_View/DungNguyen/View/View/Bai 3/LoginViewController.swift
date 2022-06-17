@@ -37,13 +37,11 @@ final class LoginViewController: UIViewController {
     }
     
     func login() {
-        let username = usernameTextField.text
-        let password = passwordTextField.text
-
-        if username!.isEmpty || password!.isEmpty{
-            errorLabel.text = "Chưa nhập username và password"
-            errorLabel.isHidden = false
-        } else if username == "Admin" && password == "Admin123" {
+        guard let username = usernameTextField.text, let password = passwordTextField.text, !username.isEmpty, !password.isEmpty else {
+        errorLabel.text = "Chưa nhập user hoặc password"
+        return
+        }
+        if username == "Admin" && password == "Admin123" {
             errorLabel.isHidden = true
         } else {
             errorLabel.text = "Nhập sai username và password"
