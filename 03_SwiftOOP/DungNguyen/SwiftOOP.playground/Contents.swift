@@ -161,10 +161,12 @@ class HinhVe {
     func dienTich() -> Float {
         return 0.0
     }
-    func chuVi() ->Float {
+    
+    func chuVi() -> Float {
         return 0.0
     }
-    func theTich() ->Float {
+    
+    func theTich() -> Float {
         return 0.0
     }
 }
@@ -346,14 +348,9 @@ class DanhSachHocSinh {
             if hs1.tongDiem > hs2.tongDiem {
                 return true
             } else if hs1.tongDiem == hs2.tongDiem {
-                if hs1.namSinh < hs2.namSinh {
-                    return true
-                } else{
-                    return false
-                }
-            } else {
-                return false
+                return hs1.namSinh < hs2.namSinh
             }
+            return false
         }
         
         for hocSinh in danhSach {
