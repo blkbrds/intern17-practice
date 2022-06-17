@@ -2,6 +2,7 @@ import UIKit
 
 // Bai tap 1
 class PhanSo {
+    
     var tuSo: Int
     var mauSo: Int
     
@@ -54,6 +55,7 @@ print("Thương của hai phân số = \(ketQuaChia.inPhanSo())")
 
 // Bai tap 2
 class DaGiac {
+    
     var soCanh: Int = 0
     var a: [Int]
     
@@ -115,6 +117,7 @@ print("\(tamGiac.checkTamGiacPytago())")
 
 // Bai tap 5
 class CStack {
+    
     var stack: [Int]
     let size: Int = 5
     var index: Int
@@ -158,6 +161,7 @@ stack.pop()
 
 // Bai tap 6
 class HinhVe {
+    
     func dienTich() -> Float {
         return 0.0
     }
@@ -172,6 +176,7 @@ class HinhVe {
 }
 
 class HaiChieu: HinhVe {
+    
     override func dienTich() -> Float {
         super.dienTich()
     }
@@ -187,6 +192,7 @@ class HaiChieu: HinhVe {
 }
 
 class BaChieu: HinhVe {
+    
     override func dienTich() -> Float {
         super.dienTich()
     }
@@ -206,6 +212,7 @@ class BaChieu: HinhVe {
 }
 
 class Tron: HaiChieu {
+    
     var r: Float
     
     init(r : Float) {
@@ -226,6 +233,7 @@ class Tron: HaiChieu {
 }
 
 class Vuong: HaiChieu {
+    
     var a: Float
     
     init(a: Float) {
@@ -246,6 +254,7 @@ class Vuong: HaiChieu {
 }
 
 class HinhTamGiac: HaiChieu {
+    
     var a: Float
     var b: Float
     var c: Float
@@ -272,6 +281,7 @@ class HinhTamGiac: HaiChieu {
 }
 
 class HinhCau: BaChieu {
+    
     var r: Float
     
     init(r : Float) {
@@ -292,6 +302,7 @@ class HinhCau: BaChieu {
 }
 
 class LapPhuong: BaChieu {
+    
     var a: Float
     
     init(a: Float) {
@@ -321,6 +332,7 @@ ketQua.inKetQua()
 
 // Bai tap 7
 class HocSinh {
+    
     var hoTen: String
     var namSinh: Int
     var tongDiem: Double
@@ -337,6 +349,7 @@ class HocSinh {
 }
  
 class DanhSachHocSinh {
+    
     var danhSach: [HocSinh]
     
     init(danhSach: [HocSinh]) {
@@ -380,6 +393,7 @@ danhSach.inKetQua()
  
 // Bai tap 8
 class Date {
+    
     var day: Int
     var month: Int
     var year: Int
@@ -445,6 +459,7 @@ date.normalize()
 
 // Bai tap 9
 class Mang1c {
+    
     var arr: [Int] = []
     
     init(arr: [Int]) {
@@ -485,6 +500,7 @@ let array = Mang1c(arr: [2, 3, 4])
 
 // Bai tap 10
 class A {
+    
     var n: Int
     var s: Int = 0
     
