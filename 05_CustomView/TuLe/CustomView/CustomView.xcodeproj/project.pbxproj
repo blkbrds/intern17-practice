@@ -23,6 +23,9 @@
 		10B752C8285C14D300ACF7BF /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B752C4285C14D300ACF7BF /* SliderViewController.xib */; };
 		10B752CC285C166500ACF7BF /* BT3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752CA285C166500ACF7BF /* BT3ViewController.swift */; };
 		10B752CD285C166500ACF7BF /* BT3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B752CB285C166500ACF7BF /* BT3ViewController.xib */; };
+		10B752D5285C5C6600ACF7BF /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752D3285C5C6600ACF7BF /* DatePickerViewController.swift */; };
+		10B752D6285C5C6600ACF7BF /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B752D4285C5C6600ACF7BF /* DatePickerViewController.xib */; };
+		10B752D8285C5D3D00ACF7BF /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752D7285C5D3D00ACF7BF /* DatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		10B752C4285C14D300ACF7BF /* SliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
 		10B752CA285C166500ACF7BF /* BT3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BT3ViewController.swift; sourceTree = "<group>"; };
 		10B752CB285C166500ACF7BF /* BT3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT3ViewController.xib; sourceTree = "<group>"; };
+		10B752D3285C5C6600ACF7BF /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		10B752D4285C5C6600ACF7BF /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		10B752D7285C5D3D00ACF7BF /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 		10191F4B2859909600C610A0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				10B752D2285C5C2E00ACF7BF /* Bai4 */,
 				10B752C9285C15AD00ACF7BF /* Bai3 */,
 				10B752C0285C14BF00ACF7BF /* Bai2 */,
 				10B752B5285C115A00ACF7BF /* Bai1 */,
@@ -170,6 +177,16 @@
 				10B752CB285C166500ACF7BF /* BT3ViewController.xib */,
 			);
 			path = Bai3;
+			sourceTree = "<group>";
+		};
+		10B752D2285C5C2E00ACF7BF /* Bai4 */ = {
+			isa = PBXGroup;
+			children = (
+				10B752D3285C5C6600ACF7BF /* DatePickerViewController.swift */,
+				10B752D4285C5C6600ACF7BF /* DatePickerViewController.xib */,
+				10B752D7285C5D3D00ACF7BF /* DatePicker.swift */,
+			);
+			path = Bai4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +298,7 @@
 				10B752C8285C14D300ACF7BF /* SliderViewController.xib in Resources */,
 				10191F802859B88E00C610A0 /* UserViewController.xib in Resources */,
 				10B752CD285C166500ACF7BF /* BT3ViewController.xib in Resources */,
+				10B752D6285C5C6600ACF7BF /* DatePickerViewController.xib in Resources */,
 				10191F562859909800C610A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,9 +328,11 @@
 				10B752C6285C14D300ACF7BF /* MySliderView.swift in Sources */,
 				10191F7F2859B88E00C610A0 /* UserViewController.swift in Sources */,
 				10B752C7285C14D300ACF7BF /* SliderViewController.swift in Sources */,
+				10B752D5285C5C6600ACF7BF /* DatePickerViewController.swift in Sources */,
 				10B752CC285C166500ACF7BF /* BT3ViewController.swift in Sources */,
 				100AF9ED285AC9AE001E9E66 /* MyAvatar.swift in Sources */,
 				10191F4F2859909600C610A0 /* SceneDelegate.swift in Sources */,
+				10B752D8285C5D3D00ACF7BF /* DatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
