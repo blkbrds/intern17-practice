@@ -101,14 +101,12 @@
 		10191F4B2859909600C610A0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				10B752B5285C115A00ACF7BF /* Bai1 */,
 				10191F4C2859909600C610A0 /* AppDelegate.swift */,
-				10191F7D2859B88E00C610A0 /* UserViewController.swift */,
-				10191F7E2859B88E00C610A0 /* UserViewController.xib */,
 				10191F4E2859909600C610A0 /* SceneDelegate.swift */,
 				10191F552859909800C610A0 /* Assets.xcassets */,
 				10191F572859909800C610A0 /* LaunchScreen.storyboard */,
 				10191F5A2859909800C610A0 /* Info.plist */,
-				100AF9EC285AC9AE001E9E66 /* MyAvatar.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -128,6 +126,16 @@
 				10191F6F2859909800C610A0 /* CustomViewUITestsLaunchTests.swift */,
 			);
 			path = CustomViewUITests;
+			sourceTree = "<group>";
+		};
+		10B752B5285C115A00ACF7BF /* Bai1 */ = {
+			isa = PBXGroup;
+			children = (
+				10191F7D2859B88E00C610A0 /* UserViewController.swift */,
+				10191F7E2859B88E00C610A0 /* UserViewController.xib */,
+				100AF9EC285AC9AE001E9E66 /* MyAvatar.swift */,
+			);
+			path = Bai1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
