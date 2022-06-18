@@ -7,25 +7,43 @@
 
 import UIKit
 
+protocol MySliderViewDataSource {
+    func getvalueTextField() -> Int
+}
+
 final class SliderViewController: UIViewController {
-    @IBOutlet private weak var valueView: UIView!
-    @IBOutlet private weak var valueLabel: UILabel!
+    @IBOutlet private weak var valueSliderTextField: UITextField!
+    let sliderView = Bundle.main.loadNibNamed("MySliderView", owner: SliderViewController.self, options: nil)?.first as? MySliderView
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        valueSliderTextField.delegate = self
+        valueSliderTextField.returnKeyType = .done
     }
     
     private func configUI() {
-        let sliderView = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as? MySliderView
         sliderView?.frame = CGRect(x: view.bounds.midX, y: 200, width: 106, height: 564)
         sliderView?.delegate = self
+        sliderView?.dataSource = self
         view.addSubview(sliderView!)
-        valueView.layer.borderWidth = 2
     }
 }
 extension SliderViewController: MySliderViewDelegate {
     func valueNow(view: MySliderView, value: Int) {
-        valueLabel.text = String(value)
+        valueSliderTextField.text = "\(value)"
+    }
+}
+extension SliderViewController: MySliderViewDataSource {
+    func getvalueTextField() -> Int {
+        return Int(valueSliderTextField.text ?? "50") ?? 50
+    }
+}
+
+extension SliderViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        sliderView?.getData()
+        view.endEditing(true)
+        return true
     }
 }
