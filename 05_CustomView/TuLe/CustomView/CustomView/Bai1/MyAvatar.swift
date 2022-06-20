@@ -1,7 +1,7 @@
 import UIKit
 
-protocol UserViewDelegate {
-    func didTap(view: MyAvatar, count: Int)
+protocol UserViewDelegate: AnyObject {
+    func didTaped(view: MyAvatar, count: Int)
 }
 
 final class MyAvatar: UIView {
@@ -10,7 +10,7 @@ final class MyAvatar: UIView {
     var nameLabel: UILabel?
     var markButton: UIButton?
     var count: Int = 0
-    var delegate: UserViewDelegate?
+    weak var delegate: UserViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,11 +39,11 @@ final class MyAvatar: UIView {
                                             width: frame.size.width,
                                             height: frame.size.height))
         markButton!.backgroundColor = .clear
-        markButton?.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        markButton?.addTarget(self, action: #selector(taped), for: .touchUpInside)
         self.addSubview(markButton!)
     }
     
-    @objc private func tap() {
+    @objc private func taped() {
         count += 1
         nameLabel?.text = "\(count)"
         
@@ -51,7 +51,7 @@ final class MyAvatar: UIView {
             return
         }
 
-        delegate.didTap(view: self, count: count)
+        delegate.didTaped(view: self, count: count)
     }
     
     required init?(coder: NSCoder) {

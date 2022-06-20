@@ -6,7 +6,7 @@ protocol DatePickerDelegate: AnyObject {
 
 final class DatePicker : UIView{
     let datePicker = UIDatePicker()
-    var delegate: DatePickerDelegate?
+    weak var delegate: DatePickerDelegate?
     
     func createToolbar() -> UIToolbar {
         let toolbar = UIToolbar()

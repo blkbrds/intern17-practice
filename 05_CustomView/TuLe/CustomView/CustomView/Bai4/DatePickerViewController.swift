@@ -6,6 +6,7 @@ final class DatePickerViewController: UIViewController {
         super.viewDidLoad()
         configUI()
     }
+    
     private func configUI() {
         let dateView = DatePicker()
         dateView.datePicker.preferredDatePickerStyle = .wheels

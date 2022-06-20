@@ -9,18 +9,20 @@ final class MySliderView: UIView {
     @IBOutlet private weak var redView: UIView!
     @IBOutlet private weak var whiteView: UIView!
     @IBOutlet private weak var buttonSliderView: UIView!
-    var delegate: MySliderViewDelegate?
-    var dataSource: MySliderViewDataSource?
+    weak var delegate: MySliderViewDelegate?
+    weak var dataSource: MySliderViewDataSource?
     @IBOutlet private weak var valueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         configUI()
     }
+    
     func getData() {
         guard let dataSource = dataSource else {
             return
         }
+        
         print("\(dataSource.getvalueTextField())")
         buttonSliderView.center.y = (CGFloat(100 - dataSource.getvalueTextField()) * redView.frame.size.height) / 100
         var newHeightBlueSlider: CGFloat {
@@ -30,6 +32,7 @@ final class MySliderView: UIView {
         var valueNow: CGFloat {
             return (newHeightBlueSlider / redView.frame.size.height) * 100
         }
+        
         whiteView.frame = CGRect(x: whiteView.frame.origin.x, y: buttonSliderView.center.y, width: whiteView.frame.size.width, height: newHeightBlueSlider)
         valueLabel.text = "\(Int(valueNow))"
     }
@@ -41,7 +44,6 @@ final class MySliderView: UIView {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             if touch.view == buttonSliderView {
-                
                 guard let delegate = delegate else {
                     return
                 }

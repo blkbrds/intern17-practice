@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol MySliderViewDataSource {
+protocol MySliderViewDataSource: AnyObject {
     func getvalueTextField() -> Int
 }
 
