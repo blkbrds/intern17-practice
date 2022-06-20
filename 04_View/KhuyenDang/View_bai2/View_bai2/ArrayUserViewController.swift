@@ -7,14 +7,15 @@
 
 import UIKit
 
-class ArrayUserViewController: UIViewController {
+final class ArrayUserViewController: UIViewController {
     let names: [String] = ["Name1", "Name2", "Name3","Name4", "Name5", "Name6", "Name7", "Name8", "Name9"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         listUser()
     }
     
-    func listUser() {
+    private func listUser() {
         var xUser: CGFloat = 15
         var yUser: CGFloat = 100
         let widthUser: CGFloat = CGFloat((UIScreen.main.bounds.width - 15 * 4) / 3)
@@ -29,7 +30,7 @@ class ArrayUserViewController: UIViewController {
         }
     }
     
-    func user(x: CGFloat, y: CGFloat, width: CGFloat, name: String, index: Int) {
+    private func user(x: CGFloat, y: CGFloat, width: CGFloat, name: String, index: Int) {
         // add user avt
         let frame = CGRect(x: x, y: y, width: width, height: 100)
         let userAvatar = UIImageView(image: UIImage(named: "avatar.jpeg"))
@@ -47,13 +48,13 @@ class ArrayUserViewController: UIViewController {
         
         // add button
         let button = UIButton(frame: CGRect(x: x, y: y, width: width, height: 140))
-            button.backgroundColor = .clear
-            button.tag = index
-            button.addTarget(self, action: #selector(buttonDidClick(sender:)), for: .touchUpInside)
-            view.addSubview(button)
+        button.backgroundColor = .clear
+        button.tag = index
+        button.addTarget(self, action: #selector(buttonDidClick(sender:)), for: .touchUpInside)
+        view.addSubview(button)
     }
     
-    @objc func buttonDidClick(sender: UIButton) {
+    @objc private func buttonDidClick(sender: UIButton) {
         print("clicked \(names[sender.tag])")
     }
 }
