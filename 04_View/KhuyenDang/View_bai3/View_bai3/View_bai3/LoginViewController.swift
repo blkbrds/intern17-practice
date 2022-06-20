@@ -8,25 +8,24 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-
+    
     @IBOutlet private weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var errorLabel: UILabel!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var clearButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         loginButton.layer.cornerRadius = 10
         clearButton.layer.cornerRadius = 10
         usernameTextField.returnKeyType = .next
         usernameTextField.delegate = self
         passwordTextField.delegate = self
     }
-
     
-    func login() {
+    private func login() {
         let username = usernameTextField.text
         let password = passwordTextField.text
         
@@ -49,17 +48,15 @@ final class LoginViewController: UIViewController {
     @IBAction private func loginButtonTouchUpInside(_ sender: UIButton) {
         login()
     }
-
+    
     @IBAction private func clearButtonTouchUpInside(_ sender: UIButton) {
         usernameTextField.text = ""
         passwordTextField.text = ""
     }
-    
-    
 }
 
 extension LoginViewController: UITextFieldDelegate {
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameTextField {
             passwordTextField.becomeFirstResponder()
