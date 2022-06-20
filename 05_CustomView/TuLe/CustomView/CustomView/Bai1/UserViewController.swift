@@ -44,7 +44,7 @@ final class UserViewController: UIViewController {
         let heightContentScrollView: CGFloat = CGFloat(145 * (userNumber / 3 + 1) + (userNumber / 3 + 1) * spaceX)
         userScrollView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
         userScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: heightContentScrollView)
-        self.view.addSubview(userScrollView)
+        view.addSubview(userScrollView)
     }
 }
 

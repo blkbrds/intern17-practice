@@ -22,7 +22,7 @@ final class MyAvatar: UIView {
                                         width: frame.size.width,
                                         height: frame.size.height*4/5)
         avatarImageView!.contentMode = .scaleAspectFill
-        self.addSubview(avatarImageView!)
+        addSubview(avatarImageView!)
         
         nameLabel = UILabel(frame: CGRect(x: 0,
                                           y: frame.size.height*4/5,
@@ -32,7 +32,7 @@ final class MyAvatar: UIView {
         nameLabel!.backgroundColor = .lightGray
         nameLabel!.textAlignment = .center
         nameLabel!.textColor = .blue
-        self.addSubview(nameLabel!)
+        addSubview(nameLabel!)
         
         markButton = UIButton(frame: CGRect(x: 0,
                                             y: 0,
@@ -40,7 +40,7 @@ final class MyAvatar: UIView {
                                             height: frame.size.height))
         markButton!.backgroundColor = .clear
         markButton?.addTarget(self, action: #selector(taped), for: .touchUpInside)
-        self.addSubview(markButton!)
+        addSubview(markButton!)
     }
     
     @objc private func taped() {
