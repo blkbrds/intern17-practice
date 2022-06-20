@@ -8,7 +8,7 @@
 import UIKit
 
 final class BackgroundColorViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var titleColorLabel: UILabel!
     @IBOutlet private weak var colorView: UIView!
@@ -30,7 +30,7 @@ final class BackgroundColorViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    func setUpColor()  {
+    private func setUpColor()  {
         titleColorLabel.text = "Color(R: \(red), G: \(green), B: \(blue))"
         colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
@@ -41,7 +41,7 @@ final class BackgroundColorViewController: UIViewController {
         red = CGFloat(sender.value)
         setUpColor()
     }
-     
+    
     @IBAction private func greenSliderChangeColor(_ sender: UISlider) {
         green = CGFloat(sender.value)
         setUpColor()
