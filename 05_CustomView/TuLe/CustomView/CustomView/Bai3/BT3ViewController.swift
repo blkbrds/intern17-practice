@@ -12,7 +12,6 @@ final class BT3ViewController: UIViewController {
     @IBOutlet private weak var friendsButton: UIButton!
     @IBOutlet private weak var photoButton: UIButton!
     let badgeSize: CGFloat = 30
-    let badgeTag = 9830384
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +44,7 @@ final class BT3ViewController: UIViewController {
         if email != 0 {
             emailBadge.frame = CGRect(x: 0, y: 0, width: 50, height: 20)
             emailButton.addSubview(emailBadge)
-            emailBadge.center = CGPoint(x: emailButton.bounds.width / 2, y: 0)
+            emailBadge.center = CGPoint(x: emailButton.bounds.width, y: 0)
         }
         
         if friends != 0 {

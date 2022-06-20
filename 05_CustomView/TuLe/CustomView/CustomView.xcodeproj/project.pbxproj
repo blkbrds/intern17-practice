@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		100AF9ED285AC9AE001E9E66 /* MyAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100AF9EC285AC9AE001E9E66 /* MyAvatar.swift */; };
+		100AF9ED285AC9AE001E9E66 /* MyAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100AF9EC285AC9AE001E9E66 /* MyAvatarView.swift */; };
 		10191F4D2859909600C610A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10191F4C2859909600C610A0 /* AppDelegate.swift */; };
 		10191F4F2859909600C610A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10191F4E2859909600C610A0 /* SceneDelegate.swift */; };
 		10191F562859909800C610A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10191F552859909800C610A0 /* Assets.xcassets */; };
@@ -25,7 +25,7 @@
 		10B752CD285C166500ACF7BF /* BT3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B752CB285C166500ACF7BF /* BT3ViewController.xib */; };
 		10B752D5285C5C6600ACF7BF /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752D3285C5C6600ACF7BF /* DatePickerViewController.swift */; };
 		10B752D6285C5C6600ACF7BF /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B752D4285C5C6600ACF7BF /* DatePickerViewController.xib */; };
-		10B752D8285C5D3D00ACF7BF /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752D7285C5D3D00ACF7BF /* DatePicker.swift */; };
+		10B752D8285C5D3D00ACF7BF /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752D7285C5D3D00ACF7BF /* DatePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		100AF9EC285AC9AE001E9E66 /* MyAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvatar.swift; sourceTree = "<group>"; };
+		100AF9EC285AC9AE001E9E66 /* MyAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvatarView.swift; sourceTree = "<group>"; };
 		10191F492859909600C610A0 /* CustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10191F4C2859909600C610A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10191F4E2859909600C610A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		10B752CB285C166500ACF7BF /* BT3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BT3ViewController.xib; sourceTree = "<group>"; };
 		10B752D3285C5C6600ACF7BF /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		10B752D4285C5C6600ACF7BF /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
-		10B752D7285C5D3D00ACF7BF /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		10B752D7285C5D3D00ACF7BF /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +154,7 @@
 			children = (
 				10191F7D2859B88E00C610A0 /* UserViewController.swift */,
 				10191F7E2859B88E00C610A0 /* UserViewController.xib */,
-				100AF9EC285AC9AE001E9E66 /* MyAvatar.swift */,
+				100AF9EC285AC9AE001E9E66 /* MyAvatarView.swift */,
 			);
 			path = Bai1;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 			children = (
 				10B752D3285C5C6600ACF7BF /* DatePickerViewController.swift */,
 				10B752D4285C5C6600ACF7BF /* DatePickerViewController.xib */,
-				10B752D7285C5D3D00ACF7BF /* DatePicker.swift */,
+				10B752D7285C5D3D00ACF7BF /* DatePickerView.swift */,
 			);
 			path = Bai4;
 			sourceTree = "<group>";
@@ -330,9 +330,9 @@
 				10B752C7285C14D300ACF7BF /* SliderViewController.swift in Sources */,
 				10B752D5285C5C6600ACF7BF /* DatePickerViewController.swift in Sources */,
 				10B752CC285C166500ACF7BF /* BT3ViewController.swift in Sources */,
-				100AF9ED285AC9AE001E9E66 /* MyAvatar.swift in Sources */,
+				100AF9ED285AC9AE001E9E66 /* MyAvatarView.swift in Sources */,
 				10191F4F2859909600C610A0 /* SceneDelegate.swift in Sources */,
-				10B752D8285C5D3D00ACF7BF /* DatePicker.swift in Sources */,
+				10B752D8285C5D3D00ACF7BF /* DatePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

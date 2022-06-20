@@ -1,10 +1,10 @@
 import UIKit
 
 protocol DatePickerDelegate: AnyObject {
-    func didTap(view: DatePicker, dateFormat: String)
+    func didTap(view: DatePickerView, dateFormat: String)
 }
 
-final class DatePicker : UIView{
+final class DatePickerView : UIView{
     let datePicker = UIDatePicker()
     weak var delegate: DatePickerDelegate?
     

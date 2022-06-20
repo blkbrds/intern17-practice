@@ -8,7 +8,7 @@ final class DatePickerViewController: UIViewController {
     }
     
     private func configUI() {
-        let dateView = DatePicker()
+        let dateView = DatePickerView()
         dateView.datePicker.preferredDatePickerStyle = .wheels
         dateTextField.inputAccessoryView = dateView.createToolbar()
         dateTextField.inputView = dateView.datePicker
@@ -18,7 +18,7 @@ final class DatePickerViewController: UIViewController {
     }
 }
 extension DatePickerViewController: DatePickerDelegate {
-    func didTap(view: DatePicker, dateFormat: String) {
+    func didTap(view: DatePickerView, dateFormat: String) {
         self.view.endEditing(true)
         dateTextField.text = dateFormat
     }

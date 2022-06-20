@@ -8,12 +8,12 @@
 import UIKit
 
 protocol MySliderViewDataSource: AnyObject {
-    func getvalueTextField() -> Int
+    func getValueTextField() -> Int
 }
 
 final class SliderViewController: UIViewController {
     @IBOutlet private weak var valueSliderTextField: UITextField!
-    let sliderView = Bundle.main.loadNibNamed("MySliderView", owner: SliderViewController.self, options: nil)?.first as? MySliderView
+    lazy var sliderView = Bundle.main.loadNibNamed("MySliderView", owner: SliderViewController.self, options: nil)?.first as? MySliderView
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,12 @@ final class SliderViewController: UIViewController {
     }
 }
 extension SliderViewController: MySliderViewDelegate {
-    func valueNow(view: MySliderView, value: Int) {
+    func getValueButtonSlider(view: MySliderView, value: Int) {
         valueSliderTextField.text = "\(value)"
     }
 }
 extension SliderViewController: MySliderViewDataSource {
-    func getvalueTextField() -> Int {
+    func getValueTextField() -> Int {
         return Int(valueSliderTextField.text ?? "50") ?? 50
     }
 }

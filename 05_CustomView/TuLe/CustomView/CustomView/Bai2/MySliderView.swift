@@ -1,7 +1,7 @@
 import UIKit
 
 protocol MySliderViewDelegate: AnyObject {
-    func valueNow(view: MySliderView, value: Int)
+    func getValueButtonSlider(view: MySliderView, value: Int)
 }
 
 final class MySliderView: UIView {
@@ -23,8 +23,7 @@ final class MySliderView: UIView {
             return
         }
         
-        print("\(dataSource.getvalueTextField())")
-        buttonSliderView.center.y = (CGFloat(100 - dataSource.getvalueTextField()) * redView.frame.size.height) / 100
+        buttonSliderView.center.y = (CGFloat(100 - dataSource.getValueTextField()) * redView.frame.size.height) / 100
         var newHeightBlueSlider: CGFloat {
             return whiteView.frame.size.height + (whiteView.frame.origin.y - buttonSliderView.center.y)
         }
@@ -67,7 +66,7 @@ final class MySliderView: UIView {
                 
                 whiteView.frame = CGRect(x: whiteView.frame.origin.x, y: buttonSliderView.center.y, width: whiteView.frame.size.width, height: newHeightBlueSlider)
                 valueLabel.text = "\(Int(valueNow))"
-                delegate.valueNow(view: self, value: Int(valueNow))
+                delegate.getValueButtonSlider(view: self, value: Int(valueNow))
             }
         }
     }

@@ -1,10 +1,10 @@
 import UIKit
 
 protocol UserViewDelegate: AnyObject {
-    func didTaped(view: MyAvatar, count: Int)
+    func didTaped(view: MyAvatarView, count: Int)
 }
 
-final class MyAvatar: UIView {
+final class MyAvatarView: UIView {
     
     var avatarImageView: UIImageView?
     var nameLabel: UILabel?

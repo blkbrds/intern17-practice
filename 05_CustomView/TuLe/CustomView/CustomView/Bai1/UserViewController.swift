@@ -33,7 +33,7 @@ final class UserViewController: UIViewController {
             let xFrame = (spaceX * (i % 3 + 1) + ((i % 3)) * Int(widthFrame))
             let yFrame = 145 * (count - 1) + spaceX * (count - 1)
             if xFrame < Int(UIScreen.main.bounds.width) {
-                let myAvatar = MyAvatar(frame: CGRect(x: xFrame, y: yFrame, width: Int(widthFrame), height: 145))
+                let myAvatar = MyAvatarView(frame: CGRect(x: xFrame, y: yFrame, width: Int(widthFrame), height: 145))
                 myAvatar.delegate = self
                 userScrollView.addSubview(myAvatar)
             }
@@ -49,7 +49,7 @@ final class UserViewController: UIViewController {
 }
 
 extension UserViewController: UserViewDelegate {
-    func didTaped(view: MyAvatar, count: Int) {
+    func didTaped(view: MyAvatarView, count: Int) {
         view.nameLabel?.text = "\(count)"
     }
 }
