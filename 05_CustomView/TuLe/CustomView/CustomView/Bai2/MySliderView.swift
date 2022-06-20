@@ -9,9 +9,10 @@ final class MySliderView: UIView {
     @IBOutlet private weak var redView: UIView!
     @IBOutlet private weak var whiteView: UIView!
     @IBOutlet private weak var buttonSliderView: UIView!
+    @IBOutlet private weak var valueLabel: UILabel!
+    
     weak var delegate: MySliderViewDelegate?
     weak var dataSource: MySliderViewDataSource?
-    @IBOutlet private weak var valueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

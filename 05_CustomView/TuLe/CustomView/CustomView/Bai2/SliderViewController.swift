@@ -29,11 +29,13 @@ final class SliderViewController: UIViewController {
         view.addSubview(sliderView!)
     }
 }
+
 extension SliderViewController: MySliderViewDelegate {
     func getValueButtonSlider(view: MySliderView, value: Int) {
         valueSliderTextField.text = "\(value)"
     }
 }
+
 extension SliderViewController: MySliderViewDataSource {
     func getValueTextField() -> Int {
         return Int(valueSliderTextField.text ?? "50") ?? 50

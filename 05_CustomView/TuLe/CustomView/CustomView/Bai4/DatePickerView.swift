@@ -12,19 +12,16 @@ final class DatePickerView : UIView{
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
-        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
-        toolbar.setItems([doneBtn], animated: true)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: true)
         
         return toolbar
     }
     
     @objc private func donePressed() {
-        guard let delegate = delegate else {
-            return
-        }
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-        delegate.didTap(view: self, dateFormat: dateFormatter.string(from: datePicker.date))
+        delegate?.didTap(view: self, dateFormat: dateFormatter.string(from: datePicker.date))
     }
 }

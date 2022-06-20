@@ -49,7 +49,11 @@ final class UserViewController: UIViewController {
 }
 
 extension UserViewController: UserViewDelegate {
-    func didTaped(view: MyAvatarView, count: Int) {
-        view.nameLabel?.text = "\(count)"
+    
+    func view(_ view: MyAvatarView, needsPerform action: MyAvatarView.Action) {
+        switch action {
+        case .tapped(let count):
+            print("gia tri la: \(count)")
+        }
     }
 }
