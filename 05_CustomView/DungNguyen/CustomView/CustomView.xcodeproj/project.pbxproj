@@ -18,6 +18,10 @@
 		5EA8DD202861CA81001E2299 /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8DD1C2861CA81001E2299 /* MySliderView.xib */; };
 		5EA8DD212861CA81001E2299 /* MySliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8DD1D2861CA81001E2299 /* MySliderViewController.xib */; };
 		5EA8DD222861CA81001E2299 /* MySliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8DD1E2861CA81001E2299 /* MySliderViewController.swift */; };
+		5EA8DD2A2861CECF001E2299 /* BadgeNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8DD262861CECF001E2299 /* BadgeNumberView.xib */; };
+		5EA8DD2B2861CECF001E2299 /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8DD272861CECF001E2299 /* BadgeNumberView.swift */; };
+		5EA8DD2C2861CECF001E2299 /* BadgeNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8DD282861CECF001E2299 /* BadgeNumberViewController.xib */; };
+		5EA8DD2D2861CECF001E2299 /* BadgeNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8DD292861CECF001E2299 /* BadgeNumberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		5EA8DD1C2861CA81001E2299 /* MySliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
 		5EA8DD1D2861CA81001E2299 /* MySliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySliderViewController.xib; sourceTree = "<group>"; };
 		5EA8DD1E2861CA81001E2299 /* MySliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySliderViewController.swift; sourceTree = "<group>"; };
+		5EA8DD262861CECF001E2299 /* BadgeNumberView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BadgeNumberView.xib; sourceTree = "<group>"; };
+		5EA8DD272861CECF001E2299 /* BadgeNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
+		5EA8DD282861CECF001E2299 /* BadgeNumberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BadgeNumberViewController.xib; sourceTree = "<group>"; };
+		5EA8DD292861CECF001E2299 /* BadgeNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeNumberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		5EA8DCF02861C40C001E2299 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				5EA8DD242861CECF001E2299 /* Bai 3 */,
 				5EA8DD192861CA81001E2299 /* Bai2 */,
 				5EA8DD0D2861C654001E2299 /* Bai1 */,
 				5EA8DCF12861C40C001E2299 /* AppDelegate.swift */,
@@ -102,6 +111,25 @@
 			children = (
 				5EA8DD1B2861CA81001E2299 /* MySliderView.swift */,
 				5EA8DD1C2861CA81001E2299 /* MySliderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EA8DD242861CECF001E2299 /* Bai 3 */ = {
+			isa = PBXGroup;
+			children = (
+				5EA8DD252861CECF001E2299 /* View */,
+				5EA8DD282861CECF001E2299 /* BadgeNumberViewController.xib */,
+				5EA8DD292861CECF001E2299 /* BadgeNumberViewController.swift */,
+			);
+			path = "Bai 3";
+			sourceTree = "<group>";
+		};
+		5EA8DD252861CECF001E2299 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EA8DD262861CECF001E2299 /* BadgeNumberView.xib */,
+				5EA8DD272861CECF001E2299 /* BadgeNumberView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,8 +194,10 @@
 				5EA8DD212861CA81001E2299 /* MySliderViewController.xib in Resources */,
 				5EA8DCFE2861C40E001E2299 /* LaunchScreen.storyboard in Resources */,
 				5EA8DD202861CA81001E2299 /* MySliderView.xib in Resources */,
+				5EA8DD2A2861CECF001E2299 /* BadgeNumberView.xib in Resources */,
 				5EA8DD122861C654001E2299 /* MyAvatarViewController.xib in Resources */,
 				5EA8DCFB2861C40E001E2299 /* Assets.xcassets in Resources */,
+				5EA8DD2C2861CECF001E2299 /* BadgeNumberViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,9 +209,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA8DCF22861C40C001E2299 /* AppDelegate.swift in Sources */,
+				5EA8DD2B2861CECF001E2299 /* BadgeNumberView.swift in Sources */,
 				5EA8DD1F2861CA81001E2299 /* MySliderView.swift in Sources */,
 				5EA8DCF42861C40C001E2299 /* SceneDelegate.swift in Sources */,
 				5EA8DD222861CA81001E2299 /* MySliderViewController.swift in Sources */,
+				5EA8DD2D2861CECF001E2299 /* BadgeNumberViewController.swift in Sources */,
 				5EA8DD132861C654001E2299 /* MyAvatar.swift in Sources */,
 				5EA8DD112861C654001E2299 /* MyAvatarViewController.swift in Sources */,
 			);
