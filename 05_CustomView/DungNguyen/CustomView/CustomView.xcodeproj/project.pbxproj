@@ -22,6 +22,9 @@
 		5EA8DD2B2861CECF001E2299 /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8DD272861CECF001E2299 /* BadgeNumberView.swift */; };
 		5EA8DD2C2861CECF001E2299 /* BadgeNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8DD282861CECF001E2299 /* BadgeNumberViewController.xib */; };
 		5EA8DD2D2861CECF001E2299 /* BadgeNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8DD292861CECF001E2299 /* BadgeNumberViewController.swift */; };
+		5EA8DD332861D0A6001E2299 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8DD302861D0A6001E2299 /* DatePickerViewController.swift */; };
+		5EA8DD342861D0A6001E2299 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8DD312861D0A6001E2299 /* DatePickerView.swift */; };
+		5EA8DD352861D0A6001E2299 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8DD322861D0A6001E2299 /* DatePickerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		5EA8DD272861CECF001E2299 /* BadgeNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
 		5EA8DD282861CECF001E2299 /* BadgeNumberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BadgeNumberViewController.xib; sourceTree = "<group>"; };
 		5EA8DD292861CECF001E2299 /* BadgeNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeNumberViewController.swift; sourceTree = "<group>"; };
+		5EA8DD302861D0A6001E2299 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		5EA8DD312861D0A6001E2299 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		5EA8DD322861D0A6001E2299 /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		5EA8DCF02861C40C001E2299 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				5EA8DD2F2861D0A6001E2299 /* Bai 4 */,
 				5EA8DD242861CECF001E2299 /* Bai 3 */,
 				5EA8DD192861CA81001E2299 /* Bai2 */,
 				5EA8DD0D2861C654001E2299 /* Bai1 */,
@@ -134,6 +141,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5EA8DD2F2861D0A6001E2299 /* Bai 4 */ = {
+			isa = PBXGroup;
+			children = (
+				5EA8DD302861D0A6001E2299 /* DatePickerViewController.swift */,
+				5EA8DD312861D0A6001E2299 /* DatePickerView.swift */,
+				5EA8DD322861D0A6001E2299 /* DatePickerViewController.xib */,
+			);
+			path = "Bai 4";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA8DD352861D0A6001E2299 /* DatePickerViewController.xib in Resources */,
 				5EA8DD212861CA81001E2299 /* MySliderViewController.xib in Resources */,
 				5EA8DCFE2861C40E001E2299 /* LaunchScreen.storyboard in Resources */,
 				5EA8DD202861CA81001E2299 /* MySliderView.xib in Resources */,
@@ -210,9 +228,11 @@
 			files = (
 				5EA8DCF22861C40C001E2299 /* AppDelegate.swift in Sources */,
 				5EA8DD2B2861CECF001E2299 /* BadgeNumberView.swift in Sources */,
+				5EA8DD332861D0A6001E2299 /* DatePickerViewController.swift in Sources */,
 				5EA8DD1F2861CA81001E2299 /* MySliderView.swift in Sources */,
 				5EA8DCF42861C40C001E2299 /* SceneDelegate.swift in Sources */,
 				5EA8DD222861CA81001E2299 /* MySliderViewController.swift in Sources */,
+				5EA8DD342861D0A6001E2299 /* DatePickerView.swift in Sources */,
 				5EA8DD2D2861CECF001E2299 /* BadgeNumberViewController.swift in Sources */,
 				5EA8DD132861C654001E2299 /* MyAvatar.swift in Sources */,
 				5EA8DD112861C654001E2299 /* MyAvatarViewController.swift in Sources */,
