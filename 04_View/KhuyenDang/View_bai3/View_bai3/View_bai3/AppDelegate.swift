@@ -1,0 +1,13 @@
+//
+//  AppDelegate.swift
+//  View_bai3
+//
+//  Created by Khuyen Dang T.T. VN.Danang on 6/15/22.
+//
+
+import UIKit
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+}
+
