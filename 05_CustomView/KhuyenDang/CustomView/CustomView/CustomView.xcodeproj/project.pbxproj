@@ -16,6 +16,10 @@
 		8A9852CD28600FD60096183E /* HomeVC in Resources */ = {isa = PBXBuildFile; fileRef = 8A9852CC28600FD60096183E /* HomeVC */; };
 		8A9852D2286014390096183E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9852D1286014390096183E /* UserView.swift */; };
 		8A9852D62860145B0096183E /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9852D52860145B0096183E /* UserView.xib */; };
+		8A9852E328606E430096183E /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9852E128606E430096183E /* SliderViewController.swift */; };
+		8A9852E428606E430096183E /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9852E228606E430096183E /* SliderViewController.xib */; };
+		8A9852EA28606E8D0096183E /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9852E928606E8D0096183E /* MySliderView.swift */; };
+		8A9852EE28606EA30096183E /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9852ED28606EA30096183E /* MySliderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		8A9852CC28600FD60096183E /* HomeVC */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HomeVC; sourceTree = "<group>"; };
 		8A9852D1286014390096183E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		8A9852D52860145B0096183E /* UserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
+		8A9852E128606E430096183E /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
+		8A9852E228606E430096183E /* SliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
+		8A9852E928606E8D0096183E /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
+		8A9852ED28606EA30096183E /* MySliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		8A9852AC28600F300096183E /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				8A9852E028606DFF0096183E /* Bai2 */,
 				8A9852CC28600FD60096183E /* HomeVC */,
 				8A9852C528600F500096183E /* Bai1 */,
 				8A9852AD28600F300096183E /* AppDelegate.swift */,
@@ -88,6 +97,25 @@
 			children = (
 				8A9852D1286014390096183E /* UserView.swift */,
 				8A9852D52860145B0096183E /* UserView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A9852E028606DFF0096183E /* Bai2 */ = {
+			isa = PBXGroup;
+			children = (
+				8A9852E828606E690096183E /* View */,
+				8A9852E128606E430096183E /* SliderViewController.swift */,
+				8A9852E228606E430096183E /* SliderViewController.xib */,
+			);
+			path = Bai2;
+			sourceTree = "<group>";
+		};
+		8A9852E828606E690096183E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A9852E928606E8D0096183E /* MySliderView.swift */,
+				8A9852ED28606EA30096183E /* MySliderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,8 +180,10 @@
 				8A9852CD28600FD60096183E /* HomeVC in Resources */,
 				8A9852BA28600F310096183E /* LaunchScreen.storyboard in Resources */,
 				8A9852C928600F710096183E /* UserViewController.xib in Resources */,
+				8A9852EE28606EA30096183E /* MySliderView.xib in Resources */,
 				8A9852B728600F310096183E /* Assets.xcassets in Resources */,
 				8A9852D62860145B0096183E /* UserView.xib in Resources */,
+				8A9852E428606E430096183E /* SliderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A9852AE28600F300096183E /* AppDelegate.swift in Sources */,
+				8A9852E328606E430096183E /* SliderViewController.swift in Sources */,
 				8A9852C828600F710096183E /* UserViewController.swift in Sources */,
+				8A9852EA28606E8D0096183E /* MySliderView.swift in Sources */,
 				8A9852B028600F300096183E /* SceneDelegate.swift in Sources */,
 				8A9852D2286014390096183E /* UserView.swift in Sources */,
 			);
