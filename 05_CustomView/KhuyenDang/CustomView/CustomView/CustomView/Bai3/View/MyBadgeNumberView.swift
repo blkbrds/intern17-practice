@@ -9,10 +9,21 @@ import UIKit
 
 final class MyBadgeNumberView: UIView {
     
-    @IBOutlet weak var valueLabel: UILabel!
-    @IBOutlet weak var badgeNumberView: UIView!
+    @IBOutlet private weak var valueLabel: UILabel!
+    @IBOutlet private weak var badgeNumberView: UIView!
     @IBOutlet weak var contentButton: UIButton!
     
+    enum badgeLocation {
+        case topLeft
+        case topRight
+        case topCenter
+        case centerLeft
+        case centerRight
+        case bottomLeft
+        case bottomRight
+        case bottomCenter
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         contentButton.layer.cornerRadius = 15
@@ -48,17 +59,6 @@ final class MyBadgeNumberView: UIView {
         }
         valueLabel.center = CGPoint(x: widthLabel / 2, y: badgeNumberView.frame.size.height / 2)
         badgeNumberView.bounds.size.width = widthLabel
-    }
-    
-    enum badgeLocation {
-        case topLeft
-        case topRight
-        case topCenter
-        case centerLeft
-        case centerRight
-        case bottomLeft
-        case bottomRight
-        case bottomCenter
     }
     
     private func setBadgeLocation() {
