@@ -12,8 +12,8 @@ protocol MySliderViewDataSource: AnyObject {
 
 final class SliderViewController: UIViewController {
     
-    @IBOutlet weak var valueLabel: UILabel!
-    @IBOutlet weak var valueTextField: UITextField!
+    @IBOutlet private weak var valueLabel: UILabel!
+    @IBOutlet private weak var valueTextField: UITextField!
     
     let myView = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as! MySliderView
     

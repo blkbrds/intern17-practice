@@ -30,9 +30,7 @@ final class MySliderView: UIView {
     
     func getData()
     {
-        guard let dataSource = dataSource else {
-            return
-        }
+        guard let dataSource = dataSource else { return }
         updateSlider(value: dataSource.transferValueTextField())
     }
     // MARK: - Private methods
