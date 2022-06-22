@@ -11,8 +11,10 @@ protocol UserViewDelegate: AnyObject {
     func didTaped(view: UserView, name: String)
 }
 
-class UserView: UIView {
+final class UserView: UIView {
+    
     weak var delegate: UserViewDelegate?
+    
     let userName = UILabel(frame: CGRect(x: 0, y: 100, width: 120, height: 40))
     
     override init(frame: CGRect) {
@@ -42,7 +44,7 @@ class UserView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func buttonDidClick() {
+    @objc private func buttonDidClick() {
         guard let delegate = delegate, let name = userName.text else {
             return
         }

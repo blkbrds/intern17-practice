@@ -7,14 +7,19 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+final class UserViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
+    }
+    
+    private func configUI() {
         var xUser: CGFloat = 15
         var yUser: CGFloat = 50
-        let widthUser: CGFloat = CGFloat((UIScreen.main.bounds.width - 15 * 4) / 3) //122
+        let widthUser: CGFloat = CGFloat((UIScreen.main.bounds.width - 60) / 3) 
         for _ in 0...9 {
             for _ in 0...2 {
                 let userView = UserView(frame: CGRect(x: xUser, y: yUser, width: widthUser, height: 240))
