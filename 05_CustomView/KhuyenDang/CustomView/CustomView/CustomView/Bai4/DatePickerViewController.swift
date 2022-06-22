@@ -11,7 +11,8 @@ final class DatePickerViewController: UIViewController {
     
     @IBOutlet private weak var button: UIButton!
     @IBOutlet private weak var dateTextField: UITextField!
-    var myDatePicker: MyDatePickerView!
+    
+    weak var myDatePicker: MyDatePickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

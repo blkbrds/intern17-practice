@@ -43,7 +43,7 @@ final class MyDatePickerView: UIView {
         }
     }
     
-    func hide() {
+    private func hide() {
         UIView.animate(withDuration: 0.3) {
             self.markView.alpha = 0.0
         } completion: { _ in
@@ -51,11 +51,11 @@ final class MyDatePickerView: UIView {
         }
     }
     
-    @IBAction func cancelButton(_ sender: Any) {
+    @IBAction private func cancelButton(_ sender: Any) {
         hide()
     }
     
-    @IBAction func doneButton(_ sender: Any) {
+    @IBAction private func doneButton(_ sender: Any) {
         let format = DateFormatter()
         format.dateFormat = "MMM dd, yyyy"
         let date = format.string(from: datePicker.date)
