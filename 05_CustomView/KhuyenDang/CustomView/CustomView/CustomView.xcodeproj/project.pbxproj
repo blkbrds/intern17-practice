@@ -24,6 +24,10 @@
 		8AA26F1428616684006C041B /* BadgeNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA26F1228616684006C041B /* BadgeNumberViewController.xib */; };
 		8AA26F19286166C4006C041B /* MyBadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA26F18286166C4006C041B /* MyBadgeNumberView.swift */; };
 		8AA26F1D286166DD006C041B /* MyBadgeNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA26F1C286166DD006C041B /* MyBadgeNumberView.xib */; };
+		8AA26F222861C3A4006C041B /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA26F202861C3A4006C041B /* DatePickerViewController.swift */; };
+		8AA26F232861C3A4006C041B /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA26F212861C3A4006C041B /* DatePickerViewController.xib */; };
+		8AA26F282861C3E6006C041B /* MyDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA26F272861C3E6006C041B /* MyDatePickerView.swift */; };
+		8AA26F2C2861C3F5006C041B /* MyDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA26F2B2861C3F5006C041B /* MyDatePickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		8AA26F1228616684006C041B /* BadgeNumberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgeNumberViewController.xib; sourceTree = "<group>"; };
 		8AA26F18286166C4006C041B /* MyBadgeNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgeNumberView.swift; sourceTree = "<group>"; };
 		8AA26F1C286166DD006C041B /* MyBadgeNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBadgeNumberView.xib; sourceTree = "<group>"; };
+		8AA26F202861C3A4006C041B /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		8AA26F212861C3A4006C041B /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		8AA26F272861C3E6006C041B /* MyDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDatePickerView.swift; sourceTree = "<group>"; };
+		8AA26F2B2861C3F5006C041B /* MyDatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDatePickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 		8A9852AC28600F300096183E /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				8AA26F1F2861C1E3006C041B /* Bai4 */,
 				8AA26F1028616636006C041B /* Bai3 */,
 				8A9852E028606DFF0096183E /* Bai2 */,
 				8A9852CC28600FD60096183E /* HomeVC */,
@@ -148,6 +157,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8AA26F1F2861C1E3006C041B /* Bai4 */ = {
+			isa = PBXGroup;
+			children = (
+				8AA26F262861C3C0006C041B /* View */,
+				8AA26F202861C3A4006C041B /* DatePickerViewController.swift */,
+				8AA26F212861C3A4006C041B /* DatePickerViewController.xib */,
+			);
+			path = Bai4;
+			sourceTree = "<group>";
+		};
+		8AA26F262861C3C0006C041B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8AA26F272861C3E6006C041B /* MyDatePickerView.swift */,
+				8AA26F2B2861C3F5006C041B /* MyDatePickerView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,7 +238,9 @@
 				8AA26F1428616684006C041B /* BadgeNumberViewController.xib in Resources */,
 				8A9852BA28600F310096183E /* LaunchScreen.storyboard in Resources */,
 				8A9852C928600F710096183E /* UserViewController.xib in Resources */,
+				8AA26F2C2861C3F5006C041B /* MyDatePickerView.xib in Resources */,
 				8A9852EE28606EA30096183E /* MySliderView.xib in Resources */,
+				8AA26F232861C3A4006C041B /* DatePickerViewController.xib in Resources */,
 				8A9852B728600F310096183E /* Assets.xcassets in Resources */,
 				8A9852D62860145B0096183E /* UserView.xib in Resources */,
 				8A9852E428606E430096183E /* SliderViewController.xib in Resources */,
@@ -226,9 +256,11 @@
 			files = (
 				8A9852AE28600F300096183E /* AppDelegate.swift in Sources */,
 				8A9852E328606E430096183E /* SliderViewController.swift in Sources */,
+				8AA26F222861C3A4006C041B /* DatePickerViewController.swift in Sources */,
 				8A9852C828600F710096183E /* UserViewController.swift in Sources */,
 				8A9852EA28606E8D0096183E /* MySliderView.swift in Sources */,
 				8AA26F1328616684006C041B /* BadgeNumberViewController.swift in Sources */,
+				8AA26F282861C3E6006C041B /* MyDatePickerView.swift in Sources */,
 				8A9852B028600F300096183E /* SceneDelegate.swift in Sources */,
 				8A9852D2286014390096183E /* UserView.swift in Sources */,
 				8AA26F19286166C4006C041B /* MyBadgeNumberView.swift in Sources */,
