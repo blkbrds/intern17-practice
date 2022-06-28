@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Bai10ViewController: UIViewController {
+final class Bai10ViewController: UIViewController {
 
     enum ViewType: Int {
         case green = 0
@@ -16,15 +16,15 @@ class Bai10ViewController: UIViewController {
         case red = 3
     }
 
-    @IBOutlet weak var greenView: UIView!
-    @IBOutlet weak var purpleView: UIView!
-    @IBOutlet weak var yellowView: UIView!
-    @IBOutlet weak var redView: UIView!
-    @IBOutlet weak var greenHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var purpleHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var greenView: UIView!
+    @IBOutlet private weak var purpleView: UIView!
+    @IBOutlet private weak var yellowView: UIView!
+    @IBOutlet private weak var redView: UIView!
+    @IBOutlet private weak var greenHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var purpleHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var yellowHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var redHeightConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var yellowHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var redHeightConstraint: NSLayoutConstraint!
     var priority: UILayoutPriority!
 
     var unitHeight: CGFloat {
@@ -40,7 +40,7 @@ class Bai10ViewController: UIViewController {
         setupUI()
     }
 
-    func setupUI() {
+    private func setupUI() {
         greenHeightConstraint.constant = unitHeight
         purpleHeightConstraint.constant = unitHeight
         yellowHeightConstraint.constant = unitHeight
@@ -53,7 +53,7 @@ class Bai10ViewController: UIViewController {
         addTagGesture(view: redView, tag: 3)
     }
 
-    func addTagGesture(view: UIView, tag: Int) {
+    private func addTagGesture(view: UIView, tag: Int) {
         view.tag = tag
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         view.addGestureRecognizer(tap)

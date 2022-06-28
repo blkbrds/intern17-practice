@@ -12,7 +12,7 @@ struct data {
     let content: String?
 }
 
-class DemoViewController: UIViewController {
+final class DemoViewController: UIViewController {
     
     var index = 0
     var arrContent = [
