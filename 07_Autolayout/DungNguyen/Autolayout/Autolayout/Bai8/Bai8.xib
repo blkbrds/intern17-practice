@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piD-o5-KO8" userLabel="View1">
+                    <rect key="frame" x="20" y="64" width="165" height="353"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pea-ci-F8m" userLabel="View2">
+                    <rect key="frame" x="205" y="64" width="165" height="353"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEP-CF-xrK" userLabel="View3">
+                    <rect key="frame" x="20" y="437" width="350" height="353"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jEP-CF-xrK" firstAttribute="height" secondItem="piD-o5-KO8" secondAttribute="height" id="367-iy-Sex"/>
+                <constraint firstItem="pea-ci-F8m" firstAttribute="top" secondItem="piD-o5-KO8" secondAttribute="top" id="7m6-iL-Bnd"/>
+                <constraint firstItem="piD-o5-KO8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="BJh-qR-apH"/>
+                <constraint firstItem="pea-ci-F8m" firstAttribute="centerY" secondItem="piD-o5-KO8" secondAttribute="centerY" id="Bfu-mo-tOR"/>
+                <constraint firstItem="jEP-CF-xrK" firstAttribute="top" secondItem="piD-o5-KO8" secondAttribute="bottom" constant="20" id="D2p-tM-QIx"/>
+                <constraint firstItem="jEP-CF-xrK" firstAttribute="leading" secondItem="piD-o5-KO8" secondAttribute="leading" id="UQr-hg-9Oq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pea-ci-F8m" secondAttribute="trailing" constant="20" id="UaF-TR-W2Z"/>
+                <constraint firstItem="piD-o5-KO8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ZX6-RF-fGn"/>
+                <constraint firstItem="pea-ci-F8m" firstAttribute="leading" secondItem="piD-o5-KO8" secondAttribute="trailing" constant="20" id="dMu-mL-d2r"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jEP-CF-xrK" secondAttribute="bottom" constant="20" id="lpg-Gl-ciU"/>
+                <constraint firstItem="pea-ci-F8m" firstAttribute="width" secondItem="piD-o5-KO8" secondAttribute="width" id="sDG-Rv-wgJ"/>
+                <constraint firstItem="jEP-CF-xrK" firstAttribute="trailing" secondItem="pea-ci-F8m" secondAttribute="trailing" id="yD3-Ja-PUf"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="131.91964285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
