@@ -13,7 +13,7 @@ final class CalculatorMVCViewController: UIViewController {
     @IBOutlet private var collectionButton: [UIButton]!
     @IBOutlet private var numbersButton: [UIButton]!
     @IBOutlet private var operatesButton: [UIButton]!
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
     
     //MARK: - Properties
     var textNumber: String = ""
@@ -26,7 +26,6 @@ final class CalculatorMVCViewController: UIViewController {
                 resultLabel.text = "\(Int(current))"
             } else {
                 resultLabel.text = "\(current)"
-                //resultLabel.text = String(format: "%.4f", current)
             }
         }
     }
@@ -42,7 +41,6 @@ final class CalculatorMVCViewController: UIViewController {
     
     // MARK: - Life cycle
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         configUI()
     }
@@ -50,14 +48,14 @@ final class CalculatorMVCViewController: UIViewController {
     //MARK: - Private methods
     private func configUI()
     {
-        for i in collectionButton {
-            i.layer.borderWidth = 0.5
-            i.layer.borderColor = UIColor.gray.cgColor
+        for button in collectionButton {
+            button.layer.borderWidth = 0.5
+            button.layer.borderColor = UIColor.gray.cgColor
         }
 
-        for i in numbersButton {
-            i.tag = Int("\(i.titleLabel!.text!)") ?? 0
-            i.addTarget(self, action: #selector(clickButton(sender:)), for: .touchUpInside)
+        for button in numbersButton {
+            button.tag = Int("\(button.titleLabel!.text!)") ?? 0
+            button.addTarget(self, action: #selector(clickButton(sender:)), for: .touchUpInside)
         }
     }
 
@@ -78,22 +76,21 @@ final class CalculatorMVCViewController: UIViewController {
 
     //MARK: - objc
     @objc private func clickButton(sender: UIButton) {
-        if textNumber.count <= 5 {
+        guard textNumber.count <= 5 else { return }
             textNumber += "\(sender.tag)"
             resultLabel.text = textNumber
-        }
     }
     
     //MARK: - IBAction
-    @IBAction func inverseButton(_ sender: Any) {
+    @IBAction private func inverseButton(_ sender: Any) {
         current =  (Float(resultLabel.text!) ?? 0.0) / (-1)
     }
 
-    @IBAction func percentButton(_ sender: Any) {
+    @IBAction private func percentButton(_ sender: Any) {
         current = (Float(resultLabel.text!) ?? 0.0) / 100
     }
 
-    @IBAction func dotButton(_ sender: Any) {
+    @IBAction private func dotButton(_ sender: Any) {
         textNumber += "."
         resultLabel.text = textNumber
     }
