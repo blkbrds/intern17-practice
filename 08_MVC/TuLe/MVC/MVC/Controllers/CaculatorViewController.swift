@@ -1,6 +1,6 @@
 import UIKit
 
-class CaculatorViewController: UIViewController {
+final class CaculatorViewController: UIViewController {
     
     @IBOutlet private var operationCollectionButton: [UIButton]!
     @IBOutlet private var numberCollectionButton: [UIButton]!
@@ -18,9 +18,7 @@ class CaculatorViewController: UIViewController {
     var a = UIButton()
     
     var value: Float {
-        get {
-            return Float(caculatorLabel.text!) ?? 0
-        }
+        return Float(caculatorLabel.text ?? "5.0") ?? 0
     }
     
     var result: Float = 0 {
@@ -37,7 +35,10 @@ class CaculatorViewController: UIViewController {
     private func configUI() {
         for i in numberCollectionButton{
             i.layer.borderWidth = 0.5
-            i.tag = Int("\(i.titleLabel!.text!)") ?? 0
+            guard let title = i.titleLabel?.text else {
+                return
+            }
+            i.tag = Int("\(title)") ?? 0
             i.addTarget(self, action: #selector(buttonNumberDidClick(sender:)), for: .touchUpInside)
         }
         
@@ -102,16 +103,16 @@ class CaculatorViewController: UIViewController {
         }
     }
     
-    @IBAction func percentNumber(_ sender: Any) {
+    @IBAction private func percentNumber(_ sender: Any) {
         result = value / 100
     }
     
     
-    @IBAction func inverseNumber(_ sender: Any) {
+    @IBAction private func inverseNumber(_ sender: Any) {
         result = -value
     }
     
-    @IBAction func dotNumber(_ sender: Any) {
+    @IBAction private func dotNumber(_ sender: Any) {
         textNumber += "."
         caculatorLabel.text = textNumber
     }

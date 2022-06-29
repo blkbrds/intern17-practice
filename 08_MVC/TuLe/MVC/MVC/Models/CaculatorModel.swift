@@ -14,10 +14,6 @@ final class CaculatorModel {
     }
     
     func div(a: Float, b: Float) -> Float {
-        if b == 0 {
-            return 0
-        } else {
-            return a / b
-        }
+        return b == 0 ? 0 : a/b
     }
 }
