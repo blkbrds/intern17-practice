@@ -49,9 +49,9 @@ final class CalculatorViewController: UIViewController {
     
     // MARK: - Private methods
     private func configUI(){
-        for i in collectionButton {
-            i.layer.borderWidth = 0.5
-            i.layer.borderColor = UIColor.gray.cgColor
+        for button in collectionButton {
+            button.layer.borderWidth = 0.5
+            button.layer.borderColor = UIColor.gray.cgColor
         }
         for number in numberButton {
             number.tag = Int("\(number.titleLabel!.text!)") ?? 0
@@ -76,10 +76,9 @@ final class CalculatorViewController: UIViewController {
     
     // MARK: - Objcs
     @objc private func clickNumberButton(sender: UIButton){
-        if numberString.count <= 5 {
+        guard numberString.count <= 5 else { return }
         numberString += "\(sender.tag)"
         resultLabel.text = numberString
-        }
     }
     
     // MARK: - IBAction
@@ -121,5 +120,4 @@ final class CalculatorViewController: UIViewController {
         result = calculate(operate: currentOperations, a: result, b: b)
         currentOperations = .noneType
     }
-    
 }
