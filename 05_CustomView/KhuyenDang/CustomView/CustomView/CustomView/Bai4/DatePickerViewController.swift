@@ -11,14 +11,15 @@ final class DatePickerViewController: UIViewController {
     
     @IBOutlet private weak var button: UIButton!
     @IBOutlet private weak var dateTextField: UITextField!
-    
-    weak var myDatePicker: MyDatePickerView!
-    
+
+    weak var myDatePickerView: MyDatePickerView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        myDatePicker = UINib(nibName: "MyDatePickerView", bundle: .main).instantiate(withOwner: self).first as? MyDatePickerView
+        myDatePickerView = UINib(nibName: "MyDatePickerView", bundle: .main).instantiate(withOwner: self).first as? MyDatePickerView
+        guard let myDatePicker = myDatePickerView else { return }
         myDatePicker.frame = UIScreen.main.bounds
-        self.view.addSubview(myDatePicker)
+        view.addSubview(myDatePicker)
         dateTextField.delegate = self
         myDatePicker.delegate = self
     }
@@ -26,7 +27,8 @@ final class DatePickerViewController: UIViewController {
 
 extension DatePickerViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if let picker = myDatePicker { picker.show() }
+        guard let picker = myDatePickerView else { return true}
+        picker.show()
         return false
     }
 }

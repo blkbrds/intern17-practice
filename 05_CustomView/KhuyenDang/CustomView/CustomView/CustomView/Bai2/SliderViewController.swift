@@ -15,11 +15,12 @@ final class SliderViewController: UIViewController {
     @IBOutlet private weak var valueLabel: UILabel!
     @IBOutlet private weak var valueTextField: UITextField!
     
-    let myView = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as! MySliderView
+    let myViewSlider = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as? MySliderView
     
     override func viewDidLoad() {
         super.viewDidLoad()
         valueTextField.text = "50"
+        guard let myView = myViewSlider else { return }
         myView.frame = CGRect(x: 150, y: 160, width: 130, height: 520)
         view.addSubview(myView)
         myView.delegate = self
@@ -37,12 +38,14 @@ extension SliderViewController: MySliderViewDelegate {
 
 extension SliderViewController: MySliderViewDataSource {
     func transferValueTextField() -> Int {
-        return Int(valueTextField.text ?? "50") ?? 0
+        let value = Int(valueTextField.text ?? "50") ?? 50
+        return (value < 0 || value > 100) ? 50 : value
     }
 }
 
 extension SliderViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let myView = myViewSlider else { return false}
         myView.getData()
         view.endEditing(true)
         return true

@@ -21,12 +21,12 @@ final class MyDatePickerView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         markView.alpha = 0
-        self.isHidden = true
+        isHidden = true
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
         
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if let touch = touches.first {
@@ -35,14 +35,14 @@ final class MyDatePickerView: UIView {
             }
         }
     }
-    
+
     func show() {
         self.isHidden = false
         UIView.animate(withDuration: 0.3) {
             self.markView.alpha = 0.3
         }
     }
-    
+
     private func hide() {
         UIView.animate(withDuration: 0.3) {
             self.markView.alpha = 0.0
@@ -50,18 +50,16 @@ final class MyDatePickerView: UIView {
             self.isHidden = true
         }
     }
-    
+
     @IBAction private func cancelButton(_ sender: Any) {
         hide()
     }
-    
+
     @IBAction private func doneButton(_ sender: Any) {
         let format = DateFormatter()
         format.dateFormat = "MMM dd, yyyy"
         let date = format.string(from: datePicker.date)
-        if let delegate = delegate {
-            delegate.myDatePickerView(self, didSelectedWith: date )
-        }
+        delegate?.myDatePickerView(self, didSelectedWith: date )
         hide()
     }
 }

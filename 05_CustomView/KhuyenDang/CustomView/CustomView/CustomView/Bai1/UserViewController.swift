@@ -8,14 +8,14 @@
 import UIKit
 
 final class UserViewController: UIViewController {
-    
+
     @IBOutlet private weak var scrollView: UIScrollView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
-    
+
     private func configUI() {
         var xUser: CGFloat = 15
         var yUser: CGFloat = 50
@@ -24,14 +24,13 @@ final class UserViewController: UIViewController {
             for _ in 0...2 {
                 let userView = UserView(frame: CGRect(x: xUser, y: yUser, width: widthUser, height: 240))
                 userView.delegate = self
-                view.addSubview(userView)
                 scrollView.addSubview(userView)
-                scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: yUser + 130 )
                 xUser += 15 + widthUser
             }
             xUser = 15
             yUser += 100 + 40 + 15
         }
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: yUser + 130 )
     }
 }
 

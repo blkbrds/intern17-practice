@@ -8,11 +8,20 @@
 import UIKit
 
 final class MyBadgeNumberView: UIView {
-    
+
+    //MARK: - IBOutlets
     @IBOutlet private weak var valueLabel: UILabel!
     @IBOutlet private weak var badgeNumberView: UIView!
-    @IBOutlet weak var contentButton: UIButton!
-    
+    @IBOutlet private weak var contentButton: UIButton!
+
+    //MARK: - Life cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        contentButton.layer.cornerRadius = 15
+        badgeNumberView.layer.cornerRadius = 15
+    }
+
+    //MARK: - Properties
     enum badgeLocation {
         case topLeft
         case topRight
@@ -24,24 +33,44 @@ final class MyBadgeNumberView: UIView {
         case bottomCenter
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        contentButton.layer.cornerRadius = 15
-        badgeNumberView.layer.cornerRadius = 15
+    enum typeContentButton {
+        case email
+        case friends
+        case photos
     }
-    
+
     var typeBadgeLocation: badgeLocation = .topLeft {
         didSet {
             setBadgeLocation()
         }
     }
-    
+
     var number: Int = 0 {
         didSet {
             updateBadgeView()
         }
     }
-    
+
+    var valueTypeContentButton: typeContentButton = .email {
+        didSet {
+            updateContentButton()
+        }
+    }
+    // MARK: - Private funcs
+    private func updateContentButton() {
+        switch valueTypeContentButton {
+        case .email :
+            contentButton.setTitle("Emai", for: .normal)
+            contentButton.backgroundColor = .green
+        case .friends:
+            contentButton.setTitle("Friends", for: .normal)
+            contentButton.backgroundColor = .yellow
+        case .photos:
+            contentButton.setTitle("Photos", for: .normal)
+            contentButton.backgroundColor = .purple
+        }
+    }
+
     private func updateBadgeView() {
         var widthLabel: CGFloat = 0.0
         switch number {
@@ -49,18 +78,18 @@ final class MyBadgeNumberView: UIView {
             badgeNumberView.isHidden = true
         case 1...9:
             valueLabel.text = "\(number)"
-            widthLabel = valueLabel.text!.width(constraintedWidth: 40, font: valueLabel.font) + 10
+            widthLabel = (valueLabel.text ?? "50").width(constraintedWidth: 40, font: valueLabel.font) + 10
         case 10...99:
             valueLabel.text = "\(number)"
-            widthLabel = valueLabel.text!.width(constraintedWidth: 40, font: valueLabel.font) + 20
+            widthLabel = (valueLabel.text ?? "50").width(constraintedWidth: 40, font: valueLabel.font) + 20
         default:
             valueLabel.text = "99+"
-            widthLabel = valueLabel.text!.width(constraintedWidth: 40, font: valueLabel.font) + 35
+            widthLabel = (valueLabel.text ?? "50").width(constraintedWidth: 40, font: valueLabel.font) + 35
         }
         valueLabel.center = CGPoint(x: widthLabel / 2, y: badgeNumberView.frame.size.height / 2)
         badgeNumberView.bounds.size.width = widthLabel
     }
-    
+
     private func setBadgeLocation() {
         switch typeBadgeLocation {
         case .topLeft:

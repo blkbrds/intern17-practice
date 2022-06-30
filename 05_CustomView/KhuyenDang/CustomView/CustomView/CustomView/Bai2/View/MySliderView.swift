@@ -6,11 +6,13 @@
 //
 
 import UIKit
+
 protocol MySliderViewDelegate: AnyObject {
     func moveSlider(view: MySliderView, value: Int)
 }
+
 final class MySliderView: UIView {
-    
+
     // MARK: - IBOutlets
     @IBOutlet private weak var greenView: UIView!
     @IBOutlet private weak var orangeView: UIView!
@@ -21,26 +23,26 @@ final class MySliderView: UIView {
     // MARK: - Properties
     weak var delegate: MySliderViewDelegate?
     weak var dataSource: MySliderViewDataSource?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         orangeView.layer.cornerRadius = 30
         indexLabel.text = "50"
     }
-    
+
     func getData()
     {
         guard let dataSource = dataSource else { return }
         updateSlider(value: dataSource.transferValueTextField())
     }
     // MARK: - Private methods
-    
+
     private func updateSlider( value: Int) {
         indexLabel.text = "\(value)"
         orangeView.center.y = greenView.frame.height - CGFloat(value * (Int(greenView.frame.height) / 100))
         blueView.frame =  CGRect(x: greenView.frame.origin.x, y: orangeView.center.y , width: greenView.frame.width , height: CGFloat(value * (Int(greenView.frame.height) / 100)))
     }
-    
+
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
         if let touch = touches.first {
