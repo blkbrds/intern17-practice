@@ -21,7 +21,7 @@ final class MySliderViewController: UIViewController {
     
     private func setupUI() {
         mySliderView = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as? MySliderView
-        let frame = CGRect(x: 170, y: 250, width: 300, height: 300)
+        let frame = CGRect(x: 170, y: 250, width: 48, height: 451)
         mySliderView?.frame = frame
         mySliderView?.delegate = self
         self.view.addSubview(mySliderView!)
