@@ -82,17 +82,19 @@ final class CaculatorViewController: UIViewController {
     @objc private func buttonOperationDidClick(sender: UIButton) {
         switch sender.tag {
         case 0:
-            arrayNumber.append(value)
-            countPressed += 1
-            dem += 1
-            textNumber = ""
-            caculate(phepToan[0])
-            phepToan.removeAll()
-            countPressed = 0
+            if phepToan.count > 0 {
+                arrayNumber.append(value)
+                countPressed += 1
+                dem += 1
+                textNumber = ""
+                caculate(phepToan[0])
+                phepToan.removeAll()
+                countPressed = 0
+            }
         case 1...4:
             a = sender
             a.backgroundColor = UIColor.red
-            if textNumber != "" {
+            if textNumber.isEmpty == false {
                 arrayNumber.append(value)
             }
             countPressed += 1
