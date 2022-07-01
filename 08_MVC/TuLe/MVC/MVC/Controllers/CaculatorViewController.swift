@@ -120,23 +120,25 @@ final class CaculatorViewController: UIViewController {
     
     private func caculate(_ tag: Int) {
         phepToan.append(tag)
-        if countPressed == 2 {
-            switch phepToan[0]{
-            case 1:
-                result = calculator.add(a: arrayNumber[0], b: arrayNumber[1])
-            case 2:
-                result = calculator.sub(a: arrayNumber[0], b: arrayNumber[1])
-            case 3:
-                result = calculator.mul(a: arrayNumber[0], b: arrayNumber[1])
-            case 4:
-                result = calculator.div(a: arrayNumber[0], b: arrayNumber[1])
-            default:
-                return
+        if phepToan.count >= 2 {
+            if countPressed == 2 {
+                switch phepToan.first{
+                case 1:
+                    result = calculator.add(a: arrayNumber[0], b: arrayNumber[1])
+                case 2:
+                    result = calculator.sub(a: arrayNumber[0], b: arrayNumber[1])
+                case 3:
+                    result = calculator.mul(a: arrayNumber[0], b: arrayNumber[1])
+                case 4:
+                    result = calculator.div(a: arrayNumber[0], b: arrayNumber[1])
+                default:
+                    return
+                }
+                arrayNumber[0] = result
+                arrayNumber.removeLast()
+                countPressed = 1
+                phepToan.removeFirst()
             }
-            arrayNumber[0] = result
-            arrayNumber.removeLast()
-            countPressed = 1
-            phepToan.removeFirst()
         }
     }
 }
