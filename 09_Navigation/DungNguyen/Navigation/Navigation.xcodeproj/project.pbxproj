@@ -21,6 +21,20 @@
 		5E292994286C2B9900537733 /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E292992286C2B9900537733 /* FourthViewController.xib */; };
 		5E292998286C2BAA00537733 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E292996286C2BAA00537733 /* FifthViewController.swift */; };
 		5E292999286C2BAA00537733 /* FifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E292997286C2BAA00537733 /* FifthViewController.xib */; };
+		5E2929A2286C348200537733 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2929A0286C348200537733 /* LoginViewController.swift */; };
+		5E2929A3286C348200537733 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E2929A1286C348200537733 /* LoginViewController.xib */; };
+		5E2929A8286C349000537733 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2929A6286C349000537733 /* HomeViewController.swift */; };
+		5E2929A9286C349000537733 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E2929A7286C349000537733 /* HomeViewController.xib */; };
+		5E2929AD286C34A300537733 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2929AB286C34A300537733 /* EditViewController.swift */; };
+		5E2929AE286C34A300537733 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E2929AC286C34A300537733 /* EditViewController.xib */; };
+		5E2929B1286C482D00537733 /* UserList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E2929B0286C482D00537733 /* UserList.plist */; };
+		5EB52D33286D302B00963BA1 /* DataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB52D32286D302B00963BA1 /* DataManger.swift */; };
+		5EB52D53286D897600963BA1 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB52D52286D897600963BA1 /* AvatarView.swift */; };
+		5EB52D57286D899A00963BA1 /* HomeViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB52D55286D899A00963BA1 /* HomeViewController1.swift */; };
+		5EB52D58286D899A00963BA1 /* HomeViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB52D56286D899A00963BA1 /* HomeViewController1.xib */; };
+		5EB52D65286D8D6500963BA1 /* ProlifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB52D63286D8D6500963BA1 /* ProlifeViewController.swift */; };
+		5EB52D66286D8D6500963BA1 /* ProlifeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB52D64286D8D6500963BA1 /* ProlifeViewController.xib */; };
+		5EB52D6B286DAF4900963BA1 /* CustomNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB52D69286DAF4900963BA1 /* CustomNavigationBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +54,20 @@
 		5E292992286C2B9900537733 /* FourthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthViewController.xib; sourceTree = "<group>"; };
 		5E292996286C2BAA00537733 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		5E292997286C2BAA00537733 /* FifthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FifthViewController.xib; sourceTree = "<group>"; };
+		5E2929A0286C348200537733 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5E2929A1286C348200537733 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5E2929A6286C349000537733 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5E2929A7286C349000537733 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		5E2929AB286C34A300537733 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		5E2929AC286C34A300537733 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		5E2929B0286C482D00537733 /* UserList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserList.plist; sourceTree = "<group>"; };
+		5EB52D32286D302B00963BA1 /* DataManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManger.swift; sourceTree = "<group>"; };
+		5EB52D52286D897600963BA1 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		5EB52D55286D899A00963BA1 /* HomeViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController1.swift; sourceTree = "<group>"; };
+		5EB52D56286D899A00963BA1 /* HomeViewController1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController1.xib; sourceTree = "<group>"; };
+		5EB52D63286D8D6500963BA1 /* ProlifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProlifeViewController.swift; sourceTree = "<group>"; };
+		5EB52D64286D8D6500963BA1 /* ProlifeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProlifeViewController.xib; sourceTree = "<group>"; };
+		5EB52D69286DAF4900963BA1 /* CustomNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +113,9 @@
 		5E292979286C126A00537733 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EB52D68286DAF2000963BA1 /* Exercise4 */,
+				5EB52D43286D883100963BA1 /* Exercise3 */,
+				5E29299C286C344100537733 /* Exercise2 */,
 				5E29299B286C327800537733 /* Exercise1 */,
 			);
 			path = Controllers;
@@ -147,6 +178,65 @@
 			path = Exercise1;
 			sourceTree = "<group>";
 		};
+		5E29299C286C344100537733 /* Exercise2 */ = {
+			isa = PBXGroup;
+			children = (
+				5EB52D32286D302B00963BA1 /* DataManger.swift */,
+				5E2929B0286C482D00537733 /* UserList.plist */,
+				5E29299F286C346C00537733 /* EditVC */,
+				5E29299E286C346400537733 /* HomeVC */,
+				5E29299D286C345100537733 /* LoginVC */,
+			);
+			path = Exercise2;
+			sourceTree = "<group>";
+		};
+		5E29299D286C345100537733 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				5E2929A0286C348200537733 /* LoginViewController.swift */,
+				5E2929A1286C348200537733 /* LoginViewController.xib */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		5E29299E286C346400537733 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				5E2929A6286C349000537733 /* HomeViewController.swift */,
+				5E2929A7286C349000537733 /* HomeViewController.xib */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		5E29299F286C346C00537733 /* EditVC */ = {
+			isa = PBXGroup;
+			children = (
+				5E2929AB286C34A300537733 /* EditViewController.swift */,
+				5E2929AC286C34A300537733 /* EditViewController.xib */,
+			);
+			path = EditVC;
+			sourceTree = "<group>";
+		};
+		5EB52D43286D883100963BA1 /* Exercise3 */ = {
+			isa = PBXGroup;
+			children = (
+				5EB52D52286D897600963BA1 /* AvatarView.swift */,
+				5EB52D55286D899A00963BA1 /* HomeViewController1.swift */,
+				5EB52D56286D899A00963BA1 /* HomeViewController1.xib */,
+				5EB52D63286D8D6500963BA1 /* ProlifeViewController.swift */,
+				5EB52D64286D8D6500963BA1 /* ProlifeViewController.xib */,
+			);
+			path = Exercise3;
+			sourceTree = "<group>";
+		};
+		5EB52D68286DAF2000963BA1 /* Exercise4 */ = {
+			isa = PBXGroup;
+			children = (
+				5EB52D69286DAF4900963BA1 /* CustomNavigationBarViewController.swift */,
+			);
+			path = Exercise4;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,13 +294,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2929A3286C348200537733 /* LoginViewController.xib in Resources */,
 				5E292985286C136600537733 /* SecondViewController.xib in Resources */,
+				5EB52D58286D899A00963BA1 /* HomeViewController1.xib in Resources */,
+				5E2929AE286C34A300537733 /* EditViewController.xib in Resources */,
 				5E29296E286C123D00537733 /* LaunchScreen.storyboard in Resources */,
 				5E29297E286C128E00537733 /* FirstViewController.xib in Resources */,
 				5E29298E286C2B8500537733 /* ThirdViewController.xib in Resources */,
 				5E292994286C2B9900537733 /* FourthViewController.xib in Resources */,
 				5E292999286C2BAA00537733 /* FifthViewController.xib in Resources */,
 				5E29296B286C123D00537733 /* Assets.xcassets in Resources */,
+				5E2929B1286C482D00537733 /* UserList.plist in Resources */,
+				5EB52D66286D8D6500963BA1 /* ProlifeViewController.xib in Resources */,
+				5E2929A9286C349000537733 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,11 +317,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2929AD286C34A300537733 /* EditViewController.swift in Sources */,
+				5EB52D53286D897600963BA1 /* AvatarView.swift in Sources */,
 				5E292993286C2B9900537733 /* FourthViewController.swift in Sources */,
+				5EB52D57286D899A00963BA1 /* HomeViewController1.swift in Sources */,
+				5EB52D65286D8D6500963BA1 /* ProlifeViewController.swift in Sources */,
 				5E292984286C136600537733 /* SecondViewController.swift in Sources */,
 				5E29297D286C128E00537733 /* FirstViewController.swift in Sources */,
 				5E29298D286C2B8500537733 /* ThirdViewController.swift in Sources */,
+				5E2929A2286C348200537733 /* LoginViewController.swift in Sources */,
+				5E2929A8286C349000537733 /* HomeViewController.swift in Sources */,
 				5E292962286C123C00537733 /* AppDelegate.swift in Sources */,
+				5EB52D33286D302B00963BA1 /* DataManger.swift in Sources */,
+				5EB52D6B286DAF4900963BA1 /* CustomNavigationBarViewController.swift in Sources */,
 				5E292964286C123C00537733 /* SceneDelegate.swift in Sources */,
 				5E292998286C2BAA00537733 /* FifthViewController.swift in Sources */,
 			);
