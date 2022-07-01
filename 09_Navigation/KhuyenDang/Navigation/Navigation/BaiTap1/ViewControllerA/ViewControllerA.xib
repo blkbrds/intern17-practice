@@ -27,7 +27,7 @@
                         <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="nextButton:" destination="-1" eventType="touchUpInside" id="vZC-It-30k"/>
+                        <action selector="nextButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="03b-Yz-srf"/>
                     </connections>
                 </button>
             </subviews>

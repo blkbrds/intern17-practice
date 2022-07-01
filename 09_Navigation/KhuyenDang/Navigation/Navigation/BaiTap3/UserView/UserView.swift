@@ -8,7 +8,7 @@
 import UIKit
 
 protocol UserViewDelegate: AnyObject {
-    func didTaped(view: UserView, name: String, index: Int, image: UIImage)
+    func didTaped(_ controller: UserView, needPerformAction action: UserView.Action )
 }
 
 final class UserView: UIView {
@@ -22,6 +22,9 @@ final class UserView: UIView {
     }
     var image: UIImage?
     weak var delegate: UserViewDelegate?
+    enum Action {
+        case passProfileUser(name: String, index: Int, image: UIImage)
+    }
     let userName = UILabel(frame: CGRect(x: 0, y: 100, width: 120, height: 40))
     
     //MARK: init
@@ -67,6 +70,6 @@ final class UserView: UIView {
     //MARK: - Objc
     @objc private func nameButtonTouchupInside(sender: UIButton) {
         guard let image = image else { return }
-        delegate?.didTaped(view: self, name: name, index: index, image: image)
+        delegate?.didTaped(self, needPerformAction: .passProfileUser(name: name, index: index, image: image))
     }
 }

@@ -7,16 +7,16 @@
 
 import UIKit
 
-class ViewControllerA: UIViewController {
+final class ViewControllerA: UIViewController {
     
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ViewControllerA"
     }
-    
+
     //MARK: - IBAction
-    @IBAction private func nextButton(_ sender: Any) {
+    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         let viewB = ViewControllerB()
         navigationController?.pushViewController(viewB, animated: true)
     }

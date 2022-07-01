@@ -7,7 +7,7 @@
 
 import UIKit
 protocol ProfileViewControllerDelegate: AnyObject {
-    func controller(view: ProfileViewController, username: String)
+    func controller(_ controller: ProfileViewController, needPerformAction action: ProfileViewController.Action)
 }
 
 final class ProfileViewController: UIViewController {
@@ -21,7 +21,9 @@ final class ProfileViewController: UIViewController {
     var index: Int = 0
     var username = ""
     var image: UIImage?
-    
+    enum Action {
+        case updateProfile(username: String)
+    }
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,7 @@ final class ProfileViewController: UIViewController {
     //MARK: - Objc
     @objc private func handleDone() {
         guard let username = usernameTextField.text else { return }
-        delegate?.controller(view: self,username: username)
+        delegate?.controller(self, needPerformAction: .updateProfile(username: username))
         navigationController?.popViewController(animated: true)
     }
 }

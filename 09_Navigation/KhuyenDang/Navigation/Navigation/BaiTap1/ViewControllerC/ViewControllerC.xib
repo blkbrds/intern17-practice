@@ -27,7 +27,7 @@
                         <color key="titleColor" white="1" alpha="0.91901408449999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="nextButton:" destination="-1" eventType="touchUpInside" id="mD9-Gw-ZnW"/>
+                        <action selector="nextButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Ju0-N1-ixV"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud3-3u-y2w">
@@ -39,7 +39,7 @@
                         <color key="titleColor" white="1" alpha="0.91901408449999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="preButton:" destination="-1" eventType="touchUpInside" id="Rpn-0U-pva"/>
+                        <action selector="preButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="6l5-ni-nNU"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVF-96-yg0">
@@ -51,7 +51,7 @@
                         <color key="titleColor" white="1" alpha="0.91901408449999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="rootButton:" destination="-1" eventType="touchUpInside" id="YBi-6v-jzV"/>
+                        <action selector="rootButtonTouchUpInsideTouchUpInside_:" destination="-1" eventType="touchUpInside" id="4tr-11-6wq"/>
                     </connections>
                 </button>
             </subviews>

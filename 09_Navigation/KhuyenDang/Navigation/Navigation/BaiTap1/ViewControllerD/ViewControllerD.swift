@@ -8,30 +8,31 @@
 import UIKit
 
 final class ViewControllerD: UIViewController {
-    
+
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ViewControllerD"
     }
-    
+
     //MARK: - IBActions
-    @IBAction private func nextButton(_ sender: Any) {
+    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         let viewE = ViewControllerE()
         navigationController?.pushViewController(viewE, animated: true)
     }
-    
-    @IBAction private func cButton(_ sender: Any) {
+
+    @IBAction private func cButtonTouchUpInside(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction private func bButton(_ sender: Any) {
-        for controller in navigationController!.viewControllers where controller is ViewControllerB {
-            navigationController?.popToViewController(controller, animated: true)
+
+    @IBAction private func bButtonTouchUpInside(_ sender: Any) {
+        if let navController = self.navigationController, navController.viewControllers.count >= 2 {
+            let viewControllerB = navController.viewControllers[1]
+            navigationController?.popToViewController(viewControllerB, animated: true)
         }
     }
-    
-    @IBAction private func rootButton(_ sender: Any) {
+
+    @IBAction private func rootButtonTouchUpInside(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
 }

@@ -38,7 +38,7 @@ final class LoginViewController: UIViewController {
         passwordTextField.returnKeyType = .done
         usernameTextField.delegate = self
         passwordTextField.delegate = self
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleDone))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleLogin))
         navigationItem.rightBarButtonItem = doneButton
     }
     
@@ -59,7 +59,7 @@ final class LoginViewController: UIViewController {
     }
     
     //MARK: - Objc
-    @objc private func handleDone() {
+    @objc private func handleLogin() {
         guard let listUser =  getUserFromPlist(withName: "DataExercise2") else { return }
         for (key, value) in listUser {
             guard let value = value as? NSDictionary else{ return }
@@ -79,7 +79,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         }
         else if textField == passwordTextField {
-            handleDone()
+            handleLogin()
         }
         return true
     }

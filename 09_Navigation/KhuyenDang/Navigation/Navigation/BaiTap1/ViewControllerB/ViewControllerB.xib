@@ -27,7 +27,7 @@
                         <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="nextButton:" destination="-1" eventType="touchUpInside" id="PXg-Me-fvZ"/>
+                        <action selector="nextButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="0W4-sy-e6L"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-ce-eir">
@@ -39,7 +39,7 @@
                         <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="preButton:" destination="-1" eventType="touchUpInside" id="64O-jc-puK"/>
+                        <action selector="preButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="1He-3z-CGR"/>
                     </connections>
                 </button>
             </subviews>

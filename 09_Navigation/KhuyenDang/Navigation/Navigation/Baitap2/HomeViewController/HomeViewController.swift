@@ -46,8 +46,11 @@ final class HomeViewController: UIViewController {
 
 //MARK: - Extension
 extension HomeViewController: EditViewControllerDelegate {
-    func controller(view: EditViewController, username: String) {
-        usernameLabel.text = username
+    func controller(_ controller: EditViewController, needPerformAction action: EditViewController.Action) {
+        switch action {
+        case .passData(value: let text):
+            usernameLabel.text = text
+        }
     }
 }
 

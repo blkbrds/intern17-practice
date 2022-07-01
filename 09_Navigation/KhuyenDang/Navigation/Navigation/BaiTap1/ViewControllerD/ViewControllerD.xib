@@ -27,7 +27,7 @@
                         <color key="titleColor" white="1" alpha="0.91901408449999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="nextButton:" destination="-1" eventType="touchUpInside" id="4FV-CB-zBC"/>
+                        <action selector="nextButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="8Tv-bE-29l"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAe-o2-Vnj">
@@ -39,7 +39,7 @@
                         <color key="titleColor" white="1" alpha="0.91901408449999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="bButton:" destination="-1" eventType="touchUpInside" id="RVm-2G-Eyo"/>
+                        <action selector="bButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="RVm-2G-Eyo"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pez-4h-vOp">
@@ -51,7 +51,7 @@
                         <color key="titleColor" white="1" alpha="0.91901408449999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="rootButton:" destination="-1" eventType="touchUpInside" id="uAo-Wl-PIv"/>
+                        <action selector="rootButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="uAo-Wl-PIv"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EV4-A0-MFG">
@@ -63,7 +63,7 @@
                         <color key="titleColor" white="1" alpha="0.91901408449999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="cButton:" destination="-1" eventType="touchUpInside" id="7Dt-fH-tL4"/>
+                        <action selector="cButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="ApO-xi-7xs"/>
                     </connections>
                 </button>
             </subviews>

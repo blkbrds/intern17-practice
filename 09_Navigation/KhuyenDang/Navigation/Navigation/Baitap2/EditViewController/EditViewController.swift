@@ -8,7 +8,7 @@
 import UIKit
 
 protocol EditViewControllerDelegate: AnyObject {
-    func controller(view: EditViewController, username: String)
+    func controller(_ controller: EditViewController, needPerformAction action: EditViewController.Action)
 }
 
 final class EditViewController: UIViewController {
@@ -21,6 +21,9 @@ final class EditViewController: UIViewController {
     //MARK: - Properties
     weak var delegate: EditViewControllerDelegate?
     var username = ""
+    enum Action {
+        case passData(value: String)
+    }
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -41,11 +44,11 @@ final class EditViewController: UIViewController {
     //MARK: Objcs
     @objc private func handleDone(){
         guard let username = usernameTextField.text else { return }
-        delegate?.controller(view: self,username: username)
+        delegate?.controller(self, needPerformAction: .passData(value: username))
         navigationController?.popViewController(animated: true)
     }
     
-    @objc private func handleCancel(){         
+    @objc private func handleCancel() {
         navigationController?.popViewController(animated: true)
     }
 }

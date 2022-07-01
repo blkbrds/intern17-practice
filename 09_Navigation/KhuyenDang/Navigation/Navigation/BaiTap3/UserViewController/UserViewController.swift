@@ -9,7 +9,7 @@ import UIKit
 
 final class UserViewController: UIViewController {
     
-    //MARK: -IBOutlet
+    //MARK: - IBOutlet
     @IBOutlet private weak var scrollView: UIScrollView!
     
     //MARK: - Properties
@@ -45,21 +45,27 @@ final class UserViewController: UIViewController {
 
 //MARK: - Extensions
 extension UserViewController: UserViewDelegate {
-    func didTaped(view: UserView, name: String, index: Int, image: UIImage) {
-        let profileViewController = ProfileViewController()
-        profileViewController.delegate = self
-        currentView = view
-        profileViewController.username = name
-        profileViewController.image = image
-        profileViewController.index = index
-        navigationController?.pushViewController(profileViewController, animated: true)
+    func didTaped(_ controller: UserView, needPerformAction action: UserView.Action) {
+        switch action {
+        case .passProfileUser(name: let name, index: let index, image: let image):
+                let profileViewController = ProfileViewController()
+                profileViewController.delegate = self
+                currentView = controller
+                profileViewController.username = name
+                profileViewController.image = image
+                profileViewController.index = index
+                navigationController?.pushViewController(profileViewController, animated: true)
+        }
     }
 }
 
 extension UserViewController: ProfileViewControllerDelegate {
-    func controller(view: ProfileViewController, username: String) {
-        guard let currentView = currentView else { return }
-        currentView.name = username
+    func controller(_ controller: ProfileViewController, needPerformAction action: ProfileViewController.Action) {
+        switch action {
+        case .updateProfile(username: let username):
+            guard let currentView = currentView else { return }
+            currentView.name = username
+        }
     }
 }
 

@@ -27,7 +27,7 @@
                         <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="bButton:" destination="-1" eventType="touchUpInside" id="G4H-Eh-K0t"/>
+                        <action selector="bButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="G4H-Eh-K0t"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wE-YT-fVN">
@@ -39,7 +39,7 @@
                         <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="dButton:" destination="-1" eventType="touchUpInside" id="wNg-5d-8r3"/>
+                        <action selector="dButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="wNg-5d-8r3"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLC-PQ-0YN">
@@ -51,7 +51,7 @@
                         <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="rootButton:" destination="-1" eventType="touchUpInside" id="EOZ-Lq-8U0"/>
+                        <action selector="rootButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="EOZ-Lq-8U0"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zp-gx-Pt0">
@@ -63,7 +63,7 @@
                         <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="cButton:" destination="-1" eventType="touchUpInside" id="jsl-Y9-SvR"/>
+                        <action selector="cButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="jsl-Y9-SvR"/>
                     </connections>
                 </button>
             </subviews>
