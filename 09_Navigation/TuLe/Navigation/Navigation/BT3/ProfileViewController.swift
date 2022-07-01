@@ -7,8 +7,8 @@ protocol ProfileViewControllerDelegate: AnyObject {
 final class ProfileViewController: UIViewController {
     @IBOutlet weak var updateUserTextField: UITextField!
     
-    private var username: String = ""
-    private var delegate: ProfileViewControllerDelegate?
+    var username: String = ""
+    var delegate: ProfileViewControllerDelegate?
     var getValueTextField: String {
         get {
             return updateUserTextField.text ?? ""
