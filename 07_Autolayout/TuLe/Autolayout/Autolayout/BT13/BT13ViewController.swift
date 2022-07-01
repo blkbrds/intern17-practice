@@ -1,7 +1,7 @@
 import UIKit
 
-class BT13ViewController: UIViewController {
-    @IBOutlet weak var contentLabel: UILabel!
+final class BT13ViewController: UIViewController {
+    @IBOutlet private weak var contentLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

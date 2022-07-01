@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BT7ViewController: UIViewController {
+final class BT7ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

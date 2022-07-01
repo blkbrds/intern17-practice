@@ -7,11 +7,9 @@
 
 import UIKit
 
-class BT4bViewController: UIViewController {
+final class BT4bViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 }

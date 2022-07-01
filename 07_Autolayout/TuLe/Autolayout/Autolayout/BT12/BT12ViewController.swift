@@ -3,10 +3,10 @@
 //  Autolayout
 import UIKit
 
-class BT12ViewController: UIViewController {
+final class BT12ViewController: UIViewController {
     
-    @IBOutlet var ButtonCollection: [UIButton]!
-    @IBOutlet weak var stackCollection: UIStackView!
+    @IBOutlet private var ButtonCollection: [UIButton]!
+    @IBOutlet private weak var stackCollection: UIStackView!
     
 
     override func viewDidLoad() {
