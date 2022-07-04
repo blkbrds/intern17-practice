@@ -8,7 +8,7 @@
 import UIKit
 
 final class ViewControllerD: UIViewController {
-
+    
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,11 @@ final class ViewControllerD: UIViewController {
     }
 
     @IBAction private func bButtonTouchUpInside(_ sender: Any) {
-        if let navController = navigationController, navController.viewControllers.count >= 2 {
-            let viewControllerB = navController.viewControllers[1]
-            navigationController?.popToViewController(viewControllerB, animated: true)
+        guard let navigationController =  navigationController else {
+            return
+        }
+        for controller in navigationController.viewControllers where controller is ViewControllerB {
+            navigationController.popToViewController(controller, animated: true)
         }
     }
 
