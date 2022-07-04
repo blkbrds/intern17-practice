@@ -45,12 +45,12 @@ final class UserViewController: UIViewController {
 
 //MARK: - Extensions
 extension UserViewController: UserViewDelegate {
-    func didTaped(_ controller: UserView, needPerformAction action: UserView.Action) {
+    func view(_ view: UserView, needPerformAction action: UserView.Action) {
         switch action {
         case .passProfileUser(name: let name, index: let index, image: let image):
                 let profileViewController = ProfileViewController()
                 profileViewController.delegate = self
-                currentView = controller
+                currentView = view
                 profileViewController.username = name
                 profileViewController.image = image
                 profileViewController.index = index

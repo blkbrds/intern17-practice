@@ -17,8 +17,8 @@ final class ViewControllerD: UIViewController {
 
     //MARK: - IBActions
     @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
-        let viewE = ViewControllerE()
-        navigationController?.pushViewController(viewE, animated: true)
+        let vcE = ViewControllerE()
+        navigationController?.pushViewController(vcE, animated: true)
     }
 
     @IBAction private func cButtonTouchUpInside(_ sender: Any) {
@@ -26,7 +26,7 @@ final class ViewControllerD: UIViewController {
     }
 
     @IBAction private func bButtonTouchUpInside(_ sender: Any) {
-        if let navController = self.navigationController, navController.viewControllers.count >= 2 {
+        if let navController = navigationController, navController.viewControllers.count >= 2 {
             let viewControllerB = navController.viewControllers[1]
             navigationController?.popToViewController(viewControllerB, animated: true)
         }

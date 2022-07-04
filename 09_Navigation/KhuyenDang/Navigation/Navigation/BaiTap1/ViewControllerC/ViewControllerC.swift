@@ -17,8 +17,8 @@ final class ViewControllerC: UIViewController {
 
     //MARK: - IBActions
     @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
-        let viewD = ViewControllerD()
-        navigationController?.pushViewController(viewD, animated: true)
+        let vcD = ViewControllerD()
+        navigationController?.pushViewController(vcD, animated: true)
     }
 
     @IBAction private func preButtonTouchUpInside(_ sender: Any) {

@@ -17,13 +17,14 @@ final class ProfileViewController: UIViewController {
     @IBOutlet private weak var imageView: UIImageView!
     
     //MARK: - Properties
+    enum Action {
+        case updateProfile(username: String)
+    }
     weak var delegate: ProfileViewControllerDelegate?
     var index: Int = 0
     var username = ""
     var image: UIImage?
-    enum Action {
-        case updateProfile(username: String)
-    }
+    
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

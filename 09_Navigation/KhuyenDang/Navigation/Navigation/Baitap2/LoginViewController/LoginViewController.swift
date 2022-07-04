@@ -11,7 +11,7 @@ final class LoginViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -27,6 +27,7 @@ final class LoginViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
