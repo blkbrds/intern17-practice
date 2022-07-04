@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BadgeNumberViewController: UIViewController {
+final class BadgeNumberViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

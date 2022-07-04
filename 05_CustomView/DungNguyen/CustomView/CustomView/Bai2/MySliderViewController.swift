@@ -8,14 +8,14 @@
 import UIKit
 
 final class MySliderViewController: UIViewController {
-
+    
     @IBOutlet private weak var valueTextField: UITextField!
     
     private var mySliderView: MySliderView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
     }
     
@@ -37,11 +37,11 @@ extension MySliderViewController: MySliderDelegate {
 extension MySliderViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let value = Int(valueTextField.text ?? "") else { return false }
-               if value > 100 || value < 0 {
-                   print("nhap sai")
-               } else {
-                mySliderView?.number = value
-               }
-               return true
+        if value > 100 || value < 0 {
+            print("nhap sai")
+        } else {
+            mySliderView?.number = value
+        }
+        return true
     }
 }

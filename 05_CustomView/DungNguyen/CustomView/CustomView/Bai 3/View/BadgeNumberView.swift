@@ -62,7 +62,7 @@ final class BadgeNumberView: UIView {
         }
     }
     
-    func configView(){
+    func configView() {
         contentButton.layer.cornerRadius = 20
         badgeView.layer.cornerRadius = 15
     }
@@ -100,11 +100,11 @@ final class BadgeNumberView: UIView {
         var widthLabel: CGFloat = 0.0
         switch number {
         case 1...9:
-            widthLabel = badgeNumberLabel.text!.width(constraintedWidth: 40, font: badgeNumberLabel.font)  + 10
+            widthLabel = badgeNumberLabel.text!.height(constraintedWidth: 40, font: badgeNumberLabel.font)  + 10
         case 10...99:
-            widthLabel = badgeNumberLabel.text!.width(constraintedWidth: 40, font: badgeNumberLabel.font)  + 20
+            widthLabel = badgeNumberLabel.text!.height(constraintedWidth: 40, font: badgeNumberLabel.font)  + 20
         default:
-            widthLabel = badgeNumberLabel.text!.width(constraintedWidth: 40, font: badgeNumberLabel.font)  + 35
+            widthLabel = badgeNumberLabel.text!.height(constraintedWidth: 40, font: badgeNumberLabel.font)  + 35
         }
         badgeNumberLabel.center = CGPoint(x: widthLabel / 2, y: badgeView.frame.size.height / 2)
         badgeView.bounds.size.width = widthLabel
@@ -113,7 +113,7 @@ final class BadgeNumberView: UIView {
 
 extension String {
     
-    func width(constraintedWidth width: CGFloat, font: UIFont) -> CGFloat {
+    func height(constraintedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let label =  UILabel(frame: CGRect(x: 0, y: 0, width: width, height: .greatestFiniteMagnitude))
         label.numberOfLines = 0
         label.text = self

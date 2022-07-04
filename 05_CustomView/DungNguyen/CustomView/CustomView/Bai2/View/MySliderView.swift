@@ -27,30 +27,30 @@ final class MySliderView: UIView {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-            if let touch = touches.first {
-                if touch.view == thumbnailView {
-                    let location = touch.location(in: parentView)
-                    if location.y < parentView.bounds.minY {
-                        thumbnailView.center.y = parentView.bounds.minY
-                    } else if location.y > parentView.bounds.maxY {
-                        thumbnailView.center.y = parentView.bounds.maxY
-                    } else {
-                        thumbnailView.center.y = location.y
-                    }
-                    blueView.frame = CGRect(x: blueView.frame.origin.x, y: thumbnailView.center.y, width: redView.frame.width, height: redView.frame.height - thumbnailView.center.y)
-                    let percent = Int((blueView.frame.height / parentView.frame.height) * 100)
-                    number = percent
+        if let touch = touches.first {
+            if touch.view == thumbnailView {
+                let location = touch.location(in: parentView)
+                if location.y < parentView.bounds.minY {
+                    thumbnailView.center.y = parentView.bounds.minY
+                } else if location.y > parentView.bounds.maxY {
+                    thumbnailView.center.y = parentView.bounds.maxY
+                } else {
+                    thumbnailView.center.y = location.y
                 }
-                delegate?.selected(mySliderView: self, value: number)
+                blueView.frame = CGRect(x: blueView.frame.origin.x, y: thumbnailView.center.y, width: redView.frame.width, height: redView.frame.height - thumbnailView.center.y)
+                let percent = Int((blueView.frame.height / parentView.frame.height) * 100)
+                number = percent
             }
+            delegate?.selected(mySliderView: self, value: number)
         }
+    }
     
     private func updateSlider() {
-            let ybluekView = (CGFloat(100 - number) * (parentView.frame.maxY) / 100)
-            let heightView = CGFloat(number) * parentView.frame.size.height / 100
+        let ybluekView = (CGFloat(100 - number) * (parentView.frame.maxY) / 100)
+        let heightView = CGFloat(number) * parentView.frame.size.height / 100
         blueView.frame = CGRect(x: blueView.frame.origin.x, y: ybluekView, width: redView.frame.size.width, height: heightView)
         thumbnailView.center.y = ybluekView
-            let percent = Int(blueView.frame.size.height / parentView.frame.size.height * 100)
+        let percent = Int(blueView.frame.size.height / parentView.frame.size.height * 100)
         numberLabel.text = "\(percent)"
-        }
+    }
 }

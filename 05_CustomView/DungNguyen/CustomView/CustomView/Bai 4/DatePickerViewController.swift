@@ -7,10 +7,9 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController {
-
+final class DatePickerViewController: UIViewController {
     
-    @IBOutlet weak var datePickerTextField: UITextField!
+    @IBOutlet private weak var datePickerTextField: UITextField!
     
     private var datePicker: DatePickerView?
     
@@ -23,7 +22,7 @@ class DatePickerViewController: UIViewController {
     }
 }
 
-extension DatePickerViewController : DatePickerDelegate{
+extension DatePickerViewController: DatePickerDelegate {
     func getDate(datePickerView: DatePickerView, date: String) {
         datePickerTextField.text = date
         self.view.endEditing(true)

@@ -21,17 +21,13 @@ final class DatePickerView: UIView {
         //Formate Date
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
-        
         //ToolBar
         let toolbar = UIToolbar();
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker))
-    
         toolbar.setItems([doneButton], animated: false)
-        
         datePickerTextField.inputAccessoryView = toolbar
         datePickerTextField.inputView = datePicker
-        
     }
         
     @objc func donedatePicker(){
