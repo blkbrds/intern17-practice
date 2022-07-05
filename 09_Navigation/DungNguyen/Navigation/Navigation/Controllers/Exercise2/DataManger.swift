@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DataManager {
+final class DataManager {
     
     static func checkData(username: String, password: String) -> Bool {
         if let infoPlistPath = Bundle.main.path(forResource: "UserList", ofType: "plist"),

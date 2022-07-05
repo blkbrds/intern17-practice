@@ -17,20 +17,22 @@ final class FourthViewController: UIViewController {
     
     @IBAction private func nextButton(_ sender: Any) {
         let vc = FifthViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction private func popControllerSecond(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[1])!
-        self.navigationController?.popToViewController(vc, animated: true)
+        if let vc = (self.navigationController?.viewControllers[1]) {
+            navigationController?.popToViewController(vc, animated: true)
+        }
     }
     
     @IBAction private func popControllerThird(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[2])!
-        self.navigationController?.popToViewController(vc, animated: true)
+        if let vc = (self.navigationController?.viewControllers[2]) {
+            navigationController?.popToViewController(vc, animated: true)
+        }
     }
     
     @IBAction private func popRootButton(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

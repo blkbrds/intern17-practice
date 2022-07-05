@@ -16,21 +16,24 @@ final class FifthViewController: UIViewController {
     }
     
     @IBAction private func popControllerSecond(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[1])!
-        self.navigationController?.popToViewController(vc, animated: true)
+        if let vc = (self.navigationController?.viewControllers[1]) {
+            navigationController?.popToViewController(vc, animated: true)
+        }
     }
     
     @IBAction private func popControllerThird(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[2])!
-        self.navigationController?.popToViewController(vc, animated: true)
+        if let vc = (self.navigationController?.viewControllers[2]) {
+            navigationController?.popToViewController(vc, animated: true)
+        }
     }
     
     @IBAction private func popControllerFourth(_ sender: Any) {
-        let vc = (self.navigationController?.viewControllers[3])!
-        self.navigationController?.popToViewController(vc, animated: true)
+        if let vc = (self.navigationController?.viewControllers[3]) {
+            navigationController?.popToViewController(vc, animated: true)
+        }
     }
     
     @IBAction private func popRootButton(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

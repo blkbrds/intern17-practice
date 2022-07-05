@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+final class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,14 +17,14 @@ class ThirdViewController: UIViewController {
     
     @IBAction private func nextButton(_ sender: Any) {
         let vc = FourthViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction private func preButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction private func popRootButton(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

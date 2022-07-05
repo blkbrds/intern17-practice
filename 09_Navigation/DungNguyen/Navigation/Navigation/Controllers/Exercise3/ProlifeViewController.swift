@@ -12,11 +12,11 @@ protocol ProlifeViewControllerDelegate: AnyObject {
     func controller(viewController: ProlifeViewController, username: String)
 }
 
-class ProlifeViewController: UIViewController {
+final class ProlifeViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var avatarImageView: UIImageView!
     
     // MARK: - MARK: - Properties
     var name:String = ""

@@ -17,7 +17,7 @@ final class FirstViewController: UIViewController {
     
     @IBAction private func nextButton(_ sender: Any) {
         let vc = SecondViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

@@ -12,7 +12,7 @@ protocol EditViewControllerDelegate: AnyObject {
     func controller(viewController: EditViewController, username: String)
 }
 
-class EditViewController: UIViewController {
+final class EditViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
@@ -21,7 +21,7 @@ class EditViewController: UIViewController {
     
     // MARK: - MARK: - Properties
     var username: String = ""
-    var delegate: EditViewControllerDelegate?
+    weak var delegate: EditViewControllerDelegate?
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -32,19 +32,19 @@ class EditViewController: UIViewController {
     // MARK: - Private methods
     private func configView() {
         title = "Edit"
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(leftAction))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAction))
         navigationItem.leftBarButtonItem = cancelButton
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(rightAction))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneAction))
         navigationItem.rightBarButtonItem = doneButton
         usernameTextField.text = "\(username)"
     }
     
     // MARK: - Private methods
-    @objc private func leftAction() {
+    @objc private func cancelAction() {
         navigationController?.popViewController(animated: true)
     }
     
-    @objc func rightAction() {
+    @objc func doneAction() {
         if let username = usernameTextField.text {
             delegate?.controller(viewController: self, username: username)
         }

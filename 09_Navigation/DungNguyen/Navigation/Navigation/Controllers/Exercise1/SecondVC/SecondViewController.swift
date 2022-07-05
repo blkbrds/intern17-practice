@@ -17,11 +17,11 @@ final class SecondViewController: UIViewController {
     
     @IBAction private func nextButton(_ sender: Any) {
         let vc = ThirdViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction private func preButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 
 }
