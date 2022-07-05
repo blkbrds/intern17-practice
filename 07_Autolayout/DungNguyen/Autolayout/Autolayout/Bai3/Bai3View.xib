@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="bai3">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-iC-94j">
+                    <rect key="frame" x="43" y="384" width="128" height="128"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="Cjc-n5-DTd"/>
+                        <constraint firstAttribute="width" constant="128" id="Hsu-iU-cGx"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHI-Q9-MqN">
+                    <rect key="frame" x="243" y="384" width="128" height="128"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="1pS-fj-TFj"/>
+                        <constraint firstAttribute="width" constant="128" id="soh-cx-Sqo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7bN-iC-94j" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-100" id="7zx-sT-KHR"/>
+                <constraint firstItem="fHI-Q9-MqN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="100" id="AmU-Nb-m3A"/>
+                <constraint firstItem="fHI-Q9-MqN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="JTY-ai-ofW"/>
+                <constraint firstItem="7bN-iC-94j" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dQb-cq-9YX"/>
+            </constraints>
+            <point key="canvasLocation" x="-105.79710144927537" y="193.19196428571428"/>
+        </view>
+        <view contentMode="scaleToFill" id="C3m-x2-g2O" userLabel="bai3'">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="548"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIS-vG-6vR">
+                    <rect key="frame" x="49" y="210" width="128" height="128"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="7ek-SM-Ffc"/>
+                        <constraint firstAttribute="height" constant="128" id="olj-ro-WJl"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDA-iL-6zg">
+                    <rect key="frame" x="245" y="210" width="128" height="128"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="EUt-1c-i6R"/>
+                        <constraint firstAttribute="width" constant="128" id="OAl-uR-9bO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="tzj-yM-9wP"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gDA-iL-6zg" firstAttribute="centerY" secondItem="C3m-x2-g2O" secondAttribute="centerY" id="4Qa-B6-579"/>
+                <constraint firstItem="tzj-yM-9wP" firstAttribute="trailing" secondItem="gDA-iL-6zg" secondAttribute="trailing" constant="49" id="Dpi-L3-nx0"/>
+                <constraint firstItem="PIS-vG-6vR" firstAttribute="centerY" secondItem="C3m-x2-g2O" secondAttribute="centerY" id="b0Z-Ag-KaX"/>
+                <constraint firstItem="PIS-vG-6vR" firstAttribute="leading" secondItem="tzj-yM-9wP" secondAttribute="leading" constant="49" id="lwt-84-DbM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="594" y="186"/>
+        </view>
+        <view contentMode="scaleToFill" id="c9c-Yc-fT0" userLabel="bai3''">
+            <rect key="frame" x="0.0" y="0.0" width="553" height="713"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Az8-HP-WTo">
+                    <rect key="frame" x="53" y="271" width="170.5" height="171"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Az8-HP-WTo" secondAttribute="height" multiplier="1:1" id="Qih-Cl-Z6x"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OF7-xw-fNH">
+                    <rect key="frame" x="329.5" y="271" width="170.5" height="171"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="OF7-xw-fNH" secondAttribute="height" multiplier="1:1" id="0pQ-IL-TLE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="bXQ-oU-mgj"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Az8-HP-WTo" firstAttribute="width" secondItem="c9c-Yc-fT0" secondAttribute="width" multiplier="0.309179" id="1Np-bo-rfN"/>
+                <constraint firstItem="OF7-xw-fNH" firstAttribute="centerY" secondItem="c9c-Yc-fT0" secondAttribute="centerY" id="CIs-Hb-f8l"/>
+                <constraint firstItem="Az8-HP-WTo" firstAttribute="centerY" secondItem="c9c-Yc-fT0" secondAttribute="centerY" id="hHV-np-fpz"/>
+                <constraint firstItem="OF7-xw-fNH" firstAttribute="width" secondItem="c9c-Yc-fT0" secondAttribute="width" multiplier="0.309179" id="hYG-TX-daM"/>
+                <constraint firstItem="OF7-xw-fNH" firstAttribute="centerX" secondItem="c9c-Yc-fT0" secondAttribute="centerX" multiplier="1.5" id="j4e-8t-eQm"/>
+                <constraint firstItem="Az8-HP-WTo" firstAttribute="centerX" secondItem="c9c-Yc-fT0" secondAttribute="centerX" multiplier="0.5" id="l7J-kx-cBn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1648.5507246376812" y="144.30803571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
