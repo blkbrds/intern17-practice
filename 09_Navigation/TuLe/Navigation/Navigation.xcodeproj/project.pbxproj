@@ -11,16 +11,16 @@
 		10671425286C277A0066CF7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10671424286C277A0066CF7C /* SceneDelegate.swift */; };
 		1067142C286C277C0066CF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1067142B286C277C0066CF7C /* Assets.xcassets */; };
 		1067142F286C277C0066CF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1067142D286C277C0066CF7C /* LaunchScreen.storyboard */; };
-		10671443286C29240066CF7C /* ViewAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10671441286C29240066CF7C /* ViewAViewController.swift */; };
-		10671444286C29240066CF7C /* ViewAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10671442286C29240066CF7C /* ViewAViewController.xib */; };
-		10671447286C293A0066CF7C /* ViewBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10671445286C293A0066CF7C /* ViewBViewController.swift */; };
-		10671448286C293A0066CF7C /* ViewBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10671446286C293A0066CF7C /* ViewBViewController.xib */; };
-		1067144B286C29470066CF7C /* ViewCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10671449286C29470066CF7C /* ViewCViewController.swift */; };
-		1067144C286C29470066CF7C /* ViewCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1067144A286C29470066CF7C /* ViewCViewController.xib */; };
-		1067144F286C29520066CF7C /* ViewDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1067144D286C29520066CF7C /* ViewDViewController.swift */; };
-		10671450286C29520066CF7C /* ViewDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1067144E286C29520066CF7C /* ViewDViewController.xib */; };
-		10671453286C295F0066CF7C /* ViewEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10671451286C295F0066CF7C /* ViewEViewController.swift */; };
-		10671454286C295F0066CF7C /* ViewEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10671452286C295F0066CF7C /* ViewEViewController.xib */; };
+		10671443286C29240066CF7C /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10671441286C29240066CF7C /* AViewController.swift */; };
+		10671444286C29240066CF7C /* AViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10671442286C29240066CF7C /* AViewController.xib */; };
+		10671447286C293A0066CF7C /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10671445286C293A0066CF7C /* BViewController.swift */; };
+		10671448286C293A0066CF7C /* BViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10671446286C293A0066CF7C /* BViewController.xib */; };
+		1067144B286C29470066CF7C /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10671449286C29470066CF7C /* CViewController.swift */; };
+		1067144C286C29470066CF7C /* CViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1067144A286C29470066CF7C /* CViewController.xib */; };
+		1067144F286C29520066CF7C /* DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1067144D286C29520066CF7C /* DViewController.swift */; };
+		10671450286C29520066CF7C /* DViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1067144E286C29520066CF7C /* DViewController.xib */; };
+		10671453286C295F0066CF7C /* EViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10671451286C295F0066CF7C /* EViewController.swift */; };
+		10671454286C295F0066CF7C /* EViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10671452286C295F0066CF7C /* EViewController.xib */; };
 		10A82CC7286C72E400B0FFBB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A82CC5286C72E400B0FFBB /* LoginViewController.swift */; };
 		10A82CC8286C72E400B0FFBB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A82CC6286C72E400B0FFBB /* LoginViewController.xib */; };
 		10A82CCB286C72F600B0FFBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A82CC9286C72F600B0FFBB /* HomeViewController.swift */; };
@@ -42,16 +42,16 @@
 		1067142B286C277C0066CF7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1067142E286C277C0066CF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10671430286C277C0066CF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10671441286C29240066CF7C /* ViewAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAViewController.swift; sourceTree = "<group>"; };
-		10671442286C29240066CF7C /* ViewAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAViewController.xib; sourceTree = "<group>"; };
-		10671445286C293A0066CF7C /* ViewBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBViewController.swift; sourceTree = "<group>"; };
-		10671446286C293A0066CF7C /* ViewBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewBViewController.xib; sourceTree = "<group>"; };
-		10671449286C29470066CF7C /* ViewCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCViewController.swift; sourceTree = "<group>"; };
-		1067144A286C29470066CF7C /* ViewCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewCViewController.xib; sourceTree = "<group>"; };
-		1067144D286C29520066CF7C /* ViewDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDViewController.swift; sourceTree = "<group>"; };
-		1067144E286C29520066CF7C /* ViewDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewDViewController.xib; sourceTree = "<group>"; };
-		10671451286C295F0066CF7C /* ViewEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEViewController.swift; sourceTree = "<group>"; };
-		10671452286C295F0066CF7C /* ViewEViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewEViewController.xib; sourceTree = "<group>"; };
+		10671441286C29240066CF7C /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
+		10671442286C29240066CF7C /* AViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AViewController.xib; sourceTree = "<group>"; };
+		10671445286C293A0066CF7C /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
+		10671446286C293A0066CF7C /* BViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BViewController.xib; sourceTree = "<group>"; };
+		10671449286C29470066CF7C /* CViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
+		1067144A286C29470066CF7C /* CViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CViewController.xib; sourceTree = "<group>"; };
+		1067144D286C29520066CF7C /* DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DViewController.swift; sourceTree = "<group>"; };
+		1067144E286C29520066CF7C /* DViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DViewController.xib; sourceTree = "<group>"; };
+		10671451286C295F0066CF7C /* EViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EViewController.swift; sourceTree = "<group>"; };
+		10671452286C295F0066CF7C /* EViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EViewController.xib; sourceTree = "<group>"; };
 		10A82CC5286C72E400B0FFBB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		10A82CC6286C72E400B0FFBB /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		10A82CC9286C72F600B0FFBB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -128,16 +128,16 @@
 		1067143C286C288F0066CF7C /* BT1 */ = {
 			isa = PBXGroup;
 			children = (
-				10671441286C29240066CF7C /* ViewAViewController.swift */,
-				10671442286C29240066CF7C /* ViewAViewController.xib */,
-				10671451286C295F0066CF7C /* ViewEViewController.swift */,
-				10671452286C295F0066CF7C /* ViewEViewController.xib */,
-				10671445286C293A0066CF7C /* ViewBViewController.swift */,
-				10671446286C293A0066CF7C /* ViewBViewController.xib */,
-				10671449286C29470066CF7C /* ViewCViewController.swift */,
-				1067144D286C29520066CF7C /* ViewDViewController.swift */,
-				1067144E286C29520066CF7C /* ViewDViewController.xib */,
-				1067144A286C29470066CF7C /* ViewCViewController.xib */,
+				10671441286C29240066CF7C /* AViewController.swift */,
+				10671442286C29240066CF7C /* AViewController.xib */,
+				10671451286C295F0066CF7C /* EViewController.swift */,
+				10671452286C295F0066CF7C /* EViewController.xib */,
+				10671445286C293A0066CF7C /* BViewController.swift */,
+				10671446286C293A0066CF7C /* BViewController.xib */,
+				10671449286C29470066CF7C /* CViewController.swift */,
+				1067144D286C29520066CF7C /* DViewController.swift */,
+				1067144E286C29520066CF7C /* DViewController.xib */,
+				1067144A286C29470066CF7C /* CViewController.xib */,
 			);
 			path = BT1;
 			sourceTree = "<group>";
@@ -235,16 +235,16 @@
 			files = (
 				10A82CC8286C72E400B0FFBB /* LoginViewController.xib in Resources */,
 				10A82CD5286D2D7300B0FFBB /* HomeUserViewController.xib in Resources */,
-				10671448286C293A0066CF7C /* ViewBViewController.xib in Resources */,
+				10671448286C293A0066CF7C /* BViewController.xib in Resources */,
 				10A82CD0286C731200B0FFBB /* EditViewController.xib in Resources */,
 				1067142F286C277C0066CF7C /* LaunchScreen.storyboard in Resources */,
 				1067142C286C277C0066CF7C /* Assets.xcassets in Resources */,
 				10A82CD9286D2D9000B0FFBB /* ProfileViewController.xib in Resources */,
-				1067144C286C29470066CF7C /* ViewCViewController.xib in Resources */,
+				1067144C286C29470066CF7C /* CViewController.xib in Resources */,
 				10A82CDD286D38B700B0FFBB /* accList.plist in Resources */,
-				10671454286C295F0066CF7C /* ViewEViewController.xib in Resources */,
-				10671450286C29520066CF7C /* ViewDViewController.xib in Resources */,
-				10671444286C29240066CF7C /* ViewAViewController.xib in Resources */,
+				10671454286C295F0066CF7C /* EViewController.xib in Resources */,
+				10671450286C29520066CF7C /* DViewController.xib in Resources */,
+				10671444286C29240066CF7C /* AViewController.xib in Resources */,
 				10A82CCC286C72F600B0FFBB /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,16 +257,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A82CCF286C731200B0FFBB /* EditViewController.swift in Sources */,
-				10671447286C293A0066CF7C /* ViewBViewController.swift in Sources */,
+				10671447286C293A0066CF7C /* BViewController.swift in Sources */,
 				10A82CD4286D2D7300B0FFBB /* HomeUserViewController.swift in Sources */,
-				10671443286C29240066CF7C /* ViewAViewController.swift in Sources */,
+				10671443286C29240066CF7C /* AViewController.swift in Sources */,
 				10671423286C277A0066CF7C /* AppDelegate.swift in Sources */,
-				1067144B286C29470066CF7C /* ViewCViewController.swift in Sources */,
+				1067144B286C29470066CF7C /* CViewController.swift in Sources */,
 				10A82CD8286D2D9000B0FFBB /* ProfileViewController.swift in Sources */,
 				10A82CC7286C72E400B0FFBB /* LoginViewController.swift in Sources */,
 				10A82CCB286C72F600B0FFBB /* HomeViewController.swift in Sources */,
-				10671453286C295F0066CF7C /* ViewEViewController.swift in Sources */,
-				1067144F286C29520066CF7C /* ViewDViewController.swift in Sources */,
+				10671453286C295F0066CF7C /* EViewController.swift in Sources */,
+				1067144F286C29520066CF7C /* DViewController.swift in Sources */,
 				10671425286C277A0066CF7C /* SceneDelegate.swift in Sources */,
 				10A82CDB286D2E9400B0FFBB /* MyUserView.swift in Sources */,
 			);

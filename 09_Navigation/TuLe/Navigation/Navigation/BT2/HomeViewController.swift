@@ -14,7 +14,7 @@ final class HomeViewController: UIViewController {
     private func configUI() {
         title = "Home"
         
-        let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonPressed(_:)))
+        let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTouchUpinside(_:)))
         
         navigationItem.rightBarButtonItem = editButton
     }
@@ -24,7 +24,7 @@ final class HomeViewController: UIViewController {
         usernameLabel.text = username
     }
     
-    @objc private func editButtonPressed(_ sender: UIButton) {
+    @objc private func editButtonTouchUpinside(_ sender: UIButton) {
         let editViewController = EditViewController()
         editViewController.delegate = self
         navigationController?.pushViewController(editViewController, animated: true)
@@ -32,7 +32,10 @@ final class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: EditViewControllerDelegate {
-    func editView(_ view: EditViewController, data: String) {
-        username = data
+    func editView(_ vc: EditViewController, needsPerform action: EditViewController.Action) {
+        switch action {
+        case .doneButtonTapped(value: let value):
+            usernameLabel.text = value
+        }
     }
 }

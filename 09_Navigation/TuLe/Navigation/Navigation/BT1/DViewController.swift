@@ -7,30 +7,30 @@
 
 import UIKit
 
-final class ViewDViewController: UIViewController {
+final class DViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "View D ViewController"
     }
     
-    @IBAction private func nextButtonPressed(_ sender: Any) {
-        let viewEViewController = ViewEViewController()
+    @IBAction private func nextButtonTouchUpinside(_ sender: Any) {
+        let viewEViewController = EViewController()
         navigationController?.pushViewController(viewEViewController, animated: true)
     }
     
-    @IBAction private func cButtonPressed(_ sender: Any) {
+    @IBAction private func cButtonTouchUpinside(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction private func bButtonPressed(_ sender: Any) {
+    @IBAction private func bButtonTouchUpinside(_ sender: Any) {
         if let navController = self.navigationController, navController.viewControllers.count >= 2 {
             let viewBViewController = navController.viewControllers[1]
             self.navigationController?.popToViewController(viewBViewController, animated: true)
         }
     }
     
-    @IBAction private func rootButtonPressed(_ sender: Any) {
+    @IBAction private func rootButtonTouchUpinside(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
     

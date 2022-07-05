@@ -1,10 +1,3 @@
-//
-//  LoginViewController.swift
-//  Navigation
-//
-//  Created by tu.le2 on 29/06/2022.
-//
-
 import UIKit
 
 final class LoginViewController: UIViewController {
@@ -18,11 +11,11 @@ final class LoginViewController: UIViewController {
     
     private func configUI() {
         title = "Login"
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonPressed(_:)))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonTouchUpinside(_:)))
         navigationItem.rightBarButtonItem = doneButton
     }
     
-    @objc private func doneButtonPressed(_ sender: UIButton) {
+    @objc private func doneButtonTouchUpinside(_ sender: UIButton) {
         guard let listAccount = getDataPlist(withName: "accList") else{
             return
         }

@@ -22,7 +22,7 @@ final class ProfileViewController: UIViewController {
     
     private func configUI() {
         title = "Profile"
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonPressed(_:)))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonTouchUpinside(_:)))
         
         navigationItem.rightBarButtonItem = doneButton
     }
@@ -44,7 +44,7 @@ final class ProfileViewController: UIViewController {
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
-    @objc private func doneButtonPressed(_ sender: UIButton) {
+    @objc private func doneButtonTouchUpinside(_ sender: UIButton) {
         delegate?.view(self, data: getValueTextField)
         navigationController?.popViewController(animated: true)
     }

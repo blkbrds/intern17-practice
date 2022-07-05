@@ -7,15 +7,15 @@
 
 import UIKit
 
-final class ViewAViewController: UIViewController {
+final class AViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "View A Controller"
     }
     
-    @IBAction private func nextButtonPressed(_ sender: Any) {
-        let viewBViewController = ViewBViewController()
+    @IBAction private func nextButtonTouchUpinside(_ sender: Any) {
+        let viewBViewController = BViewController()
         navigationController?.pushViewController(viewBViewController, animated: true)
     }
     

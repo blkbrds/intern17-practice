@@ -7,19 +7,19 @@
 
 import UIKit
 
-final class ViewBViewController: UIViewController {
+final class BViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "View B Controller"
     }
     
-    @IBAction private func nextButtonPressed(_ sender: Any) {
-        let viewCViewController = ViewCViewController()
+    @IBAction private func nextButtonTouchUpinside(_ sender: Any) {
+        let viewCViewController = CViewController()
         navigationController?.pushViewController(viewCViewController, animated: true)
     }
     
-    @IBAction private func preButtonPressed(_ sender: Any) {
+    @IBAction private func preButtonTouchUpinside(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
     

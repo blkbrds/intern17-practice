@@ -7,28 +7,28 @@
 
 import UIKit
 
-final class ViewEViewController: UIViewController {
+final class EViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "View E ViewController"
     }
     
-    @IBAction private func cButtonPressed(_ sender: Any) {
+    @IBAction private func cButtonTouchUpinside(_ sender: Any) {
         if let navController = self.navigationController, navController.viewControllers.count >= 2 {
             let viewCViewController = navController.viewControllers[2]
             self.navigationController?.popToViewController(viewCViewController, animated: true)
         }
     }
     
-    @IBAction private func bButtonPressed(_ sender: Any) {
+    @IBAction private func bButtonTouchUpinside(_ sender: Any) {
         if let navController = self.navigationController, navController.viewControllers.count >= 2 {
             let viewBViewController = navController.viewControllers[1]
             self.navigationController?.popToViewController(viewBViewController, animated: true)
         }
     }
     
-    @IBAction private func dButtonPressed(_ sender: Any) {
+    @IBAction private func dButtonTouchUpinside(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     

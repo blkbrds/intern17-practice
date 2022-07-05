@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewDViewController" customModule="Navigation" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EViewController" customModule="Navigation" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,53 +18,53 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SKn-QR-oXB">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iEF-9J-90O">
                     <rect key="frame" x="145" y="339" width="124" height="218"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qY4-6k-vnI">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etd-bf-IM2">
                             <rect key="frame" x="0.0" y="0.0" width="124" height="47"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Next"/>
-                            <connections>
-                                <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="yqu-C1-YDV"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-Sk-07j">
-                            <rect key="frame" x="0.0" y="57" width="124" height="47"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="C"/>
                             <connections>
-                                <action selector="cButtonPressed:" destination="-1" eventType="touchUpInside" id="Y96-uA-fvU"/>
+                                <action selector="cButtonTouchUpinside:" destination="-1" eventType="touchUpInside" id="i0t-6K-e6q"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJo-tT-9la">
-                            <rect key="frame" x="0.0" y="114" width="124" height="47"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNy-SG-i8d">
+                            <rect key="frame" x="0.0" y="57" width="124" height="47"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="B"/>
                             <connections>
-                                <action selector="bButtonPressed:" destination="-1" eventType="touchUpInside" id="dnu-li-2tU"/>
+                                <action selector="bButtonTouchUpinside:" destination="-1" eventType="touchUpInside" id="8Xr-SZ-66s"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYu-pl-XiB">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzM-Pa-9Nn">
+                            <rect key="frame" x="0.0" y="114" width="124" height="47"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="D"/>
+                            <connections>
+                                <action selector="dButtonTouchUpinside:" destination="-1" eventType="touchUpInside" id="s1Y-tE-M6C"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ex-wj-jbB">
                             <rect key="frame" x="0.0" y="171" width="124" height="47"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Root"/>
                             <connections>
-                                <action selector="rootButtonPressed:" destination="-1" eventType="touchUpInside" id="7yf-FZ-JF5"/>
+                                <action selector="rootButtonPressed:" destination="-1" eventType="touchUpInside" id="deT-40-grl"/>
                             </connections>
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="SKn-QR-oXB" secondAttribute="height" multiplier="62:109" id="K6I-nl-fgN"/>
+                        <constraint firstAttribute="width" secondItem="iEF-9J-90O" secondAttribute="height" multiplier="62:109" id="WpD-f9-Kur"/>
                     </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="SKn-QR-oXB" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.299517" id="9Lb-Es-AFL"/>
-                <constraint firstItem="SKn-QR-oXB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rep-qn-5IE"/>
-                <constraint firstItem="SKn-QR-oXB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jUo-iM-riT"/>
+                <constraint firstItem="iEF-9J-90O" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.299517" id="535-bR-bWO"/>
+                <constraint firstItem="iEF-9J-90O" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="H5d-Ts-6Ed"/>
+                <constraint firstItem="iEF-9J-90O" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Mtd-iR-QFD"/>
             </constraints>
             <point key="canvasLocation" x="139" y="77"/>
         </view>
