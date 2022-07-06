@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="TableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="351" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="351" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IvD-ks-jXl">
+                        <rect key="frame" x="5" y="5.5" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="SIb-7V-fJO"/>
+                            <constraint firstAttribute="width" secondItem="IvD-ks-jXl" secondAttribute="height" multiplier="1:1" id="Yr8-gB-CdH"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sub title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUa-Ty-wnf">
+                        <rect key="frame" x="85" y="44" width="61" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-6t-v5n">
+                        <rect key="frame" x="261" y="25.5" width="70" height="30"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="iQ5-aA-xJd"/>
+                        </constraints>
+                        <state key="normal" title="Tap me"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bh5-LG-KVT">
+                        <rect key="frame" x="85" y="10" width="52" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bh5-LG-KVT" firstAttribute="leading" secondItem="IvD-ks-jXl" secondAttribute="trailing" constant="10" id="18g-s7-RHF"/>
+                    <constraint firstAttribute="trailing" secondItem="ccr-6t-v5n" secondAttribute="trailing" constant="20" id="5bi-Me-zSX"/>
+                    <constraint firstItem="CUa-Ty-wnf" firstAttribute="leading" secondItem="bh5-LG-KVT" secondAttribute="leading" id="90k-27-LLr"/>
+                    <constraint firstItem="CUa-Ty-wnf" firstAttribute="top" secondItem="bh5-LG-KVT" secondAttribute="bottom" constant="10" id="EGP-ql-lea"/>
+                    <constraint firstItem="IvD-ks-jXl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Mg5-Ii-6zI"/>
+                    <constraint firstItem="IvD-ks-jXl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="VX0-WJ-TM1"/>
+                    <constraint firstItem="ccr-6t-v5n" firstAttribute="centerY" secondItem="IvD-ks-jXl" secondAttribute="centerY" id="eJu-pK-icX"/>
+                    <constraint firstItem="bh5-LG-KVT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="y7h-QR-PHV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImageView" destination="IvD-ks-jXl" id="oeq-uZ-jhP"/>
+                <outlet property="nameLabel" destination="bh5-LG-KVT" id="zSB-c4-umt"/>
+                <outlet property="subtitleLabel" destination="CUa-Ty-wnf" id="wnE-VY-nVP"/>
+                <outlet property="tapMeButton" destination="ccr-6t-v5n" id="IHY-m3-ONp"/>
+            </connections>
+            <point key="canvasLocation" x="47.10144927536232" y="57.924107142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
