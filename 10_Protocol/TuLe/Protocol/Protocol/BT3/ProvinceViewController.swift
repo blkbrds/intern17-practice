@@ -7,7 +7,7 @@ protocol ProvinceViewControllerDelegate: AnyObject {
 final class ProvinceViewController: UIViewController {
 
     enum Action {
-        case provindeDidTaped(provinceValue: Int, districtValue: Int)
+        case provindeDidTaped(data: SaveData)
     }
     
     @IBOutlet private weak var provinceTableView: UITableView!
@@ -62,6 +62,13 @@ extension ProvinceViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ProvinceViewController: DistrictViewControllerDelegate {
     func districtView(_ view: DistrictViewController, _ data: Int) {
-        delegate?.vc(self, needsPerform: .provindeDidTaped(provinceValue: selectedIndex?.row ?? 0, districtValue: data))
+        let value: SaveData = SaveData(district: data, province: selectedIndex?.row ?? 0)
+        delegate?.vc(self, needsPerform: .provindeDidTaped(data: value))
     }
+}
+
+struct SaveData {
+    var district: Int?
+    var province: Int?
+    var region: Int?
 }

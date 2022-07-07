@@ -32,10 +32,15 @@ final class LocationViewController: UIViewController {
 extension LocationViewController: RegionViewControllerDelegate {
     func vc(_ vc: RegionViewController, needsPerform action: RegionViewController.Action) {
         switch action{
-        case .regionDidTaped(provinceValue: let provinceValue, districtValue: let districtValue, regionValue: let regionValue):
-            provinceLabel.text = "Tỉnh \(provinceValue + 1)"
-            regionLabel.text = "Miền \(regionValue + 1)"
-            districtLabel.text = "Huyện \(districtValue + 1)"
+        case .regionDidTaped(let value):
+            guard let value1 = value.region,
+                  let value2 = value.province,
+                  let value3 = value.district else {
+                return
+            }
+            provinceLabel.text = "Tỉnh \(value2 + 1)"
+            regionLabel.text = "Miền \(value1 + 1)"
+            districtLabel.text = "Huyện \(value3 + 1)"
         }
     }
 }
