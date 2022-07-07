@@ -18,8 +18,9 @@ final class DistrictViewController: UIViewController {
     
     // MARK: - Properties
     enum Action {
-        case passDataDistrict(district: String)
+        case passDataDistrict(value: dataLocation)
     }
+    var districts: [String] = ["Huyện 1", "Huyện 2","Huyện 3","Huyện 4","Huyện 5", "Huyện 6", "Huyện 7", "Huyện 8", "Huyện 9", "Huyện 10"]
     weak var delegate: DistrictViewControllerDelegate?
     var district: String = ""
     
@@ -38,30 +39,33 @@ final class DistrictViewController: UIViewController {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleDoneDistrict))
         navigationItem.rightBarButtonItem = doneButton
     }
-    
+
     // MARK: - Objc
     @objc private func handleDoneDistrict(){
-        delegate?.controller(self, needPerformAction: .passDataDistrict(district: district))
+        let valueDistrict = dataLocation(district: district)
+        delegate?.controller(self, needPerformAction: .passDataDistrict(value: valueDistrict))
     }
 }
+
 // MARK: - Extension
 extension DistrictViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return districts.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = "Huyện \(indexPath.row + 1)"
+        cell.textLabel?.text = districts[indexPath.row]
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.textColor = UIColor.black
-        let backgroundColorView = UIView()
-        backgroundColorView.backgroundColor = .orange
-        cell.selectedBackgroundView = backgroundColorView
+        cell.selectionStyle = .none
+        let selectedIndex = districts.firstIndex(of: district)
+        cell.backgroundColor = indexPath.row == selectedIndex ? .orange : .white
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        district =  "Huyện \(indexPath.row + 1)"
+        tableView.reloadData()
+        district =  districts[indexPath.row]
     }
 }

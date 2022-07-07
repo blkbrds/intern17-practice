@@ -7,6 +7,12 @@
 
 import UIKit
 
+struct dataLocation {
+    var region: String = ""
+    var province: String = ""
+    var district: String = ""
+}
+
 final class LocationViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -15,9 +21,21 @@ final class LocationViewController: UIViewController {
     @IBOutlet private weak var districtLabel: UILabel!
     
     // MARK: - Properties
-    var region: String = ""
-    var province: String = ""
-    var district: String = ""
+    var region: String = "" {
+        didSet {
+            regionLabel.text = region
+        }
+    }
+    var province: String = "" {
+        didSet {
+            provinceLabel.text = province
+        }
+    }
+    var district: String = "" {
+        didSet {
+            districtLabel.text = district
+        }
+    }
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -30,16 +48,26 @@ final class LocationViewController: UIViewController {
         title = "Địa điểm"
         let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(handleEdit))
         navigationItem.rightBarButtonItem = editButton
-        regionLabel.text = region
-        provinceLabel.text = province
-        districtLabel.text = district
     }
-    
+
     // MARK: - objc
     @objc private func handleEdit() {
         let regionVC = RegionViewController()
+        regionVC.delegateRegion = self
         regionVC.region = region
+        regionVC.province = province
+        regionVC.district = district
         navigationController?.pushViewController(regionVC, animated: true)
     }
 }
 
+extension LocationViewController: RegionViewControllerDelegate {
+    func controller(_ controller: RegionViewController, needPerformAction action: RegionViewController.Action) {
+        switch action {
+        case .passDataRegion(let value) :
+            region = value.region
+            province = value.province
+            district = value.district
+        }
+    }
+}
