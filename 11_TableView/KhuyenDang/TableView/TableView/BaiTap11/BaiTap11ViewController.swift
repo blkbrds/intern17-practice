@@ -46,7 +46,9 @@ extension BaiTap11ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomLabelTableViewCell", for: indexPath) as! CustomLabelTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomLabelTableViewCell", for: indexPath) as? CustomLabelTableViewCell else {
+            return UITableViewCell()
+        }
         cell.updateTableCell(value: data[indexPath.row])
         return cell
     }

@@ -11,6 +11,13 @@ protocol CustomTableViewCellDelegate: AnyObject {
     func cell(_ cell: CustomTableViewCell, needPerformAction action: CustomTableViewCell.Action)
 }
 
+struct Model {
+    var avatar: String = ""
+    var name: String = ""
+    var subtitle: String = "Name"
+    var index: Int = -1
+    var section: String = ""
+}
 final class CustomTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
@@ -26,27 +33,24 @@ final class CustomTableViewCell: UITableViewCell {
     var sections: String = ""
     weak var delegate: CustomTableViewCellDelegate?
     
-    // MARK: -
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
+    // MARK: - Override
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
     // MARK: - Methods
-    func updateTableCell(avatar: String, name: String, subtitle: String = "Name", index: Int, section: String) {
-        avatarImageView.image = UIImage(named: avatar)
-        nameLabel.text = name
-        customCellLabel.text = subtitle
-        sections = section
-        tapMeButton.tag = index
+    func updateTableCell(item: Model) {
+        avatarImageView.image = UIImage(named: item.avatar)
+        nameLabel.text = item.name
+        customCellLabel.text = item.subtitle
+        sections = item.section
+        tapMeButton.tag = item.index
         tapMeButton.addTarget(self, action: #selector(tapMeButtonTouchUpInside(sender:)), for: .touchUpInside)
     }
     
     // MARK: - Objc
-    @objc func tapMeButtonTouchUpInside(sender: UIButton) {
+    @objc private func tapMeButtonTouchUpInside(sender: UIButton) {
         delegate?.cell(self, needPerformAction: .passIndexTap(index: sender.tag, section: sections ))
     }
 }
+

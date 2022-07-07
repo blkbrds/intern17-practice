@@ -53,8 +53,11 @@ extension BaiTap4ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-        cell.updateTableCell(avatar: "avatar", name: data[indexPath.section][indexPath.row], index: indexPath.row + 1, section: "\(indexPath.section + 1)")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell else {
+            return UITableViewCell()
+        }
+        let model = Model(avatar: "avatar", name: data[indexPath.section][indexPath.row], index: indexPath.row + 1, section: "\(indexPath.section + 1)")
+        cell.updateTableCell(item: model)
         cell.delegate = self
         return cell
     }
