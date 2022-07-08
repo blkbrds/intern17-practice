@@ -15,26 +15,25 @@ final class LocationViewController: UIViewController {
     @IBOutlet private weak var districtLabel: UILabel!
     
     // MARK: - Properties
-    var region: Int = 1 {
+    var region: String = "" {
         didSet {
-            regionLabel.text = "Miền \(region)"
+            regionLabel.text = region
         }
     }
-    var province: Int = 1 {
+    var province: String = "" {
         didSet {
-            provinceLabel.text = "Tỉnh \(province)"
+            provinceLabel.text = province
         }
     }
-    var district: Int = 1 {
+    var district: String = "" {
         didSet {
-            districtLabel.text = "Huyện \(district)"
+            districtLabel.text = district
         }
     }
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configView()
     }
 
@@ -45,27 +44,25 @@ final class LocationViewController: UIViewController {
         navigationItem.backBarButtonItem = backButton
         let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
         navigationItem.rightBarButtonItem = editButton
-        
-        regionLabel.text = "Miền \(region)"
-        provinceLabel.text = "Tỉnh \(province)"
-        districtLabel.text = "Huyện \(province)"
     }
     
     // MARK: - Objc functions
     @objc private func editAction() {
         let vc = RegionViewController()
         vc.delegate = self
+        vc.region = region
+        vc.province = province
+        vc.district = district
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 // MARK: - Extensions
 extension LocationViewController: RegionViewControllerDelegate {
-    func controller(_ controller: RegionViewController, region: Int, province: Int, district: Int) {
+    func controller(_ controller: RegionViewController, region: String, province: String, district: String) {
         self.region = region
         self.province = province
         self.district = district
-        print(region, province, district)
     }
 }
 
