@@ -20,7 +20,7 @@ final class CalculatorView: UIView {
     
     // MARK: - Define
     enum Action {
-        case done(result: Float, operation: String)
+        case done(result: Float, operation: Operation)
         case clear(x: String, y: String, result: String)
     }
 
@@ -38,7 +38,7 @@ final class CalculatorView: UIView {
     weak var delegate: CalculatorViewDelegate!
     
     var calculator = Calculator()
-    var operater: String = ""
+    var operater: Operation = .add
     var (x1, y1): (Int, Int) = (0, 0)
     var result: Float = 0 {
         didSet {
@@ -118,9 +118,9 @@ final class CalculatorView: UIView {
     
     @IBAction private func operaterButton(_ sender: UIButton) {
         for button in collectionButton {
-            if button.titleLabel?.text == "Clear" {
+            if button.tag == 6 {
                 button.backgroundColor = .lightGray
-            } else if sender.titleLabel?.text == button.titleLabel?.text {
+            } else if sender.tag == button.tag {
                 button.backgroundColor = .green
                 button.setTitleColor(.white, for: .normal)
             } else {
@@ -128,28 +128,27 @@ final class CalculatorView: UIView {
                 button.setTitleColor(.black, for: .normal)
             }
         }
- 
-        switch sender.titleLabel?.text {
-        case "+":
-            operater = "+"
+        switch sender.tag {
+        case 0:
+            operater = .add
             result = calculator.add(x: Float(x1), y: Float(y1))
-        case "-":
-            operater = "-"
+        case 1:
+            operater = .sub
             result = calculator.sub(x: Float(x1), y: Float(y1))
-        case "*":
-            operater = "*"
+        case 2:
+            operater = .mul
             result = calculator.mul(x: Float(x1), y: Float(y1))
-        case "/":
-            operater = "/"
+        case 3:
+            operater = .div
             result = calculator.div(x: Float(x1), y: Float(y1))
-        case "%":
-            operater = "%"
+        case 4:
+            operater = .mod
             result = Float(calculator.mod(x: x1, y: y1))
-        case "x^y":
-            operater = "x^y"
+        case 5:
+            operater = .power
             result = calculator.power(x: Float(x1), y: Float(y1))
         default:
-            operater = "Clear"
+            operater = .clear
             hide()
             valueXLabel.text = ""
             valueYLabel.text = ""

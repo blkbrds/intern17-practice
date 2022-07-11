@@ -7,6 +7,34 @@
 
 import UIKit
 
+enum Operation {
+    case add
+    case sub
+    case mul
+    case div
+    case mod
+    case power
+    case clear
+    var title: String {
+        switch self {
+        case .add:
+            return "+"
+        case .sub:
+            return "-"
+        case .mul:
+            return "*"
+        case .div:
+            return "/"
+        case .mod:
+            return "%"
+        case .power:
+            return "x^y"
+        case .clear:
+            return "Clear"
+        }
+    }
+}
+
 final class CalculatorViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -42,10 +70,8 @@ final class CalculatorViewController: UIViewController {
         self.view.addSubview(calculatorView)
         calculatorView.dataSource = self
         calculatorView.delegate = self
-        
         inputXTextField.delegate = self
         inputYTextField.delegate = self
-        
         inputXTextField.setCorner()
         inputYTextField.setCorner()
         questionMarkButton.setCorner()
@@ -91,7 +117,6 @@ extension CalculatorViewController: CalculatorViewDataSource {
             return nil
         }
         return(x, y)
-        
     }
 }
 
@@ -100,10 +125,11 @@ extension CalculatorViewController: CalculatorViewDelegate {
         switch actions {
         case .done(result: let result, operation: let operation):
             self.result = result
-            questionMarkButton.setTitle(operation, for: .normal)
+            questionMarkButton.setTitle(operation.title, for: .normal)
         case .clear(x: let x, y: let y, result: let result):
             inputXTextField.text = x
             inputYTextField.text = y
+            questionMarkButton.setTitle("?", for: .normal)
             resultLabel.text = result
         }
     }
