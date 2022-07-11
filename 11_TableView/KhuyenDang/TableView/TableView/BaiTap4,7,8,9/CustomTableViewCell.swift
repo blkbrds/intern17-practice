@@ -11,7 +11,7 @@ protocol CustomTableViewCellDelegate: AnyObject {
     func cell(_ cell: CustomTableViewCell, needPerformAction action: CustomTableViewCell.Action)
 }
 
-struct Model {
+struct InfoCell {
     var avatar: String = ""
     var name: String = ""
     var subtitle: String = "Name"
@@ -33,19 +33,23 @@ final class CustomTableViewCell: UITableViewCell {
     var sections: String = ""
     weak var delegate: CustomTableViewCellDelegate?
     
+    // MARK: - Life cycle
+    override func awakeFromNib() {
+        tapMeButton.addTarget(self, action: #selector(tapMeButtonTouchUpInside(sender:)), for: .touchUpInside)
+    }
+    
     // MARK: - Override
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
     // MARK: - Methods
-    func updateTableCell(item: Model) {
+    func updateTableCell(item: InfoCell) {
         avatarImageView.image = UIImage(named: item.avatar)
         nameLabel.text = item.name
         customCellLabel.text = item.subtitle
         sections = item.section
         tapMeButton.tag = item.index
-        tapMeButton.addTarget(self, action: #selector(tapMeButtonTouchUpInside(sender:)), for: .touchUpInside)
     }
     
     // MARK: - Objc

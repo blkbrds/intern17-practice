@@ -9,13 +9,20 @@ import UIKit
 
 final class BaiTap4ViewController: UIViewController {
     
+    // MARK: - Enum
+    enum TypeSection: Int {
+        case food = 0
+        case cattle
+        case stuff
+    }
+    
     // MARK: - IBOutlet
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     var data: [[String]] = []
     var indexData: [String] = []
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,19 +63,22 @@ extension BaiTap4ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell else {
             return UITableViewCell()
         }
-        let model = Model(avatar: "avatar", name: data[indexPath.section][indexPath.row], index: indexPath.row + 1, section: "\(indexPath.section + 1)")
+        let model = InfoCell(avatar: "avatar", name: data[indexPath.section][indexPath.row], index: indexPath.row + 1, section: "\(indexPath.section + 1)")
         cell.updateTableCell(item: model)
         cell.delegate = self
         return cell
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
+        guard let typeSection = TypeSection(rawValue: section) else {
+            return ""
+        }
+        switch typeSection {
+        case .food:
             return "Thực phẩm"
-        case 1:
+        case .cattle:
             return "Gia súc"
-        default:
+        case .stuff:
             return "Đồ vật"
         }
     }
