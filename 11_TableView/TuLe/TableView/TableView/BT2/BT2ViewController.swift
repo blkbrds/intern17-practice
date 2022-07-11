@@ -5,6 +5,7 @@ final class BT2ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     var names: [String] = []
+    let cell: String = "tableViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,13 +19,13 @@ final class BT2ViewController: UIViewController {
     }
     
     private func loadData() {
-        guard let path = Bundle.main.url(forResource: "names", withExtension: "plist") else { return }
-        guard let nameData = NSArray(contentsOf: path) as? [String] else { return }
+        guard let path = Bundle.main.url(forResource: "names", withExtension: "plist"),
+        let nameData = NSArray(contentsOf: path) as? [String] else { return }
         names = nameData
     }
     
     private func configTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -36,7 +37,7 @@ extension BT2ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath)
         cell.textLabel?.text = names[indexPath.row]
         return cell
     }

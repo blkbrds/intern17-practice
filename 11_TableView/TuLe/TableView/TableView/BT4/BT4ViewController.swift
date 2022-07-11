@@ -6,12 +6,12 @@ final class BT4ViewController: UIViewController {
     
     var names: NSArray?
     var names1: [String] = []
+    let cell: String = "tableViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
         configTableView()
-        
     }
     
     private func loadData() {
@@ -24,7 +24,7 @@ final class BT4ViewController: UIViewController {
     }
     
     private func configTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -35,7 +35,6 @@ extension BT4ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let names = names else {
             return 1
         }
-        
         return names.count
     }
     
@@ -44,15 +43,13 @@ extension BT4ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        names1 = names![section] as! [String]
+        names1 = names?[section] as? [String] ?? []
         return names1.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath)
         cell.textLabel?.text = names1[indexPath.row]
         return cell
     }
-
-
 }

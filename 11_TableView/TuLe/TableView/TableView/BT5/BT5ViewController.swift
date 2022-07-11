@@ -4,6 +4,8 @@ final class BT5ViewController: UIViewController {
     
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
+    
+    let cell: String = "tableViewCell"
     var contactsData: [String] = []
     var persons: [String] = ["Nguyễn Nhật Quyên", "Lê Công Tú", "Nguyễn Thường Tính", "Đoàn Trần Hiếu My", "Đoàn Hà Vương", "Trần Văn Trung", "Đặng Thanh Thuận", "Đặng Như Quỳnh", "Đặng Quỳnh Như"]
     
@@ -14,7 +16,7 @@ final class BT5ViewController: UIViewController {
     }
     
     private func configTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell)
         tableView.delegate = self
         tableView.dataSource = self
         contactsData = persons
@@ -50,7 +52,7 @@ extension BT5ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath)
         cell.textLabel?.text = contactsData[indexPath.row]
         return cell
     }

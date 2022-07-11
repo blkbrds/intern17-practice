@@ -51,7 +51,9 @@ extension BT7ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BT7TableViewCell", for: indexPath) as! BT7TableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BT7TableViewCell", for: indexPath) as? BT7TableViewCell else {
+            return UITableViewCell()
+        }
         cell.updateTableCell(name: garden[indexPath.section][indexPath.row], avatar: "avt", index: indexPath.row)
         cell.delegate = self
         return cell
