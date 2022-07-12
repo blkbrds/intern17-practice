@@ -110,14 +110,14 @@
 		BF9BC9C9284DA8BB00546901 /* Exercise3 */ = {
 			isa = PBXGroup;
 			children = (
-				BF9BC9CA284DA8BB00546901 /* TinhViewController.xib */,
-				BF9BC9CB284DA8BB00546901 /* HuyenViewController.xib */,
 				BF9BC9CC284DA8BB00546901 /* DiaDiemViewController.swift */,
-				BF9BC9CD284DA8BB00546901 /* HuyenViewController.swift */,
-				BF9BC9CE284DA8BB00546901 /* TinhViewController.swift */,
 				BF9BC9CF284DA8BB00546901 /* DiaDiemViewController.xib */,
-				BF9BC9D0284DA8BB00546901 /* MienViewController.xib */,
+				BF9BC9CD284DA8BB00546901 /* HuyenViewController.swift */,
+				BF9BC9CB284DA8BB00546901 /* HuyenViewController.xib */,
 				BF9BC9D1284DA8BB00546901 /* MienViewController.swift */,
+				BF9BC9D0284DA8BB00546901 /* MienViewController.xib */,
+				BF9BC9CE284DA8BB00546901 /* TinhViewController.swift */,
+				BF9BC9CA284DA8BB00546901 /* TinhViewController.xib */,
 			);
 			path = Exercise3;
 			sourceTree = "<group>";
