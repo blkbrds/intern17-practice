@@ -22,7 +22,6 @@ final class ForgotPasswordViewController: UIViewController {
     
     @objc private func handleForgotPassword() {
         // code handle forgot
-        let loginVC = LoginViewController()
         navigationController?.popViewController(animated: true)
     }
 }

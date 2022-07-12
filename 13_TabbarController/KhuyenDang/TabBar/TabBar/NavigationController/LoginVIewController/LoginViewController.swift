@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LoginViewController: UIViewController {
+final class LoginViewController: BaseViewController {
     
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -32,7 +32,7 @@ final class LoginViewController: UIViewController {
         passwordTextField.resignFirstResponder()
     }
     
-    // MARK: - Private methods
+    // MARK: - Config
     private func configUI() {
         title = "Login"
         signInButton.layer.cornerRadius = 10
@@ -40,17 +40,16 @@ final class LoginViewController: UIViewController {
         passwordTextField.returnKeyType = .done
         usernameTextField.delegate = self
         passwordTextField.delegate = self
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleLogin))
-        navigationItem.rightBarButtonItem = doneButton
     }
     
-    private func getUserFromPlist(withName name: String) -> [String: Any]?
+    // MARK: - Private methods
+    private func getUserFromPlist(withName name: String) -> [[String: Any]]?
     {
-        var config: [String: Any]?
+        var config: [[String: Any]]?
         if let infoPlistPath = Bundle.main.url(forResource: name, withExtension: "plist") {
             do {
                 let infoPlistData = try Data(contentsOf: infoPlistPath)
-                if let dict = try PropertyListSerialization.propertyList(from: infoPlistData, options: [], format: nil) as? [String: Any] {
+                if let dict = try PropertyListSerialization.propertyList(from: infoPlistData, options: [], format: nil) as? [[String: Any]] {
                     config = dict
                 }
             } catch {
@@ -75,31 +74,26 @@ final class LoginViewController: UIViewController {
         handleLogin()
     }
     
-    //MARK: - Objc
-    @objc private func handleLogin() {
+    //MARK: - Private method
+    private func handleLogin() {
         guard let listUser =  getUserFromPlist(withName: "UserData") else {
             return }
-        for (key, value) in listUser {
-            guard let value = value as? NSDictionary else{ return }
-            guard let username = value["username"] as? String, usernameTextField.text == username,
-                  let password = value["password"] as? String, passwordTextField.text == password else { return }
-            let homeViewController = HomeViewController()
-            navigationController?.pushViewController(homeViewController, animated: true)
-            break
+        for value in listUser {
+            if let username = value["username"] as? String, let password = value["password"] as? String, usernameTextField.text == username && passwordTextField.text == password {
+                changeRoot(type: .tabbar)
+                return
+            }
         }
-        let scene = UIApplication.shared.connectedScenes.first
-        if let sceneDelegate : SceneDelegate = (scene?.delegate as? SceneDelegate) {
-            sceneDelegate.changeScreen(type: .tabbar)
-        }
+        print("LOGIN FAIL")
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameTextField {
             passwordTextField.becomeFirstResponder()
-        }
-        else if textField == passwordTextField {
+        } else {
             handleLogin()
         }
         return true

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RegisterViewController: UIViewController {
+final class RegisterViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +22,6 @@ final class RegisterViewController: UIViewController {
     
     @objc private func handleRegister() {
         // code handle register
-        let scene = UIApplication.shared.connectedScenes.first
-        if let sceneDelegate : SceneDelegate = (scene?.delegate as? SceneDelegate) {
-            sceneDelegate.changeScreen(type: .tabbar)
-        }
+        changeRoot(type: .tabbar)
     }
 }

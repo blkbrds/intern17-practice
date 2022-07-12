@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+final class ProfileViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +16,6 @@ final class ProfileViewController: UIViewController {
 
     // MARK: - IBAction
     @IBAction private func logOutButtonTouchUpInside(_ sender: Any) {
-        let scene = UIApplication.shared.connectedScenes.first
-        if let sceneDelegate : SceneDelegate = (scene?.delegate as? SceneDelegate) {
-            sceneDelegate.changeScreen(type: .login)
-        }
+        changeRoot(type: .login)
     }
 }

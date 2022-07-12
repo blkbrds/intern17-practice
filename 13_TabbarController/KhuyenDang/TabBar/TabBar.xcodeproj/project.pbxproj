@@ -26,6 +26,7 @@
 		8A553550287C113E0095EF5D /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A55354E287C113E0095EF5D /* ForgotPasswordViewController.xib */; };
 		8A553556287C11590095EF5D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A553554287C11590095EF5D /* RegisterViewController.swift */; };
 		8A553557287C11590095EF5D /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A553555287C11590095EF5D /* RegisterViewController.xib */; };
+		8A5EA084287D79760061EA6B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5EA083287D79760061EA6B /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		8A55354E287C113E0095EF5D /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		8A553554287C11590095EF5D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8A553555287C11590095EF5D /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		8A5EA083287D79760061EA6B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		8A5534B7287BC1310095EF5D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				8A5EA082287D79610061EA6B /* Base */,
 				8A553533287BE2A40095EF5D /* NavigationController */,
 				8A553530287BE1FA0095EF5D /* TabBarController */,
 				8A5534B8287BC1310095EF5D /* AppDelegate.swift */,
@@ -178,6 +181,14 @@
 			path = RegisterViewController;
 			sourceTree = "<group>";
 		};
+		8A5EA082287D79610061EA6B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8A5EA083287D79760061EA6B /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +271,7 @@
 				8A55351D287BD7790095EF5D /* ProfileViewController.swift in Sources */,
 				8A5534B9287BC1310095EF5D /* AppDelegate.swift in Sources */,
 				8A553523287BD7BE0095EF5D /* FavoritesViewController.swift in Sources */,
+				8A5EA084287D79760061EA6B /* BaseViewController.swift in Sources */,
 				8A553544287BE4AD0095EF5D /* LoginViewController.swift in Sources */,
 				8A553528287BD7CB0095EF5D /* MapViewController.swift in Sources */,
 				8A5534BB287BC1310095EF5D /* SceneDelegate.swift in Sources */,
