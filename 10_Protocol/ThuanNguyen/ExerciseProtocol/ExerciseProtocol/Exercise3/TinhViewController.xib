@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TinhViewController" customModule="DemoProtocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="tinhButton" destination="80e-Ah-CoN" collectionClass="NSMutableArray" id="YLV-lY-Mob"/>
+                <outletCollection property="tinhButton" destination="ofu-F2-stP" collectionClass="NSMutableArray" id="vUt-0g-u9h"/>
+                <outletCollection property="tinhButton" destination="gch-bK-mkL" collectionClass="NSMutableArray" id="gEp-Z1-YxI"/>
+                <outletCollection property="tinhButton" destination="uzy-1p-ec5" collectionClass="NSMutableArray" id="o28-dI-ETX"/>
+                <outletCollection property="tinhButton" destination="hQy-md-EBU" collectionClass="NSMutableArray" id="uQy-wA-4Fy"/>
+                <outletCollection property="tinhButton" destination="aYP-oM-FOa" collectionClass="NSMutableArray" id="sJP-cd-gqE"/>
+                <outletCollection property="tinhButton" destination="PNP-A1-ncI" collectionClass="NSMutableArray" id="MdF-ri-sjB"/>
+                <outletCollection property="tinhButton" destination="Kma-vd-m3c" collectionClass="NSMutableArray" id="coQ-VD-bIA"/>
+                <outletCollection property="tinhButton" destination="UJ0-BV-ES6" collectionClass="NSMutableArray" id="wUw-Ne-Znf"/>
+                <outletCollection property="tinhButton" destination="8hT-SC-BFW" collectionClass="NSMutableArray" id="cx9-KL-fW0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lw3-Ce-Z9a">
+                    <rect key="frame" x="10" y="94" width="394" height="768"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80e-Ah-CoN">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 1">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="10v-8v-LVo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofu-F2-stP">
+                            <rect key="frame" x="0.0" y="78" width="394" height="67.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 2">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="KF6-d8-EZf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gch-bK-mkL">
+                            <rect key="frame" x="0.0" y="155.5" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 3">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="u46-YD-QfX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzy-1p-ec5">
+                            <rect key="frame" x="0.0" y="233.5" width="394" height="67.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 4">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="Gqp-jM-8KG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQy-md-EBU">
+                            <rect key="frame" x="0.0" y="311" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 5">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="FIB-Eg-uv6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYP-oM-FOa">
+                            <rect key="frame" x="0.0" y="389" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 6">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="NN0-mk-VsG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNP-A1-ncI">
+                            <rect key="frame" x="0.0" y="467" width="394" height="67.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 7">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="JUX-k9-tqf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kma-vd-m3c">
+                            <rect key="frame" x="0.0" y="544.5" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 8">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="kxb-Ph-8p9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ0-BV-ES6">
+                            <rect key="frame" x="0.0" y="622.5" width="394" height="67.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 9">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="5HU-Im-QUc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hT-SC-BFW">
+                            <rect key="frame" x="0.0" y="700" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Tỉnh 10">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="maB-La-OJG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lw3-Ce-Z9a" secondAttribute="trailing" constant="10" id="AeG-gk-yWx"/>
+                <constraint firstItem="lw3-Ce-Z9a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="QnN-cp-mvG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lw3-Ce-Z9a" secondAttribute="bottom" id="pqs-YB-AW2"/>
+                <constraint firstItem="lw3-Ce-Z9a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="rWK-Ad-1e2"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="79"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

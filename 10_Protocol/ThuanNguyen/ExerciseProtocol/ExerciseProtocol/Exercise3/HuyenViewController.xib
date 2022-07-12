@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuyenViewController" customModule="DemoProtocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="huyenButton" destination="IqU-dM-flB" collectionClass="NSMutableArray" id="cgf-wa-Lds"/>
+                <outletCollection property="huyenButton" destination="qQI-5w-lf8" collectionClass="NSMutableArray" id="EvC-5x-C7u"/>
+                <outletCollection property="huyenButton" destination="HpN-Yq-rjC" collectionClass="NSMutableArray" id="kIb-Zn-YVX"/>
+                <outletCollection property="huyenButton" destination="cdM-vn-SC5" collectionClass="NSMutableArray" id="vdp-pK-NVK"/>
+                <outletCollection property="huyenButton" destination="iqZ-GG-bIV" collectionClass="NSMutableArray" id="C3h-PF-haN"/>
+                <outletCollection property="huyenButton" destination="ham-ja-otF" collectionClass="NSMutableArray" id="EoK-Yp-Chn"/>
+                <outletCollection property="huyenButton" destination="TEg-oy-RuA" collectionClass="NSMutableArray" id="pp2-YM-pr3"/>
+                <outletCollection property="huyenButton" destination="Ih8-Dq-Afm" collectionClass="NSMutableArray" id="mqy-rS-iw1"/>
+                <outletCollection property="huyenButton" destination="VQ9-pf-kgV" collectionClass="NSMutableArray" id="sWJ-8a-iat"/>
+                <outletCollection property="huyenButton" destination="okE-K1-T3C" collectionClass="NSMutableArray" id="Q9O-H0-7JB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jai-VS-OX2">
+                    <rect key="frame" x="10" y="94" width="394" height="768"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqU-dM-flB">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 1">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="lbX-GP-tb5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-5w-lf8">
+                            <rect key="frame" x="0.0" y="78" width="394" height="67.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 2">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="Zkc-xY-62U"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpN-Yq-rjC">
+                            <rect key="frame" x="0.0" y="155.5" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 3">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="pqZ-Gd-hfZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdM-vn-SC5">
+                            <rect key="frame" x="0.0" y="233.5" width="394" height="67.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 4">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="TEi-NJ-rTb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqZ-GG-bIV">
+                            <rect key="frame" x="0.0" y="311" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 5">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="13g-3C-pDQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ham-ja-otF">
+                            <rect key="frame" x="0.0" y="389" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 6">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="Cys-6v-xVc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEg-oy-RuA">
+                            <rect key="frame" x="0.0" y="467" width="394" height="67.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 7">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="Spk-80-1WR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ih8-Dq-Afm">
+                            <rect key="frame" x="0.0" y="544.5" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 8">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="Jnq-3n-KV7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQ9-pf-kgV">
+                            <rect key="frame" x="0.0" y="622.5" width="394" height="67.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 9">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="qk5-tA-YOE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okE-K1-T3C">
+                            <rect key="frame" x="0.0" y="700" width="394" height="68"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Huyện 10">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="changeColorButton:" destination="-1" eventType="touchUpInside" id="eUU-VV-sS3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jai-VS-OX2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="0hJ-Pk-uxB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jai-VS-OX2" secondAttribute="trailing" constant="10" id="NQI-Ms-J5x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jai-VS-OX2" secondAttribute="bottom" id="b8p-3m-tYx"/>
+                <constraint firstItem="jai-VS-OX2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="j4A-4u-r9E"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="98"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
