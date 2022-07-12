@@ -20,7 +20,7 @@ final class BaiTap3ViewController: UIViewController {
     }
     
     // MARK: - IBOutlet
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Properties
     var avatars: [[Avatar]] = [[Avatar(name: "Name", image: "avatarCute"), Avatar(name: "Name", image: "avatarCute")],
@@ -54,7 +54,9 @@ extension BaiTap3ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BaiTap3CollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? BaiTap3CollectionViewCell else {
+            return UICollectionViewCell()
+        }
         cell.updateCell(name: "\(avatars[indexPath.section][indexPath.row].name)", avatar: "\(avatars[indexPath.section][indexPath.row].image)")
         return cell
     }
