@@ -13,7 +13,7 @@ final class BaiTap11ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
     // MARK: - Properties
-    var data: [String] = []
+    private var data: [String] = []
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ final class BaiTap11ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - UITableViewDataSource
 extension BaiTap11ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -58,6 +58,7 @@ extension BaiTap11ViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension BaiTap11ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

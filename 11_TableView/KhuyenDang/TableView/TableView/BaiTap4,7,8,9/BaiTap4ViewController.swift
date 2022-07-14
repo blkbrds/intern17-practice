@@ -20,8 +20,8 @@ final class BaiTap4ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    var data: [[String]] = []
-    var indexData: [String] = []
+    private var data: [[String]] = []
+    private var indexData: [String] = []
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -49,7 +49,7 @@ final class BaiTap4ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - UITableViewDataSource
 extension BaiTap4ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return data.count
@@ -91,7 +91,7 @@ extension BaiTap4ViewController: UITableViewDataSource {
         return index
     }
 }
-
+// MARK: - UITableViewDelegate
 extension BaiTap4ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
@@ -102,6 +102,7 @@ extension BaiTap4ViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - CustomTableViewCellDelegate
 extension BaiTap4ViewController: CustomTableViewCellDelegate {
     func cell(_ cell: CustomTableViewCell, needPerformAction action: CustomTableViewCell.Action) {
         switch action {

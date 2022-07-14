@@ -14,8 +14,8 @@ final class BaiTap1ViewController: UIViewController {
     @IBOutlet private weak var searchBar: UISearchBar!
     
     // MARK: - Properties
-    var persons: [String] = []
-    var currentPersons: [String] = []
+    private var persons: [String] = []
+    private var currentPersons: [String] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -66,7 +66,7 @@ final class BaiTap1ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - UITableViewDataSource
 extension BaiTap1ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentPersons.count
@@ -79,6 +79,7 @@ extension BaiTap1ViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension BaiTap1ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let personDetailViewController = PersonDetailViewController()
@@ -88,6 +89,7 @@ extension BaiTap1ViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension BaiTap1ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         search(keyWord: searchText)

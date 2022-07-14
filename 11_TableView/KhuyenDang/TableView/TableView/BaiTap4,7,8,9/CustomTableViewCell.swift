@@ -21,10 +21,10 @@ struct InfoCell {
 final class CustomTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var customCellLabel: UILabel!
-    @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var tapMeButton: UIButton!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var customCellLabel: UILabel!
+    @IBOutlet private weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var tapMeButton: UIButton!
     
     // MARK: - Properties
     enum Action {
