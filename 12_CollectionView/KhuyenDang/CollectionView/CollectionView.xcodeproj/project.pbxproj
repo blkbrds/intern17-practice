@@ -31,6 +31,7 @@
 		8A3D43FA2876E6F20016232C /* BaiTap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A3D43F82876E6F20016232C /* BaiTap4ViewController.xib */; };
 		8A3D43FF2876EAE50016232C /* BaiTap4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D43FD2876EAE50016232C /* BaiTap4TableViewCell.swift */; };
 		8A3D44002876EAE50016232C /* BaiTap4TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A3D43FE2876EAE50016232C /* BaiTap4TableViewCell.xib */; };
+		8A7C928E287FFBCD0066835B /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C928D287FFBCD0066835B /* Avatar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		8A3D43F82876E6F20016232C /* BaiTap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap4ViewController.xib; sourceTree = "<group>"; };
 		8A3D43FD2876EAE50016232C /* BaiTap4TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4TableViewCell.swift; sourceTree = "<group>"; };
 		8A3D43FE2876EAE50016232C /* BaiTap4TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap4TableViewCell.xib; sourceTree = "<group>"; };
+		8A7C928D287FFBCD0066835B /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				8A3D43E52876989C0016232C /* BaiTap3CollectionViewCell.xib */,
 				8A3D43E928769E900016232C /* HeaderReusableView.swift */,
 				8A3D43EA28769E900016232C /* HeaderReusableView.xib */,
+				8A7C928D287FFBCD0066835B /* Avatar.swift */,
 			);
 			path = BaiTap3;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				8A1C72092877BAC00026C285 /* BaiTap4CollectionViewCell.swift in Sources */,
 				8A3D43F92876E6F20016232C /* BaiTap4ViewController.swift in Sources */,
 				8A3D43DA287698450016232C /* BaiTap3ViewController.swift in Sources */,
+				8A7C928E287FFBCD0066835B /* Avatar.swift in Sources */,
 				8A3D43EB28769E900016232C /* HeaderReusableView.swift in Sources */,
 				8A3D43B6287684FD0016232C /* AppDelegate.swift in Sources */,
 				8A3D43B8287684FD0016232C /* SceneDelegate.swift in Sources */,

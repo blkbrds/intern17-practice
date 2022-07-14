@@ -12,6 +12,9 @@ final class BT4TableViewCell: UITableViewCell {
     // MARK: - IBOutlet
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    // MARK: - Properties
+    let distance = Distance()
+    
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,28 +30,22 @@ final class BT4TableViewCell: UITableViewCell {
         collectionView.showsHorizontalScrollIndicator = false
     }
 
-    // MARK: - Override func
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-    }
-
     // MARK: - IBActions
     @IBAction private func previousButtonTouchUpInside(_ sender: Any) {
         let contenOffsetX = collectionView.contentOffset.x
-        guard (contenOffsetX - (UIScreen.main.bounds.width - 40)) >= 0 else { return }
-        collectionView.setContentOffset(CGPoint(x: contenOffsetX - (UIScreen.main.bounds.width - 40), y: 0), animated: true)
+        guard (contenOffsetX - (UIScreen.main.bounds.width - (distance.leftDistance + distance.rightDistance))) >= 0 else { return }
+        collectionView.setContentOffset(CGPoint(x: contenOffsetX - (UIScreen.main.bounds.width - (distance.leftDistance + distance.rightDistance)), y: 0), animated: true)
     }
 
     @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         let widthCollectionView = collectionView.contentSize.width
         let contenOffsetX = collectionView.contentOffset.x
-        guard (contenOffsetX + UIScreen.main.bounds.width - 40) < widthCollectionView else { return }
-        collectionView.setContentOffset(CGPoint(x: contenOffsetX + UIScreen.main.bounds.width - 40, y: 0), animated: true)
+        guard (contenOffsetX + UIScreen.main.bounds.width - (distance.leftDistance + distance.rightDistance)) < widthCollectionView else { return }
+        collectionView.setContentOffset(CGPoint(x: contenOffsetX + UIScreen.main.bounds.width - (distance.leftDistance + distance.rightDistance), y: 0), animated: true)
     }
 }
 
-// MARK: - Extension
+// MARK: - UICollectionViewDataSource
 extension BT4TableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         5
@@ -62,9 +59,10 @@ extension BT4TableViewCell: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension BT4TableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let screenWidth = UIScreen.main.bounds.width - 40 // left 20, right 20
+        let screenWidth = UIScreen.main.bounds.width - (distance.leftDistance + distance.rightDistance)
         return CGSize(width: screenWidth, height: UIScreen.main.bounds.height / 4)
     }
 
@@ -74,5 +72,13 @@ extension BT4TableViewCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+// MARK: - Config
+extension BT4TableViewCell {
+    struct Distance {
+        var leftDistance: CGFloat = 20
+        var rightDistance: CGFloat = 20
     }
 }

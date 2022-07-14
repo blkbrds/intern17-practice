@@ -28,7 +28,7 @@ final class BaiTap1ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - UICollectionViewDataSource
 extension BaiTap1ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         100
@@ -43,6 +43,7 @@ extension BaiTap1ViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension BaiTap1ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width - 40

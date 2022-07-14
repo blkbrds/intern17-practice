@@ -32,7 +32,7 @@ final class BaiTap4ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - UITableViewDataSource
 extension BaiTap4ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         5

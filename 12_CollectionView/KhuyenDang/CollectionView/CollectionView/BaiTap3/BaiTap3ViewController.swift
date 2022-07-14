@@ -9,16 +9,6 @@ import UIKit
 
 final class BaiTap3ViewController: UIViewController {
     
-    // MARK: - Class
-    final class Avatar {
-        var name: String
-        var image: String
-        init(name: String, image: String) {
-            self.name = name
-            self.image = image
-        }
-    }
-    
     // MARK: - IBOutlet
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -43,7 +33,7 @@ final class BaiTap3ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - UICollectionViewDataSource
 extension BaiTap3ViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         avatars.count
@@ -61,14 +51,12 @@ extension BaiTap3ViewController: UICollectionViewDataSource {
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 50)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderReusableView", for: indexPath) as! HeaderReusableView
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderReusableView", for: indexPath) as? HeaderReusableView else {
+                return UICollectionReusableView()
+            }
             header.updateHeader(value: "section \(indexPath.section + 1 )")
             return header
         default:
@@ -77,7 +65,12 @@ extension BaiTap3ViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension BaiTap3ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 50)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width - 30
         return CGSize(width: screenWidth/3, height: screenWidth/3)
