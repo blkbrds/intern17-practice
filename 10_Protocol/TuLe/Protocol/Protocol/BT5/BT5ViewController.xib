@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BT5ViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="caculateButton" destination="MbP-60-pNT" id="4KR-qD-Sy3"/>
+                <outlet property="number1TextField" destination="vmY-wX-3zY" id="dLp-qv-yNh"/>
+                <outlet property="number2TextField" destination="jc9-We-VO9" id="u2o-c8-ZDl"/>
+                <outlet property="resultLabel" destination="T4V-bl-AbX" id="5RK-B6-S1v"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbP-60-pNT">
+                    <rect key="frame" x="165.5" y="44" width="83" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MbP-60-pNT" secondAttribute="height" multiplier="83:58" id="JFJ-aA-R47"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="?">
+                        <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="showSubViewTouchUpInside:" destination="-1" eventType="touchUpInside" id="F5J-Nn-qgf"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmY-wX-3zY">
+                    <rect key="frame" x="20" y="56" width="107" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jc9-We-VO9">
+                    <rect key="frame" x="287" y="56" width="107" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???? =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4V-bl-AbX">
+                    <rect key="frame" x="317" y="135" width="77" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <color key="textColor" systemColor="systemGreenColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="T4V-bl-AbX" firstAttribute="top" secondItem="jc9-We-VO9" secondAttribute="bottom" constant="45" id="03e-ks-j4O"/>
+                <constraint firstItem="vmY-wX-3zY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="7Kx-aA-TcR"/>
+                <constraint firstItem="vmY-wX-3zY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7zg-jm-VlQ"/>
+                <constraint firstItem="MbP-60-pNT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P1u-7c-AHH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T4V-bl-AbX" secondAttribute="trailing" constant="20" id="YAv-LA-g7E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jc9-We-VO9" secondAttribute="trailing" constant="20" id="c6c-C3-q57"/>
+                <constraint firstItem="MbP-60-pNT" firstAttribute="leading" secondItem="vmY-wX-3zY" secondAttribute="trailing" constant="38.5" id="d5I-F4-avw"/>
+                <constraint firstItem="jc9-We-VO9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="eBz-75-vMO"/>
+                <constraint firstItem="jc9-We-VO9" firstAttribute="leading" secondItem="MbP-60-pNT" secondAttribute="trailing" constant="38.5" id="iYq-dC-Dn4"/>
+                <constraint firstItem="MbP-60-pNT" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.200483" id="ngM-1W-ztX"/>
+                <constraint firstItem="MbP-60-pNT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vHg-s2-hWl"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="75.669642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
