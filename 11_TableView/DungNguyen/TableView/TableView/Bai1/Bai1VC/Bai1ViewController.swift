@@ -10,34 +10,44 @@ import UIKit
 final class Bai1ViewController: UIViewController {
 
     // MARK:  - IBOutlets
-    @IBOutlet private weak var listTableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
     
     // MARK: Properties
     var names: [String] = []
-    var namesData: [String] = []
+    var filterNames: [String] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
         loadData()
         configTableView()
         configSearchBar()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.tableView.keyboardDismissMode = .onDrag
+    }
+    
     // MARK: - Private functions
-    private func configTableView() {
+    private func configUI() {
         title = "Home"
-        listTableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        listTableView.dataSource = self
-        listTableView.delegate = self
-        namesData = names
+    }
+    
+    private func configTableView() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableFooterView = UIView()
     }
     
     private func loadData() {
         guard let path = Bundle.main.url(forResource: "Data", withExtension: "plist") else { return }
         guard let nameData = NSArray(contentsOf: path) as? [String] else { return }
         names = nameData
+        filterNames = names
     }
     
     private func configSearchBar() {
@@ -45,8 +55,8 @@ final class Bai1ViewController: UIViewController {
     }
     
     private func search(keyword: String) {
-        namesData = getListName(keyword: keyword)
-        listTableView.reloadData()
+        filterNames = getListName(keyword: keyword)
+        tableView.reloadData()
     }
     
     private func getListName(keyword: String) -> [String] {
@@ -66,24 +76,27 @@ final class Bai1ViewController: UIViewController {
 
 // MARK: - Extensions
 extension Bai1ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return namesData.count
+        return filterNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = namesData[indexPath.row]
+        cell.textLabel?.text = filterNames[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
-        detailViewController.name = namesData[indexPath.row]
+        detailViewController.name = filterNames[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
 extension Bai1ViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         search(keyword: searchText)
     }

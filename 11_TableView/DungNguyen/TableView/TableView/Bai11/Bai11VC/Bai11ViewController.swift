@@ -40,12 +40,15 @@ final class Bai11ViewController: UIViewController {
 
 // MARK: - Extensions
 extension Bai11ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CommentCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CommentCell else {
+            return UITableViewCell()
+        }
   
         cell.updateCommentTableCell(comment: comments[indexPath.row])
         return cell

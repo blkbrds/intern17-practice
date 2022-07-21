@@ -10,7 +10,7 @@ import UIKit
 final class Bai4ViewController: UIViewController {
     
     // MARK: - IBOutlet
-    @IBOutlet private weak var listTableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     var garden: [[String]] = []
@@ -25,11 +25,11 @@ final class Bai4ViewController: UIViewController {
     
     // MARK: - Private functions
     private func configTableView() {
-        listTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         let nib = UINib(nibName: "CustomTableViewCell", bundle: .main)
-        listTableView.register(nib, forCellReuseIdentifier: "cell")
-        listTableView.dataSource = self
-        listTableView.delegate = self
+        tableView.register(nib, forCellReuseIdentifier: "cell")
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     private func loadData() {
@@ -42,6 +42,7 @@ final class Bai4ViewController: UIViewController {
 
 // MARK: - Extensios
 extension Bai4ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return garden.count
     }
@@ -59,7 +60,9 @@ extension Bai4ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CustomTableViewCell else {
+            return UITableViewCell()
+        }
         cell.updateTableCell(avatar: "avatar.jpeg", name: garden[indexPath.section][indexPath.row], subtitle: "name", index: indexPath.row + 1, section: indexPath.section )
         cell.delegate = self
         return cell
@@ -86,6 +89,7 @@ extension Bai4ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension Bai4ViewController: CustomTableViewCellDelegate {
+    
     func tapMe(_ customTableViewCell: CustomTableViewCell, index: Int, section: Int) {
         print("CustomTavleViewCell --> tap me section: \(section), index: \(index)")
     }
