@@ -37,6 +37,7 @@ final class CustomCell: UITableViewCell {
 
 // MARK: - Extensions
 extension CustomCell: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -48,6 +49,7 @@ extension CustomCell: UICollectionViewDataSource {
 }
 
 extension CustomCell: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width - 50
         return CGSize(width: screenWidth / 4, height: (screenWidth / 4) * 6 / 5)

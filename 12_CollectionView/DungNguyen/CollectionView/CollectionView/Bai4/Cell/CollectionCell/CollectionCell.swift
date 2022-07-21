@@ -10,8 +10,8 @@ import UIKit
 final class CollectionCell: UICollectionViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var image: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
     
     // MARK: - Life cycle
     override func awakeFromNib() {

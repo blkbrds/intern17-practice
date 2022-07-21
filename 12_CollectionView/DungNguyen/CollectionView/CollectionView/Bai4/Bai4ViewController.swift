@@ -34,6 +34,7 @@ final class Bai4ViewController: UIViewController {
 
 // MARK: - Extension
 extension Bai4ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
@@ -67,7 +68,7 @@ extension Bai4ViewController: UITableViewDelegate, UITableViewDataSource {
             let height = UIScreen.main.bounds.height / 4
             return height
         default:
-            let height = UIScreen.main.bounds.height / 7
+            let height = UIScreen.main.bounds.height / 6
             return height
         }
     }

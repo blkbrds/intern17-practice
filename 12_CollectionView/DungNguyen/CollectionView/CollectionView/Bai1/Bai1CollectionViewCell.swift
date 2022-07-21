@@ -12,11 +12,6 @@ final class Bai1CollectionViewCell: UICollectionViewCell {
     // MARK: - IBOulet
     @IBOutlet private weak var numberLabel: UILabel!
     
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     // MARK: - Function
     func updateCell(number: Int) {
         numberLabel.text = "\(number)"

@@ -13,11 +13,6 @@ final class Bai3CollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var avatarImage: UIImageView!
     
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     // MARK: - Function
     func updateCell(avatar: String, name: String) {
         avatarImage.image = UIImage(named: avatar)

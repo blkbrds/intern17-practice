@@ -58,6 +58,7 @@ final class FirstTableViewCell: UITableViewCell {
 
 // MARK: - Extensions
 extension FirstTableViewCell: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
@@ -69,6 +70,7 @@ extension FirstTableViewCell: UICollectionViewDataSource {
 }
 
 extension FirstTableViewCell: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWitdh = UIScreen.main.bounds.width - 40
         let screenHeight = UIScreen.main.bounds.height / 4

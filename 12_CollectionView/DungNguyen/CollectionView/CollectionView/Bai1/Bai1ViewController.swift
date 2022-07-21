@@ -29,20 +29,25 @@ final class Bai1ViewController: UIViewController {
 
 // MARK: - Extensions
 extension Bai1ViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Bai1CollectionViewCell
+        guard let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Bai1CollectionViewCell else {
+            return UICollectionViewCell()
+        }
         cell.updateCell(number: indexPath.row)
         return cell
     }
 }
 
+// MARK: - UICollectionViewDataSource
 extension Bai1ViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width - 60
-        return CGSize(width: screenWidth/5, height: screenWidth/5)
+        return CGSize(width: screenWidth / 5, height: screenWidth / 5)
     }
 }

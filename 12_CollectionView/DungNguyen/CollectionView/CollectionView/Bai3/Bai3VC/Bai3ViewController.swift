@@ -45,6 +45,7 @@ final class Bai3ViewController: UIViewController {
 
 // MARK: - Extensions
 extension Bai3ViewController: UICollectionViewDelegate ,UICollectionViewDataSource {
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return avatars.count
     }
@@ -54,7 +55,9 @@ extension Bai3ViewController: UICollectionViewDelegate ,UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Bai3CollectionViewCell
+        guard let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Bai3CollectionViewCell else {
+            return UICollectionViewCell()
+        }
         cell.updateCell(avatar: avatars[indexPath.section][indexPath.row].image, name: avatars[indexPath.section][indexPath.row].name)
         return cell
     }
@@ -75,7 +78,9 @@ extension Bai3ViewController: UICollectionViewDelegate ,UICollectionViewDataSour
     }
 }
 
+// MARK: -UICollectionViewDelegateFlowLayout
 extension Bai3ViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width - 30
         return CGSize(width: screenWidth/3, height: (screenWidth/3) * 5 / 4)
