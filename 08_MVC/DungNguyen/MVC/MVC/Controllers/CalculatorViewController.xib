@@ -62,7 +62,7 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="clearNumber:" destination="-1" eventType="touchUpInside" id="ObW-Qf-pYg"/>
+                                        <action selector="clearButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="ObW-Qf-pYg"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKL-Or-T9b">
@@ -89,7 +89,7 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="divideButton:" destination="-1" eventType="touchUpInside" id="9xs-AZ-YUX"/>
+                                        <action selector="divideButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="9xs-AZ-YUX"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -129,7 +129,7 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="multiplyButton:" destination="-1" eventType="touchUpInside" id="qZV-GE-Xj5"/>
+                                        <action selector="multiplyButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="qZV-GE-Xj5"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -169,7 +169,7 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="subtractButton:" destination="-1" eventType="touchUpInside" id="lvI-dT-O7d"/>
+                                        <action selector="subtractButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="lvI-dT-O7d"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -209,7 +209,7 @@
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <connections>
-                                        <action selector="addButton:" destination="-1" eventType="touchUpInside" id="Sni-2o-cul"/>
+                                        <action selector="addButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="rqf-x6-Jt4"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -244,7 +244,7 @@
                                                 <color key="titleColor" systemColor="labelColor"/>
                                             </state>
                                             <connections>
-                                                <action selector="equalButton:" destination="-1" eventType="touchUpInside" id="61s-lM-gHQ"/>
+                                                <action selector="equalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="61s-lM-gHQ"/>
                                             </connections>
                                         </button>
                                     </subviews>

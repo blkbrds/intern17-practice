@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CalculatorView: UIView {
+final class CalculatorView: UIView {
 
-    @IBOutlet var collectionButton: [UIButton]!
+    @IBOutlet private var collectionButton: [UIButton]!
 
-    func configUI(){
+    private func configUI() {
         for i in collectionButton {
             i.layer.borderWidth = 0.5
             i.layer.borderColor = UIColor.gray.cgColor
