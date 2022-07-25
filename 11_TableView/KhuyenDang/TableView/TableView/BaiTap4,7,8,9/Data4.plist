@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>Mì</string>
+		<string>Bí</string>
+		<string>Bầu</string>
+		<string>Khoai</string>
+		<string>Cà rốt</string>
+		<string>Rau dền</string>
+		<string>Rau má</string>
+		<string>Thịt bò</string>
+		<string>Tôm</string>
+	</array>
+	<array>
+		<string>Heo</string>
+		<string>Bò</string>
+		<string>Heo 3</string>
+		<string>Trâu</string>
+		<string>Ngựa</string>
+		<string>Gà</string>
+		<string>Vịt</string>
+		<string>Cá</string>
+		<string>Heo 1</string>
+		<string>Cá 1</string>
+		<string>Heo 2</string>
+	</array>
+	<array>
+		<string>Tivi</string>
+		<string>Dao</string>
+		<string>Kéo</string>
+		<string>Tủ lạnh</string>
+		<string>Quạt</string>
+		<string>Bình nước</string>
+		<string>Thớt</string>
+		<string>Máy lạnh</string>
+		<string>Điều hoà</string>
+		<string>Đũa </string>
+		<string>Muỗng</string>
+	</array>
+</array>
+</plist>
