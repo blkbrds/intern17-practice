@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Test" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImageView" destination="yKP-8i-cpv" id="boL-rR-2df"/>
+                <outlet property="birthdayTextField" destination="PYt-l9-H8V" id="CUe-Bq-j0o"/>
+                <outlet property="nameTextField" destination="0vM-yT-L6j" id="b9c-4P-Nou"/>
+                <outlet property="okButton" destination="Ix2-6n-DBz" id="PQ5-cF-X7w"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yKP-8i-cpv">
+                    <rect key="frame" x="152" y="94" width="110" height="110"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="1fj-hg-WGh"/>
+                        <constraint firstAttribute="width" secondItem="yKP-8i-cpv" secondAttribute="height" multiplier="1:1" id="C9Z-AL-qEf"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vM-yT-L6j">
+                    <rect key="frame" x="30" y="244" width="354" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYt-l9-H8V">
+                    <rect key="frame" x="30" y="324" width="354" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix2-6n-DBz">
+                    <rect key="frame" x="172" y="404" width="70" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="apj-HL-LES"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title="OK"/>
+                    <connections>
+                        <action selector="updateUserButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="T7f-an-k2s"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0vM-yT-L6j" secondAttribute="trailing" constant="30" id="Cdb-ul-uC0"/>
+                <constraint firstItem="yKP-8i-cpv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="I4r-eT-epQ"/>
+                <constraint firstItem="0vM-yT-L6j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Q1G-bc-tEn"/>
+                <constraint firstItem="PYt-l9-H8V" firstAttribute="top" secondItem="0vM-yT-L6j" secondAttribute="bottom" constant="40" id="XgP-7L-9tc"/>
+                <constraint firstItem="Ix2-6n-DBz" firstAttribute="top" secondItem="PYt-l9-H8V" secondAttribute="bottom" constant="40" id="YBh-8V-QDO"/>
+                <constraint firstItem="Ix2-6n-DBz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zud-fv-mFn"/>
+                <constraint firstItem="PYt-l9-H8V" firstAttribute="trailing" secondItem="0vM-yT-L6j" secondAttribute="trailing" id="dKL-di-cwi"/>
+                <constraint firstItem="0vM-yT-L6j" firstAttribute="top" secondItem="yKP-8i-cpv" secondAttribute="bottom" constant="40" id="jUl-oM-0xj"/>
+                <constraint firstItem="yKP-8i-cpv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="mxr-ZA-z92"/>
+                <constraint firstItem="PYt-l9-H8V" firstAttribute="leading" secondItem="0vM-yT-L6j" secondAttribute="leading" id="rvl-KT-3xa"/>
+            </constraints>
+            <point key="canvasLocation" x="34.782608695652179" y="108.48214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
