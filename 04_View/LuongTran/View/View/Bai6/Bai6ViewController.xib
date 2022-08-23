@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai6ViewController" customModule="View" customModuleProvider="target">
+            <connections>
+                <outlet property="imgMonkey" destination="eHT-xh-w00" id="2PR-ly-ZUw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="eHT-xh-w00">
+                    <rect key="frame" x="119.5" y="360.5" width="175" height="175"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="175" id="Fuf-CY-3Yc"/>
+                        <constraint firstAttribute="width" constant="175" id="ilf-Fu-mg2"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="gHC-9S-pMg" appends="YES" id="Tpl-k2-zyI"/>
+                        <outletCollection property="gestureRecognizers" destination="MHg-qQ-L2C" appends="YES" id="U11-iJ-rQZ"/>
+                        <outletCollection property="gestureRecognizers" destination="zVo-Qe-HOM" appends="YES" id="99v-Rz-cNS"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="eHT-xh-w00" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8uz-Ig-Dw2"/>
+                <constraint firstItem="eHT-xh-w00" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eMU-tL-dCH"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="gHC-9S-pMg">
+            <connections>
+                <action selector="handlePan:" destination="-1" id="yPY-eN-Ru3"/>
+            </connections>
+        </panGestureRecognizer>
+        <pinchGestureRecognizer id="MHg-qQ-L2C">
+            <connections>
+                <action selector="handlePinch:" destination="-1" id="lFZ-YG-fLI"/>
+            </connections>
+        </pinchGestureRecognizer>
+        <rotationGestureRecognizer id="zVo-Qe-HOM">
+            <connections>
+                <action selector="handleRotate:" destination="-1" id="wUB-fi-iHp"/>
+                <outlet property="delegate" destination="-1" id="B1c-sA-JDM"/>
+            </connections>
+        </rotationGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="monkey" width="564" height="564"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
