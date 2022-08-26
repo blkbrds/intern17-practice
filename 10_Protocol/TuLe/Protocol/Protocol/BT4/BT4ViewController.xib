@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BT4ViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="DqS-wh-ICY" id="eEP-Od-O6f"/>
+                <outlet property="listTextView" destination="IpF-bM-fGP" id="pOb-xl-LUU"/>
+                <outlet property="searchBar" destination="AfQ-3K-CRD" id="gYX-Lx-LhX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="AfQ-3K-CRD">
+                    <rect key="frame" x="0.0" y="44" width="309" height="42.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="AfQ-3K-CRD" secondAttribute="height" multiplier="29:4" id="EVh-CW-4sx"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DqS-wh-ICY">
+                    <rect key="frame" x="319" y="44" width="85" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="DqS-wh-ICY" secondAttribute="height" multiplier="85:36" id="Khf-Pf-Pwc"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IpF-bM-fGP">
+                    <rect key="frame" x="10" y="86.5" width="394" height="775.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AfQ-3K-CRD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2Hb-mb-bXs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IpF-bM-fGP" secondAttribute="bottom" id="7du-ug-6jN"/>
+                <constraint firstAttribute="trailing" secondItem="DqS-wh-ICY" secondAttribute="trailing" constant="10" id="8Pj-rW-Fqc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IpF-bM-fGP" secondAttribute="trailing" constant="10" id="BVc-fo-GlK"/>
+                <constraint firstItem="IpF-bM-fGP" firstAttribute="top" secondItem="AfQ-3K-CRD" secondAttribute="bottom" id="JYH-Q3-qx5"/>
+                <constraint firstItem="DqS-wh-ICY" firstAttribute="leading" secondItem="AfQ-3K-CRD" secondAttribute="trailing" constant="10" id="Kfh-Wj-cNZ"/>
+                <constraint firstItem="DqS-wh-ICY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NQF-e2-o2L"/>
+                <constraint firstItem="AfQ-3K-CRD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qrr-9c-viB"/>
+                <constraint firstItem="IpF-bM-fGP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="n2O-1F-BUK"/>
+                <constraint firstItem="DqS-wh-ICY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.205314" id="vXG-DK-AM4"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
