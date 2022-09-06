@@ -7,55 +7,46 @@
 
 import UIKit
 
-class CustomButtonView: UIView {
-
-    @IBOutlet weak var btnEmail: UIButton!
-    @IBOutlet weak var lbEmail: UILabel!
-    @IBOutlet weak var emailView: UIView!
+final class CustomButtonView: UIView {
     
-    @IBOutlet weak var btnFriend: UIButton!
-    @IBOutlet weak var friendView: UIView!
-    @IBOutlet weak var lbFriend: UILabel!
-    
-    @IBOutlet weak var btnPhoto: UIButton!
-    @IBOutlet weak var photoView: UIView!
-    @IBOutlet weak var lbPhoto: UILabel!
+    var position: BadgeButtonView = .bottomLeft
 
-    var position: BadgeButtonView = .bottomMid
+    @IBOutlet private weak var btnEmail: UIButton!
+    @IBOutlet private weak var lbEmail: UILabel!
+    @IBOutlet private weak var emailView: UIView!
+    
+    @IBOutlet private weak var btnFriend: UIButton!
+    @IBOutlet private weak var friendView: UIView!
+    @IBOutlet private weak var lbFriend: UILabel!
+    
+    @IBOutlet private weak var btnPhoto: UIButton!
+    @IBOutlet private weak var photoView: UIView!
+    @IBOutlet private weak var lbPhoto: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         configUI()
         checkBadge()
-        
         updateUI()
-        
     }
-    
-    func configUI(){
-        btnEmail.layer.cornerRadius = 10
-        btnFriend.layer.cornerRadius = 10
-        btnPhoto.layer.cornerRadius = 10
-        lbEmail.layer.cornerRadius = 20
+
+    private func configUI() {
+        lbEmail.layer.cornerRadius = Define.cornerRadius10
+        lbFriend.layer.cornerRadius = Define.cornerRadius10
+        lbPhoto.layer.cornerRadius = Define.cornerRadius10
         
         lbEmail.text = "8"
         lbPhoto.text = "90+"
         lbFriend.text = "990+"
     }
     
-    func checkBadge(){
-        if lbPhoto.text == "0"{
-            lbPhoto.isHidden = true
-        }
-        if lbEmail.text == "0" {
-            lbEmail.isHidden = true
-        }
-        if lbFriend.text == "0"{
-            lbFriend.isHidden = true
-        }
+    private func checkBadge() {
+        lbPhoto.isHidden = lbPhoto.text == "0"
+        lbEmail.isHidden = lbEmail.text == "0"
+        lbFriend.isHidden = lbFriend.text == "0"
     }
     
-    enum BadgeButtonView{
+    enum BadgeButtonView {
         case topLeft
         case topMid
         case topRight
@@ -65,32 +56,49 @@ class CustomButtonView: UIView {
         case bottomMid
         case bottomLeft
 
-        func test(minX: CGFloat, maxX: CGFloat, minY: CGFloat, maxY: CGFloat) -> CGRect {
+        func positionBadge(minX: CGFloat, maxX: CGFloat, minY: CGFloat, maxY: CGFloat) -> CGRect {
+            
+            let positionXLeft = minY - minX
+            let positionXMid = (maxX - minX) / 2
+            let positionXRight = maxX - minX
+            
+            let postitionYTop = minY
+            let positionYMid = maxY / 2
+            let positionYBottom = maxY - minY / 2
+            
             switch self {
             case .topLeft:
-                return CGRect(origin: CGPoint(x: minY - minX, y: minX), size: CGSize(width: 40, height: 30))
-            case .topMid:
-                return CGRect(origin: CGPoint(x: (maxX - minX) / 2, y: minX), size: CGSize(width: 40, height: 30))
-            case .topRight:
-                return CGRect(origin: CGPoint(x: maxX - minX, y: minX), size: CGSize(width: 40, height: 30))
+                return CGRect(origin: CGPoint(x: positionXLeft, y: postitionYTop), size: Define.size)
             case .midLeft:
-                return CGRect(origin: CGPoint(x: minY - minX, y: maxY / 2), size: CGSize(width: 40, height: 30))
-            case .midRight:
-                return CGRect(origin: CGPoint(x: maxX - minX, y: maxY / 2), size: CGSize(width: 40, height: 30))
-            case .bottomRight:
-                return CGRect(origin: CGPoint(x: maxX - minX, y: maxY - minY / 2), size: CGSize(width: 40, height: 30))
-            case .bottomMid:
-                return CGRect(origin: CGPoint(x: (maxX - minX) / 2, y: maxY - minY / 2), size: CGSize(width: 40, height: 30))
+                return CGRect(origin: CGPoint(x: positionXLeft, y: positionYMid), size: Define.size)
             case .bottomLeft:
-                return CGRect(origin: CGPoint(x: minY - minX, y: maxY - minX), size: CGSize(width: 40, height: 30))
+                return CGRect(origin: CGPoint(x: positionXLeft, y: positionYBottom), size: Define.size)
+            case .topMid:
+                return CGRect(origin: CGPoint(x: positionXMid, y: postitionYTop), size: Define.size)
+            case .bottomMid:
+                return CGRect(origin: CGPoint(x: positionXMid, y: positionYBottom), size: Define.size)
+            case .topRight:
+                return CGRect(origin: CGPoint(x: positionXRight, y: postitionYTop), size: Define.size)
+            case .midRight:
+                return CGRect(origin: CGPoint(x: positionXRight, y: positionYMid), size: Define.size)
+            case .bottomRight:
+                return CGRect(origin: CGPoint(x: positionXRight, y: positionYBottom), size: Define.size)
             }
         }
     }
 
-    func updateUI() {
-        lbEmail.frame = position.test(minX: btnEmail.frame.minX, maxX: btnEmail.frame.maxX, minY: btnEmail.frame.minY, maxY: btnEmail.frame.maxY)
-        lbFriend.frame = position.test(minX: btnEmail.frame.minX, maxX: btnEmail.frame.maxX, minY: btnEmail.frame.minY, maxY: btnEmail.frame.maxY)
-        lbPhoto.frame = position.test(minX: btnEmail.frame.minX, maxX: btnEmail.frame.maxX, minY: btnEmail.frame.minY, maxY: btnEmail.frame.maxY)
+    private func updateUI() {
+        lbEmail.frame = position.positionBadge(minX: btnEmail.frame.minX, maxX: btnEmail.frame.maxX, minY: btnEmail.frame.minY, maxY: btnEmail.frame.maxY)
+        lbFriend.frame = position.positionBadge(minX: btnEmail.frame.minX, maxX: btnEmail.frame.maxX, minY: btnEmail.frame.minY, maxY: btnEmail.frame.maxY)
+        lbPhoto.frame = position.positionBadge(minX: btnEmail.frame.minX, maxX: btnEmail.frame.maxX, minY: btnEmail.frame.minY, maxY: btnEmail.frame.maxY)
     }
     
+}
+
+extension CustomButtonView {
+    private struct Define {
+        static let cornerRadius10: CGFloat = 10
+        static let cornerRadius20: CGFloat = 20
+        static let size: CGSize = CGSize(width: 40, height: 30)
+    }
 }

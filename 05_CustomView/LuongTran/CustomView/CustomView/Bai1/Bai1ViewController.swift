@@ -9,23 +9,20 @@ import UIKit
 
 class Bai1ViewController: UIViewController {
 
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
         configUserUI()
     }
     
-    func configUserUI(){
-
+    private func configUserUI() {
         let width: CGFloat = CGFloat((UIScreen.main.bounds.width - 60) / 3)
         let height: CGFloat = CGFloat((UIScreen.main.bounds.width) / 3)
         let space = 15
 
-        for i in 0..<30{
+        for i in 0..<30 {
             let x1: CGFloat = CGFloat(space * (i + 1))
             let x2: CGFloat = width * CGFloat(i)
             var x: CGFloat = x1 + x2
@@ -44,14 +41,16 @@ class Bai1ViewController: UIViewController {
             contentView.addSubview(myView)
         }
         scrollView.contentSize = CGSize(width: contentView.bounds.size.width, height: contentView.bounds.size.height)
-        print(scrollView.contentSize)
     }
 
 }
 
 // Bước 4: Implement protocol
-extension Bai1ViewController: MyAvatarDelegate{
-    func didTap(view: MyAvatar, userName: String) {
-        print(userName)
+extension Bai1ViewController: MyAvatarDelegate {
+    func didTap(view: MyAvatar, needPerform action: MyAvatar.Action) {
+        switch action {
+        case .didTap(name: let name):
+            print(name)
+        }
     }
 }

@@ -15,7 +15,7 @@ protocol DatePickerViewDelegate{
 
 class DatePickerView: UIView {
 
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet private weak var datePicker: UIDatePicker!
     
     var delegate: DatePickerViewDelegate?
     let datePiker = UIDatePicker()
@@ -25,7 +25,7 @@ class DatePickerView: UIView {
         showDatePicker()
     }
     
-    func showDatePicker(){
+    private func showDatePicker() {
         let toolBar = UIToolbar()
         toolBar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44)
         toolBar.isUserInteractionEnabled = true
@@ -42,10 +42,6 @@ class DatePickerView: UIView {
         formatter.dateFormat = "dd/MM/yyyy"
         let dateString = formatter.string(from: datePicker.date)
         delegate.updateDatePicker(view: self, data: dateString)
-    }
-    
-    func dateString(){
-        
     }
     
 }

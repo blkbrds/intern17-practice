@@ -9,7 +9,7 @@ import UIKit
 
 //Bước 1: Tạo protocol viewdelegate
 protocol MySlideViewDelegate{
-    func updateViewDelegate(view: MySlideView, thumbIndex: Int)
+    func view(view: MySlideView, needPerform action: MySlideView.Action)
 }
 
 protocol MySlideViewDataSource: AnyObject {
@@ -18,10 +18,14 @@ protocol MySlideViewDataSource: AnyObject {
 
 class MySlideView: UIView {
 
-    @IBOutlet weak var whiteView: UIView!
-    @IBOutlet weak var blueView: UIView!
-    @IBOutlet weak var redView: UIView!
-    @IBOutlet weak var thumbIndex: UILabel!
+    enum Action {
+        case updateThumb(thumbIndex: Int)
+    }
+
+    @IBOutlet private weak var whiteView: UIView!
+    @IBOutlet private weak var blueView: UIView!
+    @IBOutlet private weak var redView: UIView!
+    @IBOutlet private weak var thumbIndex: UILabel!
     
     //Bước 2: Khai báo protocol viewdelegate
     var delegate: MySlideViewDelegate?
@@ -38,19 +42,11 @@ class MySlideView: UIView {
         super.awakeFromNib()
         configView()
     }
-
-    func configDelegate(value: Int){
-        guard let delegate = delegate else {
-            return
-        }
-        //Bước 3: Uỷ quyền viewdelegate
-        delegate.updateViewDelegate(view: self, thumbIndex: value)
-    }
     
-    func configView(){
-        whiteView.layer.cornerRadius = 10
-        redView.layer.cornerRadius = 20
-        blueView.layer.cornerRadius = 10
+    private func configView(){
+        whiteView.layer.cornerRadius = Define.cornerRadius10
+        redView.layer.cornerRadius = Define.cornerRadius20
+        blueView.layer.cornerRadius = Define.cornerRadius10
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -72,12 +68,12 @@ class MySlideView: UIView {
                                         height: heightBlueNew)
                 let percent = (heightBlueNew / whiteView.bounds.height) * 100
                 thumbIndex.text = String(Int(percent))
-                configDelegate(value: Int(percent))
+                delegate?.view(view: self, needPerform: .updateThumb(thumbIndex: Int(percent)))
             }
         }
     }
     
-    func updateView(value: Int) {
+    private func updateView(value: Int) {
         thumbIndex.text = "\(value)"
         let heightBlue = (Int(whiteView.bounds.height) * value) / 100
         let redCenterY = Int(whiteView.bounds.height) - heightBlue
@@ -86,5 +82,12 @@ class MySlideView: UIView {
                                 width: blueView.bounds.size.width,
                                 height: CGFloat(heightBlue))
         redView.center.y = CGFloat(redCenterY)
+    }
+}
+
+extension MySlideView {
+    private struct Define {
+        static let cornerRadius10: CGFloat = 10
+        static let cornerRadius20: CGFloat = 20
     }
 }

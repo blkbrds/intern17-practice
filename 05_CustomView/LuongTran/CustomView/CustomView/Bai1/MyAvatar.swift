@@ -3,10 +3,14 @@ import UIKit
 //Bước 1: Khởi tạo method
 //Delegate truyền từ con đến cha (đơn giản)
 protocol MyAvatarDelegate{
-    func didTap(view: MyAvatar, userName: String)
+    func didTap(view: MyAvatar, needPerform action: MyAvatar.Action)
 }
 
 class MyAvatar: UIView {
+    
+    enum Action {
+        case didTap(name: String)
+    }
     
     var avatarImageView: UIImageView?
     var nameLabel: UILabel?
@@ -51,12 +55,12 @@ class MyAvatar: UIView {
         self.addSubview(markButton!)
     }
     
-    @objc func tap(){
+    @objc private func tap() {
         guard let delegate = delegate, let name = nameLabel?.text else {
             return
         }
         //Bước 3: Uỷ quyền
-        delegate.didTap(view: self, userName: name)
+        delegate.didTap(view: self, needPerform: .didTap(name: name))
     }
     
     required init?(coder: NSCoder) {
