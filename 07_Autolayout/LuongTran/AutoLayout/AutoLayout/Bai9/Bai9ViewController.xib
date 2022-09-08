@@ -40,7 +40,7 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="actionPrevious:" destination="-1" eventType="touchUpInside" id="1Jh-Mj-Szn"/>
+                        <action selector="previousButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="PZB-mm-KsI"/>
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pok1" translatesAutoresizingMaskIntoConstraints="NO" id="cqT-hp-z5F" userLabel="Image ">
@@ -54,11 +54,11 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="actionNext:" destination="-1" eventType="touchUpInside" id="hej-Xb-H7H"/>
+                        <action selector="nextButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="eCS-D0-n8d"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rC2-Ia-rTe" userLabel="Label Content" customClass="PaddingLabel" customModule="AutoLayout" customModuleProvider="target">
-                    <rect key="frame" x="15" y="385.5" width="384" height="20.5"/>
+                    <rect key="frame" x="15" y="385.5" width="384" height="40.5"/>
                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -78,7 +78,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zcd-ez-Xcr">
-                    <rect key="frame" x="15" y="436" width="384" height="45"/>
+                    <rect key="frame" x="15" y="456" width="384" height="45"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfK-yT-2lB" userLabel="Button Like">
                             <rect key="frame" x="0.0" y="0.0" width="114.5" height="45"/>
@@ -133,7 +133,7 @@
     </objects>
     <designables>
         <designable name="rC2-Ia-rTe">
-            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+            <size key="intrinsicContentSize" width="61.5" height="40.5"/>
         </designable>
     </designables>
     <resources>

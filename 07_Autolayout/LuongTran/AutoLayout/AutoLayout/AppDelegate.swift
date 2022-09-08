@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let bai1VC = Bai12ViewController()
+        let bai1VC = Bai10ViewController()
         window?.rootViewController = bai1VC
         window?.makeKeyAndVisible()
         

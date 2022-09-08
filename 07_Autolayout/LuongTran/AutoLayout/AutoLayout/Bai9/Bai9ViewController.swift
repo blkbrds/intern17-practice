@@ -83,27 +83,19 @@ final class Bai9ViewController: UIViewController {
     }
     
     private func checkEnable() {
-        if indexArray == 0 {
-            btnPrevious.isEnabled = false
-        } else {
-            btnPrevious.isEnabled = true
-        }
-        if indexArray == arrayImage.count - 1 {
-            btnNext.isEnabled = false
-        } else {
-            btnNext.isEnabled = true
-        }
+        btnPrevious.isEnabled = !(indexArray == 0)
+        btnNext.isEnabled = !(indexArray == arrayImage.count - 1)
     }
     
-    @IBAction private func actionPrevious(_ sender: Any) {
+    @IBAction private func previousButtonTouchUpInside(_ sender: Any) {
         indexArray = indexArray - 1
         numberLabel.text = "\(indexArray + 1) / \(arrayImage.count)"
-        imgPokemon.image = UIImage(named: arrayImage[indexArray])
+        imgPokemon.image = UIImage(named: arrayImage[0])
         contentLabel.text = arrayContent.randomElement()
         checkEnable()
     }
     
-    @IBAction private func actionNext(_ sender: Any) {
+    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         indexArray = indexArray + 1
         numberLabel.text = "\(indexArray + 1) / \(arrayImage.count)"
         imgPokemon.image = UIImage(named: arrayImage[indexArray])
