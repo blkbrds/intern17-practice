@@ -48,6 +48,8 @@ extension Ex4ViewController: UITableViewDataSource, UITableViewDelegate {
         switch section {
         case 0: return "Food"
         case 1: return "Animal"
+        case 2: return "3"
+        case 3: return "4"
         default:    return "Device"    //return "Section \(section)"
         }
     }
