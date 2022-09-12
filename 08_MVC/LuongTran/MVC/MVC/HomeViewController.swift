@@ -7,19 +7,18 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+final class HomeViewController: UIViewController {
     
-    enum StateCalculator {
-        case addState
-        case minusState
-        case multiplyState
-        case divideState
-        case defaultState
+    enum StateCalculator: Int {
+        case addState = 12
+        case minusState = 13
+        case multiplyState = 14
+        case divideState = 15
+        case defaultState = 16
     }
     
-    @IBOutlet private var numberButtonCollection: [UIButton]!
-    @IBOutlet private var operateButtonCollection: [UIButton]!
+    @IBOutlet private var numberButtons: [UIButton]!
+    @IBOutlet private var operateButtons: [UIButton]!
     @IBOutlet private weak var resultLabel: UILabel!
     
     private var textNumber: String = ""
@@ -39,9 +38,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configButton()
-        
     }
     
     private func calculate(state: StateCalculator, aNumber: Float, bNumber: Float) -> Float {
@@ -60,13 +57,20 @@ class HomeViewController: UIViewController {
     }
 
     private func configButton() {
-        for numberButton in numberButtonCollection {
+        for numberButton in numberButtons {
             numberButton.addTarget(self, action: #selector(numberButtonTouchUpInside(sender:)), for: .touchUpInside)
         }
         
-        for operateButton in operateButtonCollection {
+        for operateButton in operateButtons  {
             operateButton.addTarget(self, action: #selector(operateButtonTouchUpInside(sender:)), for: .touchUpInside)
         }
+    }
+    
+    private func handleCurrentState(stateTag: StateCalculator) {
+        b = Float(resultLabel.text!) ?? 0.0
+        currentNumber = calculate(state: stateCalculate, aNumber: currentNumber, bNumber: b)
+        stateCalculate = stateTag
+        textNumber = ""
     }
     
     @objc private func numberButtonTouchUpInside(sender: UIButton) {
@@ -75,39 +79,16 @@ class HomeViewController: UIViewController {
         resultLabel.text = textNumber
     }
     
-    
     @objc private func operateButtonTouchUpInside(sender: UIButton) {
-        if resultLabel.text != "" && sender.tag != 11 && sender.tag != 16 {
-            if sender.tag == 12 {
-                b = Float(resultLabel.text!) ?? 0.0
-                currentNumber = calculate(state: stateCalculate, aNumber: currentNumber, bNumber: b)
-                stateCalculate = .addState
-                textNumber = ""
-            } else if sender.tag == 13 {
-                b = Float(resultLabel.text!) ?? 0.0
-                currentNumber = calculate(state: stateCalculate, aNumber: currentNumber, bNumber: b)
-                stateCalculate = .minusState
-                textNumber = ""
-            } else if sender.tag == 14 {
-                b = Float(resultLabel.text!) ?? 0.0
-                currentNumber = calculate(state: stateCalculate, aNumber: currentNumber, bNumber: b)
-                stateCalculate = .multiplyState
-                textNumber = ""
-            } else if sender.tag == 15 {
-                b = Float(resultLabel.text!) ?? 0.0
-                currentNumber = calculate(state: stateCalculate, aNumber: currentNumber, bNumber: b)
-                stateCalculate = .divideState
-                textNumber = ""
-            }
-        } else if sender.tag == 16 {
-            b = Float(resultLabel.text!) ?? 0.0
-            currentNumber = calculate(state: stateCalculate, aNumber: currentNumber, bNumber: b)
-            stateCalculate = .defaultState
-            textNumber = ""
-        } else if sender.tag == 11 {
+        switch sender.tag {
+        case 11:
             textNumber = ""
             resultLabel.text = "0"
             stateCalculate = .defaultState
+        case 12...16:
+            handleCurrentState(stateTag: StateCalculator(rawValue: sender.tag) ?? .defaultState)
+        default:
+            break
         }
     }
     
