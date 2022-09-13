@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol EditViewControllerDelegate {
-    func actionDelegate(needPerform action: EditB2ViewController.Action)
+protocol EditB2ViewControllerDelegate: AnyObject {
+    func vc(vc: EditB2ViewController, needPerform action: EditB2ViewController.Action)
 }
 
 final class EditB2ViewController: UIViewController {
@@ -17,7 +17,7 @@ final class EditB2ViewController: UIViewController {
         case changeUsername(name: String)
     }
     
-    var delegate: EditViewControllerDelegate?
+    weak var delegate: EditB2ViewControllerDelegate?
 
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var newPassTextField: UITextField!
@@ -43,15 +43,15 @@ final class EditB2ViewController: UIViewController {
     @objc private func doneButtonTouchUpInSide() {
         if let userName = usernameTextField.text, userName != "",
            let newPass = newPassTextField.text, newPass != "",
-           let confirmPass = confirmPassTextField.text, confirmPass != ""{
-            delegate?.actionDelegate(needPerform:.changeUsername(name: userName))
+           let confirmPass = confirmPassTextField.text, confirmPass != "" {
+            delegate?.vc(vc: self, needPerform:.changeUsername(name: userName))
             navigationController?.popViewController(animated: true)
         }
     }
+    
     @objc private func cancelButtonTouchUpInSide() {
         navigationController?.popViewController(animated: true)
     }
-    
 }
 
 extension EditB2ViewController {

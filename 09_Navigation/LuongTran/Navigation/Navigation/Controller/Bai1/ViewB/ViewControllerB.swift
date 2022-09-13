@@ -15,22 +15,11 @@ final class ViewControllerB: UIViewController {
         title = "View B"
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    @IBAction func nextButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
         let viewC = ViewControllerC()
         navigationController?.pushViewController(viewC, animated: true)
     }
-    @IBAction func prevButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func prevButtonTouchUpInside(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 }

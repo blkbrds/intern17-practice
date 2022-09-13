@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol MyAvatarDelegate {
+protocol MyAvatarDelegate: AnyObject {
     func viewAction(view: MyAvatar, needPerform action: MyAvatar.Action)
 }
 
@@ -17,7 +17,7 @@ final class MyAvatar: UIView {
         case didTap(username: String)
     }
     
-    var delegate: MyAvatarDelegate?
+    weak var delegate: MyAvatarDelegate?
     
     var avatarImageView: UIImageView?
     var nameLabel: UILabel?

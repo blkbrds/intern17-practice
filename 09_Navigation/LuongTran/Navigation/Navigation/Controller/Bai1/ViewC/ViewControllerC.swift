@@ -15,14 +15,17 @@ final class ViewControllerC: UIViewController {
         title = "View C"
     }
     
-    @IBAction func nextButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
+        
         let viewD = ViewControllerD()
         navigationController?.pushViewController(viewD, animated: true)
     }
-    @IBAction func prevButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func prevButtonTouchUpInside(_ sender: Any) {
+        
         navigationController?.popViewController(animated: true)
     }
-    @IBAction func rootButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func rootButtonTouchUpInside(_ sender: Any) {
+        
         navigationController?.popToRootViewController(animated: true)
     }
     

@@ -18,7 +18,6 @@ final class HomeB2ViewController: UIViewController {
 
         configNavigation()
         configUI()
-        
     }
     
     private func configNavigation() {
@@ -51,8 +50,8 @@ extension HomeB2ViewController {
     }
 }
 
-extension HomeB2ViewController: EditViewControllerDelegate {
-    func actionDelegate(needPerform action: EditB2ViewController.Action) {
+extension HomeB2ViewController: EditB2ViewControllerDelegate {
+    func vc(vc: EditB2ViewController, needPerform action: EditB2ViewController.Action) {
         switch action {
         case .changeUsername(name: let userName):
             titleLabel.text = "Welcome \n \(userName)"

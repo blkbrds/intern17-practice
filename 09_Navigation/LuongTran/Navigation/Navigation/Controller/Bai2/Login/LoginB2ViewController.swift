@@ -41,7 +41,6 @@ final class LoginB2ViewController: UIViewController {
             navigationController?.pushViewController(homeB2VC, animated: true)
         }
     }
-
 }
 
 extension LoginB2ViewController {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ProfileDelegate {
+protocol ProfileViewControllerDelegate: AnyObject {
     func updateProfile(needPerform action: ProfileViewController.Action)
 }
 
@@ -17,7 +17,7 @@ final class ProfileViewController: UIViewController {
         case updateUsername(userName: String)
     }
     
-    var delegate: ProfileDelegate?
+    weak var delegate: ProfileViewControllerDelegate?
     
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!

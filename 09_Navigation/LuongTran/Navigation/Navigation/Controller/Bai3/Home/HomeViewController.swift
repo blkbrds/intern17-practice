@@ -9,8 +9,8 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var contentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,7 +42,6 @@ final class HomeViewController: UIViewController {
             contentView.addSubview(myView)
         }
         scrollView.contentSize = CGSize(width: contentView.bounds.size.width, height: contentView.bounds.size.height)
-        print(scrollView.contentSize)
     }
 
 }
@@ -50,16 +49,15 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: MyAvatarDelegate {
     func viewAction(view: MyAvatar, needPerform action: MyAvatar.Action) {
         switch action {
-        case .didTap(username: let username):
+        case .didTap(username: _):
             let prifileVC = ProfileViewController()
             prifileVC.delegate = self
-            prifileVC.userText = username
             navigationController?.pushViewController(prifileVC, animated: true)
         }
     }
 }
 
-extension HomeViewController: ProfileDelegate {
+extension HomeViewController: ProfileViewControllerDelegate {
     func updateProfile(needPerform action: ProfileViewController.Action) {
         switch action {
         case .updateUsername(userName: let username):
