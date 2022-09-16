@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai4ViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="listTextView" destination="Xr7-Mv-dts" id="bPg-ki-1Hg"/>
+                <outlet property="searchBar" destination="7kI-6N-Fer" id="Mwh-0A-UZu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7kI-6N-Fer">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xr7-Mv-dts">
+                    <rect key="frame" x="0.0" y="95" width="414" height="801"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7kI-6N-Fer" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Oa-Gk-SPX"/>
+                <constraint firstItem="7kI-6N-Fer" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="7W4-46-b5H"/>
+                <constraint firstItem="Xr7-Mv-dts" firstAttribute="top" secondItem="7kI-6N-Fer" secondAttribute="bottom" id="Uq8-dc-Zsp"/>
+                <constraint firstAttribute="bottom" secondItem="Xr7-Mv-dts" secondAttribute="bottom" id="V2X-Bg-chC"/>
+                <constraint firstItem="Xr7-Mv-dts" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="VH0-bH-SYY"/>
+                <constraint firstItem="7kI-6N-Fer" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XIU-gv-cDW"/>
+                <constraint firstItem="Xr7-Mv-dts" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bjj-LJ-gfv"/>
+                <constraint firstItem="Xr7-Mv-dts" firstAttribute="top" secondItem="7kI-6N-Fer" secondAttribute="bottom" id="pQt-TO-Tts"/>
+                <constraint firstItem="7kI-6N-Fer" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="w7e-hf-z7T"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="61.607142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
