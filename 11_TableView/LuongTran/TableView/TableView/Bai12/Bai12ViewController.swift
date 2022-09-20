@@ -34,6 +34,8 @@ final class Bai12ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewB12")
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.dragDelegate = self
+        tableView.dragInteractionEnabled = true
     }
     
     private func animationLoadTable() {
@@ -44,8 +46,9 @@ final class Bai12ViewController: UIViewController {
     }
     
     @objc private func insertButtonTouchUpInside() {
-        numbers.append(contentsOf: newNumbers)
-        animationLoadTable()
+        let textVC = TextViewController()
+        textVC.delegate = self
+        navigationController?.pushViewController(textVC, animated: true)
     }
     
     @objc private func editButtonTouchUpInside(_ sender: Any) {
@@ -71,9 +74,11 @@ final class Bai12ViewController: UIViewController {
     
 }
 
-extension Bai12ViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
+extension Bai12ViewController: UITableViewDataSource, UITableViewDelegate, UITableViewDragDelegate {
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let dragItem = UIDragItem(itemProvider: NSItemProvider())
+        dragItem.localObject = numbers[indexPath.row]
+        return [ dragItem ]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,19 +87,21 @@ extension Bai12ViewController: UITableViewDataSource, UITableViewDelegate {
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewB12", for: indexPath)
-        cell.textLabel?.text = "Number \(numbers[indexPath.row])"
-        if selectedItems.contains(indexPath.row) {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
+        if let id = numbers[safe: indexPath.row] {
+            cell.textLabel?.text = "Number \(id)"
+            if selectedItems.contains(indexPath.row) {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if selectedItems.contains(indexPath.row) {
-            let index = selectedItems.firstIndex(of: indexPath.row)
-            selectedItems.remove(at: index!)
+            guard let index = selectedItems.firstIndex(of: indexPath.row) else { return }
+            selectedItems.remove(at: index)
         } else {
             selectedItems.append(indexPath.row)
         }
@@ -125,8 +132,24 @@ extension Bai12ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension Bai12ViewController: TextViewControllerDelegate {
+    func vc(vc: TextViewController, needPerform action: TextViewController.Action) {
+        switch action {
+        case .senData(data: let data):
+            numbers.append(data)
+            animationLoadTable()
+        }
+    }
+}
+
+extension Collection {
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
 extension Bai12ViewController {
     private struct Define {
-        static var titleBar = "Table recorder"
+        static var titleBar = "Table reorder"
     }
 }
