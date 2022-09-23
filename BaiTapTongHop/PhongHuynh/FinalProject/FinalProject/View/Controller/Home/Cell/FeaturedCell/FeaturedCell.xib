@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FeaturedCell" customModule="FinalProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="203" height="199"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="203" height="199"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pP5-J4-9NA">
+                        <rect key="frame" x="0.0" y="0.0" width="203" height="199"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="pP5-J4-9NA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EU2-DT-EQK"/>
+                <constraint firstAttribute="bottom" secondItem="pP5-J4-9NA" secondAttribute="bottom" id="I3Q-tu-buy"/>
+                <constraint firstAttribute="trailing" secondItem="pP5-J4-9NA" secondAttribute="trailing" id="gpS-t5-ziT"/>
+                <constraint firstItem="pP5-J4-9NA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="v7t-BF-Tps"/>
+            </constraints>
+            <size key="customSize" width="203" height="199"/>
+            <connections>
+                <outlet property="featuredVideoImageView" destination="pP5-J4-9NA" id="jAL-9U-QlD"/>
+            </connections>
+            <point key="canvasLocation" x="136" y="71"/>
+        </collectionViewCell>
+    </objects>
+</document>
