@@ -27,7 +27,7 @@ final class ViewController: UIViewController {
         configTextField()
         fillOperateButton.layer.cornerRadius = Define.borderRadius
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
-        self.view.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture)
     }
     
     private func showCustomView() {
@@ -40,7 +40,7 @@ final class ViewController: UIViewController {
     }
     
     func hideCustomView() {
-        UIView.animate(withDuration: 0.4, delay: 0 , options: .curveEaseOut, animations: { [self] in
+        UIView.animate(withDuration: Define.durationAnimation, delay: Define.delayAnimation, options: .curveEaseOut, animations: { [self] in
             customView.frame = CGRect(x: view.frame.minX, y: view.frame.maxY, width: view.frame.width, height: 500)
             self.view.addSubview(customView)
         }, completion: nil)
@@ -55,13 +55,13 @@ final class ViewController: UIViewController {
         valueBTextField.layer.cornerRadius = Define.borderRadius
     }
     
-    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
-        valueATextField.resignFirstResponder()
-        valueBTextField.resignFirstResponder()
+    @IBAction private func operateButtonTouchUpInside(_ sender: Any) {
+        showCustomView()
     }
     
-    @IBAction func operateButtonTouchUpInside(_ sender: Any) {
-        showCustomView()
+    @objc private func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        valueATextField.resignFirstResponder()
+        valueBTextField.resignFirstResponder()
     }
 }
 
@@ -70,11 +70,13 @@ extension ViewController {
         static var borderWitdth: CGFloat = 1.0
         static var colorWidth: CGColor = UIColor.green.cgColor
         static var borderRadius: CGFloat = 10
+        static var durationAnimation: CGFloat = 0.4
+        static var delayAnimation: CGFloat = 0
     }
 }
 
 extension ViewController: CalculatorDelegate {
-    func vc(vc: Calculator, needPerform action: Calculator.Action) {
+    func view(view: Calculator, needPerform action: Calculator.Action) {
         switch action {
         case .sendData(operate: let operate):
             hideCustomView()

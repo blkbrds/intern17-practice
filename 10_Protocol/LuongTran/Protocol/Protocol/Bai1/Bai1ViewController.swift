@@ -70,16 +70,16 @@ let haiCau = HaiCau(name: "Hải Cẩu")
 let doi = Doi(name: "Dơi")
 let caSau = CaSau(name: "Cá Sấu")
 
-class Bai1ViewController: UIViewController {
+final class Bai1ViewController: UIViewController {
     
     enum CanSomething {
-        case CanOneType
-        case CanTwoType
-        case CanThreeType
+        case canOneType
+        case canTwoType
+        case canThreeType
         
         func handleSomething(animals: [Animal]) {
             switch self {
-            case .CanOneType:
+            case .canOneType:
                 for animal in animals {
                     if animal is Ca {
                         print("CanSwim", animal.nameAnimal())
@@ -89,7 +89,7 @@ class Bai1ViewController: UIViewController {
                         print("CanWalk", animal.nameAnimal())
                     }
                 }
-            case .CanTwoType:
+            case .canTwoType:
                 for animal in animals {
                     if (animal is Ca && animal is Chim) {
                         print("Swim and Fly: ", animal.nameAnimal())
@@ -99,7 +99,7 @@ class Bai1ViewController: UIViewController {
                         print("Walk and Swim", animal.nameAnimal())
                     }
                 }
-            case .CanThreeType:
+            case .canThreeType:
                 for animal in animals {
                     if (animal is Ca && animal is Chim && animal is Thu) {
                         print("Know All: ", animal.nameAnimal())
@@ -109,14 +109,12 @@ class Bai1ViewController: UIViewController {
         }
     }
     
-    private var canSomeThing: CanSomething = .CanOneType
-    private let arrayAnimal: [Animal] = [caChuon, bo, ga, vit, caMap, heo, haiCau, doi, caSau]
+    private var canSomeThing: CanSomething = .canOneType
+    private let animals: [Animal] = [caChuon, bo, ga, vit, caMap, heo, haiCau, doi, caSau]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        canSomeThing.handleSomething(animals: arrayAnimal)
+        canSomeThing.handleSomething(animals: animals)
     }
-    
-
 }

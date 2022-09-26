@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol EditViewControllerDelegate {
-    func updateProfile(needPerform action: EditViewController.Action)
+protocol EditViewControllerDelegate: AnyObject {
+    func vc(vc: EditViewController, needPerform action: EditViewController.Action)
 }
 
 final class EditViewController: UIViewController {
@@ -17,7 +17,7 @@ final class EditViewController: UIViewController {
         case updateUsername(userName: String)
     }
     
-    var delegate: EditViewControllerDelegate?
+    weak var delegate: EditViewControllerDelegate?
     
     @IBOutlet private weak var editTextField: UITextField!
     var userText = ""
@@ -41,7 +41,7 @@ final class EditViewController: UIViewController {
     
     @objc private func doneButtonTouchUpInSide() {
         guard let newName = editTextField.text else { return }
-        delegate?.updateProfile(needPerform: .updateUsername(userName: newName))
+        delegate?.vc(vc: self, needPerform: .updateUsername(userName: newName))
         navigationController?.popViewController(animated: true)
     }
     

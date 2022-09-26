@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MyAvatarDelegate {
-    func viewAction(view: MyAvatar, needPerform action: MyAvatar.Action)
+    func view(view: MyAvatar, needPerform action: MyAvatar.Action)
 }
 
 final class MyAvatar: UIView {
@@ -57,11 +57,11 @@ final class MyAvatar: UIView {
         self.addSubview(markButton!)
     }
 
-    @objc func tap(){
+    @objc private func tap(){
         guard let delegate = delegate, let name = nameLabel?.text else {
             return
         }
-        delegate.viewAction(view: self, needPerform: .didTap(username: name))
+        delegate.view(view: self, needPerform: .didTap(username: name))
     }
 
     required init?(coder: NSCoder) {

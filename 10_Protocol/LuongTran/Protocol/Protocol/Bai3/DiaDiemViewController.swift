@@ -14,7 +14,7 @@ final class DiaDiemViewController: UIViewController {
     @IBOutlet private weak var tinhLabel: UILabel!
     @IBOutlet private weak var huyenLabel: UILabel!
 
-    private var arr: [Int] = [1, 1, 1]
+    private var numbers: [Int] = [1, 1, 1]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +25,9 @@ final class DiaDiemViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        mienLabel.text = "Miền: \(arr[0])"
-        tinhLabel.text = "Tỉnh: \(arr[1])"
-        huyenLabel.text = "Huyện: \(arr[2])"
+        mienLabel.text = "Miền: \(numbers[0])"
+        tinhLabel.text = "Tỉnh: \(numbers[1])"
+        huyenLabel.text = "Huyện: \(numbers[2])"
     }
     
     private func configNaviagtion() {
@@ -39,7 +39,7 @@ final class DiaDiemViewController: UIViewController {
     @objc private func editButtonTouchUpInside() {
         let mienVC = MienViewController()
         mienVC.delegate = self
-        if !arr.isEmpty {
+        if !numbers.isEmpty {
             mienVC.dataSource = self
         }
         navigationController?.pushViewController(mienVC, animated: true)
@@ -60,15 +60,15 @@ extension DiaDiemViewController: MienViewControllerDelegate{
             mienLabel.text = "Miền: \(idMien)"
             tinhLabel.text = "Tỉnh: \(idTinh)"
             huyenLabel.text = "Huyện: \(idHuyen)"
-            arr.removeAll()
-            arr.append(idMien)
-            arr.append(idTinh)
-            arr.append(idHuyen)
+            numbers.removeAll()
+            numbers.append(idMien)
+            numbers.append(idTinh)
+            numbers.append(idHuyen)
         }
     }
 }
 extension DiaDiemViewController: MienViewControllerDataSource {
     func getValue() -> [Int] {
-        arr
+        numbers
     }
 }

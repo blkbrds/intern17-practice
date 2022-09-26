@@ -66,11 +66,7 @@ final class TinhViewController: UIViewController {
     
     private func updateUI(tag: Int) {
         for (index, tinhButton) in tinhButtons.enumerated() {
-            if index + 1 == tag  {
-                tinhButton.backgroundColor = UIColor.green
-            } else {
-                tinhButton.backgroundColor = UIColor.white
-            }
+            tinhButton.backgroundColor = (index + 1 == tag) ? UIColor.link : UIColor.white
         }
     }
     

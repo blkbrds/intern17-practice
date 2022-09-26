@@ -65,11 +65,7 @@ final class MienViewController: UIViewController {
 
     private func updateUI(tag: Int) {
         for (index, mienButton) in mienButtons.enumerated() {
-            if index + 1 == tag  {
-                mienButton.backgroundColor = UIColor.link
-            } else {
-                mienButton.backgroundColor = UIColor.white
-            }
+            mienButton.backgroundColor = (index + 1 == tag) ? UIColor.link : UIColor.white
         }
     }
     

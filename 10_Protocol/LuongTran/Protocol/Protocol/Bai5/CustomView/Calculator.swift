@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CalculatorDelegate: AnyObject {
-    func vc(vc: Calculator, needPerform action: Calculator.Action)
+    func view(view: Calculator, needPerform action: Calculator.Action)
 }
 
 protocol CalculatorDataSource: AnyObject {
@@ -33,24 +33,16 @@ final class Calculator: UIView {
     private var number1: Int = 0
     private var number2: Int = 0
     private var status: String = ""
-    private var result: Float = 0 {
+    private var result: Float = 0.0 {
         didSet {
-            resultLabel.text = "Result = \(result)"
+            updateValue()
         }
     }
     
     weak var delegate: CalculatorDelegate?
     weak var dataSource: CalculatorDataSource? {
         didSet {
-            guard let dataSource = dataSource else {
-                return
-            }
-            valueALabel.text = "X: \(dataSource.getX())"
-            valueBLabel.text = "Y: \(dataSource.getY())"
-            if let valueX = Int(dataSource.getX()), let valueY = Int(dataSource.getY()) {
-                number1 = valueX
-                number2 = valueY
-            }
+            
         }
     }
     
@@ -66,14 +58,28 @@ final class Calculator: UIView {
         }
     }
     
+    private func updateValue() {
+        resultLabel.text = "Result = \(result)"
+        guard let dataSource = dataSource else {
+            return
+        }
+        valueALabel.text = "X: \(dataSource.getX())"
+        valueBLabel.text = "Y: \(dataSource.getY())"
+        if let valueX = Int(dataSource.getX()), let valueY = Int(dataSource.getY()) {
+            number1 = valueX
+            number2 = valueY
+        }
+    }
+    
     @IBAction private func doneButtonTouchUpInside(_ sender: Any) {
-        delegate?.vc(vc: self, needPerform: .sendData(operate: status))
+        delegate?.view(view: self, needPerform: .sendData(operate: status))
     }
     @IBAction private func cancelButtonTouchUpInside(_ sender: Any) {
-        delegate?.vc(vc: self, needPerform: .cancelView)
+        delegate?.view(view: self, needPerform: .cancelView)
     }
     
     @objc private func operateButtonTouchUpInside(sender: UIButton) {
+        updateValue()
         for button in operateButtons {
             button.backgroundColor = sender.titleLabel?.text == button.titleLabel?.text ? .green : .white
             if button.titleLabel?.text == "Clear" { button.backgroundColor = .lightGray}
@@ -96,7 +102,7 @@ final class Calculator: UIView {
             result = 0.0
             valueALabel.text = "X: ?"
             valueBLabel.text = "Y: ?"
-            delegate?.vc(vc: self, needPerform: .clearData)
+            delegate?.view(view: self, needPerform: .clearData)
         }
     }
 }

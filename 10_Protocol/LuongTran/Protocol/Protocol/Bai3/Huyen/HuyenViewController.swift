@@ -65,11 +65,7 @@ final class HuyenViewController: UIViewController {
     
     private func updateUI(tag: Int) {
         for (index, huyenButton) in huyenButtons.enumerated() {
-            if index + 1 == tag  {
-                huyenButton.backgroundColor = UIColor.orange
-            } else {
-                huyenButton.backgroundColor = UIColor.white
-            }
+            huyenButton.backgroundColor = (index + 1 == tag) ? UIColor.link : UIColor.white
         }
     }
     
