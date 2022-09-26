@@ -74,11 +74,14 @@ extension Bai7ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewContact", for: indexPath)
+        // Set Style subtitle for cell
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "tableViewContact")
         let elementKey = arraySectionTitles[indexPath.section]
         if let elementValues = arrayListIndex[elementKey] {
             cell.textLabel?.text = elementValues[indexPath.row]
             cell.contentView.addSubview(createSubTextCell())
+            //add detail
+            //cell.detailTextLabel?.text = "Test"
         }
         return cell
     }

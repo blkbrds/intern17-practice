@@ -13,6 +13,8 @@ final class HomeB3ViewController: UIViewController {
     
     private var contacts: [String] = []
     
+    var indexUser: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "HOME"
@@ -21,9 +23,8 @@ final class HomeB3ViewController: UIViewController {
     }
 
     private func loadData() {
-        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist")
-        else { return }
-        guard let contactsData = NSArray(contentsOf: path) as? [String]
+        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist"),
+              let contactsData = NSArray(contentsOf: path) as? [String]
         else { return }
         contacts = contactsData
     }
@@ -36,10 +37,6 @@ final class HomeB3ViewController: UIViewController {
 }
 
 extension HomeB3ViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }
@@ -52,7 +49,14 @@ extension HomeB3ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailB3ViewController()
-        detailVC.userName = contacts[indexPath.row]
+        detailVC.dataSource = self
+        indexUser = indexPath.row
         navigationController?.pushViewController(detailVC, animated: true)
+    }
+}
+
+extension HomeB3ViewController: DetailB3ViewControllerDataSource {
+    func getData() -> String {
+        contacts[indexUser]
     }
 }

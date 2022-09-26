@@ -7,16 +7,21 @@
 
 import UIKit
 
-final class DetailB3ViewController: UIViewController {
+protocol DetailB3ViewControllerDataSource: AnyObject {
+    func getData() -> String
+}
 
+final class DetailB3ViewController: UIViewController {
+    
     @IBOutlet private weak var nameLabel: UILabel!
     
-    var userName: String = ""
+    weak var dataSource: DetailB3ViewControllerDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "DETAIL"
-        nameLabel.text = userName
+        guard let dataSource = dataSource else { return }
+        nameLabel.text = dataSource.getData()
     }
 
 }

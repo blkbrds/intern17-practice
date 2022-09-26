@@ -94,10 +94,10 @@ extension Bai9ViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension Bai9ViewController: Bai9TableViewCellDelegate {
-    func vc(vc: Bai9TableViewCell, needPerform action: Bai9TableViewCell.Action) {
+    func cell(cell: Bai9TableViewCell, needPerform action: Bai9TableViewCell.Action) {
         switch action {
         case .didTap:
-            guard let index = tableView.indexPath(for: vc) else { return }
+            guard let index = tableView.indexPath(for: cell) else { return }
             print("Home Cell ---> Tap me: section \(index.section) row \(index.row)")
         }
     }

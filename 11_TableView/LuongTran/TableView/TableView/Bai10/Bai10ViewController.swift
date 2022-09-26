@@ -35,9 +35,8 @@ final class Bai10ViewController: UIViewController {
     }
     
     private func loadData() {
-        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist")
-        else { return }
-        guard let data = NSArray(contentsOf: path) as? [String]
+        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist"),
+              let data = NSArray(contentsOf: path) as? [String]
         else { return }
         contactsData = data
         contacts = contactsData
@@ -54,7 +53,7 @@ final class Bai10ViewController: UIViewController {
                 arrayListIndex[elementKey] = [element]
             }
         }
-        arraySectionTitles = [String](arrayListIndex.keys)
+        arraySectionTitles = Array(arrayListIndex.keys)
         arraySectionTitles = arraySectionTitles.sorted(by: { $0 < $1 })
     }
     
@@ -111,6 +110,6 @@ extension Bai10ViewController: UISearchBarDelegate {
         } else {
             getFirstCharacter(array: contacts)
         }
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
 }

@@ -23,9 +23,8 @@ final class Bai5ViewController: UIViewController {
     }
     
     private func configTableView() {
-        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist")
-        else { return }
-        guard let data = NSArray(contentsOf: path) as? [String]
+        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist"),
+              let data = NSArray(contentsOf: path) as? [String]
         else { return }
         contactsData = data
         contacts = contactsData
@@ -62,10 +61,6 @@ final class Bai5ViewController: UIViewController {
 }
 
 extension Bai5ViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }
@@ -79,21 +74,13 @@ extension Bai5ViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension Bai5ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        var currentText = ""
-        if let searchBarText = searchBar.text {
-            currentText = searchBarText
-        }
-        let keyword = (currentText as NSString).replacingCharacters(in: range, with: text)
+        let keyword = ((searchBar.text ?? "") as NSString).replacingCharacters(in: range, with: text)
         search(keyword: keyword)
         return true
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let keyWord = searchBar.text else {
-            search(keyword: "")
-            return
-        }
-        search(keyword: keyWord)
+        search(keyword: searchBar.text ?? "")
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

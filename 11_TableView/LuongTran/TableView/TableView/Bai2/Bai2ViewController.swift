@@ -20,9 +20,8 @@ final class Bai2ViewController: UIViewController {
     }
     
     private func loadData() {
-        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist")
-        else { return }
-        guard let contactsData = NSArray(contentsOf: path) as? [String]
+        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist"),
+              let contactsData = NSArray(contentsOf: path) as? [String]
         else { return }
         contacts = contactsData
     }
@@ -36,10 +35,6 @@ final class Bai2ViewController: UIViewController {
 
 
 extension Bai2ViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }

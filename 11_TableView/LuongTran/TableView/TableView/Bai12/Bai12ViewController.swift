@@ -53,11 +53,10 @@ final class Bai12ViewController: UIViewController {
     
     @objc private func editButtonTouchUpInside(_ sender: Any) {
         tableView.isEditing = !tableView.isEditing
-        switch tableView.isEditing {
-        case true:
+        if tableView.isEditing {
             let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(editButtonTouchUpInside))
             navigationItem.rightBarButtonItem = doneButton
-        case false:
+        } else {
             let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTouchUpInside))
             navigationItem.rightBarButtonItem = editButton
         }
@@ -78,7 +77,7 @@ extension Bai12ViewController: UITableViewDataSource, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         let dragItem = UIDragItem(itemProvider: NSItemProvider())
         dragItem.localObject = numbers[indexPath.row]
-        return [ dragItem ]
+        return [dragItem]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

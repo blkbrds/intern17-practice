@@ -8,7 +8,7 @@
 import UIKit
 
 protocol Bai9TableViewCellDelegate: AnyObject {
-    func vc(vc: Bai9TableViewCell, needPerform action: Bai9TableViewCell.Action)
+    func cell(cell: Bai9TableViewCell, needPerform action: Bai9TableViewCell.Action)
 }
 
 final class Bai9TableViewCell: UITableViewCell {
@@ -24,21 +24,17 @@ final class Bai9TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     func updateCell(name: String, subTitle: String) {
         nameLabel.text = name
         subTitleLabel.text = subTitle
     }
     
-    @IBAction func tabButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func tabButtonTouchUpInside(_ sender: Any) {
         guard let delegate = delegate else {
             return
         }
-        delegate.vc(vc: self, needPerform: .didTap)
+        delegate.cell(cell: self, needPerform: .didTap)
     }
     
 }

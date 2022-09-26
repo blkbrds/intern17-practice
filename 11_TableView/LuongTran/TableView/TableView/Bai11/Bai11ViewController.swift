@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Bai11ViewController: UIViewController {
+final class Bai11ViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
@@ -26,7 +26,6 @@ class Bai11ViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
-        tableView.reloadData()
     }
     
 }
