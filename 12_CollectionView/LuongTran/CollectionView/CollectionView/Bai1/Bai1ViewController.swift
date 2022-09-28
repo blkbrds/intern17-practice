@@ -11,6 +11,7 @@ final class Bai1ViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    var viewModel: Bai1ViewModel?
     private let collName = String(describing: Bai1CollectionViewCell.self)
     
     override func viewDidLoad() {
@@ -28,27 +29,35 @@ final class Bai1ViewController: UIViewController {
 }
 
 extension Bai1ViewController: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        1
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        100
+        Define.numbersItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collName, for: indexPath) as! Bai1CollectionViewCell
-        cell.updateCell(number: "\(indexPath.row + 1)")
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Define.identifier, for: indexPath) as? Bai1CollectionViewCell,
+              let viewModel = viewModel else {
+            return UICollectionViewCell()
+        }
+        cell.viewModel = viewModel.viewModelForItem(at: indexPath)
         return cell
     }
 }
 
 extension Bai1ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 60, height: 60)
+        return Define.sizeItem
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        return Define.insetItem
+    }
+}
+
+extension Bai1ViewController {
+    private struct Define {
+        static var identifier = "Bai1CollectionViewCell"
+        static var numbersItems: Int = 100
+        static var sizeItem: CGSize = CGSize(width: 60, height: 60)
+        static var insetItem: UIEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
 }

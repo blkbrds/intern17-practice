@@ -11,20 +11,14 @@ final class CollectionTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    private let cellName = String(describing: TestCollectionViewCell.self)
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
         configCollectionView()
     }
     
     private func configCollectionView() {
-        let cellNib = UINib(nibName: cellName, bundle: Bundle.main)
-        collectionView.register(cellNib, forCellWithReuseIdentifier: cellName)
+        let cellNib = UINib(nibName: Define.cellName, bundle: Bundle.main)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: Define.cellName)
         collectionView.dataSource = self
         collectionView.delegate = self
     }
@@ -32,16 +26,13 @@ final class CollectionTableViewCell: UITableViewCell {
 }
 
 extension CollectionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        1
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        return Define.numberItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellName, for: indexPath) as! TestCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Define.cellName, for: indexPath) as? TestCollectionViewCell
+        else { return UICollectionViewCell() }
         return cell
     }
     
@@ -50,6 +41,14 @@ extension CollectionTableViewCell: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        return Define.insetSection
+    }
+}
+
+extension CollectionTableViewCell {
+    private struct Define {
+        static var cellName: String = String(describing: TestCollectionViewCell.self)
+        static var numberItems: Int = 10
+        static var insetSection: UIEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
 }

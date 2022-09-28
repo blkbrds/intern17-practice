@@ -32,11 +32,14 @@ enum Team: Int {
     var teamAvatar: UIImage {
         switch self {
         case .avengers:
-            return UIImage(named: "avenger")!
+            guard let image = UIImage(named: "avenger") else { return UIImage() }
+            return image
         case .guardians:
-            return UIImage(named: "guardian")!
+            guard let image = UIImage(named: "guardian") else { return UIImage() }
+            return image
         case .xmen:
-            return UIImage(named: "xmen")!
+            guard let image = UIImage(named: "xmen") else { return UIImage() }
+            return image
         }
     }
     

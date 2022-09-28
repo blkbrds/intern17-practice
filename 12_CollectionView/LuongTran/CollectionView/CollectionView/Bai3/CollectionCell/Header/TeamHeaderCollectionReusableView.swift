@@ -13,16 +13,23 @@ final class TeamHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet private weak var teamNameLabel: UILabel!
     @IBOutlet weak var teamNameLabelLeadingContraint: NSLayoutConstraint!
     
+    var viewModel: TeamHeaderCellViewModel? {
+        didSet {
+            updateHeaderView()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         teamAvatarImageView.layer.cornerRadius = 10
         teamAvatarImageView.clipsToBounds = true
     }
     
-    func updateHeaderView(avatar: UIImage, name: String, status: Status) {
-        teamAvatarImageView.image = avatar
-        teamNameLabel.text = name
-        updateHeaderView(status: status)
+    func updateHeaderView() {
+        guard let viewModel = viewModel else { return }
+        teamAvatarImageView.image = viewModel.avatar
+        teamNameLabel.text = viewModel.name
+        updateHeaderView(status: viewModel.status)
     }
     
     func updateHeaderView(status: Status) {

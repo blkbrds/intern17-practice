@@ -12,6 +12,12 @@ final class HeroCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var avatarImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     
+    var viewModel: HeroCellViewModel? {
+        didSet {
+            updateCell()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -20,21 +26,16 @@ final class HeroCollectionViewCell: UICollectionViewCell {
         avatarImageView.clipsToBounds = true
     }
     
-    func updateCell(avatar: UIImage, name: String, status: Status) {
-        avatarImageView.image = avatar
-        nameLabel.text = name
-        updateCell(status: status)
+    func updateCell() {
+        guard let viewModel = viewModel else { return }
+        avatarImageView.image = viewModel.avatar
+        nameLabel.text = viewModel.name
+        updateCell(status: viewModel.status)
     }
 
     func updateCell(status: Status) {
-        switch status {
-        case .standard:
-            nameLabel.isHidden = false
-            avatarImageView.layer.cornerRadius = 50
-        case .small:
-            nameLabel.isHidden = true
-            avatarImageView.layer.cornerRadius = 30
-        }
+        nameLabel.isHidden = status == .small
+        avatarImageView.layer.cornerRadius = status == .small ? 30 : 50
     }
     
 }

@@ -8,14 +8,10 @@
 import UIKit
 
 final class LyThuyetViewController: UIViewController {
-
-    var status = Status.standard
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    private let collNameNib = String(describing: HeroCollectionViewCell.self)
-    private let collHeaderReusa = String(describing: TeamHeaderCollectionReusableView.self)
-    private let collFooterReusa = String(describing: TeamFooterCollectionReusableView.self)
+    var viewModel: LyThuyetViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +21,14 @@ final class LyThuyetViewController: UIViewController {
     }
 
     private func configCollectionView() {
-        let cellNib = UINib(nibName: collNameNib, bundle: Bundle.main)
-        collectionView.register(cellNib, forCellWithReuseIdentifier: collNameNib)
+        let cellNib = UINib(nibName: Define.cellHero, bundle: Bundle.main)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: Define.cellHero)
         
-        let headerNib = UINib(nibName: collHeaderReusa, bundle: Bundle.main)
-        collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: collHeaderReusa)
+        let headerNib = UINib(nibName: Define.cellHeader, bundle: Bundle.main)
+        collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Define.cellHeader)
         
-        let cellFooter = UINib(nibName: collFooterReusa, bundle: Bundle.main)
-        collectionView.register(cellFooter, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: collFooterReusa)
+        let cellFooter = UINib(nibName: Define.cellFooter, bundle: Bundle.main)
+        collectionView.register(cellFooter, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: Define.cellFooter)
         
         collectionView.dataSource = self
 //        collectionView.delegate = self
@@ -51,7 +47,8 @@ final class LyThuyetViewController: UIViewController {
     }
     
     private func changeFlowLayout(status: Status) {
-        self.status = status
+        guard let viewModel = viewModel else { return }
+        viewModel.status = status
         if let headerViews = self.collectionView.visibleSupplementaryViews(ofKind: UICollectionView.elementKindSectionHeader) as? [TeamHeaderCollectionReusableView] {
             for headerView in headerViews {
                 headerView.updateHeaderView(status: status)
@@ -75,37 +72,33 @@ final class LyThuyetViewController: UIViewController {
 
 extension LyThuyetViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return Team.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.numberOfSections()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let team = Team(rawValue: section)
-        else { fatalError("Team value is nil") }
-        return team.members.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.numberOfItemsInSection(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let team = Team(rawValue: indexPath.section)
-        else { fatalError("Team value is nil") }
-        
-        guard indexPath.item < team.members.count
-        else { fatalError("Member index is out of bounds") }
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collNameNib, for: indexPath) as! HeroCollectionViewCell
-        cell.updateCell(avatar: team.members[indexPath.item].avatar, name: team.members[indexPath.item].name, status: status)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Define.cellHero, for: indexPath) as? HeroCollectionViewCell,
+              let viewModel = viewModel else { return UICollectionViewCell() }
+        cell.viewModel = viewModel.viewModelForItem(at: indexPath)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            guard let team = Team(rawValue: indexPath.section)
-            else { fatalError("Team value is nil") }
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: collHeaderReusa, for: indexPath) as! TeamHeaderCollectionReusableView
-            header.updateHeaderView(avatar: team.teamAvatar, name: team.teamName, status: status)
+            guard let viewModel = viewModel,
+                  let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Define.cellHeader, for: indexPath) as? TeamHeaderCollectionReusableView
+            else { return UICollectionReusableView() }
+            header.viewModel = viewModel.viewModelHeader(at: indexPath)
             return header
         case UICollectionView.elementKindSectionFooter:
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: collFooterReusa, for: indexPath) as! TeamFooterCollectionReusableView
+            guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: Define.cellFooter, for: indexPath) as? TeamFooterCollectionReusableView
+            else { return UICollectionReusableView() }
             return footer
         default:
             return UICollectionReusableView()
@@ -115,18 +108,30 @@ extension LyThuyetViewController: UICollectionViewDataSource {
 
 extension LyThuyetViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 150, height: 180)
+        return Define.sizeItem
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 20, left: 40, bottom: 20, right: 40)
+        return Define.insetForItem
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: 400, height: 80)
+        return Define.sizeHeader
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        CGSize(width: 400, height: 40)
+        return Define.sizeFooter
+    }
+}
+
+extension LyThuyetViewController {
+    private struct Define {
+        static var cellHero: String = String(describing: HeroCollectionViewCell.self)
+        static var cellHeader: String = String(describing: TeamHeaderCollectionReusableView.self)
+        static var cellFooter: String = String(describing: TeamFooterCollectionReusableView.self)
+        static var sizeItem: CGSize = CGSize(width: 150, height: 180)
+        static var insetForItem: UIEdgeInsets = UIEdgeInsets(top: 20, left: 40, bottom: 20, right: 40)
+        static var sizeHeader: CGSize = CGSize(width: 400, height: 80)
+        static var sizeFooter: CGSize = CGSize(width: 400, height: 40)
     }
 }
