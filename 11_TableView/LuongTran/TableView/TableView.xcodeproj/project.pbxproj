@@ -17,6 +17,18 @@
 		842B7F8C28D4643800382F8F /* Bai5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842B7F8A28D4643800382F8F /* Bai5ViewController.xib */; };
 		842B7F9028D46B9300382F8F /* Bai7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B7F8E28D46B9300382F8F /* Bai7ViewController.swift */; };
 		842B7F9128D46B9300382F8F /* Bai7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842B7F8F28D46B9300382F8F /* Bai7ViewController.xib */; };
+		8438515528E4440300C775F7 /* Bai2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438515428E4440300C775F7 /* Bai2ViewModel.swift */; };
+		8438515728E446E700C775F7 /* HomeB3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438515628E446E700C775F7 /* HomeB3ViewModel.swift */; };
+		8438515928E44A2000C775F7 /* Bai4ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438515828E44A2000C775F7 /* Bai4ViewModel.swift */; };
+		8438515B28E44CAF00C775F7 /* Bai5ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438515A28E44CAF00C775F7 /* Bai5ViewModel.swift */; };
+		8438515D28E44F0E00C775F7 /* Bai7ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438515C28E44F0E00C775F7 /* Bai7ViewModel.swift */; };
+		8438515F28E46D6F00C775F7 /* Bai9ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438515E28E46D6F00C775F7 /* Bai9ViewModel.swift */; };
+		8438516128E46EE900C775F7 /* Bai9CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438516028E46EE900C775F7 /* Bai9CellViewModel.swift */; };
+		8438516328E4731200C775F7 /* Bai10ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438516228E4731200C775F7 /* Bai10ViewModel.swift */; };
+		8438516528E475F900C775F7 /* Bai11CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438516428E475F900C775F7 /* Bai11CellViewModel.swift */; };
+		8438516728E4767500C775F7 /* Bai11ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438516628E4767500C775F7 /* Bai11ViewModel.swift */; };
+		8438516928E4780C00C775F7 /* Bai12ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438516828E4780C00C775F7 /* Bai12ViewModel.swift */; };
+		8438516B28E47B1D00C775F7 /* TextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438516A28E47B1D00C775F7 /* TextViewModel.swift */; };
 		84957B4328D427AB00639EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84957B4228D427AB00639EF7 /* AppDelegate.swift */; };
 		84957B4A28D427AB00639EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84957B4828D427AB00639EF7 /* Main.storyboard */; };
 		84957B4C28D427AD00639EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84957B4B28D427AD00639EF7 /* Assets.xcassets */; };
@@ -53,6 +65,18 @@
 		842B7F8A28D4643800382F8F /* Bai5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai5ViewController.xib; sourceTree = "<group>"; };
 		842B7F8E28D46B9300382F8F /* Bai7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai7ViewController.swift; sourceTree = "<group>"; };
 		842B7F8F28D46B9300382F8F /* Bai7ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai7ViewController.xib; sourceTree = "<group>"; };
+		8438515428E4440300C775F7 /* Bai2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai2ViewModel.swift; sourceTree = "<group>"; };
+		8438515628E446E700C775F7 /* HomeB3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeB3ViewModel.swift; sourceTree = "<group>"; };
+		8438515828E44A2000C775F7 /* Bai4ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai4ViewModel.swift; sourceTree = "<group>"; };
+		8438515A28E44CAF00C775F7 /* Bai5ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai5ViewModel.swift; sourceTree = "<group>"; };
+		8438515C28E44F0E00C775F7 /* Bai7ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai7ViewModel.swift; sourceTree = "<group>"; };
+		8438515E28E46D6F00C775F7 /* Bai9ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai9ViewModel.swift; sourceTree = "<group>"; };
+		8438516028E46EE900C775F7 /* Bai9CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai9CellViewModel.swift; sourceTree = "<group>"; };
+		8438516228E4731200C775F7 /* Bai10ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai10ViewModel.swift; sourceTree = "<group>"; };
+		8438516428E475F900C775F7 /* Bai11CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai11CellViewModel.swift; sourceTree = "<group>"; };
+		8438516628E4767500C775F7 /* Bai11ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai11ViewModel.swift; sourceTree = "<group>"; };
+		8438516828E4780C00C775F7 /* Bai12ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai12ViewModel.swift; sourceTree = "<group>"; };
+		8438516A28E47B1D00C775F7 /* TextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModel.swift; sourceTree = "<group>"; };
 		84957B3F28D427AB00639EF7 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84957B4228D427AB00639EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84957B4928D427AB00639EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +120,7 @@
 			children = (
 				842B7F8428D45ED400382F8F /* Bai4ViewController.swift */,
 				842B7F8528D45ED400382F8F /* Bai4ViewController.xib */,
+				8438515828E44A2000C775F7 /* Bai4ViewModel.swift */,
 			);
 			path = Bai4;
 			sourceTree = "<group>";
@@ -105,6 +130,7 @@
 			children = (
 				842B7F8928D4643800382F8F /* Bai5ViewController.swift */,
 				842B7F8A28D4643800382F8F /* Bai5ViewController.xib */,
+				8438515A28E44CAF00C775F7 /* Bai5ViewModel.swift */,
 			);
 			path = Bai5;
 			sourceTree = "<group>";
@@ -114,6 +140,7 @@
 			children = (
 				842B7F8E28D46B9300382F8F /* Bai7ViewController.swift */,
 				842B7F8F28D46B9300382F8F /* Bai7ViewController.xib */,
+				8438515C28E44F0E00C775F7 /* Bai7ViewModel.swift */,
 			);
 			path = "Bai7-8";
 			sourceTree = "<group>";
@@ -124,6 +151,7 @@
 				849DE92128D4797200133ED4 /* ViewCell */,
 				849DE91D28D4794D00133ED4 /* Bai9ViewController.swift */,
 				849DE91E28D4794D00133ED4 /* Bai9ViewController.xib */,
+				8438515E28E46D6F00C775F7 /* Bai9ViewModel.swift */,
 			);
 			path = Bai9;
 			sourceTree = "<group>";
@@ -181,6 +209,7 @@
 			children = (
 				84957B5E28D4558D00639EF7 /* Bai2ViewController.swift */,
 				84957B5F28D4558D00639EF7 /* Bai2ViewController.xib */,
+				8438515428E4440300C775F7 /* Bai2ViewModel.swift */,
 			);
 			path = Bai2;
 			sourceTree = "<group>";
@@ -199,6 +228,7 @@
 			children = (
 				842B7F7B28D45B1500382F8F /* HomeB3ViewController.swift */,
 				842B7F7C28D45B1500382F8F /* HomeB3ViewController.xib */,
+				8438515628E446E700C775F7 /* HomeB3ViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -217,6 +247,7 @@
 			children = (
 				849DE92228D4799700133ED4 /* Bai9TableViewCell.swift */,
 				849DE92328D4799700133ED4 /* Bai9TableViewCell.xib */,
+				8438516028E46EE900C775F7 /* Bai9CellViewModel.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -226,6 +257,7 @@
 			children = (
 				849DE92928D7F99500133ED4 /* Bai10ViewController.swift */,
 				849DE92A28D7F99500133ED4 /* Bai10ViewController.xib */,
+				8438516228E4731200C775F7 /* Bai10ViewModel.swift */,
 			);
 			path = Bai10;
 			sourceTree = "<group>";
@@ -236,6 +268,7 @@
 				849DE93228D815A700133ED4 /* ViewCell */,
 				849DE92E28D8120700133ED4 /* Bai11ViewController.swift */,
 				849DE92F28D8120700133ED4 /* Bai11ViewController.xib */,
+				8438516628E4767500C775F7 /* Bai11ViewModel.swift */,
 			);
 			path = Bai11;
 			sourceTree = "<group>";
@@ -245,6 +278,7 @@
 			children = (
 				84D2B09F28D815D9005F4266 /* Bai11TableViewCell.swift */,
 				84D2B0A028D815D9005F4266 /* Bai11TableViewCell.xib */,
+				8438516428E475F900C775F7 /* Bai11CellViewModel.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -255,6 +289,7 @@
 				84D2B10428D876FB005F4266 /* TextView */,
 				84D2B0A428D81934005F4266 /* Bai12ViewController.swift */,
 				84D2B0A528D81934005F4266 /* Bai12ViewController.xib */,
+				8438516828E4780C00C775F7 /* Bai12ViewModel.swift */,
 			);
 			path = Bai12;
 			sourceTree = "<group>";
@@ -264,6 +299,7 @@
 			children = (
 				84D2B10528D87728005F4266 /* TextViewController.swift */,
 				84D2B10628D87728005F4266 /* TextViewController.xib */,
+				8438516A28E47B1D00C775F7 /* TextViewModel.swift */,
 			);
 			path = TextView;
 			sourceTree = "<group>";
@@ -358,17 +394,29 @@
 				849DE93028D8120700133ED4 /* Bai11ViewController.swift in Sources */,
 				84957B6028D4558D00639EF7 /* Bai2ViewController.swift in Sources */,
 				84957B4328D427AB00639EF7 /* AppDelegate.swift in Sources */,
+				8438515928E44A2000C775F7 /* Bai4ViewModel.swift in Sources */,
+				8438515D28E44F0E00C775F7 /* Bai7ViewModel.swift in Sources */,
 				84D2B0A128D815D9005F4266 /* Bai11TableViewCell.swift in Sources */,
+				8438515F28E46D6F00C775F7 /* Bai9ViewModel.swift in Sources */,
 				84D2B10728D87728005F4266 /* TextViewController.swift in Sources */,
 				842B7F8B28D4643800382F8F /* Bai5ViewController.swift in Sources */,
+				8438516928E4780C00C775F7 /* Bai12ViewModel.swift in Sources */,
+				8438515B28E44CAF00C775F7 /* Bai5ViewModel.swift in Sources */,
 				842B7F7D28D45B1500382F8F /* HomeB3ViewController.swift in Sources */,
+				8438515528E4440300C775F7 /* Bai2ViewModel.swift in Sources */,
+				8438516328E4731200C775F7 /* Bai10ViewModel.swift in Sources */,
+				8438516728E4767500C775F7 /* Bai11ViewModel.swift in Sources */,
 				849DE91F28D4794D00133ED4 /* Bai9ViewController.swift in Sources */,
 				842B7F9028D46B9300382F8F /* Bai7ViewController.swift in Sources */,
 				84957B5928D452CB00639EF7 /* Bai1ViewController.swift in Sources */,
 				849DE92428D4799700133ED4 /* Bai9TableViewCell.swift in Sources */,
 				849DE92B28D7F99500133ED4 /* Bai10ViewController.swift in Sources */,
+				8438516B28E47B1D00C775F7 /* TextViewModel.swift in Sources */,
+				8438515728E446E700C775F7 /* HomeB3ViewModel.swift in Sources */,
 				84D2B0A628D81934005F4266 /* Bai12ViewController.swift in Sources */,
+				8438516528E475F900C775F7 /* Bai11CellViewModel.swift in Sources */,
 				842B7F8128D45C2300382F8F /* DetailB3ViewController.swift in Sources */,
+				8438516128E46EE900C775F7 /* Bai9CellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

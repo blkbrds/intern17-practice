@@ -21,13 +21,21 @@ final class Bai9TableViewCell: UITableViewCell {
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var subTitleLabel: UILabel!
+    
+    var viewModel: Bai9CellViewModel?{
+        didSet {
+            updateCell()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func updateCell(name: String, subTitle: String) {
-        nameLabel.text = name
-        subTitleLabel.text = subTitle
+    func updateCell() {
+        guard let viewModel = viewModel else { return }
+        nameLabel.text = viewModel.name
+        subTitleLabel.text = viewModel.subTitle
     }
     
     @IBAction private func tabButtonTouchUpInside(_ sender: Any) {

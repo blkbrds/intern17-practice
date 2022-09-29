@@ -12,44 +12,38 @@ final class Bai5ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
     
-    private var contactsData: [String] = []
-    private var contacts: [String] = []
+    var viewModel: Bai5ViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+        guard let viewModel = viewModel else { return }
+        viewModel.loadData()
         configTableView()
         configSearchBar()
     }
     
     private func configTableView() {
-        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist"),
-              let data = NSArray(contentsOf: path) as? [String]
-        else { return }
-        contactsData = data
-        contacts = contactsData
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Define.cellName)
+        tableView.dataSource = self
     }
     
     private func configSearchBar() {
         searchBar.delegate = self
     }
-    
-    private func loadData() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewContact")
-        tableView.dataSource = self
-    }
 
     private func search(keyword: String) {
-        contacts = getContacts(keyword: keyword)
+        guard let viewModel = viewModel else { return }
+        viewModel.contacts = getContacts(keyword: keyword)
         tableView.reloadData()
     }
     
     private func getContacts(keyword: String) -> [String] {
+        guard let viewModel = viewModel else { return [""] }
         if keyword.trimmingCharacters(in: CharacterSet(charactersIn: " ")) == "" {
-            return contactsData
+            return viewModel.contactsData
         } else {
             var data: [String] = []
-            for contact in contactsData {
+            for contact in viewModel.contactsData {
                 if let _ = contact.range(of: keyword) {
                     data.append(contact)
                 }
@@ -62,12 +56,14 @@ final class Bai5ViewController: UIViewController {
 
 extension Bai5ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.contacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewContact", for: indexPath)
-        cell.textLabel?.text = "\(contacts[indexPath.row])"
+        var cell = tableView.dequeueReusableCell(withIdentifier: Define.cellName, for: indexPath)
+        guard let viewModel = viewModel else { return UITableViewCell() }
+        cell = viewModel.viewModelForItem(at: indexPath)
         return cell
     }
 }
@@ -86,5 +82,11 @@ extension Bai5ViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
         search(keyword: "")
+    }
+}
+
+extension Bai5ViewController {
+    private struct Define {
+        static var cellName: String = "tableViewContact"
     }
 }

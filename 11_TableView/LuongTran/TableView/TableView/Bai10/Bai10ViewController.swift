@@ -12,21 +12,18 @@ final class Bai10ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
     
-    private var contactsData: [String] = []
-    private var contacts: [String] = []
-    private var arrayListIndex: [String: [String]] = [:]
-    private var arraySectionTitles: [String] = []
+    var viewModel: Bai10ViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadData()
+        guard let viewModel = viewModel else { return }
+        viewModel.loadData()
         configTableView()
         configSearchBar()
     }
     
     private func configTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewContact")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Define.cellName)
         tableView.dataSource = self
     }
     
@@ -34,59 +31,38 @@ final class Bai10ViewController: UIViewController {
         searchBar.delegate = self
     }
     
-    private func loadData() {
-        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist"),
-              let data = NSArray(contentsOf: path) as? [String]
-        else { return }
-        contactsData = data
-        contacts = contactsData
-        getFirstCharacter(array: contactsData)
-    }
-
-    private func getFirstCharacter(array: [String]) {
-        for element in array {
-            let elementKey = String(element.prefix(1))
-            if var elementValues = arrayListIndex[elementKey] {
-                elementValues.append(element)
-                arrayListIndex[elementKey] = elementValues
-            } else {
-                arrayListIndex[elementKey] = [element]
-            }
-        }
-        arraySectionTitles = Array(arrayListIndex.keys)
-        arraySectionTitles = arraySectionTitles.sorted(by: { $0 < $1 })
-    }
-    
 }
 
 extension Bai10ViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return arraySectionTitles.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.arraySectionTitles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let elementKey = arraySectionTitles[section]
-        if let elementValues = arrayListIndex[elementKey] {
+        guard let viewModel = viewModel else { return  0 }
+        let elementKey = viewModel.arraySectionTitles[section]
+        if let elementValues = viewModel.arrayListIndex[elementKey] {
             return elementValues.count
         }
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewContact", for: indexPath)
-        let elementKey = arraySectionTitles[indexPath.section]
-        if let elementValues = arrayListIndex[elementKey] {
-            cell.textLabel?.text = "\(elementValues[indexPath.row])"
-        }
+        var cell = tableView.dequeueReusableCell(withIdentifier: Define.cellName, for: indexPath)
+        guard let viewModel = viewModel else { return UITableViewCell() }
+        cell = viewModel.viewModelForItem(at: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return arraySectionTitles[section]
+        guard let viewModel = viewModel else { return "" }
+        return viewModel.arraySectionTitles[section]
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return arraySectionTitles
+        guard let viewModel = viewModel else { return [] }
+        return viewModel.arraySectionTitles
     }
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
@@ -100,16 +76,23 @@ extension Bai10ViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension Bai10ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        arrayListIndex.removeAll()
-        arraySectionTitles.removeAll()
-        contacts = contactsData.filter({text in
+        guard let viewModel = viewModel else { return }
+        viewModel.arrayListIndex.removeAll()
+        viewModel.arraySectionTitles.removeAll()
+        viewModel.contacts = viewModel.contactsData.filter({text in
             return text.lowercased().contains(searchText.lowercased())
         } )
-        if contacts.count == 0 {
-            getFirstCharacter(array: contactsData)
+        if viewModel.contacts.count == 0 {
+            viewModel.getFirstCharacter(array: viewModel.contactsData)
         } else {
-            getFirstCharacter(array: contacts)
+            viewModel.getFirstCharacter(array: viewModel.contacts)
         }
         tableView.reloadData()
+    }
+}
+
+extension Bai10ViewController {
+    private struct Define {
+        static var cellName: String = "tableViewContact"
     }
 }

@@ -11,45 +11,46 @@ final class Bai4ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
-    private let section0: [String] = ["Mì", "Bí"]
-    private let section1: [String] = ["Heo", "Bò", "Trâu", "Ngựa", "Gà", "Vịt", "Cá"]
-    private let section2: [String] = ["Tivi", "Dao", "Kéo", "Remote"]
-    private var sections: [[String]] = []
+    var viewModel: Bai4ViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-        sections = [section0, section1, section2]
+        guard let viewModel = viewModel else { return }
+        viewModel.loadData()
     }
 
     private func configTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewContact")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Define.cellName)
         tableView.dataSource = self
     }
 }
 
 extension Bai4ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.sections[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewContact", for: indexPath)
-        cell.textLabel?.text = sections[indexPath.section][indexPath.row]
+        var cell = tableView.dequeueReusableCell(withIdentifier: Define.cellName, for: indexPath)
+        guard let viewModel = viewModel else { return UITableViewCell() }
+        cell = viewModel.viewModelForItem(at: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0: return "Section 0"
-        case 1: return "Section 1"
-        case 2: return "Section 2"
-        default:
-            return "Section Header"
-        }
+        return "Section \(section + 1)"
+    }
+}
+
+extension Bai4ViewController {
+    private struct Define {
+        static var cellName: String = "tableViewContact"
     }
 }

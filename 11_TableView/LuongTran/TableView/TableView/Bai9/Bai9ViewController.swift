@@ -11,42 +11,19 @@ final class Bai9ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
-    private var arrayList: [[String]] = []
-    private var arrayListIndex: [String: [String]] = [:]
-    private var arraySectionTitles: [String] = []
-    private let cellName = String(describing: Bai9TableViewCell.self)
+    var viewModel: Bai9ViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "SECTIONS"
-        loadData()
+        title = Define.title
+        guard let viewModel = viewModel else { return }
+        viewModel.loadData()
         configTableView()
-    }
-
-    private func loadData() {
-        let giaSuc: [String] = ["Heo", "Bò", "Trâu", "Ngựa", "Gà", "Vịt", "Cá"]
-        let doVat: [String] = ["Tivi", "Dao", "Kéo", "Xe", "Chén", "Bát", "Kèn", "Búa", "Đinh"]
-        let hoa: [String] = ["Hoa Hồng", "Hoa Mai", "Hoa Đào"]
-        
-        self.arrayList = [giaSuc, doVat, hoa]
-        for array in arrayList {
-            for element in array {
-                let elementKey = String(element.prefix(1))
-                if var elementValues = arrayListIndex[elementKey] {
-                    elementValues.append(element)
-                    arrayListIndex[elementKey] = elementValues
-                } else {
-                    arrayListIndex[elementKey] = [element]
-                }
-            }
-        }
-        arraySectionTitles = [String](arrayListIndex.keys)
-        arraySectionTitles = arraySectionTitles.sorted(by: { $0 < $1 })
     }
     
     private func configTableView() {
-        let nib = UINib(nibName: cellName, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: cellName)
+        let nib = UINib(nibName: Define.cellName, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: Define.cellName)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -55,33 +32,36 @@ final class Bai9ViewController: UIViewController {
 
 extension Bai9ViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        arraySectionTitles.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.arraySectionTitles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let elementKey = arraySectionTitles[section]
-        if let elementValues = arrayListIndex[elementKey] {
+        guard let viewModel = viewModel else { return 0 }
+        let elementKey = viewModel.arraySectionTitles[section]
+        if let elementValues = viewModel.arrayListIndex[elementKey] {
             return elementValues.count
         }
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellName) as! Bai9TableViewCell
-        let elementKey = arraySectionTitles[indexPath.section]
-        if let elementValues = arrayListIndex[elementKey] {
-            cell.updateCell(name: elementValues[indexPath.row], subTitle: "sub title")
-            cell.delegate = self
-        }
+        guard let viewModel = viewModel,
+              let cell = tableView.dequeueReusableCell(withIdentifier: Define.cellName) as? Bai9TableViewCell
+        else { return UITableViewCell() }
+        cell.viewModel = viewModel.viewModelForItem(at: indexPath)
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return arraySectionTitles[section]
+        guard let viewModel = viewModel else { return "" }
+        return viewModel.arraySectionTitles[section]
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return arraySectionTitles
+        guard let viewModel = viewModel else { return [] }
+        return viewModel.arraySectionTitles
     }
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
@@ -100,5 +80,12 @@ extension Bai9ViewController: Bai9TableViewCellDelegate {
             guard let index = tableView.indexPath(for: cell) else { return }
             print("Home Cell ---> Tap me: section \(index.section) row \(index.row)")
         }
+    }
+}
+
+extension Bai9ViewController {
+    private struct Define {
+        static var title: String = "SECTIONS"
+        static var cellName: String = String(describing: Bai9TableViewCell.self)
     }
 }

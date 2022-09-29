@@ -11,23 +11,17 @@ final class Bai2ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
-    private var contacts: [String] = []
+    var viewModel: Bai2ViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+        guard let viewModel = viewModel else { return }
+        viewModel.loadData()
         configTableView()
     }
     
-    private func loadData() {
-        guard let path = Bundle.main.url(forResource: "contacts", withExtension: "plist"),
-              let contactsData = NSArray(contentsOf: path) as? [String]
-        else { return }
-        contacts = contactsData
-    }
-    
     private func configTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewContact")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Define.cellName)
         tableView.dataSource = self
     }
     
@@ -36,12 +30,20 @@ final class Bai2ViewController: UIViewController {
 
 extension Bai2ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.numberOfRowsInSection(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewContact", for: indexPath)
-        cell.textLabel?.text = "\(contacts[indexPath.row])"
+        var cell = tableView.dequeueReusableCell(withIdentifier: Define.cellName, for: indexPath)
+        guard let viewModel = viewModel else { return UITableViewCell() }
+        cell = viewModel.viewModelForItem(at: indexPath)
         return cell
+    }
+}
+
+extension Bai2ViewController {
+    private struct Define {
+        static var cellName: String = "tableViewContact"
     }
 }

@@ -11,8 +11,7 @@ final class Bai11ViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    private let arrayString: [String] = ["Lorem Ipsum is simply dummy text of the printing and typesetting industry.", "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
-    private let cellName = String(describing: Bai11TableViewCell.self)
+    var viewModel: Bai11ViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +19,8 @@ final class Bai11ViewController: UIViewController {
     }
     
     private func configTableView() {
-        let nib = UINib(nibName: cellName, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: cellName)
+        let nib = UINib(nibName: Define.cellName, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: Define.cellName)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
@@ -31,21 +30,26 @@ final class Bai11ViewController: UIViewController {
 }
 
 extension Bai11ViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arrayString.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.arrayString.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellName) as! Bai11TableViewCell
-        cell.updateCell(content: arrayString[indexPath.row])
+        guard let viewModel = viewModel,
+              let cell = tableView.dequeueReusableCell(withIdentifier: Define.cellName) as? Bai11TableViewCell
+        else { return UITableViewCell() }
+        cell.viewModel = viewModel.viewModelForItem(at: indexPath)
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+extension Bai11ViewController {
+    private struct Define {
+        static var cellName: String = String(describing: Bai11TableViewCell.self)
     }
 }

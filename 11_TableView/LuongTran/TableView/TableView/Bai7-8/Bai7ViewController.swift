@@ -11,63 +11,34 @@ final class Bai7ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
-    var arrayList: [[String]] = []
-    var arrayListIndex: [String: [String]] = [:]
-    var arraySectionTitles: [String] = []
+    var viewModel: Bai7ViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "SECTIONS"
-        loadData()
+        title = Define.title
+        guard let viewModel = viewModel else { return }
+        viewModel.loadData()
         configTableView()
-    }
-
-    private func loadData() {
-        let giaSuc: [String] = ["Heo", "Bò", "Trâu", "Ngựa", "Gà", "Vịt", "Cá"]
-        let doVat: [String] = ["Tivi", "Dao", "Kéo", "Xe", "Chén", "Bát", "Kèn", "Búa", "Đinh"]
-        let hoa: [String] = ["Hoa Hồng", "Hoa Mai", "Hoa Đào"]
-        
-        self.arrayList = [giaSuc, doVat, hoa]
-        for array in arrayList {
-            for element in array {
-                let elementKey = String(element.prefix(1))
-                if var elementValues = arrayListIndex[elementKey] {
-                    elementValues.append(element)
-                    arrayListIndex[elementKey] = elementValues
-                } else {
-                    arrayListIndex[elementKey] = [element]
-                }
-            }
-        }
-        arraySectionTitles = [String](arrayListIndex.keys)
-        arraySectionTitles = arraySectionTitles.sorted(by: { $0 < $1 })
     }
     
     private func configTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewContact")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Define.cellName)
         tableView.dataSource = self
         tableView.delegate = self
-    }
-    
-    private func createSubTextCell() -> UILabel {
-        let label = UILabel()
-        label.frame = CGRect(x: 50, y: 25, width: 160, height: 30)
-        label.text = "Test"
-        label.textColor = .red
-        label.font = label.font.withSize(13)
-        return label
     }
     
 }
 
 extension Bai7ViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        arraySectionTitles.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.arraySectionTitles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let elementKey = arraySectionTitles[section]
-        if let elementValues = arrayListIndex[elementKey] {
+        guard let viewModel = viewModel else { return 0 }
+        let elementKey = viewModel.arraySectionTitles[section]
+        if let elementValues = viewModel.arrayListIndex[elementKey] {
             return elementValues.count
         }
         return 0
@@ -75,26 +46,30 @@ extension Bai7ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Set Style subtitle for cell
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "tableViewContact")
-        let elementKey = arraySectionTitles[indexPath.section]
-        if let elementValues = arrayListIndex[elementKey] {
-            cell.textLabel?.text = elementValues[indexPath.row]
-            cell.contentView.addSubview(createSubTextCell())
-            //add detail
-            //cell.detailTextLabel?.text = "Test"
-        }
+        var cell = UITableViewCell(style: .subtitle, reuseIdentifier: Define.cellName)
+        guard let viewModel = viewModel else { return UITableViewCell() }
+        cell = viewModel.viewModelForItem(at: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return arraySectionTitles[section]
+        guard let viewModel = viewModel else { return "" }
+        return viewModel.arraySectionTitles[section]
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return arraySectionTitles
+        guard let viewModel = viewModel else { return [""] }
+        return viewModel.arraySectionTitles
     }
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return index
+    }
+}
+
+extension Bai7ViewController {
+    private struct Define {
+        static var title: String = "SECTIONS"
+        static var cellName: String = "tableViewContact"
     }
 }

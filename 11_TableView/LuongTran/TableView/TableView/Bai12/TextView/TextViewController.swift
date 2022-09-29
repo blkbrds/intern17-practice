@@ -21,9 +21,10 @@ final class TextViewController: UIViewController {
     
     @IBOutlet private weak var inputTextField: UITextField!
     
+    var viewModel: TextViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configNavigation()
     }
 
@@ -34,9 +35,9 @@ final class TextViewController: UIViewController {
     }
     
     @objc private func doneButtonTouchUpInside() {
-        guard let data = inputTextField.text else { return }
-        print(data,"tv")
-        delegate?.vc(vc: self, needPerform: .senData(data: data))
+        guard let viewModel = viewModel else { return }
+        viewModel.data = inputTextField.text ?? ""
+        delegate?.vc(vc: self, needPerform: .senData(data: viewModel.data))
         navigationController?.popViewController(animated: true)
     }
     

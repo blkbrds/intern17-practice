@@ -11,9 +11,7 @@ final class Bai12ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
-    private var numbers: [String] = ["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"]
-    private var newNumbers: [String] = ["Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen"]
-    private var selectedItems: [Int] = []
+    var viewModel: Bai12ViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +29,7 @@ final class Bai12ViewController: UIViewController {
     }
     
     private func configTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewB12")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Define.cellName)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.dragDelegate = self
@@ -48,6 +46,7 @@ final class Bai12ViewController: UIViewController {
     @objc private func insertButtonTouchUpInside() {
         let textVC = TextViewController()
         textVC.delegate = self
+        textVC.viewModel = TextViewModel(data: "")
         navigationController?.pushViewController(textVC, animated: true)
     }
     
@@ -63,11 +62,12 @@ final class Bai12ViewController: UIViewController {
     }
     
     @objc private func deleteButtonTouchUpInside(_ sender: Any) {
-        numbers = numbers
+        guard let viewModel = viewModel else { return }
+        viewModel.numbers = viewModel.numbers
             .enumerated()
-            .filter { !selectedItems.contains($0.offset) }
+            .filter { !viewModel.selectedItems.contains($0.offset) }
             .map { $0.element }
-        selectedItems.removeAll()
+        viewModel.selectedItems.removeAll()
         animationLoadTable()
     }
     
@@ -76,43 +76,41 @@ final class Bai12ViewController: UIViewController {
 extension Bai12ViewController: UITableViewDataSource, UITableViewDelegate, UITableViewDragDelegate {
     func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         let dragItem = UIDragItem(itemProvider: NSItemProvider())
-        dragItem.localObject = numbers[indexPath.row]
+        guard let viewModel = viewModel else { return [] }
+        dragItem.localObject = viewModel.numbers[indexPath.row]
         return [dragItem]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        numbers.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.numbers.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewB12", for: indexPath)
-        if let id = numbers[safe: indexPath.row] {
-            cell.textLabel?.text = "Number \(id)"
-            if selectedItems.contains(indexPath.row) {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
-            }
-        }
+        var cell = tableView.dequeueReusableCell(withIdentifier: Define.cellName, for: indexPath)
+        guard let viewModel = viewModel else { return UITableViewCell() }
+        cell = viewModel.viewModelForItem(at: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if selectedItems.contains(indexPath.row) {
-            guard let index = selectedItems.firstIndex(of: indexPath.row) else { return }
-            selectedItems.remove(at: index)
+        guard let viewModel = viewModel else { return }
+        if viewModel.selectedItems.contains(indexPath.row) {
+            guard let index = viewModel.selectedItems.firstIndex(of: indexPath.row) else { return }
+            viewModel.selectedItems.remove(at: index)
         } else {
-            selectedItems.append(indexPath.row)
+            viewModel.selectedItems.append(indexPath.row)
         }
         tableView.reloadRows(at: [indexPath], with: .none)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard let viewModel = viewModel else { return UISwipeActionsConfiguration() }
         let delete = UIContextualAction(style: .normal, title: "Delete") { (action, view, completionHandler) in
-            self.tableView.beginUpdates()
-            self.numbers.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .left)
-            self.tableView.endUpdates()
+            tableView.beginUpdates()
+            viewModel.numbers.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .left)
+            tableView.endUpdates()
             completionHandler(true)
         }
         delete.backgroundColor = .red
@@ -125,9 +123,10 @@ extension Bai12ViewController: UITableViewDataSource, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let itemToMove = numbers[sourceIndexPath.row]
-        numbers.remove(at: sourceIndexPath.row)
-        numbers.insert(itemToMove, at: destinationIndexPath.row)
+        guard let viewModel = viewModel else { return }
+        let itemToMove = viewModel.numbers[sourceIndexPath.row]
+        viewModel.numbers.remove(at: sourceIndexPath.row)
+        viewModel.numbers.insert(itemToMove, at: destinationIndexPath.row)
     }
 }
 
@@ -135,20 +134,18 @@ extension Bai12ViewController: TextViewControllerDelegate {
     func vc(vc: TextViewController, needPerform action: TextViewController.Action) {
         switch action {
         case .senData(data: let data):
-            numbers.append(data)
-            animationLoadTable()
+            guard let viewModel =  viewModel else {
+                return
+            }
+            viewModel.updateArray(data: data)
+            tableView.reloadData()
         }
-    }
-}
-
-extension Collection {
-    subscript (safe index: Index) -> Element? {
-        return indices.contains(index) ? self[index] : nil
     }
 }
 
 extension Bai12ViewController {
     private struct Define {
-        static var titleBar = "Table reorder"
+        static var titleBar: String = "Table reorder"
+        static var cellName: String = "tableViewB12"
     }
 }

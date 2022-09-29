@@ -16,24 +16,27 @@ final class Bai1ViewController: UIViewController {
     }
 
     private func configTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Define.cellName)
         tableView.dataSource = self
     }
     
 }
 
 extension Bai1ViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        Define.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Define.cellName, for: indexPath)
         cell.textLabel?.text = "Name \(indexPath.row)"
         return cell
+    }
+}
+
+extension Bai1ViewController {
+    private struct Define {
+        static var cellName: String = "UITableViewCell"
+        static var numberOfRows: Int = 10
     }
 }

@@ -10,12 +10,20 @@ import UIKit
 final class Bai11TableViewCell: UITableViewCell {
 
     @IBOutlet private weak var lblContent: UILabel!
+    
+    var viewModel: Bai11CellViewModel? {
+        didSet {
+            updateCell()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func updateCell(content: String) {
-        lblContent.text = content
+    func updateCell() {
+        guard let viewModel = viewModel else { return }
+        lblContent.text = viewModel.content
     }
     
 }
